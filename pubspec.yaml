@@ -20,6 +20,8 @@ dependencies:
   catcher_2: ^1.0.0-alpha.1
   # 실시간 동기화 noSQL 데이터베이스 Cloud Firestore용 Flutter 플러그인
   cloud_firestore: ^4.12.2
+  # [Dart] dart:collection을 확장한 유틸리티 컬렉션
+  collection: ^1.17.2
   # 네트워크 연결 상태 플러그인
   connectivity_plus: ^5.0.1
   # [Dart] 인터셉터, 요청 취소, 타임아웃, 어댑터, 트랜스포머, 폼데이터, 파일 업로드/다운로드 등을 지원하는 HTTP 패키지
