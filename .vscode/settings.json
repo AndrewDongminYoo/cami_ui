@@ -4,9 +4,20 @@
     "Bodymovin",
     "cami",
     "camilab",
+    "ccpdt",
+    "CCSI",
+    "DABI",
+    "DACI",
+    "DCSI",
     "Dhiwise",
+    "DOBI",
+    "DOPI",
+    "DPAI",
     "kpostal",
+    "MBTI",
+    "naver",
     "rxdart",
     "trivy"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }
