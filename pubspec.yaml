@@ -118,7 +118,6 @@ flutter:
 # https://pub.dev/packages/flutter_gen_runner
 flutter_gen:
   output: lib/gen/ # Optional (default: lib/gen/)
-  line_length: 120 # Optional (default: 80)
 
   # Optional
   integrations:
@@ -127,12 +126,12 @@ flutter_gen:
     rive: true
     lottie: true
 
-  # colors:
-  #   enabled: true
-  #   outputs:
-  #     class_name: AppColors
-  #   inputs:
-  #     - assets/colors/palette.xml
+  colors:
+    enabled: true
+    outputs:
+      class_name: AppColors
+    inputs:
+      - assets/colors/palette.xml
 
 # Usage:
 #   dart run import_sorter:main -e
