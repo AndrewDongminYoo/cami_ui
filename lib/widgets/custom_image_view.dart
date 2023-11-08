@@ -1,4 +1,3 @@
-// ignore_for_file: must_be_immutable
 
 // 🎯 Dart imports:
 import 'dart:io';
@@ -10,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// ignore: must_be_immutable
 class CustomImageView extends StatelessWidget {
   /// a [CustomImageView] it can be used for showing any type of images
   /// it will shows the placeholder image if image is not found on network image
@@ -28,7 +28,7 @@ class CustomImageView extends StatelessWidget {
     this.placeHolder = 'assets/images/image_not_found.png',
   });
 
-  ///[imagePath] is required parameter for showing image
+  /// [imagePath] is required parameter for showing image
   String? imagePath;
 
   double? height;
