@@ -48,7 +48,11 @@ class CustomIconButton extends StatelessWidget {
             height: height ?? 0,
             width: width ?? 0,
             padding: padding ?? EdgeInsets.zero,
-            decoration: decoration,
+            decoration: decoration ??
+                BoxDecoration(
+                  color: theme.colorScheme.onPrimaryContainer,
+                  borderRadius: BorderRadius.circular(16.h),
+                ),
             child: child,
           ),
           onPressed: onTap,

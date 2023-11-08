@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           '',
         ),
       ],
-      initialRoute: AppRoutes.checkUpDetailsTwoScreen,
+      initialRoute: AppRoutes.quckTestScreen,
       routes: AppRoutes.routes,
     );
   }

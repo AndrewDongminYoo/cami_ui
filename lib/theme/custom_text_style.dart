@@ -14,11 +14,18 @@ class CustomTextStyles {
         color: appTheme.deepOrange400,
         fontSize: 18.fSize,
       );
+  static get bodyLargeErrorContainer => theme.textTheme.bodyLarge!.copyWith(
+        color: theme.colorScheme.errorContainer,
+        fontSize: 18.fSize,
+      );
   static get bodyLargeGray500 => theme.textTheme.bodyLarge!.copyWith(
         color: appTheme.gray500,
       );
   static get bodyLargeGray900 => theme.textTheme.bodyLarge!.copyWith(
         color: appTheme.gray900,
+      );
+  static get bodyLargeGray90002 => theme.textTheme.bodyLarge!.copyWith(
+        color: appTheme.gray90002,
       );
   static get bodyLargeGray90004 => theme.textTheme.bodyLarge!.copyWith(
         color: appTheme.gray90004,
@@ -27,9 +34,7 @@ class CustomTextStyles {
         color: appTheme.indigo400,
       );
   static get bodyLargeNanumSquareNeo =>
-      theme.textTheme.bodyLarge!.nanumSquareNeo.copyWith(
-        fontSize: 19.fSize,
-      );
+      theme.textTheme.bodyLarge!.nanumSquareNeo;
   static get bodyLargeNanumSquareNeo_1 =>
       theme.textTheme.bodyLarge!.nanumSquareNeo;
   static get bodyMedium13 => theme.textTheme.bodyMedium!.copyWith(
@@ -37,6 +42,16 @@ class CustomTextStyles {
       );
   static get bodyMedium15 => theme.textTheme.bodyMedium!.copyWith(
         fontSize: 15.fSize,
+      );
+  static get bodyMediumBlack900 => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.black900,
+      );
+  static get bodyMediumBlack90015 => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.black900,
+        fontSize: 15.fSize,
+      );
+  static get bodyMediumBluegray10001 => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.blueGray10001,
       );
   static get bodyMediumBluegray10002 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.blueGray10002,
@@ -53,17 +68,26 @@ class CustomTextStyles {
   static get bodyMediumDeeporange400 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.deepOrange400,
       );
+  static get bodyMediumErrorContainer => theme.textTheme.bodyMedium!.copyWith(
+        color: theme.colorScheme.errorContainer,
+      );
   static get bodyMediumGray500 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray500,
       );
   static get bodyMediumGray60001 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray60001,
       );
+  static get bodyMediumGray800 => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.gray800,
+      );
   static get bodyMediumGray80001 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray80001,
       );
   static get bodyMediumGray90001 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray90001,
+      );
+  static get bodyMediumGray90002 => theme.textTheme.bodyMedium!.copyWith(
+        color: appTheme.gray90002,
       );
   static get bodyMediumGray90004 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.gray90004,
@@ -76,8 +100,27 @@ class CustomTextStyles {
       theme.textTheme.bodyMedium!.nanumSquareNeo.copyWith(
         fontSize: 13.fSize,
       );
+  static get bodyMediumNanumSquareNeoBlack900 =>
+      theme.textTheme.bodyMedium!.nanumSquareNeo.copyWith(
+        color: appTheme.black900,
+      );
+  static get bodyMediumNanumSquareNeoBlack90013 =>
+      theme.textTheme.bodyMedium!.nanumSquareNeo.copyWith(
+        color: appTheme.black900,
+        fontSize: 13.fSize,
+      );
   static get bodyMediumNanumSquareNeo_1 =>
       theme.textTheme.bodyMedium!.nanumSquareNeo;
+  static get bodyMediumOnErrorContainer => theme.textTheme.bodyMedium!.copyWith(
+        color: theme.colorScheme.onErrorContainer,
+      );
+  static get bodyMediumOnPrimary => theme.textTheme.bodyMedium!.copyWith(
+        color: theme.colorScheme.onPrimary,
+      );
+  static get bodyMediumOnPrimaryContainer =>
+      theme.textTheme.bodyMedium!.copyWith(
+        color: theme.colorScheme.onPrimaryContainer,
+      );
   static get bodyMediumWhiteA700 => theme.textTheme.bodyMedium!.copyWith(
         color: appTheme.whiteA700,
       );
@@ -97,6 +140,9 @@ class CustomTextStyles {
         color: appTheme.black900,
         fontSize: 9.fSize,
       );
+  static get bodySmallBluegray300 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.blueGray300,
+      );
   static get bodySmallGray500 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray500,
       );
@@ -107,13 +153,26 @@ class CustomTextStyles {
   static get bodySmallGray600 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray600,
       );
+  static get bodySmallGray60001 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.gray60001,
+      );
   static get bodySmallGray700 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray700,
       );
   static get bodySmallGray800 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray800,
       );
+  static get bodySmallGray90001 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.gray90001,
+      );
   static get bodySmallGray90002 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.gray90002,
+        fontSize: 11.fSize,
+      );
+  static get bodySmallGray90002_1 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.gray90002,
+      );
+  static get bodySmallGray90002_2 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray90002,
       );
   static get bodySmallGray90004 => theme.textTheme.bodySmall!.copyWith(
@@ -130,6 +189,9 @@ class CustomTextStyles {
   static get bodySmallGreen300 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.green300,
       );
+  static get bodySmallPrimaryContainer => theme.textTheme.bodySmall!.copyWith(
+        color: theme.colorScheme.primaryContainer,
+      );
   // Headline text style
   static get headlineSmallBlack900 => theme.textTheme.headlineSmall!.copyWith(
         color: appTheme.black900,
@@ -142,16 +204,41 @@ class CustomTextStyles {
       theme.textTheme.headlineSmall!.nanumSquareNeo.copyWith(
         color: appTheme.deepOrange400,
       );
+  static get headlineSmallNanumSquareNeoErrorContainer =>
+      theme.textTheme.headlineSmall!.nanumSquareNeo.copyWith(
+        color: theme.colorScheme.errorContainer,
+      );
   static get headlineSmallNanumSquareNeoGray90001 =>
       theme.textTheme.headlineSmall!.nanumSquareNeo.copyWith(
         color: appTheme.gray90001,
       );
+  static get headlineSmallNanumSquareNeoOnErrorContainer =>
+      theme.textTheme.headlineSmall!.nanumSquareNeo.copyWith(
+        color: theme.colorScheme.onErrorContainer,
+      );
+  // Poppins text style
+  static get poppinsYellow100 => TextStyle(
+        color: appTheme.yellow100,
+        fontSize: 160.fSize,
+        fontWeight: FontWeight.w400,
+      ).poppins;
   // Title text style
   static get titleLargeBlack900 => theme.textTheme.titleLarge!.copyWith(
         color: appTheme.black900,
       );
+  static get titleLargeBlack90020 => theme.textTheme.titleLarge!.copyWith(
+        color: appTheme.black900,
+        fontSize: 20.fSize,
+      );
+  static get titleLargeGray60001 => theme.textTheme.titleLarge!.copyWith(
+        color: appTheme.gray60001,
+        fontSize: 20.fSize,
+      );
   static get titleLargeGray90001 => theme.textTheme.titleLarge!.copyWith(
         color: appTheme.gray90001,
+      );
+  static get titleLargeOnErrorContainer => theme.textTheme.titleLarge!.copyWith(
+        color: theme.colorScheme.onErrorContainer,
       );
 }
 

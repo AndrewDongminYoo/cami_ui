@@ -1,94 +1,61 @@
 import 'package:cami_lab/core/app_export.dart';
+import 'package:cami_lab/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class UserprofileItemWidget extends StatelessWidget {
   UserprofileItemWidget({
     Key? key,
-    this.onTapView,
+    this.onTapRegisterDogButton,
   }) : super(
           key: key,
         );
 
-  VoidCallback? onTapView;
+  VoidCallback? onTapRegisterDogButton;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 180.v,
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 12.h),
+      decoration: AppDecoration.outlineOnSecondaryContainer.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder12,
+      ),
       width: 175.h,
-      child: Stack(
-        alignment: Alignment.bottomCenter,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Align(
-            alignment: Alignment.center,
-            child: Container(
-              height: 180.v,
-              width: 175.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  12.h,
-                ),
-                border: Border.all(
-                  color: appTheme.gray90003,
-                  width: 1.h,
-                ),
-              ),
-            ),
+          SizedBox(height: 16.v),
+          Text(
+            "lbl125".tr,
+            style: theme.textTheme.bodyLarge,
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 112.v,
-              width: 138.h,
-              margin: EdgeInsets.only(bottom: 1.v),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    ImageConstant.imgImage112x138,
-                  ),
-                  fit: BoxFit.cover,
+          SizedBox(height: 25.v),
+          SizedBox(
+            height: 112.v,
+            width: 149.h,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                CustomImageView(
+                  imagePath: ImageConstant.imgImage112x138,
+                  height: 112.v,
+                  width: 138.h,
+                  alignment: Alignment.center,
                 ),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: GestureDetector(
-              onTap: () {
-                onTapView!.call();
-              },
-              child: Container(
-                height: 32.v,
-                width: 149.h,
-                margin: EdgeInsets.only(bottom: 25.v),
-                decoration: BoxDecoration(
-                  color: appTheme.blue50,
-                  borderRadius: BorderRadius.circular(
-                    10.h,
-                  ),
+                CustomElevatedButton(
+                  height: 32.v,
+                  width: 149.h,
+                  text: "lbl126".tr,
+                  margin: EdgeInsets.only(bottom: 24.v),
+                  buttonStyle: CustomButtonStyles.fillBlue,
+                  buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                  onPressed: () {
+                    onTapRegisterDogButton!.call();
+                  },
+                  alignment: Alignment.bottomCenter,
                 ),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-              padding: EdgeInsets.only(top: 17.v),
-              child: Text(
-                "lbl125".tr,
-                style: theme.textTheme.bodyLarge,
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 30.v),
-              child: Text(
-                "lbl126".tr,
-                style: theme.textTheme.bodyMedium,
-              ),
+              ],
             ),
           ),
         ],

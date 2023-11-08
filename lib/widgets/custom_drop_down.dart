@@ -81,14 +81,15 @@ class CustomDropDown extends StatelessWidget {
           focusNode: focusNode ?? FocusNode(),
           icon: icon,
           autofocus: autofocus!,
-          style: textStyle,
+          style: textStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
           items: items?.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(
                 value,
                 overflow: TextOverflow.ellipsis,
-                style: hintStyle,
+                style: hintStyle ??
+                    CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
               ),
             );
           }).toList(),
@@ -101,13 +102,14 @@ class CustomDropDown extends StatelessWidget {
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? "",
-        hintStyle: hintStyle,
+        hintStyle:
+            hintStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
         prefixIcon: prefix,
         prefixIconConstraints: prefixConstraints,
         suffixIcon: suffix,
         suffixIconConstraints: suffixConstraints,
         isDense: true,
-        contentPadding: contentPadding,
+        contentPadding: contentPadding ?? EdgeInsets.symmetric(vertical: 7.v),
         fillColor: fillColor ?? appTheme.gray10001,
         filled: filled,
         border: borderDecoration ??

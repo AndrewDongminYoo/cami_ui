@@ -31,7 +31,7 @@ class MenuBarScreen extends StatelessWidget {
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),
-              SizedBox(height: 25.v),
+              SizedBox(height: 24.v),
               Padding(
                 padding: EdgeInsets.only(left: 16.h),
                 child: Text(

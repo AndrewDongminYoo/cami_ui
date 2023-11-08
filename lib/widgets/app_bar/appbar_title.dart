@@ -29,7 +29,7 @@ class AppbarTitle extends StatelessWidget {
         child: Text(
           text,
           style: theme.textTheme.bodyMedium!.copyWith(
-            color: appTheme.black900,
+            color: appTheme.gray500,
           ),
         ),
       ),

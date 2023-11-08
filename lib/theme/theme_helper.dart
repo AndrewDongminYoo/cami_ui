@@ -48,11 +48,41 @@ class ThemeHelper {
       visualDensity: VisualDensity.standard,
       colorScheme: colorScheme,
       textTheme: TextThemes.textTheme(colorScheme),
-      scaffoldBackgroundColor: appTheme.whiteA700,
+      scaffoldBackgroundColor: colorScheme.onPrimaryContainer,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: appTheme.gray90002,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.h),
+          ),
+          visualDensity: const VisualDensity(
+            vertical: -4,
+            horizontal: -4,
+          ),
+          padding: EdgeInsets.zero,
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          side: BorderSide(
+            color: appTheme.blueGray10001,
+            width: 1.h,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.h),
+          ),
+          visualDensity: const VisualDensity(
+            vertical: -4,
+            horizontal: -4,
+          ),
+          padding: EdgeInsets.zero,
+        ),
+      ),
       radioTheme: RadioThemeData(
         fillColor: MaterialStateColor.resolveWith((states) {
           if (states.contains(MaterialState.selected)) {
-            return appTheme.whiteA700;
+            return colorScheme.onPrimaryContainer;
           }
           return colorScheme.onSurface;
         }),
@@ -64,7 +94,7 @@ class ThemeHelper {
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateColor.resolveWith((states) {
           if (states.contains(MaterialState.selected)) {
-            return appTheme.whiteA700;
+            return colorScheme.onPrimaryContainer;
           }
           return colorScheme.onSurface;
         }),
@@ -75,6 +105,11 @@ class ThemeHelper {
           vertical: -4,
           horizontal: -4,
         ),
+      ),
+      dividerTheme: DividerThemeData(
+        thickness: 1,
+        space: 1,
+        color: colorScheme.onPrimary,
       ),
     );
   }
@@ -96,13 +131,13 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
-          color: appTheme.black900,
+          color: appTheme.gray500,
           fontSize: 14.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
         bodySmall: TextStyle(
-          color: appTheme.whiteA700,
+          color: colorScheme.onPrimaryContainer,
           fontSize: 12.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
@@ -114,7 +149,7 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         headlineLarge: TextStyle(
-          color: appTheme.gray90002,
+          color: appTheme.gray90001,
           fontSize: 30.fSize,
           fontFamily: 'NanumSquare Neo',
           fontWeight: FontWeight.w400,
@@ -126,13 +161,13 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         headlineSmall: TextStyle(
-          color: appTheme.gray90004,
+          color: appTheme.gray90002,
           fontSize: 24.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
         titleLarge: TextStyle(
-          color: appTheme.deepOrange400,
+          color: colorScheme.errorContainer,
           fontSize: 23.fSize,
           fontFamily: 'NanumSquare Neo',
           fontWeight: FontWeight.w400,
@@ -142,7 +177,22 @@ class TextThemes {
 
 /// Class containing the supported color schemes.
 class ColorSchemes {
-  static final primaryColorScheme = ColorScheme.light();
+  static final primaryColorScheme = ColorScheme.light(
+    // Primary colors
+    primary: Color(0XFFFFFF50),
+    primaryContainer: Color(0XFF414142),
+    secondaryContainer: Color(0XFFD9D9D9),
+
+    // Error colors
+    errorContainer: Color(0XFFF0803D),
+    onError: Color(0XFFE5E5E5),
+    onErrorContainer: Color(0XFF171717),
+
+    // On colors(text colors)
+    onPrimary: Color(0XFF1F2937),
+    onPrimaryContainer: Color(0XFFFFFFFF),
+    onSecondaryContainer: Color(0XFF262626),
+  );
 }
 
 /// Class containing custom colors for a primary theme.
@@ -156,8 +206,7 @@ class PrimaryColors {
 
   // BlueGray
   Color get blueGray100 => Color(0XFFD1D5DB);
-  Color get blueGray10001 => Color(0XFFD9D9D9);
-  Color get blueGray10002 => Color(0XFFD4D4D4);
+  Color get blueGray10001 => Color(0XFFD4D4D4);
   Color get blueGray300 => Color(0XFF9CA3AF);
   Color get blueGray700 => Color(0XFF4B5563);
   Color get blueGray70001 => Color(0XFF525252);
@@ -181,13 +230,11 @@ class PrimaryColors {
   Color get gray600 => Color(0XFF757575);
   Color get gray60001 => Color(0XFF6B7280);
   Color get gray700 => Color(0XFF5F6061);
-  Color get gray800 => Color(0XFF414142);
-  Color get gray80001 => Color(0XFF404040);
+  Color get gray800 => Color(0XFF404040);
   Color get gray900 => Color(0XFF202020);
-  Color get gray90001 => Color(0XFF171717);
-  Color get gray90002 => Color(0XFF121212);
+  Color get gray90001 => Color(0XFF121212);
+  Color get gray90002 => Color(0XFF1F2020);
   Color get gray90003 => Color(0XFF262626);
-  Color get gray90004 => Color(0XFF1F2020);
 
   // Grayc
   Color get gray5004c => Color(0X4C939393);
@@ -203,6 +250,7 @@ class PrimaryColors {
   Color get whiteA700 => Color(0XFFFFFFFF);
 
   // Yellow
+  Color get yellow100 => Color(0XFFFEFFBF);
   Color get yellow400 => Color(0XFFFFFF50);
 }
 

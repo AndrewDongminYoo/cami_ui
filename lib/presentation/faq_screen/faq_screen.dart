@@ -1,452 +1,350 @@
 import 'package:cami_lab/core/app_export.dart';
-import 'package:cami_lab/widgets/app_bar/appbar_leading_image.dart';
-import 'package:cami_lab/widgets/app_bar/appbar_title_image.dart';
-import 'package:cami_lab/widgets/app_bar/custom_app_bar.dart';
+import 'package:cami_lab/widgets/custom_drop_down.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 
+// ignore_for_file: must_be_immutable
 class FaqScreen extends StatelessWidget {
-  const FaqScreen({Key? key}) : super(key: key);
+  FaqScreen({Key? key}) : super(key: key);
+
+  List<String> dropdownItemList = ["Item One", "Item Two", "Item Three"];
+
+  List<String> dropdownItemList1 = ["Item One", "Item Two", "Item Three"];
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
         child: Scaffold(
-            appBar: _buildAppBar(context),
             body: SizedBox(
-                width: mediaQueryData.size.width,
+                width: double.maxFinite,
                 child: SingleChildScrollView(
-                    padding: EdgeInsets.only(top: 15.v),
                     child: Column(children: [
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: Padding(
-                              padding: EdgeInsets.only(left: 16.h),
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    CustomImageView(
-                                        imagePath:
-                                            ImageConstant.imgVectorBlack90012x6,
-                                        height: 12.v,
-                                        width: 6.h,
-                                        margin: EdgeInsets.only(
-                                            top: 3.v, bottom: 10.v)),
-                                    Padding(
-                                        padding: EdgeInsets.only(left: 111.h),
-                                        child: Text("lbl11".tr,
-                                            style:
-                                                CustomTextStyles.bodyLarge18))
-                                  ]))),
-                      SizedBox(height: 16.v),
-                      Container(
-                          height: 1.v,
-                          width: 361.h,
-                          decoration:
-                              BoxDecoration(color: appTheme.blueGray900)),
-                      _buildUserProfile(context),
-                      _buildRecentOrders(context),
-                      SizedBox(height: 9.v),
-                      _buildReviews(context),
-                      SizedBox(height: 136.v),
-                      _buildDoctorReviews(context)
-                    ])))));
+                  CustomImageView(
+                      imagePath: ImageConstant.imgAppNavBar,
+                      height: 50.v,
+                      width: 393.h),
+                  SizedBox(height: 15.v),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 16.h),
+                          child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomImageView(
+                                    imagePath: ImageConstant.imgArrowLeft,
+                                    height: 20.adaptSize,
+                                    width: 20.adaptSize,
+                                    margin: EdgeInsets.only(bottom: 6.v),
+                                    onTap: () {
+                                      onTapImgArrowLeft(context);
+                                    }),
+                                Padding(
+                                    padding: EdgeInsets.only(left: 105.h),
+                                    child: Text("lbl11".tr,
+                                        style: CustomTextStyles.bodyLarge18))
+                              ]))),
+                  SizedBox(height: 16.v),
+                  Divider(indent: 16.h, endIndent: 16.h),
+                  _buildAppNavBarArrowLeft(context),
+                  _buildAppNavBarWidget(context),
+                  SizedBox(height: 9.v),
+                  _buildAppNavBarQStack(context),
+                  SizedBox(height: 136.v),
+                  _buildAppNavBarFooter(context)
+                ])))));
   }
 
   /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-        leadingWidth: 29.h,
-        leading: AppbarLeadingImage(
-            imagePath: ImageConstant.imgVector,
-            margin: EdgeInsets.only(left: 16.h, top: 21.v, bottom: 14.v)),
-        title: Padding(
-            padding: EdgeInsets.only(left: 2.h),
-            child: Column(children: [
-              AppbarTitleImage(
-                  imagePath: ImageConstant.imgVectorGray9004x4,
-                  margin: EdgeInsets.only(left: 44.h)),
-              SizedBox(height: 2.v),
-              Row(children: [
-                AppbarTitleImage(imagePath: ImageConstant.imgVectorGray900),
-                AppbarTitleImage(
-                    imagePath: ImageConstant.imgVectorGray90014x23,
-                    margin: EdgeInsets.only(left: 4.h)),
-                AppbarTitleImage(
-                    imagePath: ImageConstant.imgVectorGray9004x4,
-                    margin: EdgeInsets.only(left: 3.h))
-              ])
-            ])),
-        actions: [
-          Container(
-              height: 24.adaptSize,
-              width: 24.adaptSize,
-              margin: EdgeInsets.symmetric(horizontal: 16.h, vertical: 13.v),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(ImageConstant.imgMenu),
-                      fit: BoxFit.cover)))
-        ]);
-  }
-
-  /// Section Widget
-  Widget _buildUserProfile(BuildContext context) {
-    return SizedBox(
-        height: 49.v,
-        width: 361.h,
-        child: Stack(alignment: Alignment.center, children: [
-          Align(
-              alignment: Alignment.center,
-              child: Container(
-                  height: 49.v,
-                  width: 361.h,
-                  decoration: BoxDecoration(color: appTheme.gray100))),
-          Padding(
-              padding: EdgeInsets.all(8.h),
-              child: _buildQ(context,
-                  userName: "lbl_q".tr, userMessage: "lbl55".tr))
-        ]));
-  }
-
-  /// Section Widget
-  Widget _buildRecentOrders(BuildContext context) {
-    return SizedBox(
-        height: 496.v,
-        width: 361.h,
-        child: Stack(alignment: Alignment.bottomCenter, children: [
-          Align(
-              alignment: Alignment.center,
-              child: Container(
-                  height: 496.v,
-                  width: 361.h,
-                  decoration: BoxDecoration(color: appTheme.gray50))),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                  height: 1.v,
-                  width: 361.h,
-                  decoration: BoxDecoration(color: appTheme.blueGray900))),
-          Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                  padding: EdgeInsets.only(left: 20.h, top: 23.v),
-                  child: Text("lbl56".tr, style: theme.textTheme.bodyMedium))),
-          Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                  width: 314.h,
-                  margin: EdgeInsets.only(top: 55.v),
-                  child: Text("msg_1_explorer".tr,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
+  Widget _buildAppNavBarArrowLeft(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.symmetric(horizontal: 16.h),
+        padding: EdgeInsets.all(8.h),
+        decoration: AppDecoration.fillGray100,
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(top: 9.v, bottom: 7.v),
+                  child: Text("lbl_q".tr,
                       style:
-                          theme.textTheme.bodyMedium!.copyWith(height: 2.00)))),
-          Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                  padding: EdgeInsets.only(left: 20.h, top: 107.v),
-                  child: Text("msg17".tr, style: theme.textTheme.bodyMedium))),
-          Align(
-              alignment: Alignment.topLeft,
-              child: Container(
+                          CustomTextStyles.bodyMediumNanumSquareNeoBlack900)),
+              Expanded(
+                  child: Padding(
+                      padding: EdgeInsets.only(left: 9.h, top: 1.v),
+                      child: CustomDropDown(
+                          icon: Container(
+                              margin: EdgeInsets.only(left: 30.h),
+                              child: CustomImageView(
+                                  imagePath: ImageConstant.imgArrowdownGray700,
+                                  height: 32.v,
+                                  width: 30.h)),
+                          hintText: "lbl55".tr,
+                          hintStyle: CustomTextStyles
+                              .bodyMediumNanumSquareNeoBlack90013,
+                          items: dropdownItemList,
+                          onChanged: (value) {})))
+            ]));
+  }
+
+  /// Section Widget
+  Widget _buildAppNavBarWidget(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.symmetric(horizontal: 16.h),
+        decoration: AppDecoration.fillGray50,
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              SizedBox(height: 23.v),
+              Padding(
+                  padding: EdgeInsets.only(left: 20.h),
+                  child: Text("lbl56".tr,
+                      style: CustomTextStyles.bodyMediumBlack900)),
+              SizedBox(height: 10.v),
+              Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                      width: 314.h,
+                      margin: EdgeInsets.only(left: 20.h, right: 26.h),
+                      child: Text("msg_1_explorer".tr,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: CustomTextStyles.bodyMediumBlack900
+                              .copyWith(height: 2.00)))),
+              Padding(
+                  padding: EdgeInsets.only(left: 20.h),
+                  child: Text("msg17".tr,
+                      style: CustomTextStyles.bodyMediumBlack900)),
+              SizedBox(height: 10.v),
+              Container(
                   width: 307.h,
-                  margin: EdgeInsets.only(left: 20.h, top: 139.v),
+                  margin: EdgeInsets.only(left: 20.h, right: 33.h),
                   child: Text("msg_22".tr,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style:
-                          theme.textTheme.bodyMedium!.copyWith(height: 2.00)))),
-          Align(
-              alignment: Alignment.topLeft,
-              child: Container(
+                      style: CustomTextStyles.bodyMediumBlack900
+                          .copyWith(height: 2.00))),
+              Container(
                   width: 304.h,
-                  margin: EdgeInsets.only(left: 20.h, top: 193.v),
+                  margin: EdgeInsets.only(left: 20.h, right: 36.h),
                   child: Text("msg_32".tr,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
-                      style:
-                          theme.textTheme.bodyMedium!.copyWith(height: 2.00)))),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                  padding:
-                      EdgeInsets.only(left: 20.h, right: 23.h, bottom: 31.v),
-                  child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                            width: 317.h,
-                            child: Text("msg18".tr,
-                                maxLines: 4,
-                                overflow: TextOverflow.ellipsis,
-                                style: theme.textTheme.bodyMedium!
-                                    .copyWith(height: 2.00))),
-                        SizedBox(height: 24.v),
-                        Text("lbl57".tr, style: theme.textTheme.bodyMedium)
-                      ])))
-        ]));
+                      style: CustomTextStyles.bodyMediumBlack900
+                          .copyWith(height: 2.00))),
+              SizedBox(height: 29.v),
+              Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                      width: 317.h,
+                      margin: EdgeInsets.only(left: 20.h, right: 23.h),
+                      child: Text("msg18".tr,
+                          maxLines: 4,
+                          overflow: TextOverflow.ellipsis,
+                          style: CustomTextStyles.bodyMediumBlack900
+                              .copyWith(height: 2.00)))),
+              SizedBox(height: 24.v),
+              Padding(
+                  padding: EdgeInsets.only(left: 20.h),
+                  child: Text("lbl57".tr,
+                      style: CustomTextStyles.bodyMediumBlack900)),
+              SizedBox(height: 30.v),
+              Divider()
+            ]));
   }
 
   /// Section Widget
-  Widget _buildReviews(BuildContext context) {
+  Widget _buildAppNavBarQStack(BuildContext context) {
     return SizedBox(
         height: 342.v,
         width: 361.h,
-        child: Stack(alignment: Alignment.topCenter, children: [
-          Padding(
-              padding: EdgeInsets.fromLTRB(8.h, 107.v, 8.h, 194.v),
-              child: _buildQ(context,
-                  userName: "lbl_q".tr, userMessage: "msg19".tr)),
+        child: Stack(alignment: Alignment.center, children: [
           Align(
               alignment: Alignment.topCenter,
-              child: Container(
-                  height: 1.v,
-                  width: 361.h,
-                  margin: EdgeInsets.only(top: 153.v),
-                  decoration: BoxDecoration(color: appTheme.blueGray900))),
+              child: Padding(
+                  padding: EdgeInsets.only(top: 107.v),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Padding(
+                            padding: EdgeInsets.only(top: 10.v, bottom: 13.v),
+                            child: Text("lbl_q".tr,
+                                style: CustomTextStyles
+                                    .bodyMediumNanumSquareNeoBlack900)),
+                        Expanded(
+                            child: Padding(
+                                padding: EdgeInsets.only(left: 9.h),
+                                child: CustomDropDown(
+                                    icon: Container(
+                                        margin: EdgeInsets.only(left: 28.h),
+                                        child: CustomImageView(
+                                            imagePath: ImageConstant
+                                                .imgArrowdownGray700,
+                                            height: 32.v,
+                                            width: 30.h)),
+                                    hintText: "msg19".tr,
+                                    items: dropdownItemList1,
+                                    onChanged: (value) {})))
+                      ]))),
           Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                  height: 1.v,
-                  width: 361.h,
-                  margin: EdgeInsets.only(bottom: 139.v),
-                  decoration: BoxDecoration(color: appTheme.blueGray900))),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                  height: 1.v,
-                  width: 361.h,
-                  margin: EdgeInsets.only(bottom: 90.v),
-                  decoration: BoxDecoration(color: appTheme.blueGray900))),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                  height: 1.v,
-                  width: 361.h,
-                  margin: EdgeInsets.only(bottom: 41.v),
-                  decoration: BoxDecoration(color: appTheme.blueGray900))),
-          SizedBox()
+              alignment: Alignment.center,
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.h),
+                    child: _buildQ(context,
+                        userName: "lbl_q".tr, userMessage: "lbl58".tr)),
+                SizedBox(height: 7.v),
+                Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.h, vertical: 6.v),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                              padding: EdgeInsets.only(top: 15.v, bottom: 13.v),
+                              child: Text("lbl_q".tr,
+                                  style: CustomTextStyles
+                                      .bodyMediumNanumSquareNeoBlack900)),
+                          Expanded(
+                              child: Container(
+                                  width: 273.h,
+                                  margin: EdgeInsets.only(left: 9.h, top: 5.v),
+                                  child: Text("msg20".tr,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: CustomTextStyles
+                                          .bodyMediumNanumSquareNeoBlack900
+                                          .copyWith(height: 1.43)))),
+                          CustomImageView(
+                              imagePath: ImageConstant.imgArrowdownGray700,
+                              height: 32.v,
+                              width: 30.h,
+                              margin: EdgeInsets.only(
+                                  left: 18.h, top: 7.v, bottom: 5.v))
+                        ])),
+                SizedBox(height: 66.v),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.h),
+                    child: _buildQ(context,
+                        userName: "lbl_q".tr, userMessage: "msg21".tr)),
+                SizedBox(height: 17.v),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.h),
+                    child: _buildQ(context,
+                        userName: "lbl_q".tr, userMessage: "lbl59".tr)),
+                SizedBox(height: 17.v),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.h),
+                    child: _buildQ(context,
+                        userName: "lbl_q".tr, userMessage: "lbl60".tr)),
+                SizedBox(height: 17.v),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.h),
+                    child: _buildQ(context,
+                        userName: "lbl_q".tr, userMessage: "msg22".tr))
+              ]))
         ]));
   }
 
   /// Section Widget
-  Widget _buildDoctorReviews(BuildContext context) {
-    return SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: IntrinsicWidth(
-            child: Container(
-                padding: EdgeInsets.symmetric(vertical: 60.v),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: fs.Svg(ImageConstant.imgFooter),
-                        fit: BoxFit.cover)),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: Padding(
-                              padding: EdgeInsets.only(left: 16.h),
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    CustomImageView(
-                                        imagePath: ImageConstant
-                                            .imgVectorBlack90030x92,
-                                        height: 30.v,
-                                        width: 92.h,
-                                        margin: EdgeInsets.only(bottom: 13.v)),
-                                    Padding(
-                                        padding: EdgeInsets.only(bottom: 13.v),
-                                        child: Column(children: [
-                                          CustomImageView(
-                                              imagePath: ImageConstant
-                                                  .imgVectorYellow400,
-                                              height: 6.adaptSize,
-                                              width: 6.adaptSize,
-                                              alignment: Alignment.centerRight),
-                                          SizedBox(height: 2.v),
-                                          SizedBox(
-                                              width: 91.h,
-                                              child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgVectorWhiteA700,
-                                                        height: 21.v,
-                                                        width: 19.h),
-                                                    CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgVectorWhiteA70021x21,
-                                                        height: 21.adaptSize,
-                                                        width: 21.adaptSize),
-                                                    CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgVectorWhiteA70020x33,
-                                                        height: 20.v,
-                                                        width: 33.h),
-                                                    CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgVectorWhiteA70020x5,
-                                                        height: 20.v,
-                                                        width: 5.h)
-                                                  ]))
-                                        ]))
-                                  ]))),
-                      SizedBox(height: 24.v),
-                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                        GestureDetector(
-                            onTap: () {
-                              onTapTxtWidget(context);
-                            },
-                            child: Text("lbl10".tr,
-                                style: theme.textTheme.bodySmall)),
-                        Padding(
-                            padding: EdgeInsets.only(left: 17.h),
-                            child: Text("lbl11".tr,
-                                style: theme.textTheme.bodySmall)),
-                        Padding(
-                            padding: EdgeInsets.only(left: 17.h),
-                            child: Text("lbl12".tr,
-                                style: theme.textTheme.bodySmall))
-                      ]),
-                      SizedBox(height: 9.v),
-                      Padding(
-                          padding: EdgeInsets.only(left: 890.h),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                GestureDetector(
-                                    onTap: () {
-                                      onTapTxtWidget1(context);
-                                    },
-                                    child: Text("lbl13".tr,
-                                        style:
-                                            CustomTextStyles.bodySmallGray500)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 18.h),
-                                    child: Text("lbl14".tr,
-                                        style:
-                                            CustomTextStyles.bodySmallGray500)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 16.h),
-                                    child: Text("lbl15".tr,
-                                        style:
-                                            CustomTextStyles.bodySmallGray500)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 19.h),
-                                    child: Text("lbl16".tr,
-                                        style:
-                                            CustomTextStyles.bodySmallGray500))
-                              ])),
-                      SizedBox(height: 38.v),
-                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                        Text("lbl_address".tr,
-                            style: theme.textTheme.bodySmall),
-                        Padding(
-                            padding: EdgeInsets.only(left: 131.h),
-                            child: Text("lbl_contact".tr,
-                                style: theme.textTheme.bodySmall))
-                      ]),
-                      SizedBox(height: 9.v),
-                      Padding(
-                          padding: EdgeInsets.only(left: 890.h),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                SizedBox(
-                                    height: 34.v,
-                                    width: 160.h,
-                                    child: Stack(
-                                        alignment: Alignment.bottomLeft,
-                                        children: [
-                                          Align(
-                                              alignment: Alignment.topCenter,
-                                              child: Text("msg_34".tr,
-                                                  style: theme
-                                                      .textTheme.bodySmall)),
-                                          Align(
-                                              alignment: Alignment.bottomLeft,
-                                              child: Text("msg_2_b101".tr,
-                                                  style: theme
-                                                      .textTheme.bodySmall))
-                                        ])),
-                                Container(
-                                    height: 32.v,
-                                    width: 109.h,
-                                    margin: EdgeInsets.only(left: 19.h),
-                                    child: Stack(
-                                        alignment: Alignment.bottomLeft,
-                                        children: [
-                                          Align(
-                                              alignment: Alignment.topCenter,
-                                              child: Text(
-                                                  "msg_business_cami_kr".tr,
-                                                  style: theme
-                                                      .textTheme.bodySmall)),
-                                          Align(
-                                              alignment: Alignment.bottomLeft,
-                                              child: Text("lbl_02_861_6828".tr,
-                                                  style: CustomTextStyles
-                                                      .bodySmall11))
-                                        ]))
-                              ])),
-                      SizedBox(height: 45.v),
-                      SizedBox(
-                          height: 34.v,
-                          width: 241.h,
-                          child: Stack(
-                              alignment: Alignment.bottomCenter,
-                              children: [
-                                Align(
-                                    alignment: Alignment.topLeft,
-                                    child: Text("lbl17".tr,
-                                        style: theme.textTheme.bodySmall)),
-                                Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text("msg".tr,
-                                        style: theme.textTheme.bodySmall))
-                              ])),
-                      SizedBox(height: 15.v),
-                      Text("msg_copyright_2023".tr,
-                          style: theme.textTheme.bodySmall),
-                      SizedBox(height: 38.v),
-                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                        Container(
-                            height: 24.adaptSize,
-                            width: 24.adaptSize,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage(ImageConstant.imgImage24x24),
-                                    fit: BoxFit.cover))),
-                        Container(
-                            height: 24.adaptSize,
-                            width: 24.adaptSize,
-                            margin: EdgeInsets.only(left: 16.h),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(ImageConstant.imgImage2),
-                                    fit: BoxFit.cover))),
-                        Container(
-                            height: 24.adaptSize,
-                            width: 24.adaptSize,
-                            margin: EdgeInsets.only(left: 16.h),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(ImageConstant.imgImage3),
-                                    fit: BoxFit.cover)))
-                      ]),
-                      SizedBox(height: 13.v)
-                    ]))));
+  Widget _buildAppNavBarFooter(BuildContext context) {
+    return Container(
+        width: double.maxFinite,
+        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 60.v),
+        decoration: AppDecoration.fillOnErrorContainer,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          CustomImageView(
+              imagePath: ImageConstant.imgTicket, height: 30.v, width: 92.h),
+          SizedBox(height: 37.v),
+          Row(children: [
+            GestureDetector(
+                onTap: () {
+                  onTapTxtWidget(context);
+                },
+                child: Text("lbl10".tr, style: theme.textTheme.bodySmall)),
+            Padding(
+                padding: EdgeInsets.only(left: 17.h),
+                child: Text("lbl11".tr, style: theme.textTheme.bodySmall)),
+            Padding(
+                padding: EdgeInsets.only(left: 17.h),
+                child: Text("lbl12".tr, style: theme.textTheme.bodySmall))
+          ]),
+          SizedBox(height: 9.v),
+          Padding(
+              padding: EdgeInsets.only(right: 19.h),
+              child: Row(children: [
+                GestureDetector(
+                    onTap: () {
+                      onTapTxtWidget1(context);
+                    },
+                    child: Text("lbl13".tr,
+                        style: CustomTextStyles.bodySmallGray500)),
+                Padding(
+                    padding: EdgeInsets.only(left: 18.h),
+                    child: Text("lbl14".tr,
+                        style: CustomTextStyles.bodySmallGray500)),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.h),
+                    child: Text("lbl15".tr,
+                        style: CustomTextStyles.bodySmallGray500)),
+                Padding(
+                    padding: EdgeInsets.only(left: 19.h),
+                    child: Text("lbl16".tr,
+                        style: CustomTextStyles.bodySmallGray500))
+              ])),
+          SizedBox(height: 38.v),
+          Row(children: [
+            Text("lbl_address".tr, style: theme.textTheme.bodySmall),
+            Padding(
+                padding: EdgeInsets.only(left: 131.h),
+                child: Text("lbl_contact".tr, style: theme.textTheme.bodySmall))
+          ]),
+          SizedBox(height: 9.v),
+          Padding(
+              padding: EdgeInsets.only(right: 72.h),
+              child: Row(children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text("msg_34".tr, style: theme.textTheme.bodySmall),
+                  Text("msg_2_b101".tr, style: theme.textTheme.bodySmall)
+                ]),
+                Padding(
+                    padding: EdgeInsets.only(left: 19.h),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("msg_business_cami_kr".tr,
+                              style: theme.textTheme.bodySmall),
+                          Text("lbl_02_861_6828".tr,
+                              style: CustomTextStyles.bodySmall11)
+                        ]))
+              ])),
+          SizedBox(height: 45.v),
+          Text("lbl17".tr, style: theme.textTheme.bodySmall),
+          Text("msg".tr, style: theme.textTheme.bodySmall),
+          SizedBox(height: 15.v),
+          Text("msg_copyright_2023".tr, style: theme.textTheme.bodySmall),
+          SizedBox(height: 38.v),
+          Row(children: [
+            CustomImageView(
+                imagePath: ImageConstant.imgImage24x24,
+                height: 24.adaptSize,
+                width: 24.adaptSize),
+            CustomImageView(
+                imagePath: ImageConstant.imgImage3,
+                height: 24.adaptSize,
+                width: 24.adaptSize,
+                margin: EdgeInsets.only(left: 16.h)),
+            CustomImageView(
+                imagePath: ImageConstant.imgImage4,
+                height: 24.adaptSize,
+                width: 24.adaptSize,
+                margin: EdgeInsets.only(left: 16.h))
+          ])
+        ]));
   }
 
   /// Common widget
@@ -455,35 +353,32 @@ class FaqScreen extends StatelessWidget {
     required String userName,
     required String userMessage,
   }) {
-    return Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-              padding: EdgeInsets.only(top: 10.v, bottom: 13.v),
-              child: Text(userName,
-                  style: CustomTextStyles.bodyMediumNanumSquareNeo_1
-                      .copyWith(color: appTheme.black900))),
-          Container(
-              width: 262.h,
-              margin: EdgeInsets.only(left: 9.h),
-              child: Text(userMessage,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: CustomTextStyles.bodyMediumNanumSquareNeo_1
-                      .copyWith(color: appTheme.black900, height: 1.43))),
-          Spacer(),
-          CustomImageView(
-              imagePath: ImageConstant.imgLocation,
-              height: 6.v,
-              width: 12.h,
-              margin: EdgeInsets.only(top: 15.v, right: 8.h, bottom: 17.v))
-        ]);
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Padding(
+          padding: EdgeInsets.only(top: 8.v, bottom: 7.v),
+          child: Text(userName,
+              style: CustomTextStyles.bodyMediumNanumSquareNeoBlack900
+                  .copyWith(color: appTheme.black900))),
+      Padding(
+          padding: EdgeInsets.only(left: 9.h, top: 7.v, bottom: 8.v),
+          child: Text(userMessage,
+              style: CustomTextStyles.bodyMediumNanumSquareNeoBlack900
+                  .copyWith(color: appTheme.black900))),
+      Spacer(),
+      CustomImageView(
+          imagePath: ImageConstant.imgArrowdownGray700,
+          height: 32.v,
+          width: 30.h)
+    ]);
   }
 
-  /// Navigates to the noticesScreen when the action is triggered.
+  /// Navigates back to the previous screen.
+  onTapImgArrowLeft(BuildContext context) {
+    Navigator.pop(context);
+  }
+
   onTapTxtWidget(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.noticesScreen);
+    // TODO: implement Actions
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.

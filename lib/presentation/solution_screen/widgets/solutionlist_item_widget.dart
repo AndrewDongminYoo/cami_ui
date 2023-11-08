@@ -10,44 +10,15 @@ class SolutionlistItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 179.v,
-      width: 361.h,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Align(
-            alignment: Alignment.center,
-            child: Container(
-              height: 179.v,
-              width: 361.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  8.h,
-                ),
-                border: Border.all(
-                  color: appTheme.gray300,
-                  width: 1.h,
-                ),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: Container(
-              height: 161.v,
-              width: 343.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    ImageConstant.imgImage161x343,
-                  ),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-        ],
+    return Container(
+      padding: EdgeInsets.all(8.h),
+      decoration: AppDecoration.outlineOnError.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder8,
+      ),
+      child: CustomImageView(
+        imagePath: ImageConstant.imgImage161x343,
+        height: 161.v,
+        width: 343.h,
       ),
     );
   }

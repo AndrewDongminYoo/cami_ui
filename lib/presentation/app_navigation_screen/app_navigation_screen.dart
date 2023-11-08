@@ -29,21 +29,9 @@ class AppNavigationScreen extends StatelessWidget {
                       children: [
                         _buildScreenTitle(
                           context,
-                          userName: "Check Up / Details Two".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkUpDetailsTwoScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
                           userName: "Quck Test".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.quckTestScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          userName: "Notices".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.noticesScreen),
                         ),
                         _buildScreenTitle(
                           context,
@@ -59,27 +47,9 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Check Up / List".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkUpListScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          userName: "Check Up / Details".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkUpDetailsScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
                           userName: "FAQ".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.faqScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          userName: "Home".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.homeScreen),
                         ),
                         _buildScreenTitle(
                           context,
@@ -128,6 +98,72 @@ class AppNavigationScreen extends StatelessWidget {
                           userName: "Verify".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.verifyScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "My Page".tr,
+                          onTapScreenTitle: () =>
+                              onTapScreenTitle(context, AppRoutes.myPageScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Owner - Tab Container".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.ownerTabContainerScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Home".tr,
+                          onTapScreenTitle: () =>
+                              onTapScreenTitle(context, AppRoutes.homeScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Checkup Cat".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.checkupCatScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Checkup Dog".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.checkupDogScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Checkup Owner - Tab Container".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(context,
+                              AppRoutes.checkupOwnerTabContainerScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "FourHundredFour".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.fourhundredfourScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Notice Detail".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.noticeDetailScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Notice".tr,
+                          onTapScreenTitle: () =>
+                              onTapScreenTitle(context, AppRoutes.noticeScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "FAQ".tr,
+                          onTapScreenTitle: () =>
+                              onTapScreenTitle(context, AppRoutes.faq1Screen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          userName: "Log In".tr,
+                          onTapScreenTitle: () =>
+                              onTapScreenTitle(context, AppRoutes.logInScreen),
                         ),
                       ],
                     ),
