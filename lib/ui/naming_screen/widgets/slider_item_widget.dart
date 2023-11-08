@@ -1,39 +1,44 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:carousel_slider/carousel_slider.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/gen/assets.gen.dart';
 import '/widgets/custom_image_view.dart';
 
 class SliderItemWidget extends StatelessWidget {
-  const SliderItemWidget({super.key});
+  const SliderItemWidget({
+    super.key,
+    required this.current,
+    required this.items,
+  });
+
+  final ValueNotifier<int> current;
+  final List<String> items;
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Row(
-        children: [
-          CustomImageView(
-            imagePath: Assets.images.imgImage186x329.path,
-            height: 186.h,
-            width: 329.w,
-          ),
-          CustomImageView(
-            imagePath: Assets.images.imgImage5.path,
-            height: 186.h,
-            width: 329.w,
-            margin: EdgeInsets.only(left: 20.w),
-          ),
-          CustomImageView(
-            imagePath: Assets.images.imgImage6.path,
-            height: 186.h,
-            width: 329.w,
-            margin: EdgeInsets.only(left: 20.w),
-          ),
-        ],
+    return CarouselSlider.builder(
+      options: CarouselOptions(
+        height: 186.h,
+        autoPlay: true,
+        viewportFraction: 1,
+        enableInfiniteScroll: false,
+        onPageChanged: (index, reason) {
+          current.value = index;
+        },
       ),
+      itemCount: items.length,
+      itemBuilder: (context, index, realIndex) {
+        return CustomImageView(
+          imagePath: items[realIndex],
+          height: 186.h,
+          width: 329.w,
+          margin: EdgeInsets.symmetric(horizontal: 10.w),
+        );
+      },
     );
   }
 }

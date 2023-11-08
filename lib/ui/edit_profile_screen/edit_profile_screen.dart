@@ -223,8 +223,7 @@ class EditProfileScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildEditTextWithButton(BuildContext context) {
-    return CustomTextFormField(
-        width: 211.w, controller: editTextWithButton);
+    return CustomTextFormField(width: 211.w, controller: editTextWithButton);
   }
 
   /// Section Widget
