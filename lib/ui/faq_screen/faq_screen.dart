@@ -80,7 +80,7 @@ class FaqScreen extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.only(top: 9.h, bottom: 7.h),
-                  child: Text('lbl_q'.tr,
+                  child: Text('Q.',
                       style:
                           CustomTextStyles.bodyMediumNanumSquareNeoBlack900)),
               Expanded(
@@ -170,91 +170,40 @@ class FaqScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildAppNavBarQStack(BuildContext context) {
     return SizedBox(
-        height: 342.h,
-        width: 361.w,
+        height: 460.h,
+        width: 360.w,
         child: Stack(alignment: Alignment.center, children: [
           Align(
-              alignment: Alignment.topCenter,
-              child: Padding(
-                  padding: EdgeInsets.only(top: 107.h),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Padding(
-                            padding: EdgeInsets.only(top: 10.h, bottom: 13.h),
-                            child: Text('lbl_q'.tr,
-                                style: CustomTextStyles
-                                    .bodyMediumNanumSquareNeoBlack900)),
-                        Expanded(
-                            child: Padding(
-                                padding: EdgeInsets.only(left: 9.w),
-                                child: CustomDropDown(
-                                    icon: Container(
-                                        margin: EdgeInsets.only(left: 28.w),
-                                        child: CustomImageView(
-                                            imagePath: Assets
-                                                .svg.imgArrowdownGray700.path,
-                                            height: 32.h,
-                                            width: 30.w)),
-                                    hintText: 'msg19'.tr,
-                                    items: dropdownItemList1,
-                                    onChanged: (value) {})))
-                      ]))),
-          Align(
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: _buildQ(context,
-                    userName: 'lbl_q'.tr, userMessage: 'lbl58'.tr)),
-            SizedBox(height: 7.h),
-            Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 6.h),
-                child:
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Padding(
-                      padding: EdgeInsets.only(top: 15.h, bottom: 13.h),
-                      child: Text('lbl_q'.tr,
-                          style: CustomTextStyles
-                              .bodyMediumNanumSquareNeoBlack900)),
-                  Expanded(
-                      child: Container(
-                          width: 273.w,
-                          margin: EdgeInsets.only(left: 9.w, top: 5.h),
-                          child: Text('msg20'.tr,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles
-                                  .bodyMediumNanumSquareNeoBlack900
-                                  .copyWith(height: 1.43)))),
-                  CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
-                      height: 32.h,
-                      width: 30.w,
-                      margin:
-                          EdgeInsets.only(left: 18.w, top: 7.h, bottom: 5.h))
-                ])),
-            SizedBox(height: 66.h),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: _buildQ(context,
-                    userName: 'lbl_q'.tr, userMessage: 'msg21'.tr)),
             SizedBox(height: 17.h),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: _buildQ(context,
-                    userName: 'lbl_q'.tr, userMessage: 'lbl59'.tr)),
+                child: _buildQ(context, userMessage: 'msg19'.tr)),
             SizedBox(height: 17.h),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: _buildQ(context,
-                    userName: 'lbl_q'.tr, userMessage: 'lbl60'.tr)),
+                child: _buildQ(context, userMessage: 'msg20'.tr)),
             SizedBox(height: 17.h),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: _buildQ(context,
-                    userName: 'lbl_q'.tr, userMessage: 'msg22'.tr))
+                child: _buildQ(context, userMessage: 'msg21'.tr)),
+            SizedBox(height: 17.h),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: _buildQ(context, userMessage: 'msg22'.tr)),
+            SizedBox(height: 17.h),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: _buildQ(context, userMessage: 'lbl58'.tr)),
+            SizedBox(height: 17.h),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: _buildQ(context, userMessage: 'lbl59'.tr)),
+            SizedBox(height: 17.h),
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: _buildQ(context, userMessage: 'lbl60'.tr)),
+            SizedBox(height: 17.h),
           ]))
         ]));
   }
@@ -359,21 +308,23 @@ class FaqScreen extends StatelessWidget {
   /// Common widget
   Widget _buildQ(
     BuildContext context, {
-    required String userName,
     required String userMessage,
   }) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Padding(
           padding: EdgeInsets.only(top: 8.h, bottom: 7.h),
-          child: Text(userName,
+          child: Text('Q.',
               style: CustomTextStyles.bodyMediumNanumSquareNeoBlack900
                   .copyWith(color: appTheme.black900))),
-      Padding(
-          padding: EdgeInsets.only(left: 9.w, top: 7.h, bottom: 8.h),
-          child: Text(userMessage,
-              style: CustomTextStyles.bodyMediumNanumSquareNeoBlack900
-                  .copyWith(color: appTheme.black900))),
-      const Spacer(),
+      Expanded(
+        child: Padding(
+            padding: EdgeInsets.only(left: 9.w, top: 7.h, bottom: 8.h),
+            child: Text(userMessage,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 3,
+                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack900
+                    .copyWith(color: appTheme.black900))),
+      ),
       CustomImageView(
           imagePath: Assets.svg.imgArrowdownGray700.path,
           height: 32.h,

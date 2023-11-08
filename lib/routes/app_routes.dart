@@ -8,7 +8,6 @@ import '/ui/checkup_dog_screen/checkup_dog_screen.dart';
 import '/ui/checkup_owner_tab_container_screen/checkup_owner_tab_container_screen.dart';
 import '/ui/contact_us_register_screen/contact_us_register_screen.dart';
 import '/ui/edit_profile_screen/edit_profile_screen.dart';
-import '/ui/faq1_screen/faq1_screen.dart';
 import '/ui/faq_screen/faq_screen.dart';
 import '/ui/fourhundredfour_screen/fourhundredfour_screen.dart';
 import '/ui/home_screen/home_screen.dart';
@@ -54,7 +53,6 @@ class AppRoutes {
   static const String fourhundredfourScreen = '/fourhundredfour_screen';
   static const String noticeDetailScreen = '/notice_detail_screen';
   static const String noticeScreen = '/notice_screen';
-  static const String faq1Screen = '/faq1_screen';
   static const String logInScreen = '/log_in_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
 
@@ -80,7 +78,6 @@ class AppRoutes {
     fourhundredfourScreen: (context) => const FourhundredfourScreen(),
     noticeDetailScreen: (context) => const NoticeDetailScreen(),
     noticeScreen: (context) => const NoticeScreen(),
-    faq1Screen: (context) => Faq1Screen(),
     logInScreen: (context) => LogInScreen(),
     appNavigationScreen: (context) => const AppNavigationScreen()
   };

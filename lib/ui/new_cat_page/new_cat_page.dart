@@ -24,7 +24,7 @@ class NewCatPage extends StatefulWidget {
 
 class NewCatPageState extends State<NewCatPage>
     with AutomaticKeepAliveClientMixin<NewCatPage> {
-  List<String> dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
 
   @override
   bool get wantKeepAlive => true;
@@ -34,55 +34,61 @@ class NewCatPageState extends State<NewCatPage>
     super.build(context);
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            body: SizedBox(
-                width: mediaQueryData.size.width,
-                child: SingleChildScrollView(
-                    child: Column(children: [
+      child: Scaffold(
+        body: SizedBox(
+          width: mediaQueryData.size.width,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 33.h),
+                Column(children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 16.w),
+                          child: Text('lbl99'.tr,
+                              style: CustomTextStyles.bodyMediumOnPrimary))),
+                  SizedBox(height: 9.h),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.w),
+                      child: CustomDropDown(
+                          icon: Container(
+                              padding:
+                                  EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
+                              decoration: BoxDecoration(
+                                  color: appTheme.gray10001,
+                                  borderRadius: BorderRadius.circular(8.w)),
+                              child: CustomImageView(
+                                  imagePath: Assets.svg.imgArrowDown.path,
+                                  height: 8.h,
+                                  width: 12.w)),
+                          items: dropdownItemList,
+                          onChanged: (value) {})),
                   SizedBox(height: 33.h),
-                  Column(children: [
-                    Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 16.w),
-                            child: Text('lbl99'.tr,
-                                style: CustomTextStyles.bodyMediumOnPrimary))),
-                    SizedBox(height: 9.h),
-                    Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.w),
-                        child: CustomDropDown(
-                            icon: Container(
-                                padding:
-                                    EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
-                                decoration: BoxDecoration(
-                                    color: appTheme.gray10001,
-                                    borderRadius: BorderRadius.circular(8.w)),
-                                child: CustomImageView(
-                                    imagePath: Assets.svg.imgArrowDown.path,
-                                    height: 8.h,
-                                    width: 12.w)),
-                            items: dropdownItemList,
-                            onChanged: (value) {})),
-                    SizedBox(height: 33.h),
-                    Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 16.w),
-                            child: Text('lbl100'.tr,
-                                style: CustomTextStyles.bodyMediumOnPrimary))),
-                    SizedBox(height: 9.h),
-                    _buildChipView(context),
-                    SizedBox(height: 64.h),
-                    CustomElevatedButton(
-                        text: 'lbl103'.tr,
-                        margin: EdgeInsets.symmetric(horizontal: 16.w),
-                        buttonStyle: CustomButtonStyles.fillPrimary,
-                        buttonTextStyle:
-                            CustomTextStyles.bodyMediumOnErrorContainer),
-                    SizedBox(height: 128.h),
-                    _buildFooter(context)
-                  ])
-                ])))));
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 16.w),
+                          child: Text('lbl100'.tr,
+                              style: CustomTextStyles.bodyMediumOnPrimary))),
+                  SizedBox(height: 9.h),
+                  _buildChipView(context),
+                  SizedBox(height: 64.h),
+                  CustomElevatedButton(
+                      text: 'lbl103'.tr,
+                      margin: EdgeInsets.symmetric(horizontal: 16.w),
+                      buttonStyle: CustomButtonStyles.fillPrimary,
+                      buttonTextStyle:
+                          CustomTextStyles.bodyMediumOnErrorContainer),
+                  SizedBox(height: 128.h),
+                  _buildFooter(context)
+                ])
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

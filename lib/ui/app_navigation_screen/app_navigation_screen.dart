@@ -127,12 +127,6 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: 'FAQ'.tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.faq1Screen),
-                        ),
-                        _buildScreenTitle(
-                          context,
                           userName: 'Log In'.tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.logInScreen),
