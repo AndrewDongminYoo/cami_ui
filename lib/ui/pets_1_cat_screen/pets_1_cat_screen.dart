@@ -10,6 +10,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_icon_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -22,68 +23,69 @@ class PetsOneCatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  CustomImageView(
-                      imagePath: Assets.images.imgAppNavBar.path,
-                      height: 50.h,
-                      width: 393.w),
-                  SizedBox(height: 42.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w, right: 71.w),
-                          child: Row(children: [
-                            CustomImageView(
-                                imagePath: Assets.images.imgImage8.path,
-                                height: 100.r,
-                                width: 100.r,
-                                radius: BorderRadius.circular(50.w)),
-                            Padding(
-                                padding: EdgeInsets.only(
-                                    left: 24.w, top: 30.h, bottom: 25.h),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(children: [
-                                        Text('lbl_andrew'.tr,
-                                            style: CustomTextStyles
-                                                .bodyLargeGray900),
-                                        Text('lbl118'.tr,
-                                            style: CustomTextStyles
-                                                .bodyLargeGray900)
-                                      ]),
-                                      SizedBox(height: 3.h),
-                                      Text('msg_ydm2790_naver_com'.tr,
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 42.h),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 16.w, right: 71.w),
+                        child: Row(children: [
+                          CustomImageView(
+                              imagePath: Assets.images.imgImage8.path,
+                              height: 100.r,
+                              width: 100.r,
+                              radius: BorderRadius.circular(50.w)),
+                          Padding(
+                              padding: EdgeInsets.only(
+                                  left: 24.w, top: 30.h, bottom: 25.h),
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(children: [
+                                      Text('lbl_andrew'.tr,
                                           style: CustomTextStyles
-                                              .bodySmallGray50011)
-                                    ])),
-                            Padding(
-                                padding: EdgeInsets.only(
-                                    left: 2.w, top: 26.h, bottom: 42.h),
-                                child: CustomIconButton(
-                                    height: 32.r,
-                                    width: 32.r,
-                                    padding: EdgeInsets.all(8.w),
-                                    child: CustomImageView(
-                                        imagePath:
-                                            Assets.svg.imgSettings.path)))
-                          ]))),
-                  SizedBox(height: 48.h),
-                  _buildWidgetRow(context),
-                  SizedBox(height: 18.h),
-                  _buildView(context),
-                  SizedBox(height: 16.h),
-                  _buildUserProfile(context),
-                  SizedBox(height: 22.h),
-                  _buildMyPet(context),
-                  SizedBox(height: 146.h),
-                  _buildFooter(context)
-                ])))));
+                                              .bodyLargeGray900),
+                                      Text('lbl118'.tr,
+                                          style:
+                                              CustomTextStyles.bodyLargeGray900)
+                                    ]),
+                                    SizedBox(height: 3.h),
+                                    Text('msg_ydm2790_naver_com'.tr,
+                                        style:
+                                            CustomTextStyles.bodySmallGray50011)
+                                  ])),
+                          Padding(
+                              padding: EdgeInsets.only(
+                                  left: 2.w, top: 26.h, bottom: 42.h),
+                              child: CustomIconButton(
+                                  height: 32.r,
+                                  width: 32.r,
+                                  padding: EdgeInsets.all(8.w),
+                                  child: CustomImageView(
+                                      imagePath: Assets.svg.imgSettings.path)))
+                        ]))),
+                SizedBox(height: 48.h),
+                _buildWidgetRow(context),
+                SizedBox(height: 18.h),
+                _buildView(context),
+                SizedBox(height: 16.h),
+                _buildUserProfile(context),
+                SizedBox(height: 22.h),
+                _buildMyPet(context),
+                SizedBox(height: 146.h),
+                _buildFooter(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
@@ -321,8 +323,7 @@ class PetsOneCatScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(9.w)))),
                       Align(
                           alignment: Alignment.topCenter,
-                          child: Text('lbl_0'.tr,
-                              style: theme.textTheme.bodySmall))
+                          child: Text('0', style: theme.textTheme.bodySmall))
                     ]))
               ])),
           _buildTf(context),

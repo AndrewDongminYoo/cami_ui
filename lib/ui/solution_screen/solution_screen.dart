@@ -8,6 +8,7 @@ import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 import 'widgets/solution_list_item_widget.dart';
 
@@ -20,6 +21,7 @@ class SolutionScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
@@ -70,10 +72,7 @@ class SolutionScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       decoration: AppDecoration.fillOnPrimaryContainer,
-      child: CustomImageView(
-          imagePath: Assets.images.imgAppNavBar.path,
-          height: 50.h,
-          width: 393.w),
+      child: const CamiAppBar(),
     );
   }
 

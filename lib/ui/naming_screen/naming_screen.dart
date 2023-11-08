@@ -13,6 +13,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import 'widgets/slider_item_widget.dart';
@@ -33,14 +34,11 @@ class NamingScreen extends StatelessWidget {
     ];
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
             width: double.maxFinite,
             child: SingleChildScrollView(
                 child: Column(children: [
-              CustomImageView(
-                  imagePath: Assets.images.imgAppNavBar.path,
-                  height: 50.h,
-                  width: 393.w),
               SizedBox(height: 48.h),
               Text('lbl38'.tr, style: CustomTextStyles.titleLargeBlack900),
               SizedBox(height: 70.h),
@@ -118,9 +116,7 @@ class NamingScreen extends StatelessWidget {
                 ]),
               ),
               SizedBox(height: 78.h),
-              SliderItemWidget(
-                  current: indexListenable,
-                  items: sliderBanners),
+              SliderItemWidget(current: indexListenable, items: sliderBanners),
               SizedBox(height: 31.h),
               SizedBox(
                 height: 24.h,

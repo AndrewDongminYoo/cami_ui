@@ -10,6 +10,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
@@ -25,62 +26,64 @@ class ContactUsRegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  CustomImageView(
-                      imagePath: Assets.images.imgAppNavBar.path,
-                      height: 50.h,
-                      width: 393.w),
-                  SizedBox(height: 15.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CustomImageView(
-                                    imagePath: Assets.svg.imgArrowLeft.path,
-                                    height: 20.r,
-                                    width: 20.r,
-                                    margin: EdgeInsets.only(bottom: 6.h),
-                                    onTap: () {
-                                      onTapImgArrowLeft(context);
-                                    }),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 132.w),
-                                    child: Text('lbl_1_12'.tr,
-                                        style: CustomTextStyles.bodyLarge18))
-                              ]))),
-                  SizedBox(height: 40.h),
-                  Divider(
-                      color: appTheme.black900, indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 17.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 32.w),
-                          child: Text('lbl_1_13'.tr,
-                              style: theme.textTheme.bodyLarge))),
-                  SizedBox(height: 16.h),
-                  Divider(
-                      color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 22.h),
-                  _buildUserProfile(context),
-                  SizedBox(height: 23.h),
-                  _buildRecentOrders(context),
-                  SizedBox(height: 28.h),
-                  CustomElevatedButton(
-                      text: 'lbl43'.tr,
-                      margin: EdgeInsets.symmetric(horizontal: 16.w),
-                      buttonStyle: CustomButtonStyles.fillBlackTL12),
-                  SizedBox(height: 128.h),
-                  _buildFooter(context)
-                ])))));
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        resizeToAvoidBottomInset: false,
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 15.h),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 16.w),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CustomImageView(
+                                  imagePath: Assets.svg.imgArrowLeft.path,
+                                  height: 20.r,
+                                  width: 20.r,
+                                  margin: EdgeInsets.only(bottom: 6.h),
+                                  onTap: () {
+                                    onTapImgArrowLeft(context);
+                                  }),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 132.w),
+                                  child: Text('lbl_1_12'.tr,
+                                      style: CustomTextStyles.bodyLarge18))
+                            ]))),
+                SizedBox(height: 40.h),
+                Divider(
+                    color: appTheme.black900, indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 17.h),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 32.w),
+                        child: Text('lbl_1_13'.tr,
+                            style: theme.textTheme.bodyLarge))),
+                SizedBox(height: 16.h),
+                Divider(color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 22.h),
+                _buildUserProfile(context),
+                SizedBox(height: 23.h),
+                _buildRecentOrders(context),
+                SizedBox(height: 28.h),
+                CustomElevatedButton(
+                    text: 'lbl43'.tr,
+                    margin: EdgeInsets.symmetric(horizontal: 16.w),
+                    buttonStyle: CustomButtonStyles.fillBlackTL12),
+                SizedBox(height: 128.h),
+                _buildFooter(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

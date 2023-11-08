@@ -9,6 +9,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/app_bar/appbar_title.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
@@ -27,12 +28,13 @@ class CheckupCatScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: _buildAppBar(context),
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             child: Column(
               children: [
+                _breadcrumbs(context),
                 _buildFrame(context),
                 SizedBox(height: 19.h),
                 Align(
@@ -143,7 +145,7 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
+  Widget _breadcrumbs(BuildContext context) {
     return CustomAppBar(
       title: Padding(
         padding: EdgeInsets.only(left: 16.w),
@@ -151,7 +153,7 @@ class CheckupCatScreen extends StatelessWidget {
           children: [
             AppbarTitle(text: 'lbl'.tr),
             AppbarTitle(
-              text: 'lbl2'.tr,
+              text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
             AppbarTitle(
@@ -159,7 +161,7 @@ class CheckupCatScreen extends StatelessWidget {
               margin: EdgeInsets.only(left: 8.w),
             ),
             AppbarTitle(
-              text: 'lbl2'.tr,
+              text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
           ],
@@ -290,7 +292,7 @@ class CheckupCatScreen extends StatelessWidget {
                     bottom: 3.h,
                   ),
                   child: Text(
-                    'lbl_1'.tr,
+                    '1',
                     style: theme.textTheme.bodyLarge,
                   ),
                 ),

@@ -13,6 +13,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
 import 'widgets/animal_type_test_item_widget.dart';
@@ -32,12 +33,12 @@ class HomeScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildFrameColumn(context),
                 _buildFrameColumn1(context),
                 SizedBox(height: 99.h),
                 Text(
@@ -171,17 +172,6 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
   }
 
   /// Section Widget

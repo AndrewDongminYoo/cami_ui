@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
-import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
 
@@ -20,11 +20,11 @@ class FourhundredfourScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: Column(
             children: [
-              _buildFrame(context),
               SizedBox(height: 62.h),
               Text(
                 'lbl170'.tr,
@@ -78,16 +78,5 @@ class FourhundredfourScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  /// Section Widget
-  Widget _buildFrame(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
   }
 }

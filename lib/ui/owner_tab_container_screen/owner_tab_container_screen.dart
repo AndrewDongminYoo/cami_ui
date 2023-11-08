@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
@@ -11,7 +10,7 @@ import '/theme/theme_helper.dart';
 import '/ui/cat_page/cat_page.dart';
 import '/ui/dog_page/dog_page.dart';
 import '/ui/owner_page/owner_page.dart';
-import '/widgets/custom_image_view.dart';
+import '/ui/shared/cami_app_bar.dart';
 
 class OwnerTabContainerScreen extends StatefulWidget {
   const OwnerTabContainerScreen({super.key});
@@ -36,6 +35,7 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
@@ -119,9 +119,6 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
+        child: const CamiAppBar());
   }
 }

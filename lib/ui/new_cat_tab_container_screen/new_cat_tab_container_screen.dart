@@ -10,6 +10,7 @@ import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/new_cat_page/new_cat_page.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
@@ -38,82 +39,84 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        resizeToAvoidBottomInset: false,
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                      CustomImageView(
-                          imagePath: Assets.images.imgAppNavBar.path,
-                          height: 50.h,
-                          width: 393.w),
-                      SizedBox(height: 15.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CustomImageView(
-                                    imagePath: Assets.svg.imgArrowLeft.path,
-                                    height: 20.r,
-                                    width: 20.r,
-                                    margin: EdgeInsets.only(bottom: 6.h),
-                                    onTap: () {
-                                      onTapImgArrowLeft(context);
-                                    }),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 77.w),
-                                    child: Text('lbl_1_22'.tr,
-                                        style: CustomTextStyles.bodyLarge18))
-                              ])),
-                      SizedBox(height: 21.h),
-                      _buildImageRegistration(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl106'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16.w),
-                          child: CustomTextFormField(
-                              controller: editTextController,
-                              textInputAction: TextInputAction.done,
-                              alignment: Alignment.center)),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl107'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 21.h),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          child: _buildDateTimeField(context)),
-                      SizedBox(height: 21.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl111'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 15.h),
-                      Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          child: _buildDateTimeField(context)),
-                      SizedBox(height: 27.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl112'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildTabview(context),
-                      SizedBox(
-                          height: 946.h,
-                          child: TabBarView(
-                              controller: tabviewController,
-                              children: const [NewCatPage(), NewCatPage()]))
-                    ])))));
+                          CustomImageView(
+                              imagePath: Assets.svg.imgArrowLeft.path,
+                              height: 20.r,
+                              width: 20.r,
+                              margin: EdgeInsets.only(bottom: 6.h),
+                              onTap: () {
+                                onTapImgArrowLeft(context);
+                              }),
+                          Padding(
+                              padding: EdgeInsets.only(left: 77.w),
+                              child: Text('lbl_1_22'.tr,
+                                  style: CustomTextStyles.bodyLarge18))
+                        ])),
+                SizedBox(height: 21.h),
+                _buildImageRegistration(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl106'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    child: CustomTextFormField(
+                        controller: editTextController,
+                        textInputAction: TextInputAction.done,
+                        alignment: Alignment.center)),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl107'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 21.h),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    child: _buildDateTimeField(context)),
+                SizedBox(height: 21.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl111'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 15.h),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    child: _buildDateTimeField(context)),
+                SizedBox(height: 27.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl112'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildTabview(context),
+                SizedBox(
+                    height: 946.h,
+                    child: TabBarView(
+                        controller: tabviewController,
+                        children: const [NewCatPage(), NewCatPage()]))
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

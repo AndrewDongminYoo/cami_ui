@@ -10,6 +10,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
@@ -23,48 +24,51 @@ class VerifyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  CustomImageView(
-                      imagePath: Assets.images.imgAppNavBar.path,
-                      height: 50.h,
-                      width: 393.w),
-                  SizedBox(height: 79.h),
-                  Text('lbl143'.tr, style: theme.textTheme.displaySmall),
-                  SizedBox(height: 15.h),
-                  Container(
-                      width: 338.w,
-                      margin: EdgeInsets.only(left: 26.w, right: 27.w),
-                      child: Text('msg63'.tr,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumGray60001
-                              .copyWith(height: 1.43))),
-                  SizedBox(height: 63.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 101.w),
-                          child: Text('lbl163'.tr,
-                              style: theme.textTheme.bodyLarge))),
-                  SizedBox(height: 8.h),
-                  CustomTextFormField(
-                      width: 191.w,
-                      controller: editTextController,
-                      textInputAction: TextInputAction.done),
-                  SizedBox(height: 32.h),
-                  CustomElevatedButton(
-                      width: 191.w,
-                      text: 'lbl159'.tr,
-                      buttonStyle: CustomButtonStyles.fillBlack),
-                  SizedBox(height: 128.h),
-                  _buildAppNavBar(context)
-                ])))));
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        resizeToAvoidBottomInset: false,
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 79.h),
+                Text('lbl143'.tr, style: theme.textTheme.displaySmall),
+                SizedBox(height: 15.h),
+                Container(
+                    width: 338.w,
+                    margin: EdgeInsets.only(left: 26.w, right: 27.w),
+                    child: Text('msg63'.tr,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                        style: CustomTextStyles.bodyMediumGray60001
+                            .copyWith(height: 1.43))),
+                SizedBox(height: 63.h),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 101.w),
+                        child: Text('lbl163'.tr,
+                            style: theme.textTheme.bodyLarge))),
+                SizedBox(height: 8.h),
+                CustomTextFormField(
+                    width: 191.w,
+                    controller: editTextController,
+                    textInputAction: TextInputAction.done),
+                SizedBox(height: 32.h),
+                CustomElevatedButton(
+                    width: 191.w,
+                    text: 'lbl159'.tr,
+                    buttonStyle: CustomButtonStyles.fillBlack),
+                SizedBox(height: 128.h),
+                _buildAppNavBar(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

@@ -8,6 +8,7 @@ import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -15,96 +16,83 @@ import '/widgets/custom_image_view.dart';
 class Faq1Screen extends StatelessWidget {
   Faq1Screen({super.key});
 
-  List<String> dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList3 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList4 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList5 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList6 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList7 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList3 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList4 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList5 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList6 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList7 = ['Item One', 'Item Two', 'Item Three'];
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  _buildFrameImage(context),
-                  SizedBox(height: 15.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(children: [
-                            CustomImageView(
-                                imagePath: Assets.svg.imgArrowLeft.path,
-                                height: 28.h,
-                                width: 20.w,
-                                onTap: () {
-                                  onTapImgArrowLeft(context);
-                                }),
-                            Padding(
-                                padding: EdgeInsets.only(left: 106.w),
-                                child: Text('lbl11'.tr,
-                                    style: CustomTextStyles.bodyLarge18))
-                          ]))),
-                  SizedBox(height: 15.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow1(context),
-                  SizedBox(height: 7.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow2(context),
-                  SizedBox(height: 7.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 10.h),
-                  _buildFrameRow3(context),
-                  SizedBox(height: 5.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 10.h),
-                  _buildFrameRow4(context),
-                  SizedBox(height: 5.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow5(context),
-                  SizedBox(height: 7.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow6(context),
-                  SizedBox(height: 7.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow7(context),
-                  SizedBox(height: 7.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  SizedBox(height: 9.h),
-                  _buildFrameRow8(context),
-                  SizedBox(height: 136.h),
-                  _buildFrameColumn(context)
-                ])))));
-  }
-
-  /// Section Widget
-  Widget _buildFrameImage(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 16.w),
+                        child: Row(children: [
+                          CustomImageView(
+                              imagePath: Assets.svg.imgArrowLeft.path,
+                              height: 28.h,
+                              width: 20.w,
+                              onTap: () {
+                                onTapImgArrowLeft(context);
+                              }),
+                          Padding(
+                              padding: EdgeInsets.only(left: 106.w),
+                              child: Text('lbl11'.tr,
+                                  style: CustomTextStyles.bodyLarge18))
+                        ]))),
+                SizedBox(height: 15.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow1(context),
+                SizedBox(height: 7.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow2(context),
+                SizedBox(height: 7.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 10.h),
+                _buildFrameRow3(context),
+                SizedBox(height: 5.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 10.h),
+                _buildFrameRow4(context),
+                SizedBox(height: 5.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow5(context),
+                SizedBox(height: 7.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow6(context),
+                SizedBox(height: 7.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow7(context),
+                SizedBox(height: 7.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                SizedBox(height: 9.h),
+                _buildFrameRow8(context),
+                SizedBox(height: 136.h),
+                _buildFrameColumn(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
@@ -127,7 +115,7 @@ class Faq1Screen extends StatelessWidget {
                               height: 32.h,
                               width: 30.w)),
                       hintText: 'lbl55'.tr,
-                      items: dropdownItemList,
+                      items: dropdownItemList0,
                       onChanged: (value) {})))
         ]));
   }

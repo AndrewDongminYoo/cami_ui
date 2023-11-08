@@ -9,6 +9,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_icon_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -22,12 +23,12 @@ class MyPageScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildFrameColumn(context),
                 SizedBox(height: 42.h),
                 _buildFrameRow(context),
                 SizedBox(height: 48.h),
@@ -170,17 +171,6 @@ class MyPageScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
   }
 
   /// Section Widget

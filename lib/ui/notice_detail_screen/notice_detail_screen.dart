@@ -9,6 +9,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -19,71 +20,64 @@ class NoticeDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      _buildFrameColumn(context),
-                      SizedBox(height: 15.h),
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Row(children: [
+                      CustomImageView(
+                          imagePath: Assets.svg.imgArrowLeft.path,
+                          height: 28.h,
+                          width: 20.w,
+                          onTap: () {
+                            onTapImgArrowLeft(context);
+                          }),
                       Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(children: [
-                            CustomImageView(
-                                imagePath: Assets.svg.imgArrowLeft.path,
-                                height: 28.h,
-                                width: 20.w,
-                                onTap: () {
-                                  onTapImgArrowLeft(context);
-                                }),
-                            Padding(
-                                padding: EdgeInsets.only(left: 127.w),
-                                child: Text('lbl10'.tr,
-                                    style: CustomTextStyles.bodyLarge18))
-                          ])),
-                      SizedBox(height: 15.h),
-                      Align(
-                          child: Divider(
-                              color: appTheme.black900,
-                              indent: 16.w,
-                              endIndent: 16.w)),
-                      SizedBox(height: 12.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 24.w),
-                          child: Text('msg9'.tr.toUpperCase(),
-                              style: CustomTextStyles.bodyMediumBlack900)),
-                      SizedBox(height: 21.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 24.w),
-                          child: Text('lbl_2020_03_17'.tr.toUpperCase(),
-                              style: CustomTextStyles.bodySmallGray500)),
-                      SizedBox(height: 12.h),
-                      _buildFrameColumn1(context),
-                      SizedBox(height: 28.h),
-                      CustomElevatedButton(
-                          height: 32.h,
-                          width: 104.w,
-                          text: 'lbl32'.tr,
-                          margin: EdgeInsets.only(right: 16.w),
-                          buttonStyle: CustomButtonStyles.fillBlue,
-                          buttonTextStyle: CustomTextStyles.bodySmallBlack900,
-                          alignment: Alignment.centerRight),
-                      SizedBox(height: 128.h),
-                      _buildNoticeDetailColumn(context)
-                    ])))));
-  }
-
-  /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
+                          padding: EdgeInsets.only(left: 127.w),
+                          child: Text('lbl10'.tr,
+                              style: CustomTextStyles.bodyLarge18))
+                    ])),
+                SizedBox(height: 15.h),
+                Align(
+                    child: Divider(
+                        color: appTheme.black900,
+                        indent: 16.w,
+                        endIndent: 16.w)),
+                SizedBox(height: 12.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 24.w),
+                    child: Text('msg9'.tr.toUpperCase(),
+                        style: CustomTextStyles.bodyMediumBlack900)),
+                SizedBox(height: 21.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 24.w),
+                    child: Text('lbl_2020_03_17'.tr.toUpperCase(),
+                        style: CustomTextStyles.bodySmallGray500)),
+                SizedBox(height: 12.h),
+                _buildFrameColumn1(context),
+                SizedBox(height: 28.h),
+                CustomElevatedButton(
+                    height: 32.h,
+                    width: 104.w,
+                    text: 'lbl32'.tr,
+                    margin: EdgeInsets.only(right: 16.w),
+                    buttonStyle: CustomButtonStyles.fillBlue,
+                    buttonTextStyle: CustomTextStyles.bodySmallBlack900,
+                    alignment: Alignment.centerRight),
+                SizedBox(height: 128.h),
+                _buildNoticeDetailColumn(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget

@@ -10,6 +10,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -21,199 +22,185 @@ class SignUpFormScreen extends StatelessWidget {
   SignUpFormScreen({super.key});
 
   final appNavBarController = TextEditingController();
-
   final editText1Controller = TextEditingController();
-
   final editText2Controller = TextEditingController();
-
   final editText3Controller = TextEditingController();
-
   final editText4Controller = TextEditingController();
-
-  List<String> dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
 
   String genderRadioGroup = '';
-
   List<String> radioList = ['lbl113', 'lbl114', 'lbl150'];
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        resizeToAvoidBottomInset: false,
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 79.h),
+                Align(
+                    child:
+                        Text('lbl143'.tr, style: theme.textTheme.displaySmall)),
+                SizedBox(height: 15.h),
+                Align(
+                    child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 43.w),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('lbl144'.tr,
+                                  style: CustomTextStyles.bodyMediumGray60001),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 4.w),
+                                  child: Text('lbl_cami'.tr,
+                                      style: CustomTextStyles
+                                          .bodyMediumGray60001)),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 1.w),
+                                  child: Text('msg58'.tr,
+                                      style:
+                                          CustomTextStyles.bodyMediumGray60001))
+                            ]))),
+                SizedBox(height: 64.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl145'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildAppNavBar(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl146'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText1(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl147'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText2(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl148'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText3(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl149'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText4(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl120'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildDateTimeField(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl124'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 3.h),
+                _buildGenderRadioGroup(context),
+                SizedBox(height: 33.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Row(children: [
+                      Container(
+                          height: 16.r,
+                          width: 16.r,
+                          margin: EdgeInsets.only(top: 4.h, bottom: 3.h),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 3.w, vertical: 4.h),
+                          decoration: AppDecoration.fillBlue.copyWith(
+                              borderRadius: BorderRadiusStyle.circleBorder2),
+                          child: CustomImageView(
+                              imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
+                              height: 7.h,
+                              width: 8.w,
+                              alignment: Alignment.center)),
+                      Padding(
+                          padding: EdgeInsets.only(left: 20.w),
+                          child: Text('lbl151'.tr,
+                              style: theme.textTheme.bodyLarge)),
+                      Padding(
+                          padding: EdgeInsets.only(left: 7.w),
+                          child: Text('lbl14'.tr,
+                              style: CustomTextStyles.bodyLargeIndigo400)),
+                      Padding(
+                          padding: EdgeInsets.only(left: 3.w),
+                          child: Text('lbl152'.tr,
+                              style: theme.textTheme.bodyLarge))
+                    ])),
+                SizedBox(height: 6.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 89.w),
+                    child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                      CustomImageView(
-                          imagePath: Assets.images.imgAppNavBar.path,
-                          height: 50.h,
-                          width: 393.w),
-                      SizedBox(height: 79.h),
-                      Align(
-                          child: Text('lbl143'.tr,
-                              style: theme.textTheme.displaySmall)),
-                      SizedBox(height: 15.h),
-                      Align(
-                          child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 43.w),
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('lbl144'.tr,
-                                        style: CustomTextStyles
-                                            .bodyMediumGray60001),
-                                    Padding(
-                                        padding: EdgeInsets.only(left: 4.w),
-                                        child: Text('lbl_cami'.tr,
-                                            style: CustomTextStyles
-                                                .bodyMediumGray60001)),
-                                    Padding(
-                                        padding: EdgeInsets.only(left: 1.w),
-                                        child: Text('msg58'.tr,
-                                            style: CustomTextStyles
-                                                .bodyMediumGray60001))
-                                  ]))),
-                      SizedBox(height: 64.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl145'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildAppNavBar(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl146'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText1(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl147'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText2(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl148'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText3(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl149'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText4(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl120'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildDateTimeField(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl124'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 3.h),
-                      _buildGenderRadioGroup(context),
-                      SizedBox(height: 33.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(children: [
-                            Container(
-                                height: 16.r,
-                                width: 16.r,
-                                margin: EdgeInsets.only(top: 4.h, bottom: 3.h),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 3.w, vertical: 4.h),
-                                decoration: AppDecoration.fillBlue.copyWith(
-                                    borderRadius:
-                                        BorderRadiusStyle.circleBorder2),
-                                child: CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgVectorWhiteA7007x8.path,
-                                    height: 7.h,
-                                    width: 8.w,
-                                    alignment: Alignment.center)),
-                            Padding(
-                                padding: EdgeInsets.only(left: 20.w),
-                                child: Text('lbl151'.tr,
-                                    style: theme.textTheme.bodyLarge)),
-                            Padding(
-                                padding: EdgeInsets.only(left: 7.w),
-                                child: Text('lbl14'.tr,
-                                    style:
-                                        CustomTextStyles.bodyLargeIndigo400)),
-                            Padding(
-                                padding: EdgeInsets.only(left: 3.w),
-                                child: Text('lbl152'.tr,
-                                    style: theme.textTheme.bodyLarge))
-                          ])),
-                      SizedBox(height: 6.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w, right: 89.w),
-                          child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                    height: 16.r,
-                                    width: 16.r,
-                                    margin:
-                                        EdgeInsets.only(top: 6.h, bottom: 3.h),
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 3.w, vertical: 4.h),
-                                    decoration: AppDecoration.fillBlue.copyWith(
-                                        borderRadius:
-                                            BorderRadiusStyle.circleBorder2),
-                                    child: CustomImageView(
-                                        imagePath: Assets
-                                            .svg.imgVectorWhiteA7007x8.path,
-                                        height: 7.h,
-                                        width: 8.w,
-                                        alignment: Alignment.center)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 20.w),
-                                    child: Text('lbl151'.tr,
-                                        style: theme.textTheme.bodyLarge)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 6.w),
-                                    child: Text('lbl153'.tr,
-                                        style: CustomTextStyles
-                                            .bodyLargeIndigo400)),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 2.w),
-                                    child: Text('lbl154'.tr,
-                                        style: theme.textTheme.bodyLarge))
-                              ])),
-                      SizedBox(height: 8.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                          child:
-                              _buildVector(context, messageText: 'msg59'.tr)),
-                      SizedBox(height: 7.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                          child:
-                              _buildVector(context, messageText: 'msg60'.tr)),
-                      SizedBox(height: 32.h),
-                      _buildTf(context),
-                      SizedBox(height: 128.h),
-                      _buildFooter(context)
-                    ])))));
+                          Container(
+                              height: 16.r,
+                              width: 16.r,
+                              margin: EdgeInsets.only(top: 6.h, bottom: 3.h),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 3.w, vertical: 4.h),
+                              decoration: AppDecoration.fillBlue.copyWith(
+                                  borderRadius:
+                                      BorderRadiusStyle.circleBorder2),
+                              child: CustomImageView(
+                                  imagePath:
+                                      Assets.svg.imgVectorWhiteA7007x8.path,
+                                  height: 7.h,
+                                  width: 8.w,
+                                  alignment: Alignment.center)),
+                          Padding(
+                              padding: EdgeInsets.only(left: 20.w),
+                              child: Text('lbl151'.tr,
+                                  style: theme.textTheme.bodyLarge)),
+                          Padding(
+                              padding: EdgeInsets.only(left: 6.w),
+                              child: Text('lbl153'.tr,
+                                  style: CustomTextStyles.bodyLargeIndigo400)),
+                          Padding(
+                              padding: EdgeInsets.only(left: 2.w),
+                              child: Text('lbl154'.tr,
+                                  style: theme.textTheme.bodyLarge))
+                        ])),
+                SizedBox(height: 8.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 88.w),
+                    child: _buildVector(context, messageText: 'msg59'.tr)),
+                SizedBox(height: 7.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 88.w),
+                    child: _buildVector(context, messageText: 'msg60'.tr)),
+                SizedBox(height: 32.h),
+                _buildTf(context),
+                SizedBox(height: 128.h),
+                _buildFooter(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
@@ -275,7 +262,7 @@ class SignUpFormScreen extends StatelessWidget {
                           imagePath: Assets.svg.imgArrowDown.path,
                           height: 8.h,
                           width: 12.w)),
-                  items: dropdownItemList,
+                  items: dropdownItemList0,
                   onChanged: (value) {}),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),

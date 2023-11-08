@@ -9,6 +9,7 @@ import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -16,53 +17,55 @@ import '/widgets/custom_image_view.dart';
 class FaqScreen extends StatelessWidget {
   FaqScreen({super.key});
 
-  List<String> dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
-
-  List<String> dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  CustomImageView(
-                      imagePath: Assets.images.imgAppNavBar.path,
-                      height: 50.h,
-                      width: 393.w),
-                  SizedBox(height: 15.h),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CustomImageView(
-                                    imagePath: Assets.svg.imgArrowLeft.path,
-                                    height: 20.r,
-                                    width: 20.r,
-                                    margin: EdgeInsets.only(bottom: 6.h),
-                                    onTap: () {
-                                      onTapImgArrowLeft(context);
-                                    }),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 105.w),
-                                    child: Text('lbl11'.tr,
-                                        style: CustomTextStyles.bodyLarge18))
-                              ]))),
-                  SizedBox(height: 16.h),
-                  Divider(indent: 16.w, endIndent: 16.w),
-                  _buildAppNavBarArrowLeft(context),
-                  _buildAppNavBarWidget(context),
-                  SizedBox(height: 9.h),
-                  _buildAppNavBarQStack(context),
-                  SizedBox(height: 136.h),
-                  _buildAppNavBarFooter(context)
-                ])))));
+      child: Scaffold(
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const CamiAppBar(),
+                SizedBox(height: 15.h),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 16.w),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CustomImageView(
+                                  imagePath: Assets.svg.imgArrowLeft.path,
+                                  height: 20.r,
+                                  width: 20.r,
+                                  margin: EdgeInsets.only(bottom: 6.h),
+                                  onTap: () {
+                                    onTapImgArrowLeft(context);
+                                  }),
+                              Padding(
+                                  padding: EdgeInsets.only(left: 105.w),
+                                  child: Text('lbl11'.tr,
+                                      style: CustomTextStyles.bodyLarge18))
+                            ]))),
+                SizedBox(height: 16.h),
+                Divider(indent: 16.w, endIndent: 16.w),
+                _buildAppNavBarArrowLeft(context),
+                _buildAppNavBarWidget(context),
+                SizedBox(height: 9.h),
+                _buildAppNavBarQStack(context),
+                SizedBox(height: 136.h),
+                _buildAppNavBarFooter(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
@@ -94,7 +97,7 @@ class FaqScreen extends StatelessWidget {
                           hintText: 'lbl55'.tr,
                           hintStyle: CustomTextStyles
                               .bodyMediumNanumSquareNeoBlack90013,
-                          items: dropdownItemList,
+                          items: dropdownItemList0,
                           onChanged: (value) {})))
             ]));
   }

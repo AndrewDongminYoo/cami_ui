@@ -10,6 +10,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -28,7 +29,7 @@ class EditProfileScreen extends StatelessWidget {
   final editTextController3 = TextEditingController();
   final editTextController4 = TextEditingController();
 
-  final dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
+  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
   final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
   final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
   final radioList = ['lbl113', 'lbl114', 'lbl150'];
@@ -39,119 +40,121 @@ class EditProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
-        child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: Column(
+      child: Scaffold(
+        appBar: const CamiAppBar(),
+        resizeToAvoidBottomInset: false,
+        body: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                      CustomImageView(
-                          imagePath: Assets.images.imgAppNavBar.path,
-                          height: 50.h,
-                          width: 393.w),
-                      SizedBox(height: 15.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CustomImageView(
-                                    imagePath: Assets.svg.imgArrowLeft.path,
-                                    height: 20.r,
-                                    width: 20.r,
-                                    margin: EdgeInsets.only(bottom: 6.h),
-                                    onTap: () {
-                                      onTapImgArrowLeft(context);
-                                    }),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 124.w),
-                                    child: Text('lbl156'.tr,
-                                        style: CustomTextStyles.bodyLarge18))
-                              ])),
-                      SizedBox(height: 17.h),
-                      _buildImageSelectionRow(context),
-                      SizedBox(height: 49.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl145'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText(context),
-                      SizedBox(height: 5.h),
-                      Container(
-                          width: 325.w,
-                          margin: EdgeInsets.only(left: 16.w, right: 51.w),
-                          child: Text('msg61'.tr,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodySmallGray500
-                                  .copyWith(height: 1.33))),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl158'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditTextRow(context),
-                      SizedBox(height: 8.h),
-                      Align(
-                          child: Container(
-                              height: 40.h,
-                              width: 361.w,
-                              decoration: BoxDecoration(
-                                  color: theme.colorScheme.onError,
-                                  borderRadius: BorderRadius.circular(8.w)))),
-                      SizedBox(height: 5.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('msg62'.tr,
-                              style: CustomTextStyles.bodySmallGray500)),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl160'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText1(context),
-                      SizedBox(height: 8.h),
-                      _buildEditText2(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl148'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText3(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl149'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildEditText4(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl120'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildDropdownRow(context),
-                      SizedBox(height: 25.h),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('lbl124'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary)),
-                      SizedBox(height: 9.h),
-                      _buildRadioGroup(context),
-                      SizedBox(height: 23.h),
-                      _buildSaveButton(context),
-                      SizedBox(height: 8.h),
-                      _buildDeleteButton(context),
-                      SizedBox(height: 128.h),
-                      _buildFooterColumn(context)
-                    ])))));
+                          CustomImageView(
+                              imagePath: Assets.svg.imgArrowLeft.path,
+                              height: 20.r,
+                              width: 20.r,
+                              margin: EdgeInsets.only(bottom: 6.h),
+                              onTap: () {
+                                onTapImgArrowLeft(context);
+                              }),
+                          Padding(
+                              padding: EdgeInsets.only(left: 124.w),
+                              child: Text('lbl156'.tr,
+                                  style: CustomTextStyles.bodyLarge18))
+                        ])),
+                SizedBox(height: 17.h),
+                _buildImageSelectionRow(context),
+                SizedBox(height: 49.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl145'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText(context),
+                SizedBox(height: 5.h),
+                Container(
+                    width: 325.w,
+                    margin: EdgeInsets.only(left: 16.w, right: 51.w),
+                    child: Text('msg61'.tr,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: CustomTextStyles.bodySmallGray500
+                            .copyWith(height: 1.33))),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl158'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditTextRow(context),
+                SizedBox(height: 8.h),
+                Align(
+                    child: Container(
+                        height: 40.h,
+                        width: 361.w,
+                        decoration: BoxDecoration(
+                            color: theme.colorScheme.onError,
+                            borderRadius: BorderRadius.circular(8.w)))),
+                SizedBox(height: 5.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('msg62'.tr,
+                        style: CustomTextStyles.bodySmallGray500)),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl160'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText1(context),
+                SizedBox(height: 8.h),
+                _buildEditText2(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl148'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText3(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl149'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildEditText4(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl120'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildDropdownRow(context),
+                SizedBox(height: 25.h),
+                Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text('lbl124'.tr,
+                        style: CustomTextStyles.bodyMediumOnPrimary)),
+                SizedBox(height: 9.h),
+                _buildRadioGroup(context),
+                SizedBox(height: 23.h),
+                _buildSaveButton(context),
+                SizedBox(height: 8.h),
+                _buildDeleteButton(context),
+                SizedBox(height: 128.h),
+                _buildFooterColumn(context)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   /// Section Widget
@@ -298,7 +301,7 @@ class EditProfileScreen extends StatelessWidget {
                           imagePath: Assets.svg.imgArrowDown.path,
                           height: 8.h,
                           width: 12.w)),
-                  items: dropdownItemList,
+                  items: dropdownItemList0,
                   onChanged: (value) {}),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
