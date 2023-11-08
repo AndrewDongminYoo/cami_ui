@@ -8,11 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// ignore: must_be_immutable
 class CustomImageView extends StatelessWidget {
   /// a [CustomImageView] it can be used for showing any type of images
   /// it will shows the placeholder image if image is not found on network image
-  CustomImageView({
+  const CustomImageView({
     super.key,
     this.imagePath,
     this.height,
@@ -28,18 +27,18 @@ class CustomImageView extends StatelessWidget {
   });
 
   /// [imagePath] is required parameter for showing image
-  String? imagePath;
+  final String? imagePath;
 
-  double? height;
-  double? width;
-  Color? color;
-  BoxFit? fit;
+  final double? height;
+  final double? width;
+  final Color? color;
+  final BoxFit? fit;
   final String placeHolder;
-  Alignment? alignment;
-  VoidCallback? onTap;
-  EdgeInsetsGeometry? margin;
-  BorderRadius? radius;
-  BoxBorder? border;
+  final Alignment? alignment;
+  final VoidCallback? onTap;
+  final EdgeInsetsGeometry? margin;
+  final BorderRadius? radius;
+  final BoxBorder? border;
 
   @override
   Widget build(BuildContext context) {
