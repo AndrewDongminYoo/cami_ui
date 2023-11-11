@@ -37,7 +37,7 @@ class CatPageState extends State<CatPage>
                 SizedBox(height: 60.h),
                 Column(
                   children: [
-                    _buildFrameColumn(context),
+                    _buildButlersCatBTI(context),
                     SizedBox(height: 128.h),
                     const CamiAppFooter(),
                   ],
@@ -50,8 +50,8 @@ class CatPageState extends State<CatPage>
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
+  /// Recognize Your Cat's Personality! Butler's Cat BTI
+  Widget _buildButlersCatBTI(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       decoration: AppDecoration.outlineGray

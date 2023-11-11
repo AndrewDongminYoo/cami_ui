@@ -252,30 +252,6 @@ class PetsOneCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildTf(BuildContext context) {
-    return CustomElevatedButton(
-        height: 48.h,
-        text: '1:1 문의'.tr,
-        buttonStyle: CustomButtonStyles.fillGray,
-        buttonTextStyle: theme.textTheme.bodyLarge,
-        onPressed: () {
-          onTapContactUsRegister(context);
-        });
-  }
-
-  /// Section Widget
-  Widget _buildTf1(BuildContext context) {
-    return CustomElevatedButton(
-        height: 48.h,
-        text: '자주묻는질문'.tr,
-        buttonStyle: CustomButtonStyles.fillGray,
-        buttonTextStyle: theme.textTheme.bodyLarge,
-        onPressed: () {
-          onTaptFAQ(context);
-        });
-  }
-
-  /// Section Widget
   Widget _buildMyPet(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -323,7 +299,14 @@ class PetsOneCatScreen extends StatelessWidget {
                           child: Text('0', style: theme.textTheme.bodySmall))
                     ]))
               ])),
-          _buildTf(context),
+          CustomElevatedButton(
+              height: 48.h,
+              text: '1:1 문의'.tr,
+              buttonStyle: CustomButtonStyles.fillGray,
+              buttonTextStyle: theme.textTheme.bodyLarge,
+              onPressed: () {
+                onTapContactUsRegister(context);
+              }),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
@@ -334,7 +317,14 @@ class PetsOneCatScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
               decoration: AppDecoration.fillGray50,
               child: Divider(color: appTheme.gray20001, endIndent: 26.w)),
-          _buildTf1(context),
+          CustomElevatedButton(
+              height: 48.h,
+              text: '자주묻는질문'.tr,
+              buttonStyle: CustomButtonStyles.fillGray,
+              buttonTextStyle: theme.textTheme.bodyLarge,
+              onPressed: () {
+                onTaptFAQ(context);
+              }),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),

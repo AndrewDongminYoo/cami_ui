@@ -195,7 +195,11 @@ class SignUpFormScreen extends StatelessWidget {
                     child: _buildVector(context,
                         messageText: '[선택] 마케팅 정보 수신 - SMS/MMS'.tr)),
                 SizedBox(height: 32.h),
-                _buildTf(context),
+                CustomElevatedButton(
+                    text: '회원 가입'.tr,
+                    margin: EdgeInsets.symmetric(horizontal: 16.w),
+                    buttonStyle: CustomButtonStyles.fillBlack,
+                    alignment: Alignment.center),
                 SizedBox(height: 128.h),
                 const CamiAppFooter()
               ],
@@ -340,15 +344,6 @@ class SignUpFormScreen extends StatelessWidget {
                     genderRadioGroup = value;
                   }))
         ]));
-  }
-
-  /// Section Widget
-  Widget _buildTf(BuildContext context) {
-    return CustomElevatedButton(
-        text: '회원 가입'.tr,
-        margin: EdgeInsets.symmetric(horizontal: 16.w),
-        buttonStyle: CustomButtonStyles.fillBlack,
-        alignment: Alignment.center);
   }
 
   /// Common widget

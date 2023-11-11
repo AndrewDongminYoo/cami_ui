@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildFrameColumn1(context),
+                _buildSubtitle(context),
                 SizedBox(height: 99.h),
                 Text(
                   '찾아봐요'.tr,
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 100.h),
-                _buildFrameColumn2(context),
+                _buildCamiAdvisoryBoard(context),
                 SizedBox(height: 99.h),
                 Text(
                   '고마워요'.tr,
@@ -164,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 124.h),
-                _buildFrameColumn3(context),
+                _buildQuickTestTitle(context),
                 SizedBox(height: 128.h),
                 const CamiAppFooter(),
               ],
@@ -176,7 +176,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrameColumn1(BuildContext context) {
+  Widget _buildSubtitle(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 28.w),
       decoration: AppDecoration.fillPrimary
@@ -257,8 +257,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameColumn2(BuildContext context) {
+  /// The CAMI Advisory Board is here to help you get your pet's life right.
+  Widget _buildCamiAdvisoryBoard(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 28.w,
@@ -360,8 +360,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameColumn3(BuildContext context) {
+  /// A fun 3-minute CAMI checkup, the first step to being a good pet parent
+  Widget _buildQuickTestTitle(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 28.w,

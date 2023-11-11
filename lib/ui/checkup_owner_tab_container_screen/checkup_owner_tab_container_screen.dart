@@ -110,9 +110,9 @@ class CheckupOwnerTabContainerScreenState
                   ),
                 ),
                 SizedBox(height: 7.h),
-                _buildFrame1(context),
+                _buildQuickCheckupInfo(context),
                 SizedBox(height: 8.h),
-                _buildFrame2(context),
+                _buildQuickCheckupPrice(context),
                 SizedBox(height: 8.h),
                 CustomElevatedButton(
                   text: '구매하기'.tr,
@@ -167,7 +167,7 @@ class CheckupOwnerTabContainerScreenState
   }
 
   /// Section Widget
-  Widget _buildFrame1(BuildContext context) {
+  Widget _buildQuickCheckupInfo(BuildContext context) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -218,7 +218,7 @@ class CheckupOwnerTabContainerScreenState
   }
 
   /// Section Widget
-  Widget _buildFrame2(BuildContext context) {
+  Widget _buildQuickCheckupPrice(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
         left: 16.w,

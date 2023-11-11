@@ -111,30 +111,6 @@ class PetsEmptyScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildTf(BuildContext context) {
-    return CustomElevatedButton(
-        height: 32.h,
-        width: 149.w,
-        text: '강아지 등록하기'.tr,
-        margin: EdgeInsets.only(bottom: 24.h),
-        buttonStyle: CustomButtonStyles.fillBlue,
-        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
-        alignment: Alignment.bottomCenter);
-  }
-
-  /// Section Widget
-  Widget _buildTf1(BuildContext context) {
-    return CustomElevatedButton(
-        height: 32.h,
-        width: 149.w,
-        text: '고양이 등록하기'.tr,
-        margin: EdgeInsets.only(bottom: 24.h),
-        buttonStyle: CustomButtonStyles.fillBlue,
-        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
-        alignment: Alignment.bottomCenter);
-  }
-
-  /// Section Widget
   Widget _buildPetRegistration(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -160,7 +136,15 @@ class PetsEmptyScreen extends StatelessWidget {
                               height: 112.h,
                               width: 138.w,
                               alignment: Alignment.center),
-                          _buildTf(context)
+                          CustomElevatedButton(
+                              height: 32.h,
+                              width: 149.w,
+                              text: '강아지 등록하기'.tr,
+                              margin: EdgeInsets.only(bottom: 24.h),
+                              buttonStyle: CustomButtonStyles.fillBlue,
+                              buttonTextStyle:
+                                  CustomTextStyles.bodyMediumBlack900,
+                              alignment: Alignment.bottomCenter)
                         ]))
                   ])),
           Container(
@@ -188,7 +172,15 @@ class PetsEmptyScreen extends StatelessWidget {
                               onTap: () {
                                 onTapImgIMAGE(context);
                               }),
-                          _buildTf1(context)
+                          CustomElevatedButton(
+                              height: 32.h,
+                              width: 149.w,
+                              text: '고양이 등록하기'.tr,
+                              margin: EdgeInsets.only(bottom: 24.h),
+                              buttonStyle: CustomButtonStyles.fillBlue,
+                              buttonTextStyle:
+                                  CustomTextStyles.bodyMediumBlack900,
+                              alignment: Alignment.bottomCenter)
                         ]))
                   ]))
         ]));

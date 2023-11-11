@@ -36,7 +36,6 @@ class CheckupCatScreen extends StatelessWidget {
             child: Column(
               children: [
                 _breadcrumbs(context),
-                _buildFrame(context),
                 SizedBox(height: 19.h),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -70,13 +69,22 @@ class CheckupCatScreen extends StatelessWidget {
                 SizedBox(height: 10.h),
                 _buildInfoEditText(context),
                 SizedBox(height: 7.h),
-                _buildFrameColumn(context),
+                _buildTestSummary(context),
                 SizedBox(height: 8.h),
-                _buildFrameRow(context),
+                _buildPriceInfo(context),
                 SizedBox(height: 8.h),
                 _buildPurchaseButton(context),
                 SizedBox(height: 48.h),
-                _buildFrame1(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildIntroductionButton(context),
+                      _buildReviewsButton(context),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 48.h),
                 CustomImageView(
                   imagePath: Assets.images.imgImage472x361.path,
@@ -172,17 +180,6 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrame(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: CustomImageView(
-            imagePath: Assets.images.imgAppNavBar.path,
-            height: 50.h,
-            width: 393.w));
-  }
-
-  /// Section Widget
   Widget _buildCcsiButton(BuildContext context) {
     return CustomElevatedButton(
       height: 23.h,
@@ -218,7 +215,7 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
+  Widget _buildTestSummary(BuildContext context) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -269,7 +266,7 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrameRow(BuildContext context) {
+  Widget _buildPriceInfo(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
@@ -346,20 +343,6 @@ class CheckupCatScreen extends StatelessWidget {
       text: '구매후기'.tr,
       buttonStyle: CustomButtonStyles.fillGrayTL81,
       buttonTextStyle: theme.textTheme.bodyMedium,
-    );
-  }
-
-  /// Section Widget
-  Widget _buildFrame1(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          _buildIntroductionButton(context),
-          _buildReviewsButton(context),
-        ],
-      ),
     );
   }
 }

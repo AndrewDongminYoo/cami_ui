@@ -22,10 +22,6 @@ class $AssetsImagesGen {
   AssetGenImage get imageNotFound =>
       const AssetGenImage('assets/images/image_not_found.png');
 
-  /// File path: assets/images/img_app_nav_bar.png
-  AssetGenImage get imgAppNavBar =>
-      const AssetGenImage('assets/images/img_app_nav_bar.png');
-
   /// File path: assets/images/img_cat_profile.png
   AssetGenImage get imgCatProfile =>
       const AssetGenImage('assets/images/img_cat_profile.png');
@@ -314,10 +310,12 @@ class $AssetsImagesGen {
   AssetGenImage get imgUserProfile =>
       const AssetGenImage('assets/images/img_user_profile.png');
 
+  /// File path: assets/images/splash.png
+  AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         imageNotFound,
-        imgAppNavBar,
         imgCatProfile,
         imgImage,
         imgImage1,
@@ -389,7 +387,8 @@ class $AssetsImagesGen {
         imgImage9,
         imgImage997x361,
         imgInfo,
-        imgUserProfile
+        imgUserProfile,
+        splash
       ];
 }
 

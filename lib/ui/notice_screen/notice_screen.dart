@@ -46,14 +46,14 @@ class NoticeScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: _buildFrame(context,
+                    child: _buildNotice(context,
                         userName: '2',
                         userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr,
                         userDate: '2021-03-04')),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: _buildFrame(context,
+                    child: _buildNotice(context,
                         userName: '1',
                         userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr,
                         userDate: '2020-03-17')),
@@ -69,7 +69,7 @@ class NoticeScreen extends StatelessWidget {
   }
 
   /// Common widget
-  Widget _buildFrame(
+  Widget _buildNotice(
     BuildContext context, {
     required String userName,
     required String userMessage,

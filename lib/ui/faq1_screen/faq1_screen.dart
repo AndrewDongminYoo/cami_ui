@@ -55,35 +55,35 @@ class Faq1Screen extends StatelessWidget {
                 SizedBox(height: 15.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow1(context),
+                _buildCannotPay(context),
                 SizedBox(height: 7.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow2(context),
+                _buildCancelMembership(context),
                 SizedBox(height: 7.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 10.h),
-                _buildFrameRow3(context),
+                _buildDidNotFinish(context),
                 SizedBox(height: 5.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 10.h),
-                _buildFrameRow4(context),
+                _buildCanIResume(context),
                 SizedBox(height: 5.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow5(context),
+                _buildYoungPetCanTakeATest(context),
                 SizedBox(height: 7.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow6(context),
+                _buildHowToPrint(context),
                 SizedBox(height: 7.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow7(context),
+                _buildHowToReviewResult(context),
                 SizedBox(height: 7.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 9.h),
-                _buildFrameRow8(context),
+                _buildCannotFindCoupon(context),
                 SizedBox(height: 136.h),
                 const CamiAppFooter()
               ],
@@ -94,8 +94,8 @@ class Faq1Screen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameRow1(BuildContext context) {
+  /// I can't make a payment
+  Widget _buildCannotPay(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -119,8 +119,8 @@ class Faq1Screen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow2(BuildContext context) {
+  /// How do I cancel my membership?
+  Widget _buildCancelMembership(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -144,8 +144,8 @@ class Faq1Screen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow3(BuildContext context) {
+  /// I didn't finish my purchased pet personality test, how do I continue?
+  Widget _buildDidNotFinish(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(
@@ -174,8 +174,8 @@ class Faq1Screen extends StatelessWidget {
             ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow4(BuildContext context) {
+  /// After a successful payment, I didn't get to take my purchased pet personality test right away, what should I do?
+  Widget _buildCanIResume(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(
@@ -204,8 +204,8 @@ class Faq1Screen extends StatelessWidget {
             ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow5(BuildContext context) {
+  /// Can a young dog take a psychological test?
+  Widget _buildYoungPetCanTakeATest(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -229,8 +229,8 @@ class Faq1Screen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow6(BuildContext context) {
+  /// How to print a results report
+  Widget _buildHowToPrint(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -254,8 +254,8 @@ class Faq1Screen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow7(BuildContext context) {
+  /// Review the Results Report
+  Widget _buildHowToReviewResult(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -279,8 +279,8 @@ class Faq1Screen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildFrameRow8(BuildContext context) {
+  /// I don't see the coupon that I purchased.
+  Widget _buildCannotFindCoupon(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [

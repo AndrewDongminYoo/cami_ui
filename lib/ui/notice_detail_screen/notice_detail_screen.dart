@@ -61,7 +61,7 @@ class NoticeDetailScreen extends StatelessWidget {
                     child: Text('2020-03-17'.toUpperCase(),
                         style: CustomTextStyles.bodySmallGray500)),
                 SizedBox(height: 12.h),
-                _buildFrameColumn1(context),
+                _buildApologizeNotice(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
                     height: 32.h,
@@ -81,8 +81,8 @@ class NoticeDetailScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameColumn1(BuildContext context) {
+  /// We apologize for any inconvenience this may cause you.
+  Widget _buildApologizeNotice(BuildContext context) {
     return Align(
         child: Container(
             width: 361.w,

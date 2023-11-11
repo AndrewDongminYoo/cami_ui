@@ -31,7 +31,7 @@ class MyPageScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 42.h),
-                _buildFrameRow(context),
+                _buildLoginRequires(context),
                 SizedBox(height: 48.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 17.w),
@@ -65,7 +65,7 @@ class MyPageScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                _buildFrameRow2(context),
+                _buildRegisterPet(context),
                 SizedBox(height: 36.h),
                 Container(
                   width: 361.w,
@@ -127,7 +127,7 @@ class MyPageScreen extends StatelessWidget {
                     style: theme.textTheme.bodyLarge,
                   ),
                 ),
-                _buildFrameColumn1(context),
+                _buildSeparatorBar(context),
                 Container(
                   width: 361.w,
                   padding: EdgeInsets.symmetric(
@@ -174,8 +174,8 @@ class MyPageScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameRow(BuildContext context) {
+  /// Once you're logged in, you can start using cami's various services.
+  Widget _buildLoginRequires(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
         left: 16.w,
@@ -243,8 +243,8 @@ class MyPageScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameRow2(BuildContext context) {
+  /// I'm a doggy butler | I am a cat butler
+  Widget _buildRegisterPet(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       child: Row(
@@ -339,7 +339,7 @@ class MyPageScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrameColumn1(BuildContext context) {
+  Widget _buildSeparatorBar(BuildContext context) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),

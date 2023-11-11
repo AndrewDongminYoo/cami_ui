@@ -18,8 +18,8 @@ import '/widgets/custom_text_form_field.dart';
 class LogInScreen extends StatelessWidget {
   LogInScreen({super.key});
 
-  final editTextController = TextEditingController();
-  final editTextController1 = TextEditingController();
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
   bool tf = false;
 
   @override
@@ -46,17 +46,17 @@ class LogInScreen extends StatelessWidget {
                   style: CustomTextStyles.titleLargeGray60001,
                 ),
                 SizedBox(height: 82.h),
-                _buildEditText(context),
+                _buildUsernameField(context),
                 SizedBox(height: 8.h),
-                _buildEditText1(context),
+                _buildPasswordField(context),
                 SizedBox(height: 10.h),
-                _buildFrameRow(context),
+                _buildLoginOptions(context),
                 SizedBox(height: 43.h),
                 _buildLoginButton(context),
                 SizedBox(height: 8.h),
                 _buildEmailSignUpButton(context),
                 SizedBox(height: 49.h),
-                _buildFrameRow1(context),
+                _buildEasyLogin(context),
                 SizedBox(height: 20.h),
                 _buildKakaoStartButton(context),
                 SizedBox(height: 128.h),
@@ -69,20 +69,22 @@ class LogInScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildEditText(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(controller: editTextController),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText1(BuildContext context) {
+  /// Username TextFormField Widget
+  Widget _buildUsernameField(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-        controller: editTextController1,
+        controller: usernameController,
+      ),
+    );
+  }
+
+  /// Password TextFormField Widget
+  Widget _buildPasswordField(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: CustomTextFormField(
+        controller: passwordController,
         textInputAction: TextInputAction.done,
         obscureText: true,
       ),
@@ -90,7 +92,7 @@ class LogInScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrameRow(BuildContext context) {
+  Widget _buildLoginOptions(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
         left: 16.w,
@@ -106,16 +108,19 @@ class LogInScreen extends StatelessWidget {
               tf = value;
             },
           ),
-          Text(
-            '비밀번호 재설정'.tr,
-            style: CustomTextStyles.bodySmallGray60001,
+          TextButton(
+            child: Text(
+              '비밀번호 재설정'.tr,
+              style: CustomTextStyles.bodySmallGray60001,
+            ),
+            onPressed: () {},
           ),
         ],
       ),
     );
   }
 
-  /// Section Widget
+  /// Sign in
   Widget _buildLoginButton(BuildContext context) {
     return CustomElevatedButton(
       text: '로그인'.tr,
@@ -124,7 +129,7 @@ class LogInScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
+  /// E-mail Sign Up
   Widget _buildEmailSignUpButton(BuildContext context) {
     return CustomOutlinedButton(
       height: 42.h,
@@ -135,8 +140,8 @@ class LogInScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameRow1(BuildContext context) {
+  /// Easy sign-in
+  Widget _buildEasyLogin(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
@@ -178,7 +183,7 @@ class LogInScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
+  /// Starting with Kakao
   Widget _buildKakaoStartButton(BuildContext context) {
     return CustomElevatedButton(
       text: '카카오로 시작하기'.tr,

@@ -54,7 +54,7 @@ class CheckupDogScreen extends StatelessWidget {
                   width: 361.w,
                 ),
                 SizedBox(height: 18.h),
-                _buildButton(context),
+                _buildDCSIButton(context),
                 SizedBox(height: 11.h),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -69,13 +69,22 @@ class CheckupDogScreen extends StatelessWidget {
                 SizedBox(height: 10.h),
                 _buildInfo(context),
                 SizedBox(height: 7.h),
-                _buildFrame1(context),
+                _buildCheckupDogInfo(context),
                 SizedBox(height: 8.h),
-                _buildFrame2(context),
+                _buildCheckupDogPrice(context),
                 SizedBox(height: 8.h),
                 _buildButton1(context),
                 SizedBox(height: 48.h),
-                _buildFrame3(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildButton2(context),
+                      _buildButton3(context),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 24.h),
                 CustomImageView(
                   imagePath: Assets.images.imgImage472x361.path,
@@ -172,7 +181,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildButton(BuildContext context) {
+  Widget _buildDCSIButton(BuildContext context) {
     return CustomElevatedButton(
       height: 23.h,
       width: 53.w,
@@ -207,7 +216,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrame1(BuildContext context) {
+  Widget _buildCheckupDogInfo(BuildContext context) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -258,7 +267,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrame2(BuildContext context) {
+  Widget _buildCheckupDogPrice(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
@@ -335,20 +344,6 @@ class CheckupDogScreen extends StatelessWidget {
       text: '구매후기'.tr,
       buttonStyle: CustomButtonStyles.fillGrayTL81,
       buttonTextStyle: theme.textTheme.bodyMedium,
-    );
-  }
-
-  /// Section Widget
-  Widget _buildFrame3(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          _buildButton2(context),
-          _buildButton3(context),
-        ],
-      ),
     );
   }
 }

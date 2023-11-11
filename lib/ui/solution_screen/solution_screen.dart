@@ -28,7 +28,6 @@ class SolutionScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _buildFrameColumn(context),
                 Text(
                   '함께해요'.tr,
                   style: CustomTextStyles.bodyMediumGray90002,
@@ -48,9 +47,9 @@ class SolutionScreen extends StatelessWidget {
                   style: theme.textTheme.bodyLarge,
                 ),
                 SizedBox(height: 32.h),
-                _buildFrameRow(context),
+                _buildStrongRelationship(context),
                 SizedBox(height: 32.h),
-                _buildFrameRow1(context),
+                _buildProvenSolution(context),
                 SizedBox(height: 130.h),
                 Text(
                   '카미의 교육 서비스'.tr,
@@ -68,17 +67,8 @@ class SolutionScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameColumn(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      decoration: AppDecoration.fillOnPrimaryContainer,
-      child: const CamiAppBar(),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildFrameRow(BuildContext context) {
+  /// Foster a strong relationship with your pet
+  Widget _buildStrongRelationship(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 29.w),
       child: Row(
@@ -120,8 +110,8 @@ class SolutionScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildFrameRow1(BuildContext context) {
+  /// Scientifically proven training
+  Widget _buildProvenSolution(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       padding: EdgeInsets.symmetric(horizontal: 21.w),

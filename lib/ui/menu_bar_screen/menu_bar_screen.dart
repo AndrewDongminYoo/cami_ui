@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import '../shared/cami_app_bar.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
@@ -17,16 +18,12 @@ class MenuBarScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+        appBar: const CamiAppBar(),
         body: SizedBox(
           width: double.maxFinite,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomImageView(
-                imagePath: Assets.images.imgAppNavBar.path,
-                height: 50.h,
-                width: 393.w,
-              ),
               SizedBox(height: 39.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),

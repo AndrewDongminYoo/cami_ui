@@ -232,23 +232,18 @@ class EditProfileScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildTf(BuildContext context) {
-    return CustomElevatedButton(
-        width: 142.w,
-        text: '인증번호 받기'.tr,
-        margin: EdgeInsets.only(left: 8.w),
-        buttonStyle: CustomButtonStyles.fillBlueGray,
-        buttonTextStyle: CustomTextStyles.bodyMediumGray60001);
-  }
-
-  /// Section Widget
   Widget _buildEditTextRow(BuildContext context) {
     return Align(
         child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               _buildEditTextWithButton(context),
-              _buildTf(context)
+              CustomElevatedButton(
+                  width: 142.w,
+                  text: '인증번호 받기'.tr,
+                  margin: EdgeInsets.only(left: 8.w),
+                  buttonStyle: CustomButtonStyles.fillBlueGray,
+                  buttonTextStyle: CustomTextStyles.bodyMediumGray60001)
             ])));
   }
 
