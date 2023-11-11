@@ -42,16 +42,16 @@ class HomeScreen extends StatelessWidget {
                 _buildFrameColumn1(context),
                 SizedBox(height: 99.h),
                 Text(
-                  'lbl44'.tr,
+                  '찾아봐요'.tr,
                   style: CustomTextStyles.bodyMediumGray90002,
                 ),
                 SizedBox(height: 11.h),
                 Text(
-                  'lbl45'.tr,
+                  '우리에게 필요한'.tr,
                   style: theme.textTheme.headlineSmall,
                 ),
                 Text(
-                  'lbl46'.tr,
+                  '심리검사는?'.tr,
                   style: theme.textTheme.headlineSmall,
                 ),
                 SizedBox(height: 39.h),
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                           bottom: 2.h,
                         ),
                         child: Text(
-                          'lbl63'.tr,
+                          '더 많은 검사 보러가기'.tr,
                           style: CustomTextStyles.bodySmallGray90001,
                         ),
                       ),
@@ -107,7 +107,7 @@ class HomeScreen extends StatelessWidget {
                 _buildFrameColumn2(context),
                 SizedBox(height: 99.h),
                 Text(
-                  'lbl92'.tr,
+                  '고마워요'.tr,
                   style: CustomTextStyles.bodyMediumGray90002,
                 ),
                 SizedBox(height: 11.h),
@@ -120,21 +120,21 @@ class HomeScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.topRight,
                         child: Text(
-                          'lbl93'.tr,
+                          '심리검사로'.tr,
                           style: theme.textTheme.headlineSmall,
                         ),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          'lbl_cami'.tr,
+                          'CAMI'.tr,
                           style: theme.textTheme.headlineSmall,
                         ),
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
-                          'lbl94'.tr,
+                          '찾아온 기적'.tr,
                           style: theme.textTheme.headlineSmall,
                         ),
                       ),
@@ -143,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 6.h),
                 Text(
-                  'msg51'.tr,
+                  '실제 반려생활에 도움 받은 고객님들의 후기랍니다 🤍'.tr,
                   style: CustomTextStyles.bodySmallGray90002_1,
                 ),
                 SizedBox(height: 79.h),
@@ -186,21 +186,21 @@ class HomeScreen extends StatelessWidget {
         children: [
           SizedBox(height: 83.h),
           Text(
-            'lbl86'.tr,
+            '반려동물의'.tr,
             style: theme.textTheme.headlineLarge,
           ),
           SizedBox(height: 8.h),
           Text(
-            'lbl87'.tr,
+            '마음을 읽다, 카미'.tr,
             style: theme.textTheme.headlineLarge,
           ),
           SizedBox(height: 24.h),
           Text(
-            'msg49'.tr,
+            '수의사가 제안하는 반려생활 솔루션으로'.tr,
             style: CustomTextStyles.bodyMediumBlack900,
           ),
           Text(
-            'lbl88'.tr,
+            '행복한 기적을 만듭니다'.tr,
             style: CustomTextStyles.bodyMediumBlack900,
           ),
           SizedBox(height: 39.h),
@@ -218,7 +218,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildPopularTestsButton(BuildContext context) {
     return CustomOutlinedButton(
       width: 178.w,
-      text: 'lbl61'.tr,
+      text: '많은 분들이 찾은 인기 검사'.tr,
       buttonStyle: CustomButtonStyles.outlineBlueGrayTL17,
       buttonTextStyle: theme.textTheme.bodySmall,
     );
@@ -228,7 +228,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildRecommendedTestsButton(BuildContext context) {
     return CustomOutlinedButton(
       width: 124.w,
-      text: 'lbl62'.tr,
+      text: '수의사 추천 검사'.tr,
       margin: EdgeInsets.only(left: 10.w),
       buttonStyle: CustomButtonStyles.outlineBlueGrayTL171,
       buttonTextStyle: CustomTextStyles.bodySmallBlack900,
@@ -268,17 +268,17 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'lbl90'.tr,
+            '함께해요'.tr,
             style: CustomTextStyles.bodyMediumGray90002,
           ),
           SizedBox(height: 11.h),
           Text(
-            'lbl91'.tr,
+            '누가 만들었을까요?'.tr,
             style: theme.textTheme.headlineSmall,
           ),
           SizedBox(height: 7.h),
           Text(
-            'msg_cami'.tr,
+            '올바른 반려 생활을 위해 CAMI 자문위원단이 모였어요.'.tr,
             style: CustomTextStyles.bodySmallGray90002_1,
           ),
           SizedBox(height: 60.h),
@@ -370,17 +370,17 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'lbl95'.tr,
+            '간단해요'.tr,
             style: CustomTextStyles.bodyMediumGray90002,
           ),
           SizedBox(height: 11.h),
           Text(
-            'lbl18'.tr,
+            '반짝 테스트'.tr,
             style: theme.textTheme.headlineSmall,
           ),
           SizedBox(height: 7.h),
           Text(
-            'msg52'.tr,
+            '양육자가 되기 위한 첫걸음, 재밌는 CAMI 3분 검사'.tr,
             style: CustomTextStyles.bodySmallGray90002_1,
           ),
           SizedBox(height: 60.h),
@@ -430,20 +430,20 @@ class HomeScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl10'.tr,
+                '공지사항'.tr,
                 style: theme.textTheme.bodySmall,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 19.w),
                 child: Text(
-                  'lbl11'.tr,
+                  '자주 묻는 질문'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 21.w),
                 child: Text(
-                  'lbl12'.tr,
+                  '이벤트'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
@@ -456,19 +456,19 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'lbl13'.tr,
+                  '고객센터'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl14'.tr,
+                  '이용약관'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl15'.tr,
+                  '개인정보취급방침'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl16'.tr,
+                  '기관 제휴 및 구매 문의'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ],
@@ -483,16 +483,16 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'lbl_address'.tr,
+                      'Address'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     SizedBox(height: 9.h),
                     Text(
-                      'msg_34'.tr,
+                      '서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     Text(
-                      'msg_2_b101'.tr,
+                      '코오롱싸이언스밸리2차 B101'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                   ],
@@ -503,16 +503,16 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_contact'.tr,
+                        'Contact'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'msg_business_cami_kr'.tr,
+                        'business@cami.kr'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        'lbl_02_861_6828'.tr,
+                        '02-861-6828'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -523,16 +523,16 @@ class HomeScreen extends StatelessWidget {
           ),
           SizedBox(height: 45.h),
           Text(
-            'lbl17'.tr,
+            '주식회사 카미랩'.tr,
             style: theme.textTheme.bodySmall,
           ),
           Text(
-            'msg'.tr,
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 15.h),
           Text(
-            'msg_copyright_2023'.tr,
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 38.h),

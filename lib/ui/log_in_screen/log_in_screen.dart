@@ -39,12 +39,12 @@ class LogInScreen extends StatelessWidget {
               children: [
                 SizedBox(height: 29.h),
                 Text(
-                  'lbl171'.tr,
+                  '카미'.tr,
                   style: theme.textTheme.displaySmall,
                 ),
                 SizedBox(height: 18.h),
                 Text(
-                  'lbl172'.tr,
+                  '반려동물의 마음을 읽다'.tr,
                   style: CustomTextStyles.titleLargeGray60001,
                 ),
                 SizedBox(height: 82.h),
@@ -102,14 +102,14 @@ class LogInScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomCheckboxButton(
-            text: 'lbl173'.tr,
+            text: '아이디 저장'.tr,
             value: tf,
             onChange: (value) {
               tf = value;
             },
           ),
           Text(
-            'lbl174'.tr,
+            '비밀번호 재설정'.tr,
             style: CustomTextStyles.bodySmallGray60001,
           ),
         ],
@@ -120,7 +120,7 @@ class LogInScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildLoginButton(BuildContext context) {
     return CustomElevatedButton(
-      text: 'lbl175'.tr,
+      text: '로그인'.tr,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillBlack,
     );
@@ -130,7 +130,7 @@ class LogInScreen extends StatelessWidget {
   Widget _buildEmailSignUpButton(BuildContext context) {
     return CustomOutlinedButton(
       height: 42.h,
-      text: 'lbl176'.tr,
+      text: '이메일 회원가입'.tr,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.outlineGray,
       buttonTextStyle: CustomTextStyles.bodyMediumGray800,
@@ -158,7 +158,7 @@ class LogInScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 16.w),
             child: Text(
-              'lbl177'.tr,
+              '간편 로그인'.tr,
               style: CustomTextStyles.bodySmallBluegray300,
             ),
           ),
@@ -183,7 +183,7 @@ class LogInScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildKakaoStartButton(BuildContext context) {
     return CustomElevatedButton(
-      text: 'lbl178'.tr,
+      text: '카카오로 시작하기'.tr,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
       buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
@@ -210,20 +210,20 @@ class LogInScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl10'.tr,
+                '공지사항'.tr,
                 style: theme.textTheme.bodySmall,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 19.w),
                 child: Text(
-                  'lbl11'.tr,
+                  '자주 묻는 질문'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 21.w),
                 child: Text(
-                  'lbl12'.tr,
+                  '이벤트'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
@@ -236,19 +236,19 @@ class LogInScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'lbl13'.tr,
+                  '고객센터'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl14'.tr,
+                  '이용약관'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl15'.tr,
+                  '개인정보취급방침'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl16'.tr,
+                  '기관 제휴 및 구매 문의'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ],
@@ -263,16 +263,16 @@ class LogInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'lbl_address'.tr,
+                      'Address'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     SizedBox(height: 9.h),
                     Text(
-                      'msg_34'.tr,
+                      '서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     Text(
-                      'msg_2_b101'.tr,
+                      '코오롱싸이언스밸리2차 B101'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                   ],
@@ -283,16 +283,16 @@ class LogInScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_contact'.tr,
+                        'Contact'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'msg_business_cami_kr'.tr,
+                        'business@cami.kr'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        'lbl_02_861_6828'.tr,
+                        '02-861-6828'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -303,16 +303,16 @@ class LogInScreen extends StatelessWidget {
           ),
           SizedBox(height: 45.h),
           Text(
-            'lbl17'.tr,
+            '주식회사 카미랩'.tr,
             style: theme.textTheme.bodySmall,
           ),
           Text(
-            'msg'.tr,
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 15.h),
           Text(
-            'msg_copyright_2023'.tr,
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 38.h),

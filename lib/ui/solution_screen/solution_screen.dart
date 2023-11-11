@@ -29,21 +29,21 @@ class SolutionScreen extends StatelessWidget {
               children: [
                 _buildFrameColumn(context),
                 Text(
-                  'lbl90'.tr,
+                  '함께해요'.tr,
                   style: CustomTextStyles.bodyMediumGray90002,
                 ),
                 SizedBox(height: 17.h),
                 Text(
-                  'lbl115'.tr,
+                  '방문교육'.tr,
                   style: CustomTextStyles.headlineSmallNanumSquareNeoBlack900,
                 ),
                 SizedBox(height: 18.h),
                 Text(
-                  'lbl136'.tr,
+                  '준비된 반려인이'.tr,
                   style: theme.textTheme.bodyLarge,
                 ),
                 Text(
-                  'lbl137'.tr,
+                  '되기 위한 첫걸음'.tr,
                   style: theme.textTheme.bodyLarge,
                 ),
                 SizedBox(height: 32.h),
@@ -52,7 +52,7 @@ class SolutionScreen extends StatelessWidget {
                 _buildFrameRow1(context),
                 SizedBox(height: 130.h),
                 Text(
-                  'lbl142'.tr,
+                  '카미의 교육 서비스'.tr,
                   style: CustomTextStyles.titleLargeBlack90020,
                 ),
                 SizedBox(height: 34.h),
@@ -89,20 +89,20 @@ class SolutionScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'lbl138'.tr,
+                  '반려인과의 돈독한 관계 형성'.tr,
                   style: theme.textTheme.bodyLarge,
                 ),
                 SizedBox(height: 14.h),
                 Text(
-                  'msg54'.tr,
+                  '그저 가르치는 것만을 목적으로 교육하지 않고'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
                 Text(
-                  'msg55'.tr,
+                  '마음과 몸 모두가 건강한 반려생활을 지속할 수'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
                 Text(
-                  'lbl139'.tr,
+                  '있도록 도와드립니다.'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
               ],
@@ -140,20 +140,20 @@ class SolutionScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  'lbl140'.tr,
+                  '과학적으로 검증된 교육'.tr,
                   style: theme.textTheme.bodyLarge,
                 ),
                 SizedBox(height: 15.h),
                 Text(
-                  'msg56'.tr,
+                  '반려동물의 긍정적인 반응을 활용하여'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
                 Text(
-                  'msg57'.tr,
+                  '과학적으로 검증된 방법들을 위주로'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
                 Text(
-                  'lbl141'.tr,
+                  '교육을 진행합니다.'.tr,
                   style: CustomTextStyles.bodySmallBlack9009,
                 ),
               ],
@@ -205,20 +205,20 @@ class SolutionScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl10'.tr,
+                '공지사항'.tr,
                 style: theme.textTheme.bodySmall,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 19.w),
                 child: Text(
-                  'lbl11'.tr,
+                  '자주 묻는 질문'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 21.w),
                 child: Text(
-                  'lbl12'.tr,
+                  '이벤트'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
@@ -231,19 +231,19 @@ class SolutionScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'lbl13'.tr,
+                  '고객센터'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl14'.tr,
+                  '이용약관'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl15'.tr,
+                  '개인정보취급방침'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl16'.tr,
+                  '기관 제휴 및 구매 문의'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ],
@@ -258,16 +258,16 @@ class SolutionScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'lbl_address'.tr,
+                      'Address'.tr,
                       style: CustomTextStyles.bodySmall11,
                     ),
                     SizedBox(height: 9.h),
                     Text(
-                      'msg_34'.tr,
+                      '서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     Text(
-                      'msg_2_b101'.tr,
+                      '코오롱싸이언스밸리2차 B101'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                   ],
@@ -278,16 +278,16 @@ class SolutionScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_contact'.tr,
+                        'Contact'.tr,
                         style: CustomTextStyles.bodySmall11,
                       ),
                       SizedBox(height: 9.h),
                       Text(
-                        'msg_business_cami_kr'.tr,
+                        'business@cami.kr'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        'lbl_02_861_6828'.tr,
+                        '02-861-6828'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -298,16 +298,16 @@ class SolutionScreen extends StatelessWidget {
           ),
           SizedBox(height: 45.h),
           Text(
-            'lbl17'.tr,
+            '주식회사 카미랩'.tr,
             style: theme.textTheme.bodySmall,
           ),
           Text(
-            'msg'.tr,
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 15.h),
           Text(
-            'msg_copyright_2023'.tr,
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 38.h),

@@ -52,7 +52,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                                   }),
                               Padding(
                                   padding: EdgeInsets.only(left: 132.w),
-                                  child: Text('lbl_1_12'.tr,
+                                  child: Text('1:1 문의'.tr,
                                       style: CustomTextStyles.bodyLarge18))
                             ]))),
                 SizedBox(height: 40.h),
@@ -63,7 +63,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                         padding: EdgeInsets.only(left: 32.w),
-                        child: Text('lbl_1_13'.tr,
+                        child: Text('1:1 문의하기'.tr,
                             style: theme.textTheme.bodyLarge))),
                 SizedBox(height: 16.h),
                 Divider(color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
@@ -73,7 +73,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                 _buildRecentOrders(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
-                    text: 'lbl43'.tr,
+                    text: '문의하기'.tr,
                     margin: EdgeInsets.symmetric(horizontal: 16.w),
                     buttonStyle: CustomButtonStyles.fillBlackTL12),
                 SizedBox(height: 128.h),
@@ -93,7 +93,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           SizedBox(
               width: 44.w,
-              child: Text('lbl41'.tr,
+              child: Text('문의유형'.tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodyLarge!.copyWith(height: 1.50))),
@@ -127,7 +127,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
               Container(
                   width: 43.w,
                   margin: EdgeInsets.only(top: 3.h, bottom: 43.h),
-                  child: Text('lbl42'.tr,
+                  child: Text('문의내용'.tr,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style:
@@ -156,59 +156,61 @@ class ContactUsRegisterScreen extends StatelessWidget {
                 onTap: () {
                   onTapTxtWidget(context);
                 },
-                child: Text('lbl10'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   onTapTxtWidget1(context);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child: Text('lbl11'.tr, style: theme.textTheme.bodySmall))),
+                    child:
+                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 19.w),
               child: Row(children: [
-                Text('lbl13'.tr, style: CustomTextStyles.bodySmallGray500),
+                Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),
                 Padding(
                     padding: EdgeInsets.only(left: 18.w),
-                    child: Text('lbl14'.tr,
+                    child: Text('이용약관'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl15'.tr,
+                    child: Text('개인정보취급방침'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
-                    child: Text('lbl16'.tr,
+                    child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('lbl_contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 72.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
@@ -219,13 +221,16 @@ class ContactUsRegisterScreen extends StatelessWidget {
               child: Stack(alignment: Alignment.bottomCenter, children: [
                 Align(
                     alignment: Alignment.topLeft,
-                    child: Text('lbl17'.tr, style: theme.textTheme.bodySmall)),
+                    child:
+                        Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall)),
                 Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text('msg'.tr, style: theme.textTheme.bodySmall))
+                    child: Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+                        style: theme.textTheme.bodySmall))
               ])),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

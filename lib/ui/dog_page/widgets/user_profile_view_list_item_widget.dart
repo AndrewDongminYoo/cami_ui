@@ -34,7 +34,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           CustomElevatedButton(
             height: 24.h,
             width: 53.w,
-            text: 'lbl_dcsi_ii'.tr,
+            text: 'DCSI-II'.tr,
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
@@ -42,7 +42,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Text(
-              'lbl_mbti'.tr,
+              '강아지 MBTI'.tr,
               style: CustomTextStyles.bodyMediumGray90002,
             ),
           ),
@@ -50,7 +50,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Text(
-              'msg_16_bti'.tr,
+              '16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr,
               style: CustomTextStyles.bodySmallPrimaryContainer,
             ),
           ),
@@ -60,7 +60,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'lbl51'.tr,
+                  '자세히 보기'.tr,
                   style: CustomTextStyles.bodySmallGray700,
                 ),
                 CustomImageView(

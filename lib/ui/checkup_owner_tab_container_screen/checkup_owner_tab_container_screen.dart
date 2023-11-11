@@ -54,7 +54,7 @@ class CheckupOwnerTabContainerScreenState
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text(
-                      'lbl_dpai2'.tr,
+                      '입양준비검사(DPAI)'.tr,
                       style: CustomTextStyles.bodyMediumBlack900,
                     ),
                   ),
@@ -69,7 +69,7 @@ class CheckupOwnerTabContainerScreenState
                 CustomElevatedButton(
                   height: 23.h,
                   width: 39.w,
-                  text: 'lbl_dpai'.tr,
+                  text: 'DPAI'.tr,
                   margin: EdgeInsets.only(left: 16.w),
                   buttonTextStyle: CustomTextStyles.bodySmall10,
                   alignment: Alignment.centerLeft,
@@ -80,7 +80,7 @@ class CheckupOwnerTabContainerScreenState
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text(
-                      'lbl169'.tr,
+                      '입양준비검사'.tr,
                       style: CustomTextStyles.bodyLargeNanumSquareNeo,
                     ),
                   ),
@@ -101,7 +101,7 @@ class CheckupOwnerTabContainerScreenState
                         Padding(
                           padding: EdgeInsets.only(left: 8.w),
                           child: Text(
-                            'lbl_42'.tr,
+                            '(4)'.tr,
                             style: CustomTextStyles.bodyMediumBlack900,
                           ),
                         ),
@@ -115,7 +115,7 @@ class CheckupOwnerTabContainerScreenState
                 _buildFrame2(context),
                 SizedBox(height: 8.h),
                 CustomElevatedButton(
-                  text: 'lbl7'.tr,
+                  text: '구매하기'.tr,
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
                   buttonStyle: CustomButtonStyles.fillPrimary,
                   buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
@@ -147,13 +147,13 @@ class CheckupOwnerTabContainerScreenState
         padding: EdgeInsets.only(left: 16.w),
         child: Row(
           children: [
-            AppbarTitle(text: 'lbl'.tr),
+            AppbarTitle(text: '심리검사'.tr),
             AppbarTitle(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
             AppbarTitle(
-              text: 'lbl3'.tr,
+              text: '반려인'.tr,
               margin: EdgeInsets.only(left: 8.w),
             ),
             AppbarTitle(
@@ -184,13 +184,13 @@ class CheckupOwnerTabContainerScreenState
           Row(
             children: [
               Text(
-                'lbl5'.tr,
+                '문항'.tr,
                 style: theme.textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 42.w),
                 child: Text(
-                  'lbl_842'.tr,
+                  '84문항'.tr,
                   style: CustomTextStyles.bodyMediumGray800,
                 ),
               ),
@@ -200,13 +200,13 @@ class CheckupOwnerTabContainerScreenState
           Row(
             children: [
               Text(
-                'lbl6'.tr,
+                '소요시간'.tr,
                 style: theme.textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 17.w),
                 child: Text(
-                  'lbl_202'.tr,
+                  '약 20분'.tr,
                   style: CustomTextStyles.bodyMediumGray800,
                 ),
               ),
@@ -260,7 +260,7 @@ class CheckupOwnerTabContainerScreenState
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
             child: Text(
-              'lbl_9_900'.tr,
+              '9,900원'.tr,
               style: CustomTextStyles.bodyMediumBlack90015,
             ),
           ),
@@ -295,10 +295,10 @@ class CheckupOwnerTabContainerScreenState
         ),
         tabs: [
           Tab(
-            child: Text('lbl8'.tr),
+            child: Text('검사소개'.tr),
           ),
           Tab(
-            child: Text('lbl9'.tr),
+            child: Text('구매후기'.tr),
           ),
         ],
       ),

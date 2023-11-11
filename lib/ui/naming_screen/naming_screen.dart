@@ -40,11 +40,11 @@ class NamingScreen extends StatelessWidget {
             child: SingleChildScrollView(
                 child: Column(children: [
               SizedBox(height: 48.h),
-              Text('lbl38'.tr, style: CustomTextStyles.titleLargeBlack900),
+              Text('한 번 해보시개'.tr, style: CustomTextStyles.titleLargeBlack900),
               SizedBox(height: 70.h),
-              Text('lbl23'.tr, style: theme.textTheme.titleLarge),
+              Text('삼칠이 작명소'.tr, style: theme.textTheme.titleLarge),
               SizedBox(height: 18.h),
-              Text('lbl39'.tr, style: CustomTextStyles.bodyLarge18),
+              Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18),
               SizedBox(height: 29.h),
               SizedBox(
                 height: 283.h,
@@ -55,26 +55,26 @@ class NamingScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 27.w),
                         child:
                             Column(mainAxisSize: MainAxisSize.min, children: [
-                          Text('lbl33'.tr,
+                          Text('강렬한 거북이의 안내자'.tr,
                               style: CustomTextStyles.headlineSmallBlack900),
                           SizedBox(height: 196.h),
                           Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text('lbl_a'.tr,
-                                    style: theme.textTheme.bodyLarge),
+                                Text('A.'.tr, style: theme.textTheme.bodyLarge),
                                 Padding(
                                   padding: EdgeInsets.only(left: 2.w),
-                                  child: Text('lbl36'.tr,
+                                  child: Text('꼬리'.tr,
                                       style: theme.textTheme.bodyLarge),
                                 ),
                                 Padding(
                                     padding: EdgeInsets.only(left: 3.w),
-                                    child: Text('lbl35'.tr,
+                                    child: Text('의 아메리카 원주민 이름은'.tr,
                                         style: theme.textTheme.bodyLarge))
                               ]),
                           _buildAddress(context,
-                              userAddress: 'lbl33'.tr, userContact: 'lbl34'.tr)
+                              userAddress: '강렬한 거북이의 안내자'.tr,
+                              userContact: '입니다.'.tr)
                         ])),
                   ),
                   Align(
@@ -101,15 +101,15 @@ class NamingScreen extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text('lbl36'.tr,
+                                          Text('꼬리'.tr,
                                               style: CustomTextStyles
                                                   .bodyMediumBlack900),
                                           SizedBox(height: 2.h),
-                                          Text('lbl_5_2'.tr,
+                                          Text('5살 2개월'.tr,
                                               style: CustomTextStyles
                                                   .bodyMediumBlack900),
                                           SizedBox(height: 3.h),
-                                          Text('lbl37'.tr,
+                                          Text('남자'.tr,
                                               style: theme.textTheme.bodyLarge)
                                         ]))
                               ])))
@@ -144,14 +144,14 @@ class NamingScreen extends StatelessWidget {
                   CustomElevatedButton(
                       height: 56.h,
                       width: 144.w,
-                      text: 'lbl40'.tr,
+                      text: '다시하기'.tr,
                       buttonStyle: CustomButtonStyles.fillPrimary,
                       buttonTextStyle:
                           CustomTextStyles.bodyMediumOnErrorContainer),
                   CustomElevatedButton(
                       height: 56.h,
                       width: 144.w,
-                      text: 'lbl32'.tr,
+                      text: '목록으로'.tr,
                       margin: EdgeInsets.only(left: 21.w),
                       buttonStyle: CustomButtonStyles.fillBlack)
                 ]),
@@ -174,18 +174,18 @@ class NamingScreen extends StatelessWidget {
             imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
         SizedBox(height: 37.h),
         Row(children: [
-          Text('lbl10'.tr, style: theme.textTheme.bodySmall),
+          Text('공지사항'.tr, style: theme.textTheme.bodySmall),
           GestureDetector(
             onTap: () {
               onTapTxtWidget(context);
             },
             child: Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl11'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall)),
           ),
           Padding(
               padding: EdgeInsets.only(left: 17.w),
-              child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+              child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
         ]),
         SizedBox(height: 9.h),
         Padding(
@@ -195,50 +195,53 @@ class NamingScreen extends StatelessWidget {
               onTap: () {
                 onTapTxtWidget1(context);
               },
-              child: Text('lbl13'.tr, style: CustomTextStyles.bodySmallGray500),
+              child: Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),
             ),
             Padding(
               padding: EdgeInsets.only(left: 18.w),
-              child: Text('lbl14'.tr, style: CustomTextStyles.bodySmallGray500),
+              child: Text('이용약관'.tr, style: CustomTextStyles.bodySmallGray500),
             ),
             Padding(
               padding: EdgeInsets.only(left: 16.w),
-              child: Text('lbl15'.tr, style: CustomTextStyles.bodySmallGray500),
+              child:
+                  Text('개인정보취급방침'.tr, style: CustomTextStyles.bodySmallGray500),
             ),
             Padding(
                 padding: EdgeInsets.only(left: 19.w),
-                child:
-                    Text('lbl16'.tr, style: CustomTextStyles.bodySmallGray500))
+                child: Text('기관 제휴 및 구매 문의'.tr,
+                    style: CustomTextStyles.bodySmallGray500))
           ]),
         ),
         SizedBox(height: 38.h),
         _buildAddress(context,
-            userAddress: 'lbl_address'.tr, userContact: 'lbl_contact'.tr),
+            userAddress: 'Address'.tr, userContact: 'Contact'.tr),
         SizedBox(height: 9.h),
         Padding(
           padding: EdgeInsets.only(right: 72.w),
           child: Row(children: [
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-              Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+              Text('서울시 구로구 디지털로34길 55'.tr, style: theme.textTheme.bodySmall),
+              Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
             ]),
             Padding(
                 padding: EdgeInsets.only(left: 19.w),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('msg_business_cami_kr'.tr,
+                      Text('business@cami.kr'.tr,
                           style: theme.textTheme.bodySmall),
-                      Text('lbl_02_861_6828'.tr,
+                      Text('02-861-6828'.tr,
                           style: CustomTextStyles.bodySmall11)
                     ]))
           ]),
         ),
         SizedBox(height: 45.h),
-        Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-        Text('msg'.tr, style: theme.textTheme.bodySmall),
+        Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+        Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+            style: theme.textTheme.bodySmall),
         SizedBox(height: 15.h),
-        Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+        Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+            style: theme.textTheme.bodySmall),
         SizedBox(height: 38.h),
         Row(children: [
           CustomImageView(

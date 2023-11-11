@@ -31,7 +31,7 @@ class SignUpFormScreen extends StatelessWidget {
   final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
 
   String genderRadioGroup = '';
-  List<String> radioList = ['lbl113', 'lbl114', 'lbl150'];
+  List<String> radioList = ['여성', '남성', '기타'];
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 79.h),
                 Align(
                     child:
-                        Text('lbl143'.tr, style: theme.textTheme.displaySmall)),
+                        Text('회원가입'.tr, style: theme.textTheme.displaySmall)),
                 SizedBox(height: 15.h),
                 Align(
                     child: Padding(
@@ -57,65 +57,65 @@ class SignUpFormScreen extends StatelessWidget {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('lbl144'.tr,
+                              Text('환영합니다!'.tr,
                                   style: CustomTextStyles.bodyMediumGray60001),
                               Padding(
                                   padding: EdgeInsets.only(left: 4.w),
-                                  child: Text('lbl_cami'.tr,
+                                  child: Text('CAMI'.tr,
                                       style: CustomTextStyles
                                           .bodyMediumGray60001)),
                               Padding(
                                   padding: EdgeInsets.only(left: 1.w),
-                                  child: Text('msg58'.tr,
+                                  child: Text('는 여러분들을 기다리고 있습니다!'.tr,
                                       style:
                                           CustomTextStyles.bodyMediumGray60001))
                             ]))),
                 SizedBox(height: 64.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl145'.tr,
+                    child: Text('이메일 주소'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildAppNavBar(context),
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl146'.tr,
+                    child: Text('비밀번호'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildEditText1(context),
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl147'.tr,
+                    child: Text('비밀번호 확인'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildEditText2(context),
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl148'.tr,
+                    child: Text('이름'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildEditText3(context),
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl149'.tr,
+                    child: Text('닉네임'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildEditText4(context),
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl120'.tr,
+                    child: Text('생년월일'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildDateTimeField(context),
                 SizedBox(height: 25.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl124'.tr,
+                    child: Text('성별'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 3.h),
                 _buildGenderRadioGroup(context),
@@ -138,16 +138,16 @@ class SignUpFormScreen extends StatelessWidget {
                               alignment: Alignment.center)),
                       Padding(
                           padding: EdgeInsets.only(left: 20.w),
-                          child: Text('lbl151'.tr,
+                          child: Text('[필수]'.tr,
                               style: theme.textTheme.bodyLarge)),
                       Padding(
                           padding: EdgeInsets.only(left: 7.w),
-                          child: Text('lbl14'.tr,
+                          child: Text('이용약관'.tr,
                               style: CustomTextStyles.bodyLargeIndigo400)),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
-                          child: Text('lbl152'.tr,
-                              style: theme.textTheme.bodyLarge))
+                          child:
+                              Text('동의'.tr, style: theme.textTheme.bodyLarge))
                     ])),
                 SizedBox(height: 6.h),
                 Padding(
@@ -172,25 +172,27 @@ class SignUpFormScreen extends StatelessWidget {
                                   alignment: Alignment.center)),
                           Padding(
                               padding: EdgeInsets.only(left: 20.w),
-                              child: Text('lbl151'.tr,
+                              child: Text('[필수]'.tr,
                                   style: theme.textTheme.bodyLarge)),
                           Padding(
                               padding: EdgeInsets.only(left: 6.w),
-                              child: Text('lbl153'.tr,
+                              child: Text('개인정보 취급방침'.tr,
                                   style: CustomTextStyles.bodyLargeIndigo400)),
                           Padding(
                               padding: EdgeInsets.only(left: 2.w),
-                              child: Text('lbl154'.tr,
+                              child: Text('에 대한 동의'.tr,
                                   style: theme.textTheme.bodyLarge))
                         ])),
                 SizedBox(height: 8.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                    child: _buildVector(context, messageText: 'msg59'.tr)),
+                    child: _buildVector(context,
+                        messageText: '[선택] 마케팅 정보 수신 동의 - 이메일'.tr)),
                 SizedBox(height: 7.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                    child: _buildVector(context, messageText: 'msg60'.tr)),
+                    child: _buildVector(context,
+                        messageText: '[선택] 마케팅 정보 수신 - SMS/MMS'.tr)),
                 SizedBox(height: 32.h),
                 _buildTf(context),
                 SizedBox(height: 128.h),
@@ -266,7 +268,7 @@ class SignUpFormScreen extends StatelessWidget {
                   onChanged: (value) {}),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('lbl108'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('년'.tr, style: theme.textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 17.w),
                   child: CustomDropDown(
@@ -284,7 +286,7 @@ class SignUpFormScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('lbl109'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('월'.tr, style: theme.textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 16.w),
                   child: CustomDropDown(
@@ -302,7 +304,7 @@ class SignUpFormScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                  child: Text('lbl110'.tr, style: theme.textTheme.bodyLarge))
+                  child: Text('일'.tr, style: theme.textTheme.bodyLarge))
             ])));
   }
 
@@ -312,7 +314,7 @@ class SignUpFormScreen extends StatelessWidget {
         padding: EdgeInsets.only(left: 20.w),
         child: Row(children: [
           CustomRadioButton(
-              text: 'lbl113'.tr,
+              text: '여성'.tr,
               value: radioList[0],
               groupValue: genderRadioGroup,
               onChange: (value) {
@@ -321,7 +323,7 @@ class SignUpFormScreen extends StatelessWidget {
           Padding(
               padding: EdgeInsets.only(left: 64.w),
               child: CustomRadioButton(
-                  text: 'lbl114'.tr,
+                  text: '남성'.tr,
                   value: radioList[1],
                   groupValue: genderRadioGroup,
                   onChange: (value) {
@@ -330,7 +332,7 @@ class SignUpFormScreen extends StatelessWidget {
           Padding(
               padding: EdgeInsets.only(left: 63.w),
               child: CustomRadioButton(
-                  text: 'lbl150'.tr,
+                  text: '기타'.tr,
                   value: radioList[2],
                   groupValue: genderRadioGroup,
                   onChange: (value) {
@@ -342,7 +344,7 @@ class SignUpFormScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildTf(BuildContext context) {
     return CustomElevatedButton(
-        text: 'lbl155'.tr,
+        text: '회원 가입'.tr,
         margin: EdgeInsets.symmetric(horizontal: 16.w),
         buttonStyle: CustomButtonStyles.fillBlack,
         alignment: Alignment.center);
@@ -363,17 +365,18 @@ class SignUpFormScreen extends StatelessWidget {
                 onTap: () {
                   onTapTxtWidget(context);
                 },
-                child: Text('lbl10'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   onTapTxtWidget1(context);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child: Text('lbl11'.tr, style: theme.textTheme.bodySmall))),
+                    child:
+                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -383,52 +386,55 @@ class SignUpFormScreen extends StatelessWidget {
                     onTap: () {
                       onTapTxtWidget2(context);
                     },
-                    child: Text('lbl13'.tr,
+                    child: Text('고객센터'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 18.w),
-                    child: Text('lbl14'.tr,
+                    child: Text('이용약관'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl15'.tr,
+                    child: Text('개인정보취급방침'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
-                    child: Text('lbl16'.tr,
+                    child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('lbl_contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 72.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-          Text('msg'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

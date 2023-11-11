@@ -27,11 +27,11 @@ class FourhundredfourScreen extends StatelessWidget {
             children: [
               SizedBox(height: 62.h),
               Text(
-                'lbl170'.tr,
+                '미안해'.tr,
                 style: CustomTextStyles.bodyLarge18,
               ),
               Text(
-                'msg67'.tr,
+                '페이지를 잃어버렸어요.'.tr,
                 style: CustomTextStyles.bodyLarge18,
               ),
               SizedBox(height: 38.h),
@@ -43,7 +43,7 @@ class FourhundredfourScreen extends StatelessWidget {
                   children: [
                     Align(
                       child: Text(
-                        'lbl_404'.tr,
+                        '404'.tr,
                         style: CustomTextStyles.poppinsYellow100,
                       ),
                     ),
@@ -60,7 +60,7 @@ class FourhundredfourScreen extends StatelessWidget {
               CustomOutlinedButton(
                 height: 52.h,
                 width: 168.w,
-                text: 'lbl_go_home'.tr,
+                text: 'Go Home'.tr,
                 leftIcon: Container(
                   margin: EdgeInsets.only(right: 8.w),
                   child: CustomImageView(

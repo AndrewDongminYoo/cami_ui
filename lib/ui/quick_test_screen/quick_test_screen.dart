@@ -28,7 +28,7 @@ class QuickTestScreen extends StatelessWidget {
                   Expanded(
                       child: SingleChildScrollView(
                           child: Column(children: [
-                    Text('lbl18'.tr,
+                    Text('반짝 테스트'.tr,
                         style: CustomTextStyles
                             .headlineSmallNanumSquareNeoBlack900),
                     SizedBox(height: 66.h),
@@ -42,12 +42,12 @@ class QuickTestScreen extends StatelessWidget {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('lbl19'.tr,
+                              Text('강아지와 나의'.tr,
                                   style: CustomTextStyles
                                       .headlineSmallNanumSquareNeoOnErrorContainer),
                               Padding(
                                   padding: EdgeInsets.only(left: 8.w),
-                                  child: Text('lbl20'.tr,
+                                  child: Text('인싸력 테스트'.tr,
                                       style: theme.textTheme.titleLarge))
                             ])),
                     SizedBox(height: 18.h),
@@ -56,7 +56,8 @@ class QuickTestScreen extends StatelessWidget {
                     Container(
                         width: 296.w,
                         margin: EdgeInsets.symmetric(horizontal: 48.w),
-                        child: Text('msg3'.tr,
+                        child: Text(
+                            '그렇다면 나의 댕댕은 인싸일까 아싸일까? 인싸인듯 인싸아닌 인싸같은 너!'.tr,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
@@ -66,7 +67,8 @@ class QuickTestScreen extends StatelessWidget {
                     Container(
                         width: 345.w,
                         margin: EdgeInsets.symmetric(horizontal: 23.w),
-                        child: Text('msg4'.tr,
+                        child: Text(
+                            '댕댕과 나의 관계성향을 측정해 인싸지수를 확인하고, 서로의 일치도를 알려드립니다!'.tr,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
@@ -75,7 +77,7 @@ class QuickTestScreen extends StatelessWidget {
                     SizedBox(height: 15.h),
                     CustomElevatedButton(
                         width: 117.w,
-                        text: 'lbl22'.tr,
+                        text: '진단시작'.tr,
                         buttonStyle: CustomButtonStyles.fillBlack),
                     SizedBox(height: 64.h),
                     CustomImageView(
@@ -83,26 +85,26 @@ class QuickTestScreen extends StatelessWidget {
                         height: 257.h,
                         width: 241.w),
                     SizedBox(height: 35.h),
-                    Text('lbl23'.tr,
+                    Text('삼칠이 작명소'.tr,
                         style: CustomTextStyles.titleLargeOnErrorContainer),
                     SizedBox(height: 18.h),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      Text('lbl24'.tr,
+                      Text('개성만점'.tr,
                           style: CustomTextStyles.bodyMediumBlack900),
                       Padding(
                           padding: EdgeInsets.only(left: 4.w),
-                          child: Text('lbl25'.tr,
+                          child: Text('별명 짓기'.tr,
                               style: CustomTextStyles.bodyMediumBlack900)),
                       Padding(
                           padding: EdgeInsets.only(left: 1.w),
-                          child: Text('lbl26'.tr,
+                          child: Text('!!!'.tr,
                               style: CustomTextStyles.bodyMediumBlack900))
                     ]),
                     SizedBox(height: 30.h),
                     Container(
                         width: 347.w,
                         margin: EdgeInsets.symmetric(horizontal: 22.w),
-                        child: Text('msg5'.tr,
+                        child: Text('함께 생활하는 반려 동물에게 어울리는 새로운 이름이 무엇이 있을까요?'.tr,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
@@ -112,7 +114,7 @@ class QuickTestScreen extends StatelessWidget {
                     Container(
                         width: 315.w,
                         margin: EdgeInsets.only(left: 39.w, right: 38.w),
-                        child: Text('msg6'.tr,
+                        child: Text('시적이고 직설적인 아메리카 원주민식 이름을 삼칠이가 지어드립니다.'.tr,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
@@ -121,7 +123,7 @@ class QuickTestScreen extends StatelessWidget {
                     SizedBox(height: 15.h),
                     CustomElevatedButton(
                         width: 117.w,
-                        text: 'lbl22'.tr,
+                        text: '진단시작'.tr,
                         buttonStyle: CustomButtonStyles.fillBlack,
                         onPressed: () {
                           onTaptf(context);
@@ -133,26 +135,26 @@ class QuickTestScreen extends StatelessWidget {
                         width: 241.w),
                     SizedBox(height: 34.h),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      Text('lbl27'.tr,
+                      Text('나는'.tr,
                           style: CustomTextStyles
                               .headlineSmallNanumSquareNeoOnErrorContainer),
                       Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Text('lbl28'.tr,
+                          child: Text('개'.tr,
                               style: CustomTextStyles
                                   .headlineSmallNanumSquareNeoErrorContainer)),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
-                          child: Text('lbl29'.tr,
+                          child: Text('인간?'.tr,
                               style: CustomTextStyles
                                   .headlineSmallNanumSquareNeoOnErrorContainer)),
                       Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Text('lbl30'.tr,
+                          child: Text('고양이'.tr,
                               style: theme.textTheme.titleLarge)),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
-                          child: Text('lbl29'.tr,
+                          child: Text('인간?'.tr,
                               style: CustomTextStyles
                                   .headlineSmallNanumSquareNeoOnErrorContainer))
                     ]),
@@ -165,13 +167,13 @@ class QuickTestScreen extends StatelessWidget {
                             children: [
                               Padding(
                                   padding: EdgeInsets.only(bottom: 20.h),
-                                  child: Text('lbl31'.tr,
+                                  child: Text('반려 동물과 반려인이'.tr,
                                       style:
                                           CustomTextStyles.bodyMediumBlack900)),
                               Container(
                                   width: 185.w,
                                   margin: EdgeInsets.only(left: 6.w),
-                                  child: Text('msg7'.tr,
+                                  child: Text('묘하게 닮아 있거나, 닮아 간다고 합니다.'.tr,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.center,
@@ -183,7 +185,9 @@ class QuickTestScreen extends StatelessWidget {
                     Container(
                         width: 350.w,
                         margin: EdgeInsets.only(left: 21.w, right: 20.w),
-                        child: Text('msg8'.tr,
+                        child: Text(
+                            '그래서 함께하는 반려 동물에 따라 나타나는 반려인의 특성과 관련된 연구가 있어요. 선행연구를 모아모아 반려견, 반려묘와 함께하는 반려인들을 중심으로 유형 진단 검사를 만들어 보았습니다.'
+                                .tr,
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
@@ -193,7 +197,7 @@ class QuickTestScreen extends StatelessWidget {
                     CustomElevatedButton(
                         height: 36.h,
                         width: 117.w,
-                        text: 'lbl22'.tr,
+                        text: '진단시작'.tr,
                         buttonStyle: CustomButtonStyles.fillBlack),
                     SizedBox(height: 122.h),
                     _buildFooter(context)
@@ -206,11 +210,11 @@ class QuickTestScreen extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.only(left: 28.w, right: 32.w),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('lbl21'.tr, style: CustomTextStyles.bodyMediumErrorContainer),
+          Text('인싸! 아싸!'.tr, style: CustomTextStyles.bodyMediumErrorContainer),
           Padding(
               padding: EdgeInsets.only(left: 7.w),
-              child:
-                  Text('msg2'.tr, style: CustomTextStyles.bodyMediumBlack900))
+              child: Text('라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr,
+                  style: CustomTextStyles.bodyMediumBlack900))
         ]));
   }
 
@@ -229,17 +233,18 @@ class QuickTestScreen extends StatelessWidget {
                 onTap: () {
                   onTapTxtWidget(context);
                 },
-                child: Text('lbl10'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   onTapTxtWidget1(context);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child: Text('lbl11'.tr, style: theme.textTheme.bodySmall))),
+                    child:
+                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -249,52 +254,55 @@ class QuickTestScreen extends StatelessWidget {
                     onTap: () {
                       onTapTxtWidget2(context);
                     },
-                    child: Text('lbl13'.tr,
+                    child: Text('고객센터'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 18.w),
-                    child: Text('lbl14'.tr,
+                    child: Text('이용약관'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl15'.tr,
+                    child: Text('개인정보취급방침'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
-                    child: Text('lbl16'.tr,
+                    child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('lbl_contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 72.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-          Text('msg'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 39.h),
           Row(children: [
             CustomImageView(

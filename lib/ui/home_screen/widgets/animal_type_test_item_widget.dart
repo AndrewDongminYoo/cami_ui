@@ -25,12 +25,12 @@ class AnimalTypeTestItemWidget extends StatelessWidget {
         children: [
           SizedBox(height: 3.h),
           Text(
-            'lbl98'.tr,
+            '동물 유형 테스트'.tr,
             style: CustomTextStyles.bodyMediumBlack900,
           ),
           SizedBox(height: 5.h),
           Text(
-            'msg_vs'.tr,
+            '나는 강아지형 vs 고양이형 ?'.tr,
             style: CustomTextStyles.bodySmallGray600,
           ),
           SizedBox(height: 5.h),

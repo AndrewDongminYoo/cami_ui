@@ -50,7 +50,7 @@ class Faq1Screen extends StatelessWidget {
                               }),
                           Padding(
                               padding: EdgeInsets.only(left: 106.w),
-                              child: Text('lbl11'.tr,
+                              child: Text('자주 묻는 질문'.tr,
                                   style: CustomTextStyles.bodyLarge18))
                         ]))),
                 SizedBox(height: 15.h),
@@ -102,7 +102,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -114,7 +114,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'lbl55'.tr,
+                      hintText: '결제가 되지 않아요'.tr,
                       items: dropdownItemList0,
                       onChanged: (value) {})))
         ]));
@@ -127,7 +127,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -139,7 +139,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'lbl58'.tr,
+                      hintText: '회원 탈퇴는 어떻게 하나요?'.tr,
                       items: dropdownItemList1,
                       onChanged: (value) {})))
         ]));
@@ -155,7 +155,7 @@ class Faq1Screen extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.only(top: 10.h, bottom: 14.h),
-                  child: Text('lbl_q'.tr,
+                  child: Text('Q.'.tr,
                       style:
                           CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
               Expanded(
@@ -169,7 +169,7 @@ class Faq1Screen extends StatelessWidget {
                                       Assets.svg.imgArrowdownGray700.path,
                                   height: 32.h,
                                   width: 30.w)),
-                          hintText: 'msg20'.tr,
+                          hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr,
                           items: dropdownItemList2,
                           onChanged: (value) {})))
             ]));
@@ -185,7 +185,7 @@ class Faq1Screen extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.only(top: 11.h, bottom: 13.h),
-                  child: Text('lbl_q'.tr,
+                  child: Text('Q.'.tr,
                       style:
                           CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
               Expanded(
@@ -199,7 +199,7 @@ class Faq1Screen extends StatelessWidget {
                                       Assets.svg.imgArrowdownGray700.path,
                                   height: 32.h,
                                   width: 30.w)),
-                          hintText: 'msg19'.tr,
+                          hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr,
                           items: dropdownItemList3,
                           onChanged: (value) {})))
             ]));
@@ -212,7 +212,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -224,7 +224,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'msg21'.tr,
+                      hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr,
                       items: dropdownItemList4,
                       onChanged: (value) {})))
         ]));
@@ -237,7 +237,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -249,7 +249,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'lbl59'.tr,
+                      hintText: '결과보고서 인쇄 방법'.tr,
                       items: dropdownItemList5,
                       onChanged: (value) {})))
         ]));
@@ -262,7 +262,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -274,7 +274,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'lbl60'.tr,
+                      hintText: '결과보고서 다시보기'.tr,
                       items: dropdownItemList6,
                       onChanged: (value) {})))
         ]));
@@ -287,7 +287,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('lbl_q'.tr,
+              child: Text('Q.'.tr,
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -299,7 +299,7 @@ class Faq1Screen extends StatelessWidget {
                               imagePath: Assets.svg.imgArrowdownGray700.path,
                               height: 32.h,
                               width: 30.w)),
-                      hintText: 'msg22'.tr,
+                      hintText: '구매한 쿠폰이 보이지 않아요.'.tr,
                       items: dropdownItemList7,
                       onChanged: (value) {})))
         ]));
@@ -315,13 +315,13 @@ class Faq1Screen extends StatelessWidget {
               imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
           SizedBox(height: 37.h),
           Row(children: [
-            Text('lbl10'.tr, style: theme.textTheme.bodySmall),
+            Text('공지사항'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 19.w),
-                child: Text('lbl11'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall)),
             Padding(
                 padding: EdgeInsets.only(left: 21.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -329,40 +329,44 @@ class Faq1Screen extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('lbl13'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl14'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl15'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl16'.tr, style: CustomTextStyles.bodySmallGray500)
+                    Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),
+                    Text('이용약관'.tr, style: CustomTextStyles.bodySmallGray500),
+                    Text('개인정보취급방침'.tr,
+                        style: CustomTextStyles.bodySmallGray500),
+                    Text('기관 제휴 및 구매 문의'.tr,
+                        style: CustomTextStyles.bodySmallGray500)
                   ])),
           SizedBox(height: 38.h),
           Padding(
               padding: EdgeInsets.only(right: 63.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+                  Text('Address'.tr, style: theme.textTheme.bodySmall),
                   SizedBox(height: 9.h),
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 27.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('lbl_contact'.tr,
-                              style: theme.textTheme.bodySmall),
+                          Text('Contact'.tr, style: theme.textTheme.bodySmall),
                           SizedBox(height: 10.h),
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: theme.textTheme.bodySmall)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-          Text('msg'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

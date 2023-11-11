@@ -31,7 +31,7 @@ class MenuBarScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl'.tr,
+                  '심리검사'.tr,
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),
@@ -39,7 +39,7 @@ class MenuBarScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl115'.tr,
+                  '방문교육'.tr,
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),
@@ -47,7 +47,7 @@ class MenuBarScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl18'.tr,
+                  '반짝 테스트'.tr,
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),
@@ -55,7 +55,7 @@ class MenuBarScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl116'.tr,
+                  '마이페이지'.tr,
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),
@@ -63,7 +63,7 @@ class MenuBarScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl117'.tr,
+                  '로그아웃'.tr,
                   style: CustomTextStyles.bodyLarge18,
                 ),
               ),

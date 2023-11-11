@@ -64,7 +64,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                               }),
                           Padding(
                               padding: EdgeInsets.only(left: 77.w),
-                              child: Text('lbl_1_22'.tr,
+                              child: Text('반려묘 등록하기 (1/2)'.tr,
                                   style: CustomTextStyles.bodyLarge18))
                         ])),
                 SizedBox(height: 21.h),
@@ -72,7 +72,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                 SizedBox(height: 25.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl106'.tr,
+                    child: Text('반려묘 이름'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 Padding(
@@ -84,7 +84,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                 SizedBox(height: 33.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl107'.tr,
+                    child: Text('반려묘 생년월일'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 21.h),
                 Padding(
@@ -93,7 +93,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                 SizedBox(height: 21.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl111'.tr,
+                    child: Text('반려묘 입양일'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 15.h),
                 Padding(
@@ -102,7 +102,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                 SizedBox(height: 27.h),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl112'.tr,
+                    child: Text('반려묘 성별'.tr,
                         style: CustomTextStyles.bodyMediumOnPrimary)),
                 SizedBox(height: 9.h),
                 _buildTabview(context),
@@ -160,13 +160,14 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text('lbl104'.tr,
+                                      Text('프로필 사진을 등록해주세요'.tr,
                                           style: CustomTextStyles
                                               .bodyMediumBlack900),
                                       SizedBox(height: 1.h),
                                       SizedBox(
                                           width: 156.w,
-                                          child: Text('msg53'.tr,
+                                          child: Text(
+                                              '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr,
                                               maxLines: 2,
                                               overflow: TextOverflow.ellipsis,
                                               style: CustomTextStyles
@@ -175,7 +176,8 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                                       SizedBox(height: 2.h),
                                       SizedBox(
                                           width: 145.w,
-                                          child: Text('msg_9mb'.tr,
+                                          child: Text(
+                                              '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr,
                                               maxLines: 2,
                                               overflow: TextOverflow.ellipsis,
                                               style: CustomTextStyles
@@ -184,7 +186,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                                       SizedBox(height: 8.h),
                                       CustomElevatedButton(
                                           width: 121.w,
-                                          text: 'lbl105'.tr,
+                                          text: '이미지 등록하기'.tr,
                                           buttonStyle:
                                               CustomButtonStyles.fillBlue,
                                           buttonTextStyle: CustomTextStyles
@@ -215,10 +217,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
             indicator: BoxDecoration(
                 color: appTheme.gray10001,
                 borderRadius: BorderRadius.circular(8.w)),
-            tabs: [
-              Tab(child: Text('lbl113'.tr)),
-              Tab(child: Text('lbl114'.tr))
-            ]));
+            tabs: [Tab(child: Text('여성'.tr)), Tab(child: Text('남성'.tr))]));
   }
 
   /// Common widget
@@ -237,7 +236,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('lbl108'.tr, style: theme.textTheme.bodyLarge)),
+          child: Text('년'.tr, style: theme.textTheme.bodyLarge)),
       Container(
           height: 40.h,
           width: 91.w,
@@ -252,7 +251,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('lbl109'.tr, style: theme.textTheme.bodyLarge)),
+          child: Text('월'.tr, style: theme.textTheme.bodyLarge)),
       Container(
           height: 40.h,
           width: 91.w,
@@ -267,7 +266,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-          child: Text('lbl110'.tr, style: theme.textTheme.bodyLarge))
+          child: Text('일'.tr, style: theme.textTheme.bodyLarge))
     ]);
   }
 

@@ -40,7 +40,7 @@ class NoticeDetailScreen extends StatelessWidget {
                           }),
                       Padding(
                           padding: EdgeInsets.only(left: 127.w),
-                          child: Text('lbl10'.tr,
+                          child: Text('공지사항'.tr,
                               style: CustomTextStyles.bodyLarge18))
                     ])),
                 SizedBox(height: 15.h),
@@ -52,12 +52,12 @@ class NoticeDetailScreen extends StatelessWidget {
                 SizedBox(height: 12.h),
                 Padding(
                     padding: EdgeInsets.only(left: 24.w),
-                    child: Text('msg9'.tr.toUpperCase(),
+                    child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr.toUpperCase(),
                         style: CustomTextStyles.bodyMediumBlack900)),
                 SizedBox(height: 21.h),
                 Padding(
                     padding: EdgeInsets.only(left: 24.w),
-                    child: Text('lbl_2020_03_17'.tr.toUpperCase(),
+                    child: Text('2020-03-17'.tr.toUpperCase(),
                         style: CustomTextStyles.bodySmallGray500)),
                 SizedBox(height: 12.h),
                 _buildFrameColumn1(context),
@@ -65,7 +65,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 CustomElevatedButton(
                     height: 32.h,
                     width: 104.w,
-                    text: 'lbl32'.tr,
+                    text: '목록으로'.tr,
                     margin: EdgeInsets.only(right: 16.w),
                     buttonStyle: CustomButtonStyles.fillBlue,
                     buttonTextStyle: CustomTextStyles.bodySmallBlack900,
@@ -95,7 +95,9 @@ class NoticeDetailScreen extends StatelessWidget {
                   Container(
                       width: 327.w,
                       margin: EdgeInsets.only(right: 9.w),
-                      child: Text('msg10'.tr,
+                      child: Text(
+                          '서버 업데이트 과정에서 시스템 오류로 인해 2019년 11월 15일 이후 업로드한 반려인/반려견 프로필 사진이 삭제되었습니다.'
+                              .tr,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: CustomTextStyles.bodySmallBlack900
@@ -103,17 +105,20 @@ class NoticeDetailScreen extends StatelessWidget {
                   Container(
                       width: 326.w,
                       margin: EdgeInsets.only(right: 9.w),
-                      child: Text('msg11'.tr,
+                      child: Text(
+                          '이에 따라 사진이 삭제된 유저분들은 필요에 따라 프로필 사진을 재등록하셔야 합니다.'.tr,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: CustomTextStyles.bodySmallBlack900
                               .copyWith(height: 1.33))),
-                  Text('msg12'.tr, style: CustomTextStyles.bodySmallBlack900),
+                  Text('사이트 이용에 불편을 드려 죄송합니다.'.tr,
+                      style: CustomTextStyles.bodySmallBlack900),
                   SizedBox(height: 3.h),
                   Container(
                       width: 327.w,
                       margin: EdgeInsets.only(right: 9.w),
-                      child: Text('msg13'.tr,
+                      child: Text(
+                          '향후 이런 일이 재발하지 않도록 서버의 보안과 백업 정책을 강화하겠습니다.'.tr,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: CustomTextStyles.bodySmallBlack900
@@ -131,13 +136,13 @@ class NoticeDetailScreen extends StatelessWidget {
               imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
           SizedBox(height: 37.h),
           Row(children: [
-            Text('lbl10'.tr, style: theme.textTheme.bodySmall),
+            Text('공지사항'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 19.w),
-                child: Text('lbl11'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall)),
             Padding(
                 padding: EdgeInsets.only(left: 21.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -145,40 +150,44 @@ class NoticeDetailScreen extends StatelessWidget {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('lbl13'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl14'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl15'.tr, style: CustomTextStyles.bodySmallGray500),
-                    Text('lbl16'.tr, style: CustomTextStyles.bodySmallGray500)
+                    Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),
+                    Text('이용약관'.tr, style: CustomTextStyles.bodySmallGray500),
+                    Text('개인정보취급방침'.tr,
+                        style: CustomTextStyles.bodySmallGray500),
+                    Text('기관 제휴 및 구매 문의'.tr,
+                        style: CustomTextStyles.bodySmallGray500)
                   ])),
           SizedBox(height: 38.h),
           Padding(
               padding: EdgeInsets.only(right: 63.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+                  Text('Address'.tr, style: theme.textTheme.bodySmall),
                   SizedBox(height: 9.h),
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 27.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('lbl_contact'.tr,
-                              style: theme.textTheme.bodySmall),
+                          Text('Contact'.tr, style: theme.textTheme.bodySmall),
                           SizedBox(height: 10.h),
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: theme.textTheme.bodySmall)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-          Text('msg'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

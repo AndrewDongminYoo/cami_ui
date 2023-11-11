@@ -72,7 +72,7 @@ class CatPageState extends State<CatPage>
           CustomElevatedButton(
             height: 24.h,
             width: 42.w,
-            text: 'lbl_ccsi'.tr,
+            text: 'CCSI'.tr,
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
@@ -80,7 +80,7 @@ class CatPageState extends State<CatPage>
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Text(
-              'lbl_mbti2'.tr,
+              '고양이 MBTI'.tr,
               style: CustomTextStyles.bodyMediumGray90002,
             ),
           ),
@@ -88,7 +88,7 @@ class CatPageState extends State<CatPage>
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Text(
-              'msg50'.tr,
+              '알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr,
               style: CustomTextStyles.bodySmallPrimaryContainer,
             ),
           ),
@@ -98,7 +98,7 @@ class CatPageState extends State<CatPage>
             child: Row(
               children: [
                 Text(
-                  'lbl51'.tr,
+                  '자세히 보기'.tr,
                   style: CustomTextStyles.bodySmallGray700,
                 ),
                 CustomImageView(
@@ -139,20 +139,20 @@ class CatPageState extends State<CatPage>
           Row(
             children: [
               Text(
-                'lbl10'.tr,
+                '공지사항'.tr,
                 style: theme.textTheme.bodySmall,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 20.w),
                 child: Text(
-                  'lbl11'.tr,
+                  '자주 묻는 질문'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 22.w),
                 child: Text(
-                  'lbl12'.tr,
+                  '이벤트'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
@@ -162,20 +162,20 @@ class CatPageState extends State<CatPage>
           Row(
             children: [
               Text(
-                'lbl13'.tr,
+                '고객센터'.tr,
                 style: CustomTextStyles.bodySmallGray500,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 21.w),
                 child: Text(
-                  'lbl14'.tr,
+                  '이용약관'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 20.w),
                 child: Text(
-                  'lbl15'.tr,
+                  '개인정보취급방침'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ),
@@ -183,7 +183,7 @@ class CatPageState extends State<CatPage>
           ),
           SizedBox(height: 14.h),
           Text(
-            'lbl16'.tr,
+            '기관 제휴 및 구매 문의'.tr,
             style: CustomTextStyles.bodySmallGray500,
           ),
           SizedBox(height: 38.h),
@@ -197,17 +197,17 @@ class CatPageState extends State<CatPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_address'.tr,
+                        'Address'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 9.h),
                       Text(
-                        'msg_34'.tr,
+                        '서울시 구로구 디지털로34길 55'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 1.h),
                       Text(
-                        'msg_2_b101'.tr,
+                        '코오롱싸이언스밸리2차 B101'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -219,16 +219,16 @@ class CatPageState extends State<CatPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_contact'.tr,
+                        'Contact'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'msg_business_cami_kr'.tr,
+                        'business@cami.kr'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        'lbl_02_861_6828'.tr,
+                        '02-861-6828'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -239,16 +239,16 @@ class CatPageState extends State<CatPage>
           ),
           SizedBox(height: 45.h),
           Text(
-            'lbl17'.tr,
+            '주식회사 카미랩'.tr,
             style: theme.textTheme.bodySmall,
           ),
           Text(
-            'msg'.tr,
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 15.h),
           Text(
-            'msg_copyright_2023'.tr,
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 38.h),

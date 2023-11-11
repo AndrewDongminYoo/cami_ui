@@ -43,16 +43,16 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
               children: [
                 _buildOwnerFrame(context),
                 Text(
-                  'lbl44'.tr,
+                  '찾아봐요'.tr,
                   style: CustomTextStyles.bodyMediumGray90002,
                 ),
                 SizedBox(height: 11.h),
                 Text(
-                  'lbl45'.tr,
+                  '우리에게 필요한'.tr,
                   style: theme.textTheme.headlineSmall,
                 ),
                 Text(
-                  'lbl46'.tr,
+                  '심리검사는?'.tr,
                   style: theme.textTheme.headlineSmall,
                 ),
                 SizedBox(height: 39.h),
@@ -80,16 +80,16 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
                     ),
                     tabs: [
                       Tab(
-                        child: Text('lbl47'.tr),
+                        child: Text('전체'.tr),
                       ),
                       Tab(
-                        child: Text('lbl48'.tr),
+                        child: Text('반려견'.tr),
                       ),
                       Tab(
-                        child: Text('lbl49'.tr),
+                        child: Text('반려묘'.tr),
                       ),
                       Tab(
-                        child: Text('lbl3'.tr),
+                        child: Text('반려인'.tr),
                       ),
                     ],
                   ),

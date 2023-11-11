@@ -44,7 +44,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                           top: 13.h,
                         ),
                         child: Text(
-                          'lbl64'.tr,
+                          '고양이 행동 전문가'.tr,
                           style: CustomTextStyles.bodySmallGreen300,
                         ),
                       ),
@@ -65,12 +65,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'lbl_n'.tr,
+                                      'N동물의료센터 노원점 원장'.tr,
                                       style:
                                           CustomTextStyles.bodySmallGray90002_2,
                                     ),
                                     Text(
-                                      'msg23'.tr,
+                                      '한국 고양이 수의사회 홍보 이사'.tr,
                                       style:
                                           CustomTextStyles.bodySmallGray90002_2,
                                     ),
@@ -84,13 +84,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                             padding:
                                                 EdgeInsets.only(bottom: 1.h),
                                             child: Text(
-                                              'msg_ebs'.tr,
+                                              'EBS ‘고양이를 부탁해’ 출연'.tr,
                                               style: CustomTextStyles
                                                   .bodySmallGray90002_2,
                                             ),
                                           ),
                                           Text(
-                                            'lbl78'.tr,
+                                            '제이클리커아카데미 대표'.tr,
                                             style: CustomTextStyles
                                                 .bodySmallGray90002_2,
                                           ),
@@ -112,7 +112,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               child: Padding(
                                 padding: EdgeInsets.only(top: 39.h),
                                 child: Text(
-                                  'lbl65'.tr,
+                                  '김명철 수의사'.tr,
                                   style: CustomTextStyles.bodyLargeGray90002,
                                 ),
                               ),
@@ -137,13 +137,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'lbl66'.tr,
+                          '강아지 행동 전문가'.tr,
                           style: CustomTextStyles.bodySmallGreen300,
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 255.w),
                           child: Text(
-                            'lbl68'.tr,
+                            '동물행동학 전문가'.tr,
                             style: CustomTextStyles.bodySmallGreen300,
                           ),
                         ),
@@ -156,13 +156,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'lbl67'.tr,
+                          '설채현 수의사'.tr,
                           style: CustomTextStyles.bodyLargeGray90002,
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 971.w),
                           child: Text(
-                            'lbl77'.tr,
+                            '서지형 훈련사'.tr,
                             style: CustomTextStyles.bodyLargeGray90002,
                           ),
                         ),
@@ -253,17 +253,17 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'lbl69'.tr,
+                                    '신윤주 박사'.tr,
                                     style: CustomTextStyles.bodyLargeGray90002,
                                   ),
                                   SizedBox(height: 63.h),
                                   Text(
-                                    'lbl70'.tr,
+                                    '서울대학교 수의학박사'.tr,
                                     style:
                                         CustomTextStyles.bodySmallGray90002_2,
                                   ),
                                   Text(
-                                    'lbl71'.tr,
+                                    '광주동물메디컬 센터 수의사'.tr,
                                     style:
                                         CustomTextStyles.bodySmallGray90002_2,
                                   ),
@@ -303,13 +303,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 children: [
                                   Align(
                                     child: Text(
-                                      'lbl72'.tr,
+                                      '임상수의학 박사'.tr,
                                       style: CustomTextStyles.bodySmallGreen300,
                                     ),
                                   ),
                                   SizedBox(height: 8.h),
                                   Text(
-                                    'lbl73'.tr,
+                                    '강종일 박사'.tr,
                                     style: CustomTextStyles.bodyLargeGray90002,
                                   ),
                                 ],
@@ -325,12 +325,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'lbl74'.tr,
+                                    '한국수의학교육학회 자문위원'.tr,
                                     style:
                                         CustomTextStyles.bodySmallGray90002_2,
                                   ),
                                   Text(
-                                    'lbl75'.tr,
+                                    '충현동물종합병원 원장'.tr,
                                     style:
                                         CustomTextStyles.bodySmallGray90002_2,
                                   ),
@@ -373,7 +373,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 top: 15.h,
                               ),
                               child: Text(
-                                'lbl76'.tr,
+                                '클리커 트레이너'.tr,
                                 style: CustomTextStyles.bodySmallGreen300,
                               ),
                             ),
@@ -426,12 +426,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'lbl79'.tr,
+                                    '상담심리학 박사'.tr,
                                     style: CustomTextStyles.bodySmallGreen300,
                                   ),
                                   SizedBox(height: 8.h),
                                   Text(
-                                    'lbl80'.tr,
+                                    '박성희 박사'.tr,
                                     style: CustomTextStyles.bodyLargeGray90002,
                                   ),
                                   SizedBox(height: 63.h),
@@ -443,7 +443,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                         width: 121.w,
                                         margin: EdgeInsets.only(bottom: 19.h),
                                         child: Text(
-                                          'msg_kpa_ctp_ccpdt_ka'.tr,
+                                          'KPA-CTP / CCPDT-KA'.tr,
                                           overflow: TextOverflow.ellipsis,
                                           style: CustomTextStyles
                                               .bodySmallGray90002
@@ -457,12 +457,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'lbl_12'.tr,
+                                              '한국상담학회 1급 상담사'.tr,
                                               style: CustomTextStyles
                                                   .bodySmallGray90002_2,
                                             ),
                                             Text(
-                                              'msg24'.tr,
+                                              '스트레스 관리, 심리상담 출강'.tr,
                                               style: CustomTextStyles
                                                   .bodySmallGray90002_2,
                                             ),

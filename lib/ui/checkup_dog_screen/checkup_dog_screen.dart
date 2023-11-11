@@ -41,7 +41,7 @@ class CheckupDogScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text(
-                      'msg_dcsi_ii'.tr,
+                      '반려견 성격유형검사(DCSI-II)'.tr,
                       style: CustomTextStyles.bodyMediumBlack900,
                     ),
                   ),
@@ -60,7 +60,7 @@ class CheckupDogScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text(
-                      'lbl168'.tr,
+                      '반려견 성격유형검사'.tr,
                       style: CustomTextStyles.bodyLargeNanumSquareNeo,
                     ),
                   ),
@@ -151,13 +151,13 @@ class CheckupDogScreen extends StatelessWidget {
         padding: EdgeInsets.only(left: 16.w),
         child: Row(
           children: [
-            AppbarTitle(text: 'lbl'.tr),
+            AppbarTitle(text: '심리검사'.tr),
             AppbarTitle(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
             AppbarTitle(
-              text: 'lbl48'.tr,
+              text: '반려견'.tr,
               margin: EdgeInsets.only(left: 8.w),
             ),
             AppbarTitle(
@@ -175,7 +175,7 @@ class CheckupDogScreen extends StatelessWidget {
     return CustomElevatedButton(
       height: 23.h,
       width: 53.w,
-      text: 'lbl_dcsi_ii'.tr,
+      text: 'DCSI-II'.tr,
       margin: EdgeInsets.only(left: 16.w),
       buttonTextStyle: CustomTextStyles.bodySmall10,
       alignment: Alignment.centerLeft,
@@ -189,7 +189,7 @@ class CheckupDogScreen extends StatelessWidget {
       child: CustomTextFormField(
         width: 109.w,
         controller: infoController,
-        hintText: 'lbl_912'.tr,
+        hintText: '(912)'.tr,
         textInputAction: TextInputAction.done,
         alignment: Alignment.centerLeft,
         suffix: Container(
@@ -223,13 +223,13 @@ class CheckupDogScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl5'.tr,
+                '문항'.tr,
                 style: theme.textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
                 child: Text(
-                  'lbl_1072'.tr,
+                  '107문항'.tr,
                   style: CustomTextStyles.bodyMediumGray800,
                 ),
               ),
@@ -239,13 +239,13 @@ class CheckupDogScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl6'.tr,
+                '소요시간'.tr,
                 style: theme.textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
                 child: Text(
-                  'lbl_202'.tr,
+                  '약 20분'.tr,
                   style: CustomTextStyles.bodyMediumGray800,
                 ),
               ),
@@ -299,7 +299,7 @@ class CheckupDogScreen extends StatelessWidget {
               bottom: 3.h,
             ),
             child: Text(
-              'lbl_12_000'.tr,
+              '12,000원'.tr,
               style: theme.textTheme.bodyLarge,
             ),
           ),
@@ -311,7 +311,7 @@ class CheckupDogScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildButton1(BuildContext context) {
     return CustomElevatedButton(
-      text: 'lbl7'.tr,
+      text: '구매하기'.tr,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
       buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
@@ -322,7 +322,7 @@ class CheckupDogScreen extends StatelessWidget {
   Widget _buildButton2(BuildContext context) {
     return CustomElevatedButton(
       width: 181.w,
-      text: 'lbl8'.tr,
+      text: '검사소개'.tr,
       buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
     );
   }
@@ -331,7 +331,7 @@ class CheckupDogScreen extends StatelessWidget {
   Widget _buildButton3(BuildContext context) {
     return CustomElevatedButton(
       width: 181.w,
-      text: 'lbl9'.tr,
+      text: '구매후기'.tr,
       buttonStyle: CustomButtonStyles.fillGrayTL81,
       buttonTextStyle: theme.textTheme.bodyMedium,
     );
@@ -371,20 +371,20 @@ class CheckupDogScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'lbl10'.tr,
+                '공지사항'.tr,
                 style: theme.textTheme.bodySmall,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 19.w),
                 child: Text(
-                  'lbl11'.tr,
+                  '자주 묻는 질문'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 21.w),
                 child: Text(
-                  'lbl12'.tr,
+                  '이벤트'.tr,
                   style: theme.textTheme.bodySmall,
                 ),
               ),
@@ -397,19 +397,19 @@ class CheckupDogScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'lbl13'.tr,
+                  '고객센터'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl14'.tr,
+                  '이용약관'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl15'.tr,
+                  '개인정보취급방침'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
                 Text(
-                  'lbl16'.tr,
+                  '기관 제휴 및 구매 문의'.tr,
                   style: CustomTextStyles.bodySmallGray500,
                 ),
               ],
@@ -424,16 +424,16 @@ class CheckupDogScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'lbl_address'.tr,
+                      'Address'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     SizedBox(height: 9.h),
                     Text(
-                      'msg_34'.tr,
+                      '서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                     Text(
-                      'msg_2_b101'.tr,
+                      '코오롱싸이언스밸리2차 B101'.tr,
                       style: theme.textTheme.bodySmall,
                     ),
                   ],
@@ -444,16 +444,16 @@ class CheckupDogScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'lbl_contact'.tr,
+                        'Contact'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'msg_business_cami_kr'.tr,
+                        'business@cami.kr'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        'lbl_02_861_6828'.tr,
+                        '02-861-6828'.tr,
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
@@ -464,16 +464,16 @@ class CheckupDogScreen extends StatelessWidget {
           ),
           SizedBox(height: 45.h),
           Text(
-            'lbl17'.tr,
+            '주식회사 카미랩'.tr,
             style: theme.textTheme.bodySmall,
           ),
           Text(
-            'msg'.tr,
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 15.h),
           Text(
-            'msg_copyright_2023'.tr,
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
             style: theme.textTheme.bodySmall,
           ),
           SizedBox(height: 39.h),

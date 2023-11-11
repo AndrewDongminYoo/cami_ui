@@ -45,7 +45,7 @@ class UserReviewItemWidget extends StatelessWidget {
                     SizedBox(
                       width: 228.w,
                       child: Text(
-                        'msg25'.tr.toUpperCase(),
+                        '호기심으로 해봤는데 너무 잘 맞는거 같아요 너무 신기하네요.'.tr.toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: CustomTextStyles.bodySmallGray90002_1
@@ -53,14 +53,16 @@ class UserReviewItemWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'msg26'.tr.toUpperCase(),
+                      '어쩜 이렇게 정확한지 신기해요.'.tr.toUpperCase(),
                       style: CustomTextStyles.bodySmallGray90002_1,
                     ),
                     Container(
                       width: 229.w,
                       margin: EdgeInsets.only(right: 51.w),
                       child: Text(
-                        'msg27'.tr.toUpperCase(),
+                        '자세한 방법과 조언이 너무 좋네요 강아지 기르면서 참고할게 너무 많아졌어요.'
+                            .tr
+                            .toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: CustomTextStyles.bodySmallGray90002_1
@@ -70,7 +72,7 @@ class UserReviewItemWidget extends StatelessWidget {
                     SizedBox(
                       width: 224.w,
                       child: Text(
-                        'msg28'.tr.toUpperCase(),
+                        '조언을 바탕으로 강아지를 더 이해하게 되었어요 감사해요.'.tr.toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: CustomTextStyles.bodySmallGray90002_1
@@ -79,7 +81,7 @@ class UserReviewItemWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 13.h),
                     Text(
-                      'msg29'.tr.toUpperCase(),
+                      '"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr.toUpperCase(),
                       style: CustomTextStyles.bodySmallGray90002_1,
                     ),
                   ],
@@ -116,7 +118,7 @@ class UserReviewItemWidget extends StatelessWidget {
                           children: [
                             SizedBox(height: 3.h),
                             Text(
-                              'lbl81'.tr.toUpperCase(),
+                              '만두'.tr.toUpperCase(),
                               style: CustomTextStyles.bodySmallGray90002_1,
                             ),
                           ],

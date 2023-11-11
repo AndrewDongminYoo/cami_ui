@@ -33,12 +33,12 @@ class VerifyScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 79.h),
-                Text('lbl143'.tr, style: theme.textTheme.displaySmall),
+                Text('회원가입'.tr, style: theme.textTheme.displaySmall),
                 SizedBox(height: 15.h),
                 Container(
                     width: 338.w,
                     margin: EdgeInsets.only(left: 26.w, right: 27.w),
-                    child: Text('msg63'.tr,
+                    child: Text('회원가입 및 서비스 이용 시 사용할 휴대폰의 본인확인이 필요합니다.'.tr,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
@@ -49,7 +49,7 @@ class VerifyScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                         padding: EdgeInsets.only(left: 101.w),
-                        child: Text('lbl163'.tr,
+                        child: Text('본인 인증'.tr,
                             style: theme.textTheme.bodyLarge))),
                 SizedBox(height: 8.h),
                 CustomTextFormField(
@@ -59,7 +59,7 @@ class VerifyScreen extends StatelessWidget {
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
                     width: 191.w,
-                    text: 'lbl159'.tr,
+                    text: '인증번호 받기'.tr,
                     buttonStyle: CustomButtonStyles.fillBlack),
                 SizedBox(height: 128.h),
                 _buildAppNavBar(context)
@@ -86,17 +86,18 @@ class VerifyScreen extends StatelessWidget {
                 onTap: () {
                   onTapTxtWidget(context);
                 },
-                child: Text('lbl10'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   onTapTxtWidget1(context);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child: Text('lbl11'.tr, style: theme.textTheme.bodySmall))),
+                    child:
+                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -106,44 +107,45 @@ class VerifyScreen extends StatelessWidget {
                     onTap: () {
                       onTapTxtWidget2(context);
                     },
-                    child: Text('lbl13'.tr,
+                    child: Text('고객센터'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 18.w),
-                    child: Text('lbl14'.tr,
+                    child: Text('이용약관'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl15'.tr,
+                    child: Text('개인정보취급방침'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
-                    child: Text('lbl16'.tr,
+                    child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('lbl_contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 72.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
@@ -154,13 +156,16 @@ class VerifyScreen extends StatelessWidget {
               child: Stack(alignment: Alignment.bottomCenter, children: [
                 Align(
                     alignment: Alignment.topLeft,
-                    child: Text('lbl17'.tr, style: theme.textTheme.bodySmall)),
+                    child:
+                        Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall)),
                 Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text('msg'.tr, style: theme.textTheme.bodySmall))
+                    child: Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+                        style: theme.textTheme.bodySmall))
               ])),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

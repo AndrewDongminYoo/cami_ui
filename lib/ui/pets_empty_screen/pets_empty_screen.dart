@@ -47,15 +47,15 @@ class PetsEmptyScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(children: [
-                                      Text('lbl_andrew'.tr,
+                                      Text('Andrew'.tr,
                                           style: CustomTextStyles
                                               .bodyLargeGray900),
-                                      Text('lbl118'.tr,
+                                      Text('님, 반가워요!'.tr,
                                           style:
                                               CustomTextStyles.bodyLargeGray900)
                                     ]),
                                     SizedBox(height: 3.h),
-                                    Text('msg_ydm2790_naver_com'.tr,
+                                    Text('ydm2790@naver.com'.tr,
                                         style:
                                             CustomTextStyles.bodySmallGray50011)
                                   ])),
@@ -73,28 +73,28 @@ class PetsEmptyScreen extends StatelessWidget {
                 Padding(
                     padding: EdgeInsets.only(left: 15.w, right: 19.w),
                     child: _buildWidget(context,
-                        userName: 'lbl119'.tr,
-                        userAge: 'lbl120'.tr,
-                        userLocation: 'lbl121'.tr,
-                        userOccupation: 'lbl122'.tr,
-                        userDescription: 'lbl121'.tr,
-                        userInterests: 'lbl123'.tr,
-                        userHobbies: 'lbl121'.tr,
-                        userGoals: 'lbl124'.tr,
-                        userSkills: 'lbl121'.tr)),
+                        userName: '등록된 정보가 없습니다.'.tr,
+                        userAge: '생년월일'.tr,
+                        userLocation: '-'.tr,
+                        userOccupation: '연령'.tr,
+                        userDescription: '-'.tr,
+                        userInterests: '견종'.tr,
+                        userHobbies: '-'.tr,
+                        userGoals: '성별'.tr,
+                        userSkills: '-'.tr)),
                 SizedBox(height: 18.h),
                 Padding(
                     padding: EdgeInsets.only(left: 15.w, right: 19.w),
                     child: _buildWidget(context,
-                        userName: 'lbl119'.tr,
-                        userAge: 'lbl120'.tr,
-                        userLocation: 'lbl121'.tr,
-                        userOccupation: 'lbl122'.tr,
-                        userDescription: 'lbl121'.tr,
-                        userInterests: 'lbl99'.tr,
-                        userHobbies: 'lbl121'.tr,
-                        userGoals: 'lbl124'.tr,
-                        userSkills: 'lbl121'.tr)),
+                        userName: '등록된 정보가 없습니다.'.tr,
+                        userAge: '생년월일'.tr,
+                        userLocation: '-'.tr,
+                        userOccupation: '연령'.tr,
+                        userDescription: '-'.tr,
+                        userInterests: '묘종'.tr,
+                        userHobbies: '-'.tr,
+                        userGoals: '성별'.tr,
+                        userSkills: '-'.tr)),
                 SizedBox(height: 16.h),
                 _buildPetRegistration(context),
                 SizedBox(height: 22.h),
@@ -114,7 +114,7 @@ class PetsEmptyScreen extends StatelessWidget {
     return CustomElevatedButton(
         height: 32.h,
         width: 149.w,
-        text: 'lbl126'.tr,
+        text: '강아지 등록하기'.tr,
         margin: EdgeInsets.only(bottom: 24.h),
         buttonStyle: CustomButtonStyles.fillBlue,
         buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
@@ -126,7 +126,7 @@ class PetsEmptyScreen extends StatelessWidget {
     return CustomElevatedButton(
         height: 32.h,
         width: 149.w,
-        text: 'lbl128'.tr,
+        text: '고양이 등록하기'.tr,
         margin: EdgeInsets.only(bottom: 24.h),
         buttonStyle: CustomButtonStyles.fillBlue,
         buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
@@ -147,7 +147,7 @@ class PetsEmptyScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(height: 16.h),
-                    Text('lbl125'.tr, style: theme.textTheme.bodyLarge),
+                    Text('나는 멍집사'.tr, style: theme.textTheme.bodyLarge),
                     SizedBox(height: 25.h),
                     SizedBox(
                         height: 112.h,
@@ -172,7 +172,7 @@ class PetsEmptyScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(height: 16.h),
-                    Text('lbl127'.tr, style: theme.textTheme.bodyLarge),
+                    Text('나는 냥집사'.tr, style: theme.textTheme.bodyLarge),
                     SizedBox(height: 25.h),
                     SizedBox(
                         height: 112.h,
@@ -197,7 +197,7 @@ class PetsEmptyScreen extends StatelessWidget {
   Widget _buildInquiries(BuildContext context) {
     return CustomElevatedButton(
         height: 48.h,
-        text: 'lbl_1_12'.tr,
+        text: '1:1 문의'.tr,
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: theme.textTheme.bodyLarge,
         onPressed: () {
@@ -209,7 +209,7 @@ class PetsEmptyScreen extends StatelessWidget {
   Widget _buildFaq(BuildContext context) {
     return CustomElevatedButton(
         height: 48.h,
-        text: 'lbl131'.tr,
+        text: '자주묻는질문'.tr,
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: theme.textTheme.bodyLarge,
         onPressed: () {
@@ -226,22 +226,22 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillPrimary,
-              child: Text('lbl129'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('나의 반려친구'.tr, style: theme.textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('lbl'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('심리검사'.tr, style: theme.textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('lbl115'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('방문교육'.tr, style: theme.textTheme.bodyLarge)),
           Container(
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
               child: Row(children: [
-                Text('lbl130'.tr, style: theme.textTheme.bodyLarge),
+                Text('보유쿠폰'.tr, style: theme.textTheme.bodyLarge),
                 Container(
                     height: 20.h,
                     width: 18.w,
@@ -265,7 +265,7 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('lbl117'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('로그아웃'.tr, style: theme.textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
@@ -276,12 +276,12 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('lbl10'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('공지사항'.tr, style: theme.textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('lbl12'.tr, style: theme.textTheme.bodyLarge))
+              child: Text('이벤트'.tr, style: theme.textTheme.bodyLarge))
         ]));
   }
 
@@ -300,17 +300,18 @@ class PetsEmptyScreen extends StatelessWidget {
                 onTap: () {
                   onTapTxtWidget(context);
                 },
-                child: Text('lbl10'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   onTapTxtWidget1(context);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child: Text('lbl11'.tr, style: theme.textTheme.bodySmall))),
+                    child:
+                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('lbl12'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -320,52 +321,55 @@ class PetsEmptyScreen extends StatelessWidget {
                     onTap: () {
                       onTapTxtWidget2(context);
                     },
-                    child: Text('lbl13'.tr,
+                    child: Text('고객센터'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 18.w),
-                    child: Text('lbl14'.tr,
+                    child: Text('이용약관'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('lbl15'.tr,
+                    child: Text('개인정보취급방침'.tr,
                         style: CustomTextStyles.bodySmallGray500)),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
-                    child: Text('lbl16'.tr,
+                    child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('lbl_address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address'.tr, style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('lbl_contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 74.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('msg_34'.tr, style: theme.textTheme.bodySmall),
-                  Text('msg_2_b101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr,
+                      style: theme.textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 19.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('msg_business_cami_kr'.tr,
+                          Text('business@cami.kr'.tr,
                               style: theme.textTheme.bodySmall),
-                          Text('lbl_02_861_6828'.tr,
+                          Text('02-861-6828'.tr,
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-          Text('msg'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('msg_copyright_2023'.tr, style: theme.textTheme.bodySmall),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
+              style: theme.textTheme.bodySmall),
           SizedBox(height: 38.h),
           Row(children: [
             CustomImageView(

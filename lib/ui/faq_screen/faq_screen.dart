@@ -47,7 +47,7 @@ class FaqScreen extends StatelessWidget {
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 105.w),
-                            child: Text('lbl11'.tr,
+                            child: Text('자주 묻는 질문'.tr,
                                 style: CustomTextStyles.bodyLarge18))
                       ],
                     ),
@@ -79,7 +79,7 @@ class FaqScreen extends StatelessWidget {
                                             Assets.svg.imgArrowdownGray700.path,
                                         height: 32.h,
                                         width: 30.w)),
-                                hintText: 'lbl55'.tr,
+                                hintText: '결제가 되지 않아요'.tr,
                                 hintStyle: CustomTextStyles
                                     .bodyMediumNanumSquareNeoBlack90013,
                                 items: items,
@@ -98,7 +98,7 @@ class FaqScreen extends StatelessWidget {
                           SizedBox(height: 23.h),
                           Padding(
                               padding: EdgeInsets.only(left: 20.w),
-                              child: Text('lbl56'.tr,
+                              child: Text('결제가 되지 않는경우'.tr,
                                   style: CustomTextStyles.bodyMediumBlack900)),
                           SizedBox(height: 10.h),
                           Align(
@@ -106,7 +106,7 @@ class FaqScreen extends StatelessWidget {
                             width: 314.w,
                             margin: EdgeInsets.only(left: 20.w, right: 26.w),
                             child: Text(
-                              'msg_1_explorer'.tr,
+                              '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: CustomTextStyles.bodyMediumBlack900
@@ -115,14 +115,14 @@ class FaqScreen extends StatelessWidget {
                           )),
                           Padding(
                               padding: EdgeInsets.only(left: 20.w),
-                              child: Text('msg17'.tr,
+                              child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr,
                                   style: CustomTextStyles.bodyMediumBlack900)),
                           SizedBox(height: 10.h),
                           Container(
                             width: 307.w,
                             margin: EdgeInsets.only(left: 20.w, right: 33.w),
                             child: Text(
-                              'msg_22'.tr,
+                              '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: CustomTextStyles.bodyMediumBlack900
@@ -133,7 +133,8 @@ class FaqScreen extends StatelessWidget {
                             width: 304.w,
                             margin: EdgeInsets.only(left: 20.w, right: 36.w),
                             child: Text(
-                              'msg_32'.tr,
+                              '3. 다른 카드로 결제를 시도해보기 (체크카드의 경우 잔액부족으로, 신용카드는 카드사 오류로 안되는 경우가 종종 발생합니다.)'
+                                  .tr,
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
                               style: CustomTextStyles.bodyMediumBlack900
@@ -146,7 +147,8 @@ class FaqScreen extends StatelessWidget {
                             width: 317.w,
                             margin: EdgeInsets.only(left: 20.w, right: 23.w),
                             child: Text(
-                              'msg18'.tr,
+                              '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
+                                  .tr,
                               maxLines: 4,
                               overflow: TextOverflow.ellipsis,
                               style: CustomTextStyles.bodyMediumBlack900
@@ -156,7 +158,7 @@ class FaqScreen extends StatelessWidget {
                           SizedBox(height: 24.h),
                           Padding(
                               padding: EdgeInsets.only(left: 20.w),
-                              child: Text('lbl57'.tr,
+                              child: Text('감사합니다.'.tr,
                                   style: CustomTextStyles.bodyMediumBlack900)),
                           SizedBox(height: 30.h),
                           const Divider()
@@ -192,7 +194,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'msg19'.tr,
+                                        '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -232,7 +234,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'msg20'.tr,
+                                        '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -272,7 +274,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'msg21'.tr,
+                                        '어린 강아지도 심리검사를 받을 수 있나요?'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -312,7 +314,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'msg22'.tr,
+                                        '구매한 쿠폰이 보이지 않아요.'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -352,7 +354,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'lbl58'.tr,
+                                        '회원 탈퇴는 어떻게 하나요?'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -392,7 +394,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'lbl59'.tr,
+                                        '결과보고서 인쇄 방법'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -432,7 +434,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        'lbl60'.tr,
+                                        '결과보고서 다시보기'.tr,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -473,15 +475,15 @@ class FaqScreen extends StatelessWidget {
                                     // TODO: implement Actions
                                   }(context);
                                 },
-                                child: Text('lbl10'.tr,
+                                child: Text('공지사항'.tr,
                                     style: theme.textTheme.bodySmall)),
                             Padding(
                                 padding: EdgeInsets.only(left: 17.w),
-                                child: Text('lbl11'.tr,
+                                child: Text('자주 묻는 질문'.tr,
                                     style: theme.textTheme.bodySmall)),
                             Padding(
                                 padding: EdgeInsets.only(left: 17.w),
-                                child: Text('lbl12'.tr,
+                                child: Text('이벤트'.tr,
                                     style: theme.textTheme.bodySmall))
                           ]),
                           SizedBox(height: 9.h),
@@ -493,32 +495,32 @@ class FaqScreen extends StatelessWidget {
                                       Navigator.pushNamed(context,
                                           AppRoutes.contactUsRegisterScreen);
                                     },
-                                    child: Text('lbl13'.tr,
+                                    child: Text('고객센터'.tr,
                                         style:
                                             CustomTextStyles.bodySmallGray500)),
                                 Padding(
                                     padding: EdgeInsets.only(left: 18.w),
-                                    child: Text('lbl14'.tr,
+                                    child: Text('이용약관'.tr,
                                         style:
                                             CustomTextStyles.bodySmallGray500)),
                                 Padding(
                                     padding: EdgeInsets.only(left: 16.w),
-                                    child: Text('lbl15'.tr,
+                                    child: Text('개인정보취급방침'.tr,
                                         style:
                                             CustomTextStyles.bodySmallGray500)),
                                 Padding(
                                     padding: EdgeInsets.only(left: 19.w),
-                                    child: Text('lbl16'.tr,
+                                    child: Text('기관 제휴 및 구매 문의'.tr,
                                         style:
                                             CustomTextStyles.bodySmallGray500))
                               ])),
                           SizedBox(height: 38.h),
                           Row(children: [
-                            Text('lbl_address'.tr,
+                            Text('Address'.tr,
                                 style: theme.textTheme.bodySmall),
                             Padding(
                                 padding: EdgeInsets.only(left: 131.w),
-                                child: Text('lbl_contact'.tr,
+                                child: Text('Contact'.tr,
                                     style: theme.textTheme.bodySmall))
                           ]),
                           SizedBox(height: 9.h),
@@ -529,9 +531,9 @@ class FaqScreen extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text('msg_34'.tr,
+                                      Text('서울시 구로구 디지털로34길 55'.tr,
                                           style: theme.textTheme.bodySmall),
-                                      Text('msg_2_b101'.tr,
+                                      Text('코오롱싸이언스밸리2차 B101'.tr,
                                           style: theme.textTheme.bodySmall)
                                     ]),
                                 Padding(
@@ -540,18 +542,21 @@ class FaqScreen extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text('msg_business_cami_kr'.tr,
+                                          Text('business@cami.kr'.tr,
                                               style: theme.textTheme.bodySmall),
-                                          Text('lbl_02_861_6828'.tr,
+                                          Text('02-861-6828'.tr,
                                               style:
                                                   CustomTextStyles.bodySmall11)
                                         ]))
                               ])),
                           SizedBox(height: 45.h),
-                          Text('lbl17'.tr, style: theme.textTheme.bodySmall),
-                          Text('msg'.tr, style: theme.textTheme.bodySmall),
+                          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+                          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
+                              style: theme.textTheme.bodySmall),
                           SizedBox(height: 15.h),
-                          Text('msg_copyright_2023'.tr,
+                          Text(
+                              'Copyright ⓒ 2023 CAMI Labs. All rights reserved.'
+                                  .tr,
                               style: theme.textTheme.bodySmall),
                           SizedBox(height: 38.h),
                           Row(children: [

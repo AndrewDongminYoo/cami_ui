@@ -34,7 +34,7 @@ class UserProfileItemWidget extends StatelessWidget {
         children: [
           SizedBox(height: 16.h),
           Text(
-            'lbl125'.tr,
+            '나는 멍집사'.tr,
             style: theme.textTheme.bodyLarge,
           ),
           SizedBox(height: 25.h),
@@ -53,7 +53,7 @@ class UserProfileItemWidget extends StatelessWidget {
                 CustomElevatedButton(
                   height: 32.h,
                   width: 149.w,
-                  text: 'lbl126'.tr,
+                  text: '강아지 등록하기'.tr,
                   margin: EdgeInsets.only(bottom: 24.h),
                   buttonStyle: CustomButtonStyles.fillBlue,
                   buttonTextStyle: CustomTextStyles.bodyMediumBlack900,

@@ -34,7 +34,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
           CustomElevatedButton(
             height: 24.h,
             width: 39.w,
-            text: 'lbl_dpai'.tr,
+            text: 'DPAI'.tr,
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
@@ -42,7 +42,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Text(
-              'lbl50'.tr,
+              '보호자 양육면허시험'.tr,
               style: CustomTextStyles.bodyMediumGray90002,
             ),
           ),
@@ -54,7 +54,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
               right: 30.w,
             ),
             child: Text(
-              'msg14'.tr,
+              '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: CustomTextStyles.bodySmallPrimaryContainer
@@ -67,7 +67,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'lbl51'.tr,
+                  '자세히 보기'.tr,
                   style: CustomTextStyles.bodySmallGray700,
                 ),
                 CustomImageView(
