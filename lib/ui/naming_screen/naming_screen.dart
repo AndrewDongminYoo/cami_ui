@@ -41,11 +41,12 @@ class NamingScreen extends StatelessWidget {
             child: SingleChildScrollView(
                 child: Column(children: [
               SizedBox(height: 48.h),
-              Text('한 번 해보시개'.tr, style: CustomTextStyles.titleLargeBlack900),
+              Text('한 번 해보시개'.tr,
+                  style: CustomTextStyles.titleLargeBlack900.bolder),
               SizedBox(height: 70.h),
-              Text('삼칠이 작명소'.tr, style: theme.textTheme.titleLarge),
+              Text('삼칠이 작명소'.tr, style: textTheme.titleLarge!.thick),
               SizedBox(height: 18.h),
-              Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18),
+              Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18.bold),
               SizedBox(height: 29.h),
               SizedBox(
                 height: 283.h,
@@ -54,29 +55,38 @@ class NamingScreen extends StatelessWidget {
                   Align(
                     child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 27.w),
-                        child:
-                            Column(mainAxisSize: MainAxisSize.min, children: [
-                          Text('강렬한 거북이의 안내자'.tr,
-                              style: CustomTextStyles.headlineSmallBlack900),
-                          SizedBox(height: 196.h),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                        child: Column(
+                          children: [
+                            Text('강렬한 거북이의 안내자'.tr,
+                                style: CustomTextStyles
+                                    .headlineSmallBlack900.thick),
+                            SizedBox(height: 196.h),
+                            Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('A.', style: textTheme.bodyLarge),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 2.w),
+                                    child: Text('꼬리'.tr,
+                                        style: textTheme.bodyLarge),
+                                  ),
+                                  Padding(
+                                      padding: EdgeInsets.only(left: 3.w),
+                                      child: Text('의 아메리카 원주민 이름은'.tr,
+                                          style: textTheme.bodyLarge))
+                                ]),
+                            Row(
                               children: [
-                                Text('A.', style: theme.textTheme.bodyLarge),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 2.w),
-                                  child: Text('꼬리'.tr,
-                                      style: theme.textTheme.bodyLarge),
+                                Text(
+                                  '강렬한 거북이의 안내자'.tr,
+                                  style: textTheme.bodyLarge!.bold.copyWith(
+                                      color: lightTheme.errorContainer),
                                 ),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 3.w),
-                                    child: Text('의 아메리카 원주민 이름은'.tr,
-                                        style: theme.textTheme.bodyLarge))
-                              ]),
-                          _buildAddress(context,
-                              userAddress: '강렬한 거북이의 안내자'.tr,
-                              userContact: '입니다.'.tr)
-                        ])),
+                                Text('입니다.'.tr, style: textTheme.bodyLarge)
+                              ],
+                            )
+                          ],
+                        )),
                   ),
                   Align(
                       alignment: Alignment.topCenter,
@@ -111,7 +121,7 @@ class NamingScreen extends StatelessWidget {
                                                   .bodyMediumBlack900),
                                           SizedBox(height: 3.h),
                                           Text('남자'.tr,
-                                              style: theme.textTheme.bodyLarge)
+                                              style: textTheme.bodyLarge)
                                         ]))
                               ])))
                 ]),
@@ -162,26 +172,6 @@ class NamingScreen extends StatelessWidget {
             ]))),
       ),
     );
-  }
-
-  /// Common widget
-  Widget _buildAddress(
-    BuildContext context, {
-    required String userAddress,
-    required String userContact,
-  }) {
-    return Row(children: [
-      Text(
-        userAddress,
-        style: theme.textTheme.bodySmall!
-            .copyWith(color: theme.colorScheme.onPrimaryContainer),
-      ),
-      Padding(
-          padding: EdgeInsets.only(left: 131.w),
-          child: Text(userContact,
-              style: theme.textTheme.bodySmall!
-                  .copyWith(color: theme.colorScheme.onPrimaryContainer)))
-    ]);
   }
 
   /// Navigates to the faqScreen when the action is triggered.
