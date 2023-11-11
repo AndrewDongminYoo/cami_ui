@@ -168,7 +168,10 @@ flutter_native_splash:
   color: "#FFFF50"
   image: assets/images/splash.png
   branding: assets/icons/og_cami.png
-  branding_mode: bottom
+  branding_mode: top
+  android_gravity: bottom
+  ios_content_mode: bottom
+  web_image_mode: bottom
   android_12:
     image: assets/images/splash.png
     color: "#FFFF50"
