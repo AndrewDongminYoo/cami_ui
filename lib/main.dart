@@ -7,6 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 // 🌎 Project imports:
 import '/core/utils/navigator_service.dart';
+import '/l10n/app_localizations.dart';
 import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/theme_helper.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      title: '카미랩'.tr,
+      title: Localized.of(context).appName,
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigatorService.key,
       localizationsDelegates: const [

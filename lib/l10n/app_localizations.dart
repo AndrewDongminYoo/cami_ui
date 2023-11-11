@@ -99,7 +99,7 @@ abstract class Localized {
   ///
   /// In ko, this message translates to:
   /// **'카미랩'**
-  String get acceptAll;
+  String get appName;
 }
 
 class _LocalizedDelegate extends LocalizationsDelegate<Localized> {

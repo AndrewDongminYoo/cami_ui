@@ -2,8 +2,8 @@
   "@@context": "CamiLab",
   "@@locale": "ko",
   "@@x-reference": true,
-  "acceptAll": "카미랩",
-  "@acceptAll": {
+  "appName": "카미랩",
+  "@appName": {
     "description": "반려동물의 마음을 읽다, 카미"
   }
 }
