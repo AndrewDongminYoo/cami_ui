@@ -102,7 +102,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -127,7 +127,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -155,7 +155,7 @@ class Faq1Screen extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.only(top: 10.h, bottom: 14.h),
-                  child: Text('Q.'.tr,
+                  child: Text('Q.',
                       style:
                           CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
               Expanded(
@@ -185,7 +185,7 @@ class Faq1Screen extends StatelessWidget {
             children: [
               Padding(
                   padding: EdgeInsets.only(top: 11.h, bottom: 13.h),
-                  child: Text('Q.'.tr,
+                  child: Text('Q.',
                       style:
                           CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
               Expanded(
@@ -212,7 +212,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -237,7 +237,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -262,7 +262,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -287,7 +287,7 @@ class Faq1Screen extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
-              child: Text('Q.'.tr,
+              child: Text('Q.',
                   style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013)),
           Expanded(
               child: Padding(
@@ -341,7 +341,7 @@ class Faq1Screen extends StatelessWidget {
               padding: EdgeInsets.only(right: 63.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('Address'.tr, style: theme.textTheme.bodySmall),
+                  Text('Address', style: theme.textTheme.bodySmall),
                   SizedBox(height: 9.h),
                   Text('서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall),
@@ -352,12 +352,11 @@ class Faq1Screen extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Contact'.tr, style: theme.textTheme.bodySmall),
+                          Text('Contact', style: theme.textTheme.bodySmall),
                           SizedBox(height: 10.h),
-                          Text('business@cami.kr'.tr,
+                          Text('business@cami.kr',
                               style: theme.textTheme.bodySmall),
-                          Text('02-861-6828'.tr,
-                              style: theme.textTheme.bodySmall)
+                          Text('02-861-6828', style: theme.textTheme.bodySmall)
                         ]))
               ])),
           SizedBox(height: 45.h),

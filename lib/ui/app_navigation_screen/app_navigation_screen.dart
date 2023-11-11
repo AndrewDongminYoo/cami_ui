@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 
 class AppNavigationScreen extends StatelessWidget {
@@ -28,106 +27,106 @@ class AppNavigationScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         _buildScreenTitle(context,
-                            userName: 'Quick Test'.tr,
+                            screenTitle: 'Quick Test',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.quickTestScreen)),
                         _buildScreenTitle(
                           context,
-                          userName: 'Naming'.tr,
+                          screenTitle: 'Naming',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.namingScreen),
                         ),
                         _buildScreenTitle(context,
-                            userName: 'Contact Us / Register'.tr,
+                            screenTitle: 'Contact Us / Register',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.contactUsRegisterScreen)),
                         _buildScreenTitle(
                           context,
-                          userName: 'FAQ'.tr,
+                          screenTitle: 'FAQ',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.faqScreen),
                         ),
                         _buildScreenTitle(context,
-                            userName: 'New Cat - Tab Container'.tr,
+                            screenTitle: 'New Cat - Tab Container',
                             onTapScreenTitle: () =>
                                 onTapScreenTitle(context, AppRoutes.newCatTab)),
                         _buildScreenTitle(context,
-                            userName: 'Menu Bar'.tr,
+                            screenTitle: 'Menu Bar',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.menuBarScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Pets / Empty'.tr,
+                            screenTitle: 'Pets / Empty',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.petsEmptyScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Pets / 1 Cat'.tr,
+                            screenTitle: 'Pets / 1 Cat',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.pets1CatScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Solution'.tr,
+                            screenTitle: 'Solution',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.solutionScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Sign Up Form'.tr,
+                            screenTitle: 'Sign Up Form',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.signUpFormScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Edit Profile'.tr,
+                            screenTitle: 'Edit Profile',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.editProfileScreen)),
                         _buildScreenTitle(
                           context,
-                          userName: 'Verify'.tr,
+                          screenTitle: 'Verify',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.verifyScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: 'My Page'.tr,
+                          screenTitle: 'My Page',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.myPageScreen),
                         ),
                         _buildScreenTitle(context,
-                            userName: 'Owner - Tab Container'.tr,
+                            screenTitle: 'Owner - Tab Container',
                             onTapScreenTitle: () =>
                                 onTapScreenTitle(context, AppRoutes.ownerTab)),
                         _buildScreenTitle(
                           context,
-                          userName: 'Home'.tr,
+                          screenTitle: 'Home',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.homeScreen),
                         ),
                         _buildScreenTitle(context,
-                            userName: 'Checkup Cat'.tr,
+                            screenTitle: 'Checkup Cat',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.checkupCatScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Checkup Dog'.tr,
+                            screenTitle: 'Checkup Dog',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.checkupDogScreen)),
                         _buildScreenTitle(
                           context,
-                          userName: 'Checkup Owner - Tab Container'.tr,
+                          screenTitle: 'Checkup Owner - Tab Container',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.checkupOwnerTab),
                         ),
                         _buildScreenTitle(context,
-                            userName: 'FourHundredFour'.tr,
+                            screenTitle: 'FourHundredFour',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.fourhundredfourScreen)),
                         _buildScreenTitle(context,
-                            userName: 'Notice Detail'.tr,
+                            screenTitle: 'Notice Detail',
                             onTapScreenTitle: () => onTapScreenTitle(
                                 context, AppRoutes.noticeDetailScreen)),
                         _buildScreenTitle(
                           context,
-                          userName: 'Notice'.tr,
+                          screenTitle: 'Notice',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.noticeScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: 'Log In'.tr,
+                          screenTitle: 'Log In',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.logInScreen),
                         ),
@@ -155,7 +154,7 @@ class AppNavigationScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(
-                'App Navigation'.tr,
+                'App Navigation',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
@@ -172,8 +171,7 @@ class AppNavigationScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(left: 20.w),
               child: Text(
-                "Check your app's UI from the below demo screens of your app."
-                    .tr,
+                "Check your app's UI from the below demo screens of your app.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: const Color(0xFF888888),
@@ -198,7 +196,7 @@ class AppNavigationScreen extends StatelessWidget {
   /// Common widget
   Widget _buildScreenTitle(
     BuildContext context, {
-    required String userName,
+    required String screenTitle,
     Function? onTapScreenTitle,
   }) {
     return GestureDetector(
@@ -215,7 +213,7 @@ class AppNavigationScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: Text(
-                  userName,
+                  screenTitle,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,

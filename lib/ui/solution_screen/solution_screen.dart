@@ -258,7 +258,7 @@ class SolutionScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Address'.tr,
+                      'Address',
                       style: CustomTextStyles.bodySmall11,
                     ),
                     SizedBox(height: 9.h),
@@ -278,16 +278,16 @@ class SolutionScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Contact'.tr,
+                        'Contact',
                         style: CustomTextStyles.bodySmall11,
                       ),
                       SizedBox(height: 9.h),
                       Text(
-                        'business@cami.kr'.tr,
+                        'business@cami.kr',
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        '02-861-6828'.tr,
+                        '02-861-6828',
                         style: theme.textTheme.bodySmall,
                       ),
                     ],

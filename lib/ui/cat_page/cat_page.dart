@@ -72,7 +72,7 @@ class CatPageState extends State<CatPage>
           CustomElevatedButton(
             height: 24.h,
             width: 42.w,
-            text: 'CCSI'.tr,
+            text: 'CCSI',
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
@@ -197,7 +197,7 @@ class CatPageState extends State<CatPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Address'.tr,
+                        'Address',
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 9.h),
@@ -219,16 +219,16 @@ class CatPageState extends State<CatPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Contact'.tr,
+                        'Contact',
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'business@cami.kr'.tr,
+                        'business@cami.kr',
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        '02-861-6828'.tr,
+                        '02-861-6828',
                         style: theme.textTheme.bodySmall,
                       ),
                     ],

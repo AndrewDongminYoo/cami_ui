@@ -4,14 +4,14 @@ import 'package:flutter/foundation.dart';
 
 // 🌎 Project imports:
 import '/core/utils/navigator_service.dart';
-import 'en_us/en_us_translations.dart';
+import 'ko_kr/ko_kr_translations.dart';
 
 class AppLocalization {
   AppLocalization(this.locale);
 
   Locale locale;
 
-  static final Map<String, Map<String, String>> _localizedValues = {'en': enUs};
+  static final Map<String, Map<String, String>> _localizedValues = {'ko': koKR};
 
   static AppLocalization of() {
     return Localizations.of<AppLocalization>(

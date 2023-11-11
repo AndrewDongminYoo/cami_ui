@@ -443,7 +443,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                         width: 121.w,
                                         margin: EdgeInsets.only(bottom: 19.h),
                                         child: Text(
-                                          'KPA-CTP / CCPDT-KA'.tr,
+                                          'KPA-CTP / CCPDT-KA',
                                           overflow: TextOverflow.ellipsis,
                                           style: CustomTextStyles
                                               .bodySmallGray90002

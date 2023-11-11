@@ -69,7 +69,7 @@ class CheckupOwnerTabContainerScreenState
                 CustomElevatedButton(
                   height: 23.h,
                   width: 39.w,
-                  text: 'DPAI'.tr,
+                  text: 'DPAI',
                   margin: EdgeInsets.only(left: 16.w),
                   buttonTextStyle: CustomTextStyles.bodySmall10,
                   alignment: Alignment.centerLeft,

@@ -61,7 +61,7 @@ class NamingScreen extends StatelessWidget {
                           Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text('A.'.tr, style: theme.textTheme.bodyLarge),
+                                Text('A.', style: theme.textTheme.bodyLarge),
                                 Padding(
                                   padding: EdgeInsets.only(left: 2.w),
                                   child: Text('꼬리'.tr,
@@ -213,8 +213,7 @@ class NamingScreen extends StatelessWidget {
           ]),
         ),
         SizedBox(height: 38.h),
-        _buildAddress(context,
-            userAddress: 'Address'.tr, userContact: 'Contact'.tr),
+        _buildAddress(context, userAddress: 'Address', userContact: 'Contact'),
         SizedBox(height: 9.h),
         Padding(
           padding: EdgeInsets.only(right: 72.w),
@@ -228,10 +227,9 @@ class NamingScreen extends StatelessWidget {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('business@cami.kr'.tr,
+                      Text('business@cami.kr',
                           style: theme.textTheme.bodySmall),
-                      Text('02-861-6828'.tr,
-                          style: CustomTextStyles.bodySmall11)
+                      Text('02-861-6828', style: CustomTextStyles.bodySmall11)
                     ]))
           ]),
         ),

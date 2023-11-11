@@ -61,7 +61,7 @@ class SignUpFormScreen extends StatelessWidget {
                                   style: CustomTextStyles.bodyMediumGray60001),
                               Padding(
                                   padding: EdgeInsets.only(left: 4.w),
-                                  child: Text('CAMI'.tr,
+                                  child: Text('CAMI',
                                       style: CustomTextStyles
                                           .bodyMediumGray60001)),
                               Padding(
@@ -403,10 +403,10 @@ class SignUpFormScreen extends StatelessWidget {
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('Address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address', style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact', style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -422,9 +422,9 @@ class SignUpFormScreen extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('business@cami.kr'.tr,
+                          Text('business@cami.kr',
                               style: theme.textTheme.bodySmall),
-                          Text('02-861-6828'.tr,
+                          Text('02-861-6828',
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),

@@ -57,7 +57,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 SizedBox(height: 21.h),
                 Padding(
                     padding: EdgeInsets.only(left: 24.w),
-                    child: Text('2020-03-17'.tr.toUpperCase(),
+                    child: Text('2020-03-17'.toUpperCase(),
                         style: CustomTextStyles.bodySmallGray500)),
                 SizedBox(height: 12.h),
                 _buildFrameColumn1(context),
@@ -162,7 +162,7 @@ class NoticeDetailScreen extends StatelessWidget {
               padding: EdgeInsets.only(right: 63.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('Address'.tr, style: theme.textTheme.bodySmall),
+                  Text('Address', style: theme.textTheme.bodySmall),
                   SizedBox(height: 9.h),
                   Text('서울시 구로구 디지털로34길 55'.tr,
                       style: theme.textTheme.bodySmall),
@@ -173,12 +173,11 @@ class NoticeDetailScreen extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Contact'.tr, style: theme.textTheme.bodySmall),
+                          Text('Contact', style: theme.textTheme.bodySmall),
                           SizedBox(height: 10.h),
-                          Text('business@cami.kr'.tr,
+                          Text('business@cami.kr',
                               style: theme.textTheme.bodySmall),
-                          Text('02-861-6828'.tr,
-                              style: theme.textTheme.bodySmall)
+                          Text('02-861-6828', style: theme.textTheme.bodySmall)
                         ]))
               ])),
           SizedBox(height: 45.h),

@@ -47,7 +47,7 @@ class PetsEmptyScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(children: [
-                                      Text('Andrew'.tr,
+                                      Text('Andrew',
                                           style: CustomTextStyles
                                               .bodyLargeGray900),
                                       Text('님, 반가워요!'.tr,
@@ -55,7 +55,7 @@ class PetsEmptyScreen extends StatelessWidget {
                                               CustomTextStyles.bodyLargeGray900)
                                     ]),
                                     SizedBox(height: 3.h),
-                                    Text('ydm2790@naver.com'.tr,
+                                    Text('ydm2790@naver.com',
                                         style:
                                             CustomTextStyles.bodySmallGray50011)
                                   ])),
@@ -75,26 +75,26 @@ class PetsEmptyScreen extends StatelessWidget {
                     child: _buildWidget(context,
                         userName: '등록된 정보가 없습니다.'.tr,
                         userAge: '생년월일'.tr,
-                        userLocation: '-'.tr,
+                        userLocation: '-',
                         userOccupation: '연령'.tr,
-                        userDescription: '-'.tr,
+                        userDescription: '-',
                         userInterests: '견종'.tr,
-                        userHobbies: '-'.tr,
+                        userHobbies: '-',
                         userGoals: '성별'.tr,
-                        userSkills: '-'.tr)),
+                        userSkills: '-')),
                 SizedBox(height: 18.h),
                 Padding(
                     padding: EdgeInsets.only(left: 15.w, right: 19.w),
                     child: _buildWidget(context,
                         userName: '등록된 정보가 없습니다.'.tr,
                         userAge: '생년월일'.tr,
-                        userLocation: '-'.tr,
+                        userLocation: '-',
                         userOccupation: '연령'.tr,
-                        userDescription: '-'.tr,
+                        userDescription: '-',
                         userInterests: '묘종'.tr,
-                        userHobbies: '-'.tr,
+                        userHobbies: '-',
                         userGoals: '성별'.tr,
-                        userSkills: '-'.tr)),
+                        userSkills: '-')),
                 SizedBox(height: 16.h),
                 _buildPetRegistration(context),
                 SizedBox(height: 22.h),
@@ -338,10 +338,10 @@ class PetsEmptyScreen extends StatelessWidget {
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('Address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address', style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact', style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -357,9 +357,9 @@ class PetsEmptyScreen extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('business@cami.kr'.tr,
+                          Text('business@cami.kr',
                               style: theme.textTheme.bodySmall),
-                          Text('02-861-6828'.tr,
+                          Text('02-861-6828',
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),

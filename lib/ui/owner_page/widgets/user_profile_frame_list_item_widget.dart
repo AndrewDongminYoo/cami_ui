@@ -34,7 +34,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
           CustomElevatedButton(
             height: 24.h,
             width: 39.w,
-            text: 'DPAI'.tr,
+            text: 'DPAI',
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),

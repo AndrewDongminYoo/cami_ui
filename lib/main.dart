@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      title: '카미랩',
+      title: '카미랩'.tr,
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigatorService.key,
       localizationsDelegates: const [
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const [Locale('en')],
+      supportedLocales: const [Locale('ko')],
       initialRoute: AppRoutes.appNavigationScreen,
       routes: AppRoutes.routes,
     );

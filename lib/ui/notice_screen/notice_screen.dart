@@ -46,16 +46,16 @@ class NoticeScreen extends StatelessWidget {
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: _buildFrame(context,
-                        userName: '2'.tr,
+                        userName: '2',
                         userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr,
-                        userDate: '2021-03-04'.tr)),
+                        userDate: '2021-03-04')),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: _buildFrame(context,
                         userName: '1',
                         userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr,
-                        userDate: '2020-03-17'.tr)),
+                        userDate: '2020-03-17')),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 127.h),
                 Container(
@@ -91,7 +91,7 @@ class NoticeScreen extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text('Address'.tr,
+                                      Text('Address',
                                           style: theme.textTheme.bodySmall),
                                       SizedBox(height: 9.h),
                                       Text('서울시 구로구 디지털로34길 55'.tr,
@@ -105,12 +105,12 @@ class NoticeScreen extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text('Contact'.tr,
+                                          Text('Contact',
                                               style: theme.textTheme.bodySmall),
                                           SizedBox(height: 10.h),
-                                          Text('business@cami.kr'.tr,
+                                          Text('business@cami.kr',
                                               style: theme.textTheme.bodySmall),
-                                          Text('02-861-6828'.tr,
+                                          Text('02-861-6828',
                                               style: theme.textTheme.bodySmall)
                                         ]))
                               ])),

@@ -48,7 +48,7 @@ class PetsOneCatScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(children: [
-                                      Text('Andrew'.tr,
+                                      Text('Andrew',
                                           style: CustomTextStyles
                                               .bodyLargeGray900),
                                       Text('님, 반가워요!'.tr,
@@ -56,7 +56,7 @@ class PetsOneCatScreen extends StatelessWidget {
                                               CustomTextStyles.bodyLargeGray900)
                                     ]),
                                     SizedBox(height: 3.h),
-                                    Text('ydm2790@naver.com'.tr,
+                                    Text('ydm2790@naver.com',
                                         style:
                                             CustomTextStyles.bodySmallGray50011)
                                   ])),
@@ -110,14 +110,13 @@ class PetsOneCatScreen extends StatelessWidget {
                     Text('등록된 정보가 없습니다.'.tr,
                         style: CustomTextStyles.bodyLargeGray500),
                     SizedBox(height: 7.h),
-                    _buildWidget(context,
-                        userName: '생년월일'.tr, userText: '-'.tr),
+                    _buildWidget(context, userName: '생년월일'.tr, userText: '-'),
                     SizedBox(height: 2.h),
-                    _buildWidget(context, userName: '연령'.tr, userText: '-'.tr),
+                    _buildWidget(context, userName: '연령'.tr, userText: '-'),
                     SizedBox(height: 2.h),
-                    _buildWidget(context, userName: '견종'.tr, userText: '-'.tr),
+                    _buildWidget(context, userName: '견종'.tr, userText: '-'),
                     SizedBox(height: 2.h),
-                    _buildWidget(context, userName: '성별'.tr, userText: '-'.tr)
+                    _buildWidget(context, userName: '성별'.tr, userText: '-')
                   ]))
         ]));
   }
@@ -194,7 +193,7 @@ class PetsOneCatScreen extends StatelessWidget {
                             children: [
                               Text('생년월일'.tr,
                                   style: CustomTextStyles.bodyMediumBlack900),
-                              Text('2018-08-12'.tr,
+                              Text('2018-08-12',
                                   style: CustomTextStyles.bodyMediumBlack900)
                             ])),
                     SizedBox(height: 2.h),
@@ -397,10 +396,10 @@ class PetsOneCatScreen extends StatelessWidget {
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('Address'.tr, style: theme.textTheme.bodySmall),
+            Text('Address', style: theme.textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact'.tr, style: theme.textTheme.bodySmall))
+                child: Text('Contact', style: theme.textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -416,9 +415,9 @@ class PetsOneCatScreen extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('business@cami.kr'.tr,
+                          Text('business@cami.kr',
                               style: theme.textTheme.bodySmall),
-                          Text('02-861-6828'.tr,
+                          Text('02-861-6828',
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),

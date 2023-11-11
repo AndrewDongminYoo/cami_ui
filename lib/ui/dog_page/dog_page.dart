@@ -146,7 +146,7 @@ class DogPageState extends State<DogPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Address'.tr,
+                        'Address',
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 9.h),
@@ -167,16 +167,16 @@ class DogPageState extends State<DogPage>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Contact'.tr,
+                        'Contact',
                         style: theme.textTheme.bodySmall,
                       ),
                       SizedBox(height: 10.h),
                       Text(
-                        'business@cami.kr'.tr,
+                        'business@cami.kr',
                         style: theme.textTheme.bodySmall,
                       ),
                       Text(
-                        '02-861-6828'.tr,
+                        '02-861-6828',
                         style: theme.textTheme.bodySmall,
                       ),
                     ],

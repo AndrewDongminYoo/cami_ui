@@ -34,7 +34,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           CustomElevatedButton(
             height: 24.h,
             width: 53.w,
-            text: 'DCSI-II'.tr,
+            text: 'DCSI-II',
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
