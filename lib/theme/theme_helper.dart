@@ -13,13 +13,13 @@ const defaultDensity = VisualDensity(vertical: -4, horizontal: -4);
 /// 테마와 색상을 관리하기 위한 도우미 클래스.
 class ThemeHelper {
   // 앱에서 지원하는 사용자 지정 색상 테마 맵
-  final Map<String, PrimaryColors> _supportedCustomColor = {
-    'primary': PrimaryColors()
+  final Map<String, AppPalette> _supportedCustomColor = {
+    'primary': AppPalette()
   };
 
   // 앱에서 지원하는 색 구성표 맵
   final Map<String, ColorScheme> _supportedColorScheme = {
-    'primary': ColorSchemes.primaryColorScheme
+    'primary': lightTheme
   };
 
   /// 앱 테마를 [_newTheme]로 변경합니다.
@@ -28,31 +28,30 @@ class ThemeHelper {
   }
 
   /// 현재 테마의 기본 색상을 반환합니다.
-  PrimaryColors _getThemeColors() {
+  AppPalette get themeColor {
     // 주어진 테마가 발견되지 않거나 생성되지 않음을 알리기 위한 예외를 던져
     if (!_supportedCustomColor.containsKey(_appTheme)) {
       throw Exception(
           '$_appTheme를 찾을 수 없습니다. JSON에 이 테마 클래스를 추가했는지 확인하세요. flutter pub run build_runner를 실행해 보세요.');
     }
     // 맵에서 테마를 리턴합니다.
-    return _supportedCustomColor[_appTheme] ?? PrimaryColors();
+    return _supportedCustomColor[_appTheme] ?? AppPalette();
   }
 
   /// 현재 테마 데이터를 반환합니다.
-  ThemeData _getThemeData() {
+  ThemeData get themeData {
     // 주어진 테마가 발견되지 않거나 생성되지 않음을 알리기 위한 예외를 던져
     if (!_supportedColorScheme.containsKey(_appTheme)) {
       throw Exception(
           '$_appTheme를 찾을 수 없습니다. JSON에 이 테마 클래스를 추가했는지 확인하세요. flutter pub run build_runner를 실행해 보세요.');
     }
     // 맵에서 테마를 리턴합니다.
-    final colorScheme =
-        _supportedColorScheme[_appTheme] ?? ColorSchemes.primaryColorScheme;
+    final colorScheme = _supportedColorScheme[_appTheme] ?? lightTheme;
 
     return ThemeData(
       visualDensity: VisualDensity.standard,
       colorScheme: colorScheme,
-      textTheme: TextThemes.textTheme(colorScheme),
+      textTheme: textTheme,
       scaffoldBackgroundColor: colorScheme.onPrimaryContainer,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -102,90 +101,80 @@ class ThemeHelper {
       ),
     );
   }
-
-  /// 현재 테마의 기본 색상을 반환합니다.
-  PrimaryColors themeColor() => _getThemeColors();
-
-  /// 현재 테마 데이터를 반환합니다.
-  ThemeData themeData() => _getThemeData();
 }
 
 /// 지원되는 텍스트 테마 스타일을 포함하는 클래스.
-class TextThemes {
-  static TextTheme textTheme(ColorScheme colorScheme) => TextTheme(
-        bodyLarge: TextStyle(
-          color: appTheme.black900,
-          fontSize: 16.sp,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-        bodyMedium: TextStyle(
-          color: appTheme.gray500,
-          fontSize: 14.sp,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-        bodySmall: TextStyle(
-          color: colorScheme.onPrimaryContainer,
-          fontSize: 12.sp,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-        displaySmall: TextStyle(
-          color: appTheme.blueGray800,
-          fontSize: 36.sp,
-          fontFamily: FontFamily.nanumSquareNeo,
-          fontWeight: FontWeight.w400,
-        ),
-        headlineLarge: TextStyle(
-          color: appTheme.gray90001,
-          fontSize: 30.sp,
-          fontFamily: FontFamily.nanumSquareNeo,
-          fontWeight: FontWeight.w400,
-        ),
-        headlineMedium: TextStyle(
-          color: appTheme.gray90002,
-          fontSize: 29.sp,
-          fontFamily: FontFamily.nanumSquareNeo,
-          fontWeight: FontWeight.w400,
-        ),
-        headlineSmall: TextStyle(
-          color: appTheme.gray90002,
-          fontSize: 24.sp,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-        titleLarge: TextStyle(
-          color: colorScheme.errorContainer,
-          fontSize: 23.sp,
-          fontFamily: FontFamily.nanumSquareNeo,
-          fontWeight: FontWeight.w400,
-        ),
-      );
-}
+TextTheme textTheme = TextTheme(
+  bodyLarge: TextStyle(
+    color: appTheme.black900,
+    fontSize: 16.sp,
+    fontFamily: FontFamily.poppins,
+    fontWeight: FontWeight.w400,
+  ),
+  bodyMedium: TextStyle(
+    color: appTheme.gray500,
+    fontSize: 14.sp,
+    fontFamily: FontFamily.poppins,
+    fontWeight: FontWeight.w400,
+  ),
+  bodySmall: TextStyle(
+    color: lightTheme.onPrimaryContainer,
+    fontSize: 12.sp,
+    fontFamily: FontFamily.poppins,
+    fontWeight: FontWeight.w400,
+  ),
+  displaySmall: TextStyle(
+    color: appTheme.blueGray800,
+    fontSize: 36.sp,
+    fontFamily: FontFamily.nanumSquareNeo,
+    fontWeight: FontWeight.w400,
+  ),
+  headlineLarge: TextStyle(
+    color: appTheme.gray90001,
+    fontSize: 30.sp,
+    fontFamily: FontFamily.nanumSquareNeo,
+    fontWeight: FontWeight.w400,
+  ),
+  headlineMedium: TextStyle(
+    color: appTheme.gray90002,
+    fontSize: 29.sp,
+    fontFamily: FontFamily.nanumSquareNeo,
+    fontWeight: FontWeight.w400,
+  ),
+  headlineSmall: TextStyle(
+    color: appTheme.gray90002,
+    fontSize: 24.sp,
+    fontFamily: FontFamily.poppins,
+    fontWeight: FontWeight.w400,
+  ),
+  titleLarge: TextStyle(
+    color: lightTheme.errorContainer,
+    fontSize: 23.sp,
+    fontFamily: FontFamily.nanumSquareNeo,
+    fontWeight: FontWeight.w400,
+  ),
+);
 
 /// 지원되는 색 구성표를 포함하는 클래스.
-class ColorSchemes {
-  static const primaryColorScheme = ColorScheme.light(
-    // 기본 색상
-    primary: Color(0xFFFFFF50),
-    primaryContainer: Color(0xFF414142),
-    secondaryContainer: Color(0xFFD9D9D9),
+const lightTheme = ColorScheme.light(
+  // 기본 색상
+  primary: Color(0xFFFFFF50),
+  primaryContainer: Color(0xFF414142),
+  secondaryContainer: Color(0xFFD9D9D9),
 
-    // 오류 색상
-    errorContainer: Color(0xFFF0803D),
-    onError: Color(0xFFE5E5E5),
-    onErrorContainer: Color(0xFF171717),
+  // 오류 색상
+  errorContainer: Color(0xFFF0803D),
+  onError: Color(0xFFE5E5E5),
+  onErrorContainer: Color(0xFF171717),
 
-    // 텍스트 색상
-    onPrimary: Color(0xFF1F2937),
-    onPrimaryContainer: Color(0xFFFFFFFF),
-    onSecondaryContainer: Color(0xFF262626),
-  );
-}
+  // 텍스트 색상
+  onPrimary: Color(0xFF1F2937),
+  onPrimaryContainer: Color(0xFFFFFFFF),
+  onSecondaryContainer: Color(0xFF262626),
+);
 
 /// 기본 테마의 사용자 지정 색상을 포함하는 클래스.
-class PrimaryColors {
+class AppPalette {
   // 검은색
   Color get black900 => const Color(0xFF000000);
 
@@ -240,5 +229,5 @@ class PrimaryColors {
   Color get yellow400 => const Color(0xFFFFFF50);
 }
 
-PrimaryColors get appTheme => ThemeHelper().themeColor();
-ThemeData get theme => ThemeHelper().themeData();
+AppPalette get appTheme => ThemeHelper().themeColor;
+ThemeData get theme => ThemeHelper().themeData;

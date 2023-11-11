@@ -38,6 +38,7 @@ class CustomButtonStyles {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
       );
   static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
+        elevation: 0,
         backgroundColor: theme.colorScheme.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
       );
