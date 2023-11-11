@@ -76,7 +76,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillPrimary,
                   child: Text(
                     '나의 반려친구'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -88,7 +88,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '심리검사'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -100,7 +100,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '방문교육'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -112,7 +112,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '보유쿠폰'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -124,7 +124,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '1:1 문의'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 _buildSeparatorBar(context),
@@ -137,7 +137,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '자주묻는질문'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -149,7 +149,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '공지사항'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 Container(
@@ -161,7 +161,7 @@ class MyPageScreen extends StatelessWidget {
                   decoration: AppDecoration.fillGray50,
                   child: Text(
                     '이벤트'.tr,
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 SizedBox(height: 132.h),
@@ -261,7 +261,7 @@ class MyPageScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Text(
                   '나는 멍집사'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 25.h),
                 SizedBox(
@@ -303,7 +303,7 @@ class MyPageScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Text(
                   '나는 냥집사'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 25.h),
                 SizedBox(
@@ -406,14 +406,14 @@ class MyPageScreen extends StatelessWidget {
                   children: [
                     Text(
                       userAge,
-                      style: theme.textTheme.bodyMedium!
+                      style: textTheme.bodyMedium!
                           .copyWith(color: appTheme.gray500),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 16.w),
                       child: Text(
                         userLocation,
-                        style: theme.textTheme.bodyMedium!
+                        style: textTheme.bodyMedium!
                             .copyWith(color: appTheme.gray500),
                       ),
                     ),
@@ -424,14 +424,14 @@ class MyPageScreen extends StatelessWidget {
                   children: [
                     Text(
                       userOccupation,
-                      style: theme.textTheme.bodyMedium!
+                      style: textTheme.bodyMedium!
                           .copyWith(color: appTheme.gray500),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 43.w),
                       child: Text(
                         userLocation1,
-                        style: theme.textTheme.bodyMedium!
+                        style: textTheme.bodyMedium!
                             .copyWith(color: appTheme.gray500),
                       ),
                     ),
@@ -442,14 +442,14 @@ class MyPageScreen extends StatelessWidget {
                   children: [
                     Text(
                       userPhoneNumber,
-                      style: theme.textTheme.bodyMedium!
+                      style: textTheme.bodyMedium!
                           .copyWith(color: appTheme.gray500),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 42.w),
                       child: Text(
                         userLocation2,
-                        style: theme.textTheme.bodyMedium!
+                        style: textTheme.bodyMedium!
                             .copyWith(color: appTheme.gray500),
                       ),
                     ),
@@ -460,14 +460,14 @@ class MyPageScreen extends StatelessWidget {
                   children: [
                     Text(
                       userEmail,
-                      style: theme.textTheme.bodyMedium!
+                      style: textTheme.bodyMedium!
                           .copyWith(color: appTheme.gray500),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 42.w),
                       child: Text(
                         userLocation3,
-                        style: theme.textTheme.bodyMedium!
+                        style: textTheme.bodyMedium!
                             .copyWith(color: appTheme.gray500),
                       ),
                     ),

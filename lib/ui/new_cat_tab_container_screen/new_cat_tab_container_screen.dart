@@ -236,7 +236,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('년'.tr, style: theme.textTheme.bodyLarge)),
+          child: Text('년'.tr, style: textTheme.bodyLarge)),
       Container(
           height: 40.h,
           width: 91.w,
@@ -251,7 +251,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('월'.tr, style: theme.textTheme.bodyLarge)),
+          child: Text('월'.tr, style: textTheme.bodyLarge)),
       Container(
           height: 40.h,
           width: 91.w,
@@ -266,7 +266,7 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
               alignment: Alignment.centerRight)),
       Padding(
           padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-          child: Text('일'.tr, style: theme.textTheme.bodyLarge))
+          child: Text('일'.tr, style: textTheme.bodyLarge))
     ]);
   }
 

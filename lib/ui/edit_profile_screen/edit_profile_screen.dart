@@ -302,7 +302,7 @@ class EditProfileScreen extends StatelessWidget {
                   onChanged: (value) {}),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('년'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('년'.tr, style: textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 17.w),
                   child: CustomDropDown(
@@ -320,7 +320,7 @@ class EditProfileScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('월'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('월'.tr, style: textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 16.w),
                   child: CustomDropDown(
@@ -338,7 +338,7 @@ class EditProfileScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                  child: Text('일'.tr, style: theme.textTheme.bodyLarge))
+                  child: Text('일'.tr, style: textTheme.bodyLarge))
             ])));
   }
 
@@ -351,7 +351,7 @@ class EditProfileScreen extends StatelessWidget {
               text: '여성'.tr,
               value: radioList[0],
               groupValue: radioGroup,
-              textStyle: theme.textTheme.bodyLarge,
+              textStyle: textTheme.bodyLarge,
               onChange: (value) {
                 radioGroup = value;
               }),
@@ -361,7 +361,7 @@ class EditProfileScreen extends StatelessWidget {
                   text: '남성'.tr,
                   value: radioList[1],
                   groupValue: radioGroup,
-                  textStyle: theme.textTheme.bodyLarge,
+                  textStyle: textTheme.bodyLarge,
                   onChange: (value) {
                     radioGroup = value;
                   })),
@@ -371,7 +371,7 @@ class EditProfileScreen extends StatelessWidget {
                   text: '기타'.tr,
                   value: radioList[2],
                   groupValue: radioGroup,
-                  textStyle: theme.textTheme.bodyLarge,
+                  textStyle: textTheme.bodyLarge,
                   onChange: (value) {
                     radioGroup = value;
                   }))

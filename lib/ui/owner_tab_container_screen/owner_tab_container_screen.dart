@@ -49,11 +49,11 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
                 SizedBox(height: 11.h),
                 Text(
                   '우리에게 필요한'.tr,
-                  style: theme.textTheme.headlineSmall,
+                  style: textTheme.headlineSmall,
                 ),
                 Text(
                   '심리검사는?'.tr,
-                  style: theme.textTheme.headlineSmall,
+                  style: textTheme.headlineSmall,
                 ),
                 SizedBox(height: 39.h),
                 SizedBox(

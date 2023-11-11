@@ -38,7 +38,7 @@ class LogInScreen extends StatelessWidget {
                 SizedBox(height: 29.h),
                 Text(
                   '카미'.tr,
-                  style: theme.textTheme.displaySmall,
+                  style: textTheme.displaySmall,
                 ),
                 SizedBox(height: 18.h),
                 Text(

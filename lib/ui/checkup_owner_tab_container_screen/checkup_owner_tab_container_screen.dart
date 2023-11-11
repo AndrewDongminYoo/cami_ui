@@ -185,7 +185,7 @@ class CheckupOwnerTabContainerScreenState
             children: [
               Text(
                 '문항'.tr,
-                style: theme.textTheme.bodyMedium,
+                style: textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 42.w),
@@ -201,7 +201,7 @@ class CheckupOwnerTabContainerScreenState
             children: [
               Text(
                 '소요시간'.tr,
-                style: theme.textTheme.bodyMedium,
+                style: textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 17.w),
@@ -246,7 +246,7 @@ class CheckupOwnerTabContainerScreenState
                   ),
                   child: Text(
                     '1',
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 CustomImageView(

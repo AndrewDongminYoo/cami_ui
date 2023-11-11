@@ -164,7 +164,7 @@ class PetsOneCatScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(children: [
-                      Text('꼬리'.tr, style: theme.textTheme.bodyLarge),
+                      Text('꼬리'.tr, style: textTheme.bodyLarge),
                       Container(
                           height: 20.h,
                           width: 120.w,
@@ -260,7 +260,7 @@ class PetsOneCatScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillPrimary,
-              child: Text('나의 반려친구'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge)),
           GestureDetector(
               onTap: () {
                 onTapTxtWidget(context);
@@ -270,17 +270,17 @@ class PetsOneCatScreen extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('심리검사'.tr, style: theme.textTheme.bodyLarge))),
+                  child: Text('심리검사'.tr, style: textTheme.bodyLarge))),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('방문교육'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('방문교육'.tr, style: textTheme.bodyLarge)),
           Container(
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
               child: Row(children: [
-                Text('보유쿠폰'.tr, style: theme.textTheme.bodyLarge),
+                Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
                 Container(
                     height: 20.h,
                     width: 18.w,
@@ -296,14 +296,14 @@ class PetsOneCatScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(9.w)))),
                       Align(
                           alignment: Alignment.topCenter,
-                          child: Text('0', style: theme.textTheme.bodySmall))
+                          child: Text('0', style: textTheme.bodySmall))
                     ]))
               ])),
           CustomElevatedButton(
               height: 48.h,
               text: '1:1 문의'.tr,
               buttonStyle: CustomButtonStyles.fillGray,
-              buttonTextStyle: theme.textTheme.bodyLarge,
+              buttonTextStyle: textTheme.bodyLarge,
               onPressed: () {
                 onTapContactUsRegister(context);
               }),
@@ -311,7 +311,7 @@ class PetsOneCatScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('로그아웃'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('로그아웃'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
@@ -321,7 +321,7 @@ class PetsOneCatScreen extends StatelessWidget {
               height: 48.h,
               text: '자주묻는질문'.tr,
               buttonStyle: CustomButtonStyles.fillGray,
-              buttonTextStyle: theme.textTheme.bodyLarge,
+              buttonTextStyle: textTheme.bodyLarge,
               onPressed: () {
                 onTaptFAQ(context);
               }),
@@ -329,12 +329,12 @@ class PetsOneCatScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('공지사항'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('공지사항'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('이벤트'.tr, style: theme.textTheme.bodyLarge))
+              child: Text('이벤트'.tr, style: textTheme.bodyLarge))
         ]));
   }
 
@@ -346,12 +346,11 @@ class PetsOneCatScreen extends StatelessWidget {
   }) {
     return Row(children: [
       Text(userName,
-          style: theme.textTheme.bodyMedium!.copyWith(color: appTheme.gray500)),
+          style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500)),
       Padding(
           padding: EdgeInsets.only(left: 43.w),
           child: Text(userText,
-              style: theme.textTheme.bodyMedium!
-                  .copyWith(color: appTheme.gray500)))
+              style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500)))
     ]);
   }
 

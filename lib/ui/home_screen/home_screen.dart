@@ -49,11 +49,11 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 11.h),
                 Text(
                   '우리에게 필요한'.tr,
-                  style: theme.textTheme.headlineSmall,
+                  style: textTheme.headlineSmall,
                 ),
                 Text(
                   '심리검사는?'.tr,
-                  style: theme.textTheme.headlineSmall,
+                  style: textTheme.headlineSmall,
                 ),
                 SizedBox(height: 39.h),
                 Padding(
@@ -122,21 +122,21 @@ class HomeScreen extends StatelessWidget {
                         alignment: Alignment.topRight,
                         child: Text(
                           '심리검사로'.tr,
-                          style: theme.textTheme.headlineSmall,
+                          style: textTheme.headlineSmall,
                         ),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text(
                           'CAMI',
-                          style: theme.textTheme.headlineSmall,
+                          style: textTheme.headlineSmall,
                         ),
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           '찾아온 기적'.tr,
-                          style: theme.textTheme.headlineSmall,
+                          style: textTheme.headlineSmall,
                         ),
                       ),
                     ],
@@ -188,12 +188,12 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 83.h),
           Text(
             '반려동물의'.tr,
-            style: theme.textTheme.headlineLarge,
+            style: textTheme.headlineLarge,
           ),
           SizedBox(height: 8.h),
           Text(
             '마음을 읽다, 카미'.tr,
-            style: theme.textTheme.headlineLarge,
+            style: textTheme.headlineLarge,
           ),
           SizedBox(height: 24.h),
           Text(
@@ -221,7 +221,7 @@ class HomeScreen extends StatelessWidget {
       width: 178.w,
       text: '많은 분들이 찾은 인기 검사'.tr,
       buttonStyle: CustomButtonStyles.outlineBlueGrayTL17,
-      buttonTextStyle: theme.textTheme.bodySmall,
+      buttonTextStyle: textTheme.bodySmall,
     );
   }
 
@@ -275,7 +275,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 11.h),
           Text(
             '누가 만들었을까요?'.tr,
-            style: theme.textTheme.headlineSmall,
+            style: textTheme.headlineSmall,
           ),
           SizedBox(height: 7.h),
           Text(
@@ -377,7 +377,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 11.h),
           Text(
             '반짝 테스트'.tr,
-            style: theme.textTheme.headlineSmall,
+            style: textTheme.headlineSmall,
           ),
           SizedBox(height: 7.h),
           Text(

@@ -29,18 +29,17 @@ class CamiAppFooter extends StatelessWidget {
                 onTap: () {
                   // TODO: implement Actions
                 },
-                child: Text('공지사항'.tr, style: theme.textTheme.bodySmall)),
+                child: Text('공지사항'.tr, style: textTheme.bodySmall)),
             GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, AppRoutes.faqScreen);
                 },
                 child: Padding(
                     padding: EdgeInsets.only(left: 17.w),
-                    child:
-                        Text('자주 묻는 질문'.tr, style: theme.textTheme.bodySmall))),
+                    child: Text('자주 묻는 질문'.tr, style: textTheme.bodySmall))),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('이벤트'.tr, style: theme.textTheme.bodySmall))
+                child: Text('이벤트'.tr, style: textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -68,38 +67,36 @@ class CamiAppFooter extends StatelessWidget {
               ])),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('Address', style: theme.textTheme.bodySmall),
+            Text('Address', style: textTheme.bodySmall),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact', style: theme.textTheme.bodySmall))
+                child: Text('Contact', style: textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
               padding: EdgeInsets.only(right: 72.w),
               child: Row(children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('서울시 구로구 디지털로34길 55'.tr,
-                      style: theme.textTheme.bodySmall),
-                  Text('코오롱싸이언스밸리2차 B101'.tr, style: theme.textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr, style: textTheme.bodySmall),
+                  Text('코오롱싸이언스밸리2차 B101'.tr, style: textTheme.bodySmall)
                 ]),
                 Padding(
                     padding: EdgeInsets.only(left: 17.w),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('business@cami.kr',
-                              style: theme.textTheme.bodySmall),
+                          Text('business@cami.kr', style: textTheme.bodySmall),
                           Text('02-861-6828',
                               style: CustomTextStyles.bodySmall11)
                         ]))
               ])),
           SizedBox(height: 45.h),
-          Text('주식회사 카미랩'.tr, style: theme.textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr, style: textTheme.bodySmall),
           Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
-              style: theme.textTheme.bodySmall),
+              style: textTheme.bodySmall),
           SizedBox(height: 15.h),
           Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr,
-              style: theme.textTheme.bodySmall),
+              style: textTheme.bodySmall),
           SizedBox(height: 39.h),
           Row(children: [
             CustomImageView(

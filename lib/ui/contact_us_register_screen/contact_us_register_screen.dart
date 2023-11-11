@@ -64,8 +64,8 @@ class ContactUsRegisterScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                         padding: EdgeInsets.only(left: 32.w),
-                        child: Text('1:1 문의하기'.tr,
-                            style: theme.textTheme.bodyLarge))),
+                        child:
+                            Text('1:1 문의하기'.tr, style: textTheme.bodyLarge))),
                 SizedBox(height: 16.h),
                 Divider(color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 22.h),
@@ -97,7 +97,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
               child: Text('문의유형'.tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.bodyLarge!.copyWith(height: 1.50))),
+                  style: textTheme.bodyLarge!.copyWith(height: 1.50))),
           Expanded(
               child: Padding(
                   padding: EdgeInsets.only(left: 15.w, top: 4.h, bottom: 4.h),
@@ -131,8 +131,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   child: Text('문의내용'.tr,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style:
-                          theme.textTheme.bodyLarge!.copyWith(height: 1.50))),
+                      style: textTheme.bodyLarge!.copyWith(height: 1.50))),
               Expanded(
                   child: Padding(
                       padding: EdgeInsets.only(left: 16.w),

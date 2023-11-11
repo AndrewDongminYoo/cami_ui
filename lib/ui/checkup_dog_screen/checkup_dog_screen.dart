@@ -234,7 +234,7 @@ class CheckupDogScreen extends StatelessWidget {
             children: [
               Text(
                 '문항'.tr,
-                style: theme.textTheme.bodyMedium,
+                style: textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
@@ -250,7 +250,7 @@ class CheckupDogScreen extends StatelessWidget {
             children: [
               Text(
                 '소요시간'.tr,
-                style: theme.textTheme.bodyMedium,
+                style: textTheme.bodyMedium,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
@@ -292,7 +292,7 @@ class CheckupDogScreen extends StatelessWidget {
                   ),
                   child: Text(
                     '1',
-                    style: theme.textTheme.bodyLarge,
+                    style: textTheme.bodyLarge,
                   ),
                 ),
                 CustomImageView(
@@ -310,7 +310,7 @@ class CheckupDogScreen extends StatelessWidget {
             ),
             child: Text(
               '12,000원'.tr,
-              style: theme.textTheme.bodyLarge,
+              style: textTheme.bodyLarge,
             ),
           ),
         ],
@@ -343,7 +343,7 @@ class CheckupDogScreen extends StatelessWidget {
       width: 181.w,
       text: '구매후기'.tr,
       buttonStyle: CustomButtonStyles.fillGrayTL81,
-      buttonTextStyle: theme.textTheme.bodyMedium,
+      buttonTextStyle: textTheme.bodyMedium,
     );
   }
 }

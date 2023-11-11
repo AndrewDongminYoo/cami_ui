@@ -48,9 +48,7 @@ class SignUpFormScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 79.h),
-                Align(
-                    child:
-                        Text('회원가입'.tr, style: theme.textTheme.displaySmall)),
+                Align(child: Text('회원가입'.tr, style: textTheme.displaySmall)),
                 SizedBox(height: 15.h),
                 Align(
                     child: Padding(
@@ -139,16 +137,14 @@ class SignUpFormScreen extends StatelessWidget {
                               alignment: Alignment.center)),
                       Padding(
                           padding: EdgeInsets.only(left: 20.w),
-                          child: Text('[필수]'.tr,
-                              style: theme.textTheme.bodyLarge)),
+                          child: Text('[필수]'.tr, style: textTheme.bodyLarge)),
                       Padding(
                           padding: EdgeInsets.only(left: 7.w),
                           child: Text('이용약관'.tr,
                               style: CustomTextStyles.bodyLargeIndigo400)),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
-                          child:
-                              Text('동의'.tr, style: theme.textTheme.bodyLarge))
+                          child: Text('동의'.tr, style: textTheme.bodyLarge))
                     ])),
                 SizedBox(height: 6.h),
                 Padding(
@@ -173,8 +169,8 @@ class SignUpFormScreen extends StatelessWidget {
                                   alignment: Alignment.center)),
                           Padding(
                               padding: EdgeInsets.only(left: 20.w),
-                              child: Text('[필수]'.tr,
-                                  style: theme.textTheme.bodyLarge)),
+                              child:
+                                  Text('[필수]'.tr, style: textTheme.bodyLarge)),
                           Padding(
                               padding: EdgeInsets.only(left: 6.w),
                               child: Text('개인정보 취급방침'.tr,
@@ -182,7 +178,7 @@ class SignUpFormScreen extends StatelessWidget {
                           Padding(
                               padding: EdgeInsets.only(left: 2.w),
                               child: Text('에 대한 동의'.tr,
-                                  style: theme.textTheme.bodyLarge))
+                                  style: textTheme.bodyLarge))
                         ])),
                 SizedBox(height: 8.h),
                 Padding(
@@ -273,7 +269,7 @@ class SignUpFormScreen extends StatelessWidget {
                   onChanged: (value) {}),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('년'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('년'.tr, style: textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 17.w),
                   child: CustomDropDown(
@@ -291,7 +287,7 @@ class SignUpFormScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-                  child: Text('월'.tr, style: theme.textTheme.bodyLarge)),
+                  child: Text('월'.tr, style: textTheme.bodyLarge)),
               Padding(
                   padding: EdgeInsets.only(left: 16.w),
                   child: CustomDropDown(
@@ -309,7 +305,7 @@ class SignUpFormScreen extends StatelessWidget {
                       onChanged: (value) {})),
               Padding(
                   padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                  child: Text('일'.tr, style: theme.textTheme.bodyLarge))
+                  child: Text('일'.tr, style: textTheme.bodyLarge))
             ])));
   }
 
@@ -367,8 +363,7 @@ class SignUpFormScreen extends StatelessWidget {
       Padding(
           padding: EdgeInsets.only(left: 20.w),
           child: Text(messageText,
-              style: theme.textTheme.bodyLarge!
-                  .copyWith(color: appTheme.black900)))
+              style: textTheme.bodyLarge!.copyWith(color: appTheme.black900)))
     ]);
   }
 

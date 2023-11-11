@@ -48,7 +48,7 @@ class QuickTestScreen extends StatelessWidget {
                               Padding(
                                   padding: EdgeInsets.only(left: 8.w),
                                   child: Text('인싸력 테스트'.tr,
-                                      style: theme.textTheme.titleLarge))
+                                      style: textTheme.titleLarge))
                             ])),
                     SizedBox(height: 18.h),
                     Padding(
@@ -60,7 +60,7 @@ class QuickTestScreen extends StatelessWidget {
                                   style: CustomTextStyles
                                       .bodyMediumErrorContainer),
                               Padding(
-                                  padding: EdgeInsets.only(left: 7.w),
+                                  padding: EdgeInsets.only(left: 4.w),
                                   child: Text('라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr,
                                       style:
                                           CustomTextStyles.bodyMediumBlack900))
@@ -163,8 +163,7 @@ class QuickTestScreen extends StatelessWidget {
                                   .headlineSmallNanumSquareNeoOnErrorContainer)),
                       Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Text('고양이'.tr,
-                              style: theme.textTheme.titleLarge)),
+                          child: Text('고양이'.tr, style: textTheme.titleLarge)),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
                           child: Text('인간?'.tr,

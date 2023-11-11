@@ -35,7 +35,7 @@ class UserProfileItemWidget extends StatelessWidget {
           SizedBox(height: 16.h),
           Text(
             '나는 멍집사'.tr,
-            style: theme.textTheme.bodyLarge,
+            style: textTheme.bodyLarge,
           ),
           SizedBox(height: 25.h),
           SizedBox(

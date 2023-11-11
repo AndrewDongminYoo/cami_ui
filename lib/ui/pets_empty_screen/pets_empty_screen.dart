@@ -124,7 +124,7 @@ class PetsEmptyScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(height: 16.h),
-                    Text('나는 멍집사'.tr, style: theme.textTheme.bodyLarge),
+                    Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
                     SizedBox(height: 25.h),
                     SizedBox(
                         height: 112.h,
@@ -157,7 +157,7 @@ class PetsEmptyScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(height: 16.h),
-                    Text('나는 냥집사'.tr, style: theme.textTheme.bodyLarge),
+                    Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
                     SizedBox(height: 25.h),
                     SizedBox(
                         height: 112.h,
@@ -192,7 +192,7 @@ class PetsEmptyScreen extends StatelessWidget {
         height: 48.h,
         text: '1:1 문의'.tr,
         buttonStyle: CustomButtonStyles.fillGray,
-        buttonTextStyle: theme.textTheme.bodyLarge,
+        buttonTextStyle: textTheme.bodyLarge,
         onPressed: () {
           onTapInquiries(context);
         });
@@ -204,7 +204,7 @@ class PetsEmptyScreen extends StatelessWidget {
         height: 48.h,
         text: '자주묻는질문'.tr,
         buttonStyle: CustomButtonStyles.fillGray,
-        buttonTextStyle: theme.textTheme.bodyLarge,
+        buttonTextStyle: textTheme.bodyLarge,
         onPressed: () {
           onTapFaq(context);
         });
@@ -219,22 +219,22 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillPrimary,
-              child: Text('나의 반려친구'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('심리검사'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('심리검사'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('방문교육'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('방문교육'.tr, style: textTheme.bodyLarge)),
           Container(
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
               child: Row(children: [
-                Text('보유쿠폰'.tr, style: theme.textTheme.bodyLarge),
+                Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
                 Container(
                     height: 20.h,
                     width: 18.w,
@@ -250,7 +250,7 @@ class PetsEmptyScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(9.w)))),
                       Align(
                           alignment: Alignment.topCenter,
-                          child: Text('0', style: theme.textTheme.bodySmall))
+                          child: Text('0', style: textTheme.bodySmall))
                     ]))
               ])),
           _buildInquiries(context),
@@ -258,7 +258,7 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('로그아웃'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('로그아웃'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
@@ -269,12 +269,12 @@ class PetsEmptyScreen extends StatelessWidget {
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('공지사항'.tr, style: theme.textTheme.bodyLarge)),
+              child: Text('공지사항'.tr, style: textTheme.bodyLarge)),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('이벤트'.tr, style: theme.textTheme.bodyLarge))
+              child: Text('이벤트'.tr, style: textTheme.bodyLarge))
         ]));
   }
 
@@ -313,45 +313,45 @@ class PetsEmptyScreen extends StatelessWidget {
                     SizedBox(height: 7.h),
                     Row(children: [
                       Text(userAge,
-                          style: theme.textTheme.bodyMedium!
+                          style: textTheme.bodyMedium!
                               .copyWith(color: appTheme.gray500)),
                       Padding(
                           padding: EdgeInsets.only(left: 16.w),
                           child: Text(userLocation,
-                              style: theme.textTheme.bodyMedium!
+                              style: textTheme.bodyMedium!
                                   .copyWith(color: appTheme.gray500)))
                     ]),
                     SizedBox(height: 2.h),
                     Row(children: [
                       Text(userOccupation,
-                          style: theme.textTheme.bodyMedium!
+                          style: textTheme.bodyMedium!
                               .copyWith(color: appTheme.gray500)),
                       Padding(
                           padding: EdgeInsets.only(left: 43.w),
                           child: Text(userDescription,
-                              style: theme.textTheme.bodyMedium!
+                              style: textTheme.bodyMedium!
                                   .copyWith(color: appTheme.gray500)))
                     ]),
                     SizedBox(height: 3.h),
                     Row(children: [
                       Text(userInterests,
-                          style: theme.textTheme.bodyMedium!
+                          style: textTheme.bodyMedium!
                               .copyWith(color: appTheme.gray500)),
                       Padding(
                           padding: EdgeInsets.only(left: 42.w),
                           child: Text(userHobbies,
-                              style: theme.textTheme.bodyMedium!
+                              style: textTheme.bodyMedium!
                                   .copyWith(color: appTheme.gray500)))
                     ]),
                     SizedBox(height: 2.h),
                     Row(children: [
                       Text(userGoals,
-                          style: theme.textTheme.bodyMedium!
+                          style: textTheme.bodyMedium!
                               .copyWith(color: appTheme.gray500)),
                       Padding(
                           padding: EdgeInsets.only(left: 42.w),
                           child: Text(userSkills,
-                              style: theme.textTheme.bodyMedium!
+                              style: textTheme.bodyMedium!
                                   .copyWith(color: appTheme.gray500)))
                     ])
                   ]))

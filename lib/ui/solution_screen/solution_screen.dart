@@ -40,11 +40,11 @@ class SolutionScreen extends StatelessWidget {
                 SizedBox(height: 18.h),
                 Text(
                   '준비된 반려인이'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 Text(
                   '되기 위한 첫걸음'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 32.h),
                 _buildStrongRelationship(context),
@@ -81,7 +81,7 @@ class SolutionScreen extends StatelessWidget {
               children: [
                 Text(
                   '반려인과의 돈독한 관계 형성'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 14.h),
                 Text(
@@ -132,7 +132,7 @@ class SolutionScreen extends StatelessWidget {
               children: [
                 Text(
                   '과학적으로 검증된 교육'.tr,
-                  style: theme.textTheme.bodyLarge,
+                  style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 15.h),
                 Text(

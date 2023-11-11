@@ -31,7 +31,7 @@ class VerifyScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 79.h),
-                Text('회원가입'.tr, style: theme.textTheme.displaySmall),
+                Text('회원가입'.tr, style: textTheme.displaySmall),
                 SizedBox(height: 15.h),
                 Container(
                     width: 338.w,
@@ -47,8 +47,7 @@ class VerifyScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                         padding: EdgeInsets.only(left: 101.w),
-                        child: Text('본인 인증'.tr,
-                            style: theme.textTheme.bodyLarge))),
+                        child: Text('본인 인증'.tr, style: textTheme.bodyLarge))),
                 SizedBox(height: 8.h),
                 CustomTextFormField(
                     width: 191.w,
