@@ -10,12 +10,12 @@ class CustomDropDown extends StatelessWidget {
   const CustomDropDown({
     super.key,
     this.alignment,
+    this.height,
     this.width,
     this.focusNode,
     this.icon,
     this.autofocus = true,
     this.textStyle,
-    this.items,
     this.hintText,
     this.hintStyle,
     this.prefix,
@@ -27,16 +27,18 @@ class CustomDropDown extends StatelessWidget {
     this.fillColor,
     this.filled = true,
     this.validator,
-    this.onChanged,
+    required this.items,
+    required this.onChanged,
   });
 
   final Alignment? alignment;
+  final double? height;
   final double? width;
   final FocusNode? focusNode;
   final Widget? icon;
-  final bool? autofocus;
+  final bool autofocus;
   final TextStyle? textStyle;
-  final List<String>? items;
+  final List<String> items;
   final String? hintText;
   final TextStyle? hintStyle;
   final Widget? prefix;
@@ -48,7 +50,7 @@ class CustomDropDown extends StatelessWidget {
   final Color? fillColor;
   final bool? filled;
   final FormFieldValidator<String>? validator;
-  final Function(String)? onChanged;
+  final Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -61,13 +63,15 @@ class CustomDropDown extends StatelessWidget {
   }
 
   Widget get dropDownWidget => SizedBox(
+        height: height ?? 40.h,
         width: width ?? double.maxFinite,
         child: DropdownButtonFormField(
+          elevation: 0,
           focusNode: focusNode ?? FocusNode(),
           icon: icon,
-          autofocus: autofocus!,
+          autofocus: autofocus,
           style: textStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
-          items: items?.map<DropdownMenuItem<String>>((String value) {
+          items: items.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(
@@ -81,7 +85,7 @@ class CustomDropDown extends StatelessWidget {
           decoration: decoration,
           validator: validator,
           onChanged: (value) {
-            onChanged!(value.toString());
+            onChanged(value.toString());
           },
         ),
       );

@@ -12,6 +12,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
@@ -19,9 +20,14 @@ import '/widgets/custom_text_form_field.dart';
 class ContactUsRegisterScreen extends StatelessWidget {
   ContactUsRegisterScreen({super.key});
 
-  final editTextController = TextEditingController();
-
-  final editTextController1 = TextEditingController();
+  final inquiryType = TextEditingController();
+  final inquiryContent = TextEditingController();
+  final List<String> items = [
+    '주문/결제',
+    '심리검사',
+    '서비스이용',
+    '와디즈관련',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -97,34 +103,36 @@ class ContactUsRegisterScreen extends StatelessWidget {
       padding: EdgeInsets.only(left: 28.w, right: 16.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
+          Container(
+            margin: EdgeInsets.only(right: 14.w),
             width: 44.w,
             child: Text(
               '문의유형'.tr,
               maxLines: 2,
-              overflow: TextOverflow.ellipsis,
               style: textTheme.bodyLarge!.copyWith(height: 1.50),
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(left: 15.w, top: 4.h, bottom: 4.h),
-              child: CustomTextFormField(controller: editTextController),
+          CustomDropDown(
+            autofocus: false,
+            items: items,
+            height: 40.h,
+            width: 291.w,
+            borderDecoration: OutlineInputBorder(
+              borderRadius: BorderRadiusStyle.circleBorder8,
+              borderSide: BorderSide.none,
             ),
+            contentPadding:
+                EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+            icon: CustomImageView(
+                imagePath: Assets.svg.imgArrowDown.path,
+                height: 8.h,
+                width: 12.w),
+            onChanged: (value) {
+              inquiryType.text = value;
+            },
           ),
-          Container(
-              height: 40.h,
-              width: 34.w,
-              margin: EdgeInsets.only(left: 8.w, top: 4.h, bottom: 4.h),
-              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 16.h),
-              decoration: AppDecoration.fillGray
-                  .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
-              child: CustomImageView(
-                  imagePath: Assets.svg.imgArrowDown.path,
-                  height: 8.h,
-                  width: 13.w,
-                  alignment: Alignment.center))
         ],
       ),
     );
@@ -144,7 +152,6 @@ class ContactUsRegisterScreen extends StatelessWidget {
             child: Text(
               '문의내용'.tr,
               maxLines: 2,
-              overflow: TextOverflow.ellipsis,
               style: textTheme.bodyLarge!.copyWith(height: 1.50),
             ),
           ),
@@ -152,7 +159,8 @@ class ContactUsRegisterScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(left: 16.w),
               child: CustomTextFormField(
-                  controller: editTextController1,
+                  controller: inquiryContent,
+                  maxLines: 5,
                   textInputAction: TextInputAction.done),
             ),
           ),
