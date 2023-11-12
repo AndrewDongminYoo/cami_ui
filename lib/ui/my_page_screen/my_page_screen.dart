@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -37,14 +39,14 @@ class MyPageScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 17.w),
                   child: _buildFrame(
                     context,
-                    userName: '등록된 정보가 없습니다.'.tr,
-                    userAge: '생년월일'.tr,
+                    userName: '등록된 정보가 없습니다.'.tr(),
+                    userAge: '생년월일'.tr(),
                     userLocation: '-',
-                    userOccupation: '연령'.tr,
+                    userOccupation: '연령'.tr(),
                     userLocation1: '-',
-                    userPhoneNumber: '견종'.tr,
+                    userPhoneNumber: '견종'.tr(),
                     userLocation2: '-',
-                    userEmail: '성별'.tr,
+                    userEmail: '성별'.tr(),
                     userLocation3: '-',
                   ),
                 ),
@@ -53,14 +55,14 @@ class MyPageScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 17.w),
                   child: _buildFrame(
                     context,
-                    userName: '등록된 정보가 없습니다.'.tr,
-                    userAge: '생년월일'.tr,
+                    userName: '등록된 정보가 없습니다.'.tr(),
+                    userAge: '생년월일'.tr(),
                     userLocation: '-',
-                    userOccupation: '연령'.tr,
+                    userOccupation: '연령'.tr(),
                     userLocation1: '-',
-                    userPhoneNumber: '묘종'.tr,
+                    userPhoneNumber: '묘종'.tr(),
                     userLocation2: '-',
-                    userEmail: '성별'.tr,
+                    userEmail: '성별'.tr(),
                     userLocation3: '-',
                   ),
                 ),
@@ -74,7 +76,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillPrimary,
-                  child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge),
+                  child: Text('나의 반려친구'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -83,7 +85,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('심리검사'.tr, style: textTheme.bodyLarge),
+                  child: Text('심리검사'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -92,7 +94,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('방문교육'.tr, style: textTheme.bodyLarge),
+                  child: Text('방문교육'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -101,7 +103,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
+                  child: Text('보유쿠폰'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -110,7 +112,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('1:1 문의'.tr, style: textTheme.bodyLarge),
+                  child: Text('1:1 문의'.tr(), style: textTheme.bodyLarge),
                 ),
                 _buildSeparatorBar(context),
                 Container(
@@ -120,7 +122,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('자주묻는질문'.tr, style: textTheme.bodyLarge),
+                  child: Text('자주묻는질문'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -129,7 +131,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('공지사항'.tr, style: textTheme.bodyLarge),
+                  child: Text('공지사항'.tr(), style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -138,7 +140,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text('이벤트'.tr, style: textTheme.bodyLarge),
+                  child: Text('이벤트'.tr(), style: textTheme.bodyLarge),
                 ),
                 SizedBox(height: 132.h),
                 const CamiAppFooter(),
@@ -183,7 +185,7 @@ class MyPageScreen extends StatelessWidget {
                           top: 2.h,
                           bottom: 5.h,
                         ),
-                        child: Text('회원가입/로그인'.tr,
+                        child: Text('회원가입/로그인'.tr(),
                             style: CustomTextStyles.bodyLargeGray900),
                       ),
                       Padding(
@@ -201,7 +203,7 @@ class MyPageScreen extends StatelessWidget {
                   SizedBox(
                     width: 251.w,
                     child: Text(
-                      '로그인 하시면 카미의 다양한 서비스를 이용하실 수 있습니다.'.tr,
+                      '로그인 하시면 카미의 다양한 서비스를 이용하실 수 있습니다.'.tr(),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: CustomTextStyles.bodySmallGray500
@@ -233,7 +235,7 @@ class MyPageScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
+                Text('나는 멍집사'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,
@@ -250,7 +252,7 @@ class MyPageScreen extends StatelessWidget {
                       CustomElevatedButton(
                         height: 32.h,
                         width: 149.w,
-                        text: '강아지 등록하기'.tr,
+                        text: '강아지 등록하기'.tr(),
                         margin: EdgeInsets.only(bottom: 24.h),
                         buttonStyle: CustomButtonStyles.fillBlue,
                         buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
@@ -272,7 +274,7 @@ class MyPageScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
+                Text('나는 냥집사'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,
@@ -289,7 +291,7 @@ class MyPageScreen extends StatelessWidget {
                       CustomElevatedButton(
                         height: 32.h,
                         width: 149.w,
-                        text: '고양이 등록하기'.tr,
+                        text: '고양이 등록하기'.tr(),
                         margin: EdgeInsets.only(bottom: 24.h),
                         buttonStyle: CustomButtonStyles.fillBlue,
                         buttonTextStyle: CustomTextStyles.bodyMediumBlack900,

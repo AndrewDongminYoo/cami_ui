@@ -1,9 +1,11 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
@@ -42,10 +44,10 @@ class OwnerScreenState extends State<OwnerScreen>
             child: Column(
               children: [
                 _buildOwnerFrame(context),
-                Text('찾아봐요'.tr, style: CustomTextStyles.bodyMediumGray90002),
+                Text('찾아봐요'.tr(), style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
-                Text('우리에게 필요한'.tr, style: textTheme.headlineSmall),
-                Text('심리검사는?'.tr, style: textTheme.headlineSmall),
+                Text('우리에게 필요한'.tr(), style: textTheme.headlineSmall),
+                Text('심리검사는?'.tr(), style: textTheme.headlineSmall),
                 SizedBox(height: 39.h),
                 SizedBox(
                   height: 32.h,
@@ -71,16 +73,16 @@ class OwnerScreenState extends State<OwnerScreen>
                     ),
                     tabs: [
                       Tab(
-                        child: Text('전체'.tr),
+                        child: Text('전체'.tr()),
                       ),
                       Tab(
-                        child: Text('반려견'.tr),
+                        child: Text('반려견'.tr()),
                       ),
                       Tab(
-                        child: Text('반려묘'.tr),
+                        child: Text('반려묘'.tr()),
                       ),
                       Tab(
-                        child: Text('반려인'.tr),
+                        child: Text('반려인'.tr()),
                       ),
                     ],
                   ),

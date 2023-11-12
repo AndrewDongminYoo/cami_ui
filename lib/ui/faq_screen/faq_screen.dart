@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
@@ -48,7 +50,7 @@ class FaqScreen extends StatelessWidget {
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 105.w),
-                            child: Text('자주 묻는 질문'.tr,
+                            child: Text('자주 묻는 질문'.tr(),
                                 style: CustomTextStyles.bodyLarge18))
                       ],
                     ),
@@ -82,7 +84,7 @@ class FaqScreen extends StatelessWidget {
                                   height: 32.h,
                                   width: 30.w),
                             ),
-                            hintText: '결제가 되지 않아요'.tr,
+                            hintText: '결제가 되지 않아요'.tr(),
                             hintStyle: CustomTextStyles
                                 .bodyMediumNanumSquareNeoBlack90013,
                             items: items,
@@ -103,7 +105,7 @@ class FaqScreen extends StatelessWidget {
                       SizedBox(height: 23.h),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('결제가 되지 않는경우'.tr,
+                        child: Text('결제가 되지 않는경우'.tr(),
                             style: CustomTextStyles.bodyMediumBlack900),
                       ),
                       SizedBox(height: 10.h),
@@ -112,7 +114,7 @@ class FaqScreen extends StatelessWidget {
                           width: 314.w,
                           margin: EdgeInsets.only(left: 20.w, right: 26.w),
                           child: Text(
-                            '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr,
+                            '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr(),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: CustomTextStyles.bodyMediumBlack900
@@ -122,7 +124,7 @@ class FaqScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr,
+                        child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr(),
                             style: CustomTextStyles.bodyMediumBlack900),
                       ),
                       SizedBox(height: 10.h),
@@ -130,7 +132,7 @@ class FaqScreen extends StatelessWidget {
                         width: 307.w,
                         margin: EdgeInsets.only(left: 20.w, right: 33.w),
                         child: Text(
-                          '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr,
+                          '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr(),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: CustomTextStyles.bodyMediumBlack900
@@ -142,7 +144,7 @@ class FaqScreen extends StatelessWidget {
                         margin: EdgeInsets.only(left: 20.w, right: 36.w),
                         child: Text(
                           '3. 다른 카드로 결제를 시도해보기 (체크카드의 경우 잔액부족으로, 신용카드는 카드사 오류로 안되는 경우가 종종 발생합니다.)'
-                              .tr,
+                              .tr(),
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
                           style: CustomTextStyles.bodyMediumBlack900
@@ -156,7 +158,7 @@ class FaqScreen extends StatelessWidget {
                           margin: EdgeInsets.only(left: 20.w, right: 23.w),
                           child: Text(
                             '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
-                                .tr,
+                                .tr(),
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
                             style: CustomTextStyles.bodyMediumBlack900
@@ -167,7 +169,7 @@ class FaqScreen extends StatelessWidget {
                       SizedBox(height: 24.h),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('감사합니다.'.tr,
+                        child: Text('감사합니다.'.tr(),
                             style: CustomTextStyles.bodyMediumBlack900),
                       ),
                       SizedBox(height: 30.h),
@@ -209,7 +211,8 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr,
+                                        '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'
+                                            .tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -251,7 +254,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr,
+                                        '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -293,7 +296,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '어린 강아지도 심리검사를 받을 수 있나요?'.tr,
+                                        '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -335,7 +338,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '구매한 쿠폰이 보이지 않아요.'.tr,
+                                        '구매한 쿠폰이 보이지 않아요.'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -377,7 +380,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '회원 탈퇴는 어떻게 하나요?'.tr,
+                                        '회원 탈퇴는 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -419,7 +422,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '결과보고서 인쇄 방법'.tr,
+                                        '결과보고서 인쇄 방법'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles
@@ -461,7 +464,7 @@ class FaqScreen extends StatelessWidget {
                                       padding: EdgeInsets.only(
                                           left: 9.w, top: 7.h, bottom: 8.h),
                                       child: Text(
-                                        '결과보고서 다시보기'.tr,
+                                        '결과보고서 다시보기'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
                                         style: CustomTextStyles

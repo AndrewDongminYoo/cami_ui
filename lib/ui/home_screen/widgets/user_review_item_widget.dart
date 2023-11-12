@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/widgets/custom_image_view.dart';
@@ -45,21 +47,21 @@ class UserReviewItemWidget extends StatelessWidget {
                     SizedBox(
                       width: 228.w,
                       child: Text(
-                        '호기심으로 해봤는데 너무 잘 맞는거 같아요 너무 신기하네요.'.tr.toUpperCase(),
+                        '호기심으로 해봤는데 너무 잘 맞는거 같아요 너무 신기하네요.'.tr().toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: CustomTextStyles.bodySmallGray90002_1
                             .copyWith(height: 1.33),
                       ),
                     ),
-                    Text('어쩜 이렇게 정확한지 신기해요.'.tr.toUpperCase(),
+                    Text('어쩜 이렇게 정확한지 신기해요.'.tr().toUpperCase(),
                         style: CustomTextStyles.bodySmallGray90002_1),
                     Container(
                       width: 229.w,
                       margin: EdgeInsets.only(right: 51.w),
                       child: Text(
                         '자세한 방법과 조언이 너무 좋네요 강아지 기르면서 참고할게 너무 많아졌어요.'
-                            .tr
+                            .tr()
                             .toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -70,7 +72,7 @@ class UserReviewItemWidget extends StatelessWidget {
                     SizedBox(
                       width: 224.w,
                       child: Text(
-                        '조언을 바탕으로 강아지를 더 이해하게 되었어요 감사해요.'.tr.toUpperCase(),
+                        '조언을 바탕으로 강아지를 더 이해하게 되었어요 감사해요.'.tr().toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: CustomTextStyles.bodySmallGray90002_1
@@ -78,7 +80,7 @@ class UserReviewItemWidget extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 13.h),
-                    Text('"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr.toUpperCase(),
+                    Text('"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr().toUpperCase(),
                         style: CustomTextStyles.bodySmallGray90002_1),
                   ],
                 ),
@@ -113,7 +115,7 @@ class UserReviewItemWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(height: 3.h),
-                            Text('만두'.tr.toUpperCase(),
+                            Text('만두'.tr().toUpperCase(),
                                 style: CustomTextStyles.bodySmallGray90002_1),
                           ],
                         ),

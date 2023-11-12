@@ -2,13 +2,13 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -43,12 +43,13 @@ class NamingScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 48.h),
-                Text('한 번 해보시개'.tr,
+                Text('한 번 해보시개'.tr(),
                     style: CustomTextStyles.titleLargeBlack900.extraBold),
                 SizedBox(height: 70.h),
-                Text('삼칠이 작명소'.tr, style: textTheme.titleLarge!.thick),
+                Text('삼칠이 작명소'.tr(), style: textTheme.titleLarge!.thick),
                 SizedBox(height: 18.h),
-                Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18.bold),
+                Text('개성만점 별명 짓기'.tr(),
+                    style: CustomTextStyles.bodyLarge18.bold),
                 SizedBox(height: 29.h),
                 SizedBox(
                   height: 283.h,
@@ -59,7 +60,7 @@ class NamingScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 27.w),
                         child: Column(
                           children: [
-                            Text('강렬한 거북이의 안내자'.tr,
+                            Text('강렬한 거북이의 안내자'.tr(),
                                 style: CustomTextStyles
                                     .headlineSmallBlack900.thick),
                             SizedBox(height: 196.h),
@@ -69,22 +70,22 @@ class NamingScreen extends StatelessWidget {
                                   Text('A.', style: textTheme.bodyLarge),
                                   Padding(
                                     padding: EdgeInsets.only(left: 2.w),
-                                    child: Text('꼬리'.tr,
+                                    child: Text('꼬리'.tr(),
                                         style: textTheme.bodyLarge),
                                   ),
                                   Padding(
                                       padding: EdgeInsets.only(left: 3.w),
-                                      child: Text('의 아메리카 원주민 이름은'.tr,
+                                      child: Text('의 아메리카 원주민 이름은'.tr(),
                                           style: textTheme.bodyLarge))
                                 ]),
                             Row(
                               children: [
                                 Text(
-                                  '강렬한 거북이의 안내자'.tr,
+                                  '강렬한 거북이의 안내자'.tr(),
                                   style: textTheme.bodyLarge!.bold.copyWith(
                                       color: lightTheme.errorContainer),
                                 ),
-                                Text('입니다.'.tr, style: textTheme.bodyLarge)
+                                Text('입니다.'.tr(), style: textTheme.bodyLarge)
                               ],
                             ),
                           ],
@@ -114,15 +115,15 @@ class NamingScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('꼬리'.tr,
+                                  Text('꼬리'.tr(),
                                       style:
                                           CustomTextStyles.bodyMediumBlack900),
                                   SizedBox(height: 2.h),
-                                  Text('5살 2개월'.tr,
+                                  Text('5살 2개월'.tr(),
                                       style:
                                           CustomTextStyles.bodyMediumBlack900),
                                   SizedBox(height: 3.h),
-                                  Text('남자'.tr, style: textTheme.bodyLarge)
+                                  Text('남자'.tr(), style: textTheme.bodyLarge)
                                 ],
                               ),
                             ),
@@ -163,14 +164,14 @@ class NamingScreen extends StatelessWidget {
                         CustomElevatedButton(
                             height: 56.h,
                             width: 144.w,
-                            text: '다시하기'.tr,
+                            text: '다시하기'.tr(),
                             buttonStyle: CustomButtonStyles.fillPrimary,
                             buttonTextStyle:
                                 CustomTextStyles.bodyMediumOnErrorContainer),
                         CustomElevatedButton(
                             height: 56.h,
                             width: 144.w,
-                            text: '목록으로'.tr,
+                            text: '목록으로'.tr(),
                             margin: EdgeInsets.only(left: 21.w),
                             buttonStyle: CustomButtonStyles.fillBlack)
                       ]),

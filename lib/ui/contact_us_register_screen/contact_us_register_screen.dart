@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
@@ -63,7 +63,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 132.w),
-                            child: Text('1:1 문의'.tr,
+                            child: Text('1:1 문의'.tr(),
                                 style: CustomTextStyles.bodyLarge18))
                       ],
                     ),
@@ -77,7 +77,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 32.w),
-                    child: Text('1:1 문의하기'.tr, style: textTheme.bodyLarge),
+                    child: Text('1:1 문의하기'.tr(), style: textTheme.bodyLarge),
                   ),
                 ),
                 SizedBox(height: 16.h),
@@ -88,7 +88,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                 _buildRecentOrders(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
-                    text: '문의하기'.tr,
+                    text: '문의하기'.tr(),
                     margin: EdgeInsets.symmetric(horizontal: 16.w),
                     buttonStyle: CustomButtonStyles.fillBlackTL12),
                 SizedBox(height: 128.h),
@@ -113,7 +113,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
             margin: EdgeInsets.only(right: 14.w),
             width: 44.w,
             child: Text(
-              '문의유형'.tr,
+              '문의유형'.tr(),
               maxLines: 2,
               style: textTheme.bodyLarge!.copyWith(height: 1.50),
             ),
@@ -153,7 +153,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
             width: 43.w,
             margin: EdgeInsets.only(top: 3.h, bottom: 43.h),
             child: Text(
-              '문의내용'.tr,
+              '문의내용'.tr(),
               maxLines: 2,
               style: textTheme.bodyLarge!.copyWith(height: 1.50),
             ),

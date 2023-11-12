@@ -1,11 +1,13 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/errors/exceptions.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_bar.dart';
@@ -32,7 +34,7 @@ class ErrorPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 62.h),
-              Text('죄송합니다'.tr, style: CustomTextStyles.bodyLarge18),
+              Text('죄송합니다'.tr(), style: CustomTextStyles.bodyLarge18),
               Text(error.message.toString(),
                   style: CustomTextStyles.bodyLarge18),
               SizedBox(height: 38.h),

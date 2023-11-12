@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -55,7 +55,7 @@ class PetsEmptyScreen extends StatelessWidget {
                               Row(children: [
                                 Text('Andrew',
                                     style: CustomTextStyles.bodyLargeGray900),
-                                Text('님, 반가워요!'.tr,
+                                Text('님, 반가워요!'.tr(),
                                     style: CustomTextStyles.bodyLargeGray900)
                               ]),
                               SizedBox(height: 3.h),
@@ -83,28 +83,28 @@ class PetsEmptyScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 15.w, right: 19.w),
                   child: _buildWidget(context,
-                      userName: '등록된 정보가 없습니다.'.tr,
-                      userAge: '생년월일'.tr,
+                      userName: '등록된 정보가 없습니다.'.tr(),
+                      userAge: '생년월일'.tr(),
                       userLocation: '-',
-                      userOccupation: '연령'.tr,
+                      userOccupation: '연령'.tr(),
                       userDescription: '-',
-                      userInterests: '견종'.tr,
+                      userInterests: '견종'.tr(),
                       userHobbies: '-',
-                      userGoals: '성별'.tr,
+                      userGoals: '성별'.tr(),
                       userSkills: '-'),
                 ),
                 SizedBox(height: 18.h),
                 Padding(
                   padding: EdgeInsets.only(left: 15.w, right: 19.w),
                   child: _buildWidget(context,
-                      userName: '등록된 정보가 없습니다.'.tr,
-                      userAge: '생년월일'.tr,
+                      userName: '등록된 정보가 없습니다.'.tr(),
+                      userAge: '생년월일'.tr(),
                       userLocation: '-',
-                      userOccupation: '연령'.tr,
+                      userOccupation: '연령'.tr(),
                       userDescription: '-',
-                      userInterests: '묘종'.tr,
+                      userInterests: '묘종'.tr(),
                       userHobbies: '-',
-                      userGoals: '성별'.tr,
+                      userGoals: '성별'.tr(),
                       userSkills: '-'),
                 ),
                 SizedBox(height: 16.h),
@@ -137,7 +137,7 @@ class PetsEmptyScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
+                Text('나는 멍집사'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,
@@ -153,7 +153,7 @@ class PetsEmptyScreen extends StatelessWidget {
                       CustomElevatedButton(
                           height: 32.h,
                           width: 149.w,
-                          text: '강아지 등록하기'.tr,
+                          text: '강아지 등록하기'.tr(),
                           margin: EdgeInsets.only(bottom: 24.h),
                           buttonStyle: CustomButtonStyles.fillBlue,
                           buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
@@ -174,7 +174,7 @@ class PetsEmptyScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
+                Text('나는 냥집사'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,
@@ -193,7 +193,7 @@ class PetsEmptyScreen extends StatelessWidget {
                       CustomElevatedButton(
                           height: 32.h,
                           width: 149.w,
-                          text: '고양이 등록하기'.tr,
+                          text: '고양이 등록하기'.tr(),
                           margin: EdgeInsets.only(bottom: 24.h),
                           buttonStyle: CustomButtonStyles.fillBlue,
                           buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
@@ -213,7 +213,7 @@ class PetsEmptyScreen extends StatelessWidget {
   Widget _buildInquiries(BuildContext context) {
     return CustomElevatedButton(
         height: 48.h,
-        text: '1:1 문의'.tr,
+        text: '1:1 문의'.tr(),
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: textTheme.bodyLarge,
         onPressed: () {
@@ -225,7 +225,7 @@ class PetsEmptyScreen extends StatelessWidget {
   Widget _buildFaq(BuildContext context) {
     return CustomElevatedButton(
         height: 48.h,
-        text: '자주묻는질문'.tr,
+        text: '자주묻는질문'.tr(),
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: textTheme.bodyLarge,
         onPressed: () {
@@ -243,26 +243,26 @@ class PetsEmptyScreen extends StatelessWidget {
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillPrimary,
-            child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge),
+            child: Text('나의 반려친구'.tr(), style: textTheme.bodyLarge),
           ),
           Container(
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillGray50,
-            child: Text('심리검사'.tr, style: textTheme.bodyLarge),
+            child: Text('심리검사'.tr(), style: textTheme.bodyLarge),
           ),
           Container(
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillGray50,
-            child: Text('방문교육'.tr, style: textTheme.bodyLarge),
+            child: Text('방문교육'.tr(), style: textTheme.bodyLarge),
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillGray50,
             child: Row(
               children: [
-                Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
+                Text('보유쿠폰'.tr(), style: textTheme.bodyLarge),
                 Container(
                   height: 20.h,
                   width: 18.w,
@@ -295,7 +295,7 @@ class PetsEmptyScreen extends StatelessWidget {
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillGray50,
-            child: Text('로그아웃'.tr, style: textTheme.bodyLarge),
+            child: Text('로그아웃'.tr(), style: textTheme.bodyLarge),
           ),
           Container(
             width: 361.w,
@@ -308,13 +308,13 @@ class PetsEmptyScreen extends StatelessWidget {
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
             decoration: AppDecoration.fillGray50,
-            child: Text('공지사항'.tr, style: textTheme.bodyLarge),
+            child: Text('공지사항'.tr(), style: textTheme.bodyLarge),
           ),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
-              child: Text('이벤트'.tr, style: textTheme.bodyLarge))
+              child: Text('이벤트'.tr(), style: textTheme.bodyLarge))
         ],
       ),
     );

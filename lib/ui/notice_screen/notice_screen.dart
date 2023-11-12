@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
@@ -42,7 +44,7 @@ class NoticeScreen extends StatelessWidget {
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 127.w),
-                            child: Text('공지사항'.tr,
+                            child: Text('공지사항'.tr(),
                                 style: CustomTextStyles.bodyLarge18))
                       ],
                     ),
@@ -53,7 +55,7 @@ class NoticeScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: _buildNotice(context,
                       userName: '2',
-                      userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr,
+                      userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr(),
                       userDate: '2021-03-04'),
                 ),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
@@ -61,7 +63,7 @@ class NoticeScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: _buildNotice(context,
                       userName: '1',
-                      userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr,
+                      userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr(),
                       userDate: '2020-03-17'),
                 ),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),

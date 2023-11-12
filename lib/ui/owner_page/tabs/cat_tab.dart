@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_footer.dart';
@@ -79,13 +81,13 @@ class CatTabState extends State<CatTab>
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text('고양이 MBTI'.tr,
+            child: Text('고양이 MBTI'.tr(),
                 style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 7.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text('알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr,
+            child: Text('알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr(),
                 style: CustomTextStyles.bodySmallPrimaryContainer),
           ),
           SizedBox(height: 39.h),
@@ -93,7 +95,7 @@ class CatTabState extends State<CatTab>
             padding: EdgeInsets.only(left: 14.w),
             child: Row(
               children: [
-                Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
+                Text('자세히 보기'.tr(), style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
                   imagePath: Assets.svg.imgArrowDownGray700.path,
                   height: 10.h,

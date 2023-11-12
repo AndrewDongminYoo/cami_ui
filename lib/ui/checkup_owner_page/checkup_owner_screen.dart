@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -51,7 +53,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('입양준비검사(DPAI)'.tr,
+                    child: Text('입양준비검사(DPAI)'.tr(),
                         style: CustomTextStyles.bodyMediumBlack900),
                   ),
                 ),
@@ -75,7 +77,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('입양준비검사'.tr,
+                    child: Text('입양준비검사'.tr(),
                         style: CustomTextStyles.bodyLargeNanumSquareNeo),
                   ),
                 ),
@@ -94,7 +96,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 8.w),
-                          child: Text('(4)'.tr,
+                          child: Text('(4)'.tr(),
                               style: CustomTextStyles.bodyMediumBlack900),
                         ),
                       ],
@@ -107,7 +109,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                 _buildQuickCheckupPrice(context),
                 SizedBox(height: 8.h),
                 CustomElevatedButton(
-                  text: '구매하기'.tr,
+                  text: '구매하기'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
                   buttonStyle: CustomButtonStyles.fillPrimary,
                   buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
@@ -139,13 +141,13 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         padding: EdgeInsets.only(left: 16.w),
         child: Row(
           children: [
-            BreadCrumb(text: '심리검사'.tr),
+            BreadCrumb(text: '심리검사'.tr()),
             BreadCrumb(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
             BreadCrumb(
-              text: '반려인'.tr,
+              text: '반려인'.tr(),
               margin: EdgeInsets.only(left: 8.w),
             ),
             BreadCrumb(
@@ -175,22 +177,22 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         children: [
           Row(
             children: [
-              Text('문항'.tr, style: textTheme.bodyMedium),
+              Text('문항'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 42.w),
-                child:
-                    Text('84문항'.tr, style: CustomTextStyles.bodyMediumGray800),
+                child: Text('84문항'.tr(),
+                    style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
           SizedBox(height: 3.h),
           Row(
             children: [
-              Text('소요시간'.tr, style: textTheme.bodyMedium),
+              Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child:
-                    Text('약 20분'.tr, style: CustomTextStyles.bodyMediumGray800),
+                child: Text('약 20분'.tr(),
+                    style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
@@ -238,8 +240,8 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
-            child:
-                Text('9,900원'.tr, style: CustomTextStyles.bodyMediumBlack90015),
+            child: Text('9,900원'.tr(),
+                style: CustomTextStyles.bodyMediumBlack90015),
           ),
         ],
       ),
@@ -272,10 +274,10 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         ),
         tabs: [
           Tab(
-            child: Text('검사소개'.tr),
+            child: Text('검사소개'.tr()),
           ),
           Tab(
-            child: Text('구매후기'.tr),
+            child: Text('구매후기'.tr()),
           ),
         ],
       ),

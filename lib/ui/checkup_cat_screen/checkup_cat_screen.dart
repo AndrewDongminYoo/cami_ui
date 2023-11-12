@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -41,7 +43,7 @@ class CheckupCatScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려묘 성격유형검사(CCSI)'.tr,
+                    child: Text('반려묘 성격유형검사(CCSI)'.tr(),
                         style: CustomTextStyles.bodyMediumBlack900),
                   ),
                 ),
@@ -58,7 +60,7 @@ class CheckupCatScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려묘 성격유형검사'.tr,
+                    child: Text('반려묘 성격유형검사'.tr(),
                         style: CustomTextStyles.bodyLargeNanumSquareNeo),
                   ),
                 ),
@@ -156,13 +158,13 @@ class CheckupCatScreen extends StatelessWidget {
         padding: EdgeInsets.only(left: 16.w),
         child: Row(
           children: [
-            BreadCrumb(text: '심리검사'.tr),
+            BreadCrumb(text: '심리검사'.tr()),
             BreadCrumb(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
             BreadCrumb(
-              text: '반려묘'.tr,
+              text: '반려묘'.tr(),
               margin: EdgeInsets.only(left: 8.w),
             ),
             BreadCrumb(
@@ -194,7 +196,7 @@ class CheckupCatScreen extends StatelessWidget {
       child: CustomTextFormField(
         width: 105.w,
         controller: infoEditTextController,
-        hintText: '(84)'.tr,
+        hintText: '(84)'.tr(),
         textInputAction: TextInputAction.done,
         alignment: Alignment.centerLeft,
         suffix: Container(
@@ -227,22 +229,22 @@ class CheckupCatScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('문항'.tr, style: textTheme.bodyMedium),
+              Text('문항'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
-                child:
-                    Text('128문항'.tr, style: CustomTextStyles.bodyMediumGray800),
+                child: Text('128문항'.tr(),
+                    style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
           SizedBox(height: 3.h),
           Row(
             children: [
-              Text('소요시간'.tr, style: textTheme.bodyMedium),
+              Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child:
-                    Text('약 20분'.tr, style: CustomTextStyles.bodyMediumGray800),
+                child: Text('약 20분'.tr(),
+                    style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
@@ -290,7 +292,7 @@ class CheckupCatScreen extends StatelessWidget {
               top: 4.h,
               bottom: 3.h,
             ),
-            child: Text('12,000원'.tr, style: textTheme.bodyLarge),
+            child: Text('12,000원'.tr(), style: textTheme.bodyLarge),
           ),
         ],
       ),
@@ -300,7 +302,7 @@ class CheckupCatScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildPurchaseButton(BuildContext context) {
     return CustomElevatedButton(
-      text: '구매하기'.tr,
+      text: '구매하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
       buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
@@ -311,7 +313,7 @@ class CheckupCatScreen extends StatelessWidget {
   Widget _buildIntroductionButton(BuildContext context) {
     return CustomElevatedButton(
       width: 181.w,
-      text: '검사소개'.tr,
+      text: '검사소개'.tr(),
       buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
     );
   }
@@ -320,7 +322,7 @@ class CheckupCatScreen extends StatelessWidget {
   Widget _buildReviewsButton(BuildContext context) {
     return CustomElevatedButton(
       width: 181.w,
-      text: '구매후기'.tr,
+      text: '구매후기'.tr(),
       buttonStyle: CustomButtonStyles.fillGrayTL81,
       buttonTextStyle: textTheme.bodyMedium,
     );

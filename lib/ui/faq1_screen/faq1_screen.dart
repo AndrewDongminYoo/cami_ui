@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/go_extensions.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_bar.dart';
@@ -51,7 +53,7 @@ class Faq1Screen extends StatelessWidget {
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 106.w),
-                            child: Text('자주 묻는 질문'.tr,
+                            child: Text('자주 묻는 질문'.tr(),
                                 style: CustomTextStyles.bodyLarge18))
                       ],
                     ),
@@ -122,7 +124,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '결제가 되지 않아요'.tr,
+                hintText: '결제가 되지 않아요'.tr(),
                 items: dropdownItemList0,
                 onChanged: (value) {},
               ),
@@ -156,7 +158,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '회원 탈퇴는 어떻게 하나요?'.tr,
+                hintText: '회원 탈퇴는 어떻게 하나요?'.tr(),
                 items: dropdownItemList1,
                 onChanged: (value) {},
               ),
@@ -191,7 +193,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr,
+                hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                 items: dropdownItemList2,
                 onChanged: (value) {},
               ),
@@ -226,7 +228,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr,
+                hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr(),
                 items: dropdownItemList3,
                 onChanged: (value) {},
               ),
@@ -260,7 +262,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr,
+                hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                 items: dropdownItemList4,
                 onChanged: (value) {},
               ),
@@ -294,7 +296,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '결과보고서 인쇄 방법'.tr,
+                hintText: '결과보고서 인쇄 방법'.tr(),
                 items: dropdownItemList5,
                 onChanged: (value) {},
               ),
@@ -328,7 +330,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '결과보고서 다시보기'.tr,
+                hintText: '결과보고서 다시보기'.tr(),
                 items: dropdownItemList6,
                 onChanged: (value) {},
               ),
@@ -362,7 +364,7 @@ class Faq1Screen extends StatelessWidget {
                       height: 32.h,
                       width: 30.w),
                 ),
-                hintText: '구매한 쿠폰이 보이지 않아요.'.tr,
+                hintText: '구매한 쿠폰이 보이지 않아요.'.tr(),
                 items: dropdownItemList7,
                 onChanged: (value) {},
               ),

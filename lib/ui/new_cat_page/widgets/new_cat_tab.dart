@@ -2,13 +2,13 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '../data/cat_breeds.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -53,7 +53,7 @@ class NewCatTabState extends State<NewCatTab>
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(left: 16.w),
-                      child: Text('묘종'.tr,
+                      child: Text('묘종'.tr(),
                           style: CustomTextStyles.bodyMediumOnPrimary),
                     ),
                   ),
@@ -85,7 +85,7 @@ class NewCatTabState extends State<NewCatTab>
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(left: 16.w),
-                      child: Text('중성화 수술 여부'.tr,
+                      child: Text('중성화 수술 여부'.tr(),
                           style: CustomTextStyles.bodyMediumOnPrimary),
                     ),
                   ),
@@ -93,7 +93,7 @@ class NewCatTabState extends State<NewCatTab>
                   _buildChipView(context),
                   SizedBox(height: 64.h),
                   CustomElevatedButton(
-                      text: '다음으로'.tr,
+                      text: '다음으로'.tr(),
                       margin: EdgeInsets.symmetric(horizontal: 16.w),
                       buttonStyle: CustomButtonStyles.fillPrimary,
                       buttonTextStyle:

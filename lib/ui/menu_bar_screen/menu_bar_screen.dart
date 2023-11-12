@@ -1,11 +1,13 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '../shared/cami_app_bar.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/custom_text_style.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -27,27 +29,27 @@ class MenuBarScreen extends StatelessWidget {
               SizedBox(height: 39.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('심리검사'.tr, style: CustomTextStyles.bodyLarge18),
+                child: Text('심리검사'.tr(), style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 24.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('방문교육'.tr, style: CustomTextStyles.bodyLarge18),
+                child: Text('방문교육'.tr(), style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('반짝 테스트'.tr, style: CustomTextStyles.bodyLarge18),
+                child: Text('반짝 테스트'.tr(), style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('마이페이지'.tr, style: CustomTextStyles.bodyLarge18),
+                child: Text('마이페이지'.tr(), style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 24.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('로그아웃'.tr, style: CustomTextStyles.bodyLarge18),
+                child: Text('로그아웃'.tr(), style: CustomTextStyles.bodyLarge18),
               ),
               const Spacer(),
               CustomImageView(

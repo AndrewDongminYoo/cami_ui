@@ -349,6 +349,16 @@ class $AssetsLottiesGen {
   List<LottieGenImage> get values => [loading];
 }
 
+class $AssetsMessagesGen {
+  const $AssetsMessagesGen();
+
+  /// File path: assets/messages/ko.json
+  String get ko => 'assets/messages/ko.json';
+
+  /// List of all assets
+  List<String> get values => [ko];
+}
+
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
@@ -433,6 +443,7 @@ class Assets {
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
+  static const $AssetsMessagesGen messages = $AssetsMessagesGen();
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
 

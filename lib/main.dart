@@ -3,24 +3,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // 📦 Package imports:
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/navigator_service.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/theme_helper.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
+  await EasyLocalization.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
 
   /// 필요에 따라 테마를 업데이트하세요.
   ThemeHelper().changeTheme('primary');
-  runApp(const MyApp());
+
+  runApp(EasyLocalization(
+    assetLoader: JsonAssetLoader(),
+    path: 'assets/messages',
+    supportedLocales: const [Locale('ko')],
+    fallbackLocale: const Locale('ko'),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,13 +40,9 @@ class MyApp extends StatelessWidget {
       theme: theme,
       title: '카미 CAMI',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        AppLocalizationDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [Locale('ko')],
+      locale: context.locale,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
       routerConfig: GoRouter(
         navigatorKey: NavigatorService.key,
         routes: AppRoutes.routes,

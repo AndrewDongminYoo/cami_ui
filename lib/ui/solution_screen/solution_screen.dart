@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
@@ -28,22 +30,22 @@ class SolutionScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text('함께해요'.tr, style: CustomTextStyles.bodyMediumGray90002),
+                Text('함께해요'.tr(), style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 17.h),
                 Text(
-                  '방문교육'.tr,
+                  '방문교육'.tr(),
                   style: CustomTextStyles.headlineSmallNanumSquareNeoBlack900,
                 ),
                 SizedBox(height: 18.h),
-                Text('준비된 반려인이'.tr, style: textTheme.bodyLarge),
-                Text('되기 위한 첫걸음'.tr, style: textTheme.bodyLarge),
+                Text('준비된 반려인이'.tr(), style: textTheme.bodyLarge),
+                Text('되기 위한 첫걸음'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 32.h),
                 _buildStrongRelationship(context),
                 SizedBox(height: 32.h),
                 _buildProvenSolution(context),
                 SizedBox(height: 130.h),
                 Text(
-                  '카미의 교육 서비스'.tr,
+                  '카미의 교육 서비스'.tr(),
                   style: CustomTextStyles.titleLargeBlack90020,
                 ),
                 SizedBox(height: 34.h),
@@ -70,13 +72,13 @@ class SolutionScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('반려인과의 돈독한 관계 형성'.tr, style: textTheme.bodyLarge),
+                Text('반려인과의 돈독한 관계 형성'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 14.h),
-                Text('그저 가르치는 것만을 목적으로 교육하지 않고'.tr,
+                Text('그저 가르치는 것만을 목적으로 교육하지 않고'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
-                Text('마음과 몸 모두가 건강한 반려생활을 지속할 수'.tr,
+                Text('마음과 몸 모두가 건강한 반려생활을 지속할 수'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
-                Text('있도록 도와드립니다.'.tr,
+                Text('있도록 도와드립니다.'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
               ],
             ),
@@ -112,13 +114,13 @@ class SolutionScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text('과학적으로 검증된 교육'.tr, style: textTheme.bodyLarge),
+                Text('과학적으로 검증된 교육'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 15.h),
-                Text('반려동물의 긍정적인 반응을 활용하여'.tr,
+                Text('반려동물의 긍정적인 반응을 활용하여'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
-                Text('과학적으로 검증된 방법들을 위주로'.tr,
+                Text('과학적으로 검증된 방법들을 위주로'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
-                Text('교육을 진행합니다.'.tr,
+                Text('교육을 진행합니다.'.tr(),
                     style: CustomTextStyles.bodySmallBlack9009),
               ],
             ),

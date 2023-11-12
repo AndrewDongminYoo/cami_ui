@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -52,7 +52,7 @@ class SignUpFormScreen extends StatelessWidget {
               children: [
                 SizedBox(height: 79.h),
                 Align(
-                  child: Text('회원가입'.tr, style: textTheme.displaySmall),
+                  child: Text('회원가입'.tr(), style: textTheme.displaySmall),
                 ),
                 SizedBox(height: 15.h),
                 Align(
@@ -61,7 +61,7 @@ class SignUpFormScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('환영합니다!'.tr,
+                        Text('환영합니다!'.tr(),
                             style: CustomTextStyles.bodyMediumGray60001),
                         Padding(
                           padding: EdgeInsets.only(left: 4.w),
@@ -70,7 +70,7 @@ class SignUpFormScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 1.w),
-                          child: Text('는 여러분들을 기다리고 있습니다!'.tr,
+                          child: Text('는 여러분들을 기다리고 있습니다!'.tr(),
                               style: CustomTextStyles.bodyMediumGray60001),
                         ),
                       ],
@@ -80,7 +80,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 64.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이메일 주소'.tr,
+                  child: Text('이메일 주소'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -88,7 +88,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('비밀번호'.tr,
+                  child: Text('비밀번호'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -96,7 +96,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('비밀번호 확인'.tr,
+                  child: Text('비밀번호 확인'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -104,7 +104,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이름'.tr,
+                  child: Text('이름'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -112,7 +112,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('닉네임'.tr,
+                  child: Text('닉네임'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -120,7 +120,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('생년월일'.tr,
+                  child: Text('생년월일'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
@@ -128,7 +128,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('성별'.tr,
+                  child: Text('성별'.tr(),
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 3.h),
@@ -154,16 +154,16 @@ class SignUpFormScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('[필수]'.tr, style: textTheme.bodyLarge),
+                        child: Text('[필수]'.tr(), style: textTheme.bodyLarge),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 7.w),
-                        child: Text('이용약관'.tr,
+                        child: Text('이용약관'.tr(),
                             style: CustomTextStyles.bodyLargeIndigo400),
                       ),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
-                          child: Text('동의'.tr, style: textTheme.bodyLarge))
+                          child: Text('동의'.tr(), style: textTheme.bodyLarge))
                     ],
                   ),
                 ),
@@ -189,16 +189,17 @@ class SignUpFormScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('[필수]'.tr, style: textTheme.bodyLarge),
+                        child: Text('[필수]'.tr(), style: textTheme.bodyLarge),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 6.w),
-                        child: Text('개인정보 취급방침'.tr,
+                        child: Text('개인정보 취급방침'.tr(),
                             style: CustomTextStyles.bodyLargeIndigo400),
                       ),
                       Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Text('에 대한 동의'.tr, style: textTheme.bodyLarge))
+                          child:
+                              Text('에 대한 동의'.tr(), style: textTheme.bodyLarge))
                     ],
                   ),
                 ),
@@ -206,17 +207,17 @@ class SignUpFormScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 16.w, right: 88.w),
                   child: _buildVector(context,
-                      messageText: '[선택] 마케팅 정보 수신 동의 - 이메일'.tr),
+                      messageText: '[선택] 마케팅 정보 수신 동의 - 이메일'.tr()),
                 ),
                 SizedBox(height: 7.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w, right: 88.w),
                   child: _buildVector(context,
-                      messageText: '[선택] 마케팅 정보 수신 - SMS/MMS'.tr),
+                      messageText: '[선택] 마케팅 정보 수신 - SMS/MMS'.tr()),
                 ),
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
-                    text: '회원 가입'.tr,
+                    text: '회원 가입'.tr(),
                     margin: EdgeInsets.symmetric(horizontal: 16.w),
                     buttonStyle: CustomButtonStyles.fillBlack,
                     alignment: Alignment.center),
@@ -302,7 +303,7 @@ class SignUpFormScreen extends StatelessWidget {
                 onChanged: (value) {}),
             Padding(
               padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('년'.tr, style: textTheme.bodyLarge),
+              child: Text('년'.tr(), style: textTheme.bodyLarge),
             ),
             Padding(
               padding: EdgeInsets.only(left: 17.w),
@@ -325,7 +326,7 @@ class SignUpFormScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('월'.tr, style: textTheme.bodyLarge),
+              child: Text('월'.tr(), style: textTheme.bodyLarge),
             ),
             Padding(
               padding: EdgeInsets.only(left: 16.w),
@@ -348,7 +349,7 @@ class SignUpFormScreen extends StatelessWidget {
             ),
             Padding(
                 padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                child: Text('일'.tr, style: textTheme.bodyLarge))
+                child: Text('일'.tr(), style: textTheme.bodyLarge))
           ],
         ),
       ),
@@ -362,7 +363,7 @@ class SignUpFormScreen extends StatelessWidget {
       child: Row(
         children: [
           CustomRadioButton(
-              text: '여성'.tr,
+              text: '여성'.tr(),
               value: radioList[0],
               groupValue: genderRadioGroup,
               onChange: (value) {
@@ -371,7 +372,7 @@ class SignUpFormScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 64.w),
             child: CustomRadioButton(
-              text: '남성'.tr,
+              text: '남성'.tr(),
               value: radioList[1],
               groupValue: genderRadioGroup,
               onChange: (value) {
@@ -382,7 +383,7 @@ class SignUpFormScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 63.w),
             child: CustomRadioButton(
-              text: '기타'.tr,
+              text: '기타'.tr(),
               value: radioList[2],
               groupValue: genderRadioGroup,
               onChange: (value) {

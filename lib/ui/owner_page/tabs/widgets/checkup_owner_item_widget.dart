@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/widgets/custom_elevated_button.dart';
@@ -41,7 +43,7 @@ class CheckupOwnerItemWidget extends StatelessWidget {
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text('보호자 양육면허시험'.tr,
+            child: Text('보호자 양육면허시험'.tr(),
                 style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 5.h),
@@ -52,7 +54,7 @@ class CheckupOwnerItemWidget extends StatelessWidget {
               right: 30.w,
             ),
             child: Text(
-              '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr,
+              '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr(),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: CustomTextStyles.bodySmallPrimaryContainer
@@ -64,7 +66,7 @@ class CheckupOwnerItemWidget extends StatelessWidget {
             padding: EdgeInsets.only(left: 14.w),
             child: Row(
               children: [
-                Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
+                Text('자세히 보기'.tr(), style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
                   imagePath: Assets.svg.imgArrowDownGray700.path,
                   height: 10.h,

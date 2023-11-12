@@ -1,10 +1,12 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/localization/app_localization.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -43,7 +45,7 @@ class NoticeDetailScreen extends StatelessWidget {
                           }),
                       Padding(
                           padding: EdgeInsets.only(left: 127.w),
-                          child: Text('공지사항'.tr,
+                          child: Text('공지사항'.tr(),
                               style: CustomTextStyles.bodyLarge18))
                     ],
                   ),
@@ -56,7 +58,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 SizedBox(height: 12.h),
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
-                  child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr.toUpperCase(),
+                  child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr().toUpperCase(),
                       style: CustomTextStyles.bodyMediumBlack900),
                 ),
                 SizedBox(height: 21.h),
@@ -71,7 +73,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 CustomElevatedButton(
                     height: 32.h,
                     width: 104.w,
-                    text: '목록으로'.tr,
+                    text: '목록으로'.tr(),
                     margin: EdgeInsets.only(right: 16.w),
                     buttonStyle: CustomButtonStyles.fillBlue,
                     buttonTextStyle: CustomTextStyles.bodySmallBlack900,
@@ -103,7 +105,7 @@ class NoticeDetailScreen extends StatelessWidget {
               margin: EdgeInsets.only(right: 9.w),
               child: Text(
                 '서버 업데이트 과정에서 시스템 오류로 인해 2019년 11월 15일 이후 업로드한 반려인/반려견 프로필 사진이 삭제되었습니다.'
-                    .tr,
+                    .tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style:
@@ -114,21 +116,21 @@ class NoticeDetailScreen extends StatelessWidget {
               width: 326.w,
               margin: EdgeInsets.only(right: 9.w),
               child: Text(
-                '이에 따라 사진이 삭제된 유저분들은 필요에 따라 프로필 사진을 재등록하셔야 합니다.'.tr,
+                '이에 따라 사진이 삭제된 유저분들은 필요에 따라 프로필 사진을 재등록하셔야 합니다.'.tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style:
                     CustomTextStyles.bodySmallBlack900.copyWith(height: 1.33),
               ),
             ),
-            Text('사이트 이용에 불편을 드려 죄송합니다.'.tr,
+            Text('사이트 이용에 불편을 드려 죄송합니다.'.tr(),
                 style: CustomTextStyles.bodySmallBlack900),
             SizedBox(height: 3.h),
             Container(
               width: 327.w,
               margin: EdgeInsets.only(right: 9.w),
               child: Text(
-                '향후 이런 일이 재발하지 않도록 서버의 보안과 백업 정책을 강화하겠습니다.'.tr,
+                '향후 이런 일이 재발하지 않도록 서버의 보안과 백업 정책을 강화하겠습니다.'.tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style:
