@@ -13,6 +13,7 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
+import 'data/cat_breeds.dart';
 import 'widgets/chipview_item_widget.dart';
 
 class NewCatPage extends StatefulWidget {
@@ -24,10 +25,13 @@ class NewCatPage extends StatefulWidget {
 
 class NewCatPageState extends State<NewCatPage>
     with AutomaticKeepAliveClientMixin<NewCatPage> {
-  final dropdownItemList = ['Item One', 'Item Two', 'Item Three'];
-
   @override
   bool get wantKeepAlive => true;
+
+  final catBreeds = petGroupList
+      .where((pet) => pet.animalGroup1Id == 2)
+      .map((cat) => cat.animalGroup2Name)
+      .toList();
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +58,8 @@ class NewCatPageState extends State<NewCatPage>
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: CustomDropDown(
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 15.w, vertical: 10.h),
                       icon: Container(
                         padding: EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
                         decoration: BoxDecoration(
@@ -65,8 +71,10 @@ class NewCatPageState extends State<NewCatPage>
                             height: 8.h,
                             width: 12.w),
                       ),
-                      items: dropdownItemList,
-                      onChanged: (value) {},
+                      items: catBreeds,
+                      onChanged: (value) {
+                        print('$value 🐈🐈‍⬛');
+                      },
                     ),
                   ),
                   SizedBox(height: 33.h),
