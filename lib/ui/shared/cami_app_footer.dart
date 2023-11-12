@@ -115,17 +115,17 @@ class CamiAppFooter extends StatelessWidget {
           SizedBox(height: 39.h),
           Row(children: [
             CustomImageView(
-                imagePath: Assets.images.imgImage24x24.path,
+                imagePath: Assets.images.icoFacebookDark.path,
                 height: 24.r,
                 width: 24.r),
             CustomImageView(
-              imagePath: Assets.images.imgImage3.path,
+              imagePath: Assets.images.icoInstagramDark.path,
               height: 24.r,
               width: 24.r,
               margin: EdgeInsets.only(left: 16.w),
             ),
             CustomImageView(
-              imagePath: Assets.images.imgImage4.path,
+              imagePath: Assets.images.icoNaverBlogDark.path,
               height: 24.r,
               width: 24.r,
               margin: EdgeInsets.only(left: 16.w),

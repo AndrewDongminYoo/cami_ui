@@ -39,7 +39,7 @@ class PetsOneCatScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         CustomImageView(
-                          imagePath: Assets.images.imgImage8.path,
+                          imagePath: Assets.images.avatarDefault.path,
                           height: 100.r,
                           width: 100.r,
                           radius: BorderRadius.circular(50.w),
@@ -106,7 +106,7 @@ class PetsOneCatScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: Assets.images.imgImage84x84.path,
+            imagePath: Assets.images.avatarDog.path,
             height: 84.r,
             width: 84.r,
             radius: BorderRadius.circular(42.w),

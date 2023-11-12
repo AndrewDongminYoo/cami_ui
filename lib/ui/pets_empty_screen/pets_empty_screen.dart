@@ -38,7 +38,7 @@ class PetsEmptyScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         CustomImageView(
-                          imagePath: Assets.images.imgImage8.path,
+                          imagePath: Assets.images.avatarDefault.path,
                           height: 100.r,
                           width: 100.r,
                           radius: BorderRadius.circular(50.w),
@@ -338,7 +338,7 @@ class PetsEmptyScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: Assets.images.imgImage9.path,
+            imagePath: Assets.images.avatarCat.path,
             height: 84.r,
             width: 84.r,
             radius: BorderRadius.circular(42.w),

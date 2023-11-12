@@ -161,7 +161,7 @@ class MyPageScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomImageView(
-            imagePath: Assets.images.imgImage79x79.path,
+            imagePath: Assets.images.avatarOwner.path,
             height: 79.r,
             width: 79.r,
           ),
@@ -347,7 +347,7 @@ class MyPageScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: Assets.images.imgImage9.path,
+            imagePath: Assets.images.avatarCat.path,
             height: 84.r,
             width: 84.r,
             radius: BorderRadius.circular(42.w),

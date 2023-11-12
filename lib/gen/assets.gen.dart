@@ -18,6 +18,38 @@ import 'package:lottie/lottie.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/avatar_cat.png
+  AssetGenImage get avatarCat =>
+      const AssetGenImage('assets/images/avatar_cat.png');
+
+  /// File path: assets/images/avatar_default.png
+  AssetGenImage get avatarDefault =>
+      const AssetGenImage('assets/images/avatar_default.png');
+
+  /// File path: assets/images/avatar_dog.png
+  AssetGenImage get avatarDog =>
+      const AssetGenImage('assets/images/avatar_dog.png');
+
+  /// File path: assets/images/avatar_owner.png
+  AssetGenImage get avatarOwner =>
+      const AssetGenImage('assets/images/avatar_owner.png');
+
+  /// File path: assets/images/ico_facebook_dark.png
+  AssetGenImage get icoFacebookDark =>
+      const AssetGenImage('assets/images/ico_facebook_dark.png');
+
+  /// File path: assets/images/ico_instagram_dark.png
+  AssetGenImage get icoInstagramDark =>
+      const AssetGenImage('assets/images/ico_instagram_dark.png');
+
+  /// File path: assets/images/ico_menu_vert.png
+  AssetGenImage get icoMenuVert =>
+      const AssetGenImage('assets/images/ico_menu_vert.png');
+
+  /// File path: assets/images/ico_naver_blog_dark.png
+  AssetGenImage get icoNaverBlogDark =>
+      const AssetGenImage('assets/images/ico_naver_blog_dark.png');
+
   /// File path: assets/images/image_not_found.png
   AssetGenImage get imageNotFound =>
       const AssetGenImage('assets/images/image_not_found.png');
@@ -150,10 +182,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage242x337 =>
       const AssetGenImage('assets/images/img_image_242x337.png');
 
-  /// File path: assets/images/img_image_24x24.png
-  AssetGenImage get imgImage24x24 =>
-      const AssetGenImage('assets/images/img_image_24x24.png');
-
   /// File path: assets/images/img_image_25.png
   AssetGenImage get imgImage25 =>
       const AssetGenImage('assets/images/img_image_25.png');
@@ -162,17 +190,9 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage257x241 =>
       const AssetGenImage('assets/images/img_image_257x241.png');
 
-  /// File path: assets/images/img_image_3.png
-  AssetGenImage get imgImage3 =>
-      const AssetGenImage('assets/images/img_image_3.png');
-
   /// File path: assets/images/img_image_320x337.png
   AssetGenImage get imgImage320x337 =>
       const AssetGenImage('assets/images/img_image_320x337.png');
-
-  /// File path: assets/images/img_image_4.png
-  AssetGenImage get imgImage4 =>
-      const AssetGenImage('assets/images/img_image_4.png');
 
   /// File path: assets/images/img_image_472x361.png
   AssetGenImage get imgImage472x361 =>
@@ -218,10 +238,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage683x361 =>
       const AssetGenImage('assets/images/img_image_683x361.png');
 
-  /// File path: assets/images/img_image_7.png
-  AssetGenImage get imgImage7 =>
-      const AssetGenImage('assets/images/img_image_7.png');
-
   /// File path: assets/images/img_image_705x361.png
   AssetGenImage get imgImage705x361 =>
       const AssetGenImage('assets/images/img_image_705x361.png');
@@ -238,25 +254,9 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage731x361 =>
       const AssetGenImage('assets/images/img_image_731x361.png');
 
-  /// File path: assets/images/img_image_79x79.png
-  AssetGenImage get imgImage79x79 =>
-      const AssetGenImage('assets/images/img_image_79x79.png');
-
-  /// File path: assets/images/img_image_8.png
-  AssetGenImage get imgImage8 =>
-      const AssetGenImage('assets/images/img_image_8.png');
-
   /// File path: assets/images/img_image_84x393.png
   AssetGenImage get imgImage84x393 =>
       const AssetGenImage('assets/images/img_image_84x393.png');
-
-  /// File path: assets/images/img_image_84x84.png
-  AssetGenImage get imgImage84x84 =>
-      const AssetGenImage('assets/images/img_image_84x84.png');
-
-  /// File path: assets/images/img_image_9.png
-  AssetGenImage get imgImage9 =>
-      const AssetGenImage('assets/images/img_image_9.png');
 
   /// File path: assets/images/img_image_997x361.png
   AssetGenImage get imgImage997x361 =>
@@ -272,6 +272,14 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        avatarCat,
+        avatarDefault,
+        avatarDog,
+        avatarOwner,
+        icoFacebookDark,
+        icoInstagramDark,
+        icoMenuVert,
+        icoNaverBlogDark,
         imageNotFound,
         imgCatProfile,
         imgImage1,
@@ -305,12 +313,9 @@ class $AssetsImagesGen {
         imgImage23,
         imgImage24,
         imgImage242x337,
-        imgImage24x24,
         imgImage25,
         imgImage257x241,
-        imgImage3,
         imgImage320x337,
-        imgImage4,
         imgImage472x361,
         imgImage5,
         imgImage543x361,
@@ -322,16 +327,11 @@ class $AssetsImagesGen {
         imgImage652x361,
         imgImage681x361,
         imgImage683x361,
-        imgImage7,
         imgImage705x361,
         imgImage719x361,
         imgImage725x361,
         imgImage731x361,
-        imgImage79x79,
-        imgImage8,
         imgImage84x393,
-        imgImage84x84,
-        imgImage9,
         imgImage997x361,
         imgInfo,
         imgUserProfile

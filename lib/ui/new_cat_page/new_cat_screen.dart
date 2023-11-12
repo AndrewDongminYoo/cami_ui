@@ -164,7 +164,7 @@ class NewCatScreenState extends State<NewCatScreen>
               margin: EdgeInsets.only(bottom: 45.h),
             ),
             CustomImageView(
-              imagePath: Assets.images.imgImage7.path,
+              imagePath: Assets.images.icoMenuVert.path,
               height: 24.r,
               width: 24.r,
               alignment: Alignment.bottomRight,

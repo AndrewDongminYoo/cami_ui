@@ -28,7 +28,7 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         actions: [
           CustomImageView(
-            imagePath: Assets.images.imgImage7.path,
+            imagePath: Assets.images.icoMenuVert.path,
             height: 24.r,
             width: 24.r,
             margin: EdgeInsets.all(14.h),
