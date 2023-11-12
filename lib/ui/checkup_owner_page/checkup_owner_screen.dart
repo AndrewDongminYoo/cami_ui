@@ -10,7 +10,7 @@ import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
-import '/widgets/app_bar/appbar_title.dart';
+import '/widgets/app_bar/bread_crumb.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -139,16 +139,16 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         padding: EdgeInsets.only(left: 16.w),
         child: Row(
           children: [
-            AppbarTitle(text: '심리검사'.tr),
-            AppbarTitle(
+            BreadCrumb(text: '심리검사'.tr),
+            BreadCrumb(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),
-            AppbarTitle(
+            BreadCrumb(
               text: '반려인'.tr,
               margin: EdgeInsets.only(left: 8.w),
             ),
-            AppbarTitle(
+            BreadCrumb(
               text: '/',
               margin: EdgeInsets.only(left: 12.w),
             ),

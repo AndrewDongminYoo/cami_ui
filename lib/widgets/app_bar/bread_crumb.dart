@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // 🌎 Project imports:
 import '/theme/theme_helper.dart';
 
-class AppbarTitle extends StatelessWidget {
-  const AppbarTitle({
+class BreadCrumb extends StatelessWidget {
+  const BreadCrumb({
     super.key,
     required this.text,
     this.margin,
@@ -20,7 +20,7 @@ class AppbarTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onTap!.call();
+        onTap?.call();
       },
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
