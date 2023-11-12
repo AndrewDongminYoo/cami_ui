@@ -1,6 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
@@ -157,8 +160,7 @@ class QuickTestScreen extends StatelessWidget {
                           text: '진단시작'.tr,
                           buttonStyle: CustomButtonStyles.fillBlack,
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, AppRoutes.namingScreen);
+                            context.go(AppRoutes.namingScreen);
                           }),
                       SizedBox(height: 64.h),
                       CustomImageView(

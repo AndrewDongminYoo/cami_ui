@@ -1,11 +1,15 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
 import '/routes/app_routes.dart';
+import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -458,7 +462,8 @@ class EditProfileScreen extends StatelessWidget {
 
   /// Navigates back to the previous screen.
   void onTapImgArrowLeft(BuildContext context) {
-    Navigator.pop(context);
+    context.safePop();
+    context.pop();
   }
 
   void onTapTxtWidget(BuildContext context) {
@@ -467,11 +472,11 @@ class EditProfileScreen extends StatelessWidget {
 
   /// Navigates to the faqScreen when the action is triggered.
   void onTapTxtWidget1(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.faqScreen);
+    context.go(AppRoutes.faqScreen);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.
   void onTapTxtWidget2(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.contactUsRegisterScreen);
+    context.go(AppRoutes.contactUsRegisterScreen);
   }
 }

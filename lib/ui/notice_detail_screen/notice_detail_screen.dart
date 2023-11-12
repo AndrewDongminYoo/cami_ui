@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
+import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -38,7 +39,7 @@ class NoticeDetailScreen extends StatelessWidget {
                           height: 28.h,
                           width: 20.w,
                           onTap: () {
-                            Navigator.pop(context);
+                            context.safePop();
                           }),
                       Padding(
                           padding: EdgeInsets.only(left: 127.w),

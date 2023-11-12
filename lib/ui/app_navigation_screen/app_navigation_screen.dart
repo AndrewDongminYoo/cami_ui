@@ -1,6 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/routes/app_routes.dart';
@@ -268,6 +271,6 @@ class AppNavigationScreen extends StatelessWidget {
     BuildContext context,
     String routeName,
   ) {
-    Navigator.pushNamed(context, routeName);
+    context.go(routeName);
   }
 }

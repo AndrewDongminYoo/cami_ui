@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // 🌎 Project imports:
@@ -186,11 +187,11 @@ class NamingScreen extends StatelessWidget {
 
   /// Navigates to the faqScreen when the action is triggered.
   void onTapTxtWidget(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.faqScreen);
+    context.go(AppRoutes.faqScreen);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.
   void onTapTxtWidget1(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.contactUsRegisterScreen);
+    context.go(AppRoutes.contactUsRegisterScreen);
   }
 }

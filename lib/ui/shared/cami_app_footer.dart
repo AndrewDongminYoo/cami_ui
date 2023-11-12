@@ -1,6 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
@@ -35,7 +38,7 @@ class CamiAppFooter extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, AppRoutes.faqScreen);
+                context.go(AppRoutes.faqScreen);
               },
               child: Padding(
                 padding: EdgeInsets.only(left: 17.w),
@@ -53,8 +56,7 @@ class CamiAppFooter extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(
-                        context, AppRoutes.contactUsRegisterScreen);
+                    context.go(AppRoutes.contactUsRegisterScreen);
                   },
                   child:
                       Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),

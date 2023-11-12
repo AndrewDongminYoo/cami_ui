@@ -1,6 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
@@ -427,11 +430,11 @@ class SignUpFormScreen extends StatelessWidget {
 
   /// Navigates to the faqScreen when the action is triggered.
   void onTapTxtWidget1(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.faqScreen);
+    context.go(AppRoutes.faqScreen);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.
   void onTapTxtWidget2(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.contactUsRegisterScreen);
+    context.go(AppRoutes.contactUsRegisterScreen);
   }
 }

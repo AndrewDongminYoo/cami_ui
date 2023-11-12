@@ -1,6 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
@@ -33,8 +36,7 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: 24.r,
             margin: EdgeInsets.all(14.h),
             onTap: () {
-              Navigator.of(context)
-                  .restorablePushNamed(AppRoutes.menuBarScreen);
+              context.go(AppRoutes.menuBarScreen);
             },
           ),
         ],

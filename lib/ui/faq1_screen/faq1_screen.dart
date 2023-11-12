@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
+import '/routes/go_extensions.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
@@ -46,7 +47,7 @@ class Faq1Screen extends StatelessWidget {
                             height: 28.h,
                             width: 20.w,
                             onTap: () {
-                              Navigator.pop(context);
+                              context.safePop();
                             }),
                         Padding(
                             padding: EdgeInsets.only(left: 106.w),

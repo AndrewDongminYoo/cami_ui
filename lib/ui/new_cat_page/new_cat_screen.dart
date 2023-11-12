@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
+import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -292,6 +293,6 @@ class NewCatScreenState extends State<NewCatScreen>
 
   /// Navigates back to the previous screen.
   void onTapImgArrowLeft(BuildContext context) {
-    Navigator.pop(context);
+    context.safePop();
   }
 }
