@@ -27,6 +27,7 @@ class NoticeScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 Align(

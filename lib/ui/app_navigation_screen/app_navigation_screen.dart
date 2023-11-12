@@ -25,6 +25,7 @@ class AppNavigationScreen extends StatelessWidget {
               _buildAppNavigation(context),
               Expanded(
                 child: SingleChildScrollView(
+                  primary: true,
                   child: Container(
                     decoration: const BoxDecoration(color: Colors.white),
                     child: Column(

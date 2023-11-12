@@ -41,6 +41,7 @@ class OwnerScreenState extends State<OwnerScreen>
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 _buildOwnerFrame(context),

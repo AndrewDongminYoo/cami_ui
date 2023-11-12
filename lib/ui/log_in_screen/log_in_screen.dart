@@ -35,6 +35,7 @@ class LogInScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 SizedBox(height: 29.h),

@@ -69,7 +69,13 @@ extension NavigationExtensions on BuildContext {
   // 현재 경로를 새로고침합니다.
   void reload() {
     GoRouter.of(this).refresh();
-    PrimaryScrollController.of(this).animateTo(
+    scrollToTop();
+  }
+
+  /// [ScrollView]의 가장 상단으로 이동합니다.
+  /// [PrimaryScrollController]가 동작하기 위해서는 반드시 [ScrollView.primary]가 [true]여야 합니다.
+  void scrollToTop() {
+    PrimaryScrollController.maybeOf(this)?.animateTo(
       /** top offset */ 0,
       duration: 300.ms,
       curve: Curves.bounceIn,

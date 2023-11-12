@@ -31,6 +31,7 @@ class QuickTestScreen extends StatelessWidget {
               SizedBox(height: 52.h),
               Expanded(
                 child: SingleChildScrollView(
+                  primary: true,
                   child: Column(
                     children: [
                       Text('반짝 테스트'.tr(),

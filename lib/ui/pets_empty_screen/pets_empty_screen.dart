@@ -31,6 +31,7 @@ class PetsEmptyScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 SizedBox(height: 44.h),

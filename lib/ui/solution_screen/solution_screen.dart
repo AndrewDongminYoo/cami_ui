@@ -28,6 +28,7 @@ class SolutionScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 Text('함께해요'.tr(), style: CustomTextStyles.bodyMediumGray90002),

@@ -35,6 +35,7 @@ class CheckupCatScreen extends StatelessWidget {
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 _breadcrumbs(context),

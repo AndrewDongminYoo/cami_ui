@@ -45,6 +45,7 @@ class SignUpFormScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

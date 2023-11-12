@@ -39,6 +39,7 @@ class NewCatScreenState extends State<NewCatScreen>
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

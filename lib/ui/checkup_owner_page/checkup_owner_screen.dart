@@ -45,6 +45,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 _breadcrumbs(context),
