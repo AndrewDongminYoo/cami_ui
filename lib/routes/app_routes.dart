@@ -1,5 +1,5 @@
-// 🐦 Flutter imports:
-import 'package:flutter/material.dart';
+// 📦 Package imports:
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/ui/app_navigation_screen/app_navigation_screen.dart';
@@ -56,29 +56,98 @@ class AppRoutes {
   static const String logInScreen = '/log_in_screen';
   static const String appNavigationScreen = '/app_navigation_screen';
 
-  static Map<String, WidgetBuilder> routes = {
-    quickTestScreen: (context) => const QuickTestScreen(),
-    namingScreen: (context) => NamingScreen(),
-    contactUsRegisterScreen: (context) => ContactUsRegisterScreen(),
-    faqScreen: (context) => FaqScreen(),
-    newCatTab: (context) => const NewCatScreen(),
-    menuBarScreen: (context) => const MenuBarScreen(),
-    petsEmptyScreen: (context) => const PetsEmptyScreen(),
-    pets1CatScreen: (context) => const PetsOneCatScreen(),
-    solutionScreen: (context) => const SolutionScreen(),
-    signUpFormScreen: (context) => SignUpFormScreen(),
-    editProfileScreen: (context) => EditProfileScreen(),
-    verifyScreen: (context) => VerifyScreen(),
-    myPageScreen: (context) => const MyPageScreen(),
-    ownerTab: (context) => const OwnerScreen(),
-    homeScreen: (context) => HomeScreen(),
-    checkupCatScreen: (context) => CheckupCatScreen(),
-    checkupDogScreen: (context) => CheckupDogScreen(),
-    checkupOwnerTab: (context) => const CheckupOwnerScreen(),
-    fourhundredfourScreen: (context) => const ErrorPage(),
-    noticeDetailScreen: (context) => const NoticeDetailScreen(),
-    noticeScreen: (context) => const NoticeScreen(),
-    logInScreen: (context) => LogInScreen(),
-    appNavigationScreen: (context) => const AppNavigationScreen()
-  };
+  static List<GoRoute> routes = [
+    GoRoute(
+      path: quickTestScreen,
+      builder: (context, state) => const QuickTestScreen(),
+    ),
+    GoRoute(
+      path: namingScreen,
+      builder: (context, state) => NamingScreen(),
+    ),
+    GoRoute(
+      path: contactUsRegisterScreen,
+      builder: (context, state) => ContactUsRegisterScreen(),
+    ),
+    GoRoute(
+      path: faqScreen,
+      builder: (context, state) => FaqScreen(),
+    ),
+    GoRoute(
+      path: newCatTab,
+      builder: (context, state) => const NewCatScreen(),
+    ),
+    GoRoute(
+      path: menuBarScreen,
+      builder: (context, state) => const MenuBarScreen(),
+    ),
+    GoRoute(
+      path: petsEmptyScreen,
+      builder: (context, state) => const PetsEmptyScreen(),
+    ),
+    GoRoute(
+      path: pets1CatScreen,
+      builder: (context, state) => const PetsOneCatScreen(),
+    ),
+    GoRoute(
+      path: solutionScreen,
+      builder: (context, state) => const SolutionScreen(),
+    ),
+    GoRoute(
+      path: signUpFormScreen,
+      builder: (context, state) => SignUpFormScreen(),
+    ),
+    GoRoute(
+      path: editProfileScreen,
+      builder: (context, state) => EditProfileScreen(),
+    ),
+    GoRoute(
+      path: verifyScreen,
+      builder: (context, state) => VerifyScreen(),
+    ),
+    GoRoute(
+      path: myPageScreen,
+      builder: (context, state) => const MyPageScreen(),
+    ),
+    GoRoute(
+      path: ownerTab,
+      builder: (context, state) => const OwnerScreen(),
+    ),
+    GoRoute(
+      path: homeScreen,
+      builder: (context, state) => HomeScreen(),
+    ),
+    GoRoute(
+      path: checkupCatScreen,
+      builder: (context, state) => CheckupCatScreen(),
+    ),
+    GoRoute(
+      path: checkupDogScreen,
+      builder: (context, state) => CheckupDogScreen(),
+    ),
+    GoRoute(
+      path: checkupOwnerTab,
+      builder: (context, state) => const CheckupOwnerScreen(),
+    ),
+    GoRoute(
+      path: fourhundredfourScreen,
+      builder: (context, state) => const ErrorPage(),
+    ),
+    GoRoute(
+      path: noticeDetailScreen,
+      builder: (context, state) => const NoticeDetailScreen(),
+    ),
+    GoRoute(
+      path: noticeScreen,
+      builder: (context, state) => const NoticeScreen(),
+    ),
+    GoRoute(
+      path: logInScreen,
+      builder: (context, state) => LogInScreen(),
+    ),
+    GoRoute(
+      path: appNavigationScreen,
+      builder: (context, state) => const AppNavigationScreen(),
+    ),
+  ];
 }

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 // 📦 Package imports:
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/navigator_service.dart';
@@ -27,11 +28,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: theme,
       title: '카미 CAMI',
       debugShowCheckedModeBanner: false,
-      navigatorKey: NavigatorService.key,
       localizationsDelegates: const [
         AppLocalizationDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -39,8 +39,11 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [Locale('ko')],
-      initialRoute: AppRoutes.appNavigationScreen,
-      routes: AppRoutes.routes,
+      routerConfig: GoRouter(
+        navigatorKey: NavigatorService.key,
+        routes: AppRoutes.routes,
+        initialLocation: AppRoutes.appNavigationScreen,
+      ),
     );
   }
 }
