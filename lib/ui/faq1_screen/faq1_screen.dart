@@ -117,7 +117,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -151,7 +151,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -186,7 +186,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 18.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -221,7 +221,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 15.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -255,7 +255,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -289,7 +289,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -323,7 +323,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),
@@ -357,7 +357,7 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowdownGray700.path,
+                      imagePath: Assets.svg.imgArrowDownGray700.path,
                       height: 32.h,
                       width: 30.w),
                 ),

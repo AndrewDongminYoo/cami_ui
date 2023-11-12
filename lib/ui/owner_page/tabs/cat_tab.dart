@@ -95,7 +95,7 @@ class CatTabState extends State<CatTab>
               children: [
                 Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
-                  imagePath: Assets.svg.imgArrowdownGray700.path,
+                  imagePath: Assets.svg.imgArrowDownGray700.path,
                   height: 10.h,
                   width: 6.w,
                   margin: EdgeInsets.only(

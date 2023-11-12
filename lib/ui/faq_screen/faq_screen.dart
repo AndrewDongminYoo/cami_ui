@@ -77,7 +77,7 @@ class FaqScreen extends StatelessWidget {
                               margin: EdgeInsets.only(left: 30.w),
                               child: CustomImageView(
                                   imagePath:
-                                      Assets.svg.imgArrowdownGray700.path,
+                                      Assets.svg.imgArrowDownGray700.path,
                                   height: 32.h,
                                   width: 30.w),
                             ),
@@ -221,7 +221,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -263,7 +263,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -305,7 +305,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -347,7 +347,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -389,7 +389,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -431,7 +431,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],
@@ -473,7 +473,7 @@ class FaqScreen extends StatelessWidget {
                                   ),
                                   CustomImageView(
                                       imagePath:
-                                          Assets.svg.imgArrowdownGray700.path,
+                                          Assets.svg.imgArrowDownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
                                 ],

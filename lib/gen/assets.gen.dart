@@ -410,6 +410,10 @@ class $AssetsSvgGen {
   SvgGenImage get imgArrowDown =>
       const SvgGenImage('assets/svg/img_arrow_down.svg');
 
+  /// File path: assets/svg/img_arrow_down_gray_700.svg
+  SvgGenImage get imgArrowDownGray700 =>
+      const SvgGenImage('assets/svg/img_arrow_down_gray_700.svg');
+
   /// File path: assets/svg/img_arrow_left.svg
   SvgGenImage get imgArrowLeft =>
       const SvgGenImage('assets/svg/img_arrow_left.svg');
@@ -417,10 +421,6 @@ class $AssetsSvgGen {
   /// File path: assets/svg/img_arrow_right_gray_600.svg
   SvgGenImage get imgArrowRightGray600 =>
       const SvgGenImage('assets/svg/img_arrow_right_gray_600.svg');
-
-  /// File path: assets/svg/img_arrowdown_gray_700.svg
-  SvgGenImage get imgArrowdownGray700 =>
-      const SvgGenImage('assets/svg/img_arrowdown_gray_700.svg');
 
   /// File path: assets/svg/img_car.svg
   SvgGenImage get imgCar => const SvgGenImage('assets/svg/img_car.svg');
@@ -465,9 +465,9 @@ class $AssetsSvgGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         imgArrowDown,
+        imgArrowDownGray700,
         imgArrowLeft,
         imgArrowRightGray600,
-        imgArrowdownGray700,
         imgCar,
         imgFrameBlack900,
         imgFrameBlack90032x32,
