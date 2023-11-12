@@ -31,133 +31,133 @@ class AppNavigationScreen extends StatelessWidget {
                       children: [
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Quick Test',
+                          screenTitle: '반짝테스트',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.quickTestScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Naming',
+                          screenTitle: '삼칠이 작명소',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.namingScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Contact Us / Register',
+                          screenTitle: '1:1 문의하기',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.contactUsRegisterScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'FAQ',
+                          screenTitle: '자주 묻는 질문',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.faqScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'New Cat - Tab Container',
+                          screenTitle: '고양이 등록하기',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.newCatTab),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Menu Bar',
+                          screenTitle: '메뉴바 (모바일)',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.menuBarScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Pets / Empty',
+                          screenTitle: '나의 반려친구 (정보없음)',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.petsEmptyScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Pets / 1 Cat',
+                          screenTitle: '나의 반려친구 (정보있음)',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.pets1CatScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Solution',
+                          screenTitle: '방문교육',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.solutionScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Sign Up Form',
+                          screenTitle: '이메일 회원가입',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.signUpFormScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Edit Profile',
+                          screenTitle: '내 정보 수정',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.editProfileScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Verify',
+                          screenTitle: '전화번호 인증',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.verifyScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'My Page',
+                          screenTitle: '마이페이지',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.myPageScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Owner - Tab Container',
+                          screenTitle: '심리검사',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.ownerTab),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Home',
+                          screenTitle: '카미 홈화면',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.homeScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Checkup Cat',
+                          screenTitle: '반려묘 성격유형검사',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.checkupCatScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Checkup Dog',
+                          screenTitle: '반려견 성격유형검사',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.checkupDogScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Checkup Owner - Tab Container',
+                          screenTitle: '심리검사 홈',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.checkupOwnerTab),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'FourHundredFour',
+                          screenTitle: '404 찾을수없음',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.fourhundredfourScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Notice Detail',
+                          screenTitle: '공지사항 상세',
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.noticeDetailScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Notice',
+                          screenTitle: '공지사항 전체',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.noticeScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          screenTitle: 'Log In',
+                          screenTitle: '로그인하기',
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.logInScreen),
                         ),
@@ -185,12 +185,12 @@ class AppNavigationScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(
-                'App Navigation',
+                '앱 게이트웨이 (개발 프로세스)',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -202,12 +202,12 @@ class AppNavigationScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(left: 20.w),
               child: Text(
-                "Check your app's UI from the below demo screens of your app.",
+                '아래 데모 화면에서 앱의 UI를 확인하세요.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: const Color(0xFF888888),
                   fontSize: 16.sp,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -247,7 +247,7 @@ class AppNavigationScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20.sp,
-                    fontFamily: 'Roboto',
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
