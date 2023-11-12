@@ -1,60 +1,57 @@
-// 🎯 Dart imports:
-import 'dart:convert';
+// 📦 Package imports:
+import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-List<PetBreeds> petBreedsFromJson(String str) {
-  final jsonData = json.decode(str);
-  return List<PetBreeds>.from(jsonData
-      .map((dynamic data) => PetBreeds.fromJson(data as Map<String, dynamic>)));
-}
+part 'pet_breeds.model.g.dart';
 
-String petBreedsToJson(List<PetBreeds> data) {
-  final dyn = List<dynamic>.from(data.map((x) => x.toJson()));
-  return json.encode(dyn);
-}
-
-class PetBreeds {
-  PetBreeds({
+@JsonSerializable()
+class PetBreeds extends Equatable {
+  const PetBreeds({
     required this.animalGroup1Id,
     required this.animalGroup2Id,
     required this.animalGroup2Name,
     required this.breedSizeName,
   });
 
-  factory PetBreeds.fromJson(Map<String, dynamic> json) => PetBreeds(
-        animalGroup1Id: json['animal_group1_id'],
-        animalGroup2Id: json['animal_group2_id'],
-        animalGroup2Name: json['animal_group2_name'],
-        breedSizeName: breedSizeValues.map[json['breed_size_name']]!,
-      );
-  int animalGroup1Id;
-  int animalGroup2Id;
-  String animalGroup2Name;
-  BreedSizeName breedSizeName;
+  factory PetBreeds.fromJson(Map<String, dynamic> json) {
+    return _$PetBreedsFromJson(json);
+  }
 
-  Map<String, dynamic> toJson() => {
-        'animal_group1_id': animalGroup1Id,
-        'animal_group2_id': animalGroup2Id,
-        'animal_group2_name': animalGroup2Name,
-        'breed_size_name': breedSizeValues.reverse[breedSizeName],
-      };
-}
+  @JsonKey(name: 'animal_group1_id', required: true)
+  final int animalGroup1Id;
+  @JsonKey(name: 'animal_group2_id', required: true)
+  final int animalGroup2Id;
+  @JsonKey(name: 'animal_group2_name', required: true)
+  final String animalGroup2Name;
+  @JsonKey(name: 'breed_size_name', required: true)
+  final String breedSizeName;
 
-enum BreedSizeName { EMPTY, MEDIUM, LARGE, SMALL }
+  Map<String, dynamic> toJson() => _$PetBreedsToJson(this);
 
-final breedSizeValues = EnumValues({
-  '': BreedSizeName.EMPTY,
-  '중형': BreedSizeName.MEDIUM,
-  '소형': BreedSizeName.SMALL,
-  '대형': BreedSizeName.LARGE
-});
+  PetBreeds copyWith({
+    int? animalGroup1Id,
+    int? animalGroup2Id,
+    String? animalGroup2Name,
+    String? breedSizeName,
+  }) {
+    return PetBreeds(
+      animalGroup1Id: animalGroup1Id ?? this.animalGroup1Id,
+      animalGroup2Id: animalGroup2Id ?? this.animalGroup2Id,
+      animalGroup2Name: animalGroup2Name ?? this.animalGroup2Name,
+      breedSizeName: breedSizeName ?? this.breedSizeName,
+    );
+  }
 
-class EnumValues<T> {
-  EnumValues(this.map);
-  Map<String, T> map;
-  Map<T, String>? reverseMap;
+  @override
+  bool get stringify => true;
 
-  Map<T, String> get reverse {
-    reverseMap ??= map.map((k, v) => MapEntry(v, k));
-    return reverseMap!;
+  @override
+  List<Object?> get props {
+    return [
+      animalGroup1Id,
+      animalGroup2Id,
+      animalGroup2Name,
+      breedSizeName,
+    ];
   }
 }
