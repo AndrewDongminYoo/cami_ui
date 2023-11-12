@@ -41,10 +41,8 @@ class CheckupDogScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text(
-                      '반려견 성격유형검사(DCSI-II)'.tr,
-                      style: CustomTextStyles.bodyMediumBlack900,
-                    ),
+                    child: Text('반려견 성격유형검사(DCSI-II)'.tr,
+                        style: CustomTextStyles.bodyMediumBlack900),
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -60,10 +58,8 @@ class CheckupDogScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text(
-                      '반려견 성격유형검사'.tr,
-                      style: CustomTextStyles.bodyLargeNanumSquareNeo,
-                    ),
+                    child: Text('반려견 성격유형검사'.tr,
+                        style: CustomTextStyles.bodyLargeNanumSquareNeo),
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -232,32 +228,22 @@ class CheckupDogScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
-                '문항'.tr,
-                style: textTheme.bodyMedium,
-              ),
+              Text('문항'.tr, style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
-                child: Text(
-                  '107문항'.tr,
-                  style: CustomTextStyles.bodyMediumGray800,
-                ),
+                child:
+                    Text('107문항'.tr, style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
           SizedBox(height: 3.h),
           Row(
             children: [
-              Text(
-                '소요시간'.tr,
-                style: textTheme.bodyMedium,
-              ),
+              Text('소요시간'.tr, style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '약 20분'.tr,
-                  style: CustomTextStyles.bodyMediumGray800,
-                ),
+                child:
+                    Text('약 20분'.tr, style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
@@ -290,10 +276,7 @@ class CheckupDogScreen extends StatelessWidget {
                     top: 4.h,
                     bottom: 3.h,
                   ),
-                  child: Text(
-                    '1',
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('1', style: textTheme.bodyLarge),
                 ),
                 CustomImageView(
                   imagePath: Assets.svg.imgFrameBlack90032x32.path,
@@ -308,10 +291,7 @@ class CheckupDogScreen extends StatelessWidget {
               top: 4.h,
               bottom: 3.h,
             ),
-            child: Text(
-              '12,000원'.tr,
-              style: textTheme.bodyLarge,
-            ),
+            child: Text('12,000원'.tr, style: textTheme.bodyLarge),
           ),
         ],
       ),

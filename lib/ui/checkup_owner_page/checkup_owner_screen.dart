@@ -9,23 +9,21 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
-import '/ui/checkup_owner_page/checkup_owner_page.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/widgets/app_bar/appbar_title.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
+import 'widgets/checkup_owner_tab.dart';
 
-class CheckupOwnerTabContainerScreen extends StatefulWidget {
-  const CheckupOwnerTabContainerScreen({super.key});
+class CheckupOwnerScreen extends StatefulWidget {
+  const CheckupOwnerScreen({super.key});
 
   @override
-  CheckupOwnerTabContainerScreenState createState() =>
-      CheckupOwnerTabContainerScreenState();
+  CheckupOwnerScreenState createState() => CheckupOwnerScreenState();
 }
 
-class CheckupOwnerTabContainerScreenState
-    extends State<CheckupOwnerTabContainerScreen>
+class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
     with TickerProviderStateMixin {
   late TabController tabviewController;
 
@@ -53,10 +51,8 @@ class CheckupOwnerTabContainerScreenState
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text(
-                      '입양준비검사(DPAI)'.tr,
-                      style: CustomTextStyles.bodyMediumBlack900,
-                    ),
+                    child: Text('입양준비검사(DPAI)'.tr,
+                        style: CustomTextStyles.bodyMediumBlack900),
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -79,10 +75,8 @@ class CheckupOwnerTabContainerScreenState
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text(
-                      '입양준비검사'.tr,
-                      style: CustomTextStyles.bodyLargeNanumSquareNeo,
-                    ),
+                    child: Text('입양준비검사'.tr,
+                        style: CustomTextStyles.bodyLargeNanumSquareNeo),
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -100,10 +94,8 @@ class CheckupOwnerTabContainerScreenState
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 8.w),
-                          child: Text(
-                            '(4)'.tr,
-                            style: CustomTextStyles.bodyMediumBlack900,
-                          ),
+                          child: Text('(4)'.tr,
+                              style: CustomTextStyles.bodyMediumBlack900),
                         ),
                       ],
                     ),
@@ -127,8 +119,8 @@ class CheckupOwnerTabContainerScreenState
                   child: TabBarView(
                     controller: tabviewController,
                     children: const [
-                      CheckupOwnerPage(),
-                      CheckupOwnerPage(),
+                      CheckupOwnerTab(),
+                      CheckupOwnerTab(),
                     ],
                   ),
                 ),
@@ -183,32 +175,22 @@ class CheckupOwnerTabContainerScreenState
         children: [
           Row(
             children: [
-              Text(
-                '문항'.tr,
-                style: textTheme.bodyMedium,
-              ),
+              Text('문항'.tr, style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 42.w),
-                child: Text(
-                  '84문항'.tr,
-                  style: CustomTextStyles.bodyMediumGray800,
-                ),
+                child:
+                    Text('84문항'.tr, style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
           SizedBox(height: 3.h),
           Row(
             children: [
-              Text(
-                '소요시간'.tr,
-                style: textTheme.bodyMedium,
-              ),
+              Text('소요시간'.tr, style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text(
-                  '약 20분'.tr,
-                  style: CustomTextStyles.bodyMediumGray800,
-                ),
+                child:
+                    Text('약 20분'.tr, style: CustomTextStyles.bodyMediumGray800),
               ),
             ],
           ),
@@ -244,10 +226,7 @@ class CheckupOwnerTabContainerScreenState
                     top: 4.h,
                     bottom: 3.h,
                   ),
-                  child: Text(
-                    '1',
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('1', style: textTheme.bodyLarge),
                 ),
                 CustomImageView(
                   imagePath: Assets.svg.imgFrameBlack90032x32.path,
@@ -259,10 +238,8 @@ class CheckupOwnerTabContainerScreenState
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
-            child: Text(
-              '9,900원'.tr,
-              style: CustomTextStyles.bodyMediumBlack90015,
-            ),
+            child:
+                Text('9,900원'.tr, style: CustomTextStyles.bodyMediumBlack90015),
           ),
         ],
       ),

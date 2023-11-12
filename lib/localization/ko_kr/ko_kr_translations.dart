@@ -200,7 +200,7 @@ final Map<String, String> koKR = {
   '입양준비검사(DPAI)': '입양준비검사(DPAI)',
 
   // FourHundredFour Screen
-  '미안해': '미안해',
+  '죄송합니다': '죄송합니다',
   '우리는 이 페이지를 잃어버렸어': '우리는 이 페이지를 잃어버렸어',
 
   // Notice Detail Screen

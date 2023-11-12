@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import '/core/errors/exceptions.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
@@ -11,8 +12,13 @@ import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
 
-class FourhundredfourScreen extends StatelessWidget {
-  const FourhundredfourScreen({super.key});
+class ErrorPage extends StatelessWidget {
+  const ErrorPage({
+    super.key,
+    this.error = const PageNotFoundException(),
+  });
+
+  final dynamic error;
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +32,9 @@ class FourhundredfourScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 62.h),
-              Text(
-                '미안해'.tr,
-                style: CustomTextStyles.bodyLarge18,
-              ),
-              Text(
-                '우리는 이 페이지를 잃어버렸어'.tr,
-                style: CustomTextStyles.bodyLarge18,
-              ),
+              Text('죄송합니다'.tr, style: CustomTextStyles.bodyLarge18),
+              Text(error.message.toString(),
+                  style: CustomTextStyles.bodyLarge18),
               SizedBox(height: 38.h),
               SizedBox(
                 height: 240.h,
@@ -42,10 +43,8 @@ class FourhundredfourScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     Align(
-                      child: Text(
-                        '404',
-                        style: CustomTextStyles.poppinsYellow100,
-                      ),
+                      child: Text(error.code.toString(),
+                          style: CustomTextStyles.poppinsYellow100),
                     ),
                     CustomImageView(
                       imagePath: Assets.svg.pageNotFound.path,

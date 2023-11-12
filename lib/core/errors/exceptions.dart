@@ -1,29 +1,13 @@
 class NoInternetException implements Exception {
-  NoInternetException([String message = 'NoInternetException Occurred']) {
-    _message = message;
-  }
+  NoInternetException([this.message = 'NoInternetException Occurred']);
 
-  String? _message;
-
-  @override
-  String toString() {
-    final message = _message;
-    return 'Exception: $message';
-  }
+  final String? message;
 }
 
 class CustomException implements Exception {
   CustomException([this.message]);
-  final dynamic message;
 
-  @override
-  String toString() {
-    final Object? message = this.message;
-    if (message == null) {
-      return 'Exception';
-    }
-    return 'Exception: $message';
-  }
+  final String? message;
 }
 
 class AuthFailureException implements Exception {
@@ -33,5 +17,15 @@ class AuthFailureException implements Exception {
         // '사용자ID가 없습니다. 앱 재실행 후 다시 로그인 해보세요.',
         );
 
-  final dynamic message;
+  final String? message;
+}
+
+class PageNotFoundException implements Exception {
+  const PageNotFoundException([
+    this.code = 404,
+    this.message = '페이지를 찾을 수 없습니다.',
+  ]);
+
+  final int code;
+  final String? message;
 }

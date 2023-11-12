@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import '/ui/app_navigation_screen/app_navigation_screen.dart';
 import '/ui/checkup_cat_screen/checkup_cat_screen.dart';
 import '/ui/checkup_dog_screen/checkup_dog_screen.dart';
-import '/ui/checkup_owner_tab_container_screen/checkup_owner_tab_container_screen.dart';
+import '/ui/checkup_owner_page/checkup_owner_screen.dart';
 import '/ui/contact_us_register_screen/contact_us_register_screen.dart';
 import '/ui/edit_profile_screen/edit_profile_screen.dart';
+import '/ui/error_page_screen/error_page.dart';
 import '/ui/faq_screen/faq_screen.dart';
-import '/ui/fourhundredfour_screen/fourhundredfour_screen.dart';
 import '/ui/home_screen/home_screen.dart';
 import '/ui/log_in_screen/log_in_screen.dart';
 import '/ui/menu_bar_screen/menu_bar_screen.dart';
@@ -74,8 +74,8 @@ class AppRoutes {
     homeScreen: (context) => HomeScreen(),
     checkupCatScreen: (context) => CheckupCatScreen(),
     checkupDogScreen: (context) => CheckupDogScreen(),
-    checkupOwnerTab: (context) => const CheckupOwnerTabContainerScreen(),
-    fourhundredfourScreen: (context) => const FourhundredfourScreen(),
+    checkupOwnerTab: (context) => const CheckupOwnerScreen(),
+    fourhundredfourScreen: (context) => const ErrorPage(),
     noticeDetailScreen: (context) => const NoticeDetailScreen(),
     noticeScreen: (context) => const NoticeScreen(),
     logInScreen: (context) => LogInScreen(),
