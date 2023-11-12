@@ -7,19 +7,19 @@ import '/localization/app_localization.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
-import '/ui/cat_page/cat_page.dart';
-import '/ui/dog_page/dog_page.dart';
-import '/ui/owner_page/owner_page.dart';
 import '/ui/shared/cami_app_bar.dart';
+import 'tabs/cat_tab.dart';
+import 'tabs/dog_tab.dart';
+import 'tabs/owner_tab.dart';
 
-class OwnerTabContainerScreen extends StatefulWidget {
-  const OwnerTabContainerScreen({super.key});
+class OwnerScreen extends StatefulWidget {
+  const OwnerScreen({super.key});
 
   @override
-  OwnerTabContainerScreenState createState() => OwnerTabContainerScreenState();
+  OwnerScreenState createState() => OwnerScreenState();
 }
 
-class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
+class OwnerScreenState extends State<OwnerScreen>
     with TickerProviderStateMixin {
   late TabController tabviewController;
 
@@ -90,10 +90,10 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
                   child: TabBarView(
                     controller: tabviewController,
                     children: const [
-                      OwnerPage(),
-                      DogPage(),
-                      CatPage(),
-                      OwnerPage(),
+                      OwnerTab(),
+                      DogTab(),
+                      CatTab(),
+                      OwnerTab(),
                     ],
                   ),
                 ),

@@ -10,8 +10,8 @@ import '/theme/custom_text_style.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
-class UserProfileViewListItemWidget extends StatelessWidget {
-  const UserProfileViewListItemWidget({super.key});
+class CheckupOwnerItemWidget extends StatelessWidget {
+  const CheckupOwnerItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           Container(
             decoration: AppDecoration.fillSecondaryContainer,
             child: CustomImageView(
-              imagePath: Assets.images.imgImage15.path,
+              imagePath: Assets.images.imgImage170x359.path,
               height: 170.h,
               width: 359.w,
             ),
@@ -33,24 +33,33 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           SizedBox(height: 14.h),
           CustomElevatedButton(
             height: 24.h,
-            width: 53.w,
-            text: 'DCSI-II',
+            width: 39.w,
+            text: 'DPAI',
             margin: EdgeInsets.only(left: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text('강아지 MBTI'.tr,
+            child: Text('보호자 양육면허시험'.tr,
                 style: CustomTextStyles.bodyMediumGray90002),
           ),
-          SizedBox(height: 7.h),
-          Padding(
-            padding: EdgeInsets.only(left: 14.w),
-            child: Text('16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr,
-                style: CustomTextStyles.bodySmallPrimaryContainer),
+          SizedBox(height: 5.h),
+          Container(
+            width: 315.w,
+            margin: EdgeInsets.only(
+              left: 14.w,
+              right: 30.w,
+            ),
+            child: Text(
+              '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: CustomTextStyles.bodySmallPrimaryContainer
+                  .copyWith(height: 1.33),
+            ),
           ),
-          SizedBox(height: 39.h),
+          SizedBox(height: 23.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Row(

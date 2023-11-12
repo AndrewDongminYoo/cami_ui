@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import '../data/cat_breeds.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/localization/app_localization.dart';
@@ -13,18 +14,17 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
-import 'data/cat_breeds.dart';
-import 'widgets/chipview_item_widget.dart';
+import 'chipview_item_widget.dart';
 
-class NewCatPage extends StatefulWidget {
-  const NewCatPage({super.key});
+class NewCatTab extends StatefulWidget {
+  const NewCatTab({super.key});
 
   @override
-  NewCatPageState createState() => NewCatPageState();
+  NewCatTabState createState() => NewCatTabState();
 }
 
-class NewCatPageState extends State<NewCatPage>
-    with AutomaticKeepAliveClientMixin<NewCatPage> {
+class NewCatTabState extends State<NewCatTab>
+    with AutomaticKeepAliveClientMixin<NewCatTab> {
   @override
   bool get wantKeepAlive => true;
 

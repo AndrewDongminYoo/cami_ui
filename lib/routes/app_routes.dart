@@ -15,10 +15,10 @@ import '/ui/log_in_screen/log_in_screen.dart';
 import '/ui/menu_bar_screen/menu_bar_screen.dart';
 import '/ui/my_page_screen/my_page_screen.dart';
 import '/ui/naming_screen/naming_screen.dart';
-import '/ui/new_cat_tab_container_screen/new_cat_tab_container_screen.dart';
+import '/ui/new_cat_page/new_cat_screen.dart';
 import '/ui/notice_detail_screen/notice_detail_screen.dart';
 import '/ui/notice_screen/notice_screen.dart';
-import '/ui/owner_tab_container_screen/owner_tab_container_screen.dart';
+import '/ui/owner_page/owner_screen.dart';
 import '/ui/pets_1_cat_screen/pets_1_cat_screen.dart';
 import '/ui/pets_empty_screen/pets_empty_screen.dart';
 import '/ui/quick_test_screen/quick_test_screen.dart';
@@ -61,7 +61,7 @@ class AppRoutes {
     namingScreen: (context) => NamingScreen(),
     contactUsRegisterScreen: (context) => ContactUsRegisterScreen(),
     faqScreen: (context) => FaqScreen(),
-    newCatTab: (context) => const NewCatTabContainerScreen(),
+    newCatTab: (context) => const NewCatScreen(),
     menuBarScreen: (context) => const MenuBarScreen(),
     petsEmptyScreen: (context) => const PetsEmptyScreen(),
     pets1CatScreen: (context) => const PetsOneCatScreen(),
@@ -70,7 +70,7 @@ class AppRoutes {
     editProfileScreen: (context) => EditProfileScreen(),
     verifyScreen: (context) => VerifyScreen(),
     myPageScreen: (context) => const MyPageScreen(),
-    ownerTab: (context) => const OwnerTabContainerScreen(),
+    ownerTab: (context) => const OwnerScreen(),
     homeScreen: (context) => HomeScreen(),
     checkupCatScreen: (context) => CheckupCatScreen(),
     checkupDogScreen: (context) => CheckupDogScreen(),

@@ -9,31 +9,22 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
-import '/ui/new_cat_page/new_cat_page.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
+import 'widgets/new_cat_tab.dart';
 
-class NewCatTabContainerScreen extends StatefulWidget {
-  const NewCatTabContainerScreen({super.key});
+class NewCatScreen extends StatefulWidget {
+  const NewCatScreen({super.key});
 
   @override
-  NewCatTabContainerScreenState createState() =>
-      NewCatTabContainerScreenState();
+  NewCatScreenState createState() => NewCatScreenState();
 }
 
-class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
+class NewCatScreenState extends State<NewCatScreen>
     with TickerProviderStateMixin {
   final editTextController = TextEditingController();
-
-  late TabController tabviewController;
-
-  @override
-  void initState() {
-    super.initState();
-    tabviewController = TabController(length: 2, vsync: this);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -114,13 +105,39 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
                       style: CustomTextStyles.bodyMediumOnPrimary),
                 ),
                 SizedBox(height: 9.h),
-                _buildTabview(context),
+                Row(
+                  children: [
+                    CustomElevatedButton(
+                      width: 177,
+                      height: 36,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF5F5F5),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      text: '여아',
+                      buttonTextStyle: TextStyle(
+                          fontSize: 14.sp,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400),
+                    ),
+                    CustomElevatedButton(
+                      width: 177,
+                      height: 36,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF9BB1EB),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      text: '남아',
+                      buttonTextStyle: TextStyle(
+                          fontSize: 14.sp,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400),
+                    )
+                  ],
+                ),
                 SizedBox(
                   height: 946.h,
-                  child: TabBarView(
-                    controller: tabviewController,
-                    children: const [NewCatPage(), NewCatPage()],
-                  ),
+                  child: const NewCatTab(),
                 ),
               ],
             ),
@@ -214,38 +231,6 @@ class NewCatTabContainerScreenState extends State<NewCatTabContainerScreen>
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildTabview(BuildContext context) {
-    return SizedBox(
-      height: 36.h,
-      width: 362.w,
-      child: TabBar(
-        controller: tabviewController,
-        labelPadding: EdgeInsets.zero,
-        labelColor: appTheme.black900,
-        labelStyle: TextStyle(
-            fontSize: 14.sp,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w400),
-        unselectedLabelColor: appTheme.black900,
-        unselectedLabelStyle: TextStyle(
-            fontSize: 14.sp,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w400),
-        indicator: BoxDecoration(
-          color: appTheme.gray10001,
-          borderRadius: BorderRadius.circular(8.w),
-        ),
-        tabs: [
-          Tab(
-            child: Text('여성'.tr),
-          ),
-          Tab(child: Text('남성'.tr))
-        ],
       ),
     );
   }

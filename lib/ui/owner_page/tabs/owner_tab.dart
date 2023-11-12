@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/ui/shared/cami_app_footer.dart';
-import 'widgets/user_profile_frame_list_item_widget.dart';
+import 'widgets/checkup_owner_item_widget.dart';
 
-class OwnerPage extends StatefulWidget {
-  const OwnerPage({super.key});
+class OwnerTab extends StatefulWidget {
+  const OwnerTab({super.key});
 
   @override
-  OwnerPageState createState() => OwnerPageState();
+  OwnerTabState createState() => OwnerTabState();
 }
 
-class OwnerPageState extends State<OwnerPage>
-    with AutomaticKeepAliveClientMixin<OwnerPage> {
+class OwnerTabState extends State<OwnerTab>
+    with AutomaticKeepAliveClientMixin<OwnerTab> {
   @override
   bool get wantKeepAlive => true;
   @override
@@ -60,7 +60,7 @@ class OwnerPageState extends State<OwnerPage>
         },
         itemCount: 3,
         itemBuilder: (context, index) {
-          return const UserProfileFrameListItemWidget();
+          return const CheckupOwnerItemWidget();
         },
       ),
     );

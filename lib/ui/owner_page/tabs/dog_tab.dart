@@ -4,17 +4,17 @@ import 'package:flutter/material.dart';
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/ui/shared/cami_app_footer.dart';
-import 'widgets/user_profile_view_list_item_widget.dart';
+import 'widgets/checkup_dog_list_item_widget.dart';
 
-class DogPage extends StatefulWidget {
-  const DogPage({super.key});
+class DogTab extends StatefulWidget {
+  const DogTab({super.key});
 
   @override
-  DogPageState createState() => DogPageState();
+  DogTabState createState() => DogTabState();
 }
 
-class DogPageState extends State<DogPage>
-    with AutomaticKeepAliveClientMixin<DogPage> {
+class DogTabState extends State<DogTab>
+    with AutomaticKeepAliveClientMixin<DogTab> {
   @override
   bool get wantKeepAlive => true;
   @override
@@ -45,7 +45,7 @@ class DogPageState extends State<DogPage>
                         },
                         itemCount: 5,
                         itemBuilder: (context, index) {
-                          return const UserProfileViewListItemWidget();
+                          return const CheckupDogListItemWidget();
                         },
                       ),
                     ),
