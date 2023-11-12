@@ -8,6 +8,7 @@ import 'package:go_router/go_router.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/routes/app_routes.dart';
+import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_image_view.dart';
@@ -29,7 +30,12 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
           width: 64.w,
           margin: EdgeInsets.all(14.h),
           onTap: () {
-            context.go(AppRoutes.homeScreen);
+            final location = context.currentLocation;
+            if (location == AppRoutes.homeScreen) {
+              context.reload();
+            } else {
+              context.go(AppRoutes.homeScreen);
+            }
           },
         ),
         actions: [

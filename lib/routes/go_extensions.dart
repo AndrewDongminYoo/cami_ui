@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -6,6 +7,8 @@ import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/app/app_state_notifier.dart';
+import '/core/utils/duration_extensions.dart';
+import '/routes/app_routes.dart';
 
 extension NavParamExtensions on Map<String, String?> {
   Map<String, String> get withoutNulls => Map.fromEntries(
@@ -55,9 +58,26 @@ extension NavigationExtensions on BuildContext {
     if (canPop()) {
       pop();
     } else {
-      go('/');
+      if (kDebugMode) {
+        go(AppRoutes.appNavigationScreen);
+      } else {
+        go(AppRoutes.homeScreen);
+      }
     }
   }
+
+  // 현재 경로를 새로고침합니다.
+  void reload() {
+    GoRouter.of(this).refresh();
+    PrimaryScrollController.of(this).animateTo(
+      /** top offset */ 0,
+      duration: 300.ms,
+      curve: Curves.bounceIn,
+    );
+  }
+
+  /// 현재 페이지의 경로를 리턴합니다. 익명 경로인 경우 [null]을 리턴합니다.
+  String? get currentLocation => ModalRoute.of(this)!.settings.name;
 }
 
 extension GoRouterExtensions on GoRouter {

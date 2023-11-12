@@ -38,6 +38,7 @@ class HomeScreen extends StatelessWidget {
         body: SizedBox(
           width: double.maxFinite,
           child: SingleChildScrollView(
+            primary: true,
             child: Column(
               children: [
                 _buildSubtitle(context),
