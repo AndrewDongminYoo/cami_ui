@@ -108,7 +108,7 @@ class CustomTextFormField extends StatelessWidget {
       );
 }
 
-/// Extension on [CustomTextFormField] to facilitate inclusion of all types of border style etc
+/// 모든 유형의 테두리 스타일 등을 쉽게 포함할 수 있도록 [CustomTextFormField]를 확장합니다.
 extension TextFormFieldStyleHelper on CustomTextFormField {
   static OutlineInputBorder get fillOnError => OutlineInputBorder(
         borderRadius: BorderRadius.circular(8.w),

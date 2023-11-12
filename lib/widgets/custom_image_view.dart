@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+/// 네트워크 이미지에서 이미지를 찾을 수 없는 경우 플레이스홀더 이미지를 표시하며,
+/// SVG를 포함해 모든 유형의 이미지를 표시하는 데 사용할 수 있는 [CustomImageView] 위젯입니다.
 class CustomImageView extends StatelessWidget {
-  /// a [CustomImageView] it can be used for showing any type of images
-  /// it will shows the placeholder image if image is not found on network image
   const CustomImageView({
     super.key,
     this.imagePath,
@@ -26,7 +26,7 @@ class CustomImageView extends StatelessWidget {
     this.placeHolder = 'assets/images/image_not_found.png',
   });
 
-  /// [imagePath] is required parameter for showing image
+  /// [imagePath]는 이미지 표시를 위한 필수 파라미터입니다.
   final String? imagePath;
 
   final double? height;
@@ -60,7 +60,7 @@ class CustomImageView extends StatelessWidget {
     );
   }
 
-  /// build the image with border radius
+  /// [radius] 파라미터 적용 시 원형으로 빌드합니다.
   dynamic _buildCircleImage() {
     if (radius != null) {
       return ClipRRect(
@@ -72,7 +72,7 @@ class CustomImageView extends StatelessWidget {
     }
   }
 
-  /// build the image with border and border radius style
+  /// [border] 적용 스타일로 테두리를 빌드합니다.
   Widget _buildImageWithBorder() {
     if (border != null) {
       return Container(
@@ -87,6 +87,7 @@ class CustomImageView extends StatelessWidget {
     }
   }
 
+  /// [ImageTypeExtension] 확장으로 이미지 타입 [imageType]을 체크해 상황에 따라 빌드합니다.
   Widget _buildImageView() {
     if (imagePath != null) {
       switch (imagePath!.imageType) {
@@ -148,6 +149,7 @@ class CustomImageView extends StatelessWidget {
   }
 }
 
+/// [extension]에 이름을 적용하면 외부에서도 사용가능합니다.
 extension /** ImageTypeExtension */ on String {
   ImageType get imageType {
     if (startsWith('http') || startsWith('https')) {
