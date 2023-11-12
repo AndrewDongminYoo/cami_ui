@@ -421,7 +421,7 @@ class PetsOneCatScreen extends StatelessWidget {
     ]);
   }
 
-  /// Navigates to the newCatTabContainerScreen when the action is triggered.
+  /// Navigates to the newCatScreen when the action is triggered.
   void onTapRegisterDogButton(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.newCatTab);
   }

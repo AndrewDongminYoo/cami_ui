@@ -426,7 +426,7 @@ class PetsEmptyScreen extends StatelessWidget {
     );
   }
 
-  /// Navigates to the newCatTabContainerScreen when the action is triggered.
+  /// Navigates to the newCatScreen when the action is triggered.
   void onTapImgIMAGE(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.newCatTab);
   }

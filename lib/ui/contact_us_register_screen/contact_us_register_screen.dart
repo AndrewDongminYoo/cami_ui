@@ -115,7 +115,6 @@ class ContactUsRegisterScreen extends StatelessWidget {
             ),
           ),
           CustomDropDown(
-            autofocus: false,
             items: items,
             height: 40.h,
             width: 291.w,

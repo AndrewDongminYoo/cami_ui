@@ -14,7 +14,7 @@ class CustomDropDown extends StatelessWidget {
     this.width,
     this.focusNode,
     this.icon,
-    this.autofocus = true,
+    this.autofocus = false,
     this.textStyle,
     this.hintText,
     this.hintStyle,
@@ -98,7 +98,8 @@ class CustomDropDown extends StatelessWidget {
         suffixIcon: suffix,
         suffixIconConstraints: suffixConstraints,
         isDense: true,
-        contentPadding: contentPadding ?? EdgeInsets.symmetric(vertical: 7.h),
+        contentPadding: contentPadding ??
+            EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
         fillColor: fillColor ?? appTheme.gray10001,
         filled: filled,
         border: borderDecoration ??
