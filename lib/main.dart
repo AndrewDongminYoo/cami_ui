@@ -3,18 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // 📦 Package imports:
+import 'package:catcher_2/catcher_2.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 // 🌎 Project imports:
-import '/core/utils/navigator_service.dart';
-import '/routes/app_routes.dart';
+import '/app/my_app.dart';
+import '/core/errors/catcher_options.dart';
 import '/theme/theme_helper.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await EasyLocalization.ensureInitialized();
+  await initializeDateFormatting('ko');
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
@@ -22,32 +26,17 @@ void main() async {
   /// 필요에 따라 테마를 업데이트하세요.
   ThemeHelper().changeTheme('primary');
 
-  runApp(EasyLocalization(
-    assetLoader: JsonAssetLoader(),
-    path: 'assets/messages',
-    supportedLocales: const [Locale('ko')],
-    fallbackLocale: const Locale('ko'),
-    child: const MyApp(),
-  ));
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: theme,
-      title: '카미 CAMI',
-      debugShowCheckedModeBanner: false,
-      locale: context.locale,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      routerConfig: GoRouter(
-        navigatorKey: NavigatorService.key,
-        routes: AppRoutes.routes,
-        initialLocation: AppRoutes.appNavigationScreen,
-      ),
-    );
-  }
+  Catcher2(
+    debugConfig: debugOptions,
+    releaseConfig: releaseOptions,
+    runAppFunction: () {
+      runApp(EasyLocalization(
+        assetLoader: JsonAssetLoader(),
+        path: 'assets/messages',
+        supportedLocales: const [Locale('ko')],
+        fallbackLocale: const Locale('ko'),
+        child: const MyApp(),
+      ));
+    },
+  );
 }
