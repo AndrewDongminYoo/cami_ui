@@ -6,6 +6,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 // 🌎 Project imports:
 import '../data/cat_breeds.dart';
+import '/core/utils/logger.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/theme/custom_button_style.dart';
@@ -74,7 +75,7 @@ class NewCatTabState extends State<NewCatTab>
                       ),
                       items: catBreeds,
                       onChanged: (value) {
-                        print('$value 🐈🐈‍⬛');
+                        logger.i('$value 🐈🐈‍⬛');
                       },
                     ),
                   ),

@@ -56,7 +56,7 @@ class CustomOutlinedButton extends BaseButton {
         decoration: decoration,
         child: OutlinedButton(
           style: buttonStyle,
-          onPressed: isDisabled ?? false ? null : onPressed as VoidCallback?,
+          onPressed: isDisabled ?? false ? null : () => onPressed,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

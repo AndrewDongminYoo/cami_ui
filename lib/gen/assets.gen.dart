@@ -266,6 +266,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgInfo =>
       const AssetGenImage('assets/images/img_info.png');
 
+  /// File path: assets/images/img_main_background.png
+  AssetGenImage get imgMainBackground =>
+      const AssetGenImage('assets/images/img_main_background.png');
+
   /// File path: assets/images/img_user_profile.png
   AssetGenImage get imgUserProfile =>
       const AssetGenImage('assets/images/img_user_profile.png');
@@ -334,6 +338,7 @@ class $AssetsImagesGen {
         imgImage84x393,
         imgImage997x361,
         imgInfo,
+        imgMainBackground,
         imgUserProfile
       ];
 }
