@@ -26,10 +26,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgCatProfile =>
       const AssetGenImage('assets/images/img_cat_profile.png');
 
-  /// File path: assets/images/img_image.png
-  AssetGenImage get imgImage =>
-      const AssetGenImage('assets/images/img_image.png');
-
   /// File path: assets/images/img_image_1.png
   AssetGenImage get imgImage1 =>
       const AssetGenImage('assets/images/img_image_1.png');
@@ -78,10 +74,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage112x138 =>
       const AssetGenImage('assets/images/img_image_112x138.png');
 
-  /// File path: assets/images/img_image_12.png
-  AssetGenImage get imgImage12 =>
-      const AssetGenImage('assets/images/img_image_12.png');
-
   /// File path: assets/images/img_image_1235x361.png
   AssetGenImage get imgImage1235x361 =>
       const AssetGenImage('assets/images/img_image_1235x361.png');
@@ -94,10 +86,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage128x142 =>
       const AssetGenImage('assets/images/img_image_128x142.png');
 
-  /// File path: assets/images/img_image_13.png
-  AssetGenImage get imgImage13 =>
-      const AssetGenImage('assets/images/img_image_13.png');
-
   /// File path: assets/images/img_image_1352x361.png
   AssetGenImage get imgImage1352x361 =>
       const AssetGenImage('assets/images/img_image_1352x361.png');
@@ -106,17 +94,9 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage1368x361 =>
       const AssetGenImage('assets/images/img_image_1368x361.png');
 
-  /// File path: assets/images/img_image_14.png
-  AssetGenImage get imgImage14 =>
-      const AssetGenImage('assets/images/img_image_14.png');
-
   /// File path: assets/images/img_image_15.png
   AssetGenImage get imgImage15 =>
       const AssetGenImage('assets/images/img_image_15.png');
-
-  /// File path: assets/images/img_image_16.png
-  AssetGenImage get imgImage16 =>
-      const AssetGenImage('assets/images/img_image_16.png');
 
   /// File path: assets/images/img_image_161x343.png
   AssetGenImage get imgImage161x343 =>
@@ -130,17 +110,9 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage167x130 =>
       const AssetGenImage('assets/images/img_image_167x130.png');
 
-  /// File path: assets/images/img_image_17.png
-  AssetGenImage get imgImage17 =>
-      const AssetGenImage('assets/images/img_image_17.png');
-
   /// File path: assets/images/img_image_170x359.png
   AssetGenImage get imgImage170x359 =>
       const AssetGenImage('assets/images/img_image_170x359.png');
-
-  /// File path: assets/images/img_image_18.png
-  AssetGenImage get imgImage18 =>
-      const AssetGenImage('assets/images/img_image_18.png');
 
   /// File path: assets/images/img_image_180x168.png
   AssetGenImage get imgImage180x168 =>
@@ -149,10 +121,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_image_186x329.png
   AssetGenImage get imgImage186x329 =>
       const AssetGenImage('assets/images/img_image_186x329.png');
-
-  /// File path: assets/images/img_image_19.png
-  AssetGenImage get imgImage19 =>
-      const AssetGenImage('assets/images/img_image_19.png');
 
   /// File path: assets/images/img_image_2.png
   AssetGenImage get imgImage2 =>
@@ -193,10 +161,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_image_257x241.png
   AssetGenImage get imgImage257x241 =>
       const AssetGenImage('assets/images/img_image_257x241.png');
-
-  /// File path: assets/images/img_image_26.png
-  AssetGenImage get imgImage26 =>
-      const AssetGenImage('assets/images/img_image_26.png');
 
   /// File path: assets/images/img_image_3.png
   AssetGenImage get imgImage3 =>
@@ -245,10 +209,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_image_652x361.png
   AssetGenImage get imgImage652x361 =>
       const AssetGenImage('assets/images/img_image_652x361.png');
-
-  /// File path: assets/images/img_image_67x67.png
-  AssetGenImage get imgImage67x67 =>
-      const AssetGenImage('assets/images/img_image_67x67.png');
 
   /// File path: assets/images/img_image_681x361.png
   AssetGenImage get imgImage681x361 =>
@@ -310,14 +270,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgUserProfile =>
       const AssetGenImage('assets/images/img_user_profile.png');
 
-  /// File path: assets/images/splash.png
-  AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
-
   /// List of all assets
   List<AssetGenImage> get values => [
         imageNotFound,
         imgCatProfile,
-        imgImage,
         imgImage1,
         imgImage10,
         imgImage1007x361,
@@ -330,25 +286,18 @@ class $AssetsImagesGen {
         imgImage1094x361,
         imgImage1106x361,
         imgImage112x138,
-        imgImage12,
         imgImage1235x361,
         imgImage1252x361,
         imgImage128x142,
-        imgImage13,
         imgImage1352x361,
         imgImage1368x361,
-        imgImage14,
         imgImage15,
-        imgImage16,
         imgImage161x343,
         imgImage164x346,
         imgImage167x130,
-        imgImage17,
         imgImage170x359,
-        imgImage18,
         imgImage180x168,
         imgImage186x329,
-        imgImage19,
         imgImage2,
         imgImage20,
         imgImage21,
@@ -359,7 +308,6 @@ class $AssetsImagesGen {
         imgImage24x24,
         imgImage25,
         imgImage257x241,
-        imgImage26,
         imgImage3,
         imgImage320x337,
         imgImage4,
@@ -372,7 +320,6 @@ class $AssetsImagesGen {
         imgImage6,
         imgImage644x361,
         imgImage652x361,
-        imgImage67x67,
         imgImage681x361,
         imgImage683x361,
         imgImage7,
@@ -387,8 +334,7 @@ class $AssetsImagesGen {
         imgImage9,
         imgImage997x361,
         imgInfo,
-        imgUserProfile,
-        splash
+        imgUserProfile
       ];
 }
 
