@@ -188,7 +188,7 @@ class PetsEmptyScreen extends StatelessWidget {
                           width: 138.w,
                           alignment: Alignment.center,
                           onTap: () {
-                            onTapImgIMAGE(context);
+                            onTapNewCat(context);
                           }),
                       CustomElevatedButton(
                           height: 32.h,
@@ -216,9 +216,7 @@ class PetsEmptyScreen extends StatelessWidget {
         text: '1:1 문의'.tr(),
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: textTheme.bodyLarge,
-        onPressed: () {
-          onTapInquiries(context);
-        });
+        onPressed: onTapInquiries);
   }
 
   /// Section Widget
@@ -228,9 +226,7 @@ class PetsEmptyScreen extends StatelessWidget {
         text: '자주묻는질문'.tr(),
         buttonStyle: CustomButtonStyles.fillGray,
         buttonTextStyle: textTheme.bodyLarge,
-        onPressed: () {
-          onTapFaq(context);
-        });
+        onPressed: onTapFaq);
   }
 
   /// Section Widget
@@ -430,7 +426,7 @@ class PetsEmptyScreen extends StatelessWidget {
   }
 
   /// Navigates to the newCatScreen when the action is triggered.
-  void onTapImgIMAGE(BuildContext context) {
+  void onTapNewCat(BuildContext context) {
     context.go(AppRoutes.newCatTab);
   }
 
@@ -442,19 +438,5 @@ class PetsEmptyScreen extends StatelessWidget {
   /// Navigates to the faqScreen when the action is triggered.
   void onTapFaq(BuildContext context) {
     context.go(AppRoutes.faqScreen);
-  }
-
-  void onTapTxtWidget(BuildContext context) {
-    // TODO: implement Actions
-  }
-
-  /// Navigates to the faqScreen when the action is triggered.
-  void onTapTxtWidget1(BuildContext context) {
-    context.go(AppRoutes.faqScreen);
-  }
-
-  /// Navigates to the contactUsRegisterScreen when the action is triggered.
-  void onTapTxtWidget2(BuildContext context) {
-    context.go(AppRoutes.contactUsRegisterScreen);
   }
 }

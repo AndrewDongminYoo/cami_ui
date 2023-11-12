@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
+import '/routes/app_routes.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -71,13 +73,15 @@ class NoticeDetailScreen extends StatelessWidget {
                 _buildApologizeNotice(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
-                    height: 32.h,
-                    width: 104.w,
-                    text: '목록으로'.tr(),
-                    margin: EdgeInsets.only(right: 16.w),
-                    buttonStyle: CustomButtonStyles.fillBlue,
-                    buttonTextStyle: CustomTextStyles.bodySmallBlack900,
-                    alignment: Alignment.centerRight),
+                  height: 32.h,
+                  width: 104.w,
+                  text: '목록으로'.tr(),
+                  margin: EdgeInsets.only(right: 16.w),
+                  buttonStyle: CustomButtonStyles.fillBlue,
+                  buttonTextStyle: CustomTextStyles.bodySmallBlack900,
+                  alignment: Alignment.centerRight,
+                  onPressed: onTapBackToNotices,
+                ),
                 SizedBox(height: 128.h),
                 const CamiAppFooter()
               ],
@@ -141,5 +145,10 @@ class NoticeDetailScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  /// Navigates to the noticeScreen when the action is triggered.
+  void onTapBackToNotices(BuildContext context) {
+    context.go(AppRoutes.noticeScreen);
   }
 }

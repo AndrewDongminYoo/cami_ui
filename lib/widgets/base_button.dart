@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 
+typedef VoidNavFunction = void Function(BuildContext)?;
+
 abstract class BaseButton extends StatelessWidget {
   const BaseButton({
     super.key,
@@ -18,7 +20,7 @@ abstract class BaseButton extends StatelessWidget {
   });
 
   final String text;
-  final VoidCallback? onPressed;
+  final VoidNavFunction onPressed;
   final ButtonStyle? buttonStyle;
   final TextStyle? textStyle;
   final bool? isDisabled;

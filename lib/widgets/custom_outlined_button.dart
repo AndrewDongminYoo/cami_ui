@@ -13,7 +13,7 @@ class CustomOutlinedButton extends BaseButton {
     this.leftIcon,
     this.rightIcon,
     this.label,
-    VoidCallback? onPressed,
+    VoidNavFunction onPressed,
     ButtonStyle? buttonStyle,
     TextStyle? buttonTextStyle,
     bool? isDisabled,
@@ -56,7 +56,7 @@ class CustomOutlinedButton extends BaseButton {
         decoration: decoration,
         child: OutlinedButton(
           style: buttonStyle,
-          onPressed: isDisabled ?? false ? null : onPressed ?? () {},
+          onPressed: isDisabled ?? false ? null : onPressed as VoidCallback?,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

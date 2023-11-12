@@ -10,6 +10,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/routes/app_routes.dart';
+import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -162,18 +163,24 @@ class NamingScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomElevatedButton(
-                            height: 56.h,
-                            width: 144.w,
-                            text: '다시하기'.tr(),
-                            buttonStyle: CustomButtonStyles.fillPrimary,
-                            buttonTextStyle:
-                                CustomTextStyles.bodyMediumOnErrorContainer),
+                          height: 56.h,
+                          width: 144.w,
+                          text: '다시하기'.tr(),
+                          buttonStyle: CustomButtonStyles.fillPrimary,
+                          buttonTextStyle:
+                              CustomTextStyles.bodyMediumOnErrorContainer,
+                          onPressed: (context) {
+                            context.safePop();
+                          },
+                        ),
                         CustomElevatedButton(
-                            height: 56.h,
-                            width: 144.w,
-                            text: '목록으로'.tr(),
-                            margin: EdgeInsets.only(left: 21.w),
-                            buttonStyle: CustomButtonStyles.fillBlack)
+                          height: 56.h,
+                          width: 144.w,
+                          text: '목록으로'.tr(),
+                          margin: EdgeInsets.only(left: 21.w),
+                          buttonStyle: CustomButtonStyles.fillBlack,
+                          onPressed: onTapBackToList,
+                        )
                       ]),
                 ),
                 SizedBox(height: 178.h),
@@ -184,6 +191,11 @@ class NamingScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  /// Navigates to the quickTestScreen when the action is triggered.
+  void onTapBackToList(BuildContext context) {
+    context.go(AppRoutes.quickTestScreen);
   }
 
   /// Navigates to the faqScreen when the action is triggered.

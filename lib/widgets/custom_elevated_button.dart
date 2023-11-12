@@ -13,7 +13,7 @@ class CustomElevatedButton extends BaseButton {
     this.leftIcon,
     this.rightIcon,
     EdgeInsets? margin,
-    VoidCallback? onPressed,
+    VoidNavFunction onPressed,
     ButtonStyle? buttonStyle,
     Alignment? alignment,
     TextStyle? buttonTextStyle,
@@ -54,7 +54,7 @@ class CustomElevatedButton extends BaseButton {
         decoration: decoration,
         child: ElevatedButton(
           style: buttonStyle,
-          onPressed: isDisabled ?? false ? null : onPressed ?? () {},
+          onPressed: isDisabled ?? false ? null : onPressed as VoidCallback?,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

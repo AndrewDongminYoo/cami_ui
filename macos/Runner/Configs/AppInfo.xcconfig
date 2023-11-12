@@ -11,4 +11,4 @@ PRODUCT_NAME = cami_lab
 PRODUCT_BUNDLE_IDENTIFIER = com.cami.camiUi
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.cami. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright ⓒ 2023 CAMI Labs. All rights reserved.

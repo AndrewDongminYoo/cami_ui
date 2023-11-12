@@ -32,7 +32,7 @@ class CamiAppFooter extends StatelessWidget {
           Row(children: [
             GestureDetector(
               onTap: () {
-                // TODO: implement Actions
+                context.go(AppRoutes.noticeScreen);
               },
               child: Text('공지사항'.tr(), style: textTheme.bodySmall),
             ),
@@ -112,7 +112,7 @@ class CamiAppFooter extends StatelessWidget {
           Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr(),
               style: textTheme.bodySmall),
           SizedBox(height: 15.h),
-          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.'.tr(),
+          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
               style: textTheme.bodySmall),
           SizedBox(height: 39.h),
           Row(children: [

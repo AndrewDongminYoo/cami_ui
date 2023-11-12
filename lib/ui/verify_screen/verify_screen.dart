@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
-import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/routes/app_routes.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
@@ -74,19 +72,5 @@ class VerifyScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void onTapTxtWidget(BuildContext context) {
-    // TODO: implement Actions
-  }
-
-  /// Navigates to the faqScreen when the action is triggered.
-  void onTapTxtWidget1(BuildContext context) {
-    context.go(AppRoutes.faqScreen);
-  }
-
-  /// Navigates to the contactUsRegisterScreen when the action is triggered.
-  void onTapTxtWidget2(BuildContext context) {
-    context.go(AppRoutes.contactUsRegisterScreen);
   }
 }

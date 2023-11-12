@@ -291,9 +291,7 @@ class PetsOneCatScreen extends StatelessWidget {
         },
         itemCount: 2,
         itemBuilder: (context, index) {
-          return UserProfileItemWidget(onTapRegisterDogButton: () {
-            onTapRegisterDogButton(context);
-          });
+          return UserProfileItemWidget(onTapDog: onTapRegisterDogButton);
         },
       ),
     );
@@ -313,7 +311,7 @@ class PetsOneCatScreen extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              onTapTxtWidget(context);
+              onTapCheckupOwnerPage(context);
             },
             child: Container(
               width: 361.w,
@@ -366,9 +364,7 @@ class PetsOneCatScreen extends StatelessWidget {
               text: '1:1 문의'.tr(),
               buttonStyle: CustomButtonStyles.fillGray,
               buttonTextStyle: textTheme.bodyLarge,
-              onPressed: () {
-                onTapContactUsRegister(context);
-              }),
+              onPressed: onTapContactUsRegister),
           Container(
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
@@ -386,9 +382,7 @@ class PetsOneCatScreen extends StatelessWidget {
               text: '자주묻는질문'.tr(),
               buttonStyle: CustomButtonStyles.fillGray,
               buttonTextStyle: textTheme.bodyLarge,
-              onPressed: () {
-                onTaptFAQ(context);
-              }),
+              onPressed: onTaptFAQ),
           Container(
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
@@ -431,8 +425,9 @@ class PetsOneCatScreen extends StatelessWidget {
     context.go(AppRoutes.newCatTab);
   }
 
-  void onTapTxtWidget(BuildContext context) {
-    // TODO: implement Actions
+  /// Navigates to the ownerPage when the action is triggered.
+  void onTapCheckupOwnerPage(BuildContext context) {
+    context.go(AppRoutes.ownerPage);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.

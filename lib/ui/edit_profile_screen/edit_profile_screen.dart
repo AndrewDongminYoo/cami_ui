@@ -463,11 +463,6 @@ class EditProfileScreen extends StatelessWidget {
   /// Navigates back to the previous screen.
   void onTapImgArrowLeft(BuildContext context) {
     context.safePop();
-    context.pop();
-  }
-
-  void onTapTxtWidget(BuildContext context) {
-    // TODO: implement Actions
   }
 
   /// Navigates to the faqScreen when the action is triggered.

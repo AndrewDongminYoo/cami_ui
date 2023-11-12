@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
-import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/routes/app_routes.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -175,14 +173,5 @@ class ContactUsRegisterScreen extends StatelessWidget {
   /// Navigates back to the previous screen.
   void onTapImgArrowLeft(BuildContext context) {
     context.safePop();
-  }
-
-  void onTapTxtWidget(BuildContext context) {
-    // TODO: implement Actions
-  }
-
-  /// Navigates to the faqScreen when the action is triggered.
-  void onTapTxtWidget1(BuildContext context) {
-    context.go(AppRoutes.faqScreen);
   }
 }

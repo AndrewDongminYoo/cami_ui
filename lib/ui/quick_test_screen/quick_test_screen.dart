@@ -159,9 +159,7 @@ class QuickTestScreen extends StatelessWidget {
                           width: 117.w,
                           text: '진단시작'.tr(),
                           buttonStyle: CustomButtonStyles.fillBlack,
-                          onPressed: () {
-                            context.go(AppRoutes.namingScreen);
-                          }),
+                          onPressed: onTapGoToTest),
                       SizedBox(height: 64.h),
                       CustomImageView(
                           imagePath: Assets.images.imgImage2.path,
@@ -255,5 +253,10 @@ class QuickTestScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  /// Navigates to the namingScreen when the action is triggered.
+  void onTapGoToTest(BuildContext context) {
+    context.go(AppRoutes.namingScreen);
   }
 }

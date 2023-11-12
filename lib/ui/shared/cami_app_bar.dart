@@ -28,6 +28,9 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
           height: 21.h,
           width: 64.w,
           margin: EdgeInsets.all(14.h),
+          onTap: () {
+            context.go(AppRoutes.homeScreen);
+          },
         ),
         actions: [
           CustomImageView(
