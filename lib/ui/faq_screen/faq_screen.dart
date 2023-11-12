@@ -10,7 +10,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down.dart';
+import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_image_view.dart';
 
 // ignore: must_be_immutable
@@ -72,7 +72,7 @@ class FaqScreen extends StatelessWidget {
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(left: 9.w, top: 1.h),
-                          child: CustomDropDown(
+                          child: CustomDropDownFormField(
                             icon: Container(
                               margin: EdgeInsets.only(left: 30.w),
                               child: CustomImageView(

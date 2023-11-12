@@ -12,7 +12,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down.dart';
+import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
@@ -325,7 +325,7 @@ class EditProfileScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomDropDown(
+            CustomDropDownFormField(
                 width: 91.w,
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
@@ -346,7 +346,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: 17.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 width: 91.w,
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
@@ -369,7 +369,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: 16.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 width: 91.w,
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),

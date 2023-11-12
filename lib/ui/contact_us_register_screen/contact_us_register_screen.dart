@@ -12,7 +12,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down.dart';
+import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_text_form_field.dart';
@@ -114,7 +114,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
               style: textTheme.bodyLarge!.copyWith(height: 1.50),
             ),
           ),
-          CustomDropDown(
+          CustomDropDownFormField(
             items: items,
             height: 40.h,
             width: 291.w,

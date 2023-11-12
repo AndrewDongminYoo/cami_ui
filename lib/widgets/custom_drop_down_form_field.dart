@@ -1,19 +1,21 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:dropdown_button2/dropdown_button2.dart';
+
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
-class CustomDropDown extends StatelessWidget {
-  const CustomDropDown({
+class CustomDropDownFormField extends StatelessWidget {
+  const CustomDropDownFormField({
     super.key,
     this.alignment,
     this.height,
     this.width,
     this.focusNode,
-    this.icon,
     this.autofocus = false,
     this.textStyle,
     this.hintText,
@@ -27,6 +29,7 @@ class CustomDropDown extends StatelessWidget {
     this.fillColor,
     this.filled = true,
     this.validator,
+    required this.icon,
     required this.items,
     required this.onChanged,
   });
@@ -35,7 +38,7 @@ class CustomDropDown extends StatelessWidget {
   final double? height;
   final double? width;
   final FocusNode? focusNode;
-  final Widget? icon;
+  final Widget icon;
   final bool autofocus;
   final TextStyle? textStyle;
   final List<String> items;
@@ -65,10 +68,10 @@ class CustomDropDown extends StatelessWidget {
   Widget get dropDownWidget => SizedBox(
         height: height ?? 40.h,
         width: width ?? double.maxFinite,
-        child: DropdownButtonFormField(
-          elevation: 0,
+        child: DropdownButtonFormField2(
+          dropdownStyleData: const DropdownStyleData(elevation: 0),
           focusNode: focusNode ?? FocusNode(),
-          icon: icon,
+          iconStyleData: IconStyleData(icon: icon),
           autofocus: autofocus,
           style: textStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
           items: items.map<DropdownMenuItem<String>>((String value) {

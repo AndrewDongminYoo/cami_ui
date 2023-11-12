@@ -11,7 +11,7 @@ import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down.dart';
+import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import 'chipview_item_widget.dart';
@@ -57,7 +57,7 @@ class NewCatTabState extends State<NewCatTab>
                   SizedBox(height: 9.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: CustomDropDown(
+                    child: CustomDropDownFormField(
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 15.w, vertical: 10.h),
                       icon: Container(

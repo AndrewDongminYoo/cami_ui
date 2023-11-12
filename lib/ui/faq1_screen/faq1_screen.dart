@@ -8,7 +8,7 @@ import '/localization/app_localization.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down.dart';
+import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_image_view.dart';
 
 // ignore: must_be_immutable
@@ -113,7 +113,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
@@ -147,7 +147,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
@@ -182,7 +182,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 18.w),
                   child: CustomImageView(
@@ -217,7 +217,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 15.w),
                   child: CustomImageView(
@@ -251,7 +251,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
@@ -285,7 +285,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
@@ -319,7 +319,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
@@ -353,7 +353,7 @@ class Faq1Screen extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 10.w),
-              child: CustomDropDown(
+              child: CustomDropDownFormField(
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
