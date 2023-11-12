@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// 🌎 Project imports:
+import '/gen/assets.gen.dart';
+
 /// 네트워크 이미지에서 이미지를 찾을 수 없는 경우 플레이스홀더 이미지를 표시하며,
 /// SVG를 포함해 모든 유형의 이미지를 표시하는 데 사용할 수 있는 [CustomImageView] 위젯입니다.
 class CustomImageView extends StatelessWidget {
@@ -23,7 +26,6 @@ class CustomImageView extends StatelessWidget {
     this.radius,
     this.margin,
     this.border,
-    this.placeHolder = 'assets/images/image_not_found.png',
   });
 
   /// [imagePath]는 이미지 표시를 위한 필수 파라미터입니다.
@@ -33,7 +35,6 @@ class CustomImageView extends StatelessWidget {
   final double? width;
   final Color? color;
   final BoxFit? fit;
-  final String placeHolder;
   final Alignment? alignment;
   final VoidCallback? onTap;
   final EdgeInsetsGeometry? margin;
@@ -127,12 +128,14 @@ class CustomImageView extends StatelessWidget {
                 backgroundColor: Colors.grey.shade100,
               ),
             ),
-            errorWidget: (context, url, error) => Image.asset(
-              placeHolder,
-              height: height,
-              width: width,
-              fit: fit ?? BoxFit.cover,
-            ),
+            errorWidget: (context, url, error) {
+              return Assets.images.imageNotFound.image(
+                semanticLabel: error.toString(),
+                height: height,
+                width: width,
+                fit: fit ?? BoxFit.cover,
+              );
+            },
           );
         case ImageType.png:
         default:
