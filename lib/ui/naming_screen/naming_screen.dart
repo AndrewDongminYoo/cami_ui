@@ -43,7 +43,7 @@ class NamingScreen extends StatelessWidget {
               children: [
                 SizedBox(height: 48.h),
                 Text('한 번 해보시개'.tr,
-                    style: CustomTextStyles.titleLargeBlack900.bolder),
+                    style: CustomTextStyles.titleLargeBlack900.extraBold),
                 SizedBox(height: 70.h),
                 Text('삼칠이 작명소'.tr, style: textTheme.titleLarge!.thick),
                 SizedBox(height: 18.h),

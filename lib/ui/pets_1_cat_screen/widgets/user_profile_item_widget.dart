@@ -14,12 +14,12 @@ import '/widgets/custom_image_view.dart';
 
 // ignore: must_be_immutable
 class UserProfileItemWidget extends StatelessWidget {
-  UserProfileItemWidget({
+  const UserProfileItemWidget({
     super.key,
-    this.onTapRegisterDogButton,
+    required this.onTapRegisterDogButton,
   });
 
-  VoidCallback? onTapRegisterDogButton;
+  final VoidCallback onTapRegisterDogButton;
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +54,7 @@ class UserProfileItemWidget extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 24.h),
                   buttonStyle: CustomButtonStyles.fillBlue,
                   buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
-                  onPressed: () {
-                    onTapRegisterDogButton!.call();
-                  },
+                  onPressed: onTapRegisterDogButton,
                   alignment: Alignment.bottomCenter,
                 ),
               ],

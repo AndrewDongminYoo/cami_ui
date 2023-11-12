@@ -155,8 +155,10 @@ class CustomTextStyles {
 extension TextStyleX on TextStyle {
   /// Font Weight
   TextStyle get plain => copyWith(fontWeight: FontWeight.normal);
+  TextStyle get medium => copyWith(fontWeight: FontWeight.w500);
+  TextStyle get semiBold => copyWith(fontWeight: FontWeight.w600);
   TextStyle get bold => copyWith(fontWeight: FontWeight.bold);
-  TextStyle get bolder => copyWith(fontWeight: FontWeight.w800);
+  TextStyle get extraBold => copyWith(fontWeight: FontWeight.w800);
   TextStyle get thick => copyWith(fontWeight: FontWeight.w900);
   TextStyle get italic => copyWith(fontStyle: FontStyle.italic);
 

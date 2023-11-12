@@ -225,12 +225,10 @@ class AppNavigationScreen extends StatelessWidget {
   Widget _buildScreenTitle(
     BuildContext context, {
     required String screenTitle,
-    Function? onTapScreenTitle,
+    required VoidCallback onTapScreenTitle,
   }) {
     return GestureDetector(
-      onTap: () {
-        onTapScreenTitle!.call();
-      },
+      onTap: onTapScreenTitle,
       child: Container(
         decoration: const BoxDecoration(color: Colors.white),
         child: Column(
