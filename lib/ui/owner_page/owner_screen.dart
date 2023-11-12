@@ -6,7 +6,6 @@ import 'package:easy_localization/easy_localization.dart';
 
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
-import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
@@ -44,7 +43,6 @@ class OwnerScreenState extends State<OwnerScreen>
             primary: true,
             child: Column(
               children: [
-                _buildOwnerFrame(context),
                 Text('찾아봐요'.tr(), style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
                 Text('우리에게 필요한'.tr(), style: textTheme.headlineSmall),
@@ -105,15 +103,6 @@ class OwnerScreenState extends State<OwnerScreen>
           ),
         ),
       ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildOwnerFrame(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      decoration: AppDecoration.fillOnPrimaryContainer,
-      child: const CamiAppBar(),
     );
   }
 }
