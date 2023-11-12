@@ -56,8 +56,9 @@ class ThemeHelper {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: appTheme.gray90002,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.w),
+          ),
           visualDensity: defaultDensity,
           padding: EdgeInsets.zero,
         ),
@@ -69,8 +70,9 @@ class ThemeHelper {
             color: appTheme.blueGray10001,
             width: 1.w,
           ),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.w)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.w),
+          ),
           visualDensity: defaultDensity,
           padding: EdgeInsets.zero,
         ),

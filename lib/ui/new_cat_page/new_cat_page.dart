@@ -43,34 +43,41 @@ class NewCatPageState extends State<NewCatPage>
                 SizedBox(height: 33.h),
                 Column(children: [
                   Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('묘종'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary))),
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 16.w),
+                      child: Text('묘종'.tr,
+                          style: CustomTextStyles.bodyMediumOnPrimary),
+                    ),
+                  ),
                   SizedBox(height: 9.h),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.w),
-                      child: CustomDropDown(
-                          icon: Container(
-                              padding:
-                                  EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
-                              decoration: BoxDecoration(
-                                  color: appTheme.gray10001,
-                                  borderRadius: BorderRadius.circular(8.w)),
-                              child: CustomImageView(
-                                  imagePath: Assets.svg.imgArrowDown.path,
-                                  height: 8.h,
-                                  width: 12.w)),
-                          items: dropdownItemList,
-                          onChanged: (value) {})),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    child: CustomDropDown(
+                      icon: Container(
+                        padding: EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
+                        decoration: BoxDecoration(
+                          color: appTheme.gray10001,
+                          borderRadius: BorderRadius.circular(8.w),
+                        ),
+                        child: CustomImageView(
+                            imagePath: Assets.svg.imgArrowDown.path,
+                            height: 8.h,
+                            width: 12.w),
+                      ),
+                      items: dropdownItemList,
+                      onChanged: (value) {},
+                    ),
+                  ),
                   SizedBox(height: 33.h),
                   Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text('중성화 수술 여부'.tr,
-                              style: CustomTextStyles.bodyMediumOnPrimary))),
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 16.w),
+                      child: Text('중성화 수술 여부'.tr,
+                          style: CustomTextStyles.bodyMediumOnPrimary),
+                    ),
+                  ),
                   SizedBox(height: 9.h),
                   _buildChipView(context),
                   SizedBox(height: 64.h),
@@ -94,10 +101,13 @@ class NewCatPageState extends State<NewCatPage>
   /// Section Widget
   Widget _buildChipView(BuildContext context) {
     return Wrap(
-        runSpacing: 8.h,
-        spacing: 8.w,
-        children:
-            List<Widget>.generate(2, (index) => const ChipviewItemWidget()));
+      runSpacing: 8.h,
+      spacing: 8.w,
+      children: List<Widget>.generate(
+        2,
+        (index) => const ChipviewItemWidget(),
+      ),
+    );
   }
 
   void onTapTxtWidget(BuildContext context) {

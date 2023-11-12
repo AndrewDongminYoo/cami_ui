@@ -17,54 +17,65 @@ class CamiAppFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 60.h),
-        decoration: AppDecoration.fillOnErrorContainer,
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      width: double.maxFinite,
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 60.h),
+      decoration: AppDecoration.fillOnErrorContainer,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           CustomImageView(
               imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
           SizedBox(height: 37.h),
           Row(children: [
             GestureDetector(
-                onTap: () {
-                  // TODO: implement Actions
-                },
-                child: Text('공지사항'.tr, style: textTheme.bodySmall)),
+              onTap: () {
+                // TODO: implement Actions
+              },
+              child: Text('공지사항'.tr, style: textTheme.bodySmall),
+            ),
             GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, AppRoutes.faqScreen);
-                },
-                child: Padding(
-                    padding: EdgeInsets.only(left: 17.w),
-                    child: Text('자주 묻는 질문'.tr, style: textTheme.bodySmall))),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.faqScreen);
+              },
+              child: Padding(
+                padding: EdgeInsets.only(left: 17.w),
+                child: Text('자주 묻는 질문'.tr, style: textTheme.bodySmall),
+              ),
+            ),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
                 child: Text('이벤트'.tr, style: textTheme.bodySmall))
           ]),
           SizedBox(height: 9.h),
           Padding(
-              padding: EdgeInsets.only(right: 19.w),
-              child: Row(children: [
+            padding: EdgeInsets.only(right: 19.w),
+            child: Row(
+              children: [
                 GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(
-                          context, AppRoutes.contactUsRegisterScreen);
-                    },
-                    child: Text('고객센터'.tr,
-                        style: CustomTextStyles.bodySmallGray500)),
+                  onTap: () {
+                    Navigator.pushNamed(
+                        context, AppRoutes.contactUsRegisterScreen);
+                  },
+                  child:
+                      Text('고객센터'.tr, style: CustomTextStyles.bodySmallGray500),
+                ),
                 Padding(
-                    padding: EdgeInsets.only(left: 15.w),
-                    child: Text('이용약관'.tr,
-                        style: CustomTextStyles.bodySmallGray500)),
+                  padding: EdgeInsets.only(left: 15.w),
+                  child:
+                      Text('이용약관'.tr, style: CustomTextStyles.bodySmallGray500),
+                ),
                 Padding(
-                    padding: EdgeInsets.only(left: 15.w),
-                    child: Text('개인정보취급방침'.tr,
-                        style: CustomTextStyles.bodySmallGray500)),
+                  padding: EdgeInsets.only(left: 15.w),
+                  child: Text('개인정보취급방침'.tr,
+                      style: CustomTextStyles.bodySmallGray500),
+                ),
                 Padding(
                     padding: EdgeInsets.only(left: 15.w),
                     child: Text('기관 제휴 및 구매 문의'.tr,
                         style: CustomTextStyles.bodySmallGray500))
-              ])),
+              ],
+            ),
+          ),
           SizedBox(height: 38.h),
           Row(children: [
             Text('Address', style: textTheme.bodySmall),
@@ -74,22 +85,26 @@ class CamiAppFooter extends StatelessWidget {
           ]),
           SizedBox(height: 9.h),
           Padding(
-              padding: EdgeInsets.only(right: 72.w),
-              child: Row(children: [
+            padding: EdgeInsets.only(right: 72.w),
+            child: Row(
+              children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text('서울시 구로구 디지털로34길 55'.tr, style: textTheme.bodySmall),
                   Text('코오롱싸이언스밸리2차 B101'.tr, style: textTheme.bodySmall)
                 ]),
                 Padding(
-                    padding: EdgeInsets.only(left: 17.w),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('business@cami.kr', style: textTheme.bodySmall),
-                          Text('02-861-6828',
-                              style: CustomTextStyles.bodySmall11)
-                        ]))
-              ])),
+                  padding: EdgeInsets.only(left: 17.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('business@cami.kr', style: textTheme.bodySmall),
+                      Text('02-861-6828', style: CustomTextStyles.bodySmall11)
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           SizedBox(height: 45.h),
           Text('주식회사 카미랩'.tr, style: textTheme.bodySmall),
           Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr,
@@ -114,8 +129,10 @@ class CamiAppFooter extends StatelessWidget {
               height: 24.r,
               width: 24.r,
               margin: EdgeInsets.only(left: 16.w),
-            )
+            ),
           ])
-        ]));
+        ],
+      ),
+    );
   }
 }

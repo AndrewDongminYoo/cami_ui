@@ -37,23 +37,24 @@ class NamingScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-            width: double.maxFinite,
-            child: SingleChildScrollView(
-                child: Column(children: [
-              SizedBox(height: 48.h),
-              Text('한 번 해보시개'.tr,
-                  style: CustomTextStyles.titleLargeBlack900.bolder),
-              SizedBox(height: 70.h),
-              Text('삼칠이 작명소'.tr, style: textTheme.titleLarge!.thick),
-              SizedBox(height: 18.h),
-              Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18.bold),
-              SizedBox(height: 29.h),
-              SizedBox(
-                height: 283.h,
-                width: 289.w,
-                child: Stack(alignment: Alignment.topCenter, children: [
-                  Align(
-                    child: Padding(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 48.h),
+                Text('한 번 해보시개'.tr,
+                    style: CustomTextStyles.titleLargeBlack900.bolder),
+                SizedBox(height: 70.h),
+                Text('삼칠이 작명소'.tr, style: textTheme.titleLarge!.thick),
+                SizedBox(height: 18.h),
+                Text('개성만점 별명 짓기'.tr, style: CustomTextStyles.bodyLarge18.bold),
+                SizedBox(height: 29.h),
+                SizedBox(
+                  height: 283.h,
+                  width: 289.w,
+                  child: Stack(alignment: Alignment.topCenter, children: [
+                    Align(
+                      child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 27.w),
                         child: Column(
                           children: [
@@ -84,92 +85,101 @@ class NamingScreen extends StatelessWidget {
                                 ),
                                 Text('입니다.'.tr, style: textTheme.bodyLarge)
                               ],
-                            )
+                            ),
                           ],
-                        )),
-                  ),
-                  Align(
+                        ),
+                      ),
+                    ),
+                    Align(
                       alignment: Alignment.topCenter,
                       child: Container(
-                          margin: EdgeInsets.only(top: 67.h, bottom: 83.h),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 56.w, vertical: 16.h),
-                          decoration: AppDecoration.fillGray.copyWith(
-                              borderRadius: BorderRadiusStyle.circleBorder8),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                CustomImageView(
-                                  imagePath: Assets.images.imgCatProfile.path,
-                                  height: 100.r,
-                                  width: 100.r,
-                                  radius: BorderRadius.circular(50.w),
-                                ),
-                                Padding(
-                                    padding: EdgeInsets.only(
-                                        top: 15.h, right: 2.w, bottom: 11.h),
-                                    child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text('꼬리'.tr,
-                                              style: CustomTextStyles
-                                                  .bodyMediumBlack900),
-                                          SizedBox(height: 2.h),
-                                          Text('5살 2개월'.tr,
-                                              style: CustomTextStyles
-                                                  .bodyMediumBlack900),
-                                          SizedBox(height: 3.h),
-                                          Text('남자'.tr,
-                                              style: textTheme.bodyLarge)
-                                        ]))
-                              ])))
-                ]),
-              ),
-              SizedBox(height: 78.h),
-              SliderItemWidget(current: indexListenable, items: sliderBanners),
-              SizedBox(height: 31.h),
-              SizedBox(
-                height: 24.h,
-                child: ValueListenableBuilder(
-                  valueListenable: indexListenable,
-                  builder: (context, index, child) {
-                    return AnimatedSmoothIndicator(
-                      activeIndex: index,
-                      count: sliderBanners.length,
-                      effect: WormEffect(
-                        activeDotColor: appTheme.black900,
-                        dotColor: appTheme.gray600,
-                        dotHeight: 8.h,
-                        dotWidth: 8.w,
+                        margin: EdgeInsets.only(top: 67.h, bottom: 83.h),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 56.w, vertical: 16.h),
+                        decoration: AppDecoration.fillGray.copyWith(
+                            borderRadius: BorderRadiusStyle.circleBorder8),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomImageView(
+                              imagePath: Assets.images.imgCatProfile.path,
+                              height: 100.r,
+                              width: 100.r,
+                              radius: BorderRadius.circular(50.w),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  top: 15.h, right: 2.w, bottom: 11.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('꼬리'.tr,
+                                      style:
+                                          CustomTextStyles.bodyMediumBlack900),
+                                  SizedBox(height: 2.h),
+                                  Text('5살 2개월'.tr,
+                                      style:
+                                          CustomTextStyles.bodyMediumBlack900),
+                                  SizedBox(height: 3.h),
+                                  Text('남자'.tr, style: textTheme.bodyLarge)
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    );
-                  },
+                    ),
+                  ]),
                 ),
-              ),
-              SizedBox(height: 56.h),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 42.w),
-                child:
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  CustomElevatedButton(
-                      height: 56.h,
-                      width: 144.w,
-                      text: '다시하기'.tr,
-                      buttonStyle: CustomButtonStyles.fillPrimary,
-                      buttonTextStyle:
-                          CustomTextStyles.bodyMediumOnErrorContainer),
-                  CustomElevatedButton(
-                      height: 56.h,
-                      width: 144.w,
-                      text: '목록으로'.tr,
-                      margin: EdgeInsets.only(left: 21.w),
-                      buttonStyle: CustomButtonStyles.fillBlack)
-                ]),
-              ),
-              SizedBox(height: 178.h),
-              const CamiAppFooter()
-            ]))),
+                SizedBox(height: 78.h),
+                SliderItemWidget(
+                    current: indexListenable, items: sliderBanners),
+                SizedBox(height: 31.h),
+                SizedBox(
+                  height: 24.h,
+                  child: ValueListenableBuilder(
+                    valueListenable: indexListenable,
+                    builder: (context, index, child) {
+                      return AnimatedSmoothIndicator(
+                        activeIndex: index,
+                        count: sliderBanners.length,
+                        effect: WormEffect(
+                          activeDotColor: appTheme.black900,
+                          dotColor: appTheme.gray600,
+                          dotHeight: 8.h,
+                          dotWidth: 8.w,
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 56.h),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 42.w),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomElevatedButton(
+                            height: 56.h,
+                            width: 144.w,
+                            text: '다시하기'.tr,
+                            buttonStyle: CustomButtonStyles.fillPrimary,
+                            buttonTextStyle:
+                                CustomTextStyles.bodyMediumOnErrorContainer),
+                        CustomElevatedButton(
+                            height: 56.h,
+                            width: 144.w,
+                            text: '목록으로'.tr,
+                            margin: EdgeInsets.only(left: 21.w),
+                            buttonStyle: CustomButtonStyles.fillBlack)
+                      ]),
+                ),
+                SizedBox(height: 178.h),
+                const CamiAppFooter()
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

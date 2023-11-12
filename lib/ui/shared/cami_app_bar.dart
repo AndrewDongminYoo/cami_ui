@@ -36,7 +36,7 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
               Navigator.of(context)
                   .restorablePushNamed(AppRoutes.menuBarScreen);
             },
-          )
+          ),
         ],
       ),
     );

@@ -52,10 +52,8 @@ class UserReviewItemWidget extends StatelessWidget {
                             .copyWith(height: 1.33),
                       ),
                     ),
-                    Text(
-                      '어쩜 이렇게 정확한지 신기해요.'.tr.toUpperCase(),
-                      style: CustomTextStyles.bodySmallGray90002_1,
-                    ),
+                    Text('어쩜 이렇게 정확한지 신기해요.'.tr.toUpperCase(),
+                        style: CustomTextStyles.bodySmallGray90002_1),
                     Container(
                       width: 229.w,
                       margin: EdgeInsets.only(right: 51.w),
@@ -80,10 +78,8 @@ class UserReviewItemWidget extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 13.h),
-                    Text(
-                      '"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr.toUpperCase(),
-                      style: CustomTextStyles.bodySmallGray90002_1,
-                    ),
+                    Text('"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr.toUpperCase(),
+                        style: CustomTextStyles.bodySmallGray90002_1),
                   ],
                 ),
               ),
@@ -117,10 +113,8 @@ class UserReviewItemWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(height: 3.h),
-                            Text(
-                              '만두'.tr.toUpperCase(),
-                              style: CustomTextStyles.bodySmallGray90002_1,
-                            ),
+                            Text('만두'.tr.toUpperCase(),
+                                style: CustomTextStyles.bodySmallGray90002_1),
                           ],
                         ),
                       ),

@@ -33,10 +33,7 @@ class UserProfileItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(height: 16.h),
-          Text(
-            '나는 멍집사'.tr,
-            style: textTheme.bodyLarge,
-          ),
+          Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
           SizedBox(height: 25.h),
           SizedBox(
             height: 112.h,

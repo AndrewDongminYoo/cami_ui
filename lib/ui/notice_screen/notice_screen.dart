@@ -27,36 +27,42 @@ class NoticeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 16.w),
-                        child: Row(children: [
-                          CustomImageView(
-                              imagePath: Assets.svg.imgArrowLeft.path,
-                              height: 28.h,
-                              width: 20.w,
-                              onTap: () {
-                                onTapImgArrowLeft(context);
-                              }),
-                          Padding(
-                              padding: EdgeInsets.only(left: 127.w),
-                              child: Text('공지사항'.tr,
-                                  style: CustomTextStyles.bodyLarge18))
-                        ]))),
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Row(
+                      children: [
+                        CustomImageView(
+                            imagePath: Assets.svg.imgArrowLeft.path,
+                            height: 28.h,
+                            width: 20.w,
+                            onTap: () {
+                              onTapImgArrowLeft(context);
+                            }),
+                        Padding(
+                            padding: EdgeInsets.only(left: 127.w),
+                            child: Text('공지사항'.tr,
+                                style: CustomTextStyles.bodyLarge18))
+                      ],
+                    ),
+                  ),
+                ),
                 SizedBox(height: 16.h),
                 Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: _buildNotice(context,
-                        userName: '2',
-                        userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr,
-                        userDate: '2021-03-04')),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: _buildNotice(context,
+                      userName: '2',
+                      userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr,
+                      userDate: '2021-03-04'),
+                ),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
                 Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    child: _buildNotice(context,
-                        userName: '1',
-                        userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr,
-                        userDate: '2020-03-17')),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: _buildNotice(context,
+                      userName: '1',
+                      userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr,
+                      userDate: '2020-03-17'),
+                ),
                 Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 127.h),
                 const CamiAppFooter(),
@@ -76,30 +82,41 @@ class NoticeScreen extends StatelessWidget {
     required String userDate,
   }) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 1.w, vertical: 15.h),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                  padding: EdgeInsets.only(left: 9.w, bottom: 3.h),
-                  child: Text(userName,
-                      style: CustomTextStyles.bodySmallBlack900
-                          .copyWith(color: appTheme.black900))),
-              Padding(
-                  padding: EdgeInsets.only(left: 17.w, bottom: 3.h),
-                  child: Text(userMessage,
-                      style: CustomTextStyles.bodySmallBlack900
-                          .copyWith(color: appTheme.black900))),
-              const Spacer(),
-              Padding(
-                  padding: EdgeInsets.only(top: 2.h, bottom: 3.h),
-                  child: Text(userDate,
-                      style: CustomTextStyles.bodySmallGray50011
-                          .copyWith(color: appTheme.gray500)))
-            ]));
+      padding: EdgeInsets.symmetric(horizontal: 1.w, vertical: 15.h),
+      decoration: AppDecoration.fillOnPrimaryContainer,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 9.w, bottom: 3.h),
+            child: Text(
+              userName,
+              style: CustomTextStyles.bodySmallBlack900
+                  .copyWith(color: appTheme.black900),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 17.w, bottom: 3.h),
+            child: Text(
+              userMessage,
+              style: CustomTextStyles.bodySmallBlack900
+                  .copyWith(color: appTheme.black900),
+            ),
+          ),
+          const Spacer(),
+          Padding(
+            padding: EdgeInsets.only(top: 2.h, bottom: 3.h),
+            child: Text(
+              userDate,
+              style: CustomTextStyles.bodySmallGray50011
+                  .copyWith(color: appTheme.gray500),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   /// Navigates back to the previous screen.

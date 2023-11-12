@@ -43,10 +43,8 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                           left: 16.w,
                           top: 13.h,
                         ),
-                        child: Text(
-                          '고양이 행동 전문가'.tr,
-                          style: CustomTextStyles.bodySmallGreen300,
-                        ),
+                        child: Text('고양이 행동 전문가'.tr,
+                            style: CustomTextStyles.bodySmallGreen300),
                       ),
                     ),
                     Align(
@@ -111,10 +109,8 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: EdgeInsets.only(top: 39.h),
-                                child: Text(
-                                  '김명철 수의사'.tr,
-                                  style: CustomTextStyles.bodyLargeGray90002,
-                                ),
+                                child: Text('김명철 수의사'.tr,
+                                    style: CustomTextStyles.bodyLargeGray90002),
                               ),
                             ),
                           ],
@@ -136,16 +132,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 16.w),
                     child: Row(
                       children: [
-                        Text(
-                          '강아지 행동 전문가'.tr,
-                          style: CustomTextStyles.bodySmallGreen300,
-                        ),
+                        Text('강아지 행동 전문가'.tr,
+                            style: CustomTextStyles.bodySmallGreen300),
                         Padding(
                           padding: EdgeInsets.only(left: 255.w),
-                          child: Text(
-                            '동물행동학 전문가'.tr,
-                            style: CustomTextStyles.bodySmallGreen300,
-                          ),
+                          child: Text('동물행동학 전문가'.tr,
+                              style: CustomTextStyles.bodySmallGreen300),
                         ),
                       ],
                     ),
@@ -155,16 +147,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 16.w),
                     child: Row(
                       children: [
-                        Text(
-                          '설채현 수의사'.tr,
-                          style: CustomTextStyles.bodyLargeGray90002,
-                        ),
+                        Text('설채현 수의사'.tr,
+                            style: CustomTextStyles.bodyLargeGray90002),
                         Padding(
                           padding: EdgeInsets.only(left: 971.w),
-                          child: Text(
-                            '서지형 훈련사'.tr,
-                            style: CustomTextStyles.bodyLargeGray90002,
-                          ),
+                          child: Text('서지형 훈련사'.tr,
+                              style: CustomTextStyles.bodyLargeGray90002),
                         ),
                       ],
                     ),
@@ -252,10 +240,9 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    '신윤주 박사'.tr,
-                                    style: CustomTextStyles.bodyLargeGray90002,
-                                  ),
+                                  Text('신윤주 박사'.tr,
+                                      style:
+                                          CustomTextStyles.bodyLargeGray90002),
                                   SizedBox(height: 63.h),
                                   Text(
                                     '서울대학교 수의학박사'.tr,
@@ -302,16 +289,14 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Align(
-                                    child: Text(
-                                      '임상수의학 박사'.tr,
-                                      style: CustomTextStyles.bodySmallGreen300,
-                                    ),
+                                    child: Text('임상수의학 박사'.tr,
+                                        style:
+                                            CustomTextStyles.bodySmallGreen300),
                                   ),
                                   SizedBox(height: 8.h),
-                                  Text(
-                                    '강종일 박사'.tr,
-                                    style: CustomTextStyles.bodyLargeGray90002,
-                                  ),
+                                  Text('강종일 박사'.tr,
+                                      style:
+                                          CustomTextStyles.bodyLargeGray90002),
                                 ],
                               ),
                             ),
@@ -372,10 +357,8 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 left: 16.w,
                                 top: 15.h,
                               ),
-                              child: Text(
-                                '클리커 트레이너'.tr,
-                                style: CustomTextStyles.bodySmallGreen300,
-                              ),
+                              child: Text('클리커 트레이너'.tr,
+                                  style: CustomTextStyles.bodySmallGreen300),
                             ),
                           ),
                           CustomImageView(
@@ -425,15 +408,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    '상담심리학 박사'.tr,
-                                    style: CustomTextStyles.bodySmallGreen300,
-                                  ),
+                                  Text('상담심리학 박사'.tr,
+                                      style:
+                                          CustomTextStyles.bodySmallGreen300),
                                   SizedBox(height: 8.h),
-                                  Text(
-                                    '박성희 박사'.tr,
-                                    style: CustomTextStyles.bodyLargeGray90002,
-                                  ),
+                                  Text('박성희 박사'.tr,
+                                      style:
+                                          CustomTextStyles.bodyLargeGray90002),
                                   SizedBox(height: 63.h),
                                   Row(
                                     crossAxisAlignment:

@@ -32,70 +32,78 @@ class PetsEmptyScreen extends StatelessWidget {
               children: [
                 SizedBox(height: 44.h),
                 Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 15.w, right: 72.w),
-                        child: Row(children: [
-                          CustomImageView(
-                              imagePath: Assets.images.imgImage8.path,
-                              height: 100.r,
-                              width: 100.r,
-                              radius: BorderRadius.circular(50.w)),
-                          Padding(
-                              padding: EdgeInsets.only(
-                                  left: 24.w, top: 30.h, bottom: 25.h),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(children: [
-                                      Text('Andrew',
-                                          style: CustomTextStyles
-                                              .bodyLargeGray900),
-                                      Text('님, 반가워요!'.tr,
-                                          style:
-                                              CustomTextStyles.bodyLargeGray900)
-                                    ]),
-                                    SizedBox(height: 3.h),
-                                    Text('ydm2790@naver.com',
-                                        style:
-                                            CustomTextStyles.bodySmallGray50011)
-                                  ])),
-                          Padding(
-                              padding: EdgeInsets.only(
-                                  left: 2.w, top: 26.h, bottom: 42.h),
-                              child: CustomIconButton(
-                                  height: 32.r,
-                                  width: 32.r,
-                                  padding: EdgeInsets.all(8.w),
-                                  child: CustomImageView(
-                                      imagePath: Assets.svg.imgSettings.path)))
-                        ]))),
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 15.w, right: 72.w),
+                    child: Row(
+                      children: [
+                        CustomImageView(
+                          imagePath: Assets.images.imgImage8.path,
+                          height: 100.r,
+                          width: 100.r,
+                          radius: BorderRadius.circular(50.w),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 24.w, top: 30.h, bottom: 25.h),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(children: [
+                                Text('Andrew',
+                                    style: CustomTextStyles.bodyLargeGray900),
+                                Text('님, 반가워요!'.tr,
+                                    style: CustomTextStyles.bodyLargeGray900)
+                              ]),
+                              SizedBox(height: 3.h),
+                              Text('ydm2790@naver.com',
+                                  style: CustomTextStyles.bodySmallGray50011)
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 2.w, top: 26.h, bottom: 42.h),
+                          child: CustomIconButton(
+                            height: 32.r,
+                            width: 32.r,
+                            padding: EdgeInsets.all(8.w),
+                            child: CustomImageView(
+                                imagePath: Assets.svg.imgSettings.path),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 SizedBox(height: 48.h),
                 Padding(
-                    padding: EdgeInsets.only(left: 15.w, right: 19.w),
-                    child: _buildWidget(context,
-                        userName: '등록된 정보가 없습니다.'.tr,
-                        userAge: '생년월일'.tr,
-                        userLocation: '-',
-                        userOccupation: '연령'.tr,
-                        userDescription: '-',
-                        userInterests: '견종'.tr,
-                        userHobbies: '-',
-                        userGoals: '성별'.tr,
-                        userSkills: '-')),
+                  padding: EdgeInsets.only(left: 15.w, right: 19.w),
+                  child: _buildWidget(context,
+                      userName: '등록된 정보가 없습니다.'.tr,
+                      userAge: '생년월일'.tr,
+                      userLocation: '-',
+                      userOccupation: '연령'.tr,
+                      userDescription: '-',
+                      userInterests: '견종'.tr,
+                      userHobbies: '-',
+                      userGoals: '성별'.tr,
+                      userSkills: '-'),
+                ),
                 SizedBox(height: 18.h),
                 Padding(
-                    padding: EdgeInsets.only(left: 15.w, right: 19.w),
-                    child: _buildWidget(context,
-                        userName: '등록된 정보가 없습니다.'.tr,
-                        userAge: '생년월일'.tr,
-                        userLocation: '-',
-                        userOccupation: '연령'.tr,
-                        userDescription: '-',
-                        userInterests: '묘종'.tr,
-                        userHobbies: '-',
-                        userGoals: '성별'.tr,
-                        userSkills: '-')),
+                  padding: EdgeInsets.only(left: 15.w, right: 19.w),
+                  child: _buildWidget(context,
+                      userName: '등록된 정보가 없습니다.'.tr,
+                      userAge: '생년월일'.tr,
+                      userLocation: '-',
+                      userOccupation: '연령'.tr,
+                      userDescription: '-',
+                      userInterests: '묘종'.tr,
+                      userHobbies: '-',
+                      userGoals: '성별'.tr,
+                      userSkills: '-'),
+                ),
                 SizedBox(height: 16.h),
                 _buildPetRegistration(context),
                 SizedBox(height: 22.h),
@@ -113,77 +121,89 @@ class PetsEmptyScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildPetRegistration(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.w),
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      padding: EdgeInsets.symmetric(horizontal: 15.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           Container(
-              padding: EdgeInsets.symmetric(horizontal: 12.w),
-              decoration: AppDecoration.outlineOnSecondaryContainer
-                  .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-              child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(height: 16.h),
-                    Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
-                    SizedBox(height: 25.h),
-                    SizedBox(
-                        height: 112.h,
-                        width: 149.w,
-                        child:
-                            Stack(alignment: Alignment.bottomCenter, children: [
-                          CustomImageView(
-                              imagePath: Assets.images.imgImage112x138.path,
-                              height: 112.h,
-                              width: 138.w,
-                              alignment: Alignment.center),
-                          CustomElevatedButton(
-                              height: 32.h,
-                              width: 149.w,
-                              text: '강아지 등록하기'.tr,
-                              margin: EdgeInsets.only(bottom: 24.h),
-                              buttonStyle: CustomButtonStyles.fillBlue,
-                              buttonTextStyle:
-                                  CustomTextStyles.bodyMediumBlack900,
-                              alignment: Alignment.bottomCenter)
-                        ]))
-                  ])),
+            padding: EdgeInsets.symmetric(horizontal: 12.w),
+            decoration: AppDecoration.outlineOnSecondaryContainer
+                .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(height: 16.h),
+                Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
+                SizedBox(height: 25.h),
+                SizedBox(
+                  height: 112.h,
+                  width: 149.w,
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      CustomImageView(
+                          imagePath: Assets.images.imgImage112x138.path,
+                          height: 112.h,
+                          width: 138.w,
+                          alignment: Alignment.center),
+                      CustomElevatedButton(
+                          height: 32.h,
+                          width: 149.w,
+                          text: '강아지 등록하기'.tr,
+                          margin: EdgeInsets.only(bottom: 24.h),
+                          buttonStyle: CustomButtonStyles.fillBlue,
+                          buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                          alignment: Alignment.bottomCenter)
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           Container(
-              margin: EdgeInsets.only(left: 12.w),
-              padding: EdgeInsets.symmetric(horizontal: 12.w),
-              decoration: AppDecoration.outlineOnSecondaryContainer
-                  .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-              child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(height: 16.h),
-                    Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
-                    SizedBox(height: 25.h),
-                    SizedBox(
-                        height: 112.h,
-                        width: 149.w,
-                        child:
-                            Stack(alignment: Alignment.bottomCenter, children: [
-                          CustomImageView(
-                              imagePath: Assets.images.imgImage10.path,
-                              height: 112.h,
-                              width: 138.w,
-                              alignment: Alignment.center,
-                              onTap: () {
-                                onTapImgIMAGE(context);
-                              }),
-                          CustomElevatedButton(
-                              height: 32.h,
-                              width: 149.w,
-                              text: '고양이 등록하기'.tr,
-                              margin: EdgeInsets.only(bottom: 24.h),
-                              buttonStyle: CustomButtonStyles.fillBlue,
-                              buttonTextStyle:
-                                  CustomTextStyles.bodyMediumBlack900,
-                              alignment: Alignment.bottomCenter)
-                        ]))
-                  ]))
-        ]));
+            margin: EdgeInsets.only(left: 12.w),
+            padding: EdgeInsets.symmetric(horizontal: 12.w),
+            decoration: AppDecoration.outlineOnSecondaryContainer
+                .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(height: 16.h),
+                Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
+                SizedBox(height: 25.h),
+                SizedBox(
+                  height: 112.h,
+                  width: 149.w,
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      CustomImageView(
+                          imagePath: Assets.images.imgImage10.path,
+                          height: 112.h,
+                          width: 138.w,
+                          alignment: Alignment.center,
+                          onTap: () {
+                            onTapImgIMAGE(context);
+                          }),
+                      CustomElevatedButton(
+                          height: 32.h,
+                          width: 149.w,
+                          text: '고양이 등록하기'.tr,
+                          margin: EdgeInsets.only(bottom: 24.h),
+                          buttonStyle: CustomButtonStyles.fillBlue,
+                          buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                          alignment: Alignment.bottomCenter)
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   /// Section Widget
@@ -213,69 +233,88 @@ class PetsEmptyScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildMyPet(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        child: Column(children: [
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: Column(
+        children: [
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillPrimary,
-              child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillPrimary,
+            child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge),
+          ),
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillGray50,
-              child: Text('심리검사'.tr, style: textTheme.bodyLarge)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillGray50,
+            child: Text('심리검사'.tr, style: textTheme.bodyLarge),
+          ),
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillGray50,
-              child: Text('방문교육'.tr, style: textTheme.bodyLarge)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillGray50,
+            child: Text('방문교육'.tr, style: textTheme.bodyLarge),
+          ),
           Container(
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillGray50,
-              child: Row(children: [
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillGray50,
+            child: Row(
+              children: [
                 Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
                 Container(
-                    height: 20.h,
-                    width: 18.w,
-                    margin: EdgeInsets.only(left: 5.w, bottom: 3.h),
-                    child: Stack(alignment: Alignment.topCenter, children: [
+                  height: 20.h,
+                  width: 18.w,
+                  margin: EdgeInsets.only(left: 5.w, bottom: 3.h),
+                  child: Stack(
+                    alignment: Alignment.topCenter,
+                    children: [
                       Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Container(
-                              height: 18.r,
-                              width: 18.r,
-                              decoration: BoxDecoration(
-                                  color: appTheme.black900,
-                                  borderRadius: BorderRadius.circular(9.w)))),
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          height: 18.r,
+                          width: 18.r,
+                          decoration: BoxDecoration(
+                            color: appTheme.black900,
+                            borderRadius: BorderRadius.circular(9.w),
+                          ),
+                        ),
+                      ),
                       Align(
                           alignment: Alignment.topCenter,
                           child: Text('0', style: textTheme.bodySmall))
-                    ]))
-              ])),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           _buildInquiries(context),
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillGray50,
-              child: Text('로그아웃'.tr, style: textTheme.bodyLarge)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillGray50,
+            child: Text('로그아웃'.tr, style: textTheme.bodyLarge),
+          ),
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
-              decoration: AppDecoration.fillGray50,
-              child: Divider(color: appTheme.gray20001, endIndent: 26.w)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
+            decoration: AppDecoration.fillGray50,
+            child: Divider(color: appTheme.gray20001, endIndent: 26.w),
+          ),
           _buildFaq(context),
           Container(
-              width: 361.w,
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
-              decoration: AppDecoration.fillGray50,
-              child: Text('공지사항'.tr, style: textTheme.bodyLarge)),
+            width: 361.w,
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
+            decoration: AppDecoration.fillGray50,
+            child: Text('공지사항'.tr, style: textTheme.bodyLarge),
+          ),
           Container(
               width: 361.w,
               padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 11.h),
               decoration: AppDecoration.fillGray50,
               child: Text('이벤트'.tr, style: textTheme.bodyLarge))
-        ]));
+        ],
+      ),
+    );
   }
 
   /// Common widget
@@ -292,70 +331,99 @@ class PetsEmptyScreen extends StatelessWidget {
     required String userSkills,
   }) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
-        decoration: AppDecoration.outlineOnSecondaryContainer
-            .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
+      decoration: AppDecoration.outlineOnSecondaryContainer
+          .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           CustomImageView(
-              imagePath: Assets.images.imgImage9.path,
-              height: 84.r,
-              width: 84.r,
-              radius: BorderRadius.circular(42.w),
-              margin: EdgeInsets.only(top: 17.h, bottom: 33.h)),
+            imagePath: Assets.images.imgImage9.path,
+            height: 84.r,
+            width: 84.r,
+            radius: BorderRadius.circular(42.w),
+            margin: EdgeInsets.only(top: 17.h, bottom: 33.h),
+          ),
           Padding(
-              padding: EdgeInsets.only(left: 24.w, bottom: 11.h),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(userName,
-                        style: CustomTextStyles.bodyLargeGray500
-                            .copyWith(color: appTheme.gray500)),
-                    SizedBox(height: 7.h),
-                    Row(children: [
-                      Text(userAge,
-                          style: textTheme.bodyMedium!
-                              .copyWith(color: appTheme.gray500)),
-                      Padding(
-                          padding: EdgeInsets.only(left: 16.w),
-                          child: Text(userLocation,
-                              style: textTheme.bodyMedium!
-                                  .copyWith(color: appTheme.gray500)))
-                    ]),
-                    SizedBox(height: 2.h),
-                    Row(children: [
-                      Text(userOccupation,
-                          style: textTheme.bodyMedium!
-                              .copyWith(color: appTheme.gray500)),
-                      Padding(
-                          padding: EdgeInsets.only(left: 43.w),
-                          child: Text(userDescription,
-                              style: textTheme.bodyMedium!
-                                  .copyWith(color: appTheme.gray500)))
-                    ]),
-                    SizedBox(height: 3.h),
-                    Row(children: [
-                      Text(userInterests,
-                          style: textTheme.bodyMedium!
-                              .copyWith(color: appTheme.gray500)),
-                      Padding(
-                          padding: EdgeInsets.only(left: 42.w),
-                          child: Text(userHobbies,
-                              style: textTheme.bodyMedium!
-                                  .copyWith(color: appTheme.gray500)))
-                    ]),
-                    SizedBox(height: 2.h),
-                    Row(children: [
-                      Text(userGoals,
-                          style: textTheme.bodyMedium!
-                              .copyWith(color: appTheme.gray500)),
-                      Padding(
-                          padding: EdgeInsets.only(left: 42.w),
-                          child: Text(userSkills,
-                              style: textTheme.bodyMedium!
-                                  .copyWith(color: appTheme.gray500)))
-                    ])
-                  ]))
-        ]));
+            padding: EdgeInsets.only(left: 24.w, bottom: 11.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  userName,
+                  style: CustomTextStyles.bodyLargeGray500
+                      .copyWith(color: appTheme.gray500),
+                ),
+                SizedBox(height: 7.h),
+                Row(children: [
+                  Text(
+                    userAge,
+                    style:
+                        textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text(
+                      userLocation,
+                      style: textTheme.bodyMedium!
+                          .copyWith(color: appTheme.gray500),
+                    ),
+                  ),
+                ]),
+                SizedBox(height: 2.h),
+                Row(children: [
+                  Text(
+                    userOccupation,
+                    style:
+                        textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 43.w),
+                    child: Text(
+                      userDescription,
+                      style: textTheme.bodyMedium!
+                          .copyWith(color: appTheme.gray500),
+                    ),
+                  ),
+                ]),
+                SizedBox(height: 3.h),
+                Row(children: [
+                  Text(
+                    userInterests,
+                    style:
+                        textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 42.w),
+                    child: Text(
+                      userHobbies,
+                      style: textTheme.bodyMedium!
+                          .copyWith(color: appTheme.gray500),
+                    ),
+                  ),
+                ]),
+                SizedBox(height: 2.h),
+                Row(children: [
+                  Text(
+                    userGoals,
+                    style:
+                        textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 42.w),
+                    child: Text(
+                      userSkills,
+                      style: textTheme.bodyMedium!
+                          .copyWith(color: appTheme.gray500),
+                    ),
+                  ),
+                ])
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   /// Navigates to the newCatTabContainerScreen when the action is triggered.

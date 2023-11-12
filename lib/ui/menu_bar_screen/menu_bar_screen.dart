@@ -27,42 +27,27 @@ class MenuBarScreen extends StatelessWidget {
               SizedBox(height: 39.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '심리검사'.tr,
-                  style: CustomTextStyles.bodyLarge18,
-                ),
+                child: Text('심리검사'.tr, style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 24.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '방문교육'.tr,
-                  style: CustomTextStyles.bodyLarge18,
-                ),
+                child: Text('방문교육'.tr, style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '반짝 테스트'.tr,
-                  style: CustomTextStyles.bodyLarge18,
-                ),
+                child: Text('반짝 테스트'.tr, style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 25.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '마이페이지'.tr,
-                  style: CustomTextStyles.bodyLarge18,
-                ),
+                child: Text('마이페이지'.tr, style: CustomTextStyles.bodyLarge18),
               ),
               SizedBox(height: 24.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text(
-                  '로그아웃'.tr,
-                  style: CustomTextStyles.bodyLarge18,
-                ),
+                child: Text('로그아웃'.tr, style: CustomTextStyles.bodyLarge18),
               ),
               const Spacer(),
               CustomImageView(

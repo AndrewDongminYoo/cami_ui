@@ -56,125 +56,139 @@ class FaqScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Divider(indent: 16.w, endIndent: 16.w),
                 Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16.w),
-                    padding: EdgeInsets.all(8.w),
-                    decoration: AppDecoration.fillGray100,
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Padding(
-                              padding: EdgeInsets.only(top: 9.h, bottom: 7.h),
-                              child: Text('Q.',
-                                  style: CustomTextStyles
-                                      .bodyMediumNanumSquareNeoBlack900)),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(left: 9.w, top: 1.h),
-                              child: CustomDropDown(
-                                icon: Container(
-                                    margin: EdgeInsets.only(left: 30.w),
-                                    child: CustomImageView(
-                                        imagePath:
-                                            Assets.svg.imgArrowdownGray700.path,
-                                        height: 32.h,
-                                        width: 30.w)),
-                                hintText: '결제가 되지 않아요'.tr,
-                                hintStyle: CustomTextStyles
-                                    .bodyMediumNanumSquareNeoBlack90013,
-                                items: items,
-                                onChanged: (value) {},
-                              ),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  padding: EdgeInsets.all(8.w),
+                  decoration: AppDecoration.fillGray100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 9.h, bottom: 7.h),
+                        child: Text('Q.',
+                            style: CustomTextStyles
+                                .bodyMediumNanumSquareNeoBlack900),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 9.w, top: 1.h),
+                          child: CustomDropDown(
+                            icon: Container(
+                              margin: EdgeInsets.only(left: 30.w),
+                              child: CustomImageView(
+                                  imagePath:
+                                      Assets.svg.imgArrowdownGray700.path,
+                                  height: 32.h,
+                                  width: 30.w),
                             ),
-                          )
-                        ])),
+                            hintText: '결제가 되지 않아요'.tr,
+                            hintStyle: CustomTextStyles
+                                .bodyMediumNanumSquareNeoBlack90013,
+                            items: items,
+                            onChanged: (value) {},
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 Container(
-                    margin: EdgeInsets.symmetric(horizontal: 16.w),
-                    decoration: AppDecoration.fillGray50,
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          SizedBox(height: 23.h),
-                          Padding(
-                              padding: EdgeInsets.only(left: 20.w),
-                              child: Text('결제가 되지 않는경우'.tr,
-                                  style: CustomTextStyles.bodyMediumBlack900)),
-                          SizedBox(height: 10.h),
-                          Align(
-                              child: Container(
-                            width: 314.w,
-                            margin: EdgeInsets.only(left: 20.w, right: 26.w),
-                            child: Text(
-                              '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodyMediumBlack900
-                                  .copyWith(height: 2),
-                            ),
-                          )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 20.w),
-                              child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr,
-                                  style: CustomTextStyles.bodyMediumBlack900)),
-                          SizedBox(height: 10.h),
-                          Container(
-                            width: 307.w,
-                            margin: EdgeInsets.only(left: 20.w, right: 33.w),
-                            child: Text(
-                              '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodyMediumBlack900
-                                  .copyWith(height: 2),
-                            ),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  decoration: AppDecoration.fillGray50,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      SizedBox(height: 23.h),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.w),
+                        child: Text('결제가 되지 않는경우'.tr,
+                            style: CustomTextStyles.bodyMediumBlack900),
+                      ),
+                      SizedBox(height: 10.h),
+                      Align(
+                        child: Container(
+                          width: 314.w,
+                          margin: EdgeInsets.only(left: 20.w, right: 26.w),
+                          child: Text(
+                            '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: CustomTextStyles.bodyMediumBlack900
+                                .copyWith(height: 2),
                           ),
-                          Container(
-                            width: 304.w,
-                            margin: EdgeInsets.only(left: 20.w, right: 36.w),
-                            child: Text(
-                              '3. 다른 카드로 결제를 시도해보기 (체크카드의 경우 잔액부족으로, 신용카드는 카드사 오류로 안되는 경우가 종종 발생합니다.)'
-                                  .tr,
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodyMediumBlack900
-                                  .copyWith(height: 2),
-                            ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.w),
+                        child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr,
+                            style: CustomTextStyles.bodyMediumBlack900),
+                      ),
+                      SizedBox(height: 10.h),
+                      Container(
+                        width: 307.w,
+                        margin: EdgeInsets.only(left: 20.w, right: 33.w),
+                        child: Text(
+                          '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: CustomTextStyles.bodyMediumBlack900
+                              .copyWith(height: 2),
+                        ),
+                      ),
+                      Container(
+                        width: 304.w,
+                        margin: EdgeInsets.only(left: 20.w, right: 36.w),
+                        child: Text(
+                          '3. 다른 카드로 결제를 시도해보기 (체크카드의 경우 잔액부족으로, 신용카드는 카드사 오류로 안되는 경우가 종종 발생합니다.)'
+                              .tr,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: CustomTextStyles.bodyMediumBlack900
+                              .copyWith(height: 2),
+                        ),
+                      ),
+                      SizedBox(height: 29.h),
+                      Align(
+                        child: Container(
+                          width: 317.w,
+                          margin: EdgeInsets.only(left: 20.w, right: 23.w),
+                          child: Text(
+                            '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
+                                .tr,
+                            maxLines: 4,
+                            overflow: TextOverflow.ellipsis,
+                            style: CustomTextStyles.bodyMediumBlack900
+                                .copyWith(height: 2),
                           ),
-                          SizedBox(height: 29.h),
-                          Align(
-                              child: Container(
-                            width: 317.w,
-                            margin: EdgeInsets.only(left: 20.w, right: 23.w),
-                            child: Text(
-                              '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
-                                  .tr,
-                              maxLines: 4,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodyMediumBlack900
-                                  .copyWith(height: 2),
-                            ),
-                          )),
-                          SizedBox(height: 24.h),
-                          Padding(
-                              padding: EdgeInsets.only(left: 20.w),
-                              child: Text('감사합니다.'.tr,
-                                  style: CustomTextStyles.bodyMediumBlack900)),
-                          SizedBox(height: 30.h),
-                          const Divider()
-                        ])),
+                        ),
+                      ),
+                      SizedBox(height: 24.h),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.w),
+                        child: Text('감사합니다.'.tr,
+                            style: CustomTextStyles.bodyMediumBlack900),
+                      ),
+                      SizedBox(height: 30.h),
+                      const Divider()
+                    ],
+                  ),
+                ),
                 SizedBox(height: 9.h),
                 SizedBox(
-                    height: 460.h,
-                    width: 360.w,
-                    child: Stack(alignment: Alignment.center, children: [
+                  height: 460.h,
+                  width: 360.w,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
                       Align(
-                          child:
-                              Column(mainAxisSize: MainAxisSize.min, children: [
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -210,11 +224,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -250,11 +266,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -290,11 +308,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -330,11 +350,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -370,11 +392,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -410,11 +434,13 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                        Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w),
-                            child: Row(
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -450,10 +476,16 @@ class FaqScreen extends StatelessWidget {
                                           Assets.svg.imgArrowdownGray700.path,
                                       height: 32.h,
                                       width: 30.w)
-                                ])),
-                        SizedBox(height: 17.h),
-                      ]))
-                    ])),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 17.h),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 136.h),
                 const CamiAppFooter(),
               ],

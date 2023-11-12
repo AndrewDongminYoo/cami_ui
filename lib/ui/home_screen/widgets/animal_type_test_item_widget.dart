@@ -24,15 +24,10 @@ class AnimalTypeTestItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 3.h),
-          Text(
-            '동물 유형 테스트'.tr,
-            style: CustomTextStyles.bodyMediumBlack900,
-          ),
+          Text('동물 유형 테스트'.tr, style: CustomTextStyles.bodyMediumBlack900),
           SizedBox(height: 5.h),
-          Text(
-            '나는 강아지형 vs 고양이형 ?'.tr,
-            style: CustomTextStyles.bodySmallGray600,
-          ),
+          Text('나는 강아지형 vs 고양이형 ?'.tr,
+              style: CustomTextStyles.bodySmallGray600),
           SizedBox(height: 5.h),
           CustomImageView(
             imagePath: Assets.images.imgImage59x67.path,

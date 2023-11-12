@@ -79,28 +79,21 @@ class CatPageState extends State<CatPage>
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text(
-              '고양이 MBTI'.tr,
-              style: CustomTextStyles.bodyMediumGray90002,
-            ),
+            child: Text('고양이 MBTI'.tr,
+                style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 7.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text(
-              '알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr,
-              style: CustomTextStyles.bodySmallPrimaryContainer,
-            ),
+            child: Text('알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr,
+                style: CustomTextStyles.bodySmallPrimaryContainer),
           ),
           SizedBox(height: 39.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Row(
               children: [
-                Text(
-                  '자세히 보기'.tr,
-                  style: CustomTextStyles.bodySmallGray700,
-                ),
+                Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
                   imagePath: Assets.svg.imgArrowdownGray700.path,
                   height: 10.h,

@@ -74,10 +74,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillPrimary,
-                  child: Text(
-                    '나의 반려친구'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('나의 반려친구'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -86,10 +83,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '심리검사'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('심리검사'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -98,10 +92,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '방문교육'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('방문교육'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -110,10 +101,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '보유쿠폰'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('보유쿠폰'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -122,10 +110,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '1:1 문의'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('1:1 문의'.tr, style: textTheme.bodyLarge),
                 ),
                 _buildSeparatorBar(context),
                 Container(
@@ -135,10 +120,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '자주묻는질문'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('자주묻는질문'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -147,10 +129,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '공지사항'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('공지사항'.tr, style: textTheme.bodyLarge),
                 ),
                 Container(
                   width: 361.w,
@@ -159,10 +138,7 @@ class MyPageScreen extends StatelessWidget {
                     vertical: 11.h,
                   ),
                   decoration: AppDecoration.fillGray50,
-                  child: Text(
-                    '이벤트'.tr,
-                    style: textTheme.bodyLarge,
-                  ),
+                  child: Text('이벤트'.tr, style: textTheme.bodyLarge),
                 ),
                 SizedBox(height: 132.h),
                 const CamiAppFooter(),
@@ -207,10 +183,8 @@ class MyPageScreen extends StatelessWidget {
                           top: 2.h,
                           bottom: 5.h,
                         ),
-                        child: Text(
-                          '회원가입/로그인'.tr,
-                          style: CustomTextStyles.bodyLargeGray900,
-                        ),
+                        child: Text('회원가입/로그인'.tr,
+                            style: CustomTextStyles.bodyLargeGray900),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 9.w),
@@ -259,10 +233,7 @@ class MyPageScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text(
-                  '나는 멍집사'.tr,
-                  style: textTheme.bodyLarge,
-                ),
+                Text('나는 멍집사'.tr, style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,
@@ -301,10 +272,7 @@ class MyPageScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(height: 16.h),
-                Text(
-                  '나는 냥집사'.tr,
-                  style: textTheme.bodyLarge,
-                ),
+                Text('나는 냥집사'.tr, style: textTheme.bodyLarge),
                 SizedBox(height: 25.h),
                 SizedBox(
                   height: 112.h,

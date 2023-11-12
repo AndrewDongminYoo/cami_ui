@@ -20,7 +20,7 @@ class LogInScreen extends StatelessWidget {
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-  bool tf = false;
+  bool saveUsername = false;
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +36,10 @@ class LogInScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 29.h),
-                Text(
-                  '카미'.tr,
-                  style: textTheme.displaySmall,
-                ),
+                Text('카미'.tr, style: textTheme.displaySmall),
                 SizedBox(height: 18.h),
-                Text(
-                  '반려동물의 마음을 읽다'.tr,
-                  style: CustomTextStyles.titleLargeGray60001,
-                ),
+                Text('반려동물의 마음을 읽다'.tr,
+                    style: CustomTextStyles.titleLargeGray60001),
                 SizedBox(height: 82.h),
                 _buildUsernameField(context),
                 SizedBox(height: 8.h),
@@ -103,16 +98,14 @@ class LogInScreen extends StatelessWidget {
         children: [
           CustomCheckboxButton(
             text: '아이디 저장'.tr,
-            value: tf,
+            value: saveUsername,
             onChange: (value) {
-              tf = value;
+              saveUsername = value;
             },
           ),
           TextButton(
-            child: Text(
-              '비밀번호 재설정'.tr,
-              style: CustomTextStyles.bodySmallGray60001,
-            ),
+            child:
+                Text('비밀번호 재설정'.tr, style: CustomTextStyles.bodySmallGray60001),
             onPressed: () {},
           ),
         ],
@@ -160,10 +153,8 @@ class LogInScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 16.w),
-            child: Text(
-              '간편 로그인'.tr,
-              style: CustomTextStyles.bodySmallBluegray300,
-            ),
+            child:
+                Text('간편 로그인'.tr, style: CustomTextStyles.bodySmallBluegray300),
           ),
           Padding(
             padding: EdgeInsets.only(

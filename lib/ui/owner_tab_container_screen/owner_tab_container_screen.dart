@@ -42,19 +42,10 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
             child: Column(
               children: [
                 _buildOwnerFrame(context),
-                Text(
-                  '찾아봐요'.tr,
-                  style: CustomTextStyles.bodyMediumGray90002,
-                ),
+                Text('찾아봐요'.tr, style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
-                Text(
-                  '우리에게 필요한'.tr,
-                  style: textTheme.headlineSmall,
-                ),
-                Text(
-                  '심리검사는?'.tr,
-                  style: textTheme.headlineSmall,
-                ),
+                Text('우리에게 필요한'.tr, style: textTheme.headlineSmall),
+                Text('심리검사는?'.tr, style: textTheme.headlineSmall),
                 SizedBox(height: 39.h),
                 SizedBox(
                   height: 32.h,
@@ -117,8 +108,9 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
   /// Section Widget
   Widget _buildOwnerFrame(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        decoration: AppDecoration.fillOnPrimaryContainer,
-        child: const CamiAppBar());
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      decoration: AppDecoration.fillOnPrimaryContainer,
+      child: const CamiAppBar(),
+    );
   }
 }

@@ -42,19 +42,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 _buildSubtitle(context),
                 SizedBox(height: 99.h),
-                Text(
-                  '찾아봐요'.tr,
-                  style: CustomTextStyles.bodyMediumGray90002,
-                ),
+                Text('찾아봐요'.tr, style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
-                Text(
-                  '우리에게 필요한'.tr,
-                  style: textTheme.headlineSmall,
-                ),
-                Text(
-                  '심리검사는?'.tr,
-                  style: textTheme.headlineSmall,
-                ),
+                Text('우리에게 필요한'.tr, style: textTheme.headlineSmall),
+                Text('심리검사는?'.tr, style: textTheme.headlineSmall),
                 SizedBox(height: 39.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40.w),
@@ -86,10 +77,8 @@ class HomeScreen extends StatelessWidget {
                           left: 4.w,
                           bottom: 2.h,
                         ),
-                        child: Text(
-                          '더 많은 검사 보러가기'.tr,
-                          style: CustomTextStyles.bodySmallGray90001,
-                        ),
+                        child: Text('더 많은 검사 보러가기'.tr,
+                            style: CustomTextStyles.bodySmallGray90001),
                       ),
                       CustomImageView(
                         imagePath: Assets.svg.imgArrowRightGray600.path,
@@ -107,10 +96,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 100.h),
                 _buildCamiAdvisoryBoard(context),
                 SizedBox(height: 99.h),
-                Text(
-                  '고마워요'.tr,
-                  style: CustomTextStyles.bodyMediumGray90002,
-                ),
+                Text('고마워요'.tr, style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
                 SizedBox(
                   height: 67.h,
@@ -120,33 +106,23 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Align(
                         alignment: Alignment.topRight,
-                        child: Text(
-                          '심리검사로'.tr,
-                          style: textTheme.headlineSmall,
-                        ),
+                        child: Text('심리검사로'.tr, style: textTheme.headlineSmall),
                       ),
                       Align(
                         alignment: Alignment.topLeft,
-                        child: Text(
-                          'CAMI',
-                          style: textTheme.headlineSmall,
-                        ),
+                        child: Text('CAMI', style: textTheme.headlineSmall),
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
-                        child: Text(
-                          '찾아온 기적'.tr,
-                          style: textTheme.headlineSmall,
-                        ),
+                        child:
+                            Text('찾아온 기적'.tr, style: textTheme.headlineSmall),
                       ),
                     ],
                   ),
                 ),
                 SizedBox(height: 6.h),
-                Text(
-                  '실제 반려생활에 도움 받은 고객님들의 후기랍니다 🤍'.tr,
-                  style: CustomTextStyles.bodySmallGray90002_1,
-                ),
+                Text('실제 반려생활에 도움 받은 고객님들의 후기랍니다 🤍'.tr,
+                    style: CustomTextStyles.bodySmallGray90002_1),
                 SizedBox(height: 79.h),
                 _buildUserReviewTitle(context),
                 SizedBox(height: 56.h),
@@ -186,24 +162,13 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(height: 83.h),
-          Text(
-            '반려동물의'.tr,
-            style: textTheme.headlineLarge,
-          ),
+          Text('반려동물의'.tr, style: textTheme.headlineLarge),
           SizedBox(height: 8.h),
-          Text(
-            '마음을 읽다, 카미'.tr,
-            style: textTheme.headlineLarge,
-          ),
+          Text('마음을 읽다, 카미'.tr, style: textTheme.headlineLarge),
           SizedBox(height: 24.h),
-          Text(
-            '수의사가 제안하는 반려생활 솔루션으로'.tr,
-            style: CustomTextStyles.bodyMediumBlack900,
-          ),
-          Text(
-            '행복한 기적을 만듭니다'.tr,
-            style: CustomTextStyles.bodyMediumBlack900,
-          ),
+          Text('수의사가 제안하는 반려생활 솔루션으로'.tr,
+              style: CustomTextStyles.bodyMediumBlack900),
+          Text('행복한 기적을 만듭니다'.tr, style: CustomTextStyles.bodyMediumBlack900),
           SizedBox(height: 39.h),
           CustomImageView(
             imagePath: Assets.images.imgImage320x337.path,
@@ -268,20 +233,12 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            '함께해요'.tr,
-            style: CustomTextStyles.bodyMediumGray90002,
-          ),
+          Text('함께해요'.tr, style: CustomTextStyles.bodyMediumGray90002),
           SizedBox(height: 11.h),
-          Text(
-            '누가 만들었을까요?'.tr,
-            style: textTheme.headlineSmall,
-          ),
+          Text('누가 만들었을까요?'.tr, style: textTheme.headlineSmall),
           SizedBox(height: 7.h),
-          Text(
-            '올바른 반려 생활을 위해 CAMI 자문위원단이 모였어요.'.tr,
-            style: CustomTextStyles.bodySmallGray90002_1,
-          ),
+          Text('올바른 반려 생활을 위해 CAMI 자문위원단이 모였어요.'.tr,
+              style: CustomTextStyles.bodySmallGray90002_1),
           SizedBox(height: 60.h),
           CarouselSlider.builder(
             options: CarouselOptions(
@@ -370,20 +327,12 @@ class HomeScreen extends StatelessWidget {
       decoration: AppDecoration.fillGray50,
       child: Column(
         children: [
-          Text(
-            '간단해요'.tr,
-            style: CustomTextStyles.bodyMediumGray90002,
-          ),
+          Text('간단해요'.tr, style: CustomTextStyles.bodyMediumGray90002),
           SizedBox(height: 11.h),
-          Text(
-            '반짝 테스트'.tr,
-            style: textTheme.headlineSmall,
-          ),
+          Text('반짝 테스트'.tr, style: textTheme.headlineSmall),
           SizedBox(height: 7.h),
-          Text(
-            '양육자가 되기 위한 첫걸음, 재밌는 CAMI 3분 검사'.tr,
-            style: CustomTextStyles.bodySmallGray90002_1,
-          ),
+          Text('양육자가 되기 위한 첫걸음, 재밌는 CAMI 3분 검사'.tr,
+              style: CustomTextStyles.bodySmallGray90002_1),
           SizedBox(height: 60.h),
           CustomImageView(
             imagePath: Assets.images.imgImage242x337.path,

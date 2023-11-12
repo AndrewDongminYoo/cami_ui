@@ -41,10 +41,8 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text(
-              '보호자 양육면허시험'.tr,
-              style: CustomTextStyles.bodyMediumGray90002,
-            ),
+            child: Text('보호자 양육면허시험'.tr,
+                style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 5.h),
           Container(
@@ -66,10 +64,7 @@ class UserProfileFrameListItemWidget extends StatelessWidget {
             padding: EdgeInsets.only(left: 14.w),
             child: Row(
               children: [
-                Text(
-                  '자세히 보기'.tr,
-                  style: CustomTextStyles.bodySmallGray700,
-                ),
+                Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
                   imagePath: Assets.svg.imgArrowdownGray700.path,
                   height: 10.h,

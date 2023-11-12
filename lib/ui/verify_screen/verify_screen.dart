@@ -34,20 +34,25 @@ class VerifyScreen extends StatelessWidget {
                 Text('회원가입'.tr, style: textTheme.displaySmall),
                 SizedBox(height: 15.h),
                 Container(
-                    width: 338.w,
-                    margin: EdgeInsets.only(left: 26.w, right: 27.w),
-                    child: Text('회원가입 및 서비스 이용 시 사용할 휴대폰의 본인확인이 필요합니다.'.tr,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.center,
-                        style: CustomTextStyles.bodyMediumGray60001
-                            .copyWith(height: 1.43))),
+                  width: 338.w,
+                  margin: EdgeInsets.only(left: 26.w, right: 27.w),
+                  child: Text(
+                    '회원가입 및 서비스 이용 시 사용할 휴대폰의 본인확인이 필요합니다.'.tr,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: CustomTextStyles.bodyMediumGray60001
+                        .copyWith(height: 1.43),
+                  ),
+                ),
                 SizedBox(height: 63.h),
                 Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 101.w),
-                        child: Text('본인 인증'.tr, style: textTheme.bodyLarge))),
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 101.w),
+                    child: Text('본인 인증'.tr, style: textTheme.bodyLarge),
+                  ),
+                ),
                 SizedBox(height: 8.h),
                 CustomTextFormField(
                     width: 191.w,

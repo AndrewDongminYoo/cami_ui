@@ -41,28 +41,21 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text(
-              '강아지 MBTI'.tr,
-              style: CustomTextStyles.bodyMediumGray90002,
-            ),
+            child: Text('강아지 MBTI'.tr,
+                style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 7.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
-            child: Text(
-              '16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr,
-              style: CustomTextStyles.bodySmallPrimaryContainer,
-            ),
+            child: Text('16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr,
+                style: CustomTextStyles.bodySmallPrimaryContainer),
           ),
           SizedBox(height: 39.h),
           Padding(
             padding: EdgeInsets.only(left: 14.w),
             child: Row(
               children: [
-                Text(
-                  '자세히 보기'.tr,
-                  style: CustomTextStyles.bodySmallGray700,
-                ),
+                Text('자세히 보기'.tr, style: CustomTextStyles.bodySmallGray700),
                 CustomImageView(
                   imagePath: Assets.svg.imgArrowdownGray700.path,
                   height: 10.h,
