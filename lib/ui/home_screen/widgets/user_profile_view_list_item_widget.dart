@@ -34,6 +34,9 @@ class UserProfileViewListItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 13.h),
           CustomElevatedButton(
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
             height: 24.h,
             width: 53.w,
             text: 'DCSI-II',

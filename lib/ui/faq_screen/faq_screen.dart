@@ -11,7 +11,6 @@ import '/gen/assets.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
-import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
@@ -90,7 +89,9 @@ class FaqScreen extends StatelessWidget {
                             hintStyle: CustomTextStyles
                                 .bodyMediumNanumSquareNeoBlack90013,
                             items: items,
-                            onChanged: (value) {},
+                            onChanged: (value) {
+                              // TODO: implement onChanged
+                            },
                           ),
                         ),
                       ),
@@ -203,9 +204,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -219,9 +218,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -246,9 +243,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -261,9 +256,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -288,9 +281,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -303,9 +294,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -330,9 +319,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -345,9 +332,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -372,9 +357,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -387,9 +370,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -414,9 +395,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -429,9 +408,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),
@@ -456,9 +433,7 @@ class FaqScreen extends StatelessWidget {
                                       'Q.',
                                       style: CustomTextStyles
                                           .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(
-                                        color: appTheme.black900,
-                                      ),
+                                          .copyWith(color: Colors.black),
                                     ),
                                   ),
                                   Expanded(
@@ -471,9 +446,7 @@ class FaqScreen extends StatelessWidget {
                                         maxLines: 3,
                                         style: CustomTextStyles
                                             .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(
-                                          color: appTheme.black900,
-                                        ),
+                                            .copyWith(color: Colors.black),
                                       ),
                                     ),
                                   ),

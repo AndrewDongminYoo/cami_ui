@@ -1,13 +1,13 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-typedef VoidNavFunction = void Function(BuildContext)?;
+typedef VoidNavFunction = void Function(BuildContext);
 
 abstract class BaseButton extends StatelessWidget {
   const BaseButton({
     super.key,
     required this.text,
-    this.onPressed,
+    required this.onPressed,
     this.buttonStyle,
     this.textStyle,
     this.isDisabled,
@@ -26,9 +26,4 @@ abstract class BaseButton extends StatelessWidget {
   final double? width;
   final EdgeInsets? margin;
   final Alignment? alignment;
-
-  @override
-  Widget build(BuildContext context) {
-    return const SizedBox.shrink();
-  }
 }

@@ -17,7 +17,7 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
-import 'chipview_item_widget.dart';
+import 'chip_view_item_widget.dart';
 
 class NewCatTab extends StatefulWidget {
   const NewCatTab({super.key});
@@ -93,6 +93,9 @@ class NewCatTabState extends State<NewCatTab>
                   _buildChipView(context),
                   SizedBox(height: 64.h),
                   CustomElevatedButton(
+                      onPressed: (context) {
+                        // TODO: implement onPressed
+                      },
                       text: '다음으로'.tr(),
                       margin: EdgeInsets.symmetric(horizontal: 16.w),
                       buttonStyle: CustomButtonStyles.fillPrimary,
@@ -116,7 +119,7 @@ class NewCatTabState extends State<NewCatTab>
       spacing: 8.w,
       children: List<Widget>.generate(
         2,
-        (index) => const ChipviewItemWidget(),
+        (index) => const ChipViewItemWidget(),
       ),
     );
   }

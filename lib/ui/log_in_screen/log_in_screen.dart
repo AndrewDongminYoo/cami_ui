@@ -72,9 +72,7 @@ class LogInScreen extends StatelessWidget {
   Widget _buildUsernameField(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: usernameController,
-      ),
+      child: CustomTextFormField(controller: usernameController),
     );
   }
 
@@ -110,7 +108,9 @@ class LogInScreen extends StatelessWidget {
           TextButton(
             child: Text('비밀번호 재설정'.tr(),
                 style: CustomTextStyles.bodySmallGray60001),
-            onPressed: () {},
+            onPressed: () {
+              // TODO: implement onPressed
+            },
           ),
         ],
       ),
@@ -120,6 +120,9 @@ class LogInScreen extends StatelessWidget {
   /// Sign in
   Widget _buildLoginButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       text: '로그인'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillBlack,
@@ -129,6 +132,9 @@ class LogInScreen extends StatelessWidget {
   /// E-mail Sign Up
   Widget _buildEmailSignUpButton(BuildContext context) {
     return CustomOutlinedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       height: 42.h,
       text: '이메일 회원가입'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -159,9 +165,7 @@ class LogInScreen extends StatelessWidget {
             padding: EdgeInsets.only(left: 16.w),
             child: Text(
               '간편 로그인'.tr(),
-              style: textTheme.bodySmall!.copyWith(
-                color: appTheme.blueGray300,
-              ),
+              style: textTheme.bodySmall!.copyWith(color: appTheme.blueGray300),
             ),
           ),
           Padding(
@@ -185,6 +189,9 @@ class LogInScreen extends StatelessWidget {
   /// Starting with Kakao
   Widget _buildKakaoStartButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       text: '카카오로 시작하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,

@@ -78,9 +78,10 @@ class NewCatScreenState extends State<NewCatScreen>
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
-                      controller: editTextController,
-                      textInputAction: TextInputAction.done,
-                      alignment: Alignment.center),
+                    controller: editTextController,
+                    textInputAction: TextInputAction.done,
+                    alignment: Alignment.center,
+                  ),
                 ),
                 SizedBox(height: 33.h),
                 Padding(
@@ -114,6 +115,9 @@ class NewCatScreenState extends State<NewCatScreen>
                 Row(
                   children: [
                     CustomElevatedButton(
+                      onPressed: (context) {
+                        // TODO: implement onPressed
+                      },
                       width: 177,
                       height: 36,
                       decoration: BoxDecoration(
@@ -127,6 +131,9 @@ class NewCatScreenState extends State<NewCatScreen>
                           fontWeight: FontWeight.w400),
                     ),
                     CustomElevatedButton(
+                      onPressed: (context) {
+                        // TODO: implement onPressed
+                      },
                       width: 177,
                       height: 36,
                       decoration: BoxDecoration(
@@ -223,6 +230,9 @@ class NewCatScreenState extends State<NewCatScreen>
                           ),
                           SizedBox(height: 8.h),
                           CustomElevatedButton(
+                              onPressed: (context) {
+                                // TODO: implement onPressed
+                              },
                               width: 121.w,
                               text: '이미지 등록하기'.tr(),
                               buttonStyle: CustomButtonStyles.fillBlue,
@@ -251,10 +261,11 @@ class NewCatScreenState extends State<NewCatScreen>
         decoration: AppDecoration.fillGray
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
         child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight),
+          imagePath: Assets.svg.imgArrowDown.path,
+          height: 8.h,
+          width: 12.w,
+          alignment: Alignment.centerRight,
+        ),
       ),
       Padding(
         padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
@@ -268,10 +279,11 @@ class NewCatScreenState extends State<NewCatScreen>
         decoration: AppDecoration.fillGray
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
         child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight),
+          imagePath: Assets.svg.imgArrowDown.path,
+          height: 8.h,
+          width: 12.w,
+          alignment: Alignment.centerRight,
+        ),
       ),
       Padding(
         padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
@@ -285,10 +297,11 @@ class NewCatScreenState extends State<NewCatScreen>
         decoration: AppDecoration.fillGray
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
         child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight),
+          imagePath: Assets.svg.imgArrowDown.path,
+          height: 8.h,
+          width: 12.w,
+          alignment: Alignment.centerRight,
+        ),
       ),
       Padding(
           padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),

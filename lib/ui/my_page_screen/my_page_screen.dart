@@ -252,6 +252,9 @@ class MyPageScreen extends StatelessWidget {
                         alignment: Alignment.center,
                       ),
                       CustomElevatedButton(
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
                         height: 32.h,
                         width: 149.w,
                         text: '강아지 등록하기'.tr(),
@@ -291,6 +294,9 @@ class MyPageScreen extends StatelessWidget {
                         alignment: Alignment.center,
                       ),
                       CustomElevatedButton(
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
                         height: 32.h,
                         width: 149.w,
                         text: '고양이 등록하기'.tr(),

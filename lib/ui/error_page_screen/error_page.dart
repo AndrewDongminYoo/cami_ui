@@ -60,6 +60,9 @@ class ErrorPage extends StatelessWidget {
               ),
               SizedBox(height: 42.h),
               CustomOutlinedButton(
+                onPressed: (context) {
+                  // TODO: implement onPressed
+                },
                 height: 52.h,
                 width: 168.w,
                 text: 'Go Home',

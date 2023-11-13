@@ -15,13 +15,13 @@ class CustomElevatedButton extends BaseButton {
     this.leftIcon,
     this.rightIcon,
     EdgeInsets? margin,
-    VoidNavFunction onPressed,
     ButtonStyle? buttonStyle,
     Alignment? alignment,
     TextStyle? buttonTextStyle,
     bool? isDisabled,
     double? height,
     double? width,
+    required VoidNavFunction onPressed,
     required String text,
   }) : super(
           text: text,
@@ -44,32 +44,34 @@ class CustomElevatedButton extends BaseButton {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: buildElevatedButtonWidget,
+            child: _buildElevatedButtonWidget(context),
           )
-        : buildElevatedButtonWidget;
+        : _buildElevatedButtonWidget(context);
   }
 
-  Widget get buildElevatedButtonWidget => Container(
-        height: height ?? 40.h,
-        width: width ?? double.maxFinite,
-        margin: margin,
-        decoration: decoration,
-        child: ElevatedButton(
-          style: buttonStyle,
-          onPressed: isDisabled ?? false ? null : () => onPressed,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              leftIcon ?? const SizedBox.shrink(),
-              Text(
-                text,
-                style: textStyle ??
-                    textTheme.bodyMedium!
-                        .copyWith(color: lightTheme.onPrimaryContainer),
-              ),
-              rightIcon ?? const SizedBox.shrink(),
-            ],
-          ),
+  Widget _buildElevatedButtonWidget(BuildContext context) {
+    return Container(
+      height: height ?? 40.h,
+      width: width ?? double.maxFinite,
+      margin: margin,
+      decoration: decoration,
+      child: ElevatedButton(
+        style: buttonStyle,
+        onPressed: isDisabled ?? false ? null : () => onPressed(context),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            leftIcon ?? const SizedBox.shrink(),
+            Text(
+              text,
+              style: textStyle ??
+                  textTheme.bodyMedium!
+                      .copyWith(color: lightTheme.onPrimaryContainer),
+            ),
+            rightIcon ?? const SizedBox.shrink(),
+          ],
         ),
-      );
+      ),
+    );
+  }
 }

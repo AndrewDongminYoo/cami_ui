@@ -70,8 +70,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40.h),
-                Divider(
-                    color: appTheme.black900, indent: 16.w, endIndent: 16.w),
+                Divider(color: Colors.black, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 17.h),
                 Align(
                   alignment: Alignment.centerLeft,
@@ -88,9 +87,13 @@ class ContactUsRegisterScreen extends StatelessWidget {
                 _buildRecentOrders(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
-                    text: '문의하기'.tr(),
-                    margin: EdgeInsets.symmetric(horizontal: 16.w),
-                    buttonStyle: CustomButtonStyles.fillBlackTL12),
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
+                  text: '문의하기'.tr(),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  buttonStyle: CustomButtonStyles.fillBlackTL12,
+                ),
                 SizedBox(height: 128.h),
                 const CamiAppFooter()
               ],

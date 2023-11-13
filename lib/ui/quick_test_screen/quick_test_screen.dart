@@ -103,9 +103,13 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 15.h),
                       CustomElevatedButton(
-                          width: 117.w,
-                          text: '진단시작'.tr(),
-                          buttonStyle: CustomButtonStyles.fillBlack),
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
+                        width: 117.w,
+                        text: '진단시작'.tr(),
+                        buttonStyle: CustomButtonStyles.fillBlack,
+                      ),
                       SizedBox(height: 64.h),
                       CustomImageView(
                           imagePath: Assets.images.imgImage1.path,
@@ -240,10 +244,14 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 9.h),
                       CustomElevatedButton(
-                          height: 36.h,
-                          width: 117.w,
-                          text: '진단시작'.tr(),
-                          buttonStyle: CustomButtonStyles.fillBlack),
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
+                        height: 36.h,
+                        width: 117.w,
+                        text: '진단시작'.tr(),
+                        buttonStyle: CustomButtonStyles.fillBlack,
+                      ),
                       SizedBox(height: 122.h),
                       const CamiAppFooter(),
                     ],

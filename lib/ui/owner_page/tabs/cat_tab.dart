@@ -73,6 +73,9 @@ class CatTabState extends State<CatTab>
           ),
           SizedBox(height: 14.h),
           CustomElevatedButton(
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
             height: 24.h,
             width: 42.w,
             text: 'CCSI',

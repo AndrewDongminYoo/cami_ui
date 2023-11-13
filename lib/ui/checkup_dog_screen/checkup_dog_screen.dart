@@ -183,6 +183,9 @@ class CheckupDogScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildDCSIButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       height: 23.h,
       width: 53.w,
       text: 'DCSI-II',
@@ -305,6 +308,9 @@ class CheckupDogScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildButton1(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       text: '구매하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
@@ -315,6 +321,9 @@ class CheckupDogScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildButton2(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 181.w,
       text: '검사소개'.tr(),
       buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
@@ -324,6 +333,9 @@ class CheckupDogScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildButton3(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 181.w,
       text: '구매후기'.tr(),
       buttonStyle: CustomButtonStyles.fillGrayTL81,

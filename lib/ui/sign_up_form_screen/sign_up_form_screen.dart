@@ -147,10 +147,11 @@ class SignUpFormScreen extends StatelessWidget {
                         decoration: AppDecoration.fillBlue.copyWith(
                             borderRadius: BorderRadiusStyle.circleBorder2),
                         child: CustomImageView(
-                            imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-                            height: 7.h,
-                            width: 8.w,
-                            alignment: Alignment.center),
+                          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
+                          height: 7.h,
+                          width: 8.w,
+                          alignment: Alignment.center,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
@@ -182,10 +183,11 @@ class SignUpFormScreen extends StatelessWidget {
                         decoration: AppDecoration.fillBlue.copyWith(
                             borderRadius: BorderRadiusStyle.circleBorder2),
                         child: CustomImageView(
-                            imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-                            height: 7.h,
-                            width: 8.w,
-                            alignment: Alignment.center),
+                          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
+                          height: 7.h,
+                          width: 8.w,
+                          alignment: Alignment.center,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
@@ -217,10 +219,14 @@ class SignUpFormScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
-                    text: '회원 가입'.tr(),
-                    margin: EdgeInsets.symmetric(horizontal: 16.w),
-                    buttonStyle: CustomButtonStyles.fillBlack,
-                    alignment: Alignment.center),
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
+                  text: '회원 가입'.tr(),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  buttonStyle: CustomButtonStyles.fillBlack,
+                  alignment: Alignment.center,
+                ),
                 SizedBox(height: 128.h),
                 const CamiAppFooter()
               ],
@@ -236,7 +242,9 @@ class SignUpFormScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: appNavBarController, alignment: Alignment.center),
+        controller: appNavBarController,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -245,7 +253,9 @@ class SignUpFormScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editText1Controller, alignment: Alignment.center),
+        controller: editText1Controller,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -254,7 +264,9 @@ class SignUpFormScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editText2Controller, alignment: Alignment.center),
+        controller: editText2Controller,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -263,7 +275,9 @@ class SignUpFormScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editText3Controller, alignment: Alignment.center),
+        controller: editText3Controller,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -272,9 +286,10 @@ class SignUpFormScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editText4Controller,
-          textInputAction: TextInputAction.done,
-          alignment: Alignment.center),
+        controller: editText4Controller,
+        textInputAction: TextInputAction.done,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -287,20 +302,23 @@ class SignUpFormScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: appTheme.gray10001,
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
+              width: 91.w,
+              icon: Container(
+                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+                decoration: BoxDecoration(
+                  color: appTheme.gray10001,
+                  borderRadius: BorderRadius.circular(8.w),
                 ),
-                items: dropdownItemList0,
-                onChanged: (value) {}),
+                child: CustomImageView(
+                    imagePath: Assets.svg.imgArrowDown.path,
+                    height: 8.h,
+                    width: 12.w),
+              ),
+              items: dropdownItemList0,
+              onChanged: (value) {
+                // TODO: implement onChanged
+              },
+            ),
             Padding(
               padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
               child: Text('년'.tr(), style: textTheme.bodyLarge),
@@ -321,7 +339,9 @@ class SignUpFormScreen extends StatelessWidget {
                       width: 12.w),
                 ),
                 items: dropdownItemList1,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
             Padding(
@@ -344,7 +364,9 @@ class SignUpFormScreen extends StatelessWidget {
                       width: 12.w),
                 ),
                 items: dropdownItemList2,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
             Padding(
@@ -410,16 +432,17 @@ class SignUpFormScreen extends StatelessWidget {
         decoration: AppDecoration.fillBlue
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder2),
         child: CustomImageView(
-            imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-            height: 7.h,
-            width: 8.w,
-            alignment: Alignment.center),
+          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
+          height: 7.h,
+          width: 8.w,
+          alignment: Alignment.center,
+        ),
       ),
       Padding(
         padding: EdgeInsets.only(left: 20.w),
         child: Text(
           messageText,
-          style: textTheme.bodyLarge!.copyWith(color: appTheme.black900),
+          style: textTheme.bodyLarge!.copyWith(color: Colors.black),
         ),
       ),
     ]);

@@ -15,7 +15,6 @@ class CustomOutlinedButton extends BaseButton {
     this.leftIcon,
     this.rightIcon,
     this.label,
-    VoidNavFunction onPressed,
     ButtonStyle? buttonStyle,
     TextStyle? buttonTextStyle,
     bool? isDisabled,
@@ -23,6 +22,7 @@ class CustomOutlinedButton extends BaseButton {
     double? height,
     double? width,
     EdgeInsets? margin,
+    required VoidNavFunction onPressed,
     required String text,
   }) : super(
           text: text,
@@ -46,32 +46,33 @@ class CustomOutlinedButton extends BaseButton {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: buildOutlinedButtonWidget,
+            child: _buildOutlinedButtonWidget(context),
           )
-        : buildOutlinedButtonWidget;
+        : _buildOutlinedButtonWidget(context);
   }
 
-  Widget get buildOutlinedButtonWidget => Container(
-        height: height ?? 34.h,
-        width: width ?? double.maxFinite,
-        margin: margin,
-        decoration: decoration,
-        child: OutlinedButton(
-          style: buttonStyle,
-          onPressed: isDisabled ?? false ? null : () => onPressed,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              leftIcon ?? const SizedBox.shrink(),
-              Text(
-                text,
-                style: textStyle ??
-                    textTheme.bodyMedium!
-                        .copyWith(color: appTheme.blueGray10001),
-              ),
-              rightIcon ?? const SizedBox.shrink(),
-            ],
-          ),
+  Widget _buildOutlinedButtonWidget(BuildContext context) {
+    return Container(
+      height: height ?? 34.h,
+      width: width ?? double.maxFinite,
+      margin: margin,
+      decoration: decoration,
+      child: OutlinedButton(
+        style: buttonStyle,
+        onPressed: isDisabled ?? false ? null : () => onPressed(context),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            leftIcon ?? const SizedBox.shrink(),
+            Text(
+              text,
+              style: textStyle ??
+                  textTheme.bodyMedium!.copyWith(color: appTheme.blueGray10001),
+            ),
+            rightIcon ?? const SizedBox.shrink(),
+          ],
         ),
-      );
+      ),
+    );
+  }
 }

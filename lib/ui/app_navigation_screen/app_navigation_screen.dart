@@ -35,134 +35,112 @@ class AppNavigationScreen extends StatelessWidget {
                         _buildScreenTitle(
                           context,
                           screenTitle: '반짝테스트',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.quickTestScreen),
+                          routeName: AppRoutes.quickTestScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '삼칠이 작명소',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.namingScreen),
+                          routeName: AppRoutes.namingScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '1:1 문의하기',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.contactUsRegisterScreen),
+                          routeName: AppRoutes.contactUsRegisterScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '자주 묻는 질문',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.faqScreen),
+                          routeName: AppRoutes.faqScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '고양이 등록하기',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.newCatTab),
+                          routeName: AppRoutes.newCatTab,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '메뉴바 (모바일)',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.menuBarScreen),
+                          routeName: AppRoutes.menuBarScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '나의 반려친구 (정보없음)',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.petsEmptyScreen),
+                          routeName: AppRoutes.petsEmptyScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '나의 반려친구 (정보있음)',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.pets1CatScreen),
+                          routeName: AppRoutes.pets1CatScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '방문교육',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.solutionScreen),
+                          routeName: AppRoutes.solutionScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '이메일 회원가입',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.signUpFormScreen),
+                          routeName: AppRoutes.signUpFormScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '내 정보 수정',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.editProfileScreen),
+                          routeName: AppRoutes.editProfileScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '전화번호 인증',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.verifyScreen),
+                          routeName: AppRoutes.verifyScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '마이페이지',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.myPageScreen),
+                          routeName: AppRoutes.myPageScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '심리검사',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.ownerTab),
+                          routeName: AppRoutes.ownerTab,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '카미 홈화면',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.homeScreen),
+                          routeName: AppRoutes.homeScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '반려묘 성격유형검사',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkupCatScreen),
+                          routeName: AppRoutes.checkupCatScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '반려견 성격유형검사',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkupDogScreen),
+                          routeName: AppRoutes.checkupDogScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '심리검사 홈',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkupOwnerTab),
+                          routeName: AppRoutes.checkupOwnerTab,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '404 찾을수없음',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.fourhundredfourScreen),
+                          routeName: AppRoutes.fourhundredfourScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '공지사항 상세',
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.noticeDetailScreen),
+                          routeName: AppRoutes.noticeDetailScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '공지사항 전체',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.noticeScreen),
+                          routeName: AppRoutes.noticeScreen,
                         ),
                         _buildScreenTitle(
                           context,
                           screenTitle: '로그인하기',
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.logInScreen),
+                          routeName: AppRoutes.logInScreen,
                         ),
                       ],
                     ),
@@ -231,10 +209,10 @@ class AppNavigationScreen extends StatelessWidget {
   Widget _buildScreenTitle(
     BuildContext context, {
     required String screenTitle,
-    required VoidCallback onTapScreenTitle,
+    required String routeName,
   }) {
     return GestureDetector(
-      onTap: onTapScreenTitle,
+      onTap: () => context.go(routeName),
       child: Container(
         decoration: const BoxDecoration(color: Colors.white),
         child: Column(
@@ -267,13 +245,5 @@ class AppNavigationScreen extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  /// Common click event
-  void onTapScreenTitle(
-    BuildContext context,
-    String routeName,
-  ) {
-    context.go(routeName);
   }
 }

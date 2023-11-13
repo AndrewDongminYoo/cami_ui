@@ -34,6 +34,9 @@ class CheckupOwnerItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 14.h),
           CustomElevatedButton(
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
             height: 24.h,
             width: 39.w,
             text: 'DPAI',

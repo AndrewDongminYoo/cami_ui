@@ -68,6 +68,9 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                 ),
                 SizedBox(height: 18.h),
                 CustomElevatedButton(
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
                   height: 23.h,
                   width: 39.w,
                   text: 'DPAI',
@@ -112,6 +115,9 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                 _buildQuickCheckupPrice(context),
                 SizedBox(height: 8.h),
                 CustomElevatedButton(
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
                   text: '구매하기'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
                   buttonStyle: CustomButtonStyles.fillPrimary,
@@ -276,12 +282,8 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           borderRadius: BorderRadius.circular(8.w),
         ),
         tabs: [
-          Tab(
-            child: Text('검사소개'.tr()),
-          ),
-          Tab(
-            child: Text('구매후기'.tr()),
-          ),
+          Tab(child: Text('검사소개'.tr())),
+          Tab(child: Text('구매후기'.tr())),
         ],
       ),
     );

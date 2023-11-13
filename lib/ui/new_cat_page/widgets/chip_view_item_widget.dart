@@ -8,8 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/gen/fonts.gen.dart';
 import '/theme/theme_helper.dart';
 
-class ChipviewItemWidget extends StatelessWidget {
-  const ChipviewItemWidget({super.key});
+class ChipViewItemWidget extends StatelessWidget {
+  const ChipViewItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +20,10 @@ class ChipviewItemWidget extends StatelessWidget {
       ),
       showCheckmark: false,
       labelPadding: EdgeInsets.zero,
-      label: Text(
+      label: const Text(
         '예',
         style: TextStyle(
-          color: appTheme.black900,
+          color: Colors.black,
           fontSize: 14,
           fontFamily: FontFamily.poppins,
           fontWeight: FontWeight.w400,
@@ -34,7 +34,9 @@ class ChipviewItemWidget extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.w),
       ),
-      onSelected: (value) {},
+      onSelected: (value) {
+        // TODO: implement onSelected
+      },
     );
   }
 }

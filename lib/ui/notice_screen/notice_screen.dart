@@ -99,7 +99,7 @@ class NoticeScreen extends StatelessWidget {
             child: Text(
               userName,
               style: CustomTextStyles.bodySmallBlack900
-                  .copyWith(color: appTheme.black900),
+                  .copyWith(color: Colors.black),
             ),
           ),
           Padding(
@@ -107,7 +107,7 @@ class NoticeScreen extends StatelessWidget {
             child: Text(
               userMessage,
               style: CustomTextStyles.bodySmallBlack900
-                  .copyWith(color: appTheme.black900),
+                  .copyWith(color: Colors.black),
             ),
           ),
           const Spacer(),

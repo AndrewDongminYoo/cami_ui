@@ -347,7 +347,7 @@ class PetsOneCatScreen extends StatelessWidget {
                           height: 18.r,
                           width: 18.r,
                           decoration: BoxDecoration(
-                            color: appTheme.black900,
+                            color: Colors.black,
                             borderRadius: BorderRadius.circular(9.w),
                           ),
                         ),

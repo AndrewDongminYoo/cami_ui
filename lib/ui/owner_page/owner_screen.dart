@@ -62,29 +62,21 @@ class OwnerScreenState extends State<OwnerScreen>
                       fontFamily: FontFamily.poppins,
                       fontWeight: FontWeight.w400,
                     ),
-                    unselectedLabelColor: appTheme.black900,
+                    unselectedLabelColor: Colors.black,
                     unselectedLabelStyle: const TextStyle(
                       fontSize: 12,
                       fontFamily: FontFamily.poppins,
                       fontWeight: FontWeight.w400,
                     ),
                     indicator: BoxDecoration(
-                      color: appTheme.black900,
+                      color: Colors.black,
                       borderRadius: BorderRadius.circular(16.w),
                     ),
                     tabs: [
-                      Tab(
-                        child: Text('전체'.tr()),
-                      ),
-                      Tab(
-                        child: Text('반려견'.tr()),
-                      ),
-                      Tab(
-                        child: Text('반려묘'.tr()),
-                      ),
-                      Tab(
-                        child: Text('반려인'.tr()),
-                      ),
+                      Tab(child: Text('전체'.tr())),
+                      Tab(child: Text('반려견'.tr())),
+                      Tab(child: Text('반려묘'.tr())),
+                      Tab(child: Text('반려인'.tr())),
                     ],
                   ),
                 ),

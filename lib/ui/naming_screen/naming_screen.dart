@@ -86,7 +86,7 @@ class NamingScreen extends StatelessWidget {
                                 Text(
                                   '강렬한 거북이의 안내자'.tr(),
                                   style: textTheme.bodyLarge!.bold.copyWith(
-                                      color: lightTheme.errorContainer),
+                                      color: appTheme.deepOrange400),
                                 ),
                                 Text('입니다.'.tr(), style: textTheme.bodyLarge)
                               ],
@@ -149,7 +149,7 @@ class NamingScreen extends StatelessWidget {
                         activeIndex: index,
                         count: sliderBanners.length,
                         effect: WormEffect(
-                          activeDotColor: appTheme.black900,
+                          activeDotColor: Colors.black,
                           dotColor: appTheme.gray600,
                           dotHeight: 8.h,
                           dotWidth: 8.w,

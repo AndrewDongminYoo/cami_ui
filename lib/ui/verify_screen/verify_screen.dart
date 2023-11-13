@@ -63,9 +63,13 @@ class VerifyScreen extends StatelessWidget {
                     textInputAction: TextInputAction.done),
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
-                    width: 191.w,
-                    text: '인증번호 받기'.tr(),
-                    buttonStyle: CustomButtonStyles.fillBlack),
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
+                  width: 191.w,
+                  text: '인증번호 받기'.tr(),
+                  buttonStyle: CustomButtonStyles.fillBlack,
+                ),
                 SizedBox(height: 128.h),
                 const CamiAppFooter()
               ],

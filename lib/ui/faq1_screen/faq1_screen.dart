@@ -128,7 +128,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '결제가 되지 않아요'.tr(),
                 items: dropdownItemList0,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -162,7 +164,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '회원 탈퇴는 어떻게 하나요?'.tr(),
                 items: dropdownItemList1,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -197,7 +201,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                 items: dropdownItemList2,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -232,7 +238,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr(),
                 items: dropdownItemList3,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -266,7 +274,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                 items: dropdownItemList4,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -300,7 +310,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '결과보고서 인쇄 방법'.tr(),
                 items: dropdownItemList5,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -334,7 +346,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '결과보고서 다시보기'.tr(),
                 items: dropdownItemList6,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),
@@ -368,7 +382,9 @@ class Faq1Screen extends StatelessWidget {
                 ),
                 hintText: '구매한 쿠폰이 보이지 않아요.'.tr(),
                 items: dropdownItemList7,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
           ),

@@ -138,8 +138,8 @@ class HomeScreen extends StatelessWidget {
                     activeIndex: 0,
                     count: 5,
                     effect: ScrollingDotsEffect(
-                      activeDotColor: appTheme.black900,
-                      dotColor: appTheme.black900,
+                      activeDotColor: Colors.black,
+                      dotColor: Colors.black,
                       dotHeight: 8.h,
                       dotWidth: 8.w,
                     ),
@@ -189,6 +189,9 @@ class HomeScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildPopularTestsButton(BuildContext context) {
     return CustomOutlinedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 178.w,
       text: '많은 분들이 찾은 인기 검사'.tr(),
       buttonStyle: CustomButtonStyles.outlineBlueGrayTL17,
@@ -199,6 +202,9 @@ class HomeScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildRecommendedTestsButton(BuildContext context) {
     return CustomOutlinedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 124.w,
       text: '수의사 추천 검사'.tr(),
       margin: EdgeInsets.only(left: 10.w),
@@ -271,8 +277,8 @@ class HomeScreen extends StatelessWidget {
               activeIndex: sliderIndex,
               count: 1,
               effect: ScrollingDotsEffect(
-                activeDotColor: appTheme.black900,
-                dotColor: appTheme.black900,
+                activeDotColor: Colors.black,
+                dotColor: Colors.black,
                 dotHeight: 8.h,
                 dotWidth: 8.w,
               ),

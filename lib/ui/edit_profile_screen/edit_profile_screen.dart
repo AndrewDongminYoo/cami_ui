@@ -183,6 +183,9 @@ class EditProfileScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildImageSelectionButton(BuildContext context) {
     return CustomElevatedButton(
+        onPressed: (context) {
+          // TODO: implement onPressed
+        },
         width: 121.w,
         text: '이미지 선택하기'.tr(),
         buttonStyle: CustomButtonStyles.fillBlue,
@@ -274,6 +277,9 @@ class EditProfileScreen extends StatelessWidget {
           children: [
             _buildEditTextWithButton(context),
             CustomElevatedButton(
+                onPressed: (context) {
+                  // TODO: implement onPressed
+                },
                 width: 142.w,
                 text: '인증번호 받기'.tr(),
                 margin: EdgeInsets.only(left: 8.w),
@@ -290,7 +296,9 @@ class EditProfileScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editTextController1, alignment: Alignment.center),
+        controller: editTextController1,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -299,7 +307,9 @@ class EditProfileScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editTextController2, alignment: Alignment.center),
+        controller: editTextController2,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -308,7 +318,9 @@ class EditProfileScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editTextController3, alignment: Alignment.center),
+        controller: editTextController3,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -317,9 +329,10 @@ class EditProfileScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
-          controller: editTextController4,
-          textInputAction: TextInputAction.done,
-          alignment: Alignment.center),
+        controller: editTextController4,
+        textInputAction: TextInputAction.done,
+        alignment: Alignment.center,
+      ),
     );
   }
 
@@ -332,20 +345,23 @@ class EditProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: appTheme.gray10001,
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
+              width: 91.w,
+              icon: Container(
+                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+                decoration: BoxDecoration(
+                  color: appTheme.gray10001,
+                  borderRadius: BorderRadius.circular(8.w),
                 ),
-                items: dropdownItemList0,
-                onChanged: (value) {}),
+                child: CustomImageView(
+                    imagePath: Assets.svg.imgArrowDown.path,
+                    height: 8.h,
+                    width: 12.w),
+              ),
+              items: dropdownItemList0,
+              onChanged: (value) {
+                // TODO: implement onChanged
+              },
+            ),
             Padding(
               padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
               child: Text('년'.tr(), style: textTheme.bodyLarge),
@@ -366,7 +382,9 @@ class EditProfileScreen extends StatelessWidget {
                       width: 12.w),
                 ),
                 items: dropdownItemList1,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
             Padding(
@@ -389,7 +407,9 @@ class EditProfileScreen extends StatelessWidget {
                       width: 12.w),
                 ),
                 items: dropdownItemList2,
-                onChanged: (value) {},
+                onChanged: (value) {
+                  // TODO: implement onChanged
+                },
               ),
             ),
             Padding(
@@ -447,19 +467,27 @@ class EditProfileScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildSaveButton(BuildContext context) {
     return CustomElevatedButton(
-        text: '저장'.tr(),
-        margin: EdgeInsets.symmetric(horizontal: 16.w),
-        buttonStyle: CustomButtonStyles.fillBlack,
-        alignment: Alignment.center);
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
+      text: '저장'.tr(),
+      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      buttonStyle: CustomButtonStyles.fillBlack,
+      alignment: Alignment.center,
+    );
   }
 
   /// Section Widget
   Widget _buildDeleteButton(BuildContext context) {
     return CustomOutlinedButton(
-        height: 38.h,
-        text: '회원탈퇴'.tr(),
-        margin: EdgeInsets.symmetric(horizontal: 16.w),
-        alignment: Alignment.center);
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
+      height: 38.h,
+      text: '회원탈퇴'.tr(),
+      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      alignment: Alignment.center,
+    );
   }
 
   /// Navigates back to the previous screen.

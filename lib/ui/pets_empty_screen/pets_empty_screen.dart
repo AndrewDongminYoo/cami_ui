@@ -148,18 +148,23 @@ class PetsEmptyScreen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     children: [
                       CustomImageView(
-                          imagePath: Assets.images.imgImage112x138.path,
-                          height: 112.h,
-                          width: 138.w,
-                          alignment: Alignment.center),
+                        imagePath: Assets.images.imgImage112x138.path,
+                        height: 112.h,
+                        width: 138.w,
+                        alignment: Alignment.center,
+                      ),
                       CustomElevatedButton(
-                          height: 32.h,
-                          width: 149.w,
-                          text: '강아지 등록하기'.tr(),
-                          margin: EdgeInsets.only(bottom: 24.h),
-                          buttonStyle: CustomButtonStyles.fillBlue,
-                          buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
-                          alignment: Alignment.bottomCenter)
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
+                        height: 32.h,
+                        width: 149.w,
+                        text: '강아지 등록하기'.tr(),
+                        margin: EdgeInsets.only(bottom: 24.h),
+                        buttonStyle: CustomButtonStyles.fillBlue,
+                        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                        alignment: Alignment.bottomCenter,
+                      )
                     ],
                   ),
                 ),
@@ -193,13 +198,17 @@ class PetsEmptyScreen extends StatelessWidget {
                             onTapNewCat(context);
                           }),
                       CustomElevatedButton(
-                          height: 32.h,
-                          width: 149.w,
-                          text: '고양이 등록하기'.tr(),
-                          margin: EdgeInsets.only(bottom: 24.h),
-                          buttonStyle: CustomButtonStyles.fillBlue,
-                          buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
-                          alignment: Alignment.bottomCenter)
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
+                        height: 32.h,
+                        width: 149.w,
+                        text: '고양이 등록하기'.tr(),
+                        margin: EdgeInsets.only(bottom: 24.h),
+                        buttonStyle: CustomButtonStyles.fillBlue,
+                        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                        alignment: Alignment.bottomCenter,
+                      )
                     ],
                   ),
                 ),
@@ -274,7 +283,7 @@ class PetsEmptyScreen extends StatelessWidget {
                           height: 18.r,
                           width: 18.r,
                           decoration: BoxDecoration(
-                            color: appTheme.black900,
+                            color: Colors.black,
                             borderRadius: BorderRadius.circular(9.w),
                           ),
                         ),

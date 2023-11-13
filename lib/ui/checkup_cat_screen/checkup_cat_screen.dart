@@ -182,6 +182,9 @@ class CheckupCatScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildCcsiButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       height: 23.h,
       width: 42.w,
       text: 'CCSI',
@@ -304,6 +307,9 @@ class CheckupCatScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildPurchaseButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       text: '구매하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
@@ -314,6 +320,9 @@ class CheckupCatScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildIntroductionButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 181.w,
       text: '검사소개'.tr(),
       buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
@@ -323,6 +332,9 @@ class CheckupCatScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildReviewsButton(BuildContext context) {
     return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
       width: 181.w,
       text: '구매후기'.tr(),
       buttonStyle: CustomButtonStyles.fillGrayTL81,

@@ -14,7 +14,6 @@ import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
-import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_elevated_button.dart';
@@ -57,7 +56,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 SizedBox(height: 15.h),
                 Align(
                   child: Divider(
-                      color: appTheme.black900, indent: 16.w, endIndent: 16.w),
+                      color: Colors.black, indent: 16.w, endIndent: 16.w),
                 ),
                 SizedBox(height: 12.h),
                 Padding(
