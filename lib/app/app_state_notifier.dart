@@ -1,8 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 🌎 Project imports:
-
 class User {
   final int id = 0;
 }

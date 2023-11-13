@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '../shared/cami_app_bar.dart';
-import '/core/utils/size_utils.dart';
+import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/theme/custom_text_style.dart';
+import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 
 class MenuBarScreen extends StatelessWidget {

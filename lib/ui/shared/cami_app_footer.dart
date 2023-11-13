@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';

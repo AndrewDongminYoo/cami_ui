@@ -1,8 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 🌎 Project imports:
-
 typedef VoidNavFunction = void Function(BuildContext)?;
 
 abstract class BaseButton extends StatelessWidget {

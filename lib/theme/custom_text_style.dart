@@ -1,8 +1,10 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
 import '/theme/theme_helper.dart';
 
 /// 다른 글꼴 패밀리와 가중치로 분류된 텍스트 모양을 사용자 정의하기 위한 사전 정의된 텍스트 스타일 모음.

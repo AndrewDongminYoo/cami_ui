@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
 import '/widgets/custom_image_view.dart';
 
 class SliderItemWidget extends StatelessWidget {

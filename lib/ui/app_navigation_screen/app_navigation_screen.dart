@@ -2,10 +2,11 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
+import '/core/utils/media_query.dart';
 import '/routes/app_routes.dart';
 
 class AppNavigationScreen extends StatelessWidget {

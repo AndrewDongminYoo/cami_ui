@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 

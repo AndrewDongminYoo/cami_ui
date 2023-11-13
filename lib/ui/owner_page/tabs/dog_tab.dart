@@ -1,8 +1,11 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 // 🌎 Project imports:
-import '/core/utils/size_utils.dart';
+import '/core/utils/media_query.dart';
 import '/ui/shared/cami_app_footer.dart';
 import 'widgets/checkup_dog_list_item_widget.dart';
 

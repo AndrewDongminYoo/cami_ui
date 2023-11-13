@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '../data/cat_breeds.dart';
 import '/core/utils/logger.dart';
-import '/core/utils/size_utils.dart';
+import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
