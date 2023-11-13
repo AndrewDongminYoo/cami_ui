@@ -11,13 +11,13 @@ import '/theme/theme_helper.dart';
 class CustomButtonStyles {
   // Filled button style
   static ButtonStyle get fillBlack => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.black900,
+        backgroundColor: Colors.black,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillBlackTL12 => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.black900,
+        backgroundColor: Colors.black,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.w),
         ),
@@ -59,16 +59,13 @@ class CustomButtonStyles {
   // Outline button style
   static ButtonStyle get outlineBlack => OutlinedButton.styleFrom(
         backgroundColor: appTheme.yellow100,
-        side: BorderSide(
-          color: appTheme.black900,
-          width: 2,
-        ),
+        side: const BorderSide(width: 2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(26.w),
         ),
       );
   static ButtonStyle get outlineBlueGrayTL17 => OutlinedButton.styleFrom(
-        backgroundColor: appTheme.black900,
+        backgroundColor: Colors.black,
         side: BorderSide(color: appTheme.blueGray70001),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(17.w),

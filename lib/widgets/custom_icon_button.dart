@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
-import '/theme/theme_helper.dart';
-
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     super.key,
@@ -48,7 +45,7 @@ class CustomIconButton extends StatelessWidget {
             padding: padding ?? EdgeInsets.zero,
             decoration: decoration ??
                 BoxDecoration(
-                  color: lightTheme.onPrimaryContainer,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(16.w),
                 ),
             child: child,

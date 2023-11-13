@@ -90,7 +90,7 @@ class CustomCheckboxButton extends StatelessWidget {
         child: Checkbox(
           visualDensity: defaultDensity,
           value: value ?? false,
-          checkColor: lightTheme.onPrimaryContainer,
+          checkColor: Colors.white,
           onChanged: (value) {
             onChange(value!);
           },

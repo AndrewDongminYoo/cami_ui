@@ -19,8 +19,6 @@ final debugOptions = Catcher2Options(
 final releaseOptions = Catcher2Options(
   DialogReportMode(),
   [
-    EmailManualHandler(
-      ['ydm2790@gmail.com'],
-    )
+    EmailManualHandler(['ydm2790@gmail.com'])
   ],
 );

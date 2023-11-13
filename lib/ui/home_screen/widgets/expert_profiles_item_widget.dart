@@ -27,7 +27,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               elevation: 0,
               margin: EdgeInsets.zero,
-              color: lightTheme.onPrimaryContainer,
+              color: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusStyle.circleBorder8),
               child: Container(
@@ -186,7 +186,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: lightTheme.onPrimaryContainer,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -219,7 +219,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: lightTheme.onPrimaryContainer,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -336,7 +336,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: lightTheme.onPrimaryContainer,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -380,7 +380,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: lightTheme.onPrimaryContainer,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(

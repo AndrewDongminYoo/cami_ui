@@ -265,7 +265,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
       child: TabBar(
         controller: tabviewController,
         labelPadding: EdgeInsets.zero,
-        labelColor: lightTheme.onPrimaryContainer,
+        labelColor: Colors.white,
         labelStyle: const TextStyle(
           fontSize: 14,
           fontFamily: FontFamily.poppins,

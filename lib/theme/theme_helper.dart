@@ -108,7 +108,7 @@ class ThemeHelper {
 /// 지원되는 텍스트 테마 스타일을 포함하는 클래스.
 TextTheme textTheme = TextTheme(
   bodyLarge: TextStyle(
-    color: appTheme.black900,
+    color: Colors.black,
     fontSize: 16.sp,
     fontFamily: FontFamily.poppins,
     fontWeight: FontWeight.w400,
@@ -120,7 +120,7 @@ TextTheme textTheme = TextTheme(
     fontWeight: FontWeight.w400,
   ),
   bodySmall: TextStyle(
-    color: lightTheme.onPrimaryContainer,
+    color: Colors.white,
     fontSize: 12.sp,
     fontFamily: FontFamily.poppins,
     fontWeight: FontWeight.w400,
@@ -177,9 +177,6 @@ const lightTheme = ColorScheme.light(
 
 /// 기본 테마의 사용자 지정 색상을 포함하는 클래스.
 class AppPalette {
-  // 검은색
-  Color get black900 => const Color(0xFF000000);
-
   // 파란색
   Color get blue50 => const Color(0xFFE6F0FF);
   Color get blue800 => const Color(0xFF1D59C4);
@@ -205,6 +202,7 @@ class AppPalette {
   Color get gray20001 => const Color(0xFFEEEEEE);
   Color get gray300 => const Color(0xFFE5E5E5);
   Color get gray500 => const Color(0xFFA3A3A3);
+  Color get gray5004c => const Color(0x4C939393);
   Color get grayGray => const Color(0xFF888888);
   Color get gray600 => const Color(0xFF757575);
   Color get gray60001 => const Color(0xFF6B7280);
@@ -214,7 +212,6 @@ class AppPalette {
   Color get gray90001 => const Color(0xFF121212);
   Color get gray90002 => const Color(0xFF1F2020);
   Color get gray90003 => const Color(0xFF262626);
-  Color get gray5004c => const Color(0x4C939393);
 
   // 녹색
   Color get green300 => const Color(0xFF6FD574);
@@ -222,9 +219,6 @@ class AppPalette {
   // 남색
   Color get indigo200 => const Color(0xFF9BB1EB);
   Color get indigo400 => const Color(0xFF5079D7);
-
-  // 흰색
-  Color get whiteA700 => const Color(0xFFFFFFFF);
 
   // 노란색
   Color get yellow100 => const Color(0xFFFEFFBF);

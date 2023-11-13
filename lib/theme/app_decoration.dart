@@ -18,7 +18,7 @@ class AppDecoration {
   static BoxDecoration get fillOnErrorContainer =>
       BoxDecoration(color: lightTheme.onErrorContainer);
   static BoxDecoration get fillOnPrimaryContainer =>
-      BoxDecoration(color: lightTheme.onPrimaryContainer);
+      const BoxDecoration(color: Colors.white);
   static BoxDecoration get fillPrimary =>
       BoxDecoration(color: lightTheme.primary);
   static BoxDecoration get fillSecondaryContainer =>
@@ -26,7 +26,7 @@ class AppDecoration {
 
   // Outline decorations
   static BoxDecoration get outlineBlueGrayB => BoxDecoration(
-        color: lightTheme.onPrimaryContainer,
+        color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: appTheme.blueGray1006b,

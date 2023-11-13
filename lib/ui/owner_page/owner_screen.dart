@@ -56,7 +56,7 @@ class OwnerScreenState extends State<OwnerScreen>
                   child: TabBar(
                     controller: tabviewController,
                     labelPadding: EdgeInsets.zero,
-                    labelColor: lightTheme.onPrimaryContainer,
+                    labelColor: Colors.white,
                     labelStyle: const TextStyle(
                       fontSize: 12,
                       fontFamily: FontFamily.poppins,
