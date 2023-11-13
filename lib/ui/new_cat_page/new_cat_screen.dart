@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
+import '/gen/fonts.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -120,9 +121,9 @@ class NewCatScreenState extends State<NewCatScreen>
                         borderRadius: BorderRadius.circular(8),
                       ),
                       text: '여아',
-                      buttonTextStyle: TextStyle(
-                          fontSize: 14.sp,
-                          fontFamily: 'Poppins',
+                      buttonTextStyle: const TextStyle(
+                          fontSize: 14,
+                          fontFamily: FontFamily.poppins,
                           fontWeight: FontWeight.w400),
                     ),
                     CustomElevatedButton(
@@ -133,9 +134,9 @@ class NewCatScreenState extends State<NewCatScreen>
                         borderRadius: BorderRadius.circular(8),
                       ),
                       text: '남아',
-                      buttonTextStyle: TextStyle(
-                          fontSize: 14.sp,
-                          fontFamily: 'Poppins',
+                      buttonTextStyle: const TextStyle(
+                          fontSize: 14,
+                          fontFamily: FontFamily.poppins,
                           fontWeight: FontWeight.w400),
                     )
                   ],

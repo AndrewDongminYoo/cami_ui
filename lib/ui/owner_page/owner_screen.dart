@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/gen/fonts.gen.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
@@ -56,15 +57,15 @@ class OwnerScreenState extends State<OwnerScreen>
                     controller: tabviewController,
                     labelPadding: EdgeInsets.zero,
                     labelColor: theme.colorScheme.onPrimaryContainer,
-                    labelStyle: TextStyle(
-                      fontSize: 12.sp,
-                      fontFamily: 'Poppins',
+                    labelStyle: const TextStyle(
+                      fontSize: 12,
+                      fontFamily: FontFamily.poppins,
                       fontWeight: FontWeight.w400,
                     ),
                     unselectedLabelColor: appTheme.black900,
-                    unselectedLabelStyle: TextStyle(
-                      fontSize: 12.sp,
-                      fontFamily: 'Poppins',
+                    unselectedLabelStyle: const TextStyle(
+                      fontSize: 12,
+                      fontFamily: FontFamily.poppins,
                       fontWeight: FontWeight.w400,
                     ),
                     indicator: BoxDecoration(

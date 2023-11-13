@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '/gen/fonts.gen.dart';
 import '/theme/theme_helper.dart';
 
 class ChipviewItemWidget extends StatelessWidget {
@@ -23,8 +24,8 @@ class ChipviewItemWidget extends StatelessWidget {
         '예',
         style: TextStyle(
           color: appTheme.black900,
-          fontSize: 14.sp,
-          fontFamily: 'Poppins',
+          fontSize: 14,
+          fontFamily: FontFamily.poppins,
           fontWeight: FontWeight.w400,
         ),
       ),

@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/gen/fonts.gen.dart';
 import '/routes/app_routes.dart';
 
 class AppNavigationScreen extends StatelessWidget {
@@ -186,13 +187,13 @@ class AppNavigationScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: Text(
+              child: const Text(
                 '앱 게이트웨이 (개발 프로세스)',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 20.sp,
-                  fontFamily: 'Poppins',
+                  fontSize: 20,
+                  fontFamily: FontFamily.poppins,
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -203,13 +204,13 @@ class AppNavigationScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.only(left: 20.w),
-              child: Text(
+              child: const Text(
                 '아래 데모 화면에서 앱의 UI를 확인하세요.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: const Color(0xFF888888),
-                  fontSize: 16.sp,
-                  fontFamily: 'Poppins',
+                  color: Color(0xFF888888),
+                  fontSize: 16,
+                  fontFamily: FontFamily.poppins,
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -246,10 +247,10 @@ class AppNavigationScreen extends StatelessWidget {
                 child: Text(
                   screenTitle,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 20.sp,
-                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    fontFamily: FontFamily.poppins,
                     fontWeight: FontWeight.w400,
                   ),
                 ),

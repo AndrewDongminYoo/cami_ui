@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
+import '/gen/fonts.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -259,15 +260,15 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         controller: tabviewController,
         labelPadding: EdgeInsets.zero,
         labelColor: theme.colorScheme.onPrimaryContainer,
-        labelStyle: TextStyle(
-          fontSize: 14.sp,
-          fontFamily: 'Poppins',
+        labelStyle: const TextStyle(
+          fontSize: 14,
+          fontFamily: FontFamily.poppins,
           fontWeight: FontWeight.w400,
         ),
         unselectedLabelColor: appTheme.gray500,
-        unselectedLabelStyle: TextStyle(
-          fontSize: 14.sp,
-          fontFamily: 'Poppins',
+        unselectedLabelStyle: const TextStyle(
+          fontSize: 14,
+          fontFamily: FontFamily.poppins,
           fontWeight: FontWeight.w400,
         ),
         indicator: BoxDecoration(

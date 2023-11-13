@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '/gen/fonts.gen.dart';
 import '/theme/theme_helper.dart';
 
 /// 다른 글꼴 패밀리와 가중치로 분류된 텍스트 모양을 사용자 정의하기 위한 사전 정의된 텍스트 스타일 모음.
@@ -25,10 +26,9 @@ class CustomTextStyles {
       textTheme.bodyLarge!.copyWith(color: appTheme.gray90002);
   static TextStyle get bodyLargeIndigo400 =>
       textTheme.bodyLarge!.copyWith(color: appTheme.indigo400);
-  static TextStyle get bodyLargeNanumSquareNeo =>
-      textTheme.bodyLarge!.nanumSquareNeo;
+  static TextStyle get bodyLargeNanumSquareNeo => textTheme.bodyLarge!.nanumNeo;
   static TextStyle get bodyLargeNanumSquareNeo_1 =>
-      textTheme.bodyLarge!.nanumSquareNeo;
+      textTheme.bodyLarge!.nanumNeo;
   static TextStyle get bodyMedium13 =>
       textTheme.bodyMedium!.copyWith(fontSize: 13.sp);
   static TextStyle get bodyMedium15 =>
@@ -60,16 +60,16 @@ class CustomTextStyles {
   static TextStyle get bodyMediumGray90002 =>
       textTheme.bodyMedium!.copyWith(color: appTheme.gray90002);
   static TextStyle get bodyMediumNanumSquareNeo =>
-      textTheme.bodyMedium!.nanumSquareNeo.copyWith(fontSize: 15.sp);
+      textTheme.bodyMedium!.nanumNeo.copyWith(fontSize: 15.sp);
   static TextStyle get bodyMediumNanumSquareNeo13 =>
-      textTheme.bodyMedium!.nanumSquareNeo.copyWith(fontSize: 13.sp);
+      textTheme.bodyMedium!.nanumNeo.copyWith(fontSize: 13.sp);
   static TextStyle get bodyMediumNanumSquareNeoBlack900 =>
-      textTheme.bodyMedium!.nanumSquareNeo.copyWith(color: appTheme.black900);
+      textTheme.bodyMedium!.nanumNeo.copyWith(color: appTheme.black900);
   static TextStyle get bodyMediumNanumSquareNeoBlack90013 =>
-      textTheme.bodyMedium!.nanumSquareNeo
+      textTheme.bodyMedium!.nanumNeo
           .copyWith(color: appTheme.black900, fontSize: 13.sp);
   static TextStyle get bodyMediumNanumSquareNeo_1 =>
-      textTheme.bodyMedium!.nanumSquareNeo;
+      textTheme.bodyMedium!.nanumNeo;
   static TextStyle get bodyMediumOnErrorContainer =>
       textTheme.bodyMedium!.copyWith(color: theme.colorScheme.onErrorContainer);
   static TextStyle get bodyMediumOnPrimary =>
@@ -119,19 +119,16 @@ class CustomTextStyles {
   static TextStyle get headlineSmallBlack900 =>
       textTheme.headlineSmall!.copyWith(color: appTheme.black900);
   static TextStyle get headlineSmallNanumSquareNeoBlack900 =>
-      textTheme.headlineSmall!.nanumSquareNeo
-          .copyWith(color: appTheme.black900);
+      textTheme.headlineSmall!.nanumNeo.copyWith(color: appTheme.black900);
   static TextStyle get headlineSmallNanumSquareNeoDeeporange400 =>
-      textTheme.headlineSmall!.nanumSquareNeo
-          .copyWith(color: appTheme.deepOrange400);
+      textTheme.headlineSmall!.nanumNeo.copyWith(color: appTheme.deepOrange400);
   static TextStyle get headlineSmallNanumSquareNeoErrorContainer =>
-      textTheme.headlineSmall!.nanumSquareNeo
+      textTheme.headlineSmall!.nanumNeo
           .copyWith(color: theme.colorScheme.errorContainer);
   static TextStyle get headlineSmallNanumSquareNeoGray90001 =>
-      textTheme.headlineSmall!.nanumSquareNeo
-          .copyWith(color: appTheme.gray90001);
+      textTheme.headlineSmall!.nanumNeo.copyWith(color: appTheme.gray90001);
   static TextStyle get headlineSmallNanumSquareNeoOnErrorContainer =>
-      textTheme.headlineSmall!.nanumSquareNeo
+      textTheme.headlineSmall!.nanumNeo
           .copyWith(color: theme.colorScheme.onErrorContainer);
 
   // Poppins text style
@@ -164,6 +161,6 @@ extension TextStyleX on TextStyle {
   TextStyle get thick => copyWith(fontWeight: FontWeight.w900);
   TextStyle get italic => copyWith(fontStyle: FontStyle.italic);
 
-  TextStyle get poppins => copyWith(fontFamily: 'Poppins');
-  TextStyle get nanumSquareNeo => copyWith(fontFamily: 'NanumSquare Neo');
+  TextStyle get poppins => copyWith(fontFamily: FontFamily.poppins);
+  TextStyle get nanumNeo => copyWith(fontFamily: FontFamily.nanumSquareNeo);
 }
