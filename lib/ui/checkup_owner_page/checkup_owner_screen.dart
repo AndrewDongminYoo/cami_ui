@@ -259,7 +259,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
       child: TabBar(
         controller: tabviewController,
         labelPadding: EdgeInsets.zero,
-        labelColor: theme.colorScheme.onPrimaryContainer,
+        labelColor: lightTheme.onPrimaryContainer,
         labelStyle: const TextStyle(
           fontSize: 14,
           fontFamily: FontFamily.poppins,
@@ -272,7 +272,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           fontWeight: FontWeight.w400,
         ),
         indicator: BoxDecoration(
-          color: theme.colorScheme.onSecondaryContainer,
+          color: lightTheme.onSecondaryContainer,
           borderRadius: BorderRadius.circular(8.w),
         ),
         tabs: [

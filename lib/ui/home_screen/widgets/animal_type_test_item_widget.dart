@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/widgets/custom_image_view.dart';
 
 class AnimalTypeTestItemWidget extends StatelessWidget {
@@ -29,7 +30,7 @@ class AnimalTypeTestItemWidget extends StatelessWidget {
           Text('동물 유형 테스트'.tr(), style: CustomTextStyles.bodyMediumBlack900),
           SizedBox(height: 5.h),
           Text('나는 강아지형 vs 고양이형 ?'.tr(),
-              style: CustomTextStyles.bodySmallGray600),
+              style: textTheme.bodySmall!.copyWith(color: appTheme.gray600)),
           SizedBox(height: 5.h),
           CustomImageView(
             imagePath: Assets.images.imgImage59x67.path,

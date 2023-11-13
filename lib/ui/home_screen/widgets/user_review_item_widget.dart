@@ -50,12 +50,12 @@ class UserReviewItemWidget extends StatelessWidget {
                         '호기심으로 해봤는데 너무 잘 맞는거 같아요 너무 신기하네요.'.tr().toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: CustomTextStyles.bodySmallGray90002_1
+                        style: CustomTextStyles.bodySmallGray90002
                             .copyWith(height: 1.33),
                       ),
                     ),
                     Text('어쩜 이렇게 정확한지 신기해요.'.tr().toUpperCase(),
-                        style: CustomTextStyles.bodySmallGray90002_1),
+                        style: CustomTextStyles.bodySmallGray90002),
                     Container(
                       width: 229.w,
                       margin: EdgeInsets.only(right: 51.w),
@@ -65,7 +65,7 @@ class UserReviewItemWidget extends StatelessWidget {
                             .toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: CustomTextStyles.bodySmallGray90002_1
+                        style: CustomTextStyles.bodySmallGray90002
                             .copyWith(height: 1.33),
                       ),
                     ),
@@ -75,13 +75,13 @@ class UserReviewItemWidget extends StatelessWidget {
                         '조언을 바탕으로 강아지를 더 이해하게 되었어요 감사해요.'.tr().toUpperCase(),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: CustomTextStyles.bodySmallGray90002_1
+                        style: CustomTextStyles.bodySmallGray90002
                             .copyWith(height: 1.33),
                       ),
                     ),
                     SizedBox(height: 13.h),
                     Text('"만두" 보호자님의 "반려견 성격유형검사" 후기'.tr().toUpperCase(),
-                        style: CustomTextStyles.bodySmallGray90002_1),
+                        style: CustomTextStyles.bodySmallGray90002),
                   ],
                 ),
               ),
@@ -116,7 +116,7 @@ class UserReviewItemWidget extends StatelessWidget {
                           children: [
                             SizedBox(height: 3.h),
                             Text('만두'.tr().toUpperCase(),
-                                style: CustomTextStyles.bodySmallGray90002_1),
+                                style: CustomTextStyles.bodySmallGray90002),
                           ],
                         ),
                       ),

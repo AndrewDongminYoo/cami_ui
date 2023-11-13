@@ -113,7 +113,7 @@ class EditProfileScreen extends StatelessWidget {
                     height: 40.h,
                     width: 361.w,
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.onError,
+                      color: lightTheme.onError,
                       borderRadius: BorderRadius.circular(8.w),
                     ),
                   ),
@@ -255,7 +255,7 @@ class EditProfileScreen extends StatelessWidget {
           controller: editTextController,
           alignment: Alignment.center,
           borderDecoration: TextFormFieldStyleHelper.fillOnError,
-          fillColor: theme.colorScheme.onError),
+          fillColor: lightTheme.onError),
     );
   }
 

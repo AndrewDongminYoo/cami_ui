@@ -1,9 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 // 🌎 Project imports:
 import '/gen/fonts.gen.dart';
 import '/theme/theme_helper.dart';
@@ -13,11 +10,7 @@ import '/theme/theme_helper.dart';
 class CustomTextStyles {
   // Body text style
   static TextStyle get bodyLarge18 =>
-      textTheme.bodyLarge!.copyWith(fontSize: 18.sp);
-  static TextStyle get bodyLargeDeeporange400 => textTheme.bodyLarge!
-      .copyWith(color: appTheme.deepOrange400, fontSize: 18.sp);
-  static TextStyle get bodyLargeErrorContainer => textTheme.bodyLarge!
-      .copyWith(color: theme.colorScheme.errorContainer, fontSize: 18.sp);
+      textTheme.bodyLarge!.copyWith(fontSize: 18);
   static TextStyle get bodyLargeGray500 =>
       textTheme.bodyLarge!.copyWith(color: appTheme.gray500);
   static TextStyle get bodyLargeGray900 =>
@@ -27,93 +20,47 @@ class CustomTextStyles {
   static TextStyle get bodyLargeIndigo400 =>
       textTheme.bodyLarge!.copyWith(color: appTheme.indigo400);
   static TextStyle get bodyLargeNanumSquareNeo => textTheme.bodyLarge!.nanumNeo;
-  static TextStyle get bodyLargeNanumSquareNeo_1 =>
-      textTheme.bodyLarge!.nanumNeo;
-  static TextStyle get bodyMedium13 =>
-      textTheme.bodyMedium!.copyWith(fontSize: 13.sp);
-  static TextStyle get bodyMedium15 =>
-      textTheme.bodyMedium!.copyWith(fontSize: 15.sp);
   static TextStyle get bodyMediumBlack900 =>
       textTheme.bodyMedium!.copyWith(color: appTheme.black900);
   static TextStyle get bodyMediumBlack90015 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.black900, fontSize: 15.sp);
-  static TextStyle get bodyMediumBluegray10001 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.blueGray10001);
-  static TextStyle get bodyMediumBluegray300 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.blueGray300);
-  static TextStyle get bodyMediumBluegray700 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.blueGray700);
-  static TextStyle get bodyMediumBluegray900 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.blueGray900);
-  static TextStyle get bodyMediumDeeporange400 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.deepOrange400);
+      textTheme.bodyMedium!.copyWith(color: appTheme.black900, fontSize: 15);
   static TextStyle get bodyMediumErrorContainer =>
-      textTheme.bodyMedium!.copyWith(color: theme.colorScheme.errorContainer);
-  static TextStyle get bodyMediumGray500 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.gray500);
+      textTheme.bodyMedium!.copyWith(color: lightTheme.errorContainer);
   static TextStyle get bodyMediumGray60001 =>
       textTheme.bodyMedium!.copyWith(color: appTheme.gray60001);
   static TextStyle get bodyMediumGray800 =>
       textTheme.bodyMedium!.copyWith(color: appTheme.gray800);
-  static TextStyle get bodyMediumGray90001 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.gray90001);
   static TextStyle get bodyMediumGray90002 =>
       textTheme.bodyMedium!.copyWith(color: appTheme.gray90002);
-  static TextStyle get bodyMediumNanumSquareNeo =>
-      textTheme.bodyMedium!.nanumNeo.copyWith(fontSize: 15.sp);
-  static TextStyle get bodyMediumNanumSquareNeo13 =>
-      textTheme.bodyMedium!.nanumNeo.copyWith(fontSize: 13.sp);
   static TextStyle get bodyMediumNanumSquareNeoBlack900 =>
       textTheme.bodyMedium!.nanumNeo.copyWith(color: appTheme.black900);
   static TextStyle get bodyMediumNanumSquareNeoBlack90013 =>
       textTheme.bodyMedium!.nanumNeo
-          .copyWith(color: appTheme.black900, fontSize: 13.sp);
-  static TextStyle get bodyMediumNanumSquareNeo_1 =>
-      textTheme.bodyMedium!.nanumNeo;
+          .copyWith(color: appTheme.black900, fontSize: 13);
   static TextStyle get bodyMediumOnErrorContainer =>
-      textTheme.bodyMedium!.copyWith(color: theme.colorScheme.onErrorContainer);
+      textTheme.bodyMedium!.copyWith(color: lightTheme.onErrorContainer);
   static TextStyle get bodyMediumOnPrimary =>
-      textTheme.bodyMedium!.copyWith(color: theme.colorScheme.onPrimary);
-  static TextStyle get bodyMediumOnPrimaryContainer => textTheme.bodyMedium!
-      .copyWith(color: theme.colorScheme.onPrimaryContainer);
-  static TextStyle get bodyMediumWhiteA700 =>
-      textTheme.bodyMedium!.copyWith(color: appTheme.whiteA700);
+      textTheme.bodyMedium!.copyWith(color: lightTheme.onPrimary);
   static TextStyle get bodySmall10 =>
-      textTheme.bodySmall!.copyWith(fontSize: 10.sp);
-  static TextStyle get bodySmall11 =>
-      textTheme.bodySmall!.copyWith(fontSize: 11.sp);
-  static TextStyle get bodySmall9 =>
-      textTheme.bodySmall!.copyWith(fontSize: 9.sp);
+      textTheme.bodySmall!.copyWith(fontSize: 10);
   static TextStyle get bodySmallBlack900 =>
       textTheme.bodySmall!.copyWith(color: appTheme.black900);
   static TextStyle get bodySmallBlack9009 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.black900, fontSize: 9.sp);
-  static TextStyle get bodySmallBluegray300 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.blueGray300);
+      textTheme.bodySmall!.copyWith(color: appTheme.black900, fontSize: 9);
   static TextStyle get bodySmallGray500 =>
       textTheme.bodySmall!.copyWith(color: appTheme.gray500);
   static TextStyle get bodySmallGray50011 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray500, fontSize: 11.sp);
-  static TextStyle get bodySmallGray600 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray600);
+      textTheme.bodySmall!.copyWith(color: appTheme.gray500, fontSize: 11);
   static TextStyle get bodySmallGray60001 =>
       textTheme.bodySmall!.copyWith(color: appTheme.gray60001);
   static TextStyle get bodySmallGray700 =>
       textTheme.bodySmall!.copyWith(color: appTheme.gray700);
-  static TextStyle get bodySmallGray800 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray800);
-  static TextStyle get bodySmallGray90001 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray90001);
   static TextStyle get bodySmallGray90002 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray90002, fontSize: 11.sp);
-  static TextStyle get bodySmallGray90002_1 =>
-      textTheme.bodySmall!.copyWith(color: appTheme.gray90002);
-  static TextStyle get bodySmallGray90002_2 =>
       textTheme.bodySmall!.copyWith(color: appTheme.gray90002);
   static TextStyle get bodySmallGreen300 =>
       textTheme.bodySmall!.copyWith(color: appTheme.green300);
   static TextStyle get bodySmallPrimaryContainer =>
-      textTheme.bodySmall!.copyWith(color: theme.colorScheme.primaryContainer);
+      textTheme.bodySmall!.copyWith(color: lightTheme.primaryContainer);
 
   // Headline text style
   static TextStyle get headlineSmallBlack900 =>
@@ -124,31 +71,29 @@ class CustomTextStyles {
       textTheme.headlineSmall!.nanumNeo.copyWith(color: appTheme.deepOrange400);
   static TextStyle get headlineSmallNanumSquareNeoErrorContainer =>
       textTheme.headlineSmall!.nanumNeo
-          .copyWith(color: theme.colorScheme.errorContainer);
+          .copyWith(color: lightTheme.errorContainer);
   static TextStyle get headlineSmallNanumSquareNeoGray90001 =>
       textTheme.headlineSmall!.nanumNeo.copyWith(color: appTheme.gray90001);
   static TextStyle get headlineSmallNanumSquareNeoOnErrorContainer =>
       textTheme.headlineSmall!.nanumNeo
-          .copyWith(color: theme.colorScheme.onErrorContainer);
+          .copyWith(color: lightTheme.onErrorContainer);
 
   // Poppins text style
   static TextStyle get poppinsYellow100 => TextStyle(
-          color: appTheme.yellow100,
-          fontSize: 160.sp,
-          fontWeight: FontWeight.w400)
+          color: appTheme.yellow100, fontSize: 160, fontWeight: FontWeight.w400)
       .poppins;
 
   // Title text style
   static TextStyle get titleLargeBlack900 =>
       textTheme.titleLarge!.copyWith(color: appTheme.black900);
   static TextStyle get titleLargeBlack90020 =>
-      textTheme.titleLarge!.copyWith(color: appTheme.black900, fontSize: 20.sp);
-  static TextStyle get titleLargeGray60001 => textTheme.titleLarge!
-      .copyWith(color: appTheme.gray60001, fontSize: 20.sp);
+      textTheme.titleLarge!.copyWith(color: appTheme.black900, fontSize: 20);
+  static TextStyle get titleLargeGray60001 =>
+      textTheme.titleLarge!.copyWith(color: appTheme.gray60001, fontSize: 20);
   static TextStyle get titleLargeGray90001 =>
       textTheme.titleLarge!.copyWith(color: appTheme.gray90001);
   static TextStyle get titleLargeOnErrorContainer =>
-      textTheme.titleLarge!.copyWith(color: theme.colorScheme.onErrorContainer);
+      textTheme.titleLarge!.copyWith(color: lightTheme.onErrorContainer);
 }
 
 extension TextStyleX on TextStyle {

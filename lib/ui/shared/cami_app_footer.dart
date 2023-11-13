@@ -100,7 +100,8 @@ class CamiAppFooter extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('business@cami.kr', style: textTheme.bodySmall),
-                      Text('02-861-6828', style: CustomTextStyles.bodySmall11)
+                      Text('02-861-6828',
+                          style: textTheme.bodySmall!.copyWith(fontSize: 11))
                     ],
                   ),
                 ),

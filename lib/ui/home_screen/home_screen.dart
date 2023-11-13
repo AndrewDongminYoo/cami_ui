@@ -79,8 +79,11 @@ class HomeScreen extends StatelessWidget {
                           left: 4.w,
                           bottom: 2.h,
                         ),
-                        child: Text('더 많은 검사 보러가기'.tr(),
-                            style: CustomTextStyles.bodySmallGray90001),
+                        child: Text(
+                          '더 많은 검사 보러가기'.tr(),
+                          style: textTheme.bodySmall!
+                              .copyWith(color: appTheme.gray90001),
+                        ),
                       ),
                       CustomImageView(
                         imagePath: Assets.svg.imgArrowRightGray600.path,
@@ -125,7 +128,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 6.h),
                 Text('실제 반려생활에 도움 받은 고객님들의 후기랍니다 🤍'.tr(),
-                    style: CustomTextStyles.bodySmallGray90002_1),
+                    style: CustomTextStyles.bodySmallGray90002),
                 SizedBox(height: 79.h),
                 _buildUserReviewTitle(context),
                 SizedBox(height: 56.h),
@@ -241,7 +244,7 @@ class HomeScreen extends StatelessWidget {
           Text('누가 만들었을까요?'.tr(), style: textTheme.headlineSmall),
           SizedBox(height: 7.h),
           Text('올바른 반려 생활을 위해 CAMI 자문위원단이 모였어요.'.tr(),
-              style: CustomTextStyles.bodySmallGray90002_1),
+              style: CustomTextStyles.bodySmallGray90002),
           SizedBox(height: 60.h),
           CarouselSlider.builder(
             options: CarouselOptions(
@@ -335,7 +338,7 @@ class HomeScreen extends StatelessWidget {
           Text('반짝 테스트'.tr(), style: textTheme.headlineSmall),
           SizedBox(height: 7.h),
           Text('양육자가 되기 위한 첫걸음, 재밌는 CAMI 3분 검사'.tr(),
-              style: CustomTextStyles.bodySmallGray90002_1),
+              style: CustomTextStyles.bodySmallGray90002),
           SizedBox(height: 60.h),
           CustomImageView(
             imagePath: Assets.images.imgImage242x337.path,

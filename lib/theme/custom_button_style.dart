@@ -43,14 +43,14 @@ class CustomButtonStyles {
         ),
       );
   static ButtonStyle get fillOnSecondaryContainer => ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.onSecondaryContainer,
+        backgroundColor: lightTheme.onSecondaryContainer,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: theme.colorScheme.primary,
+        backgroundColor: lightTheme.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),

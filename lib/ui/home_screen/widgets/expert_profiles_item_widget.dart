@@ -27,7 +27,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               elevation: 0,
               margin: EdgeInsets.zero,
-              color: theme.colorScheme.onPrimaryContainer,
+              color: lightTheme.onPrimaryContainer,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusStyle.circleBorder8),
               child: Container(
@@ -67,12 +67,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                     Text(
                                       'N동물의료센터 노원점 원장'.tr(),
                                       style:
-                                          CustomTextStyles.bodySmallGray90002_2,
+                                          CustomTextStyles.bodySmallGray90002,
                                     ),
                                     Text(
                                       '한국 고양이 수의사회 홍보 이사'.tr(),
                                       style:
-                                          CustomTextStyles.bodySmallGray90002_2,
+                                          CustomTextStyles.bodySmallGray90002,
                                     ),
                                     Align(
                                       alignment: Alignment.centerRight,
@@ -86,13 +86,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                             child: Text(
                                               'EBS ‘고양이를 부탁해’ 출연'.tr(),
                                               style: CustomTextStyles
-                                                  .bodySmallGray90002_2,
+                                                  .bodySmallGray90002,
                                             ),
                                           ),
                                           Text(
                                             '제이클리커아카데미 대표'.tr(),
                                             style: CustomTextStyles
-                                                .bodySmallGray90002_2,
+                                                .bodySmallGray90002,
                                           ),
                                         ],
                                       ),
@@ -186,7 +186,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: theme.colorScheme.onPrimaryContainer,
+                                color: lightTheme.onPrimaryContainer,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -219,7 +219,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: theme.colorScheme.onPrimaryContainer,
+                                color: lightTheme.onPrimaryContainer,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -248,13 +248,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                   SizedBox(height: 63.h),
                                   Text(
                                     '서울대학교 수의학박사'.tr(),
-                                    style:
-                                        CustomTextStyles.bodySmallGray90002_2,
+                                    style: CustomTextStyles.bodySmallGray90002,
                                   ),
                                   Text(
                                     '광주동물메디컬 센터 수의사'.tr(),
-                                    style:
-                                        CustomTextStyles.bodySmallGray90002_2,
+                                    style: CustomTextStyles.bodySmallGray90002,
                                   ),
                                 ],
                               ),
@@ -313,13 +311,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 children: [
                                   Text(
                                     '한국수의학교육학회 자문위원'.tr(),
-                                    style:
-                                        CustomTextStyles.bodySmallGray90002_2,
+                                    style: CustomTextStyles.bodySmallGray90002,
                                   ),
                                   Text(
                                     '충현동물종합병원 원장'.tr(),
-                                    style:
-                                        CustomTextStyles.bodySmallGray90002_2,
+                                    style: CustomTextStyles.bodySmallGray90002,
                                   ),
                                 ],
                               ),
@@ -340,7 +336,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: theme.colorScheme.onPrimaryContainer,
+                                color: lightTheme.onPrimaryContainer,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -384,7 +380,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               height: 180.h,
                               width: 337.w,
                               decoration: BoxDecoration(
-                                color: theme.colorScheme.onPrimaryContainer,
+                                color: lightTheme.onPrimaryContainer,
                                 borderRadius: BorderRadius.circular(10.w),
                                 boxShadow: [
                                   BoxShadow(
@@ -428,9 +424,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                         child: Text(
                                           'KPA-CTP / CCPDT-KA',
                                           overflow: TextOverflow.ellipsis,
-                                          style: CustomTextStyles
-                                              .bodySmallGray90002
-                                              .copyWith(height: 1.77),
+                                          style: textTheme.bodySmall!.copyWith(
+                                            color: appTheme.gray90002,
+                                            fontSize: 11,
+                                            height: 1.77,
+                                          ),
                                         ),
                                       ),
                                       Padding(
@@ -442,12 +440,12 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                             Text(
                                               '한국상담학회 1급 상담사'.tr(),
                                               style: CustomTextStyles
-                                                  .bodySmallGray90002_2,
+                                                  .bodySmallGray90002,
                                             ),
                                             Text(
                                               '스트레스 관리, 심리상담 출강'.tr(),
                                               style: CustomTextStyles
-                                                  .bodySmallGray90002_2,
+                                                  .bodySmallGray90002,
                                             ),
                                           ],
                                         ),

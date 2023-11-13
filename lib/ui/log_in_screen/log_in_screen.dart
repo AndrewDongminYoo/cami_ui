@@ -157,8 +157,12 @@ class LogInScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 16.w),
-            child: Text('간편 로그인'.tr(),
-                style: CustomTextStyles.bodySmallBluegray300),
+            child: Text(
+              '간편 로그인'.tr(),
+              style: textTheme.bodySmall!.copyWith(
+                color: appTheme.blueGray300,
+              ),
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(

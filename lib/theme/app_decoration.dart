@@ -16,17 +16,17 @@ class AppDecoration {
       BoxDecoration(color: appTheme.gray100);
   static BoxDecoration get fillGray50 => BoxDecoration(color: appTheme.gray50);
   static BoxDecoration get fillOnErrorContainer =>
-      BoxDecoration(color: theme.colorScheme.onErrorContainer);
+      BoxDecoration(color: lightTheme.onErrorContainer);
   static BoxDecoration get fillOnPrimaryContainer =>
-      BoxDecoration(color: theme.colorScheme.onPrimaryContainer);
+      BoxDecoration(color: lightTheme.onPrimaryContainer);
   static BoxDecoration get fillPrimary =>
-      BoxDecoration(color: theme.colorScheme.primary);
+      BoxDecoration(color: lightTheme.primary);
   static BoxDecoration get fillSecondaryContainer =>
-      BoxDecoration(color: theme.colorScheme.secondaryContainer);
+      BoxDecoration(color: lightTheme.secondaryContainer);
 
   // Outline decorations
   static BoxDecoration get outlineBlueGrayB => BoxDecoration(
-        color: theme.colorScheme.onPrimaryContainer,
+        color: lightTheme.onPrimaryContainer,
         boxShadow: [
           BoxShadow(
             color: appTheme.blueGray1006b,
@@ -53,13 +53,13 @@ class AppDecoration {
       );
   static BoxDecoration get outlineOnError => BoxDecoration(
         border: Border.all(
-          color: theme.colorScheme.onError,
+          color: lightTheme.onError,
           width: 1.w,
         ),
       );
   static BoxDecoration get outlineOnSecondaryContainer => BoxDecoration(
         border: Border.all(
-          color: theme.colorScheme.onSecondaryContainer,
+          color: lightTheme.onSecondaryContainer,
           width: 1.w,
         ),
       );
