@@ -102,7 +102,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               ),
                             ),
                             CustomImageView(
-                              imagePath: Assets.images.imgImage180x168.path,
+                              imagePath: Assets.images.experts.kmc.path,
                               height: 180.h,
                               width: 168.w,
                               alignment: Alignment.centerRight,
@@ -199,7 +199,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             ),
                           ),
                           CustomImageView(
-                            imagePath: Assets.images.imgImage20.path,
+                            imagePath: Assets.images.experts.sch.path,
                             height: 180.h,
                             width: 168.w,
                             alignment: Alignment.centerRight,
@@ -259,7 +259,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             ),
                           ),
                           CustomImageView(
-                            imagePath: Assets.images.imgImage21.path,
+                            imagePath: Assets.images.experts.syj.path,
                             height: 180.h,
                             width: 168.w,
                             alignment: Alignment.centerRight,
@@ -275,7 +275,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                         alignment: Alignment.topLeft,
                         children: [
                           CustomImageView(
-                            imagePath: Assets.images.imgImage22.path,
+                            imagePath: Assets.images.experts.kji.path,
                             height: 180.h,
                             width: 168.w,
                             alignment: Alignment.centerRight,
@@ -360,7 +360,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             ),
                           ),
                           CustomImageView(
-                            imagePath: Assets.images.imgImage23.path,
+                            imagePath: Assets.images.experts.sjh.path,
                             height: 180.h,
                             width: 168.w,
                             alignment: Alignment.centerRight,
@@ -393,7 +393,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             ),
                           ),
                           CustomImageView(
-                            imagePath: Assets.images.imgImage24.path,
+                            imagePath: Assets.images.experts.psh.path,
                             height: 180.h,
                             width: 168.w,
                             alignment: Alignment.centerRight,

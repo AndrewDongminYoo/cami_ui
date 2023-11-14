@@ -2,13 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/assets.gen.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_list.dart';
 import '/ui/shared/checkup_item_widget.dart';
 
 class CatTab extends StatefulWidget {
@@ -22,6 +21,9 @@ class CatTabState extends State<CatTab>
     with AutomaticKeepAliveClientMixin<CatTab> {
   @override
   bool get wantKeepAlive => true;
+
+  final catTestList = checkUpList.where((test) => test.type == 'cat').toList();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -38,15 +40,15 @@ class CatTabState extends State<CatTab>
                 Column(
                   children: [
                     /// Recognize Your Cat's Personality! Butler's Cat BTI
-                    CheckupItemWidget(
-                      imagePath: Assets.images.imgImage164x346.path,
-                      short: 'CCSI',
-                      title: '고양이 MBTI'.tr(),
-                      description: '알쏭달쏭 고양이 성격 알아채기! 집사 전용 냥BTI'.tr(),
-                      onPressed: (context) {
-                        /// TODO: implement onPressed
-                      },
-                    ),
+                    ...catTestList.map((catTest) {
+                      return CheckupItemWidget(
+                        imagePath: catTest.imagePath!,
+                        short: catTest.shortTitle!,
+                        title: catTest.title!,
+                        description: catTest.description!,
+                        location: catTest.location!,
+                      );
+                    }).toList(),
                     SizedBox(height: 128.h),
                     const CamiAppFooter(),
                   ],

@@ -2,13 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/assets.gen.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_list.dart';
 import '/ui/shared/checkup_item_widget.dart';
 
 class DogTab extends StatefulWidget {
@@ -22,6 +21,9 @@ class DogTabState extends State<DogTab>
     with AutomaticKeepAliveClientMixin<DogTab> {
   @override
   bool get wantKeepAlive => true;
+
+  final dogTestList = checkUpList.where((test) => test.type == 'dog').toList();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -42,23 +44,18 @@ class DogTabState extends State<DogTab>
                       child: ListView.separated(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        separatorBuilder: (
-                          context,
-                          index,
-                        ) {
+                        separatorBuilder: (context, index) {
                           return SizedBox(height: 16.h);
                         },
                         itemCount: 5,
                         itemBuilder: (context, index) {
+                          final dogTest = dogTestList[index];
                           return CheckupItemWidget(
-                            imagePath: Assets.images.imgImage15.path,
-                            short: 'DCSI-II',
-                            title: '강아지 MBTI'.tr(),
-                            description:
-                                '16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr(),
-                            onPressed: (context) {
-                              // TODO: implement onPressed
-                            },
+                            imagePath: dogTest.imagePath!,
+                            short: dogTest.shortTitle!,
+                            title: dogTest.title!,
+                            description: dogTest.description!,
+                            location: dogTest.location!,
                           );
                         },
                       ),

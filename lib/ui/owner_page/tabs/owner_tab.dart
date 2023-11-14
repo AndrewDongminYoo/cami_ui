@@ -2,13 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/assets.gen.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_list.dart';
 import '/ui/shared/checkup_item_widget.dart';
 
 class OwnerTab extends StatefulWidget {
@@ -22,6 +21,10 @@ class OwnerTabState extends State<OwnerTab>
     with AutomaticKeepAliveClientMixin<OwnerTab> {
   @override
   bool get wantKeepAlive => true;
+
+  final ownerTestList =
+      checkUpList.where((test) => test.type == 'owner').toList();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -60,16 +63,15 @@ class OwnerTabState extends State<OwnerTab>
         separatorBuilder: (context, index) {
           return SizedBox(height: 16.h);
         },
-        itemCount: 3,
+        itemCount: ownerTestList.length,
         itemBuilder: (context, index) {
+          final ownerTest = ownerTestList[index];
           return CheckupItemWidget(
-            imagePath: Assets.images.imgImage170x359.path,
-            short: 'DPAI',
-            title: '보호자 양육면허시험'.tr(),
-            description: '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr(),
-            onPressed: (context) {
-              // TODO: implement onPressed
-            },
+            imagePath: ownerTest.imagePath!,
+            short: ownerTest.shortTitle!,
+            title: ownerTest.title!,
+            description: ownerTest.description!,
+            location: ownerTest.location!,
           );
         },
       ),
