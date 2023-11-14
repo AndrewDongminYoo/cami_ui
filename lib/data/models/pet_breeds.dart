@@ -2,8 +2,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'pet_breeds.model.g.dart';
+part 'pet_breeds.g.dart';
 
+/// 고양이/강아지 품종 선택을 위한 클래스입니다.
 @JsonSerializable()
 class PetBreeds extends Equatable {
   const PetBreeds({

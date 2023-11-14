@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pet_breeds.model.dart';
+part of 'pet_breeds.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
