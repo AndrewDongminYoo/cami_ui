@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
+import '/theme/theme_helper.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
-import '/widgets/base_button.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -20,14 +21,14 @@ class CheckupItemWidget extends StatelessWidget {
     required this.short,
     required this.title,
     required this.description,
-    required this.onPressed,
+    required this.location,
   });
 
   final String imagePath;
   final String short;
   final String title;
   final String description;
-  final VoidNavFunction onPressed;
+  final String location;
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +41,12 @@ class CheckupItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            decoration: AppDecoration.fillSecondaryContainer,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadiusStyle.roundTop20,
+              color: lightTheme.secondaryContainer,
+            ),
             child: CustomImageView(
+              radius: BorderRadiusStyle.roundTop20,
               imagePath: imagePath,
               height: 164.h,
               width: 346.w,
@@ -49,29 +54,32 @@ class CheckupItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 14.h),
           CustomElevatedButton(
-            onPressed: onPressed,
+            onPressed: (context) => context.go(location),
             height: 24.h,
             width: 42.w,
             text: short,
-            margin: EdgeInsets.only(left: 14.w),
+            margin: EdgeInsets.symmetric(horizontal: 14.w),
             buttonTextStyle: CustomTextStyles.bodySmall10,
           ),
           SizedBox(height: 11.h),
           Padding(
-            padding: EdgeInsets.only(left: 14.w),
+            padding: EdgeInsets.symmetric(horizontal: 14.w),
             child: Text(title, style: CustomTextStyles.bodyMediumGray90002),
           ),
           SizedBox(height: 7.h),
           Padding(
-            padding: EdgeInsets.only(left: 14.w),
-            child: Text(description,
-                style: CustomTextStyles.bodySmallPrimaryContainer),
+            padding: EdgeInsets.symmetric(horizontal: 14.w),
+            child: Text(
+              description,
+              style: CustomTextStyles.bodySmallPrimaryContainer,
+              maxLines: 3,
+            ),
           ),
           SizedBox(height: 39.h),
           InkWell(
-            onTap: () => onPressed(context),
+            onTap: () => context.go(location),
             child: Padding(
-              padding: EdgeInsets.only(left: 14.w),
+              padding: EdgeInsets.symmetric(horizontal: 14.w),
               child: Row(
                 children: [
                   Text('자세히 보기'.tr(), style: CustomTextStyles.bodySmallGray700),

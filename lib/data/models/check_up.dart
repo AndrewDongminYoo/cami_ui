@@ -9,8 +9,10 @@ part 'check_up.g.dart';
 class CheckUp extends Equatable {
   const CheckUp({
     this.description,
+    this.featured,
     this.imagePath,
     this.location,
+    this.popular,
     this.shortTitle,
     this.title,
     this.type,
@@ -21,9 +23,11 @@ class CheckUp extends Equatable {
   }
 
   final String? description;
+  final bool? featured;
   @JsonKey(name: 'image_path')
   final String? imagePath;
   final String? location;
+  final bool? popular;
   @JsonKey(name: 'short_title')
   final String? shortTitle;
   final String? title;
@@ -33,16 +37,20 @@ class CheckUp extends Equatable {
 
   CheckUp copyWith({
     String? description,
+    bool? featured,
     String? imagePath,
     String? location,
+    bool? popular,
     String? shortTitle,
     String? title,
     String? type,
   }) {
     return CheckUp(
       description: description ?? this.description,
+      featured: featured ?? this.featured,
       imagePath: imagePath ?? this.imagePath,
       location: location ?? this.location,
+      popular: popular ?? this.popular,
       shortTitle: shortTitle ?? this.shortTitle,
       title: title ?? this.title,
       type: type ?? this.type,
@@ -56,8 +64,10 @@ class CheckUp extends Equatable {
   List<Object?> get props {
     return [
       description,
+      featured,
       imagePath,
       location,
+      popular,
       shortTitle,
       title,
       type,

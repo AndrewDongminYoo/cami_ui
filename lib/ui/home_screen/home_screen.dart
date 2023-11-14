@@ -9,6 +9,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/data/models/check_up.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -16,6 +17,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_list.dart';
 import '/ui/shared/checkup_item_widget.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
@@ -28,6 +30,8 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   int sliderIndex = 1;
   int sliderIndex1 = 1;
+
+  List<CheckUp> allCheckUp = checkUpList;
 
   @override
   Widget build(BuildContext context) {
@@ -191,7 +195,8 @@ class HomeScreen extends StatelessWidget {
   Widget _buildPopularTestsButton(BuildContext context) {
     return CustomOutlinedButton(
       onPressed: (context) {
-        // TODO: implement onPressed
+        allCheckUp =
+            checkUpList.where((test) => test.popular ?? false).toList();
       },
       width: 178.w,
       text: '많은 분들이 찾은 인기 검사'.tr(),
@@ -204,7 +209,8 @@ class HomeScreen extends StatelessWidget {
   Widget _buildRecommendedTestsButton(BuildContext context) {
     return CustomOutlinedButton(
       onPressed: (context) {
-        // TODO: implement onPressed
+        allCheckUp =
+            checkUpList.where((test) => test.featured ?? false).toList();
       },
       width: 124.w,
       text: '수의사 추천 검사'.tr(),
@@ -224,16 +230,15 @@ class HomeScreen extends StatelessWidget {
         separatorBuilder: (context, index) {
           return SizedBox(height: 15.h);
         },
-        itemCount: 3,
+        itemCount: allCheckUp.length,
         itemBuilder: (context, index) {
+          final item = allCheckUp[index];
           return CheckupItemWidget(
-            imagePath: Assets.images.imgImage15.path,
-            short: 'DCSI-II',
-            title: '강아지 MBTI'.tr(),
-            description: '16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr(),
-            onPressed: (context) {
-              // TODO: implement onPressed
-            },
+            imagePath: item.imagePath!,
+            short: item.shortTitle!,
+            title: item.title!,
+            description: item.description!,
+            location: item.location!,
           );
         },
       ),
@@ -361,10 +366,7 @@ class HomeScreen extends StatelessWidget {
           ListView.separated(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            separatorBuilder: (
-              context,
-              index,
-            ) {
+            separatorBuilder: (context, index) {
               return SizedBox(height: 12.h);
             },
             itemCount: 2,
