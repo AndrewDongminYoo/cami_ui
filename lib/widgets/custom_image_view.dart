@@ -20,6 +20,7 @@ class CustomImageView extends StatelessWidget {
     this.height,
     this.width,
     this.color,
+    this.fit,
     this.alignment,
     this.onTap,
     this.radius,
@@ -33,6 +34,7 @@ class CustomImageView extends StatelessWidget {
   final double? height;
   final double? width;
   final Color? color;
+  final BoxFit? fit;
   final Alignment? alignment;
   final VoidCallback? onTap;
   final EdgeInsetsGeometry? margin;
@@ -98,6 +100,7 @@ class CustomImageView extends StatelessWidget {
               imagePath!,
               height: height,
               width: width,
+              fit: fit ?? BoxFit.contain,
               // ignore: deprecated_member_use
               color: color,
             ),
@@ -107,12 +110,14 @@ class CustomImageView extends StatelessWidget {
             File(imagePath!),
             height: height,
             width: width,
+            fit: fit,
             color: color,
           );
         case ImageType.network:
           return CachedNetworkImage(
             height: height,
             width: width,
+            fit: fit,
             imageUrl: imagePath!,
             color: color,
             placeholder: (context, url) => SizedBox(
@@ -128,6 +133,7 @@ class CustomImageView extends StatelessWidget {
                 semanticLabel: error.toString(),
                 height: height,
                 width: width,
+                fit: fit,
               );
             },
           );
@@ -137,6 +143,7 @@ class CustomImageView extends StatelessWidget {
             imagePath!,
             height: height,
             width: width,
+            fit: fit ?? BoxFit.cover,
             color: color,
           );
       }
