@@ -7,10 +7,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
-import '/theme/theme_helper.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
