@@ -16,11 +16,11 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/checkup_item_widget.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
 import 'widgets/animal_type_test_item_widget.dart';
 import 'widgets/expert_profiles_item_widget.dart';
-import 'widgets/user_profile_view_list_item_widget.dart';
 import 'widgets/user_review_item_widget.dart';
 
 // ignore: must_be_immutable
@@ -46,8 +46,9 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 99.h),
                 Text('찾아봐요'.tr(), style: CustomTextStyles.bodyMediumGray90002),
                 SizedBox(height: 11.h),
-                Text('우리에게 필요한'.tr(), style: textTheme.headlineSmall),
-                Text('심리검사는?'.tr(), style: textTheme.headlineSmall),
+                Text('우리에게 필요한'.tr(),
+                    style: textTheme.headlineSmall!.extraBold),
+                Text('심리검사는?'.tr(), style: textTheme.headlineSmall!.extraBold),
                 SizedBox(height: 39.h),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40.w),
@@ -168,9 +169,9 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(height: 83.h),
-          Text('반려동물의'.tr(), style: textTheme.headlineLarge),
+          Text('반려동물의'.tr(), style: textTheme.headlineLarge!.extraBold),
           SizedBox(height: 8.h),
-          Text('마음을 읽다, 카미'.tr(), style: textTheme.headlineLarge),
+          Text('마음을 읽다, 카미'.tr(), style: textTheme.headlineLarge!.extraBold),
           SizedBox(height: 24.h),
           Text('수의사가 제안하는 반려생활 솔루션으로'.tr(),
               style: CustomTextStyles.bodyMediumBlack900),
@@ -220,15 +221,20 @@ class HomeScreen extends StatelessWidget {
       child: ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        separatorBuilder: (
-          context,
-          index,
-        ) {
+        separatorBuilder: (context, index) {
           return SizedBox(height: 15.h);
         },
         itemCount: 3,
         itemBuilder: (context, index) {
-          return const UserProfileViewListItemWidget();
+          return CheckupItemWidget(
+            imagePath: Assets.images.imgImage15.path,
+            short: 'DCSI-II',
+            title: '강아지 MBTI'.tr(),
+            description: '16가지의 성격 유형, 멍BTI로 내 강아지의 성격 바로 알기'.tr(),
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
+          );
         },
       ),
     );

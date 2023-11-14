@@ -2,12 +2,14 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/gen/assets.gen.dart';
 import '/ui/shared/cami_app_footer.dart';
-import 'widgets/checkup_owner_item_widget.dart';
+import '/ui/shared/checkup_item_widget.dart';
 
 class OwnerTab extends StatefulWidget {
   const OwnerTab({super.key});
@@ -55,15 +57,20 @@ class OwnerTabState extends State<OwnerTab>
       child: ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        separatorBuilder: (
-          context,
-          index,
-        ) {
+        separatorBuilder: (context, index) {
           return SizedBox(height: 16.h);
         },
         itemCount: 3,
         itemBuilder: (context, index) {
-          return const CheckupOwnerItemWidget();
+          return CheckupItemWidget(
+            imagePath: Assets.images.imgImage170x359.path,
+            short: 'DPAI',
+            title: '보호자 양육면허시험'.tr(),
+            description: '강아지와 함께할 준비 되셨나요? 입양 자격 검사 (반려인 면허 시험)'.tr(),
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
+          );
         },
       ),
     );

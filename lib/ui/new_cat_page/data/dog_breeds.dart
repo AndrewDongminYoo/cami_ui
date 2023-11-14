@@ -1,5 +1,5 @@
 // 🌎 Project imports:
-import 'pet_breeds.model.dart';
+import '/data/models/pet_breeds.dart';
 
 const List<PetBreeds> petGroupList = [
   PetBreeds(
