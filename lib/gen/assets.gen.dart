@@ -15,6 +15,50 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 
+class $AssetsGoogleFontsGen {
+  const $AssetsGoogleFontsGen();
+
+  /// File path: assets/google_fonts/Poppins-Black.ttf
+  String get poppinsBlack => 'assets/google_fonts/Poppins-Black.ttf';
+
+  /// File path: assets/google_fonts/Poppins-Bold.ttf
+  String get poppinsBold => 'assets/google_fonts/Poppins-Bold.ttf';
+
+  /// File path: assets/google_fonts/Poppins-ExtraBold.ttf
+  String get poppinsExtraBold => 'assets/google_fonts/Poppins-ExtraBold.ttf';
+
+  /// File path: assets/google_fonts/Poppins-ExtraLight.ttf
+  String get poppinsExtraLight => 'assets/google_fonts/Poppins-ExtraLight.ttf';
+
+  /// File path: assets/google_fonts/Poppins-Light.ttf
+  String get poppinsLight => 'assets/google_fonts/Poppins-Light.ttf';
+
+  /// File path: assets/google_fonts/Poppins-Medium.ttf
+  String get poppinsMedium => 'assets/google_fonts/Poppins-Medium.ttf';
+
+  /// File path: assets/google_fonts/Poppins-Regular.ttf
+  String get poppinsRegular => 'assets/google_fonts/Poppins-Regular.ttf';
+
+  /// File path: assets/google_fonts/Poppins-SemiBold.ttf
+  String get poppinsSemiBold => 'assets/google_fonts/Poppins-SemiBold.ttf';
+
+  /// File path: assets/google_fonts/Poppins-Thin.ttf
+  String get poppinsThin => 'assets/google_fonts/Poppins-Thin.ttf';
+
+  /// List of all assets
+  List<String> get values => [
+        poppinsBlack,
+        poppinsBold,
+        poppinsExtraBold,
+        poppinsExtraLight,
+        poppinsLight,
+        poppinsMedium,
+        poppinsRegular,
+        poppinsSemiBold,
+        poppinsThin
+      ];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -33,6 +77,8 @@ class $AssetsImagesGen {
   /// File path: assets/images/avatar_owner.png
   AssetGenImage get avatarOwner =>
       const AssetGenImage('assets/images/avatar_owner.png');
+
+  $AssetsImagesExpertsGen get experts => const $AssetsImagesExpertsGen();
 
   /// File path: assets/images/ico_facebook_dark.png
   AssetGenImage get icoFacebookDark =>
@@ -126,29 +172,13 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage1368x361 =>
       const AssetGenImage('assets/images/img_image_1368x361.png');
 
-  /// File path: assets/images/img_image_15.png
-  AssetGenImage get imgImage15 =>
-      const AssetGenImage('assets/images/img_image_15.png');
-
   /// File path: assets/images/img_image_161x343.png
   AssetGenImage get imgImage161x343 =>
       const AssetGenImage('assets/images/img_image_161x343.png');
 
-  /// File path: assets/images/img_image_164x346.png
-  AssetGenImage get imgImage164x346 =>
-      const AssetGenImage('assets/images/img_image_164x346.png');
-
   /// File path: assets/images/img_image_167x130.png
   AssetGenImage get imgImage167x130 =>
       const AssetGenImage('assets/images/img_image_167x130.png');
-
-  /// File path: assets/images/img_image_170x359.png
-  AssetGenImage get imgImage170x359 =>
-      const AssetGenImage('assets/images/img_image_170x359.png');
-
-  /// File path: assets/images/img_image_180x168.png
-  AssetGenImage get imgImage180x168 =>
-      const AssetGenImage('assets/images/img_image_180x168.png');
 
   /// File path: assets/images/img_image_186x329.png
   AssetGenImage get imgImage186x329 =>
@@ -157,26 +187,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_image_2.png
   AssetGenImage get imgImage2 =>
       const AssetGenImage('assets/images/img_image_2.png');
-
-  /// File path: assets/images/img_image_20.png
-  AssetGenImage get imgImage20 =>
-      const AssetGenImage('assets/images/img_image_20.png');
-
-  /// File path: assets/images/img_image_21.png
-  AssetGenImage get imgImage21 =>
-      const AssetGenImage('assets/images/img_image_21.png');
-
-  /// File path: assets/images/img_image_22.png
-  AssetGenImage get imgImage22 =>
-      const AssetGenImage('assets/images/img_image_22.png');
-
-  /// File path: assets/images/img_image_23.png
-  AssetGenImage get imgImage23 =>
-      const AssetGenImage('assets/images/img_image_23.png');
-
-  /// File path: assets/images/img_image_24.png
-  AssetGenImage get imgImage24 =>
-      const AssetGenImage('assets/images/img_image_24.png');
 
   /// File path: assets/images/img_image_242x337.png
   AssetGenImage get imgImage242x337 =>
@@ -274,6 +284,8 @@ class $AssetsImagesGen {
   AssetGenImage get imgUserProfile =>
       const AssetGenImage('assets/images/img_user_profile.png');
 
+  $AssetsImagesTestsGen get tests => const $AssetsImagesTestsGen();
+
   /// List of all assets
   List<AssetGenImage> get values => [
         avatarCat,
@@ -303,19 +315,10 @@ class $AssetsImagesGen {
         imgImage128x142,
         imgImage1352x361,
         imgImage1368x361,
-        imgImage15,
         imgImage161x343,
-        imgImage164x346,
         imgImage167x130,
-        imgImage170x359,
-        imgImage180x168,
         imgImage186x329,
         imgImage2,
-        imgImage20,
-        imgImage21,
-        imgImage22,
-        imgImage23,
-        imgImage24,
         imgImage242x337,
         imgImage25,
         imgImage257x241,
@@ -443,9 +446,88 @@ class $AssetsSvgGen {
       ];
 }
 
+class $AssetsImagesExpertsGen {
+  const $AssetsImagesExpertsGen();
+
+  /// File path: assets/images/experts/kji.jpg
+  AssetGenImage get kji => const AssetGenImage('assets/images/experts/kji.jpg');
+
+  /// File path: assets/images/experts/kmc.jpg
+  AssetGenImage get kmc => const AssetGenImage('assets/images/experts/kmc.jpg');
+
+  /// File path: assets/images/experts/psh.jpg
+  AssetGenImage get psh => const AssetGenImage('assets/images/experts/psh.jpg');
+
+  /// File path: assets/images/experts/sch.jpg
+  AssetGenImage get sch => const AssetGenImage('assets/images/experts/sch.jpg');
+
+  /// File path: assets/images/experts/sjh.jpg
+  AssetGenImage get sjh => const AssetGenImage('assets/images/experts/sjh.jpg');
+
+  /// File path: assets/images/experts/syj.jpg
+  AssetGenImage get syj => const AssetGenImage('assets/images/experts/syj.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [kji, kmc, psh, sch, sjh, syj];
+}
+
+class $AssetsImagesTestsGen {
+  const $AssetsImagesTestsGen();
+
+  /// File path: assets/images/tests/test-14789.jpg
+  AssetGenImage get test14789 =>
+      const AssetGenImage('assets/images/tests/test-14789.jpg');
+
+  /// File path: assets/images/tests/test-14791.jpg
+  AssetGenImage get test14791 =>
+      const AssetGenImage('assets/images/tests/test-14791.jpg');
+
+  /// File path: assets/images/tests/test-14792.jpg
+  AssetGenImage get test14792 =>
+      const AssetGenImage('assets/images/tests/test-14792.jpg');
+
+  /// File path: assets/images/tests/test-14793.jpg
+  AssetGenImage get test14793 =>
+      const AssetGenImage('assets/images/tests/test-14793.jpg');
+
+  /// File path: assets/images/tests/test-14794.jpg
+  AssetGenImage get test14794 =>
+      const AssetGenImage('assets/images/tests/test-14794.jpg');
+
+  /// File path: assets/images/tests/test-14795.jpg
+  AssetGenImage get test14795 =>
+      const AssetGenImage('assets/images/tests/test-14795.jpg');
+
+  /// File path: assets/images/tests/test-14796.jpg
+  AssetGenImage get test14796 =>
+      const AssetGenImage('assets/images/tests/test-14796.jpg');
+
+  /// File path: assets/images/tests/test-14797.jpg
+  AssetGenImage get test14797 =>
+      const AssetGenImage('assets/images/tests/test-14797.jpg');
+
+  /// File path: assets/images/tests/test-14798.jpg
+  AssetGenImage get test14798 =>
+      const AssetGenImage('assets/images/tests/test-14798.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        test14789,
+        test14791,
+        test14792,
+        test14793,
+        test14794,
+        test14795,
+        test14796,
+        test14797,
+        test14798
+      ];
+}
+
 class Assets {
   Assets._();
 
+  static const $AssetsGoogleFontsGen googleFonts = $AssetsGoogleFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
   static const $AssetsMessagesGen messages = $AssetsMessagesGen();
