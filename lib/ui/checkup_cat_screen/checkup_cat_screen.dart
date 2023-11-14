@@ -51,7 +51,7 @@ class CheckupCatScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.imgImage164x346.path,
+                  imagePath: Assets.images.tests.test14791.path,
                   height: 171.h,
                   width: 361.w,
                 ),

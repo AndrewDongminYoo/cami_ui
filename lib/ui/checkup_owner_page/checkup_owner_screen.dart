@@ -62,7 +62,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.imgImage170x359.path,
+                  imagePath: Assets.images.tests.test14794.path,
                   height: 171.h,
                   width: 361.w,
                 ),

@@ -51,7 +51,7 @@ class CheckupDogScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.imgImage15.path,
+                  imagePath: Assets.images.tests.test14789.path,
                   height: 171.h,
                   width: 361.w,
                 ),
