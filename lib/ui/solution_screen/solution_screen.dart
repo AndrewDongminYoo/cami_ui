@@ -139,10 +139,7 @@ class SolutionScreen extends StatelessWidget {
       child: ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        separatorBuilder: (
-          context,
-          index,
-        ) {
+        separatorBuilder: (context, index) {
           return SizedBox(height: 24.h);
         },
         itemCount: 2,

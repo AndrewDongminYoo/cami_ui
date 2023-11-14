@@ -225,7 +225,7 @@ class PetsEmptyScreen extends StatelessWidget {
     return CustomElevatedButton(
         height: 48.h,
         text: '1:1 문의'.tr(),
-        buttonStyle: CustomButtonStyles.fillGray,
+        buttonStyle: CustomButtonStyles.fillGray.flat,
         buttonTextStyle: textTheme.bodyLarge,
         onPressed: onTapInquiries);
   }
@@ -235,7 +235,7 @@ class PetsEmptyScreen extends StatelessWidget {
     return CustomElevatedButton(
         height: 48.h,
         text: '자주묻는질문'.tr(),
-        buttonStyle: CustomButtonStyles.fillGray,
+        buttonStyle: CustomButtonStyles.fillGray.flat,
         buttonTextStyle: textTheme.bodyLarge,
         onPressed: onTapFaq);
   }

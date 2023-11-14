@@ -7,6 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/theme/theme_helper.dart';
 
+VisualDensity get buttonDensity =>
+    const VisualDensity(horizontal: -4, vertical: -4);
+
 /// 사전에 사용자 정의된 버튼 스타일을 제공하는 클래스.
 class CustomButtonStyles {
   // Filled button style
@@ -89,5 +92,14 @@ class CustomButtonStyles {
   static ButtonStyle get none => ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
         elevation: MaterialStateProperty.all<double>(0),
+      );
+}
+
+extension BaseButtonStyle on ButtonStyle {
+  ButtonStyle get flat => copyWith(
+        visualDensity: buttonDensity,
+        splashFactory: NoSplash.splashFactory,
+        elevation: MaterialStateProperty.all(0),
+        enableFeedback: true,
       );
 }

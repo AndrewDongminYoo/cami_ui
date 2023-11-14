@@ -65,8 +65,7 @@ class CustomElevatedButton extends BaseButton {
             Text(
               text,
               style: textStyle ??
-                  textTheme.bodyMedium!
-                      .copyWith(color: Colors.white),
+                  textTheme.bodyMedium!.copyWith(color: Colors.white),
             ),
             rightIcon ?? const SizedBox.shrink(),
           ],
