@@ -427,9 +427,9 @@ class PetsOneCatScreen extends StatelessWidget {
     context.go(AppRoutes.newCatTab);
   }
 
-  /// Navigates to the ownerPage when the action is triggered.
+  /// Navigates to the ownerTab when the action is triggered.
   void onTapCheckupOwnerPage(BuildContext context) {
-    context.go(AppRoutes.ownerPage);
+    context.go(AppRoutes.ownerTab);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.

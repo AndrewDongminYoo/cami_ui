@@ -76,6 +76,11 @@ class BorderRadiusStyle {
   static BorderRadius get circleBorder42 => BorderRadius.circular(42.w);
   static BorderRadius get circleBorder50 => BorderRadius.circular(50.w);
   static BorderRadius get circleBorder61 => BorderRadius.circular(61.w);
+
+  static BorderRadius get roundTop20 =>
+      BorderRadius.vertical(top: Radius.circular(20.w));
+  static BorderRadius get roundBottom20 =>
+      BorderRadius.vertical(bottom: Radius.circular(20.w));
 }
 
 double get strokeAlignInside => BorderSide.strokeAlignInside;

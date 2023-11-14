@@ -120,7 +120,7 @@ class AppNavigationScreen extends StatelessWidget {
                         _buildScreenTitle(
                           context,
                           screenTitle: '심리검사 홈',
-                          routeName: AppRoutes.checkupOwnerTab,
+                          routeName: AppRoutes.checkupHome,
                         ),
                         _buildScreenTitle(
                           context,

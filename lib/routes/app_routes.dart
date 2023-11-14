@@ -31,7 +31,6 @@ class AppRoutes {
   static const String namingScreen = '/naming_screen';
   static const String contactUsRegisterScreen = '/contact_us_register_screen';
   static const String faqScreen = '/faq_screen';
-  static const String newCatPage = '/new_cat_page';
   static const String newCatTab = '/new_cat_tab';
   static const String menuBarScreen = '/menu_bar_screen';
   static const String petsEmptyScreen = '/pets_empty_screen';
@@ -41,15 +40,11 @@ class AppRoutes {
   static const String editProfileScreen = '/edit_profile_screen';
   static const String verifyScreen = '/verify_screen';
   static const String myPageScreen = '/my_page_screen';
-  static const String catPage = '/cat_page';
-  static const String ownerPage = '/owner_page';
   static const String ownerTab = '/owner_tab';
-  static const String dogPage = '/dog_page';
   static const String homeScreen = '/home_screen';
   static const String checkupCatScreen = '/checkup_cat_screen';
   static const String checkupDogScreen = '/checkup_dog_screen';
-  static const String checkupOwnerPage = '/checkup_owner_page';
-  static const String checkupOwnerTab = '/checkup_owner_tab';
+  static const String checkupHome = '/checkup_owner_tab';
   static const String fourhundredfourScreen = '/fourhundredfour_screen';
   static const String noticeDetailScreen = '/notice_detail_screen';
   static const String noticeScreen = '/notice_screen';
@@ -126,7 +121,7 @@ class AppRoutes {
       builder: (context, state) => CheckupDogScreen(),
     ),
     GoRoute(
-      path: checkupOwnerTab,
+      path: checkupHome,
       builder: (context, state) => const CheckupOwnerScreen(),
     ),
     GoRoute(
