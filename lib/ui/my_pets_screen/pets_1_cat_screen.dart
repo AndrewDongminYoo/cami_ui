@@ -8,10 +8,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
-import '/ui/pets_empty_screen/widgets/my_pet_menu.dart';
-import '/ui/pets_empty_screen/widgets/per_owner_register.dart';
-import '/ui/pets_empty_screen/widgets/pet_avatar_profile.dart';
-import '/ui/pets_empty_screen/widgets/user_avatar_profile.dart';
+import '/ui/my_pets_screen/widgets/my_pet_menu.dart';
+import '/ui/my_pets_screen/widgets/per_owner_register.dart';
+import '/ui/my_pets_screen/widgets/pet_avatar_profile.dart';
+import '/ui/my_pets_screen/widgets/user_avatar_profile.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 
