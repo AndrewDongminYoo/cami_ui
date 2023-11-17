@@ -18,7 +18,6 @@ import '/widgets/app_bar/bread_crumb.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
-import '/widgets/custom_text_form_field.dart';
 
 class CheckupCatScreen extends StatelessWidget {
   CheckupCatScreen({super.key});
@@ -67,7 +66,7 @@ class CheckupCatScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                _buildInfoEditText(context),
+                _buildInfo(context),
                 SizedBox(height: 7.h),
                 _buildTestSummary(context),
                 SizedBox(height: 8.h),
@@ -195,24 +194,24 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildInfoEditText(BuildContext context) {
-    return Padding(
+  Widget _buildInfo(BuildContext context) {
+    return Container(
+      alignment: Alignment.centerLeft,
       padding: EdgeInsets.only(left: 16.w),
-      child: CustomTextFormField(
-        width: 105.w,
-        controller: infoEditTextController,
-        hintText: '(84)'.tr(),
-        textInputAction: TextInputAction.done,
-        alignment: Alignment.centerLeft,
-        suffix: Container(
-          margin: EdgeInsets.fromLTRB(-105.w, 4.h, 30.w, 4.h),
-          child: CustomImageView(
+      child: Row(
+        children: [
+          CustomImageView(
             imagePath: Assets.images.imgInfo.path,
             height: 12.h,
             width: 68.w,
+            margin: EdgeInsets.symmetric(vertical: 4.h),
           ),
-        ),
-        suffixConstraints: BoxConstraints(maxHeight: 21.h),
+          Padding(
+            padding: EdgeInsets.only(left: 8.w),
+            child:
+                Text('(84)'.tr(), style: CustomTextStyles.bodyMediumBlack900),
+          ),
+        ],
       ),
     );
   }
