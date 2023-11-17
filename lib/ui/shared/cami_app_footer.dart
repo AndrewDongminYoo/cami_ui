@@ -32,13 +32,13 @@ class CamiAppFooter extends StatelessWidget {
           Row(children: [
             GestureDetector(
               onTap: () {
-                context.go(AppRoutes.noticeScreen);
+                context.pushNamed(AppRoutes.noticeScreen);
               },
               child: Text('공지사항'.tr(), style: textTheme.bodySmall),
             ),
             GestureDetector(
               onTap: () {
-                context.go(AppRoutes.faqScreen);
+                context.pushNamed(AppRoutes.faqScreen);
               },
               child: Padding(
                 padding: EdgeInsets.only(left: 17.w),
@@ -56,7 +56,7 @@ class CamiAppFooter extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    context.go(AppRoutes.contactUsRegisterScreen);
+                    context.pushNamed(AppRoutes.contactUsRegisterScreen);
                   },
                   child: Text('고객센터'.tr(),
                       style: CustomTextStyles.bodySmallGray500),

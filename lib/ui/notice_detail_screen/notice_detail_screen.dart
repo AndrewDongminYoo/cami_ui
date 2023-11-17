@@ -150,6 +150,6 @@ class NoticeDetailScreen extends StatelessWidget {
 
   /// Navigates to the noticeScreen when the action is triggered.
   void onTapBackToNotices(BuildContext context) {
-    context.go(AppRoutes.noticeScreen);
+    context.pushNamed(AppRoutes.noticeScreen);
   }
 }

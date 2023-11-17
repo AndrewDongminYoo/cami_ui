@@ -212,7 +212,7 @@ class AppNavigationScreen extends StatelessWidget {
     required String routeName,
   }) {
     return GestureDetector(
-      onTap: () => context.go(routeName),
+      onTap: () => context.pushNamed(routeName),
       child: Container(
         decoration: const BoxDecoration(color: Colors.white),
         child: Column(

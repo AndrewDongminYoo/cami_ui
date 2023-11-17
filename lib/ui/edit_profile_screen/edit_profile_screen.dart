@@ -497,11 +497,11 @@ class EditProfileScreen extends StatelessWidget {
 
   /// Navigates to the faqScreen when the action is triggered.
   void onTapTxtWidget1(BuildContext context) {
-    context.go(AppRoutes.faqScreen);
+    context.pushNamed(AppRoutes.faqScreen);
   }
 
   /// Navigates to the contactUsRegisterScreen when the action is triggered.
   void onTapTxtWidget2(BuildContext context) {
-    context.go(AppRoutes.contactUsRegisterScreen);
+    context.pushNamed(AppRoutes.contactUsRegisterScreen);
   }
 }

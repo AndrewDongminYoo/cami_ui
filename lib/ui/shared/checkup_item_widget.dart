@@ -54,7 +54,7 @@ class CheckupItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 14.h),
           CustomElevatedButton(
-            onPressed: (context) => context.go(location),
+            onPressed: (context) => context.pushNamed(location),
             height: 24.h,
             width: 42.w,
             text: short,
@@ -77,7 +77,7 @@ class CheckupItemWidget extends StatelessWidget {
           ),
           SizedBox(height: 39.h),
           InkWell(
-            onTap: () => context.go(location),
+            onTap: () => context.pushNamed(location),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 14.w),
               child: Row(

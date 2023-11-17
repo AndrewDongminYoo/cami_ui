@@ -35,7 +35,7 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
             if (location == AppRoutes.homeScreen) {
               context.reload();
             } else {
-              context.go(AppRoutes.homeScreen);
+              context.pushNamed(AppRoutes.homeScreen);
             }
           },
         ),
@@ -46,7 +46,7 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: 24.r,
             margin: EdgeInsets.all(14.h),
             onTap: () {
-              context.go(AppRoutes.menuBarScreen);
+              context.pushNamed(AppRoutes.menuBarScreen);
             },
           ),
         ],

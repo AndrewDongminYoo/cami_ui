@@ -31,7 +31,8 @@ class HomeScreen extends StatelessWidget {
   int sliderIndex = 1;
   int sliderIndex1 = 1;
 
-  List<CheckUp> allCheckUp = checkUpList;
+  List<CheckUp> allCheckUp =
+      checkUpList.where((test) => test.popular ?? false).toList();
 
   @override
   Widget build(BuildContext context) {
