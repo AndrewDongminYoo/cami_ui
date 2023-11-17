@@ -11,11 +11,7 @@
       "flutterPlatform": "default",
       "flutterMode": "debug",
       "console": "debugConsole",
-      "args": [
-        "--hot",
-        "--ignore-deprecation",
-        "--route=/app_navigation_screen"
-      ],
+      "args": ["--hot", "--ignore-deprecation"],
       "openDevTools": "logging",
       "program": "lib/main.dart",
       "suppressWebServerDeviceBrowserLaunch": true
