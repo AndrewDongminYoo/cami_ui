@@ -17,6 +17,7 @@ class PetAvatarProfile extends StatelessWidget {
     super.key,
     required this.type,
     this.imagePath,
+    this.petName,
     this.birthDay,
     this.breeds,
     this.age,
@@ -25,6 +26,7 @@ class PetAvatarProfile extends StatelessWidget {
 
   final String? imagePath;
   final String type;
+  final String? petName;
   final String? birthDay;
   final String? breeds;
   final String? age;
@@ -33,107 +35,132 @@ class PetAvatarProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isCat = type == 'cat';
-    return Padding(
-      padding: EdgeInsets.only(left: 16.w, right: 16.w),
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
-        decoration: AppDecoration.outlineOnSecondaryContainer
-            .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            buildAvatar(isCat),
-            Padding(
-              padding: EdgeInsets.only(left: 24.w, bottom: 11.h),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    isCat ? '등록된 냥냥 없습니다.'.tr() : '등록된 멍멍 없습니다.'.tr(),
-                    style: CustomTextStyles.bodyLargeGray500
-                        .copyWith(color: appTheme.gray500),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
+      decoration: AppDecoration.outlineOnSecondaryContainer
+          .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _buildAvatar(isCat),
+              if (imagePath != null)
+                SizedBox(
+                  height: 20.h,
+                  width: 58.w,
+                  child: Stack(
+                    alignment: Alignment.topLeft,
+                    children: [
+                      Container(
+                        height: 20.h,
+                        width: 58.w,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: appTheme.gray10001,
+                          borderRadius: BorderRadius.circular(10.w),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.topLeft,
+                        padding: EdgeInsets.only(left: 6.w),
+                        child: Text('정보수정'.tr(),
+                            style: CustomTextStyles.bodySmallBlack900),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 7.h),
-                  Row(children: [
+                ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 24.w, bottom: 11.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
                     Text(
-                      '생년월일'.tr(),
-                      style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
+                      petName ??
+                          (isCat ? '등록된 냥냥 없습니다.'.tr() : '등록된 멍멍 없습니다.'.tr()),
+                      style: textTheme.bodyLarge,
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 16.w),
-                      child: Text(
-                        birthDay ?? '-',
-                        style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
+                    if (petName != null)
+                      Container(
+                        height: 20.h,
+                        width: 120.w,
+                        margin: EdgeInsets.only(left: 10.w, top: 2.h),
+                        child: Stack(
+                          alignment: Alignment.topCenter,
+                          children: [
+                            Align(
+                              child: Container(
+                                height: 20.h,
+                                width: 120.w,
+                                decoration: BoxDecoration(
+                                  color: lightTheme.primary,
+                                  borderRadius: BorderRadius.circular(8.w),
+                                ),
+                              ),
+                            ),
+                            Align(
+                                alignment: Alignment.topCenter,
+                                child: Text('성격유형 알아보기 >'.tr(),
+                                    style: CustomTextStyles.bodySmallBlack900))
+                          ],
+                        ),
                       ),
-                    ),
-                  ]),
-                  SizedBox(height: 2.h),
-                  Row(children: [
-                    Text(
-                      '연령'.tr(),
-                      style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 43.w),
-                      child: Text(
-                        age ?? '-',
-                        style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
-                      ),
-                    ),
-                  ]),
-                  SizedBox(height: 3.h),
-                  Row(children: [
-                    Text(
-                      isCat ? '묘종'.tr() : '견종'.tr(),
-                      style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 42.w),
-                      child: Text(
-                        breeds ?? '-',
-                        style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
-                      ),
-                    ),
-                  ]),
-                  SizedBox(height: 2.h),
-                  Row(children: [
-                    Text(
-                      '성별'.tr(),
-                      style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 42.w),
-                      child: Text(
-                        sex ?? '-',
-                        style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
-                      ),
-                    ),
-                  ])
-                ],
-              ),
+                  ],
+                ),
+                SizedBox(height: 7.h),
+                _buildContent(context, query: '생년월일'.tr(), value: birthDay),
+                SizedBox(height: 2.h),
+                _buildContent(context, query: '연령'.tr(), value: age),
+                SizedBox(height: 2.h),
+                _buildContent(context, query: '견종'.tr(), value: breeds),
+                SizedBox(height: 2.h),
+                _buildContent(context, query: '성별'.tr(), value: sex),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
-  CustomImageView buildAvatar(bool isCat) {
+  CustomImageView _buildAvatar(bool isCat) {
     return CustomImageView(
       imagePath: imagePath ??
           (isCat ? Assets.images.avatarCat.path : Assets.images.avatarDog.path),
       height: 84.r,
       width: 84.r,
       radius: BorderRadius.circular(42.w),
-      margin: EdgeInsets.only(top: 17.h, bottom: 33.h),
+      margin: EdgeInsets.symmetric(vertical: 21.h),
+    );
+  }
+
+  /// Common widget
+  Widget _buildContent(
+    BuildContext context, {
+    required String query,
+    required String? value,
+  }) {
+    return Row(
+      children: [
+        SizedBox(
+          width: 80.w,
+          child: Text(
+            query,
+            style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+          ),
+        ),
+        Text(
+          value ?? '-',
+          style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+        ),
+      ],
     );
   }
 }

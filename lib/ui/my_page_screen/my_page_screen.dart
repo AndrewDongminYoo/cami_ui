@@ -38,7 +38,7 @@ class MyPageScreen extends StatelessWidget {
                 _buildLoginRequires(context),
                 SizedBox(height: 48.h),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 17.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: _buildFrame(
                     context,
                     userName: '등록된 정보가 없습니다.'.tr(),
@@ -54,7 +54,7 @@ class MyPageScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 18.h),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 17.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: _buildFrame(
                     context,
                     userName: '등록된 정보가 없습니다.'.tr(),
