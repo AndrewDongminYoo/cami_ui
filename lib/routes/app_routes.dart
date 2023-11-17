@@ -53,94 +53,117 @@ class AppRoutes {
 
   static List<GoRoute> routes = [
     GoRoute(
+      name: quickTestScreen,
       path: quickTestScreen,
       builder: (context, state) => const QuickTestScreen(),
     ),
     GoRoute(
+      name: namingScreen,
       path: namingScreen,
       builder: (context, state) => NamingScreen(),
     ),
     GoRoute(
+      name: contactUsRegisterScreen,
       path: contactUsRegisterScreen,
       builder: (context, state) => ContactUsRegisterScreen(),
     ),
     GoRoute(
+      name: faqScreen,
       path: faqScreen,
       builder: (context, state) => FaqScreen(),
     ),
     GoRoute(
+      name: newCatTab,
       path: newCatTab,
       builder: (context, state) => const NewCatScreen(),
     ),
     GoRoute(
+      name: menuBarScreen,
       path: menuBarScreen,
       builder: (context, state) => const MenuBarScreen(),
     ),
     GoRoute(
+      name: petsEmptyScreen,
       path: petsEmptyScreen,
       builder: (context, state) => const PetsEmptyScreen(),
     ),
     GoRoute(
+      name: pets1CatScreen,
       path: pets1CatScreen,
       builder: (context, state) => const PetsOneCatScreen(),
     ),
     GoRoute(
+      name: solutionScreen,
       path: solutionScreen,
       builder: (context, state) => const SolutionScreen(),
     ),
     GoRoute(
+      name: signUpFormScreen,
       path: signUpFormScreen,
       builder: (context, state) => SignUpFormScreen(),
     ),
     GoRoute(
+      name: editProfileScreen,
       path: editProfileScreen,
       builder: (context, state) => EditProfileScreen(),
     ),
     GoRoute(
+      name: verifyScreen,
       path: verifyScreen,
       builder: (context, state) => VerifyScreen(),
     ),
     GoRoute(
+      name: myPageScreen,
       path: myPageScreen,
       builder: (context, state) => const MyPageScreen(),
     ),
     GoRoute(
+      name: ownerTab,
       path: ownerTab,
       builder: (context, state) => const OwnerScreen(),
     ),
     GoRoute(
+      name: homeScreen,
       path: homeScreen,
       builder: (context, state) => HomeScreen(),
     ),
     GoRoute(
+      name: checkupCatScreen,
       path: checkupCatScreen,
       builder: (context, state) => CheckupCatScreen(),
     ),
     GoRoute(
+      name: checkupDogScreen,
       path: checkupDogScreen,
       builder: (context, state) => CheckupDogScreen(),
     ),
     GoRoute(
+      name: checkupHome,
       path: checkupHome,
       builder: (context, state) => const CheckupOwnerScreen(),
     ),
     GoRoute(
+      name: fourhundredfourScreen,
       path: fourhundredfourScreen,
       builder: (context, state) => const ErrorPage(),
     ),
     GoRoute(
+      name: noticeDetailScreen,
       path: noticeDetailScreen,
       builder: (context, state) => const NoticeDetailScreen(),
     ),
     GoRoute(
+      name: noticeScreen,
       path: noticeScreen,
       builder: (context, state) => const NoticeScreen(),
     ),
     GoRoute(
+      name: logInScreen,
       path: logInScreen,
       builder: (context, state) => LogInScreen(),
     ),
     GoRoute(
+      name: appNavigationScreen,
       path: appNavigationScreen,
       builder: (context, state) => const AppNavigationScreen(),
     ),

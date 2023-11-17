@@ -59,9 +59,9 @@ extension NavigationExtensions on BuildContext {
       pop();
     } else {
       if (kDebugMode) {
-        go(AppRoutes.appNavigationScreen);
+        goNamed(AppRoutes.appNavigationScreen);
       } else {
-        go(AppRoutes.homeScreen);
+        goNamed(AppRoutes.homeScreen);
       }
     }
   }
