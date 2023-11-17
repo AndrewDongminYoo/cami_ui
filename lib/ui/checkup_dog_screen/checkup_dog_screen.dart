@@ -207,8 +207,8 @@ class CheckupDogScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child: Text('(916)'.tr(),
-                  style: CustomTextStyles.bodyMediumBlack900),
+            child:
+                Text('(916)'.tr(), style: CustomTextStyles.bodyMediumBlack900),
           ),
         ],
       ),

@@ -52,10 +52,8 @@ class QuickTestScreen extends StatelessWidget {
                             Text('강아지와 나의'.tr(),
                                 style: CustomTextStyles
                                     .headlineSmallNanumSquareNeoOnErrorContainer),
-                            Padding(
-                                padding: EdgeInsets.only(left: 8.w),
-                                child: Text('인싸력 테스트'.tr(),
-                                    style: textTheme.titleLarge))
+                            SizedBox(width: 6.w),
+                            Text('인싸력 테스트'.tr(), style: textTheme.titleLarge)
                           ],
                         ),
                       ),
@@ -119,21 +117,20 @@ class QuickTestScreen extends StatelessWidget {
                       Text('삼칠이 작명소'.tr(),
                           style: CustomTextStyles.titleLargeOnErrorContainer),
                       SizedBox(height: 18.h),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('개성만점'.tr(),
-                                style: CustomTextStyles.bodyMediumBlack900),
-                            Padding(
-                              padding: EdgeInsets.only(left: 4.w),
-                              child: Text('별명 짓기'.tr(),
-                                  style: CustomTextStyles.bodyMediumBlack900),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(left: 1.w),
-                                child: Text('!!!',
-                                    style: CustomTextStyles.bodyMediumBlack900))
-                          ]),
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: '개성만점'.tr(),
+                            style: CustomTextStyles.bodyMediumBlack900),
+                        WidgetSpan(child: SizedBox(width: 4.sp)),
+                        TextSpan(
+                            text: '별명 짓기'.tr(),
+                            style: CustomTextStyles.bodyMediumBlack900),
+                        WidgetSpan(child: SizedBox(width: 1.sp)),
+                        TextSpan(
+                            text: '!!!',
+                            style: CustomTextStyles.bodyMediumBlack900),
+                      ])),
                       SizedBox(height: 30.h),
                       Container(
                         width: 347.w,
@@ -172,60 +169,54 @@ class QuickTestScreen extends StatelessWidget {
                           height: 257.h,
                           width: 241.w),
                       SizedBox(height: 34.h),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                      RichText(
+                        text: TextSpan(
                           children: [
-                            Text('나는'.tr(),
+                            TextSpan(
+                                text: '나는'.tr(),
                                 style: CustomTextStyles
                                     .headlineSmallNanumSquareNeoOnErrorContainer),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2.w),
-                              child: Text('개'.tr(),
-                                  style: CustomTextStyles
-                                      .headlineSmallNanumSquareNeoErrorContainer),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 3.w),
-                              child: Text('인간?'.tr(),
-                                  style: CustomTextStyles
-                                      .headlineSmallNanumSquareNeoOnErrorContainer),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 2.w),
-                              child:
-                                  Text('고양이'.tr(), style: textTheme.titleLarge),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(left: 3.w),
-                                child: Text('인간?'.tr(),
-                                    style: CustomTextStyles
-                                        .headlineSmallNanumSquareNeoOnErrorContainer))
-                          ]),
+                            _buildSpacing(),
+                            TextSpan(
+                                text: '개'.tr(),
+                                style: CustomTextStyles
+                                    .headlineSmallNanumSquareNeoErrorContainer),
+                            _buildSpacing(),
+                            TextSpan(
+                                text: '인간?'.tr(),
+                                style: CustomTextStyles
+                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                            _buildSpacing(),
+                            TextSpan(
+                                text: '고양이'.tr(), style: textTheme.titleLarge),
+                            _buildSpacing(),
+                            TextSpan(
+                                text: '인간?'.tr(),
+                                style: CustomTextStyles
+                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                          ],
+                        ),
+                      ),
                       SizedBox(height: 18.h),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 39.w),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 20.h),
-                              child: Text('반려 동물과 반려인이'.tr(),
-                                  style: CustomTextStyles.bodyMediumBlack900),
-                            ),
-                            Container(
-                              width: 185.w,
-                              margin: EdgeInsets.only(left: 6.w),
-                              child: Text(
-                                '묘하게 닮아 있거나, 닮아 간다고 합니다.'.tr(),
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.center,
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '반려 동물과 반려인이'.tr(),
+                                style: CustomTextStyles.bodyMediumBlack900,
+                              ),
+                              _buildSpacing(),
+                              TextSpan(
+                                text: '묘하게 닮아 있거나, 닮아 간다고 합니다.'.tr(),
                                 style: CustomTextStyles.bodyMediumErrorContainer
                                     .copyWith(height: 1.43),
-                              ),
-                            ),
-                          ],
+                              )
+                            ],
+                          ),
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
                         ),
                       ),
                       SizedBox(height: 30.h),
@@ -242,7 +233,7 @@ class QuickTestScreen extends StatelessWidget {
                               .copyWith(height: 1.43),
                         ),
                       ),
-                      SizedBox(height: 9.h),
+                      SizedBox(height: 12.h),
                       CustomElevatedButton(
                         onPressed: (context) {
                           // TODO: implement onPressed
@@ -265,8 +256,12 @@ class QuickTestScreen extends StatelessWidget {
     );
   }
 
+  WidgetSpan _buildSpacing() {
+    return WidgetSpan(child: SizedBox(width: 3.w));
+  }
+
   /// Navigates to the namingScreen when the action is triggered.
   void onTapGoToTest(BuildContext context) {
-    context.go(AppRoutes.namingScreen);
+    context.goNamed(AppRoutes.namingScreen);
   }
 }

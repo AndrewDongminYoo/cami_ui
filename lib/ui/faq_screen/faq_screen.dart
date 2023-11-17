@@ -17,10 +17,17 @@ import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_image_view.dart';
 
 // ignore: must_be_immutable
-class FaqScreen extends StatelessWidget {
+class FaqScreen extends StatefulWidget {
   FaqScreen({super.key});
 
-  final items = ['Item One', 'Item Two', 'Item Three'];
+  @override
+  State<FaqScreen> createState() => _FaqScreenState();
+}
+
+class _FaqScreenState extends State<FaqScreen> {
+  final List<String> items = [];
+
+  bool isExpanded = true;
 
   @override
   Widget build(BuildContext context) {
