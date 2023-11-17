@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/core/utils/snack_bar.dart';
 import '/gen/assets.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
@@ -82,13 +83,18 @@ class ContactUsRegisterScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Divider(color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 22.h),
-                _buildUserProfile(context),
+                _buildDropDownForm(context),
                 SizedBox(height: 23.h),
-                _buildRecentOrders(context),
+                _buildTextFormField(context),
                 SizedBox(height: 28.h),
                 CustomElevatedButton(
                   onPressed: (context) {
                     // TODO: implement onPressed
+                    context.showSnackBar(
+                      backgroundColor: appTheme.deepOrange400,
+                      content:
+                          Text('[${inquiryType.text}] ${inquiryContent.text}'),
+                    );
                   },
                   text: '문의하기'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -105,7 +111,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildUserProfile(BuildContext context) {
+  Widget _buildDropDownForm(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 28.w, right: 16.w),
       child: Row(
@@ -145,7 +151,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildRecentOrders(BuildContext context) {
+  Widget _buildTextFormField(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 28.w, right: 16.w),
       child: Row(
@@ -163,7 +169,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: 16.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
               child: CustomTextFormField(
                   controller: inquiryContent,
                   maxLines: 5,
