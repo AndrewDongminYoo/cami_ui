@@ -112,8 +112,6 @@ flutter:
     - assets/svg/
 
   fonts:
-    - family: Poppins
-      # https://fonts.google.com/specimen/Poppins
     - family: Nanum Square Neo
       # https://hangeul.naver.com/font/nanum
       fonts:

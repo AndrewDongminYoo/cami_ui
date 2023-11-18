@@ -12,7 +12,4 @@ class FontFamily {
 
   /// Font family: Nanum Square Neo
   static const String nanumSquareNeo = 'Nanum Square Neo';
-
-  /// Font family: Poppins
-  static const String poppins = 'Poppins';
 }
