@@ -15,38 +15,59 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 
-class $AssetsGoogleFontsGen {
-  const $AssetsGoogleFontsGen();
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
 
-  /// File path: assets/google_fonts/Poppins-Black.ttf
-  String get poppinsBlack => 'assets/google_fonts/Poppins-Black.ttf';
+  /// File path: assets/fonts/NanumSquareNeo-Bold.ttf
+  String get nanumSquareNeoBold => 'assets/fonts/NanumSquareNeo-Bold.ttf';
 
-  /// File path: assets/google_fonts/Poppins-Bold.ttf
-  String get poppinsBold => 'assets/google_fonts/Poppins-Bold.ttf';
+  /// File path: assets/fonts/NanumSquareNeo-ExtraBold.ttf
+  String get nanumSquareNeoExtraBold =>
+      'assets/fonts/NanumSquareNeo-ExtraBold.ttf';
 
-  /// File path: assets/google_fonts/Poppins-ExtraBold.ttf
-  String get poppinsExtraBold => 'assets/google_fonts/Poppins-ExtraBold.ttf';
+  /// File path: assets/fonts/NanumSquareNeo-Heavy.ttf
+  String get nanumSquareNeoHeavy => 'assets/fonts/NanumSquareNeo-Heavy.ttf';
 
-  /// File path: assets/google_fonts/Poppins-ExtraLight.ttf
-  String get poppinsExtraLight => 'assets/google_fonts/Poppins-ExtraLight.ttf';
+  /// File path: assets/fonts/NanumSquareNeo-Light.ttf
+  String get nanumSquareNeoLight => 'assets/fonts/NanumSquareNeo-Light.ttf';
 
-  /// File path: assets/google_fonts/Poppins-Light.ttf
-  String get poppinsLight => 'assets/google_fonts/Poppins-Light.ttf';
+  /// File path: assets/fonts/NanumSquareNeo-Regular.ttf
+  String get nanumSquareNeoRegular => 'assets/fonts/NanumSquareNeo-Regular.ttf';
 
-  /// File path: assets/google_fonts/Poppins-Medium.ttf
-  String get poppinsMedium => 'assets/google_fonts/Poppins-Medium.ttf';
+  /// File path: assets/fonts/Poppins-Black.ttf
+  String get poppinsBlack => 'assets/fonts/Poppins-Black.ttf';
 
-  /// File path: assets/google_fonts/Poppins-Regular.ttf
-  String get poppinsRegular => 'assets/google_fonts/Poppins-Regular.ttf';
+  /// File path: assets/fonts/Poppins-Bold.ttf
+  String get poppinsBold => 'assets/fonts/Poppins-Bold.ttf';
 
-  /// File path: assets/google_fonts/Poppins-SemiBold.ttf
-  String get poppinsSemiBold => 'assets/google_fonts/Poppins-SemiBold.ttf';
+  /// File path: assets/fonts/Poppins-ExtraBold.ttf
+  String get poppinsExtraBold => 'assets/fonts/Poppins-ExtraBold.ttf';
 
-  /// File path: assets/google_fonts/Poppins-Thin.ttf
-  String get poppinsThin => 'assets/google_fonts/Poppins-Thin.ttf';
+  /// File path: assets/fonts/Poppins-ExtraLight.ttf
+  String get poppinsExtraLight => 'assets/fonts/Poppins-ExtraLight.ttf';
+
+  /// File path: assets/fonts/Poppins-Light.ttf
+  String get poppinsLight => 'assets/fonts/Poppins-Light.ttf';
+
+  /// File path: assets/fonts/Poppins-Medium.ttf
+  String get poppinsMedium => 'assets/fonts/Poppins-Medium.ttf';
+
+  /// File path: assets/fonts/Poppins-Regular.ttf
+  String get poppinsRegular => 'assets/fonts/Poppins-Regular.ttf';
+
+  /// File path: assets/fonts/Poppins-SemiBold.ttf
+  String get poppinsSemiBold => 'assets/fonts/Poppins-SemiBold.ttf';
+
+  /// File path: assets/fonts/Poppins-Thin.ttf
+  String get poppinsThin => 'assets/fonts/Poppins-Thin.ttf';
 
   /// List of all assets
   List<String> get values => [
+        nanumSquareNeoBold,
+        nanumSquareNeoExtraBold,
+        nanumSquareNeoHeavy,
+        nanumSquareNeoLight,
+        nanumSquareNeoRegular,
         poppinsBlack,
         poppinsBold,
         poppinsExtraBold,
@@ -538,7 +559,7 @@ class $AssetsImagesTestsGen {
 class Assets {
   Assets._();
 
-  static const $AssetsGoogleFontsGen googleFonts = $AssetsGoogleFontsGen();
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
   static const $AssetsMessagesGen messages = $AssetsMessagesGen();

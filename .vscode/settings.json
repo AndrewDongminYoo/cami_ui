@@ -17,8 +17,11 @@
     "kpostal",
     "MBTI",
     "naver",
+    "perano",
     "rxdart",
-    "trivy"
+    "shalimar",
+    "trivy",
+    "zumthor"
   ],
   "jsonToDart.avoidDynamicTypes": false,
   "jsonToDart.codeGenerator": "JSON",
