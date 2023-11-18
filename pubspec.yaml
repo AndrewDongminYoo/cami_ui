@@ -80,8 +80,11 @@ dependencies:
   provider: ^6.1.1
   # 온보딩 스크린 등에 많이 쓰는 페이지 인디케이터
   smooth_page_indicator: ^1.1.0
+  # URL 실행 도구
+  url_launcher: ^6.2.1
 
 dev_dependencies:
+  analyzer: ^5.13.0
   build_runner: ^2.4.6
   build_web_compilers: ^4.0.7
   dart_code_metrics: ^5.7.6
@@ -108,7 +111,7 @@ flutter:
     - assets/lotties/
     - assets/messages/
     - assets/svg/
-    - assets/snack/
+
   fonts:
     - family: Poppins
       # https://fonts.google.com/specimen/Poppins
