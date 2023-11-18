@@ -10,6 +10,7 @@ import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/theme/custom_text_style.dart';
 import '/ui/shared/cami_app_bar.dart';
+import '/ui/shared/social_link_icons.dart';
 import '/widgets/custom_image_view.dart';
 
 class MenuBarScreen extends StatelessWidget {
@@ -59,11 +60,11 @@ class MenuBarScreen extends StatelessWidget {
                 width: 393.w,
               ),
               SizedBox(height: 32.h),
-              CustomImageView(
-                imagePath: Assets.svg.imgSocial.path,
-                height: 21.h,
-                width: 120.w,
+              Container(
                 alignment: Alignment.center,
+                height: 21.h,
+                width: 393.w,
+                child: const SocialLinkIcons(dark: false),
               ),
               SizedBox(height: 32.h),
             ],

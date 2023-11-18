@@ -13,6 +13,7 @@ import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/widgets/custom_image_view.dart';
+import 'social_link_icons.dart';
 
 class CamiAppFooter extends StatelessWidget {
   const CamiAppFooter({super.key});
@@ -116,24 +117,7 @@ class CamiAppFooter extends StatelessWidget {
           Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
               style: textTheme.bodySmall),
           SizedBox(height: 39.h),
-          Row(children: [
-            CustomImageView(
-                imagePath: Assets.images.icoFacebookDark.path,
-                height: 24.r,
-                width: 24.r),
-            CustomImageView(
-              imagePath: Assets.images.icoInstagramDark.path,
-              height: 24.r,
-              width: 24.r,
-              margin: EdgeInsets.only(left: 16.w),
-            ),
-            CustomImageView(
-              imagePath: Assets.images.icoNaverBlogDark.path,
-              height: 24.r,
-              width: 24.r,
-              margin: EdgeInsets.only(left: 16.w),
-            ),
-          ])
+          const SocialLinkIcons()
         ],
       ),
     );
