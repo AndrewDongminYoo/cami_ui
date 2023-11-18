@@ -73,15 +73,14 @@ class CustomDropDownFormField extends StatelessWidget {
           focusNode: focusNode ?? FocusNode(),
           iconStyleData: IconStyleData(icon: icon),
           autofocus: autofocus,
-          style: textStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
+          style: textStyle ?? textTheme.bodyMedium!.nanum,
           items: items.map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(
                 value,
                 overflow: TextOverflow.ellipsis,
-                style: hintStyle ??
-                    CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
+                style: hintStyle ?? textTheme.bodyMedium!.nanum,
               ),
             );
           }).toList(),
@@ -94,8 +93,7 @@ class CustomDropDownFormField extends StatelessWidget {
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? '',
-        hintStyle:
-            hintStyle ?? CustomTextStyles.bodyMediumNanumSquareNeoBlack900,
+        hintStyle: hintStyle ?? textTheme.bodyMedium!.nanum,
         prefixIcon: prefix,
         prefixIconConstraints: prefixConstraints,
         suffixIcon: suffix,
@@ -103,7 +101,7 @@ class CustomDropDownFormField extends StatelessWidget {
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-        fillColor: fillColor ?? appTheme.gray10001,
+        fillColor: fillColor ?? const Color(0xFFF5F5F5),
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(

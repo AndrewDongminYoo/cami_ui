@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/gen/assets.gen.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/widgets/custom_icon_button.dart';
 import '/widgets/custom_image_view.dart';
 
@@ -43,12 +44,22 @@ class UserAvatarProfile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(children: [
-                    Text(name, style: CustomTextStyles.bodyLargeGray900),
-                    Text('님, 반가워요!'.tr(),
-                        style: CustomTextStyles.bodyLargeGray900)
+                    Text(
+                      name,
+                      style:
+                          textTheme.bodyLarge!.colored(const Color(0xFF202020)),
+                    ),
+                    Text(
+                      '님, 반가워요!'.tr(),
+                      style:
+                          textTheme.bodyLarge!.colored(const Color(0xFF202020)),
+                    )
                   ]),
                   SizedBox(height: 3.h),
-                  Text(mail, style: CustomTextStyles.bodySmallGray50011)
+                  Text(mail,
+                      style: textTheme.bodySmall!
+                          .colored(const Color(0xFFA3A3A3))
+                          .fSize(11))
                 ],
               ),
             ),

@@ -9,7 +9,6 @@ import 'package:go_router/go_router.dart';
 // 🌎 Project imports:
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
-import '/theme/theme_helper.dart';
 import 'my_pet_menu_item.dart';
 
 class MyPetMenu extends StatelessWidget {
@@ -37,7 +36,7 @@ class MyPetMenu extends StatelessWidget {
             width: 361.w,
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
             decoration: AppDecoration.fillGray50,
-            child: Divider(color: appTheme.gray20001, endIndent: 26.w),
+            child: Divider(color: const Color(0xFFEEEEEE), endIndent: 26.w),
           ),
           MyPetMenuItem(
             text: '자주묻는질문'.tr(),

@@ -61,17 +61,26 @@ class SignUpFormScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('환영합니다!'.tr(),
-                            style: CustomTextStyles.bodyMediumGray60001),
+                        Text(
+                          '환영합니다!'.tr(),
+                          style: textTheme.bodyMedium!
+                              .colored(const Color(0xFF6B7280)),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 4.w),
-                          child: Text('CAMI',
-                              style: CustomTextStyles.bodyMediumGray60001),
+                          child: Text(
+                            'CAMI',
+                            style: textTheme.bodyMedium!
+                                .colored(const Color(0xFF6B7280)),
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 1.w),
-                          child: Text('는 여러분들을 기다리고 있습니다!'.tr(),
-                              style: CustomTextStyles.bodyMediumGray60001),
+                          child: Text(
+                            '는 여러분들을 기다리고 있습니다!'.tr(),
+                            style: textTheme.bodyMedium!
+                                .colored(const Color(0xFF6B7280)),
+                          ),
                         ),
                       ],
                     ),
@@ -80,56 +89,77 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 64.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이메일 주소'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '이메일 주소'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildAppNavBar(context),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('비밀번호'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '비밀번호'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText1(context),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('비밀번호 확인'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '비밀번호 확인'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText2(context),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이름'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '이름'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText3(context),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('닉네임'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '닉네임'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText4(context),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('생년월일'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '생년월일'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildDateTimeField(context),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('성별'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '성별'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 3.h),
                 _buildGenderRadioGroup(context),
@@ -159,8 +189,11 @@ class SignUpFormScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 7.w),
-                        child: Text('이용약관'.tr(),
-                            style: CustomTextStyles.bodyLargeIndigo400),
+                        child: Text(
+                          '이용약관'.tr(),
+                          style: textTheme.bodyLarge!
+                              .colored(const Color(0xFF5079D7)),
+                        ),
                       ),
                       Padding(
                           padding: EdgeInsets.only(left: 3.w),
@@ -195,8 +228,11 @@ class SignUpFormScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 6.w),
-                        child: Text('개인정보 취급방침'.tr(),
-                            style: CustomTextStyles.bodyLargeIndigo400),
+                        child: Text(
+                          '개인정보 취급방침'.tr(),
+                          style: textTheme.bodyLarge!
+                              .colored(const Color(0xFF5079D7)),
+                        ),
                       ),
                       Padding(
                           padding: EdgeInsets.only(left: 2.w),
@@ -306,7 +342,7 @@ class SignUpFormScreen extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                 decoration: BoxDecoration(
-                  color: appTheme.gray10001,
+                  color: const Color(0xFFF5F5F5),
                   borderRadius: BorderRadius.circular(8.w),
                 ),
                 child: CustomImageView(
@@ -330,7 +366,7 @@ class SignUpFormScreen extends StatelessWidget {
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                   decoration: BoxDecoration(
-                    color: appTheme.gray10001,
+                    color: const Color(0xFFF5F5F5),
                     borderRadius: BorderRadius.circular(8.w),
                   ),
                   child: CustomImageView(
@@ -355,7 +391,7 @@ class SignUpFormScreen extends StatelessWidget {
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                   decoration: BoxDecoration(
-                    color: appTheme.gray10001,
+                    color: const Color(0xFFF5F5F5),
                     borderRadius: BorderRadius.circular(8.w),
                   ),
                   child: CustomImageView(
@@ -442,7 +478,7 @@ class SignUpFormScreen extends StatelessWidget {
         padding: EdgeInsets.only(left: 20.w),
         child: Text(
           messageText,
-          style: textTheme.bodyLarge!.copyWith(color: Colors.black),
+          style: textTheme.bodyLarge,
         ),
       ),
     ]);

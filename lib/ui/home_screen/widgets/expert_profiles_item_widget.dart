@@ -33,7 +33,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
               child: Container(
                 height: 180.h,
                 width: 337.w,
-                decoration: AppDecoration.outlineBlueGrayB
+                decoration: AppDecoration.outlineBlueGray
                     .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
                 child: Stack(
                   alignment: Alignment.center,
@@ -45,8 +45,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                           left: 16.w,
                           top: 13.h,
                         ),
-                        child: Text('고양이 행동 전문가'.tr(),
-                            style: CustomTextStyles.bodySmallGreen300),
+                        child: Text(
+                          '고양이 행동 전문가'.tr(),
+                          style: textTheme.bodySmall!
+                              .colored(const Color(0xFF6FD574)),
+                        ),
                       ),
                     ),
                     Align(
@@ -66,13 +69,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                   children: [
                                     Text(
                                       'N동물의료센터 노원점 원장'.tr(),
-                                      style:
-                                          CustomTextStyles.bodySmallGray90002,
+                                      style: textTheme.bodySmall!
+                                          .colored(const Color(0xFF1F2020)),
                                     ),
                                     Text(
                                       '한국 고양이 수의사회 홍보 이사'.tr(),
-                                      style:
-                                          CustomTextStyles.bodySmallGray90002,
+                                      style: textTheme.bodySmall!
+                                          .colored(const Color(0xFF1F2020)),
                                     ),
                                     Align(
                                       alignment: Alignment.centerRight,
@@ -85,14 +88,15 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                                 EdgeInsets.only(bottom: 1.h),
                                             child: Text(
                                               'EBS ‘고양이를 부탁해’ 출연'.tr(),
-                                              style: CustomTextStyles
-                                                  .bodySmallGray90002,
+                                              style: textTheme.bodySmall!
+                                                  .colored(
+                                                      const Color(0xFF1F2020)),
                                             ),
                                           ),
                                           Text(
                                             '제이클리커아카데미 대표'.tr(),
-                                            style: CustomTextStyles
-                                                .bodySmallGray90002,
+                                            style: textTheme.bodySmall!.colored(
+                                                const Color(0xFF1F2020)),
                                           ),
                                         ],
                                       ),
@@ -111,8 +115,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: EdgeInsets.only(top: 39.h),
-                                child: Text('김명철 수의사'.tr(),
-                                    style: CustomTextStyles.bodyLargeGray90002),
+                                child: Text(
+                                  '김명철 수의사'.tr(),
+                                  style: textTheme.bodyLarge!
+                                      .colored(const Color(0xFF1F2020)),
+                                ),
                               ),
                             ),
                           ],
@@ -134,12 +141,18 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 16.w),
                     child: Row(
                       children: [
-                        Text('강아지 행동 전문가'.tr(),
-                            style: CustomTextStyles.bodySmallGreen300),
+                        Text(
+                          '강아지 행동 전문가'.tr(),
+                          style: textTheme.bodySmall!
+                              .colored(const Color(0xFF6FD574)),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 255.w),
-                          child: Text('동물행동학 전문가'.tr(),
-                              style: CustomTextStyles.bodySmallGreen300),
+                          child: Text(
+                            '동물행동학 전문가'.tr(),
+                            style: textTheme.bodySmall!
+                                .colored(const Color(0xFF6FD574)),
+                          ),
                         ),
                       ],
                     ),
@@ -149,12 +162,18 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                     padding: EdgeInsets.only(left: 16.w),
                     child: Row(
                       children: [
-                        Text('설채현 수의사'.tr(),
-                            style: CustomTextStyles.bodyLargeGray90002),
+                        Text(
+                          '설채현 수의사'.tr(),
+                          style: textTheme.bodyLarge!
+                              .colored(const Color(0xFF1F2020)),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 971.w),
-                          child: Text('서지형 훈련사'.tr(),
-                              style: CustomTextStyles.bodyLargeGray90002),
+                          child: Text(
+                            '서지형 훈련사'.tr(),
+                            style: textTheme.bodyLarge!
+                                .colored(const Color(0xFF1F2020)),
+                          ),
                         ),
                       ],
                     ),
@@ -170,7 +189,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
             Expanded(
               child: Container(
                 margin: EdgeInsets.only(left: 20.w),
-                decoration: AppDecoration.outlineBlueGrayB
+                decoration: AppDecoration.outlineBlueGray
                     .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -185,17 +204,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             child: Container(
                               height: 180.h,
                               width: 337.w,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.w),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: appTheme.blueGray1006b,
-                                    spreadRadius: 2.w,
-                                    blurRadius: 2.w,
-                                  ),
-                                ],
-                              ),
+                              decoration: AppDecoration.outlineBlueGray,
                             ),
                           ),
                           CustomImageView(
@@ -218,17 +227,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             child: Container(
                               height: 180.h,
                               width: 337.w,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.w),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: appTheme.blueGray1006b,
-                                    spreadRadius: 2.w,
-                                    blurRadius: 2.w,
-                                  ),
-                                ],
-                              ),
+                              decoration: AppDecoration.outlineBlueGray,
                             ),
                           ),
                           Align(
@@ -242,17 +241,21 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('신윤주 박사'.tr(),
-                                      style:
-                                          CustomTextStyles.bodyLargeGray90002),
+                                  Text(
+                                    '신윤주 박사'.tr(),
+                                    style: textTheme.bodyLarge!
+                                        .colored(const Color(0xFF1F2020)),
+                                  ),
                                   SizedBox(height: 63.h),
                                   Text(
                                     '서울대학교 수의학박사'.tr(),
-                                    style: CustomTextStyles.bodySmallGray90002,
+                                    style: textTheme.bodySmall!
+                                        .colored(const Color(0xFF1F2020)),
                                   ),
                                   Text(
                                     '광주동물메디컬 센터 수의사'.tr(),
-                                    style: CustomTextStyles.bodySmallGray90002,
+                                    style: textTheme.bodySmall!
+                                        .colored(const Color(0xFF1F2020)),
                                   ),
                                 ],
                               ),
@@ -289,14 +292,18 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Align(
-                                    child: Text('임상수의학 박사'.tr(),
-                                        style:
-                                            CustomTextStyles.bodySmallGreen300),
+                                    child: Text(
+                                      '임상수의학 박사'.tr(),
+                                      style: textTheme.bodySmall!
+                                          .colored(const Color(0xFF6FD574)),
+                                    ),
                                   ),
                                   SizedBox(height: 8.h),
-                                  Text('강종일 박사'.tr(),
-                                      style:
-                                          CustomTextStyles.bodyLargeGray90002),
+                                  Text(
+                                    '강종일 박사'.tr(),
+                                    style: textTheme.bodyLarge!
+                                        .colored(const Color(0xFF1F2020)),
+                                  ),
                                 ],
                               ),
                             ),
@@ -311,11 +318,13 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 children: [
                                   Text(
                                     '한국수의학교육학회 자문위원'.tr(),
-                                    style: CustomTextStyles.bodySmallGray90002,
+                                    style: textTheme.bodySmall!
+                                        .colored(const Color(0xFF1F2020)),
                                   ),
                                   Text(
                                     '충현동물종합병원 원장'.tr(),
-                                    style: CustomTextStyles.bodySmallGray90002,
+                                    style: textTheme.bodySmall!
+                                        .colored(const Color(0xFF1F2020)),
                                   ),
                                 ],
                               ),
@@ -335,17 +344,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             child: Container(
                               height: 180.h,
                               width: 337.w,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.w),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: appTheme.blueGray1006b,
-                                    spreadRadius: 2.w,
-                                    blurRadius: 2.w,
-                                  ),
-                                ],
-                              ),
+                              decoration: AppDecoration.outlineBlueGray,
                             ),
                           ),
                           Align(
@@ -355,8 +354,11 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 left: 16.w,
                                 top: 15.h,
                               ),
-                              child: Text('클리커 트레이너'.tr(),
-                                  style: CustomTextStyles.bodySmallGreen300),
+                              child: Text(
+                                '클리커 트레이너'.tr(),
+                                style: textTheme.bodySmall!
+                                    .colored(const Color(0xFF6FD574)),
+                              ),
                             ),
                           ),
                           CustomImageView(
@@ -379,17 +381,7 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                             child: Container(
                               height: 180.h,
                               width: 337.w,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.w),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: appTheme.blueGray1006b,
-                                    spreadRadius: 2.w,
-                                    blurRadius: 2.w,
-                                  ),
-                                ],
-                              ),
+                              decoration: AppDecoration.outlineBlueGray,
                             ),
                           ),
                           CustomImageView(
@@ -406,13 +398,17 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('상담심리학 박사'.tr(),
-                                      style:
-                                          CustomTextStyles.bodySmallGreen300),
+                                  Text(
+                                    '상담심리학 박사'.tr(),
+                                    style: textTheme.bodySmall!
+                                        .colored(const Color(0xFF6FD574)),
+                                  ),
                                   SizedBox(height: 8.h),
-                                  Text('박성희 박사'.tr(),
-                                      style:
-                                          CustomTextStyles.bodyLargeGray90002),
+                                  Text(
+                                    '박성희 박사'.tr(),
+                                    style: textTheme.bodyLarge!
+                                        .colored(const Color(0xFF1F2020)),
+                                  ),
                                   SizedBox(height: 63.h),
                                   Row(
                                     crossAxisAlignment:
@@ -424,11 +420,10 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                         child: Text(
                                           'KPA-CTP / CCPDT-KA',
                                           overflow: TextOverflow.ellipsis,
-                                          style: textTheme.bodySmall!.copyWith(
-                                            color: appTheme.gray90002,
-                                            fontSize: 11,
-                                            height: 1.77,
-                                          ),
+                                          style: textTheme.bodySmall!
+                                              .colored(const Color(0xFF1F2020))
+                                              .fSize(11)
+                                              .normal,
                                         ),
                                       ),
                                       Padding(
@@ -439,13 +434,15 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                           children: [
                                             Text(
                                               '한국상담학회 1급 상담사'.tr(),
-                                              style: CustomTextStyles
-                                                  .bodySmallGray90002,
+                                              style: textTheme.bodySmall!
+                                                  .colored(
+                                                      const Color(0xFF1F2020)),
                                             ),
                                             Text(
                                               '스트레스 관리, 심리상담 출강'.tr(),
-                                              style: CustomTextStyles
-                                                  .bodySmallGray90002,
+                                              style: textTheme.bodySmall!
+                                                  .colored(
+                                                      const Color(0xFF1F2020)),
                                             ),
                                           ],
                                         ),

@@ -11,7 +11,6 @@ import '/gen/assets.gen.dart';
 import '/routes/app_routes.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
-import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -64,7 +63,7 @@ class PerOwnerRegister extends StatelessWidget {
                   text: isCat ? '고양이 등록하기'.tr() : '강아지 등록하기'.tr(),
                   margin: EdgeInsets.only(bottom: 24.h),
                   buttonStyle: CustomButtonStyles.fillBlue,
-                  buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                  buttonTextStyle: textTheme.bodyMedium,
                   alignment: Alignment.bottomCenter,
                 )
               ],

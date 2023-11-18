@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
 // ignore: must_be_immutable
@@ -89,8 +90,8 @@ class CustomRadioButton extends StatelessWidget {
   Widget get textWidget => Text(
         text ?? '',
         textAlign: textAlignment ?? TextAlign.center,
-        style: textStyle ??
-            textTheme.bodyMedium!.copyWith(color: appTheme.blueGray700),
+        style:
+            textStyle ?? textTheme.bodyMedium!.colored(const Color(0xFF4B5563)),
       );
   Widget get radioButtonWidget => SizedBox(
         height: iconSize ?? 16.w,

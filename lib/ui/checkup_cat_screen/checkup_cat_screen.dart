@@ -45,7 +45,7 @@ class CheckupCatScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text('반려묘 성격유형검사(CCSI)'.tr(),
-                        style: CustomTextStyles.bodyMediumBlack900),
+                        style: textTheme.bodyMedium),
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -62,7 +62,7 @@ class CheckupCatScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text('반려묘 성격유형검사'.tr(),
-                        style: CustomTextStyles.bodyLargeNanumSquareNeo),
+                        style: textTheme.bodyLarge!.nanum),
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -188,7 +188,7 @@ class CheckupCatScreen extends StatelessWidget {
       width: 42.w,
       text: 'CCSI',
       margin: EdgeInsets.only(left: 16.w),
-      buttonTextStyle: CustomTextStyles.bodySmall10,
+      buttonTextStyle: textTheme.bodySmall!.fSize(10),
       alignment: Alignment.centerLeft,
     );
   }
@@ -208,8 +208,7 @@ class CheckupCatScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child:
-                Text('(84)'.tr(), style: CustomTextStyles.bodyMediumBlack900),
+            child: Text('(84)'.tr(), style: textTheme.bodyMedium),
           ),
         ],
       ),
@@ -236,8 +235,10 @@ class CheckupCatScreen extends StatelessWidget {
               Text('문항'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
-                child: Text('128문항'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '128문항'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -247,8 +248,10 @@ class CheckupCatScreen extends StatelessWidget {
               Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('약 20분'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '약 20분'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -312,7 +315,7 @@ class CheckupCatScreen extends StatelessWidget {
       text: '구매하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
-      buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
     );
   }
 
@@ -337,7 +340,7 @@ class CheckupCatScreen extends StatelessWidget {
       width: 181.w,
       text: '구매후기'.tr(),
       buttonStyle: CustomButtonStyles.fillGrayTL81,
-      buttonTextStyle: textTheme.bodyMedium,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
     );
   }
 }

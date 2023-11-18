@@ -8,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
-import '/gen/fonts.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -60,9 +59,12 @@ class NewCatScreenState extends State<NewCatScreen>
                             onTapImgArrowLeft(context);
                           }),
                       Padding(
-                          padding: EdgeInsets.only(left: 77.w),
-                          child: Text('반려묘 등록하기 (1/2)'.tr(),
-                              style: CustomTextStyles.bodyLarge18))
+                        padding: EdgeInsets.only(left: 77.w),
+                        child: Text(
+                          '반려묘 등록하기 (1/2)'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -71,8 +73,11 @@ class NewCatScreenState extends State<NewCatScreen>
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 이름'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '반려묘 이름'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 Padding(
@@ -86,8 +91,11 @@ class NewCatScreenState extends State<NewCatScreen>
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 생년월일'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '반려묘 생년월일'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 21.h),
                 Padding(
@@ -97,8 +105,11 @@ class NewCatScreenState extends State<NewCatScreen>
                 SizedBox(height: 21.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 입양일'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '반려묘 입양일'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 15.h),
                 Padding(
@@ -108,8 +119,11 @@ class NewCatScreenState extends State<NewCatScreen>
                 SizedBox(height: 27.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 성별'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '반려묘 성별'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 Row(
@@ -125,10 +139,8 @@ class NewCatScreenState extends State<NewCatScreen>
                         borderRadius: BorderRadius.circular(8),
                       ),
                       text: '여아',
-                      buttonTextStyle: const TextStyle(
-                          fontSize: 14,
-                          fontFamily: FontFamily.poppins,
-                          fontWeight: FontWeight.w400),
+                      buttonTextStyle: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
                     ),
                     CustomElevatedButton(
                       onPressed: (context) {
@@ -141,10 +153,8 @@ class NewCatScreenState extends State<NewCatScreen>
                         borderRadius: BorderRadius.circular(8),
                       ),
                       text: '남아',
-                      buttonTextStyle: const TextStyle(
-                          fontSize: 14,
-                          fontFamily: FontFamily.poppins,
-                          fontWeight: FontWeight.w400),
+                      buttonTextStyle: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
                     )
                   ],
                 ),
@@ -205,7 +215,7 @@ class NewCatScreenState extends State<NewCatScreen>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('프로필 사진을 등록해주세요'.tr(),
-                              style: CustomTextStyles.bodyMediumBlack900),
+                              style: textTheme.bodyMedium),
                           SizedBox(height: 1.h),
                           SizedBox(
                             width: 156.w,
@@ -213,8 +223,9 @@ class NewCatScreenState extends State<NewCatScreen>
                               '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodySmallGray500
-                                  .copyWith(height: 1.33),
+                              style: textTheme.bodySmall!
+                                  .colored(const Color(0xFFA3A3A3))
+                                  .tight,
                             ),
                           ),
                           SizedBox(height: 2.h),
@@ -224,20 +235,22 @@ class NewCatScreenState extends State<NewCatScreen>
                               '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.bodySmallGray500
-                                  .copyWith(height: 1.33),
+                              style: textTheme.bodySmall!
+                                  .colored(const Color(0xFFA3A3A3))
+                                  .tight,
                             ),
                           ),
                           SizedBox(height: 8.h),
                           CustomElevatedButton(
-                              onPressed: (context) {
-                                // TODO: implement onPressed
-                              },
-                              width: 121.w,
-                              text: '이미지 등록하기'.tr(),
-                              buttonStyle: CustomButtonStyles.fillBlue,
-                              buttonTextStyle:
-                                  CustomTextStyles.bodyMediumOnErrorContainer)
+                            onPressed: (context) {
+                              // TODO: implement onPressed
+                            },
+                            width: 121.w,
+                            text: '이미지 등록하기'.tr(),
+                            buttonStyle: CustomButtonStyles.fillBlue,
+                            buttonTextStyle: textTheme.bodyMedium!
+                                .colored(const Color(0xFF171717)),
+                          )
                         ],
                       ),
                     ),

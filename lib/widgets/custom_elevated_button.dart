@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '/theme/custom_button_style.dart';
 import '/theme/theme_helper.dart';
 import '/widgets/base_button.dart';
 
@@ -56,7 +57,7 @@ class CustomElevatedButton extends BaseButton {
       margin: margin,
       decoration: decoration,
       child: ElevatedButton(
-        style: buttonStyle,
+        style: buttonStyle ?? CustomButtonStyles.fillPrimary,
         onPressed: isDisabled ?? false ? null : () => onPressed(context),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -64,8 +65,7 @@ class CustomElevatedButton extends BaseButton {
             leftIcon ?? const SizedBox.shrink(),
             Text(
               text,
-              style: textStyle ??
-                  textTheme.bodyMedium!.copyWith(color: Colors.white),
+              style: textStyle ?? textTheme.labelLarge,
             ),
             rightIcon ?? const SizedBox.shrink(),
           ],

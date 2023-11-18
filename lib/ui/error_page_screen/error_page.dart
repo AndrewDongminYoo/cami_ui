@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // 🌎 Project imports:
 import '/core/errors/exceptions.dart';
@@ -11,6 +12,7 @@ import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
@@ -35,9 +37,9 @@ class ErrorPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 62.h),
-              Text('죄송합니다'.tr(), style: CustomTextStyles.bodyLarge18),
+              Text('죄송합니다'.tr(), style: textTheme.bodyLarge!.fSize(18)),
               Text(error.message.toString(),
-                  style: CustomTextStyles.bodyLarge18),
+                  style: textTheme.bodyLarge!.fSize(18)),
               SizedBox(height: 38.h),
               SizedBox(
                 height: 240.h,
@@ -46,8 +48,14 @@ class ErrorPage extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     Align(
-                      child: Text(error.code.toString(),
-                          style: CustomTextStyles.poppinsYellow100),
+                      child: Text(
+                        error.code.toString(),
+                        style: GoogleFonts.poppins(
+                          color: const Color(0xFFFEFFBF),
+                          fontSize: 160.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
                     ),
                     CustomImageView(
                       imagePath: Assets.svg.pageNotFound.path,
@@ -75,7 +83,7 @@ class ErrorPage extends StatelessWidget {
                   ),
                 ),
                 buttonStyle: CustomButtonStyles.outlineBlack,
-                buttonTextStyle: CustomTextStyles.bodyMediumBlack90015,
+                buttonTextStyle: textTheme.bodyMedium!.fSize(15),
               ),
               SizedBox(height: 5.h),
             ],

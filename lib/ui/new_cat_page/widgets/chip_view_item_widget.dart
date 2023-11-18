@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/gen/fonts.gen.dart';
 import '/theme/theme_helper.dart';
 
 class ChipViewItemWidget extends StatelessWidget {
@@ -20,17 +19,9 @@ class ChipViewItemWidget extends StatelessWidget {
       ),
       showCheckmark: false,
       labelPadding: EdgeInsets.zero,
-      label: const Text(
-        '예',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 14,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-      ),
-      backgroundColor: appTheme.indigo200,
-      selectedColor: appTheme.gray10001,
+      label: Text('예', style: textTheme.bodyMedium),
+      backgroundColor: const Color(0xFF9BB1EB),
+      selectedColor: const Color(0xFFF5F5F5),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.w),
       ),

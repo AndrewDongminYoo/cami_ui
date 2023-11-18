@@ -45,9 +45,12 @@ class NoticeScreen extends StatelessWidget {
                               onTapImgArrowLeft(context);
                             }),
                         Padding(
-                            padding: EdgeInsets.only(left: 127.w),
-                            child: Text('공지사항'.tr(),
-                                style: CustomTextStyles.bodyLarge18))
+                          padding: EdgeInsets.only(left: 127.w),
+                          child: Text(
+                            '공지사항'.tr(),
+                            style: textTheme.bodyLarge!.fSize(18),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -60,7 +63,10 @@ class NoticeScreen extends StatelessWidget {
                       userMessage: '(2021-03-04) 이용약관 변경 사항 안내'.tr(),
                       userDate: '2021-03-04'),
                 ),
-                Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
+                Divider(
+                    color: const Color(0xFFE5E7EB),
+                    indent: 16.w,
+                    endIndent: 16.w),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: _buildNotice(context,
@@ -68,7 +74,10 @@ class NoticeScreen extends StatelessWidget {
                       userMessage: '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr(),
                       userDate: '2020-03-17'),
                 ),
-                Divider(color: appTheme.gray200, indent: 16.w, endIndent: 16.w),
+                Divider(
+                    color: const Color(0xFFE5E7EB),
+                    indent: 16.w,
+                    endIndent: 16.w),
                 SizedBox(height: 127.h),
                 const CamiAppFooter(),
               ],
@@ -98,16 +107,14 @@ class NoticeScreen extends StatelessWidget {
             padding: EdgeInsets.only(left: 9.w, bottom: 3.h),
             child: Text(
               userName,
-              style: CustomTextStyles.bodySmallBlack900
-                  .copyWith(color: Colors.black),
+              style: textTheme.bodySmall,
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 17.w, bottom: 3.h),
             child: Text(
               userMessage,
-              style: CustomTextStyles.bodySmallBlack900
-                  .copyWith(color: Colors.black),
+              style: textTheme.bodySmall,
             ),
           ),
           const Spacer(),
@@ -115,8 +122,9 @@ class NoticeScreen extends StatelessWidget {
             padding: EdgeInsets.only(top: 2.h, bottom: 3.h),
             child: Text(
               userDate,
-              style: CustomTextStyles.bodySmallGray50011
-                  .copyWith(color: appTheme.gray500),
+              style: textTheme.bodySmall!
+                  .colored(const Color(0xFFA3A3A3))
+                  .fSize(11),
             ),
           ),
         ],

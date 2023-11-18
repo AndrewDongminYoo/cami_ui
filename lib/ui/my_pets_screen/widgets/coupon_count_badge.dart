@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
 class CouponCountBadge extends StatelessWidget {
@@ -30,7 +31,12 @@ class CouponCountBadge extends StatelessWidget {
             ),
           ),
         ),
-        Align(child: Text(count.toString(), style: textTheme.bodySmall))
+        Align(
+          child: Text(
+            count.toString(),
+            style: textTheme.bodySmall!.colored(Colors.white),
+          ),
+        )
       ],
     );
   }

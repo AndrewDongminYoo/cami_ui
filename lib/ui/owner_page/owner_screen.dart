@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/fonts.gen.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
@@ -45,10 +44,21 @@ class OwnerScreenState extends State<OwnerScreen>
             primary: true,
             child: Column(
               children: [
-                Text('찾아봐요'.tr(), style: CustomTextStyles.bodyMediumGray90002),
+                Text(
+                  '찾아봐요'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF1F2020)),
+                ),
                 SizedBox(height: 11.h),
-                Text('우리에게 필요한'.tr(), style: textTheme.headlineSmall),
-                Text('심리검사는?'.tr(), style: textTheme.headlineSmall),
+                Text(
+                  '우리에게 필요한'.tr(),
+                  style:
+                      textTheme.headlineSmall!.colored(const Color(0xFF1F2020)),
+                ),
+                Text(
+                  '심리검사는?'.tr(),
+                  style:
+                      textTheme.headlineSmall!.colored(const Color(0xFF1F2020)),
+                ),
                 SizedBox(height: 39.h),
                 SizedBox(
                   height: 32.h,
@@ -57,17 +67,10 @@ class OwnerScreenState extends State<OwnerScreen>
                     controller: tabviewController,
                     labelPadding: EdgeInsets.zero,
                     labelColor: Colors.white,
-                    labelStyle: const TextStyle(
-                      fontSize: 12,
-                      fontFamily: FontFamily.poppins,
-                      fontWeight: FontWeight.w400,
-                    ),
+                    labelStyle: textTheme.bodySmall!.colored(Colors.white),
                     unselectedLabelColor: Colors.black,
-                    unselectedLabelStyle: const TextStyle(
-                      fontSize: 12,
-                      fontFamily: FontFamily.poppins,
-                      fontWeight: FontWeight.w400,
-                    ),
+                    unselectedLabelStyle:
+                        textTheme.bodySmall!.colored(Colors.white),
                     indicator: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(16.w),

@@ -10,6 +10,7 @@ import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
@@ -54,9 +55,12 @@ class Faq1Screen extends StatelessWidget {
                               context.safePop();
                             }),
                         Padding(
-                            padding: EdgeInsets.only(left: 106.w),
-                            child: Text('자주 묻는 질문'.tr(),
-                                style: CustomTextStyles.bodyLarge18))
+                          padding: EdgeInsets.only(left: 106.w),
+                          child: Text(
+                            '자주 묻는 질문'.tr(),
+                            style: textTheme.bodyLarge!.fSize(18),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -112,8 +116,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -148,8 +151,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -185,8 +187,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(top: 10.h, bottom: 14.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -222,8 +223,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(top: 11.h, bottom: 13.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -258,8 +258,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -294,8 +293,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -330,8 +328,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -366,8 +363,7 @@ class Faq1Screen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.h),
-            child: Text('Q.',
-                style: CustomTextStyles.bodyMediumNanumSquareNeoBlack90013),
+            child: Text('Q.', style: textTheme.labelMedium),
           ),
           Expanded(
             child: Padding(
@@ -376,9 +372,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '구매한 쿠폰이 보이지 않아요.'.tr(),
                 items: dropdownItemList7,

@@ -43,7 +43,9 @@ class LogInScreen extends StatelessWidget {
                 Text('카미'.tr(), style: textTheme.displaySmall),
                 SizedBox(height: 18.h),
                 Text('반려동물의 마음을 읽다'.tr(),
-                    style: CustomTextStyles.titleLargeGray60001),
+                    style: textTheme.titleLarge!
+                        .colored(const Color(0xFF6B7280))
+                        .fSize(20)),
                 SizedBox(height: 82.h),
                 _buildUsernameField(context),
                 SizedBox(height: 8.h),
@@ -106,8 +108,10 @@ class LogInScreen extends StatelessWidget {
             },
           ),
           TextButton(
-            child: Text('비밀번호 재설정'.tr(),
-                style: CustomTextStyles.bodySmallGray60001),
+            child: Text(
+              '비밀번호 재설정'.tr(),
+              style: textTheme.bodySmall!.colored(const Color(0xFF6B7280)),
+            ),
             onPressed: () {
               // TODO: implement onPressed
             },
@@ -139,7 +143,7 @@ class LogInScreen extends StatelessWidget {
       text: '이메일 회원가입'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.outlineGray,
-      buttonTextStyle: CustomTextStyles.bodyMediumGray800,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
     );
   }
 
@@ -158,14 +162,14 @@ class LogInScreen extends StatelessWidget {
             ),
             child: SizedBox(
               width: 133.w,
-              child: Divider(color: appTheme.blueGray300),
+              child: const Divider(color: Color(0xFF9CA3AF)),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 16.w),
             child: Text(
               '간편 로그인'.tr(),
-              style: textTheme.bodySmall!.copyWith(color: appTheme.blueGray300),
+              style: textTheme.bodySmall!.colored(const Color(0xFF9CA3AF)),
             ),
           ),
           Padding(
@@ -176,7 +180,7 @@ class LogInScreen extends StatelessWidget {
             child: SizedBox(
               width: 154.w,
               child: Divider(
-                color: appTheme.blueGray300,
+                color: const Color(0xFF9CA3AF),
                 indent: 21.w,
               ),
             ),
@@ -195,7 +199,7 @@ class LogInScreen extends StatelessWidget {
       text: '카카오로 시작하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
-      buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
     );
   }
 }

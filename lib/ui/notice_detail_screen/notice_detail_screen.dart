@@ -14,6 +14,7 @@ import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_elevated_button.dart';
@@ -47,9 +48,12 @@ class NoticeDetailScreen extends StatelessWidget {
                             context.safePop();
                           }),
                       Padding(
-                          padding: EdgeInsets.only(left: 127.w),
-                          child: Text('공지사항'.tr(),
-                              style: CustomTextStyles.bodyLarge18))
+                        padding: EdgeInsets.only(left: 127.w),
+                        child: Text(
+                          '공지사항'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -62,13 +66,16 @@ class NoticeDetailScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
                   child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr().toUpperCase(),
-                      style: CustomTextStyles.bodyMediumBlack900),
+                      style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 21.h),
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
-                  child: Text('2020-03-17'.toUpperCase(),
-                      style: CustomTextStyles.bodySmallGray500),
+                  child: Text(
+                    '2020-03-17'.toUpperCase(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
                 ),
                 SizedBox(height: 12.h),
                 _buildApologizeNotice(context),
@@ -79,7 +86,7 @@ class NoticeDetailScreen extends StatelessWidget {
                   text: '목록으로'.tr(),
                   margin: EdgeInsets.only(right: 16.w),
                   buttonStyle: CustomButtonStyles.fillBlue,
-                  buttonTextStyle: CustomTextStyles.bodySmallBlack900,
+                  buttonTextStyle: textTheme.bodySmall,
                   alignment: Alignment.centerRight,
                   onPressed: onTapBackToNotices,
                 ),
@@ -113,8 +120,7 @@ class NoticeDetailScreen extends StatelessWidget {
                     .tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    CustomTextStyles.bodySmallBlack900.copyWith(height: 1.33),
+                style: textTheme.bodySmall!.tight,
               ),
             ),
             Container(
@@ -124,12 +130,10 @@ class NoticeDetailScreen extends StatelessWidget {
                 '이에 따라 사진이 삭제된 유저분들은 필요에 따라 프로필 사진을 재등록하셔야 합니다.'.tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    CustomTextStyles.bodySmallBlack900.copyWith(height: 1.33),
+                style: textTheme.bodySmall!.tight,
               ),
             ),
-            Text('사이트 이용에 불편을 드려 죄송합니다.'.tr(),
-                style: CustomTextStyles.bodySmallBlack900),
+            Text('사이트 이용에 불편을 드려 죄송합니다.'.tr(), style: textTheme.bodySmall),
             SizedBox(height: 3.h),
             Container(
               width: 327.w,
@@ -138,8 +142,7 @@ class NoticeDetailScreen extends StatelessWidget {
                 '향후 이런 일이 재발하지 않도록 서버의 보안과 백업 정책을 강화하겠습니다.'.tr(),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style:
-                    CustomTextStyles.bodySmallBlack900.copyWith(height: 1.33),
+                style: textTheme.bodySmall!.tight,
               ),
             ),
           ],

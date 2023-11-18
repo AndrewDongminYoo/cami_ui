@@ -59,15 +59,14 @@ class PetAvatarProfile extends StatelessWidget {
                         width: 58.w,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                          color: appTheme.gray10001,
+                          color: const Color(0xFFF5F5F5),
                           borderRadius: BorderRadius.circular(10.w),
                         ),
                       ),
                       Container(
                         alignment: Alignment.topLeft,
                         padding: EdgeInsets.only(left: 6.w),
-                        child: Text('정보수정'.tr(),
-                            style: CustomTextStyles.bodySmallBlack900),
+                        child: Text('정보수정'.tr(), style: textTheme.bodySmall),
                       ),
                     ],
                   ),
@@ -100,7 +99,7 @@ class PetAvatarProfile extends StatelessWidget {
                                 height: 20.h,
                                 width: 120.w,
                                 decoration: BoxDecoration(
-                                  color: lightTheme.primary,
+                                  color: const Color(0xFFFFFF50),
                                   borderRadius: BorderRadius.circular(8.w),
                                 ),
                               ),
@@ -108,7 +107,7 @@ class PetAvatarProfile extends StatelessWidget {
                             Align(
                                 alignment: Alignment.topCenter,
                                 child: Text('성격유형 알아보기 >'.tr(),
-                                    style: CustomTextStyles.bodySmallBlack900))
+                                    style: textTheme.bodySmall))
                           ],
                         ),
                       ),
@@ -153,12 +152,12 @@ class PetAvatarProfile extends StatelessWidget {
           width: 80.w,
           child: Text(
             query,
-            style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+            style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
           ),
         ),
         Text(
           value ?? '-',
-          style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+          style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
         ),
       ],
     );

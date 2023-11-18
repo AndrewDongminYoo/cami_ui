@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
 class BreadCrumb extends StatelessWidget {
@@ -26,7 +27,7 @@ class BreadCrumb extends StatelessWidget {
         padding: margin ?? EdgeInsets.zero,
         child: Text(
           text,
-          style: textTheme.bodyMedium!.copyWith(color: appTheme.gray500),
+          style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
         ),
       ),
     );

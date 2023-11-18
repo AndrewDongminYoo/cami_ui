@@ -63,9 +63,12 @@ class ContactUsRegisterScreen extends StatelessWidget {
                               onTapImgArrowLeft(context);
                             }),
                         Padding(
-                            padding: EdgeInsets.only(left: 132.w),
-                            child: Text('1:1 문의'.tr(),
-                                style: CustomTextStyles.bodyLarge18))
+                          padding: EdgeInsets.only(left: 132.w),
+                          child: Text(
+                            '1:1 문의'.tr(),
+                            style: textTheme.bodyLarge!.fSize(18),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -81,7 +84,11 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                Divider(color: appTheme.gray500, indent: 16.w, endIndent: 16.w),
+                Divider(
+                  color: const Color(0xFFA3A3A3),
+                  indent: 16.w,
+                  endIndent: 16.w,
+                ),
                 SizedBox(height: 22.h),
                 _buildDropDownForm(context),
                 SizedBox(height: 23.h),
@@ -91,7 +98,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   onPressed: (context) {
                     // TODO: implement onPressed
                     context.showSnackBar(
-                      backgroundColor: appTheme.deepOrange400,
+                      backgroundColor: const Color(0xFFF0803D),
                       content:
                           Text('[${inquiryType.text}] ${inquiryContent.text}'),
                     );
@@ -124,7 +131,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
             child: Text(
               '문의유형'.tr(),
               maxLines: 2,
-              style: textTheme.bodyLarge!.copyWith(height: 1.50),
+              style: textTheme.bodyLarge!.snug,
             ),
           ),
           CustomDropDownFormField(
@@ -164,16 +171,17 @@ class ContactUsRegisterScreen extends StatelessWidget {
             child: Text(
               '문의내용'.tr(),
               maxLines: 2,
-              style: textTheme.bodyLarge!.copyWith(height: 1.50),
+              style: textTheme.bodyLarge!.snug,
             ),
           ),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 15.w),
               child: CustomTextFormField(
-                  controller: inquiryContent,
-                  maxLines: 5,
-                  textInputAction: TextInputAction.done),
+                controller: inquiryContent,
+                maxLines: 5,
+                textInputAction: TextInputAction.done,
+              ),
             ),
           ),
         ],

@@ -8,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
-import '/gen/fonts.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -56,8 +55,8 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('입양준비검사(DPAI)'.tr(),
-                        style: CustomTextStyles.bodyMediumBlack900),
+                    child:
+                        Text('입양준비검사(DPAI)'.tr(), style: textTheme.bodyMedium),
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -75,7 +74,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   width: 39.w,
                   text: 'DPAI',
                   margin: EdgeInsets.only(left: 16.w),
-                  buttonTextStyle: CustomTextStyles.bodySmall10,
+                  buttonTextStyle: textTheme.bodySmall!.fSize(10),
                   alignment: Alignment.centerLeft,
                 ),
                 SizedBox(height: 11.h),
@@ -83,8 +82,8 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
-                    child: Text('입양준비검사'.tr(),
-                        style: CustomTextStyles.bodyLargeNanumSquareNeo),
+                    child:
+                        Text('입양준비검사'.tr(), style: textTheme.bodyLarge!.nanum),
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -102,8 +101,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 8.w),
-                          child: Text('(4)'.tr(),
-                              style: CustomTextStyles.bodyMediumBlack900),
+                          child: Text('(4)'.tr(), style: textTheme.bodyMedium),
                         ),
                       ],
                     ),
@@ -121,7 +119,8 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   text: '구매하기'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
                   buttonStyle: CustomButtonStyles.fillPrimary,
-                  buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
+                  buttonTextStyle:
+                      textTheme.bodyMedium!.colored(const Color(0xFF171717)),
                 ),
                 SizedBox(height: 48.h),
                 _buildTabview(context),
@@ -189,8 +188,10 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
               Text('문항'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 42.w),
-                child: Text('84문항'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '84문항'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -200,8 +201,10 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
               Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('약 20분'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '약 20분'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -249,8 +252,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
-            child: Text('9,900원'.tr(),
-                style: CustomTextStyles.bodyMediumBlack90015),
+            child: Text('9,900원'.tr(), style: textTheme.bodyMedium!.fSize(15)),
           ),
         ],
       ),
@@ -266,19 +268,12 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
         controller: tabviewController,
         labelPadding: EdgeInsets.zero,
         labelColor: Colors.white,
-        labelStyle: const TextStyle(
-          fontSize: 14,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
-        unselectedLabelColor: appTheme.gray500,
-        unselectedLabelStyle: const TextStyle(
-          fontSize: 14,
-          fontFamily: FontFamily.poppins,
-          fontWeight: FontWeight.w400,
-        ),
+        labelStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+        unselectedLabelColor: const Color(0xFFA3A3A3),
+        unselectedLabelStyle:
+            textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
         indicator: BoxDecoration(
-          color: lightTheme.onSecondaryContainer,
+          color: const Color(0xFF262626),
           borderRadius: BorderRadius.circular(8.w),
         ),
         tabs: [

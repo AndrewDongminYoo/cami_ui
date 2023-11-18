@@ -24,7 +24,7 @@ void main() async {
   ]);
 
   /// 필요에 따라 테마를 업데이트하세요.
-  ThemeHelper().changeTheme('primary');
+  ThemeHelper().changeTheme('light');
 
   Catcher2(
     debugConfig: debugOptions,

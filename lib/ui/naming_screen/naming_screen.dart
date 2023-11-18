@@ -46,13 +46,21 @@ class NamingScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 48.h),
-                Text('한 번 해보시개'.tr(),
-                    style: CustomTextStyles.titleLargeBlack900.extraBold),
+                Text(
+                  '한 번 해보시개'.tr(),
+                  style: textTheme.titleLarge!
+                      .colored(const Color(0xFFF0803D))
+                      .extraBold,
+                ),
                 SizedBox(height: 70.h),
-                Text('삼칠이 작명소'.tr(), style: textTheme.titleLarge!.thick),
+                Text(
+                  '삼칠이 작명소'.tr(),
+                  style: textTheme.titleLarge!.colored(const Color(0xFFF0803D))
+                    ..thick,
+                ),
                 SizedBox(height: 18.h),
                 Text('개성만점 별명 짓기'.tr(),
-                    style: CustomTextStyles.bodyLarge18.bold),
+                    style: textTheme.bodyLarge!.fSize(18).bold),
                 SizedBox(height: 29.h),
                 SizedBox(
                   height: 283.h,
@@ -64,8 +72,7 @@ class NamingScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Text('강렬한 거북이의 안내자'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallBlack900.thick),
+                                style: textTheme.headlineSmall!..thick),
                             SizedBox(height: 196.h),
                             Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -85,8 +92,8 @@ class NamingScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   '강렬한 거북이의 안내자'.tr(),
-                                  style: textTheme.bodyLarge!.bold.copyWith(
-                                      color: lightTheme.errorContainer),
+                                  style: textTheme.bodyLarge!.bold
+                                      .colored(const Color(0xFFF0803D)),
                                 ),
                                 Text('입니다.'.tr(), style: textTheme.bodyLarge)
                               ],
@@ -118,13 +125,10 @@ class NamingScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('꼬리'.tr(),
-                                      style:
-                                          CustomTextStyles.bodyMediumBlack900),
+                                  Text('꼬리'.tr(), style: textTheme.bodyMedium),
                                   SizedBox(height: 2.h),
                                   Text('5살 2개월'.tr(),
-                                      style:
-                                          CustomTextStyles.bodyMediumBlack900),
+                                      style: textTheme.bodyMedium),
                                   SizedBox(height: 3.h),
                                   Text('남자'.tr(), style: textTheme.bodyLarge)
                                 ],
@@ -150,7 +154,7 @@ class NamingScreen extends StatelessWidget {
                         count: sliderBanners.length,
                         effect: WormEffect(
                           activeDotColor: Colors.black,
-                          dotColor: appTheme.gray600,
+                          dotColor: const Color(0xFF757575),
                           dotHeight: 8.h,
                           dotWidth: 8.w,
                         ),
@@ -169,8 +173,8 @@ class NamingScreen extends StatelessWidget {
                           width: 144.w,
                           text: '다시하기'.tr(),
                           buttonStyle: CustomButtonStyles.fillPrimary,
-                          buttonTextStyle:
-                              CustomTextStyles.bodyMediumOnErrorContainer,
+                          buttonTextStyle: textTheme.bodyMedium!
+                              .colored(const Color(0xFF171717)),
                           onPressed: (context) {
                             context.safePop();
                           },

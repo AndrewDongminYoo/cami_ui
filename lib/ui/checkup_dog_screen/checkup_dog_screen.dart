@@ -43,7 +43,7 @@ class CheckupDogScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text('반려견 성격유형검사(DCSI-II)'.tr(),
-                        style: CustomTextStyles.bodyMediumBlack900),
+                        style: textTheme.bodyMedium),
                   ),
                 ),
                 SizedBox(height: 15.h),
@@ -60,7 +60,7 @@ class CheckupDogScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(left: 16.w),
                     child: Text('반려견 성격유형검사'.tr(),
-                        style: CustomTextStyles.bodyLargeNanumSquareNeo),
+                        style: textTheme.bodyLarge!.nanum),
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -187,7 +187,7 @@ class CheckupDogScreen extends StatelessWidget {
       width: 53.w,
       text: 'DCSI-II',
       margin: EdgeInsets.only(left: 16.w),
-      buttonTextStyle: CustomTextStyles.bodySmall10,
+      buttonTextStyle: textTheme.bodySmall!.fSize(10),
       alignment: Alignment.centerLeft,
     );
   }
@@ -207,8 +207,7 @@ class CheckupDogScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child:
-                Text('(916)'.tr(), style: CustomTextStyles.bodyMediumBlack900),
+            child: Text('(916)'.tr(), style: textTheme.bodyMedium),
           ),
         ],
       ),
@@ -232,14 +231,17 @@ class CheckupDogScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('•',
-                  style:
-                      textTheme.bodyMedium!.copyWith(color: appTheme.gray500)),
+              Text(
+                '•',
+                style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+              ),
               Text('문항'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 41.w),
-                child: Text('107문항'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '107문항'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -249,8 +251,10 @@ class CheckupDogScreen extends StatelessWidget {
               Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
                 padding: EdgeInsets.only(left: 16.w),
-                child: Text('약 20분'.tr(),
-                    style: CustomTextStyles.bodyMediumGray800),
+                child: Text(
+                  '약 20분'.tr(),
+                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
+                ),
               ),
             ],
           ),
@@ -314,7 +318,7 @@ class CheckupDogScreen extends StatelessWidget {
       text: '구매하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
-      buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
     );
   }
 
@@ -339,7 +343,7 @@ class CheckupDogScreen extends StatelessWidget {
       width: 181.w,
       text: '구매후기'.tr(),
       buttonStyle: CustomButtonStyles.fillGrayTL81,
-      buttonTextStyle: textTheme.bodyMedium,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
     );
   }
 }

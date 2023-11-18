@@ -44,8 +44,9 @@ class VerifyScreen extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style: CustomTextStyles.bodyMediumGray60001
-                        .copyWith(height: 1.43),
+                    style: textTheme.bodyMedium!
+                        .colored(const Color(0xFF6B7280))
+                        .hugging,
                   ),
                 ),
                 SizedBox(height: 63.h),

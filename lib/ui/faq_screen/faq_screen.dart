@@ -11,6 +11,7 @@ import '/gen/assets.gen.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
@@ -57,9 +58,12 @@ class _FaqScreenState extends State<FaqScreen> {
                               context.safePop();
                             }),
                         Padding(
-                            padding: EdgeInsets.only(left: 105.w),
-                            child: Text('자주 묻는 질문'.tr(),
-                                style: CustomTextStyles.bodyLarge18))
+                          padding: EdgeInsets.only(left: 105.w),
+                          child: Text(
+                            '자주 묻는 질문'.tr(),
+                            style: textTheme.bodyLarge!.fSize(18),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -76,9 +80,11 @@ class _FaqScreenState extends State<FaqScreen> {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top: 9.h, bottom: 7.h),
-                        child: Text('Q.',
-                            style: CustomTextStyles
-                                .bodyMediumNanumSquareNeoBlack900),
+                        child: Text(
+                          'Q.',
+                          style:
+                              textTheme.bodyMedium!.nanum.colored(Colors.black),
+                        ),
                       ),
                       Expanded(
                         child: Padding(
@@ -93,8 +99,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                   width: 30.w),
                             ),
                             hintText: '결제가 되지 않아요'.tr(),
-                            hintStyle: CustomTextStyles
-                                .bodyMediumNanumSquareNeoBlack90013,
+                            hintStyle: textTheme.labelMedium,
                             items: items,
                             onChanged: (value) {
                               // TODO: implement onChanged
@@ -116,7 +121,7 @@ class _FaqScreenState extends State<FaqScreen> {
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
                         child: Text('결제가 되지 않는경우'.tr(),
-                            style: CustomTextStyles.bodyMediumBlack900),
+                            style: textTheme.bodyMedium),
                       ),
                       SizedBox(height: 10.h),
                       Align(
@@ -127,15 +132,14 @@ class _FaqScreenState extends State<FaqScreen> {
                             '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr(),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: CustomTextStyles.bodyMediumBlack900
-                                .copyWith(height: 2),
+                            style: textTheme.bodyMedium!.relaxed,
                           ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
                         child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr(),
-                            style: CustomTextStyles.bodyMediumBlack900),
+                            style: textTheme.bodyMedium),
                       ),
                       SizedBox(height: 10.h),
                       Container(
@@ -145,8 +149,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           '2. 브라우저의 팝업 차단 설정이 해제되어 있어야 결제가 가능합니다.'.tr(),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 2),
+                          style: textTheme.bodyMedium!.relaxed,
                         ),
                       ),
                       Container(
@@ -157,8 +160,7 @@ class _FaqScreenState extends State<FaqScreen> {
                               .tr(),
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 2),
+                          style: textTheme.bodyMedium!.relaxed,
                         ),
                       ),
                       SizedBox(height: 29.h),
@@ -171,16 +173,14 @@ class _FaqScreenState extends State<FaqScreen> {
                                 .tr(),
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
-                            style: CustomTextStyles.bodyMediumBlack900
-                                .copyWith(height: 2),
+                            style: textTheme.bodyMedium!.relaxed,
                           ),
                         ),
                       ),
                       SizedBox(height: 24.h),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('감사합니다.'.tr(),
-                            style: CustomTextStyles.bodyMediumBlack900),
+                        child: Text('감사합니다.'.tr(), style: textTheme.bodyMedium),
                       ),
                       SizedBox(height: 30.h),
                       const Divider()
@@ -209,9 +209,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -223,9 +221,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                             .tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -248,9 +244,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -261,9 +255,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -286,9 +278,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -299,9 +289,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -324,9 +312,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -337,9 +323,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '구매한 쿠폰이 보이지 않아요.'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -362,9 +346,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -375,9 +357,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '회원 탈퇴는 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -400,9 +380,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -413,9 +391,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '결과보고서 인쇄 방법'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),
@@ -438,9 +414,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         EdgeInsets.only(top: 8.h, bottom: 7.h),
                                     child: Text(
                                       'Q.',
-                                      style: CustomTextStyles
-                                          .bodyMediumNanumSquareNeoBlack900
-                                          .copyWith(color: Colors.black),
+                                      style: textTheme.bodyMedium!.nanum,
                                     ),
                                   ),
                                   Expanded(
@@ -451,9 +425,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                         '결과보고서 다시보기'.tr(),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 3,
-                                        style: CustomTextStyles
-                                            .bodyMediumNanumSquareNeoBlack900
-                                            .copyWith(color: Colors.black),
+                                        style: textTheme.bodyMedium!.nanum,
                                       ),
                                     ),
                                   ),

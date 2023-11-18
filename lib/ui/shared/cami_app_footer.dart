@@ -35,7 +35,8 @@ class CamiAppFooter extends StatelessWidget {
               onTap: () {
                 context.pushNamed(AppRoutes.noticeScreen);
               },
-              child: Text('공지사항'.tr(), style: textTheme.bodySmall),
+              child: Text('공지사항'.tr(),
+                  style: textTheme.bodySmall!.colored(Colors.white)),
             ),
             GestureDetector(
               onTap: () {
@@ -43,12 +44,14 @@ class CamiAppFooter extends StatelessWidget {
               },
               child: Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('자주 묻는 질문'.tr(), style: textTheme.bodySmall),
+                child: Text('자주 묻는 질문'.tr(),
+                    style: textTheme.bodySmall!.colored(Colors.white)),
               ),
             ),
             Padding(
                 padding: EdgeInsets.only(left: 17.w),
-                child: Text('이벤트'.tr(), style: textTheme.bodySmall))
+                child: Text('이벤트'.tr(),
+                    style: textTheme.bodySmall!.colored(Colors.white)))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -59,32 +62,46 @@ class CamiAppFooter extends StatelessWidget {
                   onTap: () {
                     context.pushNamed(AppRoutes.contactUsRegisterScreen);
                   },
-                  child: Text('고객센터'.tr(),
-                      style: CustomTextStyles.bodySmallGray500),
+                  child: Text(
+                    '고객센터'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 15.w),
-                  child: Text('이용약관'.tr(),
-                      style: CustomTextStyles.bodySmallGray500),
+                  child: Text(
+                    '이용약관'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 15.w),
-                  child: Text('개인정보취급방침'.tr(),
-                      style: CustomTextStyles.bodySmallGray500),
+                  child: Text(
+                    '개인정보취급방침'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
                 ),
                 Padding(
-                    padding: EdgeInsets.only(left: 15.w),
-                    child: Text('기관 제휴 및 구매 문의'.tr(),
-                        style: CustomTextStyles.bodySmallGray500))
+                  padding: EdgeInsets.only(left: 15.w),
+                  child: Text(
+                    '기관 제휴 및 구매 문의'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
+                )
               ],
             ),
           ),
           SizedBox(height: 38.h),
           Row(children: [
-            Text('Address', style: textTheme.bodySmall),
+            Text('Address', style: textTheme.bodySmall!.colored(Colors.white)),
             Padding(
                 padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact', style: textTheme.bodySmall))
+                child: Text('Contact',
+                    style: textTheme.bodySmall!.colored(Colors.white)))
           ]),
           SizedBox(height: 9.h),
           Padding(
@@ -92,17 +109,19 @@ class CamiAppFooter extends StatelessWidget {
             child: Row(
               children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('서울시 구로구 디지털로34길 55'.tr(), style: textTheme.bodySmall),
-                  Text('코오롱싸이언스밸리2차 B101'.tr(), style: textTheme.bodySmall)
+                  Text('서울시 구로구 디지털로34길 55'.tr(),
+                      style: textTheme.bodySmall!.colored(Colors.white)),
+                  Text('코오롱싸이언스밸리2차 B101'.tr(),
+                      style: textTheme.bodySmall!.colored(Colors.white))
                 ]),
                 Padding(
                   padding: EdgeInsets.only(left: 17.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('business@cami.kr', style: textTheme.bodySmall),
-                      Text('02-861-6828',
-                          style: textTheme.bodySmall!.copyWith(fontSize: 11))
+                      Text('business@cami.kr',
+                          style: textTheme.bodySmall!.colored(Colors.white)),
+                      Text('02-861-6828', style: textTheme.bodySmall!.fSize(11))
                     ],
                   ),
                 ),
@@ -110,12 +129,13 @@ class CamiAppFooter extends StatelessWidget {
             ),
           ),
           SizedBox(height: 45.h),
-          Text('주식회사 카미랩'.tr(), style: textTheme.bodySmall),
+          Text('주식회사 카미랩'.tr(),
+              style: textTheme.bodySmall!.colored(Colors.white)),
           Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr(),
-              style: textTheme.bodySmall),
+              style: textTheme.bodySmall!.colored(Colors.white)),
           SizedBox(height: 15.h),
           Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
-              style: textTheme.bodySmall),
+              style: textTheme.bodySmall!.colored(Colors.white)),
           SizedBox(height: 39.h),
           const SocialLinkIcons()
         ],

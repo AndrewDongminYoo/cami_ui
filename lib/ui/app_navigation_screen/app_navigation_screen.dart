@@ -7,8 +7,9 @@ import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/fonts.gen.dart';
 import '/routes/app_routes.dart';
+import '/theme/custom_text_style.dart';
+import '/theme/theme_helper.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   const AppNavigationScreen({super.key});
@@ -165,15 +166,10 @@ class AppNavigationScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: const Text(
+              child: Text(
                 '앱 게이트웨이 (개발 프로세스)',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontFamily: FontFamily.poppins,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: textTheme.titleMedium,
               ),
             ),
           ),
@@ -181,16 +177,11 @@ class AppNavigationScreen extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: EdgeInsets.only(left: 20.w),
-              child: const Text(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Text(
                 '아래 데모 화면에서 앱의 UI를 확인하세요.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF888888),
-                  fontSize: 16,
-                  fontFamily: FontFamily.poppins,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: textTheme.titleSmall!.fSize(16),
               ),
             ),
           ),
@@ -225,17 +216,11 @@ class AppNavigationScreen extends StatelessWidget {
                 child: Text(
                   screenTitle,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: FontFamily.poppins,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: textTheme.titleMedium,
                 ),
               ),
             ),
             SizedBox(height: 10.h),
-            SizedBox(height: 5.h),
             Divider(
               height: 1.h,
               thickness: 1.h,

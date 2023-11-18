@@ -43,7 +43,7 @@ class CheckupItemWidget extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadiusStyle.roundTop20,
-              color: lightTheme.secondaryContainer,
+              color: const Color(0xFFD9D9D9),
             ),
             child: CustomImageView(
               radius: BorderRadiusStyle.roundTop20,
@@ -59,19 +59,22 @@ class CheckupItemWidget extends StatelessWidget {
             width: 42.w,
             text: short,
             margin: EdgeInsets.symmetric(horizontal: 14.w),
-            buttonTextStyle: CustomTextStyles.bodySmall10,
+            buttonTextStyle: textTheme.bodySmall!.fSize(10),
           ),
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 14.w),
-            child: Text(title, style: CustomTextStyles.bodyMediumGray90002),
+            child: Text(
+              title,
+              style: textTheme.bodyMedium!.colored(const Color(0xFF1F2020)),
+            ),
           ),
           SizedBox(height: 7.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 14.w),
             child: Text(
               description,
-              style: CustomTextStyles.bodySmallPrimaryContainer,
+              style: textTheme.bodySmall!.colored(const Color(0xFF414142)),
               maxLines: 3,
             ),
           ),
@@ -82,7 +85,11 @@ class CheckupItemWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 14.w),
               child: Row(
                 children: [
-                  Text('자세히 보기'.tr(), style: CustomTextStyles.bodySmallGray700),
+                  Text(
+                    '자세히 보기'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFF5F6061)),
+                  ),
                   CustomImageView(
                     imagePath: Assets.svg.imgArrowDownGray700.path,
                     height: 10.h,

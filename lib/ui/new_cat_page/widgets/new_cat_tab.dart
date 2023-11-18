@@ -53,8 +53,11 @@ class NewCatTabState extends State<NewCatTab>
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(left: 16.w),
-                      child: Text('묘종'.tr(),
-                          style: CustomTextStyles.bodyMediumOnPrimary),
+                      child: Text(
+                        '묘종'.tr(),
+                        style: textTheme.bodyMedium!
+                            .colored(const Color(0xFF1F2937)),
+                      ),
                     ),
                   ),
                   SizedBox(height: 9.h),
@@ -66,7 +69,7 @@ class NewCatTabState extends State<NewCatTab>
                       icon: Container(
                         padding: EdgeInsets.fromLTRB(30.w, 16.h, 11.w, 16.h),
                         decoration: BoxDecoration(
-                          color: appTheme.gray10001,
+                          color: const Color(0xFFF5F5F5),
                           borderRadius: BorderRadius.circular(8.w),
                         ),
                         child: CustomImageView(
@@ -85,22 +88,26 @@ class NewCatTabState extends State<NewCatTab>
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: EdgeInsets.only(left: 16.w),
-                      child: Text('중성화 수술 여부'.tr(),
-                          style: CustomTextStyles.bodyMediumOnPrimary),
+                      child: Text(
+                        '중성화 수술 여부'.tr(),
+                        style: textTheme.bodyMedium!
+                            .colored(const Color(0xFF1F2937)),
+                      ),
                     ),
                   ),
                   SizedBox(height: 9.h),
                   _buildChipView(context),
                   SizedBox(height: 64.h),
                   CustomElevatedButton(
-                      onPressed: (context) {
-                        // TODO: implement onPressed
-                      },
-                      text: '다음으로'.tr(),
-                      margin: EdgeInsets.symmetric(horizontal: 16.w),
-                      buttonStyle: CustomButtonStyles.fillPrimary,
-                      buttonTextStyle:
-                          CustomTextStyles.bodyMediumOnErrorContainer),
+                    onPressed: (context) {
+                      // TODO: implement onPressed
+                    },
+                    text: '다음으로'.tr(),
+                    margin: EdgeInsets.symmetric(horizontal: 16.w),
+                    buttonStyle: CustomButtonStyles.fillPrimary,
+                    buttonTextStyle:
+                        textTheme.bodyMedium!.colored(const Color(0xFF171717)),
+                  ),
                   SizedBox(height: 128.h),
                   const CamiAppFooter()
                 ])

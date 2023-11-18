@@ -35,9 +35,7 @@ class QuickTestScreen extends StatelessWidget {
                   primary: true,
                   child: Column(
                     children: [
-                      Text('반짝 테스트'.tr(),
-                          style: CustomTextStyles
-                              .headlineSmallNanumSquareNeoBlack900),
+                      Text('반짝 테스트'.tr(), style: textTheme.headlineSmall),
                       SizedBox(height: 66.h),
                       CustomImageView(
                           imagePath: Assets.images.imgImage257x241.path,
@@ -49,11 +47,17 @@ class QuickTestScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('강아지와 나의'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                            Text(
+                              '강아지와 나의'.tr(),
+                              style: textTheme.headlineSmall!
+                                  .colored(const Color(0xFF171717)),
+                            ),
                             SizedBox(width: 6.w),
-                            Text('인싸력 테스트'.tr(), style: textTheme.titleLarge)
+                            Text(
+                              '인싸력 테스트'.tr(),
+                              style: textTheme.titleLarge!
+                                  .colored(const Color(0xFFF0803D)),
+                            )
                           ],
                         ),
                       ),
@@ -63,13 +67,15 @@ class QuickTestScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('인싸! 아싸!'.tr(),
-                                style:
-                                    CustomTextStyles.bodyMediumErrorContainer),
+                            Text(
+                              '인싸! 아싸!'.tr(),
+                              style: textTheme.bodyMedium!
+                                  .colored(const Color(0xFFF0803D)),
+                            ),
                             Padding(
                                 padding: EdgeInsets.only(left: 4.w),
                                 child: Text('라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr(),
-                                    style: CustomTextStyles.bodyMediumBlack900))
+                                    style: textTheme.bodyMedium))
                           ],
                         ),
                       ),
@@ -82,8 +88,7 @@ class QuickTestScreen extends StatelessWidget {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 1.43),
+                          style: textTheme.bodyMedium!.hugging,
                         ),
                       ),
                       SizedBox(height: 2.h),
@@ -95,8 +100,7 @@ class QuickTestScreen extends StatelessWidget {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 1.43),
+                          style: textTheme.bodyMedium!.hugging,
                         ),
                       ),
                       SizedBox(height: 15.h),
@@ -114,22 +118,21 @@ class QuickTestScreen extends StatelessWidget {
                           height: 257.h,
                           width: 241.w),
                       SizedBox(height: 35.h),
-                      Text('삼칠이 작명소'.tr(),
-                          style: CustomTextStyles.titleLargeOnErrorContainer),
+                      Text(
+                        '삼칠이 작명소'.tr(),
+                        style: textTheme.titleLarge!
+                            .colored(const Color(0xFF171717)),
+                      ),
                       SizedBox(height: 18.h),
                       RichText(
                           text: TextSpan(children: [
                         TextSpan(
-                            text: '개성만점'.tr(),
-                            style: CustomTextStyles.bodyMediumBlack900),
+                            text: '개성만점'.tr(), style: textTheme.bodyMedium),
                         WidgetSpan(child: SizedBox(width: 4.sp)),
                         TextSpan(
-                            text: '별명 짓기'.tr(),
-                            style: CustomTextStyles.bodyMediumBlack900),
+                            text: '별명 짓기'.tr(), style: textTheme.bodyMedium),
                         WidgetSpan(child: SizedBox(width: 1.sp)),
-                        TextSpan(
-                            text: '!!!',
-                            style: CustomTextStyles.bodyMediumBlack900),
+                        TextSpan(text: '!!!', style: textTheme.bodyMedium),
                       ])),
                       SizedBox(height: 30.h),
                       Container(
@@ -140,8 +143,7 @@ class QuickTestScreen extends StatelessWidget {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 1.43),
+                          style: textTheme.bodyMedium!.hugging,
                         ),
                       ),
                       SizedBox(height: 2.h),
@@ -153,8 +155,7 @@ class QuickTestScreen extends StatelessWidget {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 1.43),
+                          style: textTheme.bodyMedium!.hugging,
                         ),
                       ),
                       SizedBox(height: 15.h),
@@ -173,27 +174,34 @@ class QuickTestScreen extends StatelessWidget {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                                text: '나는'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                              text: '나는'.tr(),
+                              style: textTheme.headlineSmall!
+                                  .colored(const Color(0xFF171717)),
+                            ),
                             _buildSpacing(),
                             TextSpan(
-                                text: '개'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallNanumSquareNeoErrorContainer),
+                              text: '개'.tr(),
+                              style: textTheme.titleLarge!
+                                  .colored(const Color(0xFFF0803D)),
+                            ),
                             _buildSpacing(),
                             TextSpan(
-                                text: '인간?'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                              text: '인간?'.tr(),
+                              style: textTheme.headlineSmall!
+                                  .colored(const Color(0xFF171717)),
+                            ),
                             _buildSpacing(),
                             TextSpan(
-                                text: '고양이'.tr(), style: textTheme.titleLarge),
+                              text: '고양이'.tr(),
+                              style: textTheme.titleLarge!
+                                  .colored(const Color(0xFFF0803D)),
+                            ),
                             _buildSpacing(),
                             TextSpan(
-                                text: '인간?'.tr(),
-                                style: CustomTextStyles
-                                    .headlineSmallNanumSquareNeoOnErrorContainer),
+                              text: '인간?'.tr(),
+                              style: textTheme.headlineSmall!
+                                  .colored(const Color(0xFF171717)),
+                            ),
                           ],
                         ),
                       ),
@@ -205,13 +213,14 @@ class QuickTestScreen extends StatelessWidget {
                             children: [
                               TextSpan(
                                 text: '반려 동물과 반려인이'.tr(),
-                                style: CustomTextStyles.bodyMediumBlack900,
+                                style: textTheme.bodyMedium,
                               ),
                               _buildSpacing(),
                               TextSpan(
                                 text: '묘하게 닮아 있거나, 닮아 간다고 합니다.'.tr(),
-                                style: CustomTextStyles.bodyMediumErrorContainer
-                                    .copyWith(height: 1.43),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFF0803D))
+                                    .hugging,
                               )
                             ],
                           ),
@@ -229,8 +238,7 @@ class QuickTestScreen extends StatelessWidget {
                           maxLines: 4,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: CustomTextStyles.bodyMediumBlack900
-                              .copyWith(height: 1.43),
+                          style: textTheme.bodyMedium!.hugging,
                         ),
                       ),
                       SizedBox(height: 12.h),

@@ -187,8 +187,11 @@ class MyPageScreen extends StatelessWidget {
                           top: 2.h,
                           bottom: 5.h,
                         ),
-                        child: Text('회원가입/로그인'.tr(),
-                            style: CustomTextStyles.bodyLargeGray900),
+                        child: Text(
+                          '회원가입/로그인'.tr(),
+                          style: textTheme.bodyLarge!
+                              .colored(const Color(0xFF202020)),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 9.w),
@@ -208,8 +211,9 @@ class MyPageScreen extends StatelessWidget {
                       '로그인 하시면 카미의 다양한 서비스를 이용하실 수 있습니다.'.tr(),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: CustomTextStyles.bodySmallGray500
-                          .copyWith(height: 1.33),
+                      style: textTheme.bodySmall!
+                          .colored(const Color(0xFFA3A3A3))
+                          .tight,
                     ),
                   ),
                 ],
@@ -260,7 +264,7 @@ class MyPageScreen extends StatelessWidget {
                         text: '강아지 등록하기'.tr(),
                         margin: EdgeInsets.only(bottom: 24.h),
                         buttonStyle: CustomButtonStyles.fillBlue,
-                        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                        buttonTextStyle: textTheme.bodyMedium,
                         alignment: Alignment.bottomCenter,
                       ),
                     ],
@@ -302,7 +306,7 @@ class MyPageScreen extends StatelessWidget {
                         text: '고양이 등록하기'.tr(),
                         margin: EdgeInsets.only(bottom: 24.h),
                         buttonStyle: CustomButtonStyles.fillBlue,
-                        buttonTextStyle: CustomTextStyles.bodyMediumBlack900,
+                        buttonTextStyle: textTheme.bodyMedium,
                         alignment: Alignment.bottomCenter,
                       ),
                     ],
@@ -327,7 +331,7 @@ class MyPageScreen extends StatelessWidget {
       ),
       decoration: AppDecoration.fillGray50,
       child: Divider(
-        color: appTheme.gray20001,
+        color: const Color(0xFFEEEEEE),
         endIndent: 26.w,
       ),
     );
@@ -376,8 +380,7 @@ class MyPageScreen extends StatelessWidget {
               children: [
                 Text(
                   userName,
-                  style: CustomTextStyles.bodyLargeGray500
-                      .copyWith(color: appTheme.gray500),
+                  style: textTheme.bodyLarge!.colored(const Color(0xFFA3A3A3)),
                 ),
                 SizedBox(height: 7.h),
                 Row(
@@ -385,14 +388,14 @@ class MyPageScreen extends StatelessWidget {
                     Text(
                       userAge,
                       style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
+                          .colored(const Color(0xFFA3A3A3)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 16.w),
                       child: Text(
                         userLocation,
                         style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
+                            .colored(const Color(0xFFA3A3A3)),
                       ),
                     ),
                   ],
@@ -403,14 +406,14 @@ class MyPageScreen extends StatelessWidget {
                     Text(
                       userOccupation,
                       style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
+                          .colored(const Color(0xFFA3A3A3)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 43.w),
                       child: Text(
                         userLocation1,
                         style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
+                            .colored(const Color(0xFFA3A3A3)),
                       ),
                     ),
                   ],
@@ -421,14 +424,14 @@ class MyPageScreen extends StatelessWidget {
                     Text(
                       userPhoneNumber,
                       style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
+                          .colored(const Color(0xFFA3A3A3)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 42.w),
                       child: Text(
                         userLocation2,
                         style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
+                            .colored(const Color(0xFFA3A3A3)),
                       ),
                     ),
                   ],
@@ -439,14 +442,14 @@ class MyPageScreen extends StatelessWidget {
                     Text(
                       userEmail,
                       style: textTheme.bodyMedium!
-                          .copyWith(color: appTheme.gray500),
+                          .colored(const Color(0xFFA3A3A3)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 42.w),
                       child: Text(
                         userLocation3,
                         style: textTheme.bodyMedium!
-                            .copyWith(color: appTheme.gray500),
+                            .colored(const Color(0xFFA3A3A3)),
                       ),
                     ),
                   ],

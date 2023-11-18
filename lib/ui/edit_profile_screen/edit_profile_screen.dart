@@ -71,9 +71,12 @@ class EditProfileScreen extends StatelessWidget {
                             onTapImgArrowLeft(context);
                           }),
                       Padding(
-                          padding: EdgeInsets.only(left: 124.w),
-                          child: Text('정보 수정'.tr(),
-                              style: CustomTextStyles.bodyLarge18))
+                        padding: EdgeInsets.only(left: 124.w),
+                        child: Text(
+                          '정보 수정'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -82,8 +85,11 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 49.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이메일 주소'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '이메일 주소'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText(context),
@@ -95,15 +101,19 @@ class EditProfileScreen extends StatelessWidget {
                     '※ 이메일은 수정할 수 없습니다. 수정을 원하시는 경우 고객센터로 연락주세요.'.tr(),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: CustomTextStyles.bodySmallGray500
-                        .copyWith(height: 1.33),
+                    style: textTheme.bodySmall!
+                        .colored(const Color(0xFFA3A3A3))
+                        .tight,
                   ),
                 ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('휴대폰 번호'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '휴대폰 번호'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditTextRow(context),
@@ -113,7 +123,7 @@ class EditProfileScreen extends StatelessWidget {
                     height: 40.h,
                     width: 361.w,
                     decoration: BoxDecoration(
-                      color: lightTheme.onError,
+                      color: const Color(0xFFE5E5E5),
                       borderRadius: BorderRadius.circular(8.w),
                     ),
                   ),
@@ -121,14 +131,20 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 5.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('※ 휴대폰 번호는 인증을 통하여 변경이 가능합니다.'.tr(),
-                      style: CustomTextStyles.bodySmallGray500),
+                  child: Text(
+                    '※ 휴대폰 번호는 인증을 통하여 변경이 가능합니다.'.tr(),
+                    style:
+                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
+                  ),
                 ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('비밀번호 변경'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '비밀번호 변경'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText1(context),
@@ -137,32 +153,44 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('이름'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '이름'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText3(context),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('닉네임'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '닉네임'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildEditText4(context),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('생년월일'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '생년월일'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildDropdownRow(context),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('성별'.tr(),
-                      style: CustomTextStyles.bodyMediumOnPrimary),
+                  child: Text(
+                    '성별'.tr(),
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFF1F2937)),
+                  ),
                 ),
                 SizedBox(height: 9.h),
                 _buildRadioGroup(context),
@@ -183,13 +211,14 @@ class EditProfileScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildImageSelectionButton(BuildContext context) {
     return CustomElevatedButton(
-        onPressed: (context) {
-          // TODO: implement onPressed
-        },
-        width: 121.w,
-        text: '이미지 선택하기'.tr(),
-        buttonStyle: CustomButtonStyles.fillBlue,
-        buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer);
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
+      width: 121.w,
+      text: '이미지 선택하기'.tr(),
+      buttonStyle: CustomButtonStyles.fillBlue,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
+    );
   }
 
   /// Section Widget
@@ -215,8 +244,7 @@ class EditProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('프로필 사진을 등록해주세요'.tr(),
-                      style: CustomTextStyles.bodyMediumBlack900),
+                  Text('프로필 사진을 등록해주세요'.tr(), style: textTheme.bodyMedium),
                   SizedBox(height: 1.h),
                   SizedBox(
                     width: 156.w,
@@ -224,8 +252,9 @@ class EditProfileScreen extends StatelessWidget {
                       '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: CustomTextStyles.bodySmallGray500
-                          .copyWith(height: 1.33),
+                      style: textTheme.bodySmall!
+                          .colored(const Color(0xFFA3A3A3))
+                          .tight,
                     ),
                   ),
                   SizedBox(height: 1.h),
@@ -235,8 +264,9 @@ class EditProfileScreen extends StatelessWidget {
                       '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: CustomTextStyles.bodySmallGray500
-                          .copyWith(height: 1.33),
+                      style: textTheme.bodySmall!
+                          .colored(const Color(0xFFA3A3A3))
+                          .tight,
                     ),
                   ),
                   SizedBox(height: 16.h),
@@ -258,7 +288,7 @@ class EditProfileScreen extends StatelessWidget {
           controller: editTextController,
           alignment: Alignment.center,
           borderDecoration: TextFormFieldStyleHelper.fillOnError,
-          fillColor: lightTheme.onError),
+          fillColor: const Color(0xFFE5E5E5)),
     );
   }
 
@@ -277,14 +307,16 @@ class EditProfileScreen extends StatelessWidget {
           children: [
             _buildEditTextWithButton(context),
             CustomElevatedButton(
-                onPressed: (context) {
-                  // TODO: implement onPressed
-                },
-                width: 142.w,
-                text: '인증번호 받기'.tr(),
-                margin: EdgeInsets.only(left: 8.w),
-                buttonStyle: CustomButtonStyles.fillBlueGray,
-                buttonTextStyle: CustomTextStyles.bodyMediumGray60001)
+              onPressed: (context) {
+                // TODO: implement onPressed
+              },
+              width: 142.w,
+              text: '인증번호 받기'.tr(),
+              margin: EdgeInsets.only(left: 8.w),
+              buttonStyle: CustomButtonStyles.fillBlueGray,
+              buttonTextStyle:
+                  textTheme.bodyMedium!.colored(const Color(0xFF6B7280)),
+            )
           ],
         ),
       ),
@@ -349,7 +381,7 @@ class EditProfileScreen extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                 decoration: BoxDecoration(
-                  color: appTheme.gray10001,
+                  color: const Color(0xFFF5F5F5),
                   borderRadius: BorderRadius.circular(8.w),
                 ),
                 child: CustomImageView(
@@ -373,7 +405,7 @@ class EditProfileScreen extends StatelessWidget {
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                   decoration: BoxDecoration(
-                    color: appTheme.gray10001,
+                    color: const Color(0xFFF5F5F5),
                     borderRadius: BorderRadius.circular(8.w),
                   ),
                   child: CustomImageView(
@@ -398,7 +430,7 @@ class EditProfileScreen extends StatelessWidget {
                 icon: Container(
                   padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
                   decoration: BoxDecoration(
-                    color: appTheme.gray10001,
+                    color: const Color(0xFFF5F5F5),
                     borderRadius: BorderRadius.circular(8.w),
                   ),
                   child: CustomImageView(
