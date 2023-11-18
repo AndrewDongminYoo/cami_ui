@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
-import '/theme/theme_helper.dart';
-
 VisualDensity get buttonDensity =>
     const VisualDensity(horizontal: -4, vertical: -4);
 
@@ -14,46 +11,46 @@ VisualDensity get buttonDensity =>
 class CustomButtonStyles {
   // Filled button style
   static ButtonStyle get fillBlack => ElevatedButton.styleFrom(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFF000000),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillBlackTL12 => ElevatedButton.styleFrom(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xFF000000),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.w),
         ),
       );
   static ButtonStyle get fillBlue => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.blue50,
+        backgroundColor: const Color(0xFFE6F0FF),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillBlueGray => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.blueGray300,
+        backgroundColor: const Color(0xFF9CA3AF),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillGray =>
-      ElevatedButton.styleFrom(backgroundColor: appTheme.gray50);
+      ElevatedButton.styleFrom(backgroundColor: const Color(0xFFFAFAFA));
   static ButtonStyle get fillGrayTL81 => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.gray50,
+        backgroundColor: const Color(0xFFFAFAFA),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillOnSecondaryContainer => ElevatedButton.styleFrom(
-        backgroundColor: lightTheme.onSecondaryContainer,
+        backgroundColor: const Color(0xFF262626),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
       );
   static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: lightTheme.primary,
+        backgroundColor: const Color(0xFFFFFF50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),
@@ -61,29 +58,29 @@ class CustomButtonStyles {
 
   // Outline button style
   static ButtonStyle get outlineBlack => OutlinedButton.styleFrom(
-        backgroundColor: appTheme.yellow100,
+        backgroundColor: const Color(0xFFFEFFBF),
         side: const BorderSide(width: 2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(26.w),
         ),
       );
   static ButtonStyle get outlineBlueGrayTL17 => OutlinedButton.styleFrom(
-        backgroundColor: Colors.black,
-        side: BorderSide(color: appTheme.blueGray70001),
+        backgroundColor: const Color(0xFF000000),
+        side: const BorderSide(color: Color(0xFF525252)),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(17.w),
         ),
       );
   static ButtonStyle get outlineBlueGrayTL171 => OutlinedButton.styleFrom(
         backgroundColor: Colors.transparent,
-        side: BorderSide(color: appTheme.blueGray70001),
+        side: const BorderSide(color: Color(0xFF525252)),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(17.w),
         ),
       );
   static ButtonStyle get outlineGray => OutlinedButton.styleFrom(
-        backgroundColor: appTheme.gray50,
-        side: BorderSide(color: appTheme.gray500),
+        backgroundColor: const Color(0xFFFAFAFA),
+        side: const BorderSide(color: Color(0xFFA3A3A3)),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.w),
         ),

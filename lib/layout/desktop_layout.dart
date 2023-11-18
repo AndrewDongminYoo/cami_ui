@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/size_utils.dart';
 import '/gen/assets.gen.dart';
-import '/theme/theme_helper.dart';
 import '/widgets/custom_image_view.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -37,7 +36,7 @@ class DesktopLayout extends StatelessWidget {
                 body: Container(
                   width: window.maxWidth,
                   height: height,
-                  color: lightTheme.primary,
+                  color: const Color(0xFFFFFF50),
                   child: CustomImageView(
                     alignment: Alignment.bottomCenter,
                     imagePath: Assets.images.imgMainBackground.path,

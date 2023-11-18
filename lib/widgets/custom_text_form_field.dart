@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -72,7 +71,7 @@ class CustomTextFormField extends StatelessWidget {
           controller: controller,
           focusNode: focusNode ?? FocusNode(),
           autofocus: autofocus!,
-          style: textStyle ?? CustomTextStyles.bodyMediumBlack900,
+          style: textStyle ?? textTheme.bodyMedium!,
           obscureText: obscureText!,
           textInputAction: textInputAction,
           keyboardType: textInputType,
@@ -83,14 +82,14 @@ class CustomTextFormField extends StatelessWidget {
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? '',
-        hintStyle: hintStyle ?? CustomTextStyles.bodyMediumBlack900,
+        hintStyle: hintStyle ?? textTheme.bodyMedium!,
         prefixIcon: prefix,
         prefixIconConstraints: prefixConstraints,
         suffixIcon: suffix,
         suffixIconConstraints: suffixConstraints,
         isDense: true,
         contentPadding: contentPadding,
-        fillColor: fillColor ?? appTheme.gray10001,
+        fillColor: fillColor ?? const Color(0xFFF5F5F5),
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(

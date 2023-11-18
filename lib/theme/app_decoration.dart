@@ -4,32 +4,33 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
-import '/theme/theme_helper.dart';
-
 class AppDecoration {
   // Fill decorations
-  static BoxDecoration get fillBlue => BoxDecoration(color: appTheme.blue800);
-  static BoxDecoration get fillBlue50 => BoxDecoration(color: appTheme.blue50);
-  static BoxDecoration get fillGray => BoxDecoration(color: appTheme.gray10001);
+  static BoxDecoration get fillBlue =>
+      const BoxDecoration(color: Color(0xFF1D59C4));
+  static BoxDecoration get fillBlue50 =>
+      const BoxDecoration(color: Color(0xFFE6F0FF));
+  static BoxDecoration get fillGray =>
+      const BoxDecoration(color: Color(0xFFF5F5F5));
   static BoxDecoration get fillGray100 =>
-      BoxDecoration(color: appTheme.gray100);
-  static BoxDecoration get fillGray50 => BoxDecoration(color: appTheme.gray50);
+      const BoxDecoration(color: Color(0xFFF3F4F6));
+  static BoxDecoration get fillGray50 =>
+      const BoxDecoration(color: Color(0xFFFAFAFA));
   static BoxDecoration get fillOnErrorContainer =>
-      BoxDecoration(color: lightTheme.onErrorContainer);
+      const BoxDecoration(color: Color(0xFF171717));
   static BoxDecoration get fillOnPrimaryContainer =>
-      const BoxDecoration(color: Colors.white);
+      const BoxDecoration(color: Color(0xFFFFFFFF));
   static BoxDecoration get fillPrimary =>
-      BoxDecoration(color: lightTheme.primary);
+      const BoxDecoration(color: Color(0xFFFFFF50));
   static BoxDecoration get fillSecondaryContainer =>
-      BoxDecoration(color: lightTheme.secondaryContainer);
+      const BoxDecoration(color: Color(0xFFD9D9D9));
 
   // Outline decorations
-  static BoxDecoration get outlineBlueGrayB => BoxDecoration(
-        color: Colors.white,
+  static BoxDecoration get outlineBlueGray => BoxDecoration(
+        color: const Color(0xFFFFFFFF),
         boxShadow: [
           BoxShadow(
-            color: appTheme.blueGray1006b,
+            color: const Color(0x6BCCCCCC),
             spreadRadius: 2.w,
             blurRadius: 2.w,
           ),
@@ -37,15 +38,15 @@ class AppDecoration {
       );
   static BoxDecoration get outlineGray => BoxDecoration(
         border: Border.all(
-          color: appTheme.gray200,
+          color: const Color(0xFFE5E7EB),
           width: 1.w,
         ),
       );
   static BoxDecoration get outlineGrayC => BoxDecoration(
-        color: appTheme.gray50,
+        color: const Color(0xFFFAFAFA),
         boxShadow: [
           BoxShadow(
-            color: appTheme.gray5004c,
+            color: const Color(0x4C939393),
             spreadRadius: 2.w,
             blurRadius: 2.w,
           ),
@@ -53,13 +54,13 @@ class AppDecoration {
       );
   static BoxDecoration get outlineOnError => BoxDecoration(
         border: Border.all(
-          color: lightTheme.onError,
+          color: const Color(0xFFE5E5E5),
           width: 1.w,
         ),
       );
   static BoxDecoration get outlineOnSecondaryContainer => BoxDecoration(
         border: Border.all(
-          color: lightTheme.onSecondaryContainer,
+          color: const Color(0xFF262626),
           width: 1.w,
         ),
       );
