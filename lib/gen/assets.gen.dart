@@ -80,21 +80,9 @@ class $AssetsImagesGen {
 
   $AssetsImagesExpertsGen get experts => const $AssetsImagesExpertsGen();
 
-  /// File path: assets/images/ico_facebook_dark.png
-  AssetGenImage get icoFacebookDark =>
-      const AssetGenImage('assets/images/ico_facebook_dark.png');
-
-  /// File path: assets/images/ico_instagram_dark.png
-  AssetGenImage get icoInstagramDark =>
-      const AssetGenImage('assets/images/ico_instagram_dark.png');
-
   /// File path: assets/images/ico_menu_vert.png
   AssetGenImage get icoMenuVert =>
       const AssetGenImage('assets/images/ico_menu_vert.png');
-
-  /// File path: assets/images/ico_naver_blog_dark.png
-  AssetGenImage get icoNaverBlogDark =>
-      const AssetGenImage('assets/images/ico_naver_blog_dark.png');
 
   /// File path: assets/images/image_not_found.png
   AssetGenImage get imageNotFound =>
@@ -292,10 +280,7 @@ class $AssetsImagesGen {
         avatarDefault,
         avatarDog,
         avatarOwner,
-        icoFacebookDark,
-        icoInstagramDark,
         icoMenuVert,
-        icoNaverBlogDark,
         imageNotFound,
         imgCatProfile,
         imgImage1,
@@ -370,6 +355,30 @@ class $AssetsMessagesGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/ico_Instagram_white.svg
+  SvgGenImage get icoInstagramWhite =>
+      const SvgGenImage('assets/svg/ico_Instagram_white.svg');
+
+  /// File path: assets/svg/ico_facebook.svg
+  SvgGenImage get icoFacebook =>
+      const SvgGenImage('assets/svg/ico_facebook.svg');
+
+  /// File path: assets/svg/ico_facebook_white.svg
+  SvgGenImage get icoFacebookWhite =>
+      const SvgGenImage('assets/svg/ico_facebook_white.svg');
+
+  /// File path: assets/svg/ico_instagram.svg
+  SvgGenImage get icoInstagram =>
+      const SvgGenImage('assets/svg/ico_instagram.svg');
+
+  /// File path: assets/svg/ico_naver_blog.svg
+  SvgGenImage get icoNaverBlog =>
+      const SvgGenImage('assets/svg/ico_naver_blog.svg');
+
+  /// File path: assets/svg/ico_naver_blog_white.svg
+  SvgGenImage get icoNaverBlogWhite =>
+      const SvgGenImage('assets/svg/ico_naver_blog_white.svg');
+
   /// File path: assets/svg/img_arrow_down.svg
   SvgGenImage get imgArrowDown =>
       const SvgGenImage('assets/svg/img_arrow_down.svg');
@@ -408,9 +417,6 @@ class $AssetsSvgGen {
   SvgGenImage get imgSettings =>
       const SvgGenImage('assets/svg/img_settings.svg');
 
-  /// File path: assets/svg/img_social.svg
-  SvgGenImage get imgSocial => const SvgGenImage('assets/svg/img_social.svg');
-
   /// File path: assets/svg/img_ticket.svg
   SvgGenImage get imgTicket => const SvgGenImage('assets/svg/img_ticket.svg');
 
@@ -428,6 +434,12 @@ class $AssetsSvgGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        icoInstagramWhite,
+        icoFacebook,
+        icoFacebookWhite,
+        icoInstagram,
+        icoNaverBlog,
+        icoNaverBlogWhite,
         imgArrowDown,
         imgArrowDownGray700,
         imgArrowLeft,
@@ -438,7 +450,6 @@ class $AssetsSvgGen {
         imgFrameGray90002,
         imgGroup,
         imgSettings,
-        imgSocial,
         imgTicket,
         imgVectorGray9000491x86,
         imgVectorWhiteA7007x8,
