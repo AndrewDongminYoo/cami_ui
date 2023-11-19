@@ -67,7 +67,7 @@ class SocialViewModel {
 
   CustomImageView get widget {
     return CustomImageView(
-      imagePath: Assets.svg.icoNaverBlog.path,
+      imagePath: iconPath,
       onTap: () => launchUrlString(urlPath),
       alignment: Alignment.center,
       height: iconSize,

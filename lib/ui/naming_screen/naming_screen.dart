@@ -72,7 +72,7 @@ class NamingScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Text('강렬한 거북이의 안내자'.tr(),
-                                style: textTheme.headlineSmall!..thick),
+                                style: textTheme.headlineSmall!.thick),
                             SizedBox(height: 196.h),
                             Row(
                                 mainAxisAlignment: MainAxisAlignment.center,

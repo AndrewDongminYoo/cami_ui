@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '/core/errors/exceptions.dart';
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
+import '/routes/go_extensions.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
@@ -69,7 +70,7 @@ class ErrorPage extends StatelessWidget {
               SizedBox(height: 42.h),
               CustomOutlinedButton(
                 onPressed: (context) {
-                  // TODO: implement onPressed
+                  context.safePop();
                 },
                 height: 52.h,
                 width: 168.w,
