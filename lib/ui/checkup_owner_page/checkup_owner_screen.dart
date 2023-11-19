@@ -13,6 +13,7 @@ import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
+import '/ui/shared/stars.dart';
 import '/widgets/app_bar/bread_crumb.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
@@ -86,12 +87,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   padding: EdgeInsets.only(left: 16.w),
                   child: Row(
                     children: [
-                      CustomImageView(
-                        imagePath: Assets.images.imgInfo.path,
-                        height: 12.h,
-                        width: 68.w,
-                        margin: EdgeInsets.symmetric(vertical: 4.h),
-                      ),
+                      const Stars(score: 4.9),
                       Padding(
                         padding: EdgeInsets.only(left: 8.w),
                         child: Text('(4)'.tr(), style: textTheme.bodyMedium),

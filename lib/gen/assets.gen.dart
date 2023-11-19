@@ -285,10 +285,6 @@ class $AssetsImagesGen {
   AssetGenImage get imgImage997x361 =>
       const AssetGenImage('assets/images/img_image_997x361.png');
 
-  /// File path: assets/images/img_info.png
-  AssetGenImage get imgInfo =>
-      const AssetGenImage('assets/images/img_info.png');
-
   /// File path: assets/images/img_main_background.png
   AssetGenImage get imgMainBackground =>
       const AssetGenImage('assets/images/img_main_background.png');
@@ -350,7 +346,6 @@ class $AssetsImagesGen {
         imgImage731x361,
         imgImage84x393,
         imgImage997x361,
-        imgInfo,
         imgMainBackground,
         imgUserProfile
       ];
@@ -460,6 +455,26 @@ class $AssetsSvgGen {
   SvgGenImage get pageNotFound =>
       const SvgGenImage('assets/svg/page_not_found.svg');
 
+  /// File path: assets/svg/star-black-half.svg
+  SvgGenImage get starBlackHalf =>
+      const SvgGenImage('assets/svg/star-black-half.svg');
+
+  /// File path: assets/svg/star-black.svg
+  SvgGenImage get starBlack => const SvgGenImage('assets/svg/star-black.svg');
+
+  /// File path: assets/svg/star-empty.svg
+  SvgGenImage get starEmpty => const SvgGenImage('assets/svg/star-empty.svg');
+
+  /// File path: assets/svg/star-yellow-half.svg
+  SvgGenImage get starYellowHalf =>
+      const SvgGenImage('assets/svg/star-yellow-half.svg');
+
+  /// File path: assets/svg/star-yellow.svg
+  SvgGenImage get starYellow => const SvgGenImage('assets/svg/star-yellow.svg');
+
+  /// File path: assets/svg/star-zero.svg
+  SvgGenImage get starZero => const SvgGenImage('assets/svg/star-zero.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         icoInstagramWhite,
@@ -481,7 +496,13 @@ class $AssetsSvgGen {
         imgTicket,
         imgVectorGray9000491x86,
         imgVectorWhiteA7007x8,
-        pageNotFound
+        pageNotFound,
+        starBlackHalf,
+        starBlack,
+        starEmpty,
+        starYellowHalf,
+        starYellow,
+        starZero
       ];
 }
 
