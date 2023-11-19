@@ -14,7 +14,7 @@ class CustomRadioButton extends StatelessWidget {
     super.key,
     required this.onChange,
     this.decoration,
-    this.alignment,
+    this.alignment = Alignment.center,
     this.isRightCheck,
     this.iconSize,
     this.value,
@@ -30,7 +30,7 @@ class CustomRadioButton extends StatelessWidget {
 
   String? value;
   final BoxDecoration? decoration;
-  final Alignment? alignment;
+  final Alignment alignment;
   final bool? isRightCheck;
   final double? iconSize;
   final String? groupValue;
@@ -45,12 +45,10 @@ class CustomRadioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: buildRadioButtonWidget,
-          )
-        : buildRadioButtonWidget;
+    return Container(
+      alignment: alignment,
+      child: buildRadioButtonWidget,
+    );
   }
 
   bool get isGradient => gradient != null;

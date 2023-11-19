@@ -44,12 +44,10 @@ class CustomOutlinedButton extends BaseButton {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: _buildOutlinedButtonWidget(context),
-          )
-        : _buildOutlinedButtonWidget(context);
+    return Container(
+      alignment: alignment ?? Alignment.center,
+      child: _buildOutlinedButtonWidget(context),
+    );
   }
 
   Widget _buildOutlinedButtonWidget(BuildContext context) {

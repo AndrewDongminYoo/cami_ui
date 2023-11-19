@@ -23,8 +23,8 @@ class CustomImageView extends StatelessWidget {
     this.fit,
     this.alignment,
     this.onTap,
-    this.radius,
-    this.margin,
+    this.radius = BorderRadius.zero,
+    this.margin = EdgeInsets.zero,
     this.border,
   });
 
@@ -37,59 +37,37 @@ class CustomImageView extends StatelessWidget {
   final BoxFit? fit;
   final Alignment? alignment;
   final VoidCallback? onTap;
-  final EdgeInsetsGeometry? margin;
-  final BorderRadius? radius;
+  final EdgeInsetsGeometry margin;
+  final BorderRadius radius;
   final BoxBorder? border;
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment!,
-            child: _buildWidget(),
-          )
-        : _buildWidget();
-  }
-
-  Widget _buildWidget() {
-    return Padding(
-      padding: margin ?? EdgeInsets.zero,
+    return Container(
+      alignment: alignment,
+      padding: margin,
       child: InkWell(
         onTap: onTap,
-        child: _buildCircleImage(),
+
+        /// [radius] 파라미터 적용 시 원형으로 빌드합니다.
+        child: ClipRRect(
+          borderRadius: radius,
+
+          /// [border] 적용 스타일로 테두리를 빌드합니다.
+          child: Container(
+            decoration: BoxDecoration(
+              border: border,
+              borderRadius: radius,
+            ),
+            child: _imageView,
+          ),
+        ),
       ),
     );
   }
 
-  /// [radius] 파라미터 적용 시 원형으로 빌드합니다.
-  dynamic _buildCircleImage() {
-    if (radius != null) {
-      return ClipRRect(
-        borderRadius: radius ?? BorderRadius.zero,
-        child: _buildImageWithBorder(),
-      );
-    } else {
-      return _buildImageWithBorder();
-    }
-  }
-
-  /// [border] 적용 스타일로 테두리를 빌드합니다.
-  Widget _buildImageWithBorder() {
-    if (border != null) {
-      return Container(
-        decoration: BoxDecoration(
-          border: border,
-          borderRadius: radius,
-        ),
-        child: _buildImageView(),
-      );
-    } else {
-      return _buildImageView();
-    }
-  }
-
   /// [ImageTypeExtension] 확장으로 이미지 타입 [imageType]을 체크해 상황에 따라 빌드합니다.
-  Widget _buildImageView() {
+  Widget get _imageView {
     if (imagePath != null) {
       switch (imagePath!.imageType) {
         case ImageType.svg:

@@ -12,7 +12,7 @@ import '/theme/theme_helper.dart';
 class CustomDropDownFormField extends StatelessWidget {
   const CustomDropDownFormField({
     super.key,
-    this.alignment,
+    this.alignment = Alignment.center,
     this.height,
     this.width,
     this.focusNode,
@@ -34,7 +34,7 @@ class CustomDropDownFormField extends StatelessWidget {
     required this.onChanged,
   });
 
-  final Alignment? alignment;
+  final Alignment alignment;
   final double? height;
   final double? width;
   final FocusNode? focusNode;
@@ -57,12 +57,10 @@ class CustomDropDownFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: dropDownWidget,
-          )
-        : dropDownWidget;
+    return Container(
+      alignment: alignment,
+      child: dropDownWidget,
+    );
   }
 
   Widget get dropDownWidget => SizedBox(

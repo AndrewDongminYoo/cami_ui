@@ -55,12 +55,10 @@ class DesktopLayout extends StatelessWidget {
                   splitScreenMode: true,
                 );
                 ScreenUtil.registerToBuild(context, true);
-                return Padding(
+                return Container(
                   padding: EdgeInsets.only(left: sub * 0.7, right: sub * 0.3),
-                  child: SizedBox(
-                    width: main,
-                    child: child,
-                  ),
+                  width: main,
+                  child: child,
                 );
               },
             ),

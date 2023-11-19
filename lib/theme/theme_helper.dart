@@ -80,21 +80,25 @@ class ThemeHelper {
         ),
       ),
       radioTheme: RadioThemeData(
-        fillColor: MaterialStateColor.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
-            return colorScheme.onPrimaryContainer;
-          }
-          return colorScheme.onSurface;
-        }),
+        fillColor: MaterialStateColor.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.selected)) {
+              return colorScheme.onPrimaryContainer;
+            }
+            return colorScheme.onSurface;
+          },
+        ),
         visualDensity: defaultDensity,
       ),
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateColor.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
-            return colorScheme.onPrimaryContainer;
-          }
-          return colorScheme.onSurface;
-        }),
+        fillColor: MaterialStateColor.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.selected)) {
+              return colorScheme.onPrimaryContainer;
+            }
+            return colorScheme.onSurface;
+          },
+        ),
         side: const BorderSide(),
         visualDensity: defaultDensity,
       ),

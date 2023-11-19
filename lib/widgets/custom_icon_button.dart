@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     super.key,
-    this.alignment,
+    this.alignment = Alignment.center,
     this.height,
     this.width,
     this.padding,
@@ -16,7 +16,7 @@ class CustomIconButton extends StatelessWidget {
     this.onTap,
   });
 
-  final Alignment? alignment;
+  final Alignment alignment;
   final double? height;
   final double? width;
   final EdgeInsetsGeometry? padding;
@@ -26,12 +26,10 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: iconButtonWidget,
-          )
-        : iconButtonWidget;
+    return Container(
+      alignment: alignment,
+      child: iconButtonWidget,
+    );
   }
 
   Widget get iconButtonWidget => SizedBox(

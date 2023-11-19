@@ -14,7 +14,7 @@ class CustomCheckboxButton extends StatelessWidget {
     super.key,
     required this.onChange,
     this.decoration,
-    this.alignment,
+    this.alignment = Alignment.center,
     this.isRightCheck,
     this.iconSize,
     this.value,
@@ -28,7 +28,7 @@ class CustomCheckboxButton extends StatelessWidget {
 
   bool? value;
   final BoxDecoration? decoration;
-  final Alignment? alignment;
+  final Alignment alignment;
   final bool? isRightCheck;
   final double? iconSize;
   final Function(bool) onChange;
@@ -41,12 +41,10 @@ class CustomCheckboxButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: buildCheckBoxWidget,
-          )
-        : buildCheckBoxWidget;
+    return Container(
+      alignment: alignment,
+      child: buildCheckBoxWidget,
+    );
   }
 
   Widget get buildCheckBoxWidget => InkWell(

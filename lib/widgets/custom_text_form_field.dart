@@ -10,7 +10,7 @@ import '/theme/theme_helper.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    this.alignment,
+    this.alignment = Alignment.center,
     this.width,
     this.controller,
     this.focusNode,
@@ -33,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
   });
 
-  final Alignment? alignment;
+  final Alignment alignment;
   final double? width;
   final TextEditingController? controller;
   final FocusNode? focusNode;
@@ -57,12 +57,10 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: textFormFieldWidget,
-          )
-        : textFormFieldWidget;
+    return Container(
+      alignment: alignment,
+      child: textFormFieldWidget,
+    );
   }
 
   Widget get textFormFieldWidget => SizedBox(

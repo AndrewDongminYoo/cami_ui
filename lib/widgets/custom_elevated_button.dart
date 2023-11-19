@@ -42,12 +42,10 @@ class CustomElevatedButton extends BaseButton {
 
   @override
   Widget build(BuildContext context) {
-    return alignment != null
-        ? Align(
-            alignment: alignment ?? Alignment.center,
-            child: _buildElevatedButtonWidget(context),
-          )
-        : _buildElevatedButtonWidget(context);
+    return Container(
+      alignment: alignment,
+      child: _buildElevatedButtonWidget(context),
+    );
   }
 
   Widget _buildElevatedButtonWidget(BuildContext context) {
