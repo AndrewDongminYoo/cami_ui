@@ -41,12 +41,13 @@ class NoticeDetailScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       CustomImageView(
-                          imagePath: Assets.svg.imgArrowLeft.path,
-                          height: 28.h,
-                          width: 20.w,
-                          onTap: () {
-                            context.safePop();
-                          }),
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 28.h,
+                        width: 20.w,
+                        onTap: () {
+                          context.safePop();
+                        },
+                      ),
                       Padding(
                         padding: EdgeInsets.only(left: 127.w),
                         child: Text(
@@ -58,21 +59,21 @@ class NoticeDetailScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 15.h),
-                Align(
+                Center(
                   child: Divider(
                       color: Colors.black, indent: 16.w, endIndent: 16.w),
                 ),
                 SizedBox(height: 12.h),
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
-                  child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr().toUpperCase(),
+                  child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr(),
                       style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 21.h),
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
                   child: Text(
-                    '2020-03-17'.toUpperCase(),
+                    '2020-03-17',
                     style:
                         textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
                   ),

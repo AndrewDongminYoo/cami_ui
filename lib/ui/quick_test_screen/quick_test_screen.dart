@@ -43,7 +43,7 @@ class QuickTestScreen extends StatelessWidget {
                         width: 241.w,
                       ),
                       SizedBox(height: 34.h),
-                      Container(
+                      Padding(
                         padding: EdgeInsets.symmetric(horizontal: 53.w),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -131,10 +131,10 @@ class QuickTestScreen extends StatelessWidget {
                           text: TextSpan(children: [
                         TextSpan(
                             text: '개성만점'.tr(), style: textTheme.bodyMedium),
-                        WidgetSpan(child: SizedBox(width: 4.sp)),
+                        _buildSpacing(width: 4.sp),
                         TextSpan(
                             text: '별명 짓기'.tr(), style: textTheme.bodyMedium),
-                        WidgetSpan(child: SizedBox(width: 1.sp)),
+                        _buildSpacing(width: 1.sp),
                         TextSpan(text: '!!!', style: textTheme.bodyMedium),
                       ])),
                       SizedBox(height: 30.h),
@@ -211,7 +211,7 @@ class QuickTestScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 18.h),
-                      Container(
+                      Padding(
                         padding: EdgeInsets.symmetric(horizontal: 39.w),
                         child: RichText(
                           text: TextSpan(

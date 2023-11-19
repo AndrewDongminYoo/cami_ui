@@ -329,39 +329,37 @@ class HomeScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildUserReviewTitle(BuildContext context) {
-    return Align(
+    return Container(
       alignment: Alignment.centerRight,
-      child: SizedBox(
-        height: 300.h,
-        width: 361.w,
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: [
-            Container(
-              height: 272.h,
-              width: 12.w,
-              alignment: Alignment.bottomRight,
-            ),
-            CarouselSlider.builder(
-              options: CarouselOptions(
-                height: 284.h,
-                autoPlay: true,
-                viewportFraction: 1,
-                enableInfiniteScroll: false,
-                onPageChanged: (
-                  index,
-                  reason,
-                ) {
-                  sliderIndex1 = index;
-                },
-              ),
-              itemCount: 2,
-              itemBuilder: (context, index, realIndex) {
-                return const UserReviewItemWidget();
+      height: 300.h,
+      width: 361.w,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Container(
+            height: 272.h,
+            width: 12.w,
+            alignment: Alignment.bottomRight,
+          ),
+          CarouselSlider.builder(
+            options: CarouselOptions(
+              height: 284.h,
+              autoPlay: true,
+              viewportFraction: 1,
+              enableInfiniteScroll: false,
+              onPageChanged: (
+                index,
+                reason,
+              ) {
+                sliderIndex1 = index;
               },
             ),
-          ],
-        ),
+            itemCount: 2,
+            itemBuilder: (context, index, realIndex) {
+              return const UserReviewItemWidget();
+            },
+          ),
+        ],
       ),
     );
   }

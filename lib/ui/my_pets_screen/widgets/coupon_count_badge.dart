@@ -21,17 +21,16 @@ class CouponCountBadge extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Align(
-          child: Container(
-            height: 18.r,
-            width: 18.r,
-            decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(9.w),
-            ),
+        Container(
+          alignment: Alignment.center,
+          height: 18.r,
+          width: 18.r,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(9.w),
           ),
         ),
-        Align(
+        Center(
           child: Text(
             count.toString(),
             style: textTheme.bodySmall!.colored(Colors.white),

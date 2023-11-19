@@ -51,39 +51,38 @@ class SignUpFormScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 79.h),
-                Align(
+                Center(
                   child: Text('회원가입'.tr(), style: textTheme.displaySmall),
                 ),
                 SizedBox(height: 15.h),
-                Align(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 43.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '환영합니다!'.tr(),
+                Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 43.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '환영합니다!'.tr(),
+                        style: textTheme.bodyMedium!
+                            .colored(const Color(0xFF6B7280)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 4.w),
+                        child: Text(
+                          'CAMI',
                           style: textTheme.bodyMedium!
                               .colored(const Color(0xFF6B7280)),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 4.w),
-                          child: Text(
-                            'CAMI',
-                            style: textTheme.bodyMedium!
-                                .colored(const Color(0xFF6B7280)),
-                          ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 1.w),
+                        child: Text(
+                          '는 여러분들을 기다리고 있습니다!'.tr(),
+                          style: textTheme.bodyMedium!
+                              .colored(const Color(0xFF6B7280)),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 1.w),
-                          child: Text(
-                            '는 여러분들을 기다리고 있습니다!'.tr(),
-                            style: textTheme.bodyMedium!
-                                .colored(const Color(0xFF6B7280)),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: 64.h),
@@ -279,7 +278,6 @@ class SignUpFormScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: appNavBarController,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -290,7 +288,6 @@ class SignUpFormScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editText1Controller,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -301,7 +298,6 @@ class SignUpFormScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editText2Controller,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -312,7 +308,6 @@ class SignUpFormScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editText3Controller,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -324,20 +319,43 @@ class SignUpFormScreen extends StatelessWidget {
       child: CustomTextFormField(
         controller: editText4Controller,
         textInputAction: TextInputAction.done,
-        alignment: Alignment.center,
       ),
     );
   }
 
   /// Section Widget
   Widget _buildDateTimeField(BuildContext context) {
-    return Align(
-      child: Padding(
-        padding: EdgeInsets.only(left: 13.w, right: 19.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomDropDownFormField(
+    return Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.only(left: 13.w, right: 19.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomDropDownFormField(
+            width: 91.w,
+            icon: Container(
+              padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF5F5F5),
+                borderRadius: BorderRadius.circular(8.w),
+              ),
+              child: CustomImageView(
+                  imagePath: Assets.svg.imgArrowDown.path,
+                  height: 8.h,
+                  width: 12.w),
+            ),
+            items: dropdownItemList0,
+            onChanged: (value) {
+              // TODO: implement onChanged
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
+            child: Text('년'.tr(), style: textTheme.bodyLarge),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 17.w),
+            child: CustomDropDownFormField(
               width: 91.w,
               icon: Container(
                 padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
@@ -350,66 +368,41 @@ class SignUpFormScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList0,
+              items: dropdownItemList1,
               onChanged: (value) {
                 // TODO: implement onChanged
               },
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('년'.tr(), style: textTheme.bodyLarge),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 17.w),
-              child: CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
+            child: Text('월'.tr(), style: textTheme.bodyLarge),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.w),
+            child: CustomDropDownFormField(
+              width: 91.w,
+              icon: Container(
+                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(8.w),
                 ),
-                items: dropdownItemList1,
-                onChanged: (value) {
-                  // TODO: implement onChanged
-                },
+                child: CustomImageView(
+                    imagePath: Assets.svg.imgArrowDown.path,
+                    height: 8.h,
+                    width: 12.w),
               ),
+              items: dropdownItemList2,
+              onChanged: (value) {
+                // TODO: implement onChanged
+              },
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('월'.tr(), style: textTheme.bodyLarge),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16.w),
-              child: CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
-                ),
-                items: dropdownItemList2,
-                onChanged: (value) {
-                  // TODO: implement onChanged
-                },
-              ),
-            ),
-            Padding(
-                padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                child: Text('일'.tr(), style: textTheme.bodyLarge))
-          ],
-        ),
+          ),
+          Padding(
+              padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
+              child: Text('일'.tr(), style: textTheme.bodyLarge))
+        ],
       ),
     );
   }
@@ -421,12 +414,13 @@ class SignUpFormScreen extends StatelessWidget {
       child: Row(
         children: [
           CustomRadioButton(
-              text: '여성'.tr(),
-              value: radioList[0],
-              groupValue: genderRadioGroup,
-              onChange: (value) {
-                genderRadioGroup = value;
-              }),
+            text: '여성'.tr(),
+            value: radioList[0],
+            groupValue: genderRadioGroup,
+            onChange: (value) {
+              genderRadioGroup = value;
+            },
+          ),
           Padding(
             padding: EdgeInsets.only(left: 64.w),
             child: CustomRadioButton(

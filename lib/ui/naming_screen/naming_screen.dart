@@ -130,7 +130,7 @@ class NamingScreen extends StatelessWidget {
                               width: 100.r,
                               radius: BorderRadius.circular(50.w),
                             ),
-                            Container(
+                            Padding(
                               padding: EdgeInsets.only(
                                   top: 15.h, right: 2.w, bottom: 11.h),
                               child: Column(
@@ -174,7 +174,7 @@ class NamingScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 56.h),
-                Container(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 42.w),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

@@ -41,28 +41,27 @@ class Faq1Screen extends StatelessWidget {
             primary: true,
             child: Column(
               children: [
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Row(
-                      children: [
-                        CustomImageView(
-                            imagePath: Assets.svg.imgArrowLeft.path,
-                            height: 28.h,
-                            width: 20.w,
-                            onTap: () {
-                              context.safePop();
-                            }),
-                        Padding(
-                          padding: EdgeInsets.only(left: 106.w),
-                          child: Text(
-                            '자주 묻는 질문'.tr(),
-                            style: textTheme.bodyLarge!.fSize(18),
-                          ),
-                        )
-                      ],
-                    ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 28.h,
+                        width: 20.w,
+                        onTap: () {
+                          context.safePop();
+                        },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 106.w),
+                        child: Text(
+                          '자주 묻는 질문'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(height: 15.h),

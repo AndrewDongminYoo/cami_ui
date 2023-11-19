@@ -38,15 +38,13 @@ class CheckupCatScreen extends StatelessWidget {
             primary: true,
             child: Column(
               children: [
-                _breadcrumbs(context),
+                _buildBreadcrumbs(context),
                 SizedBox(height: 19.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려묘 성격유형검사(CCSI)'.tr(),
-                        style: textTheme.bodyMedium),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('반려묘 성격유형검사(CCSI)'.tr(),
+                      style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
@@ -57,13 +55,11 @@ class CheckupCatScreen extends StatelessWidget {
                 SizedBox(height: 18.h),
                 _buildCcsiButton(context),
                 SizedBox(height: 11.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려묘 성격유형검사'.tr(),
-                        style: textTheme.bodyLarge!.nanum),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('반려묘 성격유형검사'.tr(),
+                      style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
                 _buildInfo(context),
@@ -153,7 +149,7 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _breadcrumbs(BuildContext context) {
+  Widget _buildBreadcrumbs(BuildContext context) {
     return CustomAppBar(
       title: Padding(
         padding: EdgeInsets.only(left: 16.w),

@@ -50,12 +50,10 @@ class VerifyScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 63.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 101.w),
-                    child: Text('본인 인증'.tr(), style: textTheme.bodyLarge),
-                  ),
+                  padding: EdgeInsets.only(left: 101.w),
+                  child: Text('본인 인증'.tr(), style: textTheme.bodyLarge),
                 ),
                 SizedBox(height: 8.h),
                 CustomTextFormField(

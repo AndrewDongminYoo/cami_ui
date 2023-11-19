@@ -51,13 +51,14 @@ class NewCatScreenState extends State<NewCatScreen>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomImageView(
-                          imagePath: Assets.svg.imgArrowLeft.path,
-                          height: 20.r,
-                          width: 20.r,
-                          margin: EdgeInsets.only(bottom: 6.h),
-                          onTap: () {
-                            onTapImgArrowLeft(context);
-                          }),
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 20.r,
+                        width: 20.r,
+                        margin: EdgeInsets.only(bottom: 6.h),
+                        onTap: () {
+                          onTapImgArrowLeft(context);
+                        },
+                      ),
                       Padding(
                         padding: EdgeInsets.only(left: 77.w),
                         child: Text(
@@ -85,7 +86,6 @@ class NewCatScreenState extends State<NewCatScreen>
                   child: CustomTextFormField(
                     controller: editTextController,
                     textInputAction: TextInputAction.done,
-                    alignment: Alignment.center,
                   ),
                 ),
                 SizedBox(height: 33.h),
@@ -172,94 +172,90 @@ class NewCatScreenState extends State<NewCatScreen>
 
   /// Section Widget
   Widget _buildImageRegistration(BuildContext context) {
-    return Align(
-      child: SizedBox(
-        height: 188.h,
-        width: 361.w,
-        child: Stack(
-          alignment: Alignment.bottomRight,
-          children: [
-            CustomImageView(
-              imagePath: Assets.svg.imgGroup.path,
-              height: 21.h,
-              width: 64.w,
-              alignment: Alignment.bottomLeft,
-              margin: EdgeInsets.only(bottom: 45.h),
-            ),
-            CustomImageView(
-              imagePath: Assets.images.icoMenuVert.path,
-              height: 24.r,
-              width: 24.r,
-              alignment: Alignment.bottomRight,
-              margin: EdgeInsets.only(bottom: 44.h),
-            ),
-            Align(
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
-                decoration: AppDecoration.fillGray50
-                    .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CustomImageView(
-                      imagePath: Assets.images.imgCatProfile.path,
-                      height: 128.h,
-                      width: 122.w,
-                      radius: BorderRadius.circular(61.w),
-                      margin: EdgeInsets.only(bottom: 28.h),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsets.only(left: 24.w, top: 11.h, bottom: 4.h),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('프로필 사진을 등록해주세요'.tr(),
-                              style: textTheme.bodyMedium),
-                          SizedBox(height: 1.h),
-                          SizedBox(
-                            width: 156.w,
-                            child: Text(
-                              '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: textTheme.bodySmall!
-                                  .colored(const Color(0xFFA3A3A3))
-                                  .tight,
-                            ),
-                          ),
-                          SizedBox(height: 2.h),
-                          SizedBox(
-                            width: 145.w,
-                            child: Text(
-                              '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: textTheme.bodySmall!
-                                  .colored(const Color(0xFFA3A3A3))
-                                  .tight,
-                            ),
-                          ),
-                          SizedBox(height: 8.h),
-                          CustomElevatedButton(
-                            onPressed: (context) {
-                              // TODO: implement onPressed
-                            },
-                            width: 121.w,
-                            text: '이미지 등록하기'.tr(),
-                            buttonStyle: CustomButtonStyles.fillBlue,
-                            buttonTextStyle: textTheme.bodyMedium!
-                                .colored(const Color(0xFF171717)),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+    return Container(
+      alignment: Alignment.center,
+      height: 188.h,
+      width: 361.w,
+      child: Stack(
+        alignment: Alignment.bottomRight,
+        children: [
+          CustomImageView(
+            imagePath: Assets.svg.imgGroup.path,
+            height: 21.h,
+            width: 64.w,
+            alignment: Alignment.bottomLeft,
+            margin: EdgeInsets.only(bottom: 45.h),
+          ),
+          CustomImageView(
+            imagePath: Assets.images.icoMenuVert.path,
+            height: 24.r,
+            width: 24.r,
+            alignment: Alignment.bottomRight,
+            margin: EdgeInsets.only(bottom: 44.h),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
+            decoration: AppDecoration.fillGray50
+                .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomImageView(
+                  imagePath: Assets.images.imgCatProfile.path,
+                  height: 128.h,
+                  width: 122.w,
+                  radius: BorderRadius.circular(61.w),
+                  margin: EdgeInsets.only(bottom: 28.h),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.only(left: 24.w, top: 11.h, bottom: 4.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('프로필 사진을 등록해주세요'.tr(), style: textTheme.bodyMedium),
+                      SizedBox(height: 1.h),
+                      SizedBox(
+                        width: 156.w,
+                        child: Text(
+                          '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: textTheme.bodySmall!
+                              .colored(const Color(0xFFA3A3A3))
+                              .tight,
+                        ),
+                      ),
+                      SizedBox(height: 2.h),
+                      SizedBox(
+                        width: 145.w,
+                        child: Text(
+                          '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: textTheme.bodySmall!
+                              .colored(const Color(0xFFA3A3A3))
+                              .tight,
+                        ),
+                      ),
+                      SizedBox(height: 8.h),
+                      CustomElevatedButton(
+                        onPressed: (context) {
+                          // TODO: implement onPressed
+                        },
+                        width: 121.w,
+                        text: '이미지 등록하기'.tr(),
+                        buttonStyle: CustomButtonStyles.fillBlue,
+                        buttonTextStyle: textTheme.bodyMedium!
+                            .colored(const Color(0xFF171717)),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

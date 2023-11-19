@@ -49,15 +49,12 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
             primary: true,
             child: Column(
               children: [
-                _breadcrumbs(context),
+                _buildBreadcrumbs(context),
                 SizedBox(height: 19.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child:
-                        Text('입양준비검사(DPAI)'.tr(), style: textTheme.bodyMedium),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('입양준비검사(DPAI)'.tr(), style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
@@ -78,33 +75,28 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                   alignment: Alignment.centerLeft,
                 ),
                 SizedBox(height: 11.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child:
-                        Text('입양준비검사'.tr(), style: textTheme.bodyLarge!.nanum),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('입양준비검사'.tr(), style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Row(
-                      children: [
-                        CustomImageView(
-                          imagePath: Assets.images.imgInfo.path,
-                          height: 12.h,
-                          width: 68.w,
-                          margin: EdgeInsets.symmetric(vertical: 4.h),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 8.w),
-                          child: Text('(4)'.tr(), style: textTheme.bodyMedium),
-                        ),
-                      ],
-                    ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.images.imgInfo.path,
+                        height: 12.h,
+                        width: 68.w,
+                        margin: EdgeInsets.symmetric(vertical: 4.h),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 8.w),
+                        child: Text('(4)'.tr(), style: textTheme.bodyMedium),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: 7.h),
@@ -143,7 +135,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
   }
 
   /// Section Widget
-  Widget _breadcrumbs(BuildContext context) {
+  Widget _buildBreadcrumbs(BuildContext context) {
     return CustomAppBar(
       title: Padding(
         padding: EdgeInsets.only(left: 16.w),

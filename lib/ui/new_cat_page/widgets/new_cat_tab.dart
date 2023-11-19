@@ -49,15 +49,13 @@ class NewCatTabState extends State<NewCatTab>
               children: [
                 SizedBox(height: 33.h),
                 Column(children: [
-                  Align(
+                  Container(
                     alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 16.w),
-                      child: Text(
-                        '묘종'.tr(),
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFF1F2937)),
-                      ),
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text(
+                      '묘종'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFF1F2937)),
                     ),
                   ),
                   SizedBox(height: 9.h),
@@ -84,15 +82,13 @@ class NewCatTabState extends State<NewCatTab>
                     ),
                   ),
                   SizedBox(height: 33.h),
-                  Align(
+                  Container(
                     alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 16.w),
-                      child: Text(
-                        '중성화 수술 여부'.tr(),
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFF1F2937)),
-                      ),
+                    padding: EdgeInsets.only(left: 16.w),
+                    child: Text(
+                      '중성화 수술 여부'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFF1F2937)),
                     ),
                   ),
                   SizedBox(height: 9.h),

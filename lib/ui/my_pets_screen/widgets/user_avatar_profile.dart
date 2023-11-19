@@ -26,54 +26,52 @@ class UserAvatarProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
+    return Container(
       alignment: Alignment.centerLeft,
-      child: Padding(
-        padding: EdgeInsets.only(left: 15.w, right: 72.w),
-        child: Row(
-          children: [
-            CustomImageView(
-              imagePath: imagePath ?? Assets.images.avatarDefault.path,
-              height: 100.r,
-              width: 100.r,
-              radius: BorderRadius.circular(50.w),
+      padding: EdgeInsets.only(left: 15.w, right: 72.w),
+      child: Row(
+        children: [
+          CustomImageView(
+            imagePath: imagePath ?? Assets.images.avatarDefault.path,
+            height: 100.r,
+            width: 100.r,
+            radius: BorderRadius.circular(50.w),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 24.w, top: 30.h, bottom: 25.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(children: [
+                  Text(
+                    name,
+                    style:
+                        textTheme.bodyLarge!.colored(const Color(0xFF202020)),
+                  ),
+                  Text(
+                    '님, 반가워요!'.tr(),
+                    style:
+                        textTheme.bodyLarge!.colored(const Color(0xFF202020)),
+                  )
+                ]),
+                SizedBox(height: 3.h),
+                Text(mail,
+                    style: textTheme.bodySmall!
+                        .colored(const Color(0xFFA3A3A3))
+                        .fSize(11))
+              ],
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 24.w, top: 30.h, bottom: 25.h),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(children: [
-                    Text(
-                      name,
-                      style:
-                          textTheme.bodyLarge!.colored(const Color(0xFF202020)),
-                    ),
-                    Text(
-                      '님, 반가워요!'.tr(),
-                      style:
-                          textTheme.bodyLarge!.colored(const Color(0xFF202020)),
-                    )
-                  ]),
-                  SizedBox(height: 3.h),
-                  Text(mail,
-                      style: textTheme.bodySmall!
-                          .colored(const Color(0xFFA3A3A3))
-                          .fSize(11))
-                ],
-              ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 2.w, top: 26.h, bottom: 42.h),
+            child: CustomIconButton(
+              height: 32.r,
+              width: 32.r,
+              padding: EdgeInsets.all(8.w),
+              child: CustomImageView(imagePath: Assets.svg.imgSettings.path),
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 2.w, top: 26.h, bottom: 42.h),
-              child: CustomIconButton(
-                height: 32.r,
-                width: 32.r,
-                padding: EdgeInsets.all(8.w),
-                child: CustomImageView(imagePath: Assets.svg.imgSettings.path),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

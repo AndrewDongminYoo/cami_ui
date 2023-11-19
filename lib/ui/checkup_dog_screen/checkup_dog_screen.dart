@@ -36,15 +36,13 @@ class CheckupDogScreen extends StatelessWidget {
             primary: true,
             child: Column(
               children: [
-                _breadcrumbs(context),
+                _buildBreadcrumbs(context),
                 SizedBox(height: 19.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려견 성격유형검사(DCSI-II)'.tr(),
-                        style: textTheme.bodyMedium),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('반려견 성격유형검사(DCSI-II)'.tr(),
+                      style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
@@ -55,13 +53,11 @@ class CheckupDogScreen extends StatelessWidget {
                 SizedBox(height: 18.h),
                 _buildDCSIButton(context),
                 SizedBox(height: 11.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Text('반려견 성격유형검사'.tr(),
-                        style: textTheme.bodyLarge!.nanum),
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Text('반려견 성격유형검사'.tr(),
+                      style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
                 _buildInfo(context),
@@ -152,7 +148,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _breadcrumbs(BuildContext context) {
+  Widget _buildBreadcrumbs(BuildContext context) {
     return CustomAppBar(
       title: Padding(
         padding: EdgeInsets.only(left: 16.w),

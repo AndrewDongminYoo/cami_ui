@@ -155,15 +155,13 @@ class LogInScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Padding(
+          Container(
             padding: EdgeInsets.only(
               top: 9.h,
               bottom: 7.h,
             ),
-            child: SizedBox(
-              width: 133.w,
-              child: const Divider(color: Color(0xFF9CA3AF)),
-            ),
+            width: 133.w,
+            child: const Divider(color: Color(0xFF9CA3AF)),
           ),
           Padding(
             padding: EdgeInsets.only(left: 16.w),
@@ -172,17 +170,15 @@ class LogInScreen extends StatelessWidget {
               style: textTheme.bodySmall!.colored(const Color(0xFF9CA3AF)),
             ),
           ),
-          Padding(
+          Container(
             padding: EdgeInsets.only(
               top: 9.h,
               bottom: 7.h,
             ),
-            child: SizedBox(
-              width: 154.w,
-              child: Divider(
-                color: const Color(0xFF9CA3AF),
-                indent: 21.w,
-              ),
+            width: 154.w,
+            child: Divider(
+              color: const Color(0xFF9CA3AF),
+              indent: 21.w,
             ),
           ),
         ],

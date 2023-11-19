@@ -42,30 +42,29 @@ class _FaqScreenState extends State<FaqScreen> {
             primary: true,
             child: Column(
               children: [
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CustomImageView(
-                            imagePath: Assets.svg.imgArrowLeft.path,
-                            height: 20.r,
-                            width: 20.r,
-                            margin: EdgeInsets.only(bottom: 6.h),
-                            onTap: () {
-                              context.safePop();
-                            }),
-                        Padding(
-                          padding: EdgeInsets.only(left: 105.w),
-                          child: Text(
-                            '자주 묻는 질문'.tr(),
-                            style: textTheme.bodyLarge!.fSize(18),
-                          ),
-                        )
-                      ],
-                    ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 20.r,
+                        width: 20.r,
+                        margin: EdgeInsets.only(bottom: 6.h),
+                        onTap: () {
+                          context.safePop();
+                        },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 105.w),
+                        child: Text(
+                          '자주 묻는 질문'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(height: 16.h),
@@ -124,16 +123,15 @@ class _FaqScreenState extends State<FaqScreen> {
                             style: textTheme.bodyMedium),
                       ),
                       SizedBox(height: 10.h),
-                      Align(
-                        child: Container(
-                          width: 314.w,
-                          margin: EdgeInsets.only(left: 20.w, right: 26.w),
-                          child: Text(
-                            '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr(),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: textTheme.bodyMedium!.relaxed,
-                          ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: 314.w,
+                        margin: EdgeInsets.only(left: 20.w, right: 26.w),
+                        child: Text(
+                          '1. 웹 브라우저가 Explorer인 경우, 버전 10 이상인지 확인해야하며'.tr(),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: textTheme.bodyMedium!.relaxed,
                         ),
                       ),
                       Padding(
@@ -164,17 +162,16 @@ class _FaqScreenState extends State<FaqScreen> {
                         ),
                       ),
                       SizedBox(height: 29.h),
-                      Align(
-                        child: Container(
-                          width: 317.w,
-                          margin: EdgeInsets.only(left: 20.w, right: 23.w),
-                          child: Text(
-                            '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
-                                .tr(),
-                            maxLines: 4,
-                            overflow: TextOverflow.ellipsis,
-                            style: textTheme.bodyMedium!.relaxed,
-                          ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: 317.w,
+                        margin: EdgeInsets.only(left: 20.w, right: 23.w),
+                        child: Text(
+                          '위 사항을 확인하신 후에도 결제가 되지 않는 경우, 현재 사용중인 웹브라우저의 종류와 버전, 그리고 기기 종류 (PC/모바일의 경우 기기 브랜드 필요)를 확인하여 문의주시면 빠르게 도와드리겠습니다.'
+                              .tr(),
+                          maxLines: 4,
+                          overflow: TextOverflow.ellipsis,
+                          style: textTheme.bodyMedium!.relaxed,
                         ),
                       ),
                       SizedBox(height: 24.h),
@@ -194,7 +191,7 @@ class _FaqScreenState extends State<FaqScreen> {
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
-                      Align(
+                      Center(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [

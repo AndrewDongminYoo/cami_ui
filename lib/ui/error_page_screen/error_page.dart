@@ -48,7 +48,7 @@ class ErrorPage extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Align(
+                    Center(
                       child: Text(
                         error.code.toString(),
                         style: GoogleFonts.poppins(

@@ -63,13 +63,14 @@ class EditProfileScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomImageView(
-                          imagePath: Assets.svg.imgArrowLeft.path,
-                          height: 20.r,
-                          width: 20.r,
-                          margin: EdgeInsets.only(bottom: 6.h),
-                          onTap: () {
-                            onTapImgArrowLeft(context);
-                          }),
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 20.r,
+                        width: 20.r,
+                        margin: EdgeInsets.only(bottom: 6.h),
+                        onTap: () {
+                          onTapImgArrowLeft(context);
+                        },
+                      ),
                       Padding(
                         padding: EdgeInsets.only(left: 124.w),
                         child: Text(
@@ -118,14 +119,13 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 9.h),
                 _buildEditTextRow(context),
                 SizedBox(height: 8.h),
-                Align(
-                  child: Container(
-                    height: 40.h,
-                    width: 361.w,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFE5E5E5),
-                      borderRadius: BorderRadius.circular(8.w),
-                    ),
+                Container(
+                  alignment: Alignment.center,
+                  height: 40.h,
+                  width: 361.w,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE5E5E5),
+                    borderRadius: BorderRadius.circular(8.w),
                   ),
                 ),
                 SizedBox(height: 5.h),
@@ -286,7 +286,6 @@ class EditProfileScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
           controller: editTextController,
-          alignment: Alignment.center,
           borderDecoration: TextFormFieldStyleHelper.fillOnError,
           fillColor: const Color(0xFFE5E5E5)),
     );
@@ -299,26 +298,25 @@ class EditProfileScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildEditTextRow(BuildContext context) {
-    return Align(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _buildEditTextWithButton(context),
-            CustomElevatedButton(
-              onPressed: (context) {
-                // TODO: implement onPressed
-              },
-              width: 142.w,
-              text: '인증번호 받기'.tr(),
-              margin: EdgeInsets.only(left: 8.w),
-              buttonStyle: CustomButtonStyles.fillBlueGray,
-              buttonTextStyle:
-                  textTheme.bodyMedium!.colored(const Color(0xFF6B7280)),
-            )
-          ],
-        ),
+    return Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _buildEditTextWithButton(context),
+          CustomElevatedButton(
+            onPressed: (context) {
+              // TODO: implement onPressed
+            },
+            width: 142.w,
+            text: '인증번호 받기'.tr(),
+            margin: EdgeInsets.only(left: 8.w),
+            buttonStyle: CustomButtonStyles.fillBlueGray,
+            buttonTextStyle:
+                textTheme.bodyMedium!.colored(const Color(0xFF6B7280)),
+          )
+        ],
       ),
     );
   }
@@ -329,7 +327,6 @@ class EditProfileScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editTextController1,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -340,7 +337,6 @@ class EditProfileScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editTextController2,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -351,7 +347,6 @@ class EditProfileScreen extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: CustomTextFormField(
         controller: editTextController3,
-        alignment: Alignment.center,
       ),
     );
   }
@@ -363,20 +358,43 @@ class EditProfileScreen extends StatelessWidget {
       child: CustomTextFormField(
         controller: editTextController4,
         textInputAction: TextInputAction.done,
-        alignment: Alignment.center,
       ),
     );
   }
 
   /// Section Widget
   Widget _buildDropdownRow(BuildContext context) {
-    return Align(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomDropDownFormField(
+    return Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomDropDownFormField(
+            width: 91.w,
+            icon: Container(
+              padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF5F5F5),
+                borderRadius: BorderRadius.circular(8.w),
+              ),
+              child: CustomImageView(
+                  imagePath: Assets.svg.imgArrowDown.path,
+                  height: 8.h,
+                  width: 12.w),
+            ),
+            items: dropdownItemList0,
+            onChanged: (value) {
+              // TODO: implement onChanged
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
+            child: Text('년'.tr(), style: textTheme.bodyLarge),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 17.w),
+            child: CustomDropDownFormField(
               width: 91.w,
               icon: Container(
                 padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
@@ -389,66 +407,41 @@ class EditProfileScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList0,
+              items: dropdownItemList1,
               onChanged: (value) {
                 // TODO: implement onChanged
               },
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('년'.tr(), style: textTheme.bodyLarge),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 17.w),
-              child: CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
+            child: Text('월'.tr(), style: textTheme.bodyLarge),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.w),
+            child: CustomDropDownFormField(
+              width: 91.w,
+              icon: Container(
+                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(8.w),
                 ),
-                items: dropdownItemList1,
-                onChanged: (value) {
-                  // TODO: implement onChanged
-                },
+                child: CustomImageView(
+                    imagePath: Assets.svg.imgArrowDown.path,
+                    height: 8.h,
+                    width: 12.w),
               ),
+              items: dropdownItemList2,
+              onChanged: (value) {
+                // TODO: implement onChanged
+              },
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-              child: Text('월'.tr(), style: textTheme.bodyLarge),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16.w),
-              child: CustomDropDownFormField(
-                width: 91.w,
-                icon: Container(
-                  padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8.w),
-                  ),
-                  child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDown.path,
-                      height: 8.h,
-                      width: 12.w),
-                ),
-                items: dropdownItemList2,
-                onChanged: (value) {
-                  // TODO: implement onChanged
-                },
-              ),
-            ),
-            Padding(
-                padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-                child: Text('일'.tr(), style: textTheme.bodyLarge))
-          ],
-        ),
+          ),
+          Padding(
+              padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
+              child: Text('일'.tr(), style: textTheme.bodyLarge))
+        ],
       ),
     );
   }
@@ -460,13 +453,14 @@ class EditProfileScreen extends StatelessWidget {
       child: Row(
         children: [
           CustomRadioButton(
-              text: '여성'.tr(),
-              value: radioList[0],
-              groupValue: radioGroup,
-              textStyle: textTheme.bodyLarge,
-              onChange: (value) {
-                radioGroup = value;
-              }),
+            text: '여성'.tr(),
+            value: radioList[0],
+            groupValue: radioGroup,
+            textStyle: textTheme.bodyLarge,
+            onChange: (value) {
+              radioGroup = value;
+            },
+          ),
           Padding(
             padding: EdgeInsets.only(left: 74.w),
             child: CustomRadioButton(

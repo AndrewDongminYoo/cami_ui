@@ -47,41 +47,38 @@ class ContactUsRegisterScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 15.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CustomImageView(
-                            imagePath: Assets.svg.imgArrowLeft.path,
-                            height: 20.r,
-                            width: 20.r,
-                            margin: EdgeInsets.only(bottom: 6.h),
-                            onTap: () {
-                              onTapImgArrowLeft(context);
-                            }),
-                        Padding(
-                          padding: EdgeInsets.only(left: 132.w),
-                          child: Text(
-                            '1:1 문의'.tr(),
-                            style: textTheme.bodyLarge!.fSize(18),
-                          ),
-                        )
-                      ],
-                    ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 20.r,
+                        width: 20.r,
+                        margin: EdgeInsets.only(bottom: 6.h),
+                        onTap: () {
+                          onTapImgArrowLeft(context);
+                        },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 132.w),
+                        child: Text(
+                          '1:1 문의'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(height: 40.h),
                 Divider(color: Colors.black, indent: 16.w, endIndent: 16.w),
                 SizedBox(height: 17.h),
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 32.w),
-                    child: Text('1:1 문의하기'.tr(), style: textTheme.bodyLarge),
-                  ),
+                  padding: EdgeInsets.only(left: 32.w),
+                  child: Text('1:1 문의하기'.tr(), style: textTheme.bodyLarge),
                 ),
                 SizedBox(height: 16.h),
                 Divider(

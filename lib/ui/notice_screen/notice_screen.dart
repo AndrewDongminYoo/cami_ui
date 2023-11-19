@@ -31,28 +31,27 @@ class NoticeScreen extends StatelessWidget {
             primary: true,
             child: Column(
               children: [
-                Align(
+                Container(
                   alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.w),
-                    child: Row(
-                      children: [
-                        CustomImageView(
-                            imagePath: Assets.svg.imgArrowLeft.path,
-                            height: 28.h,
-                            width: 20.w,
-                            onTap: () {
-                              onTapImgArrowLeft(context);
-                            }),
-                        Padding(
-                          padding: EdgeInsets.only(left: 127.w),
-                          child: Text(
-                            '공지사항'.tr(),
-                            style: textTheme.bodyLarge!.fSize(18),
-                          ),
-                        )
-                      ],
-                    ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.svg.imgArrowLeft.path,
+                        height: 28.h,
+                        width: 20.w,
+                        onTap: () {
+                          onTapImgArrowLeft(context);
+                        },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 127.w),
+                        child: Text(
+                          '공지사항'.tr(),
+                          style: textTheme.bodyLarge!.fSize(18),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(height: 16.h),

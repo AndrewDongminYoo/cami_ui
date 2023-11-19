@@ -94,14 +94,13 @@ class PetAvatarProfile extends StatelessWidget {
                         child: Stack(
                           alignment: Alignment.topCenter,
                           children: [
-                            Align(
-                              child: Container(
-                                height: 20.h,
-                                width: 120.w,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFFFFF50),
-                                  borderRadius: BorderRadius.circular(8.w),
-                                ),
+                            Container(
+                              alignment: Alignment.center,
+                              height: 20.h,
+                              width: 120.w,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFFFF50),
+                                borderRadius: BorderRadius.circular(8.w),
                               ),
                             ),
                             Align(
