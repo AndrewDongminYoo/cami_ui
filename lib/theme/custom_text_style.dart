@@ -15,7 +15,7 @@ extension TextStyleX on TextStyle {
   TextStyle get thick => copyWith(fontWeight: FontWeight.w900);
 
   // Font Color
-  TextStyle colored(Color color) => colored(color);
+  TextStyle colored(Color paint) => copyWith(color: paint);
   TextStyle get noColor => copyWith(color: Colors.black);
 
   /// Font Size
