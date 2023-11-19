@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 // 🌎 Project imports:
 import '/gen/assets.gen.dart';
@@ -30,115 +31,142 @@ class CamiAppFooter extends StatelessWidget {
           CustomImageView(
               imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
           SizedBox(height: 37.h),
-          Row(children: [
-            GestureDetector(
-              onTap: () {
-                context.pushNamed(AppRoutes.noticeScreen);
-              },
-              child: Text('공지사항'.tr(),
-                  style: textTheme.bodySmall!.colored(Colors.white)),
-            ),
-            GestureDetector(
-              onTap: () {
-                context.pushNamed(AppRoutes.faqScreen);
-              },
-              child: Padding(
-                padding: EdgeInsets.only(left: 17.w),
-                child: Text('자주 묻는 질문'.tr(),
-                    style: textTheme.bodySmall!.colored(Colors.white)),
+          Row(
+            children: [
+              PressableText(
+                '공지사항'.tr(),
+                onTap: () {
+                  context.pushNamed(AppRoutes.noticeScreen);
+                },
               ),
-            ),
-            Padding(
-                padding: EdgeInsets.only(left: 17.w),
-                child: Text('이벤트'.tr(),
-                    style: textTheme.bodySmall!.colored(Colors.white)))
-          ]),
+              SizedBox(width: 17.w),
+              PressableText(
+                '자주 묻는 질문'.tr(),
+                onTap: () {
+                  context.pushNamed(AppRoutes.faqScreen);
+                },
+              ),
+              SizedBox(width: 17.w),
+              PressableText(
+                '이벤트'.tr(),
+              )
+            ],
+          ),
           SizedBox(height: 9.h),
           Padding(
             padding: EdgeInsets.only(right: 19.w),
             child: Row(
               children: [
-                GestureDetector(
+                PressableText(
+                  '고객센터'.tr(),
                   onTap: () {
                     context.pushNamed(AppRoutes.contactUsRegisterScreen);
                   },
-                  child: Text(
-                    '고객센터'.tr(),
-                    style:
-                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
-                  ),
+                  color: const Color(0xFFA3A3A3),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.w),
-                  child: Text(
-                    '이용약관'.tr(),
-                    style:
-                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
-                  ),
+                SizedBox(width: 15.w),
+                PressableText(
+                  '이용약관'.tr(),
+                  color: const Color(0xFFA3A3A3),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.w),
-                  child: Text(
-                    '개인정보취급방침'.tr(),
-                    style:
-                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
-                  ),
+                SizedBox(width: 15.w),
+                PressableText(
+                  '개인정보취급방침'.tr(),
+                  color: const Color(0xFFA3A3A3),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.w),
-                  child: Text(
-                    '기관 제휴 및 구매 문의'.tr(),
-                    style:
-                        textTheme.bodySmall!.colored(const Color(0xFFA3A3A3)),
-                  ),
+                SizedBox(width: 15.w),
+                PressableText(
+                  '기관 제휴 및 구매 문의'.tr(),
+                  color: const Color(0xFFA3A3A3),
                 )
               ],
             ),
           ),
           SizedBox(height: 38.h),
-          Row(children: [
-            Text('Address', style: textTheme.bodySmall!.colored(Colors.white)),
-            Padding(
-                padding: EdgeInsets.only(left: 131.w),
-                child: Text('Contact',
-                    style: textTheme.bodySmall!.colored(Colors.white)))
-          ]),
-          SizedBox(height: 9.h),
-          Padding(
-            padding: EdgeInsets.only(right: 72.w),
-            child: Row(
-              children: [
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('서울시 구로구 디지털로34길 55'.tr(),
-                      style: textTheme.bodySmall!.colored(Colors.white)),
-                  Text('코오롱싸이언스밸리2차 B101'.tr(),
-                      style: textTheme.bodySmall!.colored(Colors.white))
-                ]),
-                Padding(
-                  padding: EdgeInsets.only(left: 17.w),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('business@cami.kr',
-                          style: textTheme.bodySmall!.colored(Colors.white)),
-                      Text('02-861-6828', style: textTheme.bodySmall!.fSize(11))
-                    ],
-                  ),
+          const Row(
+            children: [
+              Expanded(
+                child: PressableText(
+                  'Address',
                 ),
-              ],
-            ),
+              ),
+              Expanded(
+                child: PressableText(
+                  'Contact',
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 9.h),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  '서울시 구로구 디지털로 34길 55 코오롱 싸이언스밸리 2차 B101'.tr(),
+                  style: textTheme.bodySmall!.colored(Colors.white),
+                  softWrap: true,
+                  maxLines: 3,
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    PressableText(
+                      'business@cami.kr',
+                      onTap: () {
+                        launchUrlString('mailto:business@cami.kr');
+                      },
+                    ),
+                    PressableText(
+                      '02-861-6828',
+                      onTap: () {
+                        launchUrlString('tel:+8228616828');
+                      },
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 45.h),
-          Text('주식회사 카미랩'.tr(),
-              style: textTheme.bodySmall!.colored(Colors.white)),
-          Text('대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr(),
-              style: textTheme.bodySmall!.colored(Colors.white)),
+          PressableText(
+            '주식회사 카미랩'.tr(),
+          ),
+          PressableText(
+            '대표: 조윤수 | 사업자등록번호 : 539-81-02640'.tr(),
+          ),
           SizedBox(height: 15.h),
-          Text('Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
-              style: textTheme.bodySmall!.colored(Colors.white)),
+          const PressableText(
+            'Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
+          ),
           SizedBox(height: 39.h),
           const SocialLinkIcons()
         ],
+      ),
+    );
+  }
+}
+
+class PressableText extends StatelessWidget {
+  const PressableText(
+    this.text, {
+    super.key,
+    this.onTap,
+    this.color = Colors.white,
+  });
+
+  final VoidCallback? onTap;
+  final String text;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Text(
+        text,
+        style: textTheme.bodySmall!.colored(color),
       ),
     );
   }
