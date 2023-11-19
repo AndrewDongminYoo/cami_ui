@@ -34,6 +34,9 @@ class $AssetsFontsGen {
   /// File path: assets/fonts/NanumSquareNeo-Regular.ttf
   String get nanumSquareNeoRegular => 'assets/fonts/NanumSquareNeo-Regular.ttf';
 
+  /// File path: assets/fonts/NotoColorEmoji-Regular.ttf
+  String get notoColorEmojiRegular => 'assets/fonts/NotoColorEmoji-Regular.ttf';
+
   /// File path: assets/fonts/Poppins-Black.ttf
   String get poppinsBlack => 'assets/fonts/Poppins-Black.ttf';
 
@@ -68,6 +71,7 @@ class $AssetsFontsGen {
         nanumSquareNeoHeavy,
         nanumSquareNeoLight,
         nanumSquareNeoRegular,
+        notoColorEmojiRegular,
         poppinsBlack,
         poppinsBold,
         poppinsExtraBold,
@@ -366,11 +370,14 @@ class $AssetsLottiesGen {
 class $AssetsMessagesGen {
   const $AssetsMessagesGen();
 
+  /// File path: assets/messages/en.json
+  String get en => 'assets/messages/en.json';
+
   /// File path: assets/messages/ko.json
   String get ko => 'assets/messages/ko.json';
 
   /// List of all assets
-  List<String> get values => [ko];
+  List<String> get values => [en, ko];
 }
 
 class $AssetsSvgGen {

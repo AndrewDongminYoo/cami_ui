@@ -16,7 +16,6 @@ class AppNavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
         appBar: const GatewayTitle(),

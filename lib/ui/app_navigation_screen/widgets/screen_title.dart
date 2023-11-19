@@ -67,15 +67,16 @@ enum DevStatus {
 
 extension on DevStatus {
   Widget get icon {
+    final emoji = GoogleFonts.notoColorEmoji();
     switch (name) {
       case 'ON_PROGRESS':
-        return Text('🌀', style: GoogleFonts.notoColorEmoji());
+        return Text('🌀', style: emoji);
       case 'BLOCKING':
-        return Text('⛔️', style: GoogleFonts.notoColorEmoji());
+        return Text('⛔️', style: emoji);
       case 'DONE':
-        return Text('✅', style: GoogleFonts.notoColorEmoji());
+        return Text('✅', style: emoji);
       default:
-        return Text('❕', style: GoogleFonts.notoColorEmoji());
+        return Text('❕', style: emoji);
     }
   }
 }
