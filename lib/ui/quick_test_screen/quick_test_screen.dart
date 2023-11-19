@@ -38,11 +38,12 @@ class QuickTestScreen extends StatelessWidget {
                       Text('반짝 테스트'.tr(), style: textTheme.headlineSmall),
                       SizedBox(height: 66.h),
                       CustomImageView(
-                          imagePath: Assets.images.imgImage257x241.path,
-                          height: 257.h,
-                          width: 241.w),
+                        imagePath: Assets.images.imgImage257x241.path,
+                        height: 257.h,
+                        width: 241.w,
+                      ),
                       SizedBox(height: 34.h),
-                      Padding(
+                      Container(
                         padding: EdgeInsets.symmetric(horizontal: 53.w),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -62,22 +63,23 @@ class QuickTestScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 18.h),
-                      Padding(
-                        padding: EdgeInsets.only(left: 28.w, right: 32.w),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                      RichText(
+                        text: TextSpan(
                           children: [
-                            Text(
-                              '인싸! 아싸!'.tr(),
+                            TextSpan(
+                              text: '인싸! 아싸!'.tr(),
                               style: textTheme.bodyMedium!
                                   .colored(const Color(0xFFF0803D)),
                             ),
-                            Padding(
-                                padding: EdgeInsets.only(left: 4.w),
-                                child: Text('라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr(),
-                                    style: textTheme.bodyMedium))
+                            _buildSpacing(width: 4.w),
+                            TextSpan(
+                              text: '라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr(),
+                              style: textTheme.bodyMedium,
+                            )
                           ],
                         ),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
                       ),
                       SizedBox(height: 30.h),
                       Container(
@@ -114,9 +116,10 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 64.h),
                       CustomImageView(
-                          imagePath: Assets.images.imgImage1.path,
-                          height: 257.h,
-                          width: 241.w),
+                        imagePath: Assets.images.imgImage1.path,
+                        height: 257.h,
+                        width: 241.w,
+                      ),
                       SizedBox(height: 35.h),
                       Text(
                         '삼칠이 작명소'.tr(),
@@ -160,15 +163,17 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 15.h),
                       CustomElevatedButton(
-                          width: 117.w,
-                          text: '진단시작'.tr(),
-                          buttonStyle: CustomButtonStyles.fillBlack,
-                          onPressed: onTapGoToTest),
+                        width: 117.w,
+                        text: '진단시작'.tr(),
+                        buttonStyle: CustomButtonStyles.fillBlack,
+                        onPressed: onTapGoToNaming,
+                      ),
                       SizedBox(height: 64.h),
                       CustomImageView(
-                          imagePath: Assets.images.imgImage2.path,
-                          height: 257.h,
-                          width: 241.w),
+                        imagePath: Assets.images.imgImage2.path,
+                        height: 257.h,
+                        width: 241.w,
+                      ),
                       SizedBox(height: 34.h),
                       RichText(
                         text: TextSpan(
@@ -206,7 +211,7 @@ class QuickTestScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 18.h),
-                      Padding(
+                      Container(
                         padding: EdgeInsets.symmetric(horizontal: 39.w),
                         child: RichText(
                           text: TextSpan(
@@ -264,12 +269,12 @@ class QuickTestScreen extends StatelessWidget {
     );
   }
 
-  WidgetSpan _buildSpacing() {
-    return WidgetSpan(child: SizedBox(width: 3.w));
+  WidgetSpan _buildSpacing({double? width}) {
+    return WidgetSpan(child: SizedBox(width: width ?? 3.w));
   }
 
   /// Navigates to the namingScreen when the action is triggered.
-  void onTapGoToTest(BuildContext context) {
+  void onTapGoToNaming(BuildContext context) {
     context.goNamed(AppRoutes.namingScreen);
   }
 }

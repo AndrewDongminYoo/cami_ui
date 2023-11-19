@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -65,46 +66,56 @@ class NamingScreen extends StatelessWidget {
                 SizedBox(
                   height: 283.h,
                   width: 289.w,
-                  child: Stack(alignment: Alignment.topCenter, children: [
-                    Align(
-                      child: Padding(
+                  child: Stack(
+                    alignment: Alignment.topCenter,
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
                         padding: EdgeInsets.symmetric(horizontal: 27.w),
                         child: Column(
                           children: [
-                            Text('강렬한 거북이의 안내자'.tr(),
-                                style: textTheme.headlineSmall!.thick),
+                            AutoSizeText(
+                              '강렬한 거북이의 안내자'.tr(),
+                              style: textTheme.headlineSmall!.thick,
+                              maxLines: 1,
+                            ),
                             SizedBox(height: 196.h),
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                            RichText(
+                              textAlign: TextAlign.center,
+                              text: TextSpan(
                                 children: [
-                                  Text('A.', style: textTheme.bodyLarge),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 2.w),
-                                    child: Text('꼬리'.tr(),
-                                        style: textTheme.bodyLarge),
+                                  TextSpan(
+                                      text: 'A.', style: textTheme.bodyLarge),
+                                  WidgetSpan(child: SizedBox(width: 2.w)),
+                                  TextSpan(
+                                      text: '꼬리'.tr(),
+                                      style: textTheme.bodyLarge),
+                                  WidgetSpan(child: SizedBox(width: 3.w)),
+                                  TextSpan(
+                                      text: '의 아메리카 원주민 이름은'.tr(),
+                                      style: textTheme.bodyLarge)
+                                ],
+                              ),
+                            ),
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '강렬한 거북이의 안내자'.tr(),
+                                    style: textTheme.bodyLarge!.bold
+                                        .colored(const Color(0xFFF0803D)),
                                   ),
-                                  Padding(
-                                      padding: EdgeInsets.only(left: 3.w),
-                                      child: Text('의 아메리카 원주민 이름은'.tr(),
-                                          style: textTheme.bodyLarge))
-                                ]),
-                            Row(
-                              children: [
-                                Text(
-                                  '강렬한 거북이의 안내자'.tr(),
-                                  style: textTheme.bodyLarge!.bold
-                                      .colored(const Color(0xFFF0803D)),
-                                ),
-                                Text('입니다.'.tr(), style: textTheme.bodyLarge)
-                              ],
+                                  TextSpan(
+                                      text: '입니다.'.tr(),
+                                      style: textTheme.bodyLarge)
+                                ],
+                              ),
                             ),
                           ],
                         ),
                       ),
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
+                      Container(
+                        alignment: Alignment.topCenter,
                         margin: EdgeInsets.only(top: 67.h, bottom: 83.h),
                         padding: EdgeInsets.symmetric(
                             horizontal: 56.w, vertical: 16.h),
@@ -119,7 +130,7 @@ class NamingScreen extends StatelessWidget {
                               width: 100.r,
                               radius: BorderRadius.circular(50.w),
                             ),
-                            Padding(
+                            Container(
                               padding: EdgeInsets.only(
                                   top: 15.h, right: 2.w, bottom: 11.h),
                               child: Column(
@@ -137,8 +148,8 @@ class NamingScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ),
-                  ]),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 78.h),
                 SliderItemWidget(
@@ -163,7 +174,7 @@ class NamingScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 56.h),
-                Padding(
+                Container(
                   padding: EdgeInsets.symmetric(horizontal: 42.w),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

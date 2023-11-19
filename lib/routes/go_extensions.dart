@@ -58,7 +58,7 @@ extension NavigationExtensions on BuildContext {
     if (canPop()) {
       pop();
     } else {
-      if (kDebugMode) {
+      if (kDebugMode && kIsWeb) {
         goNamed(AppRoutes.appNavigationScreen);
       } else {
         goNamed(AppRoutes.homeScreen);
