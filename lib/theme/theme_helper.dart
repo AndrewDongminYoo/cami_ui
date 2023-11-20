@@ -51,7 +51,7 @@ class ThemeHelper {
       scaffoldBackgroundColor: colorScheme.onPrimaryContainer,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: appTheme.gray90002,
+          backgroundColor: colorScheme.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.h),
           ),
@@ -66,11 +66,11 @@ class ThemeHelper {
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.transparent,
           side: BorderSide(
-            color: appTheme.blueGray10001,
+            color: appTheme.blueGray70001,
             width: 1.h,
           ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.h),
+            borderRadius: BorderRadius.circular(17.h),
           ),
           visualDensity: const VisualDensity(
             vertical: -4,
@@ -109,7 +109,7 @@ class ThemeHelper {
       dividerTheme: DividerThemeData(
         thickness: 1,
         space: 1,
-        color: colorScheme.onPrimary,
+        color: colorScheme.primary,
       ),
     );
   }
@@ -131,7 +131,7 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
-          color: appTheme.gray500,
+          color: colorScheme.onPrimaryContainer,
           fontSize: 14.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
@@ -143,15 +143,15 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         displaySmall: TextStyle(
-          color: appTheme.blueGray800,
+          color: appTheme.indigo400,
           fontSize: 36.fSize,
-          fontFamily: 'NanumSquare Neo',
+          fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
         headlineLarge: TextStyle(
-          color: appTheme.gray90001,
+          color: appTheme.indigo400,
           fontSize: 30.fSize,
-          fontFamily: 'NanumSquare Neo',
+          fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
         headlineMedium: TextStyle(
@@ -167,7 +167,7 @@ class TextThemes {
           fontWeight: FontWeight.w400,
         ),
         titleLarge: TextStyle(
-          color: colorScheme.errorContainer,
+          color: appTheme.deepOrange400,
           fontSize: 23.fSize,
           fontFamily: 'NanumSquare Neo',
           fontWeight: FontWeight.w400,
@@ -179,12 +179,12 @@ class TextThemes {
 class ColorSchemes {
   static final primaryColorScheme = ColorScheme.light(
     // Primary colors
-    primary: Color(0XFFFFFF50),
+    primary: Color(0XFFE5E7EB),
     primaryContainer: Color(0XFF414142),
     secondaryContainer: Color(0XFFD9D9D9),
 
     // Error colors
-    errorContainer: Color(0XFFF0803D),
+    errorContainer: Color(0XFF7392E0),
     onError: Color(0XFFE5E5E5),
     onErrorContainer: Color(0XFF171717),
 
@@ -201,7 +201,8 @@ class PrimaryColors {
   Color get black900 => Color(0XFF000000);
 
   // Blue
-  Color get blue50 => Color(0XFFE6F0FF);
+  Color get blue50 => Color(0XFFE6ECFF);
+  Color get blue5001 => Color(0XFFE6F0FF);
   Color get blue800 => Color(0XFF1D59C4);
 
   // BlueGray
@@ -222,19 +223,20 @@ class PrimaryColors {
   // Gray
   Color get gray100 => Color(0XFFF3F4F6);
   Color get gray10001 => Color(0XFFF5F5F5);
-  Color get gray200 => Color(0XFFE5E7EB);
-  Color get gray20001 => Color(0XFFEEEEEE);
+  Color get gray10002 => Color(0XFFECFDF5);
+  Color get gray200 => Color(0XFFEEEEEE);
   Color get gray300 => Color(0XFFE5E5E5);
   Color get gray50 => Color(0XFFFAFAFA);
   Color get gray500 => Color(0XFFA3A3A3);
-  Color get gray600 => Color(0XFF757575);
-  Color get gray60001 => Color(0XFF6B7280);
+  Color get gray5001 => Color(0XFFF5F8FF);
+  Color get gray600 => Color(0XFF737373);
+  Color get gray60001 => Color(0XFF757575);
+  Color get gray60002 => Color(0XFF6B7280);
   Color get gray700 => Color(0XFF5F6061);
   Color get gray800 => Color(0XFF404040);
   Color get gray900 => Color(0XFF202020);
   Color get gray90001 => Color(0XFF121212);
   Color get gray90002 => Color(0XFF1F2020);
-  Color get gray90003 => Color(0XFF262626);
 
   // Grayc
   Color get gray5004c => Color(0X4C939393);
@@ -246,12 +248,17 @@ class PrimaryColors {
   Color get indigo200 => Color(0XFF9BB1EB);
   Color get indigo400 => Color(0XFF5079D7);
 
+  // Teal
+  Color get teal900 => Color(0XFF065F46);
+
   // White
   Color get whiteA700 => Color(0XFFFFFFFF);
 
   // Yellow
   Color get yellow100 => Color(0XFFFEFFBF);
   Color get yellow400 => Color(0XFFFFFF50);
+  Color get yellow50 => Color(0XFFFFFFE7);
+  Color get yellowA700 => Color(0XFFFFD103);
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();

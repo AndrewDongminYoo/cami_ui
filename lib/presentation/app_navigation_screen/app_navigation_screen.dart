@@ -29,141 +29,189 @@ class AppNavigationScreen extends StatelessWidget {
                       children: [
                         _buildScreenTitle(
                           context,
-                          userName: "Quck Test".tr,
+                          screenTitle: "Quck Test".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.quckTestScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Naming".tr,
+                          screenTitle: "Naming".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.namingScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Contact Us / Register".tr,
+                          screenTitle: "Contact Us Register".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.contactUsRegisterScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "FAQ".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.faqScreen),
+                          screenTitle: "FAQ expanded".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.faqExpandedScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "New Cat - Tab Container".tr,
+                          screenTitle: "New Cat Tab Container".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.newCatTabContainerScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Menu Bar".tr,
+                          screenTitle: "Menu Bar".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.menuBarScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Pets / Empty".tr,
+                          screenTitle: "Pets Empty".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.petsEmptyScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Pets / 1 Cat".tr,
+                          screenTitle: "Pets One Cat".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.pets1CatScreen),
+                              context, AppRoutes.petsOneCatScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Solution".tr,
+                          screenTitle: "Solution".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.solutionScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Sign Up Form".tr,
+                          screenTitle: "Sign Up Form".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.signUpFormScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Edit Profile".tr,
+                          screenTitle: "Edit Profile".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.editProfileScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Verify".tr,
+                          screenTitle: "Verify".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.verifyScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "My Page".tr,
+                          screenTitle: "My Page".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.myPageScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Owner - Tab Container".tr,
+                          screenTitle: "Owner Tab Container".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.ownerTabContainerScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Home".tr,
+                          screenTitle: "Home".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.homeScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Checkup Cat".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkupCatScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          userName: "Checkup Dog".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              context, AppRoutes.checkupDogScreen),
-                        ),
-                        _buildScreenTitle(
-                          context,
-                          userName: "Checkup Owner - Tab Container".tr,
+                          screenTitle: "Checkup Owner Tab Container".tr,
                           onTapScreenTitle: () => onTapScreenTitle(context,
                               AppRoutes.checkupOwnerTabContainerScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "FourHundredFour".tr,
+                          screenTitle: "FourHundredFour".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.fourhundredfourScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Notice Detail".tr,
+                          screenTitle: "Notice Detail".tr,
                           onTapScreenTitle: () => onTapScreenTitle(
                               context, AppRoutes.noticeDetailScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Notice".tr,
+                          screenTitle: "Notice".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.noticeScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "FAQ".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(context, AppRoutes.faq1Screen),
+                          screenTitle: "FAQ collapsed".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.faqCollapsedScreen),
                         ),
                         _buildScreenTitle(
                           context,
-                          userName: "Log In".tr,
+                          screenTitle: "Log In".tr,
                           onTapScreenTitle: () =>
                               onTapScreenTitle(context, AppRoutes.logInScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "dabi - exam".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.dabiExamScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "free product reciept".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.freeProductRecieptScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "coupon alert - Tab Container".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.couponAlertTabContainerScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "edit my info".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.editMyInfoScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "edit my pet info".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.editMyPetInfoScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "about page".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.aboutPageScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "add new dog page".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.addNewDogPageScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "dds - exam".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.ddsExamScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "cades - exam".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.cadesExamScreen),
+                        ),
+                        _buildScreenTitle(
+                          context,
+                          screenTitle: "dcsi-ii reciept".tr,
+                          onTapScreenTitle: () => onTapScreenTitle(
+                              context, AppRoutes.dcsiIiRecieptScreen),
                         ),
                       ],
                     ),
@@ -234,7 +282,7 @@ class AppNavigationScreen extends StatelessWidget {
   /// Common widget
   Widget _buildScreenTitle(
     BuildContext context, {
-    required String userName,
+    required String screenTitle,
     Function? onTapScreenTitle,
   }) {
     return GestureDetector(
@@ -253,7 +301,7 @@ class AppNavigationScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.h),
                 child: Text(
-                  userName,
+                  screenTitle,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0XFF000000),

@@ -99,7 +99,7 @@ class OwnerTabContainerScreenState extends State<OwnerTabContainerScreen>
                   ),
                 ),
                 SizedBox(
-                  height: 1756.v,
+                  height: 622.v,
                   child: TabBarView(
                     controller: tabviewController,
                     children: [

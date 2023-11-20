@@ -33,12 +33,12 @@ class LogInScreen extends StatelessWidget {
                 SizedBox(height: 29.v),
                 Text(
                   "lbl171".tr,
-                  style: theme.textTheme.displaySmall,
+                  style: CustomTextStyles.displaySmallNanumSquareNeoBluegray800,
                 ),
                 SizedBox(height: 18.v),
                 Text(
                   "lbl172".tr,
-                  style: CustomTextStyles.titleLargeGray60001,
+                  style: CustomTextStyles.titleLargeGray60002,
                 ),
                 SizedBox(height: 82.v),
                 _buildEditText(context),
@@ -55,7 +55,115 @@ class LogInScreen extends StatelessWidget {
                 SizedBox(height: 20.v),
                 _buildKakaoStartButton(context),
                 SizedBox(height: 128.v),
-                _buildFrameColumn1(context),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.h,
+                    vertical: 60.v,
+                  ),
+                  decoration: AppDecoration.fillOnErrorContainer,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: ImageConstant.imgTicket,
+                        height: 30.v,
+                        width: 92.h,
+                      ),
+                      SizedBox(height: 39.v),
+                      Row(
+                        children: [
+                          Text(
+                            "lbl10".tr,
+                            style: theme.textTheme.bodySmall,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 16.h),
+                            child: Text(
+                              "lbl11".tr,
+                              style: theme.textTheme.bodySmall,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 16.h),
+                            child: Text(
+                              "lbl12".tr,
+                              style: theme.textTheme.bodySmall,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 12.v),
+                      _buildFrameRow2(context),
+                      SizedBox(height: 40.v),
+                      Padding(
+                        padding: EdgeInsets.only(right: 60.h),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "lbl_address".tr,
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                                SizedBox(height: 12.v),
+                                Text(
+                                  "msg_34".tr,
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                                Text(
+                                  "msg_2_b101".tr,
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 16.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "lbl_contact".tr,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                  SizedBox(height: 12.v),
+                                  Text(
+                                    "msg_business_cami_kr".tr,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                  Text(
+                                    "lbl_02_861_6828".tr,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 48.v),
+                      Text(
+                        "lbl17".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      Text(
+                        "msg".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      SizedBox(height: 16.v),
+                      Text(
+                        "msg_copyright_2023".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      SizedBox(height: 41.v),
+                      CustomImageView(
+                        imagePath: ImageConstant.imgFrame24x361,
+                        height: 24.v,
+                        width: 361.h,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -112,13 +220,14 @@ class LogInScreen extends StatelessWidget {
           CustomCheckboxButton(
             text: "lbl173".tr,
             value: tf,
+            textStyle: CustomTextStyles.bodySmallGray60002,
             onChange: (value) {
               tf = value;
             },
           ),
           Text(
             "lbl174".tr,
-            style: CustomTextStyles.bodySmallGray60001,
+            style: CustomTextStyles.bodySmallGray60002,
           ),
         ],
       ),
@@ -128,6 +237,7 @@ class LogInScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildLoginButton(BuildContext context) {
     return CustomElevatedButton(
+      height: 40.v,
       text: "lbl175".tr,
       margin: EdgeInsets.symmetric(horizontal: 16.h),
       buttonStyle: CustomButtonStyles.fillBlack,
@@ -193,159 +303,36 @@ class LogInScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildKakaoStartButton(BuildContext context) {
     return CustomElevatedButton(
+      height: 40.v,
       text: "lbl178".tr,
       margin: EdgeInsets.symmetric(horizontal: 16.h),
-      buttonStyle: CustomButtonStyles.fillPrimary,
+      buttonStyle: CustomButtonStyles.fillYellow,
       buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
     );
   }
 
   /// Section Widget
-  Widget _buildFrameColumn1(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.h,
-        vertical: 60.v,
-      ),
-      decoration: AppDecoration.fillOnErrorContainer,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+  Widget _buildFrameRow2(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(right: 1.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomImageView(
-            imagePath: ImageConstant.imgTicket,
-            height: 30.v,
-            width: 92.h,
-          ),
-          SizedBox(height: 37.v),
-          Row(
-            children: [
-              Text(
-                "lbl10".tr,
-                style: theme.textTheme.bodySmall,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 19.h),
-                child: Text(
-                  "lbl11".tr,
-                  style: theme.textTheme.bodySmall,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 21.h),
-                child: Text(
-                  "lbl12".tr,
-                  style: theme.textTheme.bodySmall,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 9.v),
-          Padding(
-            padding: EdgeInsets.only(right: 9.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "lbl13".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl14".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl15".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl16".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 38.v),
-          Padding(
-            padding: EdgeInsets.only(right: 63.h),
-            child: Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "lbl_address".tr,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                    SizedBox(height: 9.v),
-                    Text(
-                      "msg_34".tr,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                    Text(
-                      "msg_2_b101".tr,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 27.h),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "lbl_contact".tr,
-                        style: theme.textTheme.bodySmall,
-                      ),
-                      SizedBox(height: 10.v),
-                      Text(
-                        "msg_business_cami_kr".tr,
-                        style: theme.textTheme.bodySmall,
-                      ),
-                      Text(
-                        "lbl_02_861_6828".tr,
-                        style: theme.textTheme.bodySmall,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 45.v),
           Text(
-            "lbl17".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl13".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
           Text(
-            "msg".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl14".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
-          SizedBox(height: 15.v),
           Text(
-            "msg_copyright_2023".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl15".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
-          SizedBox(height: 38.v),
-          Row(
-            children: [
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-                margin: EdgeInsets.only(left: 16.h),
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-                margin: EdgeInsets.only(left: 16.h),
-              ),
-            ],
+          Text(
+            "lbl16".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
         ],
       ),

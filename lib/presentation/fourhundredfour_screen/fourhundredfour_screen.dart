@@ -18,7 +18,7 @@ class FourhundredfourScreen extends StatelessWidget {
           width: double.maxFinite,
           child: Column(
             children: [
-              _buildFrame(context),
+              _buildFrameSection(context),
               SizedBox(height: 62.v),
               Text(
                 "lbl170".tr,
@@ -76,7 +76,7 @@ class FourhundredfourScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildFrame(BuildContext context) {
+  Widget _buildFrameSection(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.h),
       decoration: AppDecoration.fillOnPrimaryContainer,

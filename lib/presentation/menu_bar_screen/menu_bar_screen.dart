@@ -73,10 +73,10 @@ class MenuBarScreen extends StatelessWidget {
               CustomImageView(
                 imagePath: ImageConstant.imgSocial,
                 height: 21.v,
-                width: 120.h,
+                width: 122.h,
                 alignment: Alignment.center,
               ),
-              SizedBox(height: 32.v),
+              SizedBox(height: 24.v),
             ],
           ),
         ),

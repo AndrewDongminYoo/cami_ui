@@ -1,8 +1,10 @@
 import 'package:cami_lab/core/app_export.dart';
-import 'package:cami_lab/presentation/checkup_owner_page/checkup_owner_page.dart';
-import 'package:cami_lab/widgets/app_bar/appbar_title.dart';
+import 'package:cami_lab/presentation/checkup_cat_page/checkup_cat_page.dart';
+import 'package:cami_lab/presentation/checkup_dog_page/checkup_dog_page.dart';
+import 'package:cami_lab/widgets/app_bar/appbar_subtitle.dart';
 import 'package:cami_lab/widgets/app_bar/custom_app_bar.dart';
 import 'package:cami_lab/widgets/custom_elevated_button.dart';
+import 'package:cami_lab/widgets/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 
 class CheckupOwnerTabContainerScreen extends StatefulWidget {
@@ -33,99 +35,119 @@ class CheckupOwnerTabContainerScreenState
 
     return SafeArea(
       child: Scaffold(
-        appBar: _buildAppBar(context),
         body: SizedBox(
-          width: mediaQueryData.size.width,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _buildFrame(context),
-                SizedBox(height: 19.v),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.h),
-                    child: Text(
-                      "lbl_dpai2".tr,
-                      style: CustomTextStyles.bodyMediumBlack900,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 15.v),
-                CustomImageView(
-                  imagePath: ImageConstant.imgImage170x359,
-                  height: 171.v,
-                  width: 361.h,
-                ),
-                SizedBox(height: 18.v),
-                CustomElevatedButton(
-                  height: 23.v,
-                  width: 39.h,
-                  text: "lbl_dpai".tr,
-                  margin: EdgeInsets.only(left: 16.h),
-                  buttonTextStyle: CustomTextStyles.bodySmall10,
-                  alignment: Alignment.centerLeft,
-                ),
-                SizedBox(height: 11.v),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.h),
-                    child: Text(
-                      "lbl169".tr,
-                      style: CustomTextStyles.bodyLargeNanumSquareNeo,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10.v),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 16.h),
-                    child: Row(
-                      children: [
-                        CustomImageView(
-                          imagePath: ImageConstant.imgInfo,
-                          height: 12.v,
-                          width: 68.h,
-                          margin: EdgeInsets.symmetric(vertical: 4.v),
+          height: 7879.v,
+          width: double.maxFinite,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            _buildFrameColumn(context),
+                            SizedBox(height: 19.v),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 16.h),
+                                child: Text(
+                                  "lbl_dpai2".tr,
+                                  style: CustomTextStyles.bodyMediumBlack900_1,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 15.v),
+                            CustomImageView(
+                              imagePath: ImageConstant.imgImage170x359,
+                              height: 171.v,
+                              width: 361.h,
+                            ),
+                            SizedBox(height: 18.v),
+                            CustomElevatedButton(
+                              height: 23.v,
+                              width: 39.h,
+                              text: "lbl_dpai".tr,
+                              margin: EdgeInsets.only(left: 16.h),
+                              buttonStyle: CustomButtonStyles.fillGrayTL8,
+                              buttonTextStyle: CustomTextStyles.bodySmall10,
+                              alignment: Alignment.centerLeft,
+                            ),
+                            SizedBox(height: 11.v),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 16.h),
+                                child: Text(
+                                  "lbl169".tr,
+                                  style:
+                                      CustomTextStyles.bodyLargeNanumSquareNeo,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10.v),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 16.h),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(vertical: 4.v),
+                                      child: CustomRatingBar(
+                                        initialRating: 5,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 8.h),
+                                      child: Text(
+                                        "lbl_42".tr,
+                                        style: CustomTextStyles
+                                            .bodyMediumBlack900_1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 7.v),
+                            _buildFrameColumn1(context),
+                            SizedBox(height: 8.v),
+                            _buildFrameRow(context),
+                            SizedBox(height: 8.v),
+                            CustomElevatedButton(
+                              height: 40.v,
+                              text: "lbl7".tr,
+                              margin: EdgeInsets.symmetric(horizontal: 16.h),
+                              buttonStyle: CustomButtonStyles.fillYellow,
+                              buttonTextStyle:
+                                  CustomTextStyles.bodyMediumOnErrorContainer,
+                            ),
+                            SizedBox(height: 48.v),
+                            _buildTabview(context),
+                            SizedBox(height: 24.v),
+                            _buildTabBarView(context),
+                          ],
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 8.h),
-                          child: Text(
-                            "lbl_42".tr,
-                            style: CustomTextStyles.bodyMediumBlack900,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                    _buildAppBar(context),
+                  ],
                 ),
-                SizedBox(height: 7.v),
-                _buildFrame1(context),
-                SizedBox(height: 8.v),
-                _buildFrame2(context),
-                SizedBox(height: 8.v),
-                CustomElevatedButton(
-                  text: "lbl7".tr,
-                  margin: EdgeInsets.symmetric(horizontal: 16.h),
-                  buttonStyle: CustomButtonStyles.fillPrimary,
-                  buttonTextStyle: CustomTextStyles.bodyMediumOnErrorContainer,
-                ),
-                SizedBox(height: 48.v),
-                _buildTabview(context),
-                SizedBox(
-                  height: 7241.v,
-                  child: TabBarView(
-                    controller: tabviewController,
-                    children: [
-                      CheckupOwnerPage(),
-                      CheckupOwnerPage(),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.imgImage1235x361,
+                height: 1235.v,
+                width: 361.h,
+                alignment: Alignment.bottomCenter,
+              ),
+            ],
           ),
         ),
       ),
@@ -133,35 +155,7 @@ class CheckupOwnerTabContainerScreenState
   }
 
   /// Section Widget
-  PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
-      title: Padding(
-        padding: EdgeInsets.only(left: 16.h),
-        child: Row(
-          children: [
-            AppbarTitle(
-              text: "lbl".tr,
-            ),
-            AppbarTitle(
-              text: "lbl2".tr,
-              margin: EdgeInsets.only(left: 12.h),
-            ),
-            AppbarTitle(
-              text: "lbl3".tr,
-              margin: EdgeInsets.only(left: 8.h),
-            ),
-            AppbarTitle(
-              text: "lbl2".tr,
-              margin: EdgeInsets.only(left: 12.h),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildFrame(BuildContext context) {
+  Widget _buildFrameColumn(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.h),
       decoration: AppDecoration.fillOnPrimaryContainer,
@@ -174,7 +168,7 @@ class CheckupOwnerTabContainerScreenState
   }
 
   /// Section Widget
-  Widget _buildFrame1(BuildContext context) {
+  Widget _buildFrameColumn1(BuildContext context) {
     return Container(
       width: 361.h,
       margin: EdgeInsets.symmetric(horizontal: 16.h),
@@ -193,7 +187,7 @@ class CheckupOwnerTabContainerScreenState
             children: [
               Text(
                 "lbl5".tr,
-                style: theme.textTheme.bodyMedium,
+                style: CustomTextStyles.bodyMediumGray500,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 42.h),
@@ -209,7 +203,7 @@ class CheckupOwnerTabContainerScreenState
             children: [
               Text(
                 "lbl6".tr,
-                style: theme.textTheme.bodyMedium,
+                style: CustomTextStyles.bodyMediumGray500,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 17.h),
@@ -226,7 +220,7 @@ class CheckupOwnerTabContainerScreenState
   }
 
   /// Section Widget
-  Widget _buildFrame2(BuildContext context) {
+  Widget _buildFrameRow(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
         left: 16.h,
@@ -286,20 +280,20 @@ class CheckupOwnerTabContainerScreenState
       child: TabBar(
         controller: tabviewController,
         labelPadding: EdgeInsets.zero,
-        labelColor: theme.colorScheme.onPrimaryContainer,
+        labelColor: appTheme.gray500,
         labelStyle: TextStyle(
           fontSize: 14.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
-        unselectedLabelColor: appTheme.gray500,
+        unselectedLabelColor: theme.colorScheme.onPrimaryContainer,
         unselectedLabelStyle: TextStyle(
           fontSize: 14.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w400,
         ),
         indicator: BoxDecoration(
-          color: theme.colorScheme.onSecondaryContainer,
+          color: appTheme.gray50,
           borderRadius: BorderRadius.circular(
             8.h,
           ),
@@ -316,6 +310,49 @@ class CheckupOwnerTabContainerScreenState
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTabBarView(BuildContext context) {
+    return Container(
+      height: 206.v,
+      child: TabBarView(
+        controller: tabviewController,
+        children: [
+          CheckupCatPage(),
+          CheckupDogPage(),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  PreferredSizeWidget _buildAppBar(BuildContext context) {
+    return CustomAppBar(
+      height: 21.v,
+      title: Padding(
+        padding: EdgeInsets.only(left: 16.h),
+        child: Row(
+          children: [
+            AppbarSubtitle(
+              text: "lbl".tr,
+            ),
+            AppbarSubtitle(
+              text: "lbl2".tr,
+              margin: EdgeInsets.only(left: 12.h),
+            ),
+            AppbarSubtitle(
+              text: "lbl3".tr,
+              margin: EdgeInsets.only(left: 8.h),
+            ),
+            AppbarSubtitle(
+              text: "lbl2".tr,
+              margin: EdgeInsets.only(left: 12.h),
+            ),
+          ],
+        ),
       ),
     );
   }

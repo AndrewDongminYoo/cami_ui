@@ -1,4 +1,3 @@
-import '../solution_screen/widgets/solutionlist_item_widget.dart';
 import 'package:cami_lab/core/app_export.dart';
 import 'package:flutter/material.dart';
 
@@ -48,9 +47,119 @@ class SolutionScreen extends StatelessWidget {
                   style: CustomTextStyles.titleLargeBlack90020,
                 ),
                 SizedBox(height: 34.v),
-                _buildSolutionList(context),
-                SizedBox(height: 128.v),
                 _buildFrameColumn1(context),
+                SizedBox(height: 24.v),
+                _buildFrameColumn2(context),
+                SizedBox(height: 128.v),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.h,
+                    vertical: 60.v,
+                  ),
+                  decoration: AppDecoration.fillOnErrorContainer,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: ImageConstant.imgTicket,
+                        height: 30.v,
+                        width: 92.h,
+                      ),
+                      SizedBox(height: 39.v),
+                      Row(
+                        children: [
+                          Text(
+                            "lbl10".tr,
+                            style: theme.textTheme.bodySmall,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 16.h),
+                            child: Text(
+                              "lbl11".tr,
+                              style: theme.textTheme.bodySmall,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 16.h),
+                            child: Text(
+                              "lbl12".tr,
+                              style: theme.textTheme.bodySmall,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 12.v),
+                      _buildFrameRow2(context),
+                      SizedBox(height: 41.v),
+                      Padding(
+                        padding: EdgeInsets.only(right: 60.h),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "lbl_address".tr,
+                                  style: CustomTextStyles.bodySmall11,
+                                ),
+                                SizedBox(height: 11.v),
+                                Text(
+                                  "msg_34".tr,
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                                Text(
+                                  "msg_2_b101".tr,
+                                  style: theme.textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 16.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "lbl_contact".tr,
+                                    style: CustomTextStyles.bodySmall11,
+                                  ),
+                                  SizedBox(height: 11.v),
+                                  Text(
+                                    "msg_business_cami_kr".tr,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                  Text(
+                                    "lbl_02_861_6828".tr,
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 48.v),
+                      Text(
+                        "lbl17".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      Text(
+                        "msg".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      SizedBox(height: 16.v),
+                      Text(
+                        "msg_copyright_2023".tr,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                      SizedBox(height: 41.v),
+                      CustomImageView(
+                        imagePath: ImageConstant.imgFrame24x361,
+                        height: 24.v,
+                        width: 361.h,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -162,174 +271,59 @@ class SolutionScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildSolutionList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.h),
-      child: ListView.separated(
-        physics: NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        separatorBuilder: (
-          context,
-          index,
-        ) {
-          return SizedBox(
-            height: 24.v,
-          );
-        },
-        itemCount: 2,
-        itemBuilder: (context, index) {
-          return SolutionlistItemWidget();
-        },
+  Widget _buildFrameColumn1(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16.h),
+      padding: EdgeInsets.all(8.h),
+      decoration: AppDecoration.outlineOnError.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder8,
+      ),
+      child: CustomImageView(
+        imagePath: ImageConstant.imgImage161x343,
+        height: 161.v,
+        width: 343.h,
       ),
     );
   }
 
   /// Section Widget
-  Widget _buildFrameColumn1(BuildContext context) {
+  Widget _buildFrameColumn2(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.h,
-        vertical: 60.v,
+      margin: EdgeInsets.symmetric(horizontal: 16.h),
+      padding: EdgeInsets.all(8.h),
+      decoration: AppDecoration.outlineOnError.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder8,
       ),
-      decoration: AppDecoration.fillOnErrorContainer,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: CustomImageView(
+        imagePath: ImageConstant.imgImage12,
+        height: 161.v,
+        width: 343.h,
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildFrameRow2(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(right: 1.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomImageView(
-            imagePath: ImageConstant.imgTicket,
-            height: 30.v,
-            width: 92.h,
-          ),
-          SizedBox(height: 37.v),
-          Row(
-            children: [
-              Text(
-                "lbl10".tr,
-                style: theme.textTheme.bodySmall,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 19.h),
-                child: Text(
-                  "lbl11".tr,
-                  style: theme.textTheme.bodySmall,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 21.h),
-                child: Text(
-                  "lbl12".tr,
-                  style: theme.textTheme.bodySmall,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 9.v),
-          Padding(
-            padding: EdgeInsets.only(right: 9.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "lbl13".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl14".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl15".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-                Text(
-                  "lbl16".tr,
-                  style: CustomTextStyles.bodySmallGray500,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 39.v),
-          Padding(
-            padding: EdgeInsets.only(right: 63.h),
-            child: Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "lbl_address".tr,
-                      style: CustomTextStyles.bodySmall11,
-                    ),
-                    SizedBox(height: 9.v),
-                    Text(
-                      "msg_34".tr,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                    Text(
-                      "msg_2_b101".tr,
-                      style: theme.textTheme.bodySmall,
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 27.h),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "lbl_contact".tr,
-                        style: CustomTextStyles.bodySmall11,
-                      ),
-                      SizedBox(height: 9.v),
-                      Text(
-                        "msg_business_cami_kr".tr,
-                        style: theme.textTheme.bodySmall,
-                      ),
-                      Text(
-                        "lbl_02_861_6828".tr,
-                        style: theme.textTheme.bodySmall,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 45.v),
           Text(
-            "lbl17".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl13".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
           Text(
-            "msg".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl14".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
-          SizedBox(height: 15.v),
           Text(
-            "msg_copyright_2023".tr,
-            style: theme.textTheme.bodySmall,
+            "lbl15".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
-          SizedBox(height: 38.v),
-          Row(
-            children: [
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-                margin: EdgeInsets.only(left: 16.h),
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgImage,
-                height: 24.adaptSize,
-                width: 24.adaptSize,
-                margin: EdgeInsets.only(left: 16.h),
-              ),
-            ],
+          Text(
+            "lbl16".tr,
+            style: CustomTextStyles.bodySmallGray500_1,
           ),
         ],
       ),
