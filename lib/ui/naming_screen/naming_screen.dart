@@ -23,7 +23,6 @@ import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import 'widgets/slider_item_widget.dart';
 
-// ignore: must_be_immutable
 class NamingScreen extends StatelessWidget {
   NamingScreen({super.key});
 

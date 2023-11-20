@@ -21,9 +21,7 @@ import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
 class CheckupCatScreen extends StatelessWidget {
-  CheckupCatScreen({super.key});
-
-  final infoEditTextController = TextEditingController();
+  const CheckupCatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

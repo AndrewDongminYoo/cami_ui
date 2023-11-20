@@ -17,10 +17,14 @@ import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_outlined_button.dart';
 import '/widgets/custom_text_form_field.dart';
 
-// ignore: must_be_immutable
-class LogInScreen extends StatelessWidget {
-  LogInScreen({super.key});
+class LogInScreen extends StatefulWidget {
+  const LogInScreen({super.key});
 
+  @override
+  State<LogInScreen> createState() => _LogInScreenState();
+}
+
+class _LogInScreenState extends State<LogInScreen> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
   bool saveUsername = false;
@@ -104,7 +108,9 @@ class LogInScreen extends StatelessWidget {
             text: '아이디 저장'.tr(),
             value: saveUsername,
             onChange: (value) {
-              saveUsername = value;
+              setState(() {
+                saveUsername = value;
+              });
             },
           ),
           TextButton(
@@ -155,14 +161,7 @@ class LogInScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Container(
-            padding: EdgeInsets.only(
-              top: 9.h,
-              bottom: 7.h,
-            ),
-            width: 133.w,
-            child: const Divider(color: Color(0xFF9CA3AF)),
-          ),
+          _buildDivider(),
           Padding(
             padding: EdgeInsets.only(left: 16.w),
             child: Text(
@@ -170,18 +169,22 @@ class LogInScreen extends StatelessWidget {
               style: textTheme.bodySmall!.colored(const Color(0xFF9CA3AF)),
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(
-              top: 9.h,
-              bottom: 7.h,
-            ),
-            width: 154.w,
-            child: Divider(
-              color: const Color(0xFF9CA3AF),
-              indent: 21.w,
-            ),
-          ),
+          _buildDivider(),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDivider() {
+    return Container(
+      padding: EdgeInsets.only(
+        top: 9.h,
+        bottom: 7.h,
+      ),
+      width: 133.w,
+      child: Divider(
+        color: const Color(0xFF9CA3AF),
+        indent: 21.w,
       ),
     );
   }

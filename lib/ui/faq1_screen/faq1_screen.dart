@@ -16,7 +16,6 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_image_view.dart';
 
-// ignore: must_be_immutable
 class Faq1Screen extends StatelessWidget {
   Faq1Screen({super.key});
 

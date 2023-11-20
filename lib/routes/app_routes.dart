@@ -71,7 +71,7 @@ class AppRoutes {
     GoRoute(
       name: faqScreen,
       path: faqScreen,
-      builder: (context, state) => FaqScreen(),
+      builder: (context, state) => const FaqScreen(),
     ),
     GoRoute(
       name: newCatScreen,
@@ -131,12 +131,12 @@ class AppRoutes {
     GoRoute(
       name: checkupCatScreen,
       path: checkupCatScreen,
-      builder: (context, state) => CheckupCatScreen(),
+      builder: (context, state) => const CheckupCatScreen(),
     ),
     GoRoute(
       name: checkupDogScreen,
       path: checkupDogScreen,
-      builder: (context, state) => CheckupDogScreen(),
+      builder: (context, state) => const CheckupDogScreen(),
     ),
     GoRoute(
       name: checkupOwnerScreen,
@@ -161,7 +161,7 @@ class AppRoutes {
     GoRoute(
       name: logInScreen,
       path: logInScreen,
-      builder: (context, state) => LogInScreen(),
+      builder: (context, state) => const LogInScreen(),
     ),
     GoRoute(
       name: appNavigationScreen,

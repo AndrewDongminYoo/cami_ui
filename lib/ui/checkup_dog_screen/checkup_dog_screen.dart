@@ -21,7 +21,7 @@ import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
 class CheckupDogScreen extends StatelessWidget {
-  CheckupDogScreen({super.key});
+  const CheckupDogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

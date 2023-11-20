@@ -17,9 +17,8 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_image_view.dart';
 
-// ignore: must_be_immutable
 class FaqScreen extends StatefulWidget {
-  FaqScreen({super.key});
+  const FaqScreen({super.key});
 
   @override
   State<FaqScreen> createState() => _FaqScreenState();
