@@ -212,7 +212,7 @@ class NamingScreen extends StatelessWidget {
 
   /// Navigates to the ownerTab when the action is triggered.
   void onTapBackToList(BuildContext context) {
-    context.pushNamed(AppRoutes.ownerTab);
+    context.pushNamed(AppRoutes.ownerScreen);
   }
 
   /// Navigates to the faqScreen when the action is triggered.

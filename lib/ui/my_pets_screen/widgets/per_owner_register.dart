@@ -51,7 +51,7 @@ class PerOwnerRegister extends StatelessWidget {
                   height: 112.h,
                   width: 138.w,
                   alignment: Alignment.center,
-                  onTap: () => context.pushNamed(AppRoutes.newCatTab,
+                  onTap: () => context.pushNamed(AppRoutes.newCatScreen,
                       pathParameters: {'type': type}),
                 ),
                 CustomElevatedButton(

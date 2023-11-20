@@ -27,29 +27,30 @@ import '/ui/solution_screen/solution_screen.dart';
 import '/ui/verify_screen/verify_screen.dart';
 
 class AppRoutes {
+  static const String homeScreen = '/';
+  static const String appNavigationScreen = '/debug';
+  static const String errorPage = '/404';
+
   static const String quickTestScreen = '/quick_test_screen';
   static const String namingScreen = '/naming_screen';
   static const String contactUsRegisterScreen = '/contact_us_register_screen';
   static const String faqScreen = '/faq_screen';
-  static const String newCatTab = '/new_cat_tab';
+  static const String newCatScreen = '/new_cat_screen';
   static const String menuBarScreen = '/menu_bar_screen';
   static const String petsEmptyScreen = '/pets_empty_screen';
-  static const String pets1CatScreen = '/pets_1_cat_screen';
+  static const String petsOneCatScreen = '/pets_one_cat_screen';
   static const String solutionScreen = '/solution_screen';
   static const String signUpFormScreen = '/sign_up_form_screen';
   static const String editProfileScreen = '/edit_profile_screen';
   static const String verifyScreen = '/verify_screen';
   static const String myPageScreen = '/my_page_screen';
-  static const String ownerTab = '/owner_tab';
-  static const String homeScreen = '/home_screen';
+  static const String ownerScreen = '/owner_screen';
   static const String checkupCatScreen = '/checkup_cat_screen';
   static const String checkupDogScreen = '/checkup_dog_screen';
-  static const String checkupHome = '/checkup_owner_tab';
-  static const String fourhundredfourScreen = '/fourhundredfour_screen';
+  static const String checkupOwnerScreen = '/checkup_owner_screen';
   static const String noticeDetailScreen = '/notice_detail_screen';
   static const String noticeScreen = '/notice_screen';
   static const String logInScreen = '/log_in_screen';
-  static const String appNavigationScreen = '/app_navigation_screen';
 
   static List<GoRoute> routes = [
     GoRoute(
@@ -73,8 +74,8 @@ class AppRoutes {
       builder: (context, state) => FaqScreen(),
     ),
     GoRoute(
-      name: newCatTab,
-      path: newCatTab,
+      name: newCatScreen,
+      path: newCatScreen,
       builder: (context, state) => const NewCatScreen(),
     ),
     GoRoute(
@@ -88,8 +89,8 @@ class AppRoutes {
       builder: (context, state) => const PetsEmptyScreen(),
     ),
     GoRoute(
-      name: pets1CatScreen,
-      path: pets1CatScreen,
+      name: petsOneCatScreen,
+      path: petsOneCatScreen,
       builder: (context, state) => const PetsOneCatScreen(),
     ),
     GoRoute(
@@ -118,8 +119,8 @@ class AppRoutes {
       builder: (context, state) => const MyPageScreen(),
     ),
     GoRoute(
-      name: ownerTab,
-      path: ownerTab,
+      name: ownerScreen,
+      path: ownerScreen,
       builder: (context, state) => const OwnerScreen(),
     ),
     GoRoute(
@@ -138,13 +139,13 @@ class AppRoutes {
       builder: (context, state) => CheckupDogScreen(),
     ),
     GoRoute(
-      name: checkupHome,
-      path: checkupHome,
+      name: checkupOwnerScreen,
+      path: checkupOwnerScreen,
       builder: (context, state) => const CheckupOwnerScreen(),
     ),
     GoRoute(
-      name: fourhundredfourScreen,
-      path: fourhundredfourScreen,
+      name: errorPage,
+      path: errorPage,
       builder: (context, state) => const ErrorPage(),
     ),
     GoRoute(

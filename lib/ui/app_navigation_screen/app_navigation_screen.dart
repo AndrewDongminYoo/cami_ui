@@ -53,7 +53,7 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         ScreenTitle(
                           screenTitle: '고양이 등록하기',
-                          routeName: AppRoutes.newCatTab,
+                          routeName: AppRoutes.newCatScreen,
                         ),
                         ScreenTitle(
                           screenTitle: '메뉴바 (모바일)',
@@ -67,7 +67,7 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         ScreenTitle(
                           screenTitle: '나의 반려친구 (정보있음)',
-                          routeName: AppRoutes.pets1CatScreen,
+                          routeName: AppRoutes.petsOneCatScreen,
                           status: DevStatus.DONE,
                         ),
                         ScreenTitle(
@@ -92,7 +92,7 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         ScreenTitle(
                           screenTitle: '심리검사',
-                          routeName: AppRoutes.ownerTab,
+                          routeName: AppRoutes.ownerScreen,
                         ),
                         ScreenTitle(
                           screenTitle: '카미 홈화면',
@@ -109,11 +109,11 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         ScreenTitle(
                           screenTitle: '심리검사 홈',
-                          routeName: AppRoutes.checkupHome,
+                          routeName: AppRoutes.checkupOwnerScreen,
                         ),
                         ScreenTitle(
                           screenTitle: '404 찾을수없음',
-                          routeName: AppRoutes.fourhundredfourScreen,
+                          routeName: AppRoutes.errorPage,
                           status: DevStatus.DONE,
                         ),
                         ScreenTitle(
