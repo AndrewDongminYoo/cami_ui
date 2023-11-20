@@ -42,23 +42,29 @@ class UserAvatarProfile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(children: [
-                  Text(
-                    name,
-                    style:
-                        textTheme.bodyLarge!.colored(const Color(0xFF202020)),
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: name,
+                        style: textTheme.bodyLarge!
+                            .colored(const Color(0xFF202020)),
+                      ),
+                      TextSpan(
+                        text: '님, 반가워요!'.tr(),
+                        style: textTheme.bodyLarge!
+                            .colored(const Color(0xFF202020)),
+                      )
+                    ],
                   ),
-                  Text(
-                    '님, 반가워요!'.tr(),
-                    style:
-                        textTheme.bodyLarge!.colored(const Color(0xFF202020)),
-                  )
-                ]),
+                ),
                 SizedBox(height: 3.h),
-                Text(mail,
-                    style: textTheme.bodySmall!
-                        .colored(const Color(0xFFA3A3A3))
-                        .fSize(11))
+                Text(
+                  mail,
+                  style: textTheme.bodySmall!
+                      .colored(const Color(0xFFA3A3A3))
+                      .fSize(11),
+                ),
               ],
             ),
           ),

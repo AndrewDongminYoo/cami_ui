@@ -56,8 +56,9 @@ class CheckupItemWidget extends StatelessWidget {
           CustomElevatedButton(
             onPressed: (context) => context.pushNamed(location),
             height: 24.h,
-            width: 42.w,
-            text: short,
+            width: (short.length * 5.75 + 16).w,
+            text: short.toUpperCase(),
+            textAlign: TextAlign.start,
             margin: EdgeInsets.symmetric(horizontal: 14.w),
             buttonTextStyle: textTheme.bodySmall!.fSize(10),
           ),
