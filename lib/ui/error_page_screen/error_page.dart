@@ -21,7 +21,7 @@ import '/widgets/custom_outlined_button.dart';
 class ErrorPage extends StatelessWidget {
   const ErrorPage({
     super.key,
-    this.error = const PageNotFoundException(),
+    this.error = const PageException(),
   });
 
   final dynamic error;

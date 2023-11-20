@@ -20,8 +20,8 @@ class AuthFailureException implements Exception {
   final String? message;
 }
 
-class PageNotFoundException implements Exception {
-  const PageNotFoundException([
+class PageException implements Exception {
+  const PageException([
     this.code = 404,
     this.message = '페이지를 찾을 수 없습니다.',
   ]);
