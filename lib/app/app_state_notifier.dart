@@ -1,9 +1,8 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-class User {
-  final int id = 0;
-}
+// 📦 Package imports:
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AppStateNotifier extends ChangeNotifier {
   AppStateNotifier._();
