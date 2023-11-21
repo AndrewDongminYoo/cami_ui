@@ -11,22 +11,22 @@ import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
-import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
+import 'check_up_chip.dart';
 
-class CheckupItemWidget extends StatelessWidget {
-  const CheckupItemWidget({
+class CheckUpItemWidget extends StatelessWidget {
+  const CheckUpItemWidget({
     super.key,
-    required this.imagePath,
+    required this.thumbPath,
     required this.short,
-    required this.title,
+    required this.nickname,
     required this.description,
     required this.location,
   });
 
-  final String imagePath;
+  final String thumbPath;
   final String short;
-  final String title;
+  final String nickname;
   final String description;
   final String location;
 
@@ -47,26 +47,21 @@ class CheckupItemWidget extends StatelessWidget {
             ),
             child: CustomImageView(
               radius: BorderRadiusStyle.roundTop20,
-              imagePath: imagePath,
+              imagePath: thumbPath,
               height: 164.h,
               width: 346.w,
             ),
           ),
           SizedBox(height: 14.h),
-          CustomElevatedButton(
+          CheckUpChip(
             onPressed: (context) => context.pushNamed(location),
-            height: 24.h,
-            width: (short.length * 5.75 + 16).w,
-            text: short.toUpperCase(),
-            textAlign: TextAlign.start,
-            margin: EdgeInsets.symmetric(horizontal: 14.w),
-            buttonTextStyle: textTheme.bodySmall!.fSize(10),
+            checkupName: short,
           ),
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 14.w),
             child: Text(
-              title,
+              nickname,
               style: textTheme.bodyMedium!.colored(const Color(0xFF1F2020)),
             ),
           ),
