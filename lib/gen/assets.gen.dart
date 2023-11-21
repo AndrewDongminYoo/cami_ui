@@ -623,42 +623,6 @@ class $AssetsImagesTestsGen {
   AssetGenImage get dogDaci =>
       const AssetGenImage('assets/images/tests/DOG_DACI.png');
 
-  /// File path: assets/images/tests/DOG_DOBI_01.jpg
-  AssetGenImage get dogDobi01 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_01.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_02.jpg
-  AssetGenImage get dogDobi02 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_02.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_03.jpg
-  AssetGenImage get dogDobi03 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_03.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_04.jpg
-  AssetGenImage get dogDobi04 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_04.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_05.jpg
-  AssetGenImage get dogDobi05 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_05.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_06.jpg
-  AssetGenImage get dogDobi06 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_06.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_07.jpg
-  AssetGenImage get dogDobi07 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_07.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_08.jpg
-  AssetGenImage get dogDobi08 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_08.jpg');
-
-  /// File path: assets/images/tests/DOG_DOBI_09.jpg
-  AssetGenImage get dogDobi09 =>
-      const AssetGenImage('assets/images/tests/DOG_DOBI_09.jpg');
-
   /// File path: assets/images/tests/DOG_DCSI-II_01.jpg
   AssetGenImage get dogDcsiIi01 =>
       const AssetGenImage('assets/images/tests/DOG_DCSI-II_01.jpg');
@@ -694,6 +658,42 @@ class $AssetsImagesTestsGen {
   /// File path: assets/images/tests/DOG_DCSI-II_09.jpg
   AssetGenImage get dogDcsiIi09 =>
       const AssetGenImage('assets/images/tests/DOG_DCSI-II_09.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_01.jpg
+  AssetGenImage get dogDobi01 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_01.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_02.jpg
+  AssetGenImage get dogDobi02 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_02.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_03.jpg
+  AssetGenImage get dogDobi03 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_03.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_04.jpg
+  AssetGenImage get dogDobi04 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_04.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_05.jpg
+  AssetGenImage get dogDobi05 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_05.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_06.jpg
+  AssetGenImage get dogDobi06 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_06.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_07.jpg
+  AssetGenImage get dogDobi07 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_07.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_08.jpg
+  AssetGenImage get dogDobi08 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_08.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_09.jpg
+  AssetGenImage get dogDobi09 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_09.jpg');
 
   /// File path: assets/images/tests/FAQ_01.jpg
   AssetGenImage get faq01 =>
@@ -798,15 +798,6 @@ class $AssetsImagesTestsGen {
         dogDabi04,
         dogDabi05,
         dogDaci,
-        dogDobi01,
-        dogDobi02,
-        dogDobi03,
-        dogDobi04,
-        dogDobi05,
-        dogDobi06,
-        dogDobi07,
-        dogDobi08,
-        dogDobi09,
         dogDcsiIi01,
         dogDcsiIi02,
         dogDcsiIi03,
@@ -816,6 +807,15 @@ class $AssetsImagesTestsGen {
         dogDcsiIi07,
         dogDcsiIi08,
         dogDcsiIi09,
+        dogDobi01,
+        dogDobi02,
+        dogDobi03,
+        dogDobi04,
+        dogDobi05,
+        dogDobi06,
+        dogDobi07,
+        dogDobi08,
+        dogDobi09,
         faq01,
         faq02,
         ownerDds01,
