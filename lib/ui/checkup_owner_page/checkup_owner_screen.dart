@@ -7,21 +7,28 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/data/models/check_up.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/checkup_details/widgets/check_up_tap_box.dart';
 import '/ui/shared/cami_app_bar.dart';
+import '/ui/shared/cami_app_footer.dart';
 import '/ui/shared/stars.dart';
 import '/widgets/app_bar/bread_crumb.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
-import 'widgets/checkup_owner_tab.dart';
 
 class CheckupOwnerScreen extends StatefulWidget {
-  const CheckupOwnerScreen({super.key});
+  const CheckupOwnerScreen({
+    super.key,
+    required this.checkup,
+  });
+
+  final CheckUp checkup;
 
   @override
   CheckupOwnerScreenState createState() => CheckupOwnerScreenState();
@@ -30,6 +37,7 @@ class CheckupOwnerScreen extends StatefulWidget {
 class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
     with TickerProviderStateMixin {
   late TabController tabviewController;
+  CheckUp get checkup => widget.checkup;
 
   @override
   void initState() {
@@ -40,9 +48,9 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: const CamiAppBar(),
         body: SizedBox(
           width: mediaQueryData.size.width,
@@ -55,73 +63,57 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('입양준비검사(DPAI)'.tr(), style: textTheme.bodyMedium),
+                  child: Text(checkup.fullName!, style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.tests.test14794.path,
+                  imagePath: checkup.thumbPath,
                   height: 171.h,
                   width: 361.w,
                 ),
                 SizedBox(height: 18.h),
-                CustomElevatedButton(
-                  onPressed: (context) {
-                    // TODO: implement onPressed
-                  },
-                  height: 23.h,
-                  width: 39.w,
-                  text: 'DPAI',
-                  margin: EdgeInsets.only(left: 16.w),
-                  buttonTextStyle: textTheme.bodySmall!.fSize(10),
-                  alignment: Alignment.centerLeft,
-                ),
+                _buildChipButton(context, checkup.short!),
                 SizedBox(height: 11.h),
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('입양준비검사'.tr(), style: textTheme.bodyLarge!.nanum),
+                  child: Text(checkup.testname!,
+                      style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: 16.w),
-                  child: Row(
-                    children: [
-                      const Stars(score: 4.9),
-                      Padding(
-                        padding: EdgeInsets.only(left: 8.w),
-                        child: Text('(4)'.tr(), style: textTheme.bodyMedium),
-                      ),
-                    ],
-                  ),
-                ),
+                _buildInfo(context, checkup.reviewsCount!),
                 SizedBox(height: 7.h),
-                _buildQuickCheckupInfo(context),
+                _buildTestSummary(context, checkup.questions!),
                 SizedBox(height: 8.h),
-                _buildQuickCheckupPrice(context),
+                _buildPriceInfo(context),
                 SizedBox(height: 8.h),
-                CustomElevatedButton(
-                  onPressed: (context) {
-                    // TODO: implement onPressed
-                  },
-                  text: '구매하기'.tr(),
-                  margin: EdgeInsets.symmetric(horizontal: 16.w),
-                  buttonStyle: CustomButtonStyles.fillPrimary,
-                  buttonTextStyle:
-                      textTheme.bodyMedium!.colored(const Color(0xFF171717)),
-                ),
+                _buildPurchaseButton(context),
                 SizedBox(height: 48.h),
-                _buildTabview(context),
-                SizedBox(
-                  height: 7241.h,
-                  child: TabBarView(
-                    controller: tabviewController,
-                    children: const [
-                      CheckupOwnerTab(),
-                      CheckupOwnerTab(),
-                    ],
-                  ),
+                CheckUpTapBox(tabController: tabviewController),
+                SizedBox(height: 24.h),
+                CustomImageView(
+                  imagePath: Assets.images.imgImage472x361.path,
+                  height: 472.h,
+                  width: 361.w,
                 ),
+                SizedBox(height: 24.h),
+                CustomImageView(
+                  imagePath: Assets.images.imgImage683x361.path,
+                  height: 683.h,
+                  width: 361.w,
+                ),
+                SizedBox(height: 72.h),
+                Column(
+                  children: checkup.detailImages!
+                      .map((image) => CustomImageView(
+                            imagePath: image.imagePath,
+                            width: (image.width ?? 361).w,
+                            height: image.height!.h,
+                          ))
+                      .toList(),
+                ),
+                SizedBox(height: 177.h),
+                const CamiAppFooter(),
               ],
             ),
           ),
@@ -143,7 +135,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
               margin: EdgeInsets.only(left: 12.w),
             ),
             BreadCrumb(
-              text: '반려인'.tr(),
+              text: checkup.type!,
               margin: EdgeInsets.only(left: 8.w),
             ),
             BreadCrumb(
@@ -157,7 +149,39 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
   }
 
   /// Section Widget
-  Widget _buildQuickCheckupInfo(BuildContext context) {
+  Widget _buildChipButton(BuildContext context, String checkupName) {
+    return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
+      height: 23.h,
+      width: (checkupName.length * 5.75 + 16).w,
+      text: checkupName,
+      margin: EdgeInsets.only(left: 16.w),
+      buttonTextStyle: textTheme.bodySmall!.fSize(10),
+      alignment: Alignment.centerLeft,
+    );
+  }
+
+  /// Section Widget
+  Widget _buildInfo(BuildContext context, int reviews) {
+    return Container(
+      alignment: Alignment.centerLeft,
+      padding: EdgeInsets.only(left: 16.w),
+      child: Row(
+        children: [
+          Stars(score: checkup.reviewRating!),
+          Padding(
+            padding: EdgeInsets.only(left: 8.w),
+            child: Text('($reviews)', style: textTheme.bodyMedium),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTestSummary(BuildContext context, int questions) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -174,12 +198,10 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           Row(
             children: [
               Text('문항'.tr(), style: textTheme.bodyMedium),
-              Padding(
-                padding: EdgeInsets.only(left: 42.w),
-                child: Text(
-                  '84문항'.tr(),
-                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
-                ),
+              SizedBox(width: 42.w),
+              Text(
+                '$questions 문항'.tr(),
+                style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
               ),
             ],
           ),
@@ -202,12 +224,9 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
   }
 
   /// Section Widget
-  Widget _buildQuickCheckupPrice(BuildContext context) {
+  Widget _buildPriceInfo(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: 16.w,
-        right: 20.w,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -240,7 +259,7 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
-            child: Text('9,900원'.tr(), style: textTheme.bodyMedium!.fSize(15)),
+            child: Text(checkup.price!, style: textTheme.bodyLarge),
           ),
         ],
       ),
@@ -248,27 +267,15 @@ class CheckupOwnerScreenState extends State<CheckupOwnerScreen>
   }
 
   /// Section Widget
-  Widget _buildTabview(BuildContext context) {
-    return SizedBox(
-      height: 40.h,
-      width: 362.w,
-      child: TabBar(
-        controller: tabviewController,
-        labelPadding: EdgeInsets.zero,
-        labelColor: Colors.white,
-        labelStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
-        unselectedLabelColor: const Color(0xFFA3A3A3),
-        unselectedLabelStyle:
-            textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
-        indicator: BoxDecoration(
-          color: const Color(0xFF262626),
-          borderRadius: BorderRadius.circular(8.w),
-        ),
-        tabs: [
-          Tab(child: Text('검사소개'.tr())),
-          Tab(child: Text('구매후기'.tr())),
-        ],
-      ),
+  Widget _buildPurchaseButton(BuildContext context) {
+    return CustomElevatedButton(
+      onPressed: (context) {
+        // TODO: implement onPressed
+      },
+      text: '구매하기'.tr(),
+      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      buttonStyle: CustomButtonStyles.fillPrimary,
+      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
     );
   }
 }

@@ -7,11 +7,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/data/models/check_up.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/checkup_details/widgets/check_up_tap_box.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/ui/shared/stars.dart';
@@ -20,13 +22,81 @@ import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
-class CheckupCatScreen extends StatelessWidget {
-  const CheckupCatScreen({super.key});
+class CheckupCatScreen extends StatefulWidget {
+  const CheckupCatScreen({
+    super.key,
+    required this.checkup,
+  });
+
+  final CheckUp checkup;
+
+  @override
+  CheckupCatScreenState createState() => CheckupCatScreenState();
+}
+
+class CheckupCatScreenState extends State<CheckupCatScreen>
+    with TickerProviderStateMixin {
+  CheckUp get checkup => widget.checkup;
+
+  late TabController tabviewController;
+  final checkupImages = [
+    CustomImageView(
+      imagePath: Assets.images.imgImage725x361.path,
+      height: 725.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage652x361.path,
+      height: 652.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1065x361.path,
+      height: 1065.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1352x361.path,
+      height: 1352.h,
+      width: 361.w,
+    ),
+    SizedBox(height: 1.h),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1057x361.path,
+      height: 1057.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1106x361.path,
+      height: 1106.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage705x361.path,
+      height: 705.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage543x361.path,
+      height: 543.h,
+      width: 361.w,
+    ),
+    SizedBox(height: 1.h),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1007x361.path,
+      height: 1007.h,
+      width: 361.w,
+    ),
+  ];
+  @override
+  void initState() {
+    super.initState();
+    tabviewController = TabController(length: 2, vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -42,44 +112,34 @@ class CheckupCatScreen extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 성격유형검사(CCSI)'.tr(),
-                      style: textTheme.bodyMedium),
+                  child: Text(checkup.fullName!, style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.tests.test14791.path,
+                  imagePath: checkup.thumbPath,
                   height: 171.h,
                   width: 361.w,
                 ),
                 SizedBox(height: 18.h),
-                _buildCcsiButton(context),
+                _buildChipButton(context, checkup.short!),
                 SizedBox(height: 11.h),
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려묘 성격유형검사'.tr(),
+                  child: Text(checkup.testname!,
                       style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
-                _buildInfo(context),
+                _buildInfo(context, checkup.reviewsCount!),
                 SizedBox(height: 7.h),
-                _buildTestSummary(context),
+                _buildTestSummary(context, checkup.questions!),
                 SizedBox(height: 8.h),
                 _buildPriceInfo(context),
                 SizedBox(height: 8.h),
                 _buildPurchaseButton(context),
                 SizedBox(height: 48.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _buildIntroductionButton(context),
-                      _buildReviewsButton(context),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 48.h),
+                CheckUpTapBox(tabController: tabviewController),
+                SizedBox(height: 24.h),
                 CustomImageView(
                   imagePath: Assets.images.imgImage472x361.path,
                   height: 472.h,
@@ -90,52 +150,15 @@ class CheckupCatScreen extends StatelessWidget {
                   height: 683.h,
                   width: 361.w,
                 ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage725x361.path,
-                  height: 725.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage652x361.path,
-                  height: 652.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1065x361.path,
-                  height: 1065.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1352x361.path,
-                  height: 1352.h,
-                  width: 361.w,
-                ),
-                SizedBox(height: 1.h),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1057x361.path,
-                  height: 1057.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1106x361.path,
-                  height: 1106.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage705x361.path,
-                  height: 705.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage543x361.path,
-                  height: 543.h,
-                  width: 361.w,
-                ),
-                SizedBox(height: 1.h),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1007x361.path,
-                  height: 1007.h,
-                  width: 361.w,
+                SizedBox(height: 24.h),
+                Column(
+                  children: checkup.detailImages!
+                      .map((image) => CustomImageView(
+                            imagePath: image.imagePath,
+                            width: (image.width ?? 361).w,
+                            height: image.height!.h,
+                          ))
+                      .toList(),
                 ),
                 SizedBox(height: 272.h),
                 const CamiAppFooter(),
@@ -160,7 +183,7 @@ class CheckupCatScreen extends StatelessWidget {
               margin: EdgeInsets.only(left: 12.w),
             ),
             BreadCrumb(
-              text: '반려묘'.tr(),
+              text: checkup.type!,
               margin: EdgeInsets.only(left: 8.w),
             ),
             BreadCrumb(
@@ -174,14 +197,14 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildCcsiButton(BuildContext context) {
+  Widget _buildChipButton(BuildContext context, String checkupName) {
     return CustomElevatedButton(
       onPressed: (context) {
         // TODO: implement onPressed
       },
       height: 23.h,
-      width: 42.w,
-      text: 'CCSI',
+      width: (checkupName.length * 5.75 + 16).w,
+      text: checkupName,
       margin: EdgeInsets.only(left: 16.w),
       buttonTextStyle: textTheme.bodySmall!.fSize(10),
       alignment: Alignment.centerLeft,
@@ -189,16 +212,16 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildInfo(BuildContext context) {
+  Widget _buildInfo(BuildContext context, int reviews) {
     return Container(
       alignment: Alignment.centerLeft,
       padding: EdgeInsets.only(left: 16.w),
       child: Row(
         children: [
-          const Stars(score: 4.9),
+          Stars(score: checkup.reviewRating!),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child: Text('(84)'.tr(), style: textTheme.bodyMedium),
+            child: Text('($reviews)', style: textTheme.bodyMedium),
           ),
         ],
       ),
@@ -206,7 +229,7 @@ class CheckupCatScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildTestSummary(BuildContext context) {
+  Widget _buildTestSummary(BuildContext context, int questions) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -223,12 +246,10 @@ class CheckupCatScreen extends StatelessWidget {
           Row(
             children: [
               Text('문항'.tr(), style: textTheme.bodyMedium),
-              Padding(
-                padding: EdgeInsets.only(left: 41.w),
-                child: Text(
-                  '128문항'.tr(),
-                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
-                ),
+              SizedBox(width: 42.w),
+              Text(
+                '$questions 문항'.tr(),
+                style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
               ),
             ],
           ),
@@ -237,7 +258,7 @@ class CheckupCatScreen extends StatelessWidget {
             children: [
               Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
-                padding: EdgeInsets.only(left: 16.w),
+                padding: EdgeInsets.only(left: 17.w),
                 child: Text(
                   '약 20분'.tr(),
                   style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
@@ -285,11 +306,8 @@ class CheckupCatScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
-              top: 4.h,
-              bottom: 3.h,
-            ),
-            child: Text('12,000원'.tr(), style: textTheme.bodyLarge),
+            padding: EdgeInsets.symmetric(vertical: 4.h),
+            child: Text(checkup.price!, style: textTheme.bodyLarge),
           ),
         ],
       ),
@@ -306,31 +324,6 @@ class CheckupCatScreen extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
       buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildIntroductionButton(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      width: 181.w,
-      text: '검사소개'.tr(),
-      buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
-    );
-  }
-
-  /// Section Widget
-  Widget _buildReviewsButton(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      width: 181.w,
-      text: '구매후기'.tr(),
-      buttonStyle: CustomButtonStyles.fillGrayTL81,
-      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
     );
   }
 }

@@ -7,11 +7,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
+import '/data/models/check_up.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
+import '/ui/checkup_details/widgets/check_up_tap_box.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/ui/shared/stars.dart';
@@ -20,13 +22,81 @@ import '/widgets/app_bar/custom_app_bar.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
-class CheckupDogScreen extends StatelessWidget {
-  const CheckupDogScreen({super.key});
+class CheckupDogScreen extends StatefulWidget {
+  const CheckupDogScreen({
+    super.key,
+    required this.checkup,
+  });
+
+  final CheckUp checkup;
+
+  @override
+  CheckupDogScreenState createState() => CheckupDogScreenState();
+}
+
+class CheckupDogScreenState extends State<CheckupDogScreen>
+    with TickerProviderStateMixin {
+  CheckUp get checkup => widget.checkup;
+
+  late TabController tabviewController;
+  final checkupImages = [
+    CustomImageView(
+      imagePath: Assets.images.imgImage731x361.path,
+      height: 731.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage644x361.path,
+      height: 644.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1252x361.path,
+      height: 1252.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1368x361.path,
+      height: 1368.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1087x361.path,
+      height: 1087.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1009x361.path,
+      height: 1009.h,
+      width: 361.w,
+    ),
+    SizedBox(height: 1.h),
+    CustomImageView(
+      imagePath: Assets.images.imgImage1094x361.path,
+      height: 1094.h,
+      width: 361.w,
+    ),
+    CustomImageView(
+      imagePath: Assets.images.imgImage544x361.path,
+      height: 544.h,
+      width: 361.w,
+    ),
+    SizedBox(height: 1.h),
+    CustomImageView(
+      imagePath: Assets.images.imgImage997x361.path,
+      height: 997.h,
+      width: 361.w,
+    ),
+  ];
+  @override
+  void initState() {
+    super.initState();
+    tabviewController = TabController(length: 2, vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -42,43 +112,33 @@ class CheckupDogScreen extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려견 성격유형검사(DCSI-II)'.tr(),
-                      style: textTheme.bodyMedium),
+                  child: Text(checkup.fullName!, style: textTheme.bodyMedium),
                 ),
                 SizedBox(height: 15.h),
                 CustomImageView(
-                  imagePath: Assets.images.tests.test14789.path,
+                  imagePath: checkup.thumbPath,
                   height: 171.h,
                   width: 361.w,
                 ),
                 SizedBox(height: 18.h),
-                _buildDCSIButton(context),
+                _buildChipButton(context, checkup.short!),
                 SizedBox(height: 11.h),
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text('반려견 성격유형검사'.tr(),
+                  child: Text(checkup.testname!,
                       style: textTheme.bodyLarge!.nanum),
                 ),
                 SizedBox(height: 10.h),
-                _buildInfo(context),
+                _buildInfo(context, checkup.reviewsCount!),
                 SizedBox(height: 7.h),
-                _buildCheckupDogInfo(context),
+                _buildTestSummary(context, checkup.questions!),
                 SizedBox(height: 8.h),
-                _buildCheckupDogPrice(context),
+                _buildPriceInfo(context),
                 SizedBox(height: 8.h),
-                _buildButton1(context),
+                _buildPurchaseButton(context),
                 SizedBox(height: 48.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _buildButton2(context),
-                      _buildButton3(context),
-                    ],
-                  ),
-                ),
+                CheckUpTapBox(tabController: tabviewController),
                 SizedBox(height: 24.h),
                 CustomImageView(
                   imagePath: Assets.images.imgImage472x361.path,
@@ -91,52 +151,14 @@ class CheckupDogScreen extends StatelessWidget {
                   width: 361.w,
                 ),
                 SizedBox(height: 24.h),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage731x361.path,
-                  height: 731.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage644x361.path,
-                  height: 644.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1252x361.path,
-                  height: 1252.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1368x361.path,
-                  height: 1368.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1087x361.path,
-                  height: 1087.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1009x361.path,
-                  height: 1009.h,
-                  width: 361.w,
-                ),
-                SizedBox(height: 1.h),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage1094x361.path,
-                  height: 1094.h,
-                  width: 361.w,
-                ),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage544x361.path,
-                  height: 544.h,
-                  width: 361.w,
-                ),
-                SizedBox(height: 1.h),
-                CustomImageView(
-                  imagePath: Assets.images.imgImage997x361.path,
-                  height: 997.h,
-                  width: 361.w,
+                Column(
+                  children: checkup.detailImages!
+                      .map((image) => CustomImageView(
+                            imagePath: image.imagePath,
+                            width: (image.width ?? 361).w,
+                            height: image.height!.h,
+                          ))
+                      .toList(),
                 ),
                 SizedBox(height: 272.h),
                 const CamiAppFooter(),
@@ -161,7 +183,7 @@ class CheckupDogScreen extends StatelessWidget {
               margin: EdgeInsets.only(left: 12.w),
             ),
             BreadCrumb(
-              text: '반려견'.tr(),
+              text: checkup.type!,
               margin: EdgeInsets.only(left: 8.w),
             ),
             BreadCrumb(
@@ -175,14 +197,14 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildDCSIButton(BuildContext context) {
+  Widget _buildChipButton(BuildContext context, String checkupName) {
     return CustomElevatedButton(
       onPressed: (context) {
         // TODO: implement onPressed
       },
       height: 23.h,
-      width: 53.w,
-      text: 'DCSI-II',
+      width: (checkupName.length * 5.75 + 16).w,
+      text: checkupName,
       margin: EdgeInsets.only(left: 16.w),
       buttonTextStyle: textTheme.bodySmall!.fSize(10),
       alignment: Alignment.centerLeft,
@@ -190,16 +212,16 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildInfo(BuildContext context) {
+  Widget _buildInfo(BuildContext context, int reviews) {
     return Container(
       alignment: Alignment.centerLeft,
       padding: EdgeInsets.only(left: 16.w),
       child: Row(
         children: [
-          const Stars(score: 4.9),
+          Stars(score: checkup.reviewRating!),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child: Text('(916)'.tr(), style: textTheme.bodyMedium),
+            child: Text('($reviews)', style: textTheme.bodyMedium),
           ),
         ],
       ),
@@ -207,7 +229,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildCheckupDogInfo(BuildContext context) {
+  Widget _buildTestSummary(BuildContext context, int questions) {
     return Container(
       width: 361.w,
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -223,17 +245,11 @@ class CheckupDogScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
-                '•',
-                style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
-              ),
               Text('문항'.tr(), style: textTheme.bodyMedium),
-              Padding(
-                padding: EdgeInsets.only(left: 41.w),
-                child: Text(
-                  '107문항'.tr(),
-                  style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
-                ),
+              SizedBox(width: 42.w),
+              Text(
+                '$questions 문항'.tr(),
+                style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
               ),
             ],
           ),
@@ -242,7 +258,7 @@ class CheckupDogScreen extends StatelessWidget {
             children: [
               Text('소요시간'.tr(), style: textTheme.bodyMedium),
               Padding(
-                padding: EdgeInsets.only(left: 16.w),
+                padding: EdgeInsets.only(left: 17.w),
                 child: Text(
                   '약 20분'.tr(),
                   style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
@@ -256,7 +272,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildCheckupDogPrice(BuildContext context) {
+  Widget _buildPriceInfo(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
@@ -290,11 +306,8 @@ class CheckupDogScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
-              top: 4.h,
-              bottom: 3.h,
-            ),
-            child: Text('12,000원'.tr(), style: textTheme.bodyLarge),
+            padding: EdgeInsets.symmetric(vertical: 4.h),
+            child: Text(checkup.price!, style: textTheme.bodyLarge),
           ),
         ],
       ),
@@ -302,7 +315,7 @@ class CheckupDogScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildButton1(BuildContext context) {
+  Widget _buildPurchaseButton(BuildContext context) {
     return CustomElevatedButton(
       onPressed: (context) {
         // TODO: implement onPressed
@@ -311,31 +324,6 @@ class CheckupDogScreen extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       buttonStyle: CustomButtonStyles.fillPrimary,
       buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildButton2(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      width: 181.w,
-      text: '검사소개'.tr(),
-      buttonStyle: CustomButtonStyles.fillOnSecondaryContainer,
-    );
-  }
-
-  /// Section Widget
-  Widget _buildButton3(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      width: 181.w,
-      text: '구매후기'.tr(),
-      buttonStyle: CustomButtonStyles.fillGrayTL81,
-      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
     );
   }
 }
