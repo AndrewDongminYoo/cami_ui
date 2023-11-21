@@ -39,7 +39,7 @@ class DesktopLayout extends StatelessWidget {
                   color: const Color(0xFFFFFF50),
                   child: CustomImageView(
                     alignment: Alignment.bottomCenter,
-                    imagePath: Assets.images.imgMainBackground.path,
+                    imagePath: Assets.images.mainIllust.path,
                     width: window.maxWidth * 0.71,
                     height: window.maxWidth * 0.29,
                   ),

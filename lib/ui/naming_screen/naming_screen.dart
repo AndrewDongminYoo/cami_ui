@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -31,11 +32,17 @@ class NamingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    final sliderBanners = [
-      Assets.images.imgImage186x329.path,
-      Assets.images.imgImage5.path,
-      Assets.images.imgImage6.path,
-    ];
+    final sliderBanners = kIsWeb
+        ? [
+            Assets.images.banners.banner14309.path,
+            Assets.images.banners.banner14307.path,
+            Assets.images.banners.banner14478.path,
+          ]
+        : [
+            Assets.images.banners.banner14308.path,
+            Assets.images.banners.banner14492.path,
+            Assets.images.banners.banner14306.path,
+          ];
     return SafeArea(
       child: Scaffold(
         appBar: const CamiAppBar(),

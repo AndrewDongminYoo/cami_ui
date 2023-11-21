@@ -659,41 +659,41 @@ class $AssetsImagesTestsGen {
   AssetGenImage get dogDobi09 =>
       const AssetGenImage('assets/images/tests/DOG_DOBI_09.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_01.jpg
-  AssetGenImage get dogDsciIi01 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_01.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_01.jpg
+  AssetGenImage get dogDcsiIi01 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_01.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_02.jpg
-  AssetGenImage get dogDsciIi02 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_02.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_02.jpg
+  AssetGenImage get dogDcsiIi02 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_02.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_03.jpg
-  AssetGenImage get dogDsciIi03 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_03.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_03.jpg
+  AssetGenImage get dogDcsiIi03 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_03.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_04.jpg
-  AssetGenImage get dogDsciIi04 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_04.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_04.jpg
+  AssetGenImage get dogDcsiIi04 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_04.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_05.jpg
-  AssetGenImage get dogDsciIi05 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_05.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_05.jpg
+  AssetGenImage get dogDcsiIi05 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_05.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_06.jpg
-  AssetGenImage get dogDsciIi06 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_06.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_06.jpg
+  AssetGenImage get dogDcsiIi06 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_06.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_07.jpg
-  AssetGenImage get dogDsciIi07 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_07.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_07.jpg
+  AssetGenImage get dogDcsiIi07 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_07.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_08.jpg
-  AssetGenImage get dogDsciIi08 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_08.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_08.jpg
+  AssetGenImage get dogDcsiIi08 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_08.jpg');
 
-  /// File path: assets/images/tests/DOG_DSCI-II_09.jpg
-  AssetGenImage get dogDsciIi09 =>
-      const AssetGenImage('assets/images/tests/DOG_DSCI-II_09.jpg');
+  /// File path: assets/images/tests/DOG_DCSI-II_09.jpg
+  AssetGenImage get dogDcsiIi09 =>
+      const AssetGenImage('assets/images/tests/DOG_DCSI-II_09.jpg');
 
   /// File path: assets/images/tests/FAQ_01.jpg
   AssetGenImage get faq01 =>
@@ -807,15 +807,15 @@ class $AssetsImagesTestsGen {
         dogDobi07,
         dogDobi08,
         dogDobi09,
-        dogDsciIi01,
-        dogDsciIi02,
-        dogDsciIi03,
-        dogDsciIi04,
-        dogDsciIi05,
-        dogDsciIi06,
-        dogDsciIi07,
-        dogDsciIi08,
-        dogDsciIi09,
+        dogDcsiIi01,
+        dogDcsiIi02,
+        dogDcsiIi03,
+        dogDcsiIi04,
+        dogDcsiIi05,
+        dogDcsiIi06,
+        dogDcsiIi07,
+        dogDcsiIi08,
+        dogDcsiIi09,
         faq01,
         faq02,
         ownerDds01,

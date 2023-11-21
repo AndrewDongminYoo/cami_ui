@@ -58,7 +58,7 @@ class MenuBarScreen extends StatelessWidget {
               ),
               const Spacer(),
               CustomImageView(
-                imagePath: Assets.images.imgImage84x393.path,
+                imagePath: Assets.images.moMenuBanner.path,
                 height: 84.h,
                 width: 393.w,
               ),

@@ -21,8 +21,8 @@ import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
-import 'widgets/animal_type_test_item_widget.dart';
 import 'widgets/expert_profiles_item_widget.dart';
+import 'widgets/quick_test_banner.dart';
 import 'widgets/user_review_item_widget.dart';
 
 // ignore: must_be_immutable
@@ -200,7 +200,7 @@ class HomeScreen extends StatelessWidget {
           Text('행복한 기적을 만듭니다'.tr(), style: textTheme.bodyMedium),
           SizedBox(height: 39.h),
           CustomImageView(
-            imagePath: Assets.images.imgImage320x337.path,
+            imagePath: Assets.images.mainIllustMo.path,
             height: 320.h,
             width: 337.w,
           ),
@@ -390,21 +390,20 @@ class HomeScreen extends StatelessWidget {
           ),
           SizedBox(height: 60.h),
           CustomImageView(
-            imagePath: Assets.images.imgImage242x337.path,
+            imagePath: Assets.images.mainStar.path,
             height: 242.h,
             width: 337.w,
           ),
           SizedBox(height: 60.h),
-          ListView.separated(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            separatorBuilder: (context, index) {
-              return SizedBox(height: 12.h);
-            },
-            itemCount: 2,
-            itemBuilder: (context, index) {
-              return const AnimalTypeTestItemWidget();
-            },
+          QuickTestBanner(
+            title1: '동물 유형 테스트'.tr(),
+            title2: '나는 강아지형 vs 고양이형 ?'.tr(),
+            imagePath: Assets.images.figure1.path,
+          ),
+          QuickTestBanner(
+            title1: '엉뚱 발랄 작명소'.tr(),
+            title2: '원주민식 이름짓기'.tr(),
+            imagePath: Assets.images.figure2.path,
           ),
           SizedBox(height: 40.h),
         ],

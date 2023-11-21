@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -14,7 +15,7 @@ import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_image_view.dart';
-import 'widgets/solution_list_item_widget.dart';
+import 'widgets/solution_banner.dart';
 
 class SolutionScreen extends StatelessWidget {
   const SolutionScreen({super.key});
@@ -85,7 +86,7 @@ class SolutionScreen extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: Assets.images.imgImage167x130.path,
+            imagePath: Assets.images.cami02.path,
             height: 167.h,
             width: 130.w,
             margin: EdgeInsets.only(left: 15.w),
@@ -106,7 +107,7 @@ class SolutionScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           CustomImageView(
-            imagePath: Assets.images.imgImage128x142.path,
+            imagePath: Assets.images.cami01.path,
             height: 128.h,
             width: 142.w,
           ),
@@ -132,6 +133,15 @@ class SolutionScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildSolutionList(BuildContext context) {
+    final solutionImages = kIsWeb
+        ? [
+            Assets.images.onePointPc.path,
+            Assets.images.questionPc.path,
+          ]
+        : [
+            Assets.images.onePointMo.path,
+            Assets.images.questionMo.path,
+          ];
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: ListView.separated(
@@ -140,9 +150,11 @@ class SolutionScreen extends StatelessWidget {
         separatorBuilder: (context, index) {
           return SizedBox(height: 24.h);
         },
-        itemCount: 2,
+        itemCount: solutionImages.length,
         itemBuilder: (context, index) {
-          return const SolutionListItemWidget();
+          return SolutionBanner(
+            imagePath: solutionImages[index],
+          );
         },
       ),
     );

@@ -132,7 +132,7 @@ class UserReviewItemWidget extends StatelessWidget {
                     ),
                   ),
                   CustomImageView(
-                    imagePath: Assets.images.imgImage25.path,
+                    imagePath: Assets.images.reviews.dcsiIi.path,
                     height: 84.r,
                     width: 84.r,
                     alignment: Alignment.topRight,

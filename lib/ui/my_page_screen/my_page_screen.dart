@@ -250,7 +250,7 @@ class MyPageScreen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     children: [
                       CustomImageView(
-                        imagePath: Assets.images.imgImage112x138.path,
+                        imagePath: Assets.images.addDog.path,
                         height: 112.h,
                         width: 138.w,
                         alignment: Alignment.center,
@@ -292,7 +292,7 @@ class MyPageScreen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     children: [
                       CustomImageView(
-                        imagePath: Assets.images.imgImage10.path,
+                        imagePath: Assets.images.addCat.path,
                         height: 112.h,
                         width: 138.w,
                         alignment: Alignment.center,

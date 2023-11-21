@@ -46,8 +46,8 @@ class PerOwnerRegister extends StatelessWidget {
               children: [
                 CustomImageView(
                   imagePath: isCat
-                      ? Assets.images.imgImage10.path
-                      : Assets.images.imgImage112x138.path,
+                      ? Assets.images.addCat.path
+                      : Assets.images.addDog.path,
                   height: 112.h,
                   width: 138.w,
                   alignment: Alignment.center,

@@ -38,7 +38,7 @@ class QuickTestScreen extends StatelessWidget {
                       Text('반짝 테스트'.tr(), style: textTheme.headlineSmall),
                       SizedBox(height: 66.h),
                       CustomImageView(
-                        imagePath: Assets.images.imgImage257x241.path,
+                        imagePath: Assets.images.snack01.path,
                         height: 257.h,
                         width: 241.w,
                       ),
@@ -116,7 +116,7 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 64.h),
                       CustomImageView(
-                        imagePath: Assets.images.imgImage1.path,
+                        imagePath: Assets.images.snack03.path,
                         height: 257.h,
                         width: 241.w,
                       ),
@@ -170,7 +170,7 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 64.h),
                       CustomImageView(
-                        imagePath: Assets.images.imgImage2.path,
+                        imagePath: Assets.images.snack04.path,
                         height: 257.h,
                         width: 241.w,
                       ),
