@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // 🌎 Project imports:
+import '/core/utils/logger.dart';
 import '/theme/theme_helper.dart';
 
 class ScreenTitle extends StatelessWidget {
@@ -24,7 +25,11 @@ class ScreenTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.pushNamed(routeName),
+      onTap: () {
+        final uri = Uri.parse(routeName);
+        logger.i(uri.queryParameters);
+        context.go(uri.toString());
+      },
       child: Container(
         decoration: const BoxDecoration(color: Colors.white),
         child: Column(

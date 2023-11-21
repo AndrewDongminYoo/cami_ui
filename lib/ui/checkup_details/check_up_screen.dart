@@ -107,12 +107,12 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 CheckUpTapBox(tabController: tabviewController),
                 SizedBox(height: 24.h),
                 CustomImageView(
-                  imagePath: Assets.images.imgImage472x361.path,
+                  imagePath: Assets.images.tests.faq01.path,
                   height: 472.h,
                   width: 361.w,
                 ),
                 CustomImageView(
-                  imagePath: Assets.images.imgImage683x361.path,
+                  imagePath: Assets.images.tests.faq02.path,
                   height: 683.h,
                   width: 361.w,
                 ),
@@ -122,7 +122,6 @@ class CheckUpScreenState extends State<CheckUpScreen>
                       .map((image) => CustomImageView(
                             imagePath: image.imagePath,
                             width: (image.width ?? 361).w,
-                            height: image.height!.h,
                           ))
                       .toList(),
                 ),
