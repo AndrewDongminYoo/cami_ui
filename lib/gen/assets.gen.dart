@@ -87,6 +87,14 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesAboutGen get about => const $AssetsImagesAboutGen();
+
+  /// File path: assets/images/add-cat.jpg
+  AssetGenImage get addCat => const AssetGenImage('assets/images/add-cat.jpg');
+
+  /// File path: assets/images/add-dog.jpg
+  AssetGenImage get addDog => const AssetGenImage('assets/images/add-dog.jpg');
+
   /// File path: assets/images/avatar_cat.png
   AssetGenImage get avatarCat =>
       const AssetGenImage('assets/images/avatar_cat.png');
@@ -103,7 +111,21 @@ class $AssetsImagesGen {
   AssetGenImage get avatarOwner =>
       const AssetGenImage('assets/images/avatar_owner.png');
 
+  $AssetsImagesBannersGen get banners => const $AssetsImagesBannersGen();
+
+  /// File path: assets/images/cami_01.png
+  AssetGenImage get cami01 => const AssetGenImage('assets/images/cami_01.png');
+
+  /// File path: assets/images/cami_02.png
+  AssetGenImage get cami02 => const AssetGenImage('assets/images/cami_02.png');
+
   $AssetsImagesExpertsGen get experts => const $AssetsImagesExpertsGen();
+
+  /// File path: assets/images/figure1.png
+  AssetGenImage get figure1 => const AssetGenImage('assets/images/figure1.png');
+
+  /// File path: assets/images/figure2.png
+  AssetGenImage get figure2 => const AssetGenImage('assets/images/figure2.png');
 
   /// File path: assets/images/ico_menu_vert.png
   AssetGenImage get icoMenuVert =>
@@ -117,237 +139,83 @@ class $AssetsImagesGen {
   AssetGenImage get imgCatProfile =>
       const AssetGenImage('assets/images/img_cat_profile.png');
 
-  /// File path: assets/images/img_image_1.png
-  AssetGenImage get imgImage1 =>
-      const AssetGenImage('assets/images/img_image_1.png');
-
-  /// File path: assets/images/img_image_10.png
-  AssetGenImage get imgImage10 =>
-      const AssetGenImage('assets/images/img_image_10.png');
-
-  /// File path: assets/images/img_image_1007x361.png
-  AssetGenImage get imgImage1007x361 =>
-      const AssetGenImage('assets/images/img_image_1007x361.png');
-
-  /// File path: assets/images/img_image_1009x361.png
-  AssetGenImage get imgImage1009x361 =>
-      const AssetGenImage('assets/images/img_image_1009x361.png');
-
-  /// File path: assets/images/img_image_1037x361.png
-  AssetGenImage get imgImage1037x361 =>
-      const AssetGenImage('assets/images/img_image_1037x361.png');
-
-  /// File path: assets/images/img_image_1056x361.png
-  AssetGenImage get imgImage1056x361 =>
-      const AssetGenImage('assets/images/img_image_1056x361.png');
-
-  /// File path: assets/images/img_image_1057x361.png
-  AssetGenImage get imgImage1057x361 =>
-      const AssetGenImage('assets/images/img_image_1057x361.png');
-
-  /// File path: assets/images/img_image_1065x361.png
-  AssetGenImage get imgImage1065x361 =>
-      const AssetGenImage('assets/images/img_image_1065x361.png');
-
-  /// File path: assets/images/img_image_1087x361.png
-  AssetGenImage get imgImage1087x361 =>
-      const AssetGenImage('assets/images/img_image_1087x361.png');
-
-  /// File path: assets/images/img_image_1094x361.png
-  AssetGenImage get imgImage1094x361 =>
-      const AssetGenImage('assets/images/img_image_1094x361.png');
-
-  /// File path: assets/images/img_image_1106x361.png
-  AssetGenImage get imgImage1106x361 =>
-      const AssetGenImage('assets/images/img_image_1106x361.png');
-
-  /// File path: assets/images/img_image_112x138.png
-  AssetGenImage get imgImage112x138 =>
-      const AssetGenImage('assets/images/img_image_112x138.png');
-
-  /// File path: assets/images/img_image_1235x361.png
-  AssetGenImage get imgImage1235x361 =>
-      const AssetGenImage('assets/images/img_image_1235x361.png');
-
-  /// File path: assets/images/img_image_1252x361.png
-  AssetGenImage get imgImage1252x361 =>
-      const AssetGenImage('assets/images/img_image_1252x361.png');
-
-  /// File path: assets/images/img_image_128x142.png
-  AssetGenImage get imgImage128x142 =>
-      const AssetGenImage('assets/images/img_image_128x142.png');
-
-  /// File path: assets/images/img_image_1352x361.png
-  AssetGenImage get imgImage1352x361 =>
-      const AssetGenImage('assets/images/img_image_1352x361.png');
-
-  /// File path: assets/images/img_image_1368x361.png
-  AssetGenImage get imgImage1368x361 =>
-      const AssetGenImage('assets/images/img_image_1368x361.png');
-
-  /// File path: assets/images/img_image_161x343.png
-  AssetGenImage get imgImage161x343 =>
-      const AssetGenImage('assets/images/img_image_161x343.png');
-
-  /// File path: assets/images/img_image_167x130.png
-  AssetGenImage get imgImage167x130 =>
-      const AssetGenImage('assets/images/img_image_167x130.png');
-
-  /// File path: assets/images/img_image_186x329.png
-  AssetGenImage get imgImage186x329 =>
-      const AssetGenImage('assets/images/img_image_186x329.png');
-
-  /// File path: assets/images/img_image_2.png
-  AssetGenImage get imgImage2 =>
-      const AssetGenImage('assets/images/img_image_2.png');
-
-  /// File path: assets/images/img_image_242x337.png
-  AssetGenImage get imgImage242x337 =>
-      const AssetGenImage('assets/images/img_image_242x337.png');
-
-  /// File path: assets/images/img_image_25.png
-  AssetGenImage get imgImage25 =>
-      const AssetGenImage('assets/images/img_image_25.png');
-
-  /// File path: assets/images/img_image_257x241.png
-  AssetGenImage get imgImage257x241 =>
-      const AssetGenImage('assets/images/img_image_257x241.png');
-
-  /// File path: assets/images/img_image_320x337.png
-  AssetGenImage get imgImage320x337 =>
-      const AssetGenImage('assets/images/img_image_320x337.png');
-
-  /// File path: assets/images/img_image_472x361.png
-  AssetGenImage get imgImage472x361 =>
-      const AssetGenImage('assets/images/img_image_472x361.png');
-
-  /// File path: assets/images/img_image_5.png
-  AssetGenImage get imgImage5 =>
-      const AssetGenImage('assets/images/img_image_5.png');
-
-  /// File path: assets/images/img_image_543x361.png
-  AssetGenImage get imgImage543x361 =>
-      const AssetGenImage('assets/images/img_image_543x361.png');
-
-  /// File path: assets/images/img_image_544x361.png
-  AssetGenImage get imgImage544x361 =>
-      const AssetGenImage('assets/images/img_image_544x361.png');
-
-  /// File path: assets/images/img_image_552x361.png
-  AssetGenImage get imgImage552x361 =>
-      const AssetGenImage('assets/images/img_image_552x361.png');
-
-  /// File path: assets/images/img_image_59x67.png
-  AssetGenImage get imgImage59x67 =>
-      const AssetGenImage('assets/images/img_image_59x67.png');
-
-  /// File path: assets/images/img_image_6.png
-  AssetGenImage get imgImage6 =>
-      const AssetGenImage('assets/images/img_image_6.png');
-
-  /// File path: assets/images/img_image_644x361.png
-  AssetGenImage get imgImage644x361 =>
-      const AssetGenImage('assets/images/img_image_644x361.png');
-
-  /// File path: assets/images/img_image_652x361.png
-  AssetGenImage get imgImage652x361 =>
-      const AssetGenImage('assets/images/img_image_652x361.png');
-
-  /// File path: assets/images/img_image_681x361.png
-  AssetGenImage get imgImage681x361 =>
-      const AssetGenImage('assets/images/img_image_681x361.png');
-
-  /// File path: assets/images/img_image_683x361.png
-  AssetGenImage get imgImage683x361 =>
-      const AssetGenImage('assets/images/img_image_683x361.png');
-
-  /// File path: assets/images/img_image_705x361.png
-  AssetGenImage get imgImage705x361 =>
-      const AssetGenImage('assets/images/img_image_705x361.png');
-
-  /// File path: assets/images/img_image_719x361.png
-  AssetGenImage get imgImage719x361 =>
-      const AssetGenImage('assets/images/img_image_719x361.png');
-
-  /// File path: assets/images/img_image_725x361.png
-  AssetGenImage get imgImage725x361 =>
-      const AssetGenImage('assets/images/img_image_725x361.png');
-
-  /// File path: assets/images/img_image_731x361.png
-  AssetGenImage get imgImage731x361 =>
-      const AssetGenImage('assets/images/img_image_731x361.png');
-
-  /// File path: assets/images/img_image_84x393.png
-  AssetGenImage get imgImage84x393 =>
-      const AssetGenImage('assets/images/img_image_84x393.png');
-
-  /// File path: assets/images/img_image_997x361.png
-  AssetGenImage get imgImage997x361 =>
-      const AssetGenImage('assets/images/img_image_997x361.png');
-
-  /// File path: assets/images/img_main_background.png
-  AssetGenImage get imgMainBackground =>
-      const AssetGenImage('assets/images/img_main_background.png');
-
   /// File path: assets/images/img_user_profile.png
   AssetGenImage get imgUserProfile =>
       const AssetGenImage('assets/images/img_user_profile.png');
 
+  /// File path: assets/images/main-illust-mo.png
+  AssetGenImage get mainIllustMo =>
+      const AssetGenImage('assets/images/main-illust-mo.png');
+
+  /// File path: assets/images/main-illust.png
+  AssetGenImage get mainIllust =>
+      const AssetGenImage('assets/images/main-illust.png');
+
+  /// File path: assets/images/main-star.png
+  AssetGenImage get mainStar =>
+      const AssetGenImage('assets/images/main-star.png');
+
+  /// File path: assets/images/mo-menu-banner.png
+  AssetGenImage get moMenuBanner =>
+      const AssetGenImage('assets/images/mo-menu-banner.png');
+
+  /// File path: assets/images/one_point_mo.png
+  AssetGenImage get onePointMo =>
+      const AssetGenImage('assets/images/one_point_mo.png');
+
+  /// File path: assets/images/one_point_pc.png
+  AssetGenImage get onePointPc =>
+      const AssetGenImage('assets/images/one_point_pc.png');
+
+  /// File path: assets/images/question_mo.png
+  AssetGenImage get questionMo =>
+      const AssetGenImage('assets/images/question_mo.png');
+
+  /// File path: assets/images/question_pc.png
+  AssetGenImage get questionPc =>
+      const AssetGenImage('assets/images/question_pc.png');
+
+  $AssetsImagesReviewsGen get reviews => const $AssetsImagesReviewsGen();
+
+  /// File path: assets/images/snack01.png
+  AssetGenImage get snack01 => const AssetGenImage('assets/images/snack01.png');
+
+  /// File path: assets/images/snack03.png
+  AssetGenImage get snack03 => const AssetGenImage('assets/images/snack03.png');
+
+  /// File path: assets/images/snack04.png
+  AssetGenImage get snack04 => const AssetGenImage('assets/images/snack04.png');
+
   $AssetsImagesTestsGen get tests => const $AssetsImagesTestsGen();
+  $AssetsImagesThumbsGen get thumbs => const $AssetsImagesThumbsGen();
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        addCat,
+        addDog,
         avatarCat,
         avatarDefault,
         avatarDog,
         avatarOwner,
+        cami01,
+        cami02,
+        figure1,
+        figure2,
         icoMenuVert,
         imageNotFound,
         imgCatProfile,
-        imgImage1,
-        imgImage10,
-        imgImage1007x361,
-        imgImage1009x361,
-        imgImage1037x361,
-        imgImage1056x361,
-        imgImage1057x361,
-        imgImage1065x361,
-        imgImage1087x361,
-        imgImage1094x361,
-        imgImage1106x361,
-        imgImage112x138,
-        imgImage1235x361,
-        imgImage1252x361,
-        imgImage128x142,
-        imgImage1352x361,
-        imgImage1368x361,
-        imgImage161x343,
-        imgImage167x130,
-        imgImage186x329,
-        imgImage2,
-        imgImage242x337,
-        imgImage25,
-        imgImage257x241,
-        imgImage320x337,
-        imgImage472x361,
-        imgImage5,
-        imgImage543x361,
-        imgImage544x361,
-        imgImage552x361,
-        imgImage59x67,
-        imgImage6,
-        imgImage644x361,
-        imgImage652x361,
-        imgImage681x361,
-        imgImage683x361,
-        imgImage705x361,
-        imgImage719x361,
-        imgImage725x361,
-        imgImage731x361,
-        imgImage84x393,
-        imgImage997x361,
-        imgMainBackground,
-        imgUserProfile
+        imgUserProfile,
+        mainIllustMo,
+        mainIllust,
+        mainStar,
+        moMenuBanner,
+        onePointMo,
+        onePointPc,
+        questionMo,
+        questionPc,
+        snack01,
+        snack03,
+        snack04
       ];
 }
 
@@ -506,6 +374,117 @@ class $AssetsSvgGen {
       ];
 }
 
+class $AssetsImagesAboutGen {
+  const $AssetsImagesAboutGen();
+
+  /// File path: assets/images/about/bottom.png
+  AssetGenImage get bottom =>
+      const AssetGenImage('assets/images/about/bottom.png');
+
+  /// File path: assets/images/about/character-1.png
+  AssetGenImage get character1 =>
+      const AssetGenImage('assets/images/about/character-1.png');
+
+  /// File path: assets/images/about/character-2.png
+  AssetGenImage get character2 =>
+      const AssetGenImage('assets/images/about/character-2.png');
+
+  /// File path: assets/images/about/doc-1.png
+  AssetGenImage get doc1 =>
+      const AssetGenImage('assets/images/about/doc-1.png');
+
+  /// File path: assets/images/about/doc-2.png
+  AssetGenImage get doc2 =>
+      const AssetGenImage('assets/images/about/doc-2.png');
+
+  /// File path: assets/images/about/doc-3.png
+  AssetGenImage get doc3 =>
+      const AssetGenImage('assets/images/about/doc-3.png');
+
+  /// File path: assets/images/about/logo-1.png
+  AssetGenImage get logo1 =>
+      const AssetGenImage('assets/images/about/logo-1.png');
+
+  /// File path: assets/images/about/logo-2.png
+  AssetGenImage get logo2 =>
+      const AssetGenImage('assets/images/about/logo-2.png');
+
+  /// File path: assets/images/about/logo-3.png
+  AssetGenImage get logo3 =>
+      const AssetGenImage('assets/images/about/logo-3.png');
+
+  /// File path: assets/images/about/logo-4.png
+  AssetGenImage get logo4 =>
+      const AssetGenImage('assets/images/about/logo-4.png');
+
+  /// File path: assets/images/about/logo-5.png
+  AssetGenImage get logo5 =>
+      const AssetGenImage('assets/images/about/logo-5.png');
+
+  /// File path: assets/images/about/logo-6.png
+  AssetGenImage get logo6 =>
+      const AssetGenImage('assets/images/about/logo-6.png');
+
+  /// File path: assets/images/about/logo-7.png
+  AssetGenImage get logo7 =>
+      const AssetGenImage('assets/images/about/logo-7.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        bottom,
+        character1,
+        character2,
+        doc1,
+        doc2,
+        doc3,
+        logo1,
+        logo2,
+        logo3,
+        logo4,
+        logo5,
+        logo6,
+        logo7
+      ];
+}
+
+class $AssetsImagesBannersGen {
+  const $AssetsImagesBannersGen();
+
+  /// File path: assets/images/banners/banner-14306.jpg
+  AssetGenImage get banner14306 =>
+      const AssetGenImage('assets/images/banners/banner-14306.jpg');
+
+  /// File path: assets/images/banners/banner-14307.jpg
+  AssetGenImage get banner14307 =>
+      const AssetGenImage('assets/images/banners/banner-14307.jpg');
+
+  /// File path: assets/images/banners/banner-14308.jpg
+  AssetGenImage get banner14308 =>
+      const AssetGenImage('assets/images/banners/banner-14308.jpg');
+
+  /// File path: assets/images/banners/banner-14309.jpg
+  AssetGenImage get banner14309 =>
+      const AssetGenImage('assets/images/banners/banner-14309.jpg');
+
+  /// File path: assets/images/banners/banner-14478.jpg
+  AssetGenImage get banner14478 =>
+      const AssetGenImage('assets/images/banners/banner-14478.jpg');
+
+  /// File path: assets/images/banners/banner-14492.jpg
+  AssetGenImage get banner14492 =>
+      const AssetGenImage('assets/images/banners/banner-14492.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        banner14306,
+        banner14307,
+        banner14308,
+        banner14309,
+        banner14478,
+        banner14492
+      ];
+}
+
 class $AssetsImagesExpertsGen {
   const $AssetsImagesExpertsGen();
 
@@ -531,44 +510,373 @@ class $AssetsImagesExpertsGen {
   List<AssetGenImage> get values => [kji, kmc, psh, sch, sjh, syj];
 }
 
+class $AssetsImagesReviewsGen {
+  const $AssetsImagesReviewsGen();
+
+  /// File path: assets/images/reviews/ccsi.png
+  AssetGenImage get ccsi =>
+      const AssetGenImage('assets/images/reviews/ccsi.png');
+
+  /// File path: assets/images/reviews/dabi.png
+  AssetGenImage get dabi =>
+      const AssetGenImage('assets/images/reviews/dabi.png');
+
+  /// File path: assets/images/reviews/dcsi-ii.png
+  AssetGenImage get dcsiIi =>
+      const AssetGenImage('assets/images/reviews/dcsi-ii.png');
+
+  /// File path: assets/images/reviews/dds.png
+  AssetGenImage get dds => const AssetGenImage('assets/images/reviews/dds.png');
+
+  /// File path: assets/images/reviews/dopi.png
+  AssetGenImage get dopi =>
+      const AssetGenImage('assets/images/reviews/dopi.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [ccsi, dabi, dcsiIi, dds, dopi];
+}
+
 class $AssetsImagesTestsGen {
   const $AssetsImagesTestsGen();
 
-  /// File path: assets/images/tests/test-14789.jpg
+  /// File path: assets/images/tests/CAT_CCSI_01.jpg
+  AssetGenImage get catCcsi01 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_01.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_02.jpg
+  AssetGenImage get catCcsi02 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_02.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_03.jpg
+  AssetGenImage get catCcsi03 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_03.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_04.jpg
+  AssetGenImage get catCcsi04 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_04.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_05.jpg
+  AssetGenImage get catCcsi05 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_05.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_06.jpg
+  AssetGenImage get catCcsi06 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_06.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_07.jpg
+  AssetGenImage get catCcsi07 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_07.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_08.jpg
+  AssetGenImage get catCcsi08 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_08.jpg');
+
+  /// File path: assets/images/tests/CAT_CCSI_09.jpg
+  AssetGenImage get catCcsi09 =>
+      const AssetGenImage('assets/images/tests/CAT_CCSI_09.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_01.jpg
+  AssetGenImage get dogCades01 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_01.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_02.jpg
+  AssetGenImage get dogCades02 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_02.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_03.jpg
+  AssetGenImage get dogCades03 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_03.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_04.jpg
+  AssetGenImage get dogCades04 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_04.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_05.jpg
+  AssetGenImage get dogCades05 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_05.jpg');
+
+  /// File path: assets/images/tests/DOG_CADES_06.jpg
+  AssetGenImage get dogCades06 =>
+      const AssetGenImage('assets/images/tests/DOG_CADES_06.jpg');
+
+  /// File path: assets/images/tests/DOG_DABI_01.jpg
+  AssetGenImage get dogDabi01 =>
+      const AssetGenImage('assets/images/tests/DOG_DABI_01.jpg');
+
+  /// File path: assets/images/tests/DOG_DABI_02.jpg
+  AssetGenImage get dogDabi02 =>
+      const AssetGenImage('assets/images/tests/DOG_DABI_02.jpg');
+
+  /// File path: assets/images/tests/DOG_DABI_03.jpg
+  AssetGenImage get dogDabi03 =>
+      const AssetGenImage('assets/images/tests/DOG_DABI_03.jpg');
+
+  /// File path: assets/images/tests/DOG_DABI_04.jpg
+  AssetGenImage get dogDabi04 =>
+      const AssetGenImage('assets/images/tests/DOG_DABI_04.jpg');
+
+  /// File path: assets/images/tests/DOG_DABI_05.jpg
+  AssetGenImage get dogDabi05 =>
+      const AssetGenImage('assets/images/tests/DOG_DABI_05.jpg');
+
+  /// File path: assets/images/tests/DOG_DACI.png
+  AssetGenImage get dogDaci =>
+      const AssetGenImage('assets/images/tests/DOG_DACI.png');
+
+  /// File path: assets/images/tests/DOG_DOBI_01.jpg
+  AssetGenImage get dogDobi01 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_01.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_02.jpg
+  AssetGenImage get dogDobi02 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_02.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_03.jpg
+  AssetGenImage get dogDobi03 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_03.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_04.jpg
+  AssetGenImage get dogDobi04 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_04.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_05.jpg
+  AssetGenImage get dogDobi05 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_05.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_06.jpg
+  AssetGenImage get dogDobi06 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_06.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_07.jpg
+  AssetGenImage get dogDobi07 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_07.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_08.jpg
+  AssetGenImage get dogDobi08 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_08.jpg');
+
+  /// File path: assets/images/tests/DOG_DOBI_09.jpg
+  AssetGenImage get dogDobi09 =>
+      const AssetGenImage('assets/images/tests/DOG_DOBI_09.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_01.jpg
+  AssetGenImage get dogDsciIi01 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_01.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_02.jpg
+  AssetGenImage get dogDsciIi02 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_02.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_03.jpg
+  AssetGenImage get dogDsciIi03 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_03.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_04.jpg
+  AssetGenImage get dogDsciIi04 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_04.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_05.jpg
+  AssetGenImage get dogDsciIi05 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_05.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_06.jpg
+  AssetGenImage get dogDsciIi06 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_06.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_07.jpg
+  AssetGenImage get dogDsciIi07 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_07.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_08.jpg
+  AssetGenImage get dogDsciIi08 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_08.jpg');
+
+  /// File path: assets/images/tests/DOG_DSCI-II_09.jpg
+  AssetGenImage get dogDsciIi09 =>
+      const AssetGenImage('assets/images/tests/DOG_DSCI-II_09.jpg');
+
+  /// File path: assets/images/tests/FAQ_01.jpg
+  AssetGenImage get faq01 =>
+      const AssetGenImage('assets/images/tests/FAQ_01.jpg');
+
+  /// File path: assets/images/tests/FAQ_02.jpg
+  AssetGenImage get faq02 =>
+      const AssetGenImage('assets/images/tests/FAQ_02.jpg');
+
+  /// File path: assets/images/tests/OWNER_DDS_01.jpg
+  AssetGenImage get ownerDds01 =>
+      const AssetGenImage('assets/images/tests/OWNER_DDS_01.jpg');
+
+  /// File path: assets/images/tests/OWNER_DDS_02.jpg
+  AssetGenImage get ownerDds02 =>
+      const AssetGenImage('assets/images/tests/OWNER_DDS_02.jpg');
+
+  /// File path: assets/images/tests/OWNER_DDS_03.jpg
+  AssetGenImage get ownerDds03 =>
+      const AssetGenImage('assets/images/tests/OWNER_DDS_03.jpg');
+
+  /// File path: assets/images/tests/OWNER_DDS_04.jpg
+  AssetGenImage get ownerDds04 =>
+      const AssetGenImage('assets/images/tests/OWNER_DDS_04.jpg');
+
+  /// File path: assets/images/tests/OWNER_DDS_05.jpg
+  AssetGenImage get ownerDds05 =>
+      const AssetGenImage('assets/images/tests/OWNER_DDS_05.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_01.jpg
+  AssetGenImage get ownerDopi01 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_01.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_02.jpg
+  AssetGenImage get ownerDopi02 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_02.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_03.jpg
+  AssetGenImage get ownerDopi03 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_03.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_04.jpg
+  AssetGenImage get ownerDopi04 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_04.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_05.jpg
+  AssetGenImage get ownerDopi05 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_05.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_06.jpg
+  AssetGenImage get ownerDopi06 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_06.jpg');
+
+  /// File path: assets/images/tests/OWNER_DOPI_07.jpg
+  AssetGenImage get ownerDopi07 =>
+      const AssetGenImage('assets/images/tests/OWNER_DOPI_07.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_01.jpg
+  AssetGenImage get ownerDpai01 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_01.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_02.jpg
+  AssetGenImage get ownerDpai02 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_02.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_03.jpg
+  AssetGenImage get ownerDpai03 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_03.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_04.jpg
+  AssetGenImage get ownerDpai04 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_04.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_05.jpg
+  AssetGenImage get ownerDpai05 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_05.jpg');
+
+  /// File path: assets/images/tests/OWNER_DPAI_06.jpg
+  AssetGenImage get ownerDpai06 =>
+      const AssetGenImage('assets/images/tests/OWNER_DPAI_06.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        catCcsi01,
+        catCcsi02,
+        catCcsi03,
+        catCcsi04,
+        catCcsi05,
+        catCcsi06,
+        catCcsi07,
+        catCcsi08,
+        catCcsi09,
+        dogCades01,
+        dogCades02,
+        dogCades03,
+        dogCades04,
+        dogCades05,
+        dogCades06,
+        dogDabi01,
+        dogDabi02,
+        dogDabi03,
+        dogDabi04,
+        dogDabi05,
+        dogDaci,
+        dogDobi01,
+        dogDobi02,
+        dogDobi03,
+        dogDobi04,
+        dogDobi05,
+        dogDobi06,
+        dogDobi07,
+        dogDobi08,
+        dogDobi09,
+        dogDsciIi01,
+        dogDsciIi02,
+        dogDsciIi03,
+        dogDsciIi04,
+        dogDsciIi05,
+        dogDsciIi06,
+        dogDsciIi07,
+        dogDsciIi08,
+        dogDsciIi09,
+        faq01,
+        faq02,
+        ownerDds01,
+        ownerDds02,
+        ownerDds03,
+        ownerDds04,
+        ownerDds05,
+        ownerDopi01,
+        ownerDopi02,
+        ownerDopi03,
+        ownerDopi04,
+        ownerDopi05,
+        ownerDopi06,
+        ownerDopi07,
+        ownerDpai01,
+        ownerDpai02,
+        ownerDpai03,
+        ownerDpai04,
+        ownerDpai05,
+        ownerDpai06
+      ];
+}
+
+class $AssetsImagesThumbsGen {
+  const $AssetsImagesThumbsGen();
+
+  /// File path: assets/images/thumbs/test-14789.jpg
   AssetGenImage get test14789 =>
-      const AssetGenImage('assets/images/tests/test-14789.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14789.jpg');
 
-  /// File path: assets/images/tests/test-14791.jpg
+  /// File path: assets/images/thumbs/test-14791.jpg
   AssetGenImage get test14791 =>
-      const AssetGenImage('assets/images/tests/test-14791.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14791.jpg');
 
-  /// File path: assets/images/tests/test-14792.jpg
+  /// File path: assets/images/thumbs/test-14792.jpg
   AssetGenImage get test14792 =>
-      const AssetGenImage('assets/images/tests/test-14792.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14792.jpg');
 
-  /// File path: assets/images/tests/test-14793.jpg
+  /// File path: assets/images/thumbs/test-14793.jpg
   AssetGenImage get test14793 =>
-      const AssetGenImage('assets/images/tests/test-14793.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14793.jpg');
 
-  /// File path: assets/images/tests/test-14794.jpg
+  /// File path: assets/images/thumbs/test-14794.jpg
   AssetGenImage get test14794 =>
-      const AssetGenImage('assets/images/tests/test-14794.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14794.jpg');
 
-  /// File path: assets/images/tests/test-14795.jpg
+  /// File path: assets/images/thumbs/test-14795.jpg
   AssetGenImage get test14795 =>
-      const AssetGenImage('assets/images/tests/test-14795.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14795.jpg');
 
-  /// File path: assets/images/tests/test-14796.jpg
+  /// File path: assets/images/thumbs/test-14796.jpg
   AssetGenImage get test14796 =>
-      const AssetGenImage('assets/images/tests/test-14796.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14796.jpg');
 
-  /// File path: assets/images/tests/test-14797.jpg
+  /// File path: assets/images/thumbs/test-14797.jpg
   AssetGenImage get test14797 =>
-      const AssetGenImage('assets/images/tests/test-14797.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14797.jpg');
 
-  /// File path: assets/images/tests/test-14798.jpg
+  /// File path: assets/images/thumbs/test-14798.jpg
   AssetGenImage get test14798 =>
-      const AssetGenImage('assets/images/tests/test-14798.jpg');
+      const AssetGenImage('assets/images/thumbs/test-14798.jpg');
 
   /// List of all assets
   List<AssetGenImage> get values => [

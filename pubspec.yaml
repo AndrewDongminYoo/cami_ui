@@ -105,8 +105,12 @@ flutter:
     - .env
     - assets/fonts/
     - assets/images/
+    - assets/images/about/
+    - assets/images/banners/
     - assets/images/experts/
+    - assets/images/reviews/
     - assets/images/tests/
+    - assets/images/thumbs/
     - assets/lotties/
     - assets/messages/
     - assets/svg/

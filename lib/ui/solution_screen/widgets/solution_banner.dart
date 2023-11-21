@@ -5,12 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/widgets/custom_image_view.dart';
 
-class SolutionListItemWidget extends StatelessWidget {
-  const SolutionListItemWidget({super.key});
+class SolutionBanner extends StatelessWidget {
+  const SolutionBanner({
+    super.key,
+    required this.imagePath,
+  });
+
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class SolutionListItemWidget extends StatelessWidget {
       decoration: AppDecoration.outlineOnError
           .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
       child: CustomImageView(
-        imagePath: Assets.images.imgImage161x343.path,
+        imagePath: imagePath,
         height: 161.h,
         width: 343.w,
       ),

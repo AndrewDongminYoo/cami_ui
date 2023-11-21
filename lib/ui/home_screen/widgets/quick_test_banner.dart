@@ -2,18 +2,25 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/widgets/custom_image_view.dart';
 
-class AnimalTypeTestItemWidget extends StatelessWidget {
-  const AnimalTypeTestItemWidget({super.key});
+class QuickTestBanner extends StatelessWidget {
+  const QuickTestBanner({
+    super.key,
+    required this.title1,
+    required this.title2,
+    required this.imagePath,
+  });
+
+  final String title1;
+  final String title2;
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +34,15 @@ class AnimalTypeTestItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 3.h),
-          Text('동물 유형 테스트'.tr(), style: textTheme.bodyMedium),
+          Text(title1, style: textTheme.bodyMedium),
           SizedBox(height: 5.h),
           Text(
-            '나는 강아지형 vs 고양이형 ?'.tr(),
+            title2,
             style: textTheme.bodySmall!.colored(const Color(0xFF757575)),
           ),
           SizedBox(height: 5.h),
           CustomImageView(
-            imagePath: Assets.images.imgImage59x67.path,
+            imagePath: imagePath,
             height: 59.h,
             width: 67.w,
             alignment: Alignment.centerRight,
