@@ -17,7 +17,7 @@ import '/ui/my_page_screen/my_page_screen.dart';
 import '/ui/my_pets_screen/pets_1_cat_screen.dart';
 import '/ui/my_pets_screen/pets_empty_screen.dart';
 import '/ui/naming_screen/naming_screen.dart';
-import '/ui/new_cat_page/new_cat_screen.dart';
+import '/ui/new_pet_page/new_cat_screen.dart';
 import '/ui/notice_detail_screen/notice_detail_screen.dart';
 import '/ui/notice_screen/notice_screen.dart';
 import '/ui/owner_page/owner_screen.dart';

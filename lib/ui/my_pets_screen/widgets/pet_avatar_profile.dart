@@ -34,7 +34,7 @@ class PetAvatarProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isCat = type == 'cat';
+    final isCat = type == '반려묘';
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 16.w),
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
@@ -128,7 +128,7 @@ class PetAvatarProfile extends StatelessWidget {
     );
   }
 
-  CustomImageView _buildAvatar(bool isCat) {
+  Widget _buildAvatar(bool isCat) {
     return CustomImageView(
       imagePath: imagePath ??
           (isCat ? Assets.images.avatarCat.path : Assets.images.avatarDog.path),

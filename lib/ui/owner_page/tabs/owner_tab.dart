@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
-import '/ui/shared/checkup_item_widget.dart';
 
 class OwnerTab extends StatefulWidget {
   const OwnerTab({super.key});
@@ -23,7 +23,7 @@ class OwnerTabState extends State<OwnerTab>
   bool get wantKeepAlive => true;
 
   final ownerTestList =
-      checkUpList.where((test) => test.type == 'owner').toList();
+      checkUpList.where((test) => test.type == '반려인').toList();
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +65,13 @@ class OwnerTabState extends State<OwnerTab>
         },
         itemCount: ownerTestList.length,
         itemBuilder: (context, index) {
-          final ownerTest = ownerTestList[index];
-          return CheckupItemWidget(
-            imagePath: ownerTest.imagePath!,
-            short: ownerTest.shortTitle!,
-            title: ownerTest.title!,
-            description: ownerTest.description!,
-            location: ownerTest.location!,
+          final item = ownerTestList[index];
+          return CheckUpItemWidget(
+            thumbPath: item.thumbPath!,
+            short: item.short!,
+            nickname: item.nickname!,
+            description: item.description!,
+            location: item.location!,
           );
         },
       ),

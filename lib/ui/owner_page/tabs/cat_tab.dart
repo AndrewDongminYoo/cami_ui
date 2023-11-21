@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
-import '/ui/shared/checkup_item_widget.dart';
 
 class CatTab extends StatefulWidget {
   const CatTab({super.key});
@@ -22,7 +22,7 @@ class CatTabState extends State<CatTab>
   @override
   bool get wantKeepAlive => true;
 
-  final catTestList = checkUpList.where((test) => test.type == 'cat').toList();
+  final catTestList = checkUpList.where((test) => test.type == '반려묘').toList();
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +40,13 @@ class CatTabState extends State<CatTab>
                 Column(
                   children: [
                     /// Recognize Your Cat's Personality! Butler's Cat BTI
-                    ...catTestList.map((catTest) {
-                      return CheckupItemWidget(
-                        imagePath: catTest.imagePath!,
-                        short: catTest.shortTitle!,
-                        title: catTest.title!,
-                        description: catTest.description!,
-                        location: catTest.location!,
+                    ...catTestList.map((item) {
+                      return CheckUpItemWidget(
+                        thumbPath: item.thumbPath!,
+                        short: item.short!,
+                        nickname: item.nickname!,
+                        description: item.description!,
+                        location: item.location!,
                       );
                     }).toList(),
                     SizedBox(height: 128.h),

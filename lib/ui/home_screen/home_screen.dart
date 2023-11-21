@@ -17,8 +17,8 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
-import '/ui/shared/checkup_item_widget.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
 import 'widgets/animal_type_test_item_widget.dart';
@@ -251,10 +251,10 @@ class HomeScreen extends StatelessWidget {
         itemCount: allCheckUp.length,
         itemBuilder: (context, index) {
           final item = allCheckUp[index];
-          return CheckupItemWidget(
-            imagePath: item.imagePath!,
-            short: item.shortTitle!,
-            title: item.title!,
+          return CheckUpItemWidget(
+            thumbPath: item.thumbPath!,
+            short: item.short!,
+            nickname: item.nickname!,
             description: item.description!,
             location: item.location!,
           );

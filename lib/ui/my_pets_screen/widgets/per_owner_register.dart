@@ -25,7 +25,7 @@ class PerOwnerRegister extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isCat = type == 'cat';
+    final isCat = type == '반려묘';
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12.w),
       decoration: AppDecoration.outlineOnSecondaryContainer

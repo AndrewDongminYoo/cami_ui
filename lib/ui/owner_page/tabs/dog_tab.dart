@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
-import '/ui/shared/checkup_item_widget.dart';
 
 class DogTab extends StatefulWidget {
   const DogTab({super.key});
@@ -22,7 +22,7 @@ class DogTabState extends State<DogTab>
   @override
   bool get wantKeepAlive => true;
 
-  final dogTestList = checkUpList.where((test) => test.type == 'dog').toList();
+  final dogTestList = checkUpList.where((test) => test.type == '반려견').toList();
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +49,13 @@ class DogTabState extends State<DogTab>
                         },
                         itemCount: 5,
                         itemBuilder: (context, index) {
-                          final dogTest = dogTestList[index];
-                          return CheckupItemWidget(
-                            imagePath: dogTest.imagePath!,
-                            short: dogTest.shortTitle!,
-                            title: dogTest.title!,
-                            description: dogTest.description!,
-                            location: dogTest.location!,
+                          final item = dogTestList[index];
+                          return CheckUpItemWidget(
+                            thumbPath: item.thumbPath!,
+                            short: item.short!,
+                            nickname: item.nickname!,
+                            description: item.description!,
+                            location: item.location!,
                           );
                         },
                       ),

@@ -37,10 +37,10 @@ class PetsOneCatScreen extends StatelessWidget {
                   mail: 'ydm2790@gmail.com',
                 ),
                 SizedBox(height: 42.h),
-                const PetAvatarProfile(type: 'dog'),
+                const PetAvatarProfile(type: '반려견'),
                 SizedBox(height: 16.h),
                 PetAvatarProfile(
-                  type: 'cat',
+                  type: '반려묘',
                   imagePath: Assets.images.imgCatProfile.path,
                   petName: '꼬리',
                   birthDay: '2018-08-12',
@@ -69,8 +69,8 @@ class PetsOneCatScreen extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          PerOwnerRegister(type: 'dog'),
-          PerOwnerRegister(type: 'cat'),
+          PerOwnerRegister(type: '반려견'),
+          PerOwnerRegister(type: '반려묘'),
         ],
       ),
     );

@@ -34,9 +34,9 @@ class PetsEmptyScreen extends StatelessWidget {
                   mail: 'ydm2790@gmail.com',
                 ),
                 SizedBox(height: 42.h),
-                const PetAvatarProfile(type: 'dog'),
+                const PetAvatarProfile(type: '반려견'),
                 SizedBox(height: 16.h),
-                const PetAvatarProfile(type: 'cat'),
+                const PetAvatarProfile(type: '반려묘'),
                 SizedBox(height: 16.h),
                 _buildPetRegistration(context),
                 SizedBox(height: 24.h),
@@ -58,8 +58,8 @@ class PetsEmptyScreen extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          PerOwnerRegister(type: 'dog'),
-          PerOwnerRegister(type: 'cat'),
+          PerOwnerRegister(type: '반려견'),
+          PerOwnerRegister(type: '반려묘'),
         ],
       ),
     );
