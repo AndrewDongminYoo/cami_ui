@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      toolbarHeight: height ?? 21.h,
+      toolbarHeight: height ?? 50.h,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.white,
       leadingWidth: leadingWidth ?? 0,
@@ -44,6 +44,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size(
         mediaQueryData.size.width,
-        height ?? 21.h,
+        height ?? 50.h,
       );
 }

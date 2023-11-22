@@ -17,6 +17,7 @@ import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
+import '/widgets/custom_date_picker.dart';
 import '/widgets/custom_drop_down_form_field.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
@@ -72,12 +73,13 @@ class NewCatScreenState extends State<NewCatScreen> {
             child: SingleChildScrollView(
               primary: true,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   SizedBox(height: 21.h),
                   _buildImageRegistration(context),
                   SizedBox(height: 25.h),
                   Padding(
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '반려묘 이름'.tr(),
                       style: textTheme.bodyMedium!
@@ -94,7 +96,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                   ),
                   SizedBox(height: 33.h),
                   Padding(
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '반려묘 생년월일'.tr(),
                       style: textTheme.bodyMedium!
@@ -104,11 +106,11 @@ class NewCatScreenState extends State<NewCatScreen> {
                   SizedBox(height: 21.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
-                    child: _buildDateTimeField(context),
+                    child: DropdownDatePicker(startYear: 2000),
                   ),
                   SizedBox(height: 21.h),
                   Padding(
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '반려묘 입양일'.tr(),
                       style: textTheme.bodyMedium!
@@ -118,11 +120,11 @@ class NewCatScreenState extends State<NewCatScreen> {
                   SizedBox(height: 15.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
-                    child: _buildDateTimeField(context),
+                    child: DropdownDatePicker(startYear: 2000),
                   ),
                   SizedBox(height: 27.h),
                   Padding(
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '반려묘 성별'.tr(),
                       style: textTheme.bodyMedium!
@@ -134,7 +136,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                   SizedBox(height: 33.h),
                   Container(
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '묘종'.tr(),
                       style: textTheme.bodyMedium!
@@ -146,7 +148,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                   SizedBox(height: 33.h),
                   Container(
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.only(left: 16.w),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
                       '중성화 수술 여부'.tr(),
                       style: textTheme.bodyMedium!
@@ -183,6 +185,7 @@ class NewCatScreenState extends State<NewCatScreen> {
       alignment: Alignment.center,
       height: 188.h,
       width: 361.w,
+      margin: EdgeInsets.symmetric(horizontal: 16.h),
       child: Stack(
         alignment: Alignment.bottomRight,
         children: [
@@ -264,68 +267,6 @@ class NewCatScreenState extends State<NewCatScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  /// Common widget
-  Widget _buildDateTimeField(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          height: 40.h,
-          width: 91.w,
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 16.h),
-          decoration: AppDecoration.fillGray
-              .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
-          child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('년'.tr(), style: textTheme.bodyLarge),
-        ),
-        Container(
-          height: 40.h,
-          width: 91.w,
-          margin: EdgeInsets.only(left: 17.w),
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 16.h),
-          decoration: AppDecoration.fillGray
-              .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
-          child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-          child: Text('월'.tr(), style: textTheme.bodyLarge),
-        ),
-        Container(
-          height: 40.h,
-          width: 91.w,
-          margin: EdgeInsets.only(left: 16.w),
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 16.h),
-          decoration: AppDecoration.fillGray
-              .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
-          child: CustomImageView(
-            imagePath: Assets.svg.imgArrowDown.path,
-            height: 8.h,
-            width: 12.w,
-            alignment: Alignment.centerRight,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-          child: Text('일'.tr(), style: textTheme.bodyLarge),
-        )
-      ],
     );
   }
 
