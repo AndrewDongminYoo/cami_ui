@@ -16,6 +16,7 @@ import '/widgets/custom_image_view.dart';
 
 class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CamiAppBar({super.key});
+  static const routeName = AppRoutes.menuBarScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +33,11 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
           margin: EdgeInsets.all(14.h),
           onTap: () {
             final location = context.currentLocation;
-            if (location == AppRoutes.homeScreen) {
+            const homeScreen = AppRoutes.homeScreen;
+            if (location == homeScreen) {
               context.reload();
             } else {
-              context.pushNamed(AppRoutes.homeScreen);
+              context.pushNamed(homeScreen);
             }
           },
         ),
@@ -45,9 +47,9 @@ class CamiAppBar extends StatelessWidget implements PreferredSizeWidget {
             height: 24.r,
             width: 24.r,
             margin: EdgeInsets.all(14.h),
-            onTap: () {
-              context.pushNamed(AppRoutes.menuBarScreen);
-            },
+            onTap: context.currentLocation == routeName
+                ? null
+                : () => context.pushNamed(routeName),
           ),
         ],
       ),

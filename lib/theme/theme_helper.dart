@@ -91,20 +91,19 @@ class ThemeHelper {
         visualDensity: defaultDensity,
       ),
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateColor.resolveWith(
-          (states) {
-            if (states.contains(MaterialState.selected)) {
-              return colorScheme.onPrimaryContainer;
-            }
-            return colorScheme.onSurface;
-          },
-        ),
+        fillColor: const MaterialStatePropertyAll(Colors.black),
+        checkColor: MaterialStateColor.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.white;
+          }
+          return Colors.black;
+        }),
         side: const BorderSide(),
         visualDensity: defaultDensity,
       ),
       dividerTheme: DividerThemeData(
-        thickness: 1,
-        space: 1,
+        thickness: 1.h,
+        space: 1.h,
         color: colorScheme.onPrimary,
       ),
     );

@@ -90,6 +90,12 @@ class CustomCheckboxButton extends StatelessWidget {
           visualDensity: defaultDensity,
           value: value ?? false,
           checkColor: Colors.white,
+          fillColor: MaterialStateColor.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
+              return Colors.black;
+            }
+            return Colors.white;
+          }),
           onChanged: (value) {
             onChange(value!);
           },
