@@ -7,16 +7,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
-import '/gen/assets.gen.dart';
-import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down_form_field.dart';
+import '/widgets/custom_date_picker.dart';
 import '/widgets/custom_elevated_button.dart';
-import '/widgets/custom_image_view.dart';
 import '/widgets/custom_radio_button.dart';
 import '/widgets/custom_text_form_field.dart';
 
@@ -57,7 +54,6 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 15.h),
                 Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.symmetric(horizontal: 43.w),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -99,6 +95,8 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
                     controller: usermailField,
+                    autofillHints: const [AutofillHints.newUsername],
+                    textInputType: TextInputType.emailAddress,
                   ),
                 ),
                 SizedBox(height: 33.h),
@@ -115,6 +113,9 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
                     controller: passwordField,
+                    autofillHints: const [AutofillHints.newPassword],
+                    textInputType: TextInputType.visiblePassword,
+                    obscureText: true,
                   ),
                 ),
                 SizedBox(height: 33.h),
@@ -131,6 +132,9 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
                     controller: checkPassForm,
+                    autofillHints: const [AutofillHints.newPassword],
+                    textInputType: TextInputType.visiblePassword,
+                    obscureText: true,
                   ),
                 ),
                 SizedBox(height: 33.h),
@@ -147,6 +151,8 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
                     controller: usernameField,
+                    autofillHints: const [AutofillHints.newUsername],
+                    textInputType: TextInputType.name,
                   ),
                 ),
                 SizedBox(height: 33.h),
@@ -163,6 +169,8 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: CustomTextFormField(
                     controller: nicknameField,
+                    textInputType: TextInputType.name,
+                    autofillHints: const [AutofillHints.nickname],
                     textInputAction: TextInputAction.done,
                   ),
                 ),
@@ -176,7 +184,10 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildDateTimeField(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  child: DropdownDatePicker(),
+                ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -193,21 +204,6 @@ class SignUpFormScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 16.w),
                   child: Row(
                     children: [
-                      Container(
-                        height: 16.r,
-                        width: 16.r,
-                        margin: EdgeInsets.only(top: 4.h, bottom: 3.h),
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 3.w, vertical: 4.h),
-                        decoration: AppDecoration.fillBlue.copyWith(
-                            borderRadius: BorderRadiusStyle.circleBorder2),
-                        child: CustomImageView(
-                          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-                          height: 7.h,
-                          width: 8.w,
-                          alignment: Alignment.center,
-                        ),
-                      ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
                         child: Text('[필수]'.tr(), style: textTheme.bodyLarge),
@@ -221,38 +217,24 @@ class SignUpFormScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                          padding: EdgeInsets.only(left: 3.w),
-                          child: Text('동의'.tr(), style: textTheme.bodyLarge))
+                        padding: EdgeInsets.only(left: 3.w),
+                        child: Text('동의'.tr(), style: textTheme.bodyLarge),
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(height: 6.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w, right: 89.w),
+                  padding: EdgeInsets.only(left: 16.w),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 16.r,
-                        width: 16.r,
-                        margin: EdgeInsets.only(top: 6.h, bottom: 3.h),
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 3.w, vertical: 4.h),
-                        decoration: AppDecoration.fillBlue.copyWith(
-                            borderRadius: BorderRadiusStyle.circleBorder2),
-                        child: CustomImageView(
-                          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-                          height: 7.h,
-                          width: 8.w,
-                          alignment: Alignment.center,
-                        ),
-                      ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
                         child: Text('[필수]'.tr(), style: textTheme.bodyLarge),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 6.w),
+                        padding: EdgeInsets.only(left: 4.w),
                         child: Text(
                           '개인정보 취급방침'.tr(),
                           style: textTheme.bodyLarge!
@@ -260,23 +242,41 @@ class SignUpFormScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                          padding: EdgeInsets.only(left: 2.w),
-                          child:
-                              Text('에 대한 동의'.tr(), style: textTheme.bodyLarge))
+                        padding: EdgeInsets.only(left: 2.w),
+                        child: Text('에 대한 동의'.tr(), style: textTheme.bodyLarge),
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(height: 8.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                  child: _buildVector(context,
-                      messageText: '[선택] 마케팅 정보 수신 동의 - 이메일'.tr()),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.w),
+                        child: Text(
+                          '[선택] 마케팅 정보 수신 동의 - 이메일'.tr(),
+                          style: textTheme.bodyLarge,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 7.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w, right: 88.w),
-                  child: _buildVector(context,
-                      messageText: '[선택] 마케팅 정보 수신 - SMS/MMS'.tr()),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.w),
+                        child: Text(
+                          '[선택] 마케팅 정보 수신 - SMS/MMS'.tr(),
+                          style: textTheme.bodyLarge,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
@@ -289,95 +289,11 @@ class SignUpFormScreen extends StatelessWidget {
                   alignment: Alignment.center,
                 ),
                 SizedBox(height: 128.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildDateTimeField(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.only(left: 13.w, right: 19.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomDropDownFormField(
-            width: 91.w,
-            icon: Container(
-              padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(8.w),
-              ),
-              child: CustomImageView(
-                  imagePath: Assets.svg.imgArrowDown.path,
-                  height: 8.h,
-                  width: 12.w),
-            ),
-            items: years,
-            onChanged: (value) {
-              // TODO: implement onChanged
-            },
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-            child: Text('년'.tr(), style: textTheme.bodyLarge),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 17.w),
-            child: CustomDropDownFormField(
-              width: 91.w,
-              icon: Container(
-                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(8.w),
-                ),
-                child: CustomImageView(
-                    imagePath: Assets.svg.imgArrowDown.path,
-                    height: 8.h,
-                    width: 12.w),
-              ),
-              items: month,
-              onChanged: (value) {
-                // TODO: implement onChanged
-              },
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-            child: Text('월'.tr(), style: textTheme.bodyLarge),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 16.w),
-            child: CustomDropDownFormField(
-              width: 91.w,
-              icon: Container(
-                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(8.w),
-                ),
-                child: CustomImageView(
-                    imagePath: Assets.svg.imgArrowDown.path,
-                    height: 8.h,
-                    width: 12.w),
-              ),
-              items: dates,
-              onChanged: (value) {
-                // TODO: implement onChanged
-              },
-            ),
-          ),
-          Padding(
-              padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-              child: Text('일'.tr(), style: textTheme.bodyLarge))
-        ],
       ),
     );
   }
@@ -421,35 +337,5 @@ class SignUpFormScreen extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  /// Common widget
-  Widget _buildVector(
-    BuildContext context, {
-    required String messageText,
-  }) {
-    return Row(children: [
-      Container(
-        height: 16.r,
-        width: 16.r,
-        margin: EdgeInsets.only(top: 5.h, bottom: 2.h),
-        padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 4.h),
-        decoration: AppDecoration.fillBlue
-            .copyWith(borderRadius: BorderRadiusStyle.circleBorder2),
-        child: CustomImageView(
-          imagePath: Assets.svg.imgVectorWhiteA7007x8.path,
-          height: 7.h,
-          width: 8.w,
-          alignment: Alignment.center,
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.only(left: 20.w),
-        child: Text(
-          messageText,
-          style: textTheme.bodyLarge,
-        ),
-      ),
-    ]);
   }
 }

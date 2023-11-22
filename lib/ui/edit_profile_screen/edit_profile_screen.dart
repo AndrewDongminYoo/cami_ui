@@ -17,7 +17,7 @@ import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
-import '/widgets/custom_drop_down_form_field.dart';
+import '/widgets/custom_date_picker.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 import '/widgets/custom_outlined_button.dart';
@@ -28,18 +28,13 @@ import '/widgets/custom_text_form_field.dart';
 class EditProfileScreen extends StatelessWidget {
   EditProfileScreen({super.key});
 
-  final editTextController = TextEditingController();
-  final editTextWithButton = TextEditingController();
-  final editTextController1 = TextEditingController();
-  final editTextController2 = TextEditingController();
-  final editTextController3 = TextEditingController();
-  final editTextController4 = TextEditingController();
-
-  final years = <String>[];
-  final months = <String>[];
-  final days = <String>[];
+  final usermailField = TextEditingController();
+  final verification = TextEditingController();
+  final changePassword = TextEditingController();
+  final changePassCheck = TextEditingController();
+  final usernameField = TextEditingController();
+  final nicknameField = TextEditingController();
   final radioList = ['여성', '남성', '기타'];
-
   String radioGroup = '';
 
   @override
@@ -77,7 +72,7 @@ class EditProfileScreen extends StatelessWidget {
                           '정보 수정'.tr(),
                           style: textTheme.bodyLarge!.fSize(18),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -93,7 +88,17 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    readOnly: true,
+                    controller: usermailField,
+                    borderDecoration: TextFormFieldStyleHelper.fillOnError,
+                    autofillHints: const [AutofillHints.email],
+                    textInputType: TextInputType.emailAddress,
+                    fillColor: const Color(0xFFE5E5E5),
+                  ),
+                ),
                 SizedBox(height: 5.h),
                 Container(
                   width: 325.w,
@@ -117,7 +122,7 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditTextRow(context),
+                _buildOTPFormField(context),
                 SizedBox(height: 8.h),
                 Container(
                   alignment: Alignment.center,
@@ -147,9 +152,27 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText1(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    hintText: '변경을 원하면 입력해 주세요.',
+                    controller: changePassword,
+                    autofillHints: const [AutofillHints.newPassword],
+                    textInputType: TextInputType.visiblePassword,
+                    obscureText: true,
+                  ),
+                ),
                 SizedBox(height: 8.h),
-                _buildEditText2(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    hintText: '비밀번호를 재입력해 주세요.',
+                    controller: changePassCheck,
+                    autofillHints: const [AutofillHints.newPassword],
+                    textInputType: TextInputType.visiblePassword,
+                    obscureText: true,
+                  ),
+                ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -160,7 +183,14 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText3(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: usernameField,
+                    autofillHints: const [AutofillHints.newUsername],
+                    textInputType: TextInputType.name,
+                  ),
+                ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -171,7 +201,15 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText4(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: nicknameField,
+                    textInputType: TextInputType.name,
+                    autofillHints: const [AutofillHints.nickname],
+                    textInputAction: TextInputAction.done,
+                  ),
+                ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -182,7 +220,11 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildDropdownRow(context),
+                Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: DropdownDatePicker(),
+                ),
                 SizedBox(height: 25.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -193,13 +235,29 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildRadioGroup(context),
+                _buildGenderRadioGroup(context),
                 SizedBox(height: 23.h),
-                _buildSaveButton(context),
+                CustomElevatedButton(
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
+                  text: '저장'.tr(),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  buttonStyle: CustomButtonStyles.fillBlack,
+                  alignment: Alignment.center,
+                ),
                 SizedBox(height: 8.h),
-                _buildDeleteButton(context),
+                CustomOutlinedButton(
+                  onPressed: (context) {
+                    // TODO: implement onPressed
+                  },
+                  height: 38.h,
+                  text: '회원탈퇴'.tr(),
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  alignment: Alignment.center,
+                ),
                 SizedBox(height: 128.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),
@@ -270,7 +328,7 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16.h),
-                  _buildImageSelectionButton(context)
+                  _buildImageSelectionButton(context),
                 ],
               ),
             ),
@@ -281,30 +339,20 @@ class EditProfileScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildEditText(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-          controller: editTextController,
-          borderDecoration: TextFormFieldStyleHelper.fillOnError,
-          fillColor: const Color(0xFFE5E5E5)),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditTextWithButton(BuildContext context) {
-    return CustomTextFormField(width: 211.w, controller: editTextWithButton);
-  }
-
-  /// Section Widget
-  Widget _buildEditTextRow(BuildContext context) {
+  Widget _buildOTPFormField(BuildContext context) {
     return Container(
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          _buildEditTextWithButton(context),
+          CustomTextFormField(
+            width: 211.w,
+            hintText: '인증번호',
+            controller: verification,
+            autofillHints: const [AutofillHints.oneTimeCode],
+            textInputType: TextInputType.number,
+          ),
           CustomElevatedButton(
             onPressed: (context) {
               // TODO: implement onPressed
@@ -315,139 +363,14 @@ class EditProfileScreen extends StatelessWidget {
             buttonStyle: CustomButtonStyles.fillBlueGray,
             buttonTextStyle:
                 textTheme.bodyMedium!.colored(const Color(0xFF6B7280)),
-          )
+          ),
         ],
       ),
     );
   }
 
   /// Section Widget
-  Widget _buildEditText1(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editTextController1,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText2(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editTextController2,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText3(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editTextController3,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText4(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editTextController4,
-        textInputAction: TextInputAction.done,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildDropdownRow(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomDropDownFormField(
-            width: 91.w,
-            icon: Container(
-              padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(8.w),
-              ),
-              child: CustomImageView(
-                  imagePath: Assets.svg.imgArrowDown.path,
-                  height: 8.h,
-                  width: 12.w),
-            ),
-            items: years,
-            onChanged: (value) {
-              // TODO: implement onChanged
-            },
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-            child: Text('년'.tr(), style: textTheme.bodyLarge),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 17.w),
-            child: CustomDropDownFormField(
-              width: 91.w,
-              icon: Container(
-                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(8.w),
-                ),
-                child: CustomImageView(
-                    imagePath: Assets.svg.imgArrowDown.path,
-                    height: 8.h,
-                    width: 12.w),
-              ),
-              items: months,
-              onChanged: (value) {
-                // TODO: implement onChanged
-              },
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 3.w, top: 7.h, bottom: 8.h),
-            child: Text('월'.tr(), style: textTheme.bodyLarge),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 16.w),
-            child: CustomDropDownFormField(
-              width: 91.w,
-              icon: Container(
-                padding: EdgeInsets.fromLTRB(30.w, 16.h, 10.w, 16.h),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(8.w),
-                ),
-                child: CustomImageView(
-                    imagePath: Assets.svg.imgArrowDown.path,
-                    height: 8.h,
-                    width: 12.w),
-              ),
-              items: days,
-              onChanged: (value) {
-                // TODO: implement onChanged
-              },
-            ),
-          ),
-          Padding(
-              padding: EdgeInsets.only(left: 4.w, top: 7.h, bottom: 8.h),
-              child: Text('일'.tr(), style: textTheme.bodyLarge))
-        ],
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildRadioGroup(BuildContext context) {
+  Widget _buildGenderRadioGroup(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 16.w),
       child: Row(
@@ -487,32 +410,6 @@ class EditProfileScreen extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildSaveButton(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      text: '저장'.tr(),
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
-      buttonStyle: CustomButtonStyles.fillBlack,
-      alignment: Alignment.center,
-    );
-  }
-
-  /// Section Widget
-  Widget _buildDeleteButton(BuildContext context) {
-    return CustomOutlinedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
-      },
-      height: 38.h,
-      text: '회원탈퇴'.tr(),
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
-      alignment: Alignment.center,
     );
   }
 

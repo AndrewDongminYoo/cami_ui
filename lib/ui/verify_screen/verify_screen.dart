@@ -57,9 +57,12 @@ class VerifyScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 CustomTextFormField(
-                    width: 191.w,
-                    controller: editTextController,
-                    textInputAction: TextInputAction.done),
+                  width: 191.w,
+                  controller: editTextController,
+                  textInputType: TextInputType.visiblePassword,
+                  autofillHints: const [AutofillHints.oneTimeCode],
+                  textInputAction: TextInputAction.done,
+                ),
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
                   onPressed: (context) {
@@ -70,7 +73,7 @@ class VerifyScreen extends StatelessWidget {
                   buttonStyle: CustomButtonStyles.fillBlack,
                 ),
                 SizedBox(height: 128.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),

@@ -46,14 +46,32 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(height: 29.h),
                 Text('카미'.tr(), style: textTheme.displaySmall),
                 SizedBox(height: 18.h),
-                Text('반려동물의 마음을 읽다'.tr(),
-                    style: textTheme.titleLarge!
-                        .colored(const Color(0xFF6B7280))
-                        .fSize(20)),
+                Text(
+                  '반려동물의 마음을 읽다'.tr(),
+                  style: textTheme.titleLarge!
+                      .colored(const Color(0xFF6B7280))
+                      .fSize(20),
+                ),
                 SizedBox(height: 82.h),
-                _buildUsernameField(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: usernameController,
+                    autofillHints: const [AutofillHints.email],
+                    textInputType: TextInputType.emailAddress,
+                  ),
+                ),
                 SizedBox(height: 8.h),
-                _buildPasswordField(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: passwordController,
+                    autofillHints: const [AutofillHints.password],
+                    textInputType: TextInputType.visiblePassword,
+                    textInputAction: TextInputAction.done,
+                    obscureText: true,
+                  ),
+                ),
                 SizedBox(height: 10.h),
                 _buildLoginOptions(context),
                 SizedBox(height: 43.h),
@@ -70,26 +88,6 @@ class _LogInScreenState extends State<LogInScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  /// Username TextFormField Widget
-  Widget _buildUsernameField(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(controller: usernameController),
-    );
-  }
-
-  /// Password TextFormField Widget
-  Widget _buildPasswordField(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: passwordController,
-        textInputAction: TextInputAction.done,
-        obscureText: true,
       ),
     );
   }

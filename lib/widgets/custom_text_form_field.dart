@@ -19,6 +19,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.textInputAction = TextInputAction.next,
     this.textInputType = TextInputType.text,
+    this.autofillHints,
     this.maxLines,
     this.hintText,
     this.hintStyle,
@@ -30,6 +31,7 @@ class CustomTextFormField extends StatelessWidget {
     this.borderDecoration,
     this.fillColor,
     this.filled = true,
+    this.readOnly = false,
     this.validator,
   });
 
@@ -42,6 +44,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool? obscureText;
   final TextInputAction? textInputAction;
   final TextInputType? textInputType;
+  final Iterable<String>? autofillHints;
   final int? maxLines;
   final String? hintText;
   final TextStyle? hintStyle;
@@ -53,6 +56,7 @@ class CustomTextFormField extends StatelessWidget {
   final InputBorder? borderDecoration;
   final Color? fillColor;
   final bool? filled;
+  final bool readOnly;
   final FormFieldValidator<String>? validator;
 
   @override
@@ -66,6 +70,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget get textFormFieldWidget => SizedBox(
         width: width ?? double.maxFinite,
         child: TextFormField(
+          autofillHints: autofillHints,
           controller: controller,
           focusNode: focusNode ?? FocusNode(),
           autofocus: autofocus!,
@@ -75,6 +80,7 @@ class CustomTextFormField extends StatelessWidget {
           keyboardType: textInputType,
           maxLines: maxLines ?? 1,
           decoration: decoration,
+          readOnly: readOnly,
           validator: validator,
         ),
       );

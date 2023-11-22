@@ -68,7 +68,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                           '1:1 문의'.tr(),
                           style: textTheme.bodyLarge!.fSize(18),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -105,7 +105,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
                   buttonStyle: CustomButtonStyles.fillBlackTL12,
                 ),
                 SizedBox(height: 128.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),
@@ -142,9 +142,10 @@ class ContactUsRegisterScreen extends StatelessWidget {
             contentPadding:
                 EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
             icon: CustomImageView(
-                imagePath: Assets.svg.imgArrowDown.path,
-                height: 8.h,
-                width: 12.w),
+              imagePath: Assets.svg.imgArrowDown.path,
+              height: 8.h,
+              width: 12.w,
+            ),
             onChanged: (value) {
               inquiryType.text = value;
             },
@@ -177,6 +178,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
               child: CustomTextFormField(
                 controller: inquiryContent,
                 maxLines: 5,
+                textInputType: TextInputType.multiline,
                 textInputAction: TextInputAction.done,
               ),
             ),
