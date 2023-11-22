@@ -35,7 +35,7 @@ class CouponCountBadge extends StatelessWidget {
             count.toString(),
             style: textTheme.bodySmall!.colored(Colors.white),
           ),
-        )
+        ),
       ],
     );
   }

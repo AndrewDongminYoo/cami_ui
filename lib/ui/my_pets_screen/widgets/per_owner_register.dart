@@ -35,8 +35,10 @@ class PerOwnerRegister extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(height: 16.h),
-          Text(isCat ? '나는 냥집사'.tr() : '나는 멍집사'.tr(),
-              style: textTheme.bodyLarge),
+          Text(
+            isCat ? '나는 냥집사'.tr() : '나는 멍집사'.tr(),
+            style: textTheme.bodyLarge,
+          ),
           SizedBox(height: 25.h),
           SizedBox(
             height: 112.h,
@@ -51,8 +53,10 @@ class PerOwnerRegister extends StatelessWidget {
                   height: 112.h,
                   width: 138.w,
                   alignment: Alignment.center,
-                  onTap: () => context.pushNamed(AppRoutes.newCatScreen,
-                      pathParameters: {'type': type}),
+                  onTap: () => context.pushNamed(
+                    AppRoutes.newCatScreen,
+                    pathParameters: {'type': type},
+                  ),
                 ),
                 CustomElevatedButton(
                   onPressed: (context) {
@@ -65,7 +69,7 @@ class PerOwnerRegister extends StatelessWidget {
                   buttonStyle: CustomButtonStyles.fillBlue,
                   buttonTextStyle: textTheme.bodyMedium,
                   alignment: Alignment.bottomCenter,
-                )
+                ),
               ],
             ),
           ),

@@ -29,7 +29,8 @@ class ExpertProfilesItemWidget extends StatelessWidget {
               margin: EdgeInsets.zero,
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusStyle.circleBorder8),
+                borderRadius: BorderRadiusStyle.circleBorder8,
+              ),
               child: Container(
                 height: 180.h,
                 width: 337.w,
@@ -412,12 +413,14 @@ class ExpertProfilesItemWidget extends StatelessWidget {
                                           Text(
                                             '한국상담학회 1급 상담사'.tr(),
                                             style: textTheme.bodySmall!.colored(
-                                                const Color(0xFF1F2020)),
+                                              const Color(0xFF1F2020),
+                                            ),
                                           ),
                                           Text(
                                             '스트레스 관리, 심리상담 출강'.tr(),
                                             style: textTheme.bodySmall!.colored(
-                                                const Color(0xFF1F2020)),
+                                              const Color(0xFF1F2020),
+                                            ),
                                           ),
                                         ],
                                       ),

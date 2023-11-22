@@ -200,7 +200,8 @@ class MyPageScreen extends StatelessWidget {
                           width: 32.r,
                           padding: EdgeInsets.all(8.w),
                           child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowLeft.path),
+                            imagePath: Assets.svg.imgArrowLeft.path,
+                          ),
                         ),
                       ),
                     ],

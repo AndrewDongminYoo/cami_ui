@@ -62,7 +62,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           '자주 묻는 질문'.tr(),
                           style: textTheme.bodyLarge!.fSize(18),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -91,10 +91,10 @@ class _FaqScreenState extends State<FaqScreen> {
                             icon: Container(
                               margin: EdgeInsets.only(left: 30.w),
                               child: CustomImageView(
-                                  imagePath:
-                                      Assets.svg.imgArrowDownGray700.path,
-                                  height: 32.h,
-                                  width: 30.w),
+                                imagePath: Assets.svg.imgArrowDownGray700.path,
+                                height: 32.h,
+                                width: 30.w,
+                              ),
                             ),
                             hintText: '결제가 되지 않아요'.tr(),
                             hintStyle: textTheme.labelMedium,
@@ -118,8 +118,10 @@ class _FaqScreenState extends State<FaqScreen> {
                       SizedBox(height: 23.h),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('결제가 되지 않는경우'.tr(),
-                            style: textTheme.bodyMedium),
+                        child: Text(
+                          '결제가 되지 않는경우'.tr(),
+                          style: textTheme.bodyMedium,
+                        ),
                       ),
                       SizedBox(height: 10.h),
                       Container(
@@ -135,8 +137,10 @@ class _FaqScreenState extends State<FaqScreen> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 20.w),
-                        child: Text('되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr(),
-                            style: textTheme.bodyMedium),
+                        child: Text(
+                          '되도록 크롬웹브라우저와 엣지를 추천드립니다.'.tr(),
+                          style: textTheme.bodyMedium,
+                        ),
                       ),
                       SizedBox(height: 10.h),
                       Container(
@@ -179,7 +183,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         child: Text('감사합니다.'.tr(), style: textTheme.bodyMedium),
                       ),
                       SizedBox(height: 30.h),
-                      const Divider()
+                      const Divider(),
                     ],
                   ),
                 ),
@@ -211,7 +215,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'
                                             .tr(),
@@ -222,10 +229,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -246,7 +254,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -256,10 +267,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -280,7 +292,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -290,10 +305,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -314,7 +330,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '구매한 쿠폰이 보이지 않아요.'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -324,10 +343,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -348,7 +368,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '회원 탈퇴는 어떻게 하나요?'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -358,10 +381,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -382,7 +406,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '결과보고서 인쇄 방법'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -392,10 +419,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),
@@ -416,7 +444,10 @@ class _FaqScreenState extends State<FaqScreen> {
                                   Expanded(
                                     child: Padding(
                                       padding: EdgeInsets.only(
-                                          left: 9.w, top: 7.h, bottom: 8.h),
+                                        left: 9.w,
+                                        top: 7.h,
+                                        bottom: 8.h,
+                                      ),
                                       child: Text(
                                         '결과보고서 다시보기'.tr(),
                                         overflow: TextOverflow.ellipsis,
@@ -426,10 +457,11 @@ class _FaqScreenState extends State<FaqScreen> {
                                     ),
                                   ),
                                   CustomImageView(
-                                      imagePath:
-                                          Assets.svg.imgArrowDownGray700.path,
-                                      height: 32.h,
-                                      width: 30.w)
+                                    imagePath:
+                                        Assets.svg.imgArrowDownGray700.path,
+                                    height: 32.h,
+                                    width: 30.w,
+                                  ),
                                 ],
                               ),
                             ),

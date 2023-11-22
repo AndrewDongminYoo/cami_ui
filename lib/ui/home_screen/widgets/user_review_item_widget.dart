@@ -116,7 +116,8 @@ class UserReviewItemWidget extends StatelessWidget {
                         vertical: 3.h,
                       ),
                       decoration: AppDecoration.fillPrimary.copyWith(
-                          borderRadius: BorderRadiusStyle.circleBorder12),
+                        borderRadius: BorderRadiusStyle.circleBorder12,
+                      ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,

@@ -39,8 +39,10 @@ class ErrorPage extends StatelessWidget {
             children: [
               SizedBox(height: 62.h),
               Text('죄송합니다'.tr(), style: textTheme.bodyLarge!.fSize(18)),
-              Text(error.message.toString(),
-                  style: textTheme.bodyLarge!.fSize(18)),
+              Text(
+                error.message.toString(),
+                style: textTheme.bodyLarge!.fSize(18),
+              ),
               SizedBox(height: 38.h),
               SizedBox(
                 height: 240.h,

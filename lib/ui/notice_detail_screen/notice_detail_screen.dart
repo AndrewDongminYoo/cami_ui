@@ -54,20 +54,25 @@ class NoticeDetailScreen extends StatelessWidget {
                           '공지사항'.tr(),
                           style: textTheme.bodyLarge!.fSize(18),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(height: 15.h),
                 Center(
                   child: Divider(
-                      color: Colors.black, indent: 16.w, endIndent: 16.w),
+                    color: Colors.black,
+                    indent: 16.w,
+                    endIndent: 16.w,
+                  ),
                 ),
                 SizedBox(height: 12.h),
                 Padding(
                   padding: EdgeInsets.only(left: 24.w),
-                  child: Text('홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr(),
-                      style: textTheme.bodyMedium),
+                  child: Text(
+                    '홈페이지 회원 및 반려견 프로필 사진 오류 안내'.tr(),
+                    style: textTheme.bodyMedium,
+                  ),
                 ),
                 SizedBox(height: 21.h),
                 Padding(
@@ -92,7 +97,7 @@ class NoticeDetailScreen extends StatelessWidget {
                   onPressed: onTapBackToNotices,
                 ),
                 SizedBox(height: 128.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),

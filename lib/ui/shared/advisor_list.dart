@@ -52,5 +52,5 @@ final advisors = [
     name: '박성희 박사',
     description: '한국상담학회 1급 상담사 \n'
         '스트레스 관리, 심리상담 출강',
-  )
+  ),
 ];

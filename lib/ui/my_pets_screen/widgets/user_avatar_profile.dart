@@ -54,7 +54,7 @@ class UserAvatarProfile extends StatelessWidget {
                         text: '님, 반가워요!'.tr(),
                         style: textTheme.bodyLarge!
                             .colored(const Color(0xFF202020)),
-                      )
+                      ),
                     ],
                   ),
                 ),

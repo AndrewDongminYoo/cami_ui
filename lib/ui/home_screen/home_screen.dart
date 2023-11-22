@@ -54,8 +54,10 @@ class HomeScreen extends StatelessWidget {
                   style: textTheme.bodyMedium!.colored(const Color(0xFF1F2020)),
                 ),
                 SizedBox(height: 11.h),
-                Text('우리에게 필요한'.tr(),
-                    style: textTheme.headlineSmall!.extraBold),
+                Text(
+                  '우리에게 필요한'.tr(),
+                  style: textTheme.headlineSmall!.extraBold,
+                ),
                 Text('심리검사는?'.tr(), style: textTheme.headlineSmall!.extraBold),
                 SizedBox(height: 39.h),
                 Padding(

@@ -24,23 +24,25 @@ class SocialLinkIcons extends StatelessWidget {
     final gap = SizedBox(width: dark ? 16.w : 32.w);
     final iconSize = dark ? 24.r : 21.r;
     final facebook = SocialViewModel(
-        iconPath: dark
-            ? Assets.svg.icoFacebookWhite.path
-            : Assets.svg.icoFacebook.path,
-        iconSize: iconSize,
-        urlPath: 'https://www.facebook.com/camifromlove');
+      iconPath:
+          dark ? Assets.svg.icoFacebookWhite.path : Assets.svg.icoFacebook.path,
+      iconSize: iconSize,
+      urlPath: 'https://www.facebook.com/camifromlove',
+    );
     final instagram = SocialViewModel(
-        iconPath: dark
-            ? Assets.svg.icoInstagramWhite.path
-            : Assets.svg.icoInstagram.path,
-        iconSize: iconSize,
-        urlPath: 'https://www.instagram.com/camifromlove');
+      iconPath: dark
+          ? Assets.svg.icoInstagramWhite.path
+          : Assets.svg.icoInstagram.path,
+      iconSize: iconSize,
+      urlPath: 'https://www.instagram.com/camifromlove',
+    );
     final naverBlog = SocialViewModel(
-        iconPath: dark
-            ? Assets.svg.icoNaverBlogWhite.path
-            : Assets.svg.icoNaverBlog.path,
-        iconSize: iconSize,
-        urlPath: 'https://blog.naver.com/camifromlove');
+      iconPath: dark
+          ? Assets.svg.icoNaverBlogWhite.path
+          : Assets.svg.icoNaverBlog.path,
+      iconSize: iconSize,
+      urlPath: 'https://blog.naver.com/camifromlove',
+    );
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [

@@ -60,7 +60,7 @@ class Faq1Screen extends StatelessWidget {
                           '자주 묻는 질문'.tr(),
                           style: textTheme.bodyLarge!.fSize(18),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -97,7 +97,7 @@ class Faq1Screen extends StatelessWidget {
                 SizedBox(height: 9.h),
                 _buildCannotFindCoupon(context),
                 SizedBox(height: 136.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),
@@ -124,9 +124,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '결제가 되지 않아요'.tr(),
                 items: dropdownItemList0,
@@ -159,9 +160,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '회원 탈퇴는 어떻게 하나요?'.tr(),
                 items: dropdownItemList1,
@@ -195,9 +197,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 18.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                 items: dropdownItemList2,
@@ -231,9 +234,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 15.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr(),
                 items: dropdownItemList3,
@@ -266,9 +270,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                 items: dropdownItemList4,
@@ -301,9 +306,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '결과보고서 인쇄 방법'.tr(),
                 items: dropdownItemList5,
@@ -336,9 +342,10 @@ class Faq1Screen extends StatelessWidget {
                 icon: Container(
                   margin: EdgeInsets.only(left: 30.w),
                   child: CustomImageView(
-                      imagePath: Assets.svg.imgArrowDownGray700.path,
-                      height: 32.h,
-                      width: 30.w),
+                    imagePath: Assets.svg.imgArrowDownGray700.path,
+                    height: 32.h,
+                    width: 30.w,
+                  ),
                 ),
                 hintText: '결과보고서 다시보기'.tr(),
                 items: dropdownItemList6,

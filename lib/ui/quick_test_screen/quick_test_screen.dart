@@ -59,7 +59,7 @@ class QuickTestScreen extends StatelessWidget {
                               '인싸력 테스트'.tr(),
                               style: textTheme.titleLarge!
                                   .colored(const Color(0xFFF0803D)),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -76,7 +76,7 @@ class QuickTestScreen extends StatelessWidget {
                             TextSpan(
                               text: '라는 말을 아십니까? 그렇다면 당신은 신세대!'.tr(),
                               style: textTheme.bodyMedium,
-                            )
+                            ),
                           ],
                         ),
                         textAlign: TextAlign.center,
@@ -129,15 +129,22 @@ class QuickTestScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 18.h),
                       RichText(
-                          text: TextSpan(children: [
-                        TextSpan(
-                            text: '개성만점'.tr(), style: textTheme.bodyMedium),
-                        _buildSpacing(width: 4.sp),
-                        TextSpan(
-                            text: '별명 짓기'.tr(), style: textTheme.bodyMedium),
-                        _buildSpacing(width: 1.sp),
-                        TextSpan(text: '!!!', style: textTheme.bodyMedium),
-                      ])),
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: '개성만점'.tr(),
+                              style: textTheme.bodyMedium,
+                            ),
+                            _buildSpacing(width: 4.sp),
+                            TextSpan(
+                              text: '별명 짓기'.tr(),
+                              style: textTheme.bodyMedium,
+                            ),
+                            _buildSpacing(width: 1.sp),
+                            TextSpan(text: '!!!', style: textTheme.bodyMedium),
+                          ],
+                        ),
+                      ),
                       SizedBox(height: 30.h),
                       Container(
                         width: 347.w,
@@ -227,7 +234,7 @@ class QuickTestScreen extends StatelessWidget {
                                 style: textTheme.bodyMedium!
                                     .colored(const Color(0xFFF0803D))
                                     .hugging,
-                              )
+                              ),
                             ],
                           ),
                           textAlign: TextAlign.center,

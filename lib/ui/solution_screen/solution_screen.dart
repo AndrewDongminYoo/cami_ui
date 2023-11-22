@@ -77,10 +77,14 @@ class SolutionScreen extends StatelessWidget {
               children: [
                 Text('반려인과의 돈독한 관계 형성'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 14.h),
-                Text('그저 가르치는 것만을 목적으로 교육하지 않고'.tr(),
-                    style: textTheme.bodySmall!.fSize(9)),
-                Text('마음과 몸 모두가 건강한 반려생활을 지속할 수'.tr(),
-                    style: textTheme.bodySmall!.fSize(9)),
+                Text(
+                  '그저 가르치는 것만을 목적으로 교육하지 않고'.tr(),
+                  style: textTheme.bodySmall!.fSize(9),
+                ),
+                Text(
+                  '마음과 몸 모두가 건강한 반려생활을 지속할 수'.tr(),
+                  style: textTheme.bodySmall!.fSize(9),
+                ),
                 Text('있도록 도와드립니다.'.tr(), style: textTheme.bodySmall!.fSize(9)),
               ],
             ),
@@ -118,10 +122,14 @@ class SolutionScreen extends StatelessWidget {
               children: [
                 Text('과학적으로 검증된 교육'.tr(), style: textTheme.bodyLarge),
                 SizedBox(height: 15.h),
-                Text('반려동물의 긍정적인 반응을 활용하여'.tr(),
-                    style: textTheme.bodySmall!.fSize(9)),
-                Text('과학적으로 검증된 방법들을 위주로'.tr(),
-                    style: textTheme.bodySmall!.fSize(9)),
+                Text(
+                  '반려동물의 긍정적인 반응을 활용하여'.tr(),
+                  style: textTheme.bodySmall!.fSize(9),
+                ),
+                Text(
+                  '과학적으로 검증된 방법들을 위주로'.tr(),
+                  style: textTheme.bodySmall!.fSize(9),
+                ),
                 Text('교육을 진행합니다.'.tr(), style: textTheme.bodySmall!.fSize(9)),
               ],
             ),

@@ -29,7 +29,10 @@ class CamiAppFooter extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-              imagePath: Assets.svg.imgTicket.path, height: 30.h, width: 92.w),
+            imagePath: Assets.svg.imgTicket.path,
+            height: 30.h,
+            width: 92.w,
+          ),
           SizedBox(height: 37.h),
           Row(
             children: [
@@ -49,7 +52,7 @@ class CamiAppFooter extends StatelessWidget {
               SizedBox(width: 17.w),
               PressableText(
                 '이벤트'.tr(),
-              )
+              ),
             ],
           ),
           SizedBox(height: 9.h),
@@ -78,7 +81,7 @@ class CamiAppFooter extends StatelessWidget {
                 PressableText(
                   '기관 제휴 및 구매 문의'.tr(),
                   color: const Color(0xFFA3A3A3),
-                )
+                ),
               ],
             ),
           ),
@@ -123,7 +126,7 @@ class CamiAppFooter extends StatelessWidget {
                       onTap: () {
                         launchUrlString('tel:+8228616828');
                       },
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -141,7 +144,7 @@ class CamiAppFooter extends StatelessWidget {
             'Copyright ⓒ 2023 CAMI Labs. All rights reserved.',
           ),
           SizedBox(height: 39.h),
-          const SocialLinkIcons()
+          const SocialLinkIcons(),
         ],
       ),
     );

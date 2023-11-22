@@ -27,8 +27,10 @@ class CheckUpInfo extends StatelessWidget {
           Stars(score: checkup.reviewRating ?? 0),
           Padding(
             padding: EdgeInsets.only(left: 8.w),
-            child: Text('(${checkup.reviewsCount ?? 0})',
-                style: textTheme.bodyMedium),
+            child: Text(
+              '(${checkup.reviewsCount ?? 0})',
+              style: textTheme.bodyMedium,
+            ),
           ),
         ],
       ),

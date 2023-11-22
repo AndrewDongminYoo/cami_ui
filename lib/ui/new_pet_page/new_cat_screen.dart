@@ -258,7 +258,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                         buttonStyle: CustomButtonStyles.fillBlue,
                         buttonTextStyle: textTheme.bodyMedium!
                             .colored(const Color(0xFF171717)),
-                      )
+                      ),
                     ],
                   ),
                 ),

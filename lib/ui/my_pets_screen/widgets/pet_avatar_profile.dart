@@ -104,9 +104,12 @@ class PetAvatarProfile extends StatelessWidget {
                               ),
                             ),
                             Align(
-                                alignment: Alignment.topCenter,
-                                child: Text('성격유형 알아보기 >'.tr(),
-                                    style: textTheme.bodySmall))
+                              alignment: Alignment.topCenter,
+                              child: Text(
+                                '성격유형 알아보기 >'.tr(),
+                                style: textTheme.bodySmall,
+                              ),
+                            ),
                           ],
                         ),
                       ),

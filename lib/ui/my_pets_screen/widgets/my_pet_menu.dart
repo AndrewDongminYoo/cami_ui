@@ -21,7 +21,9 @@ class MyPetMenu extends StatelessWidget {
       child: Column(
         children: [
           MyPetMenuItem(
-              text: '나의 반려친구'.tr(), decoration: AppDecoration.fillPrimary),
+            text: '나의 반려친구'.tr(),
+            decoration: AppDecoration.fillPrimary,
+          ),
           MyPetMenuItem(text: '심리검사'.tr()),
           MyPetMenuItem(text: '방문교육'.tr()),
           MyPetMenuItem(text: '보유쿠폰'.tr(), count: 0),

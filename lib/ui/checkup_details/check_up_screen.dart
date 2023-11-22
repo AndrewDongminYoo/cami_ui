@@ -84,8 +84,10 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 Container(
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 16.w),
-                  child: Text(checkup.testname!,
-                      style: textTheme.bodyLarge!.nanum),
+                  child: Text(
+                    checkup.testname!,
+                    style: textTheme.bodyLarge!.nanum,
+                  ),
                 ),
                 SizedBox(height: 10.h),
                 CheckUpInfo(checkup: checkup),
@@ -123,10 +125,12 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 SizedBox(height: 24.h),
                 Column(
                   children: checkup.detailImages!
-                      .map((image) => CustomImageView(
-                            imagePath: image.imagePath,
-                            width: (image.width ?? 361).w,
-                          ))
+                      .map(
+                        (image) => CustomImageView(
+                          imagePath: image.imagePath,
+                          width: (image.width ?? 361).w,
+                        ),
+                      )
                       .toList(),
                 ),
                 SizedBox(height: 272.h),

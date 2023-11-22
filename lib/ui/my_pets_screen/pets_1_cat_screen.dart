@@ -53,7 +53,7 @@ class PetsOneCatScreen extends StatelessWidget {
                 SizedBox(height: 24.h),
                 const MyPetMenu(),
                 SizedBox(height: 120.h),
-                const CamiAppFooter()
+                const CamiAppFooter(),
               ],
             ),
           ),
