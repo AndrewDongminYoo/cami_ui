@@ -28,7 +28,7 @@ class VerifyScreen extends StatelessWidget {
         appBar: const CamiAppBar(),
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(

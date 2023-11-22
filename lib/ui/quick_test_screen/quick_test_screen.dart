@@ -17,6 +17,7 @@ import '/ui/shared/cami_app_footer.dart';
 import '/widgets/custom_elevated_button.dart';
 import '/widgets/custom_image_view.dart';
 
+/// 반짝 테스트
 class QuickTestScreen extends StatelessWidget {
   const QuickTestScreen({super.key});
 
@@ -26,7 +27,7 @@ class QuickTestScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: Column(
             children: [
               SizedBox(height: 52.h),

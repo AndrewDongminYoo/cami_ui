@@ -35,9 +35,9 @@ class EditProfileScreen extends StatelessWidget {
   final editTextController3 = TextEditingController();
   final editTextController4 = TextEditingController();
 
-  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
+  final years = <String>[];
+  final months = <String>[];
+  final days = <String>[];
   final radioList = ['여성', '남성', '기타'];
 
   String radioGroup = '';
@@ -50,7 +50,7 @@ class EditProfileScreen extends StatelessWidget {
         appBar: const CamiAppBar(),
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(
@@ -383,7 +383,7 @@ class EditProfileScreen extends StatelessWidget {
                   height: 8.h,
                   width: 12.w),
             ),
-            items: dropdownItemList0,
+            items: years,
             onChanged: (value) {
               // TODO: implement onChanged
             },
@@ -407,7 +407,7 @@ class EditProfileScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList1,
+              items: months,
               onChanged: (value) {
                 // TODO: implement onChanged
               },
@@ -432,7 +432,7 @@ class EditProfileScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList2,
+              items: days,
               onChanged: (value) {
                 // TODO: implement onChanged
               },

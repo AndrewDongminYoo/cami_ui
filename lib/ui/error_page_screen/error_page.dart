@@ -34,7 +34,7 @@ class ErrorPage extends StatelessWidget {
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: Column(
             children: [
               SizedBox(height: 62.h),

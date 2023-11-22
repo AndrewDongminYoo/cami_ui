@@ -10,6 +10,7 @@ import '/data/models/check_up.dart';
 import '/widgets/app_bar/bread_crumb.dart';
 import '/widgets/app_bar/custom_app_bar.dart';
 
+// 상단 브레드크럼
 class Breadcrumbs extends StatelessWidget {
   const Breadcrumbs({
     super.key,

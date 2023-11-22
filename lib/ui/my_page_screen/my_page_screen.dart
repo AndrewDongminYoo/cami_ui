@@ -29,7 +29,7 @@ class MyPageScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(

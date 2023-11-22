@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
+/// 검사소개/구매후기 선택 탭
 class CheckUpTapBox extends StatelessWidget {
   const CheckUpTapBox({
     super.key,

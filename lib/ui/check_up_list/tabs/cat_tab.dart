@@ -10,6 +10,7 @@ import '/ui/shared/cami_app_footer.dart';
 import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
 
+/// 심리검사: 반려묘
 class CatTab extends StatefulWidget {
   const CatTab({super.key});
 

@@ -25,7 +25,7 @@ class MenuBarScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

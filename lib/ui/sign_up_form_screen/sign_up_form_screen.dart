@@ -24,16 +24,16 @@ import '/widgets/custom_text_form_field.dart';
 class SignUpFormScreen extends StatelessWidget {
   SignUpFormScreen({super.key});
 
-  final appNavBarController = TextEditingController();
-  final editText1Controller = TextEditingController();
-  final editText2Controller = TextEditingController();
-  final editText3Controller = TextEditingController();
-  final editText4Controller = TextEditingController();
-  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
+  final usermailField = TextEditingController();
+  final passwordField = TextEditingController();
+  final checkPassForm = TextEditingController();
+  final usernameField = TextEditingController();
+  final nicknameField = TextEditingController();
+  final years = <String>[];
+  final month = <String>[];
+  final dates = <String>[];
 
-  String genderRadioGroup = '';
+  String userGenderField = '';
   List<String> radioList = ['여성', '남성', '기타'];
 
   @override
@@ -44,7 +44,7 @@ class SignUpFormScreen extends StatelessWidget {
         appBar: const CamiAppBar(),
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(
@@ -95,7 +95,12 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildAppNavBar(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: usermailField,
+                  ),
+                ),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -106,7 +111,12 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText1(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: passwordField,
+                  ),
+                ),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -117,7 +127,12 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText2(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: checkPassForm,
+                  ),
+                ),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -128,7 +143,12 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText3(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: usernameField,
+                  ),
+                ),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -139,7 +159,13 @@ class SignUpFormScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildEditText4(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: CustomTextFormField(
+                    controller: nicknameField,
+                    textInputAction: TextInputAction.done,
+                  ),
+                ),
                 SizedBox(height: 33.h),
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
@@ -273,57 +299,6 @@ class SignUpFormScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildAppNavBar(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: appNavBarController,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText1(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editText1Controller,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText2(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editText2Controller,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText3(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editText3Controller,
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildEditText4(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: CustomTextFormField(
-        controller: editText4Controller,
-        textInputAction: TextInputAction.done,
-      ),
-    );
-  }
-
-  /// Section Widget
   Widget _buildDateTimeField(BuildContext context) {
     return Container(
       alignment: Alignment.center,
@@ -344,7 +319,7 @@ class SignUpFormScreen extends StatelessWidget {
                   height: 8.h,
                   width: 12.w),
             ),
-            items: dropdownItemList0,
+            items: years,
             onChanged: (value) {
               // TODO: implement onChanged
             },
@@ -368,7 +343,7 @@ class SignUpFormScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList1,
+              items: month,
               onChanged: (value) {
                 // TODO: implement onChanged
               },
@@ -393,7 +368,7 @@ class SignUpFormScreen extends StatelessWidget {
                     height: 8.h,
                     width: 12.w),
               ),
-              items: dropdownItemList2,
+              items: dates,
               onChanged: (value) {
                 // TODO: implement onChanged
               },
@@ -416,9 +391,9 @@ class SignUpFormScreen extends StatelessWidget {
           CustomRadioButton(
             text: '여성'.tr(),
             value: radioList[0],
-            groupValue: genderRadioGroup,
+            groupValue: userGenderField,
             onChange: (value) {
-              genderRadioGroup = value;
+              userGenderField = value;
             },
           ),
           Padding(
@@ -426,9 +401,9 @@ class SignUpFormScreen extends StatelessWidget {
             child: CustomRadioButton(
               text: '남성'.tr(),
               value: radioList[1],
-              groupValue: genderRadioGroup,
+              groupValue: userGenderField,
               onChange: (value) {
-                genderRadioGroup = value;
+                userGenderField = value;
               },
             ),
           ),
@@ -437,9 +412,9 @@ class SignUpFormScreen extends StatelessWidget {
             child: CustomRadioButton(
               text: '기타'.tr(),
               value: radioList[2],
-              groupValue: genderRadioGroup,
+              groupValue: userGenderField,
               onChange: (value) {
-                genderRadioGroup = value;
+                userGenderField = value;
               },
             ),
           ),

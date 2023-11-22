@@ -14,14 +14,20 @@ import 'tabs/cat_tab.dart';
 import 'tabs/dog_tab.dart';
 import 'tabs/owner_tab.dart';
 
-class OwnerScreen extends StatefulWidget {
-  const OwnerScreen({super.key});
+/// 심리검사 둘러보기 스크린
+class CheckUpListScreen extends StatefulWidget {
+  const CheckUpListScreen({
+    super.key,
+    this.currentIndex = 0,
+  });
+
+  final int currentIndex;
 
   @override
-  OwnerScreenState createState() => OwnerScreenState();
+  CheckUpListScreenState createState() => CheckUpListScreenState();
 }
 
-class OwnerScreenState extends State<OwnerScreen>
+class CheckUpListScreenState extends State<CheckUpListScreen>
     with TickerProviderStateMixin {
   late TabController tabviewController;
 
@@ -34,12 +40,13 @@ class OwnerScreenState extends State<OwnerScreen>
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
+    tabviewController.index = widget.currentIndex;
 
     return SafeArea(
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(

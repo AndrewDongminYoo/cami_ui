@@ -27,10 +27,10 @@ class ContactUsRegisterScreen extends StatelessWidget {
   final inquiryType = TextEditingController();
   final inquiryContent = TextEditingController();
   final List<String> items = [
-    '주문/결제',
-    '심리검사',
-    '서비스이용',
-    '와디즈관련',
+    '주문/결제'.tr(), // Ordering/Payment
+    '심리검사'.tr(), // Testings
+    '서비스이용'.tr(), // Services
+    '와디즈관련'.tr(), // Funding
   ];
 
   @override
@@ -41,7 +41,7 @@ class ContactUsRegisterScreen extends StatelessWidget {
         appBar: const CamiAppBar(),
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(

@@ -12,17 +12,17 @@ class DetailImage extends Equatable {
     return _$DetailImageFromJson(json);
   }
 
-  final double? height;
+  final int? height;
   @JsonKey(name: 'image_path')
   final String? imagePath;
-  final double? width;
+  final int? width;
 
   Map<String, dynamic> toJson() => _$DetailImageToJson(this);
 
   DetailImage copyWith({
-    double? height,
+    int? height,
     String? imagePath,
-    double? width,
+    int? width,
   }) {
     return DetailImage(
       height: height ?? this.height,

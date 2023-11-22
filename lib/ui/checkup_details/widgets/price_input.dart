@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/data/models/check_up.dart';
+import '/data/utils/check_up_util.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/theme_helper.dart';
@@ -27,11 +28,13 @@ class PriceInput extends StatefulWidget {
 
 class _PriceInputState extends State<PriceInput> {
   late int count;
+  late int price;
 
   @override
   void initState() {
     super.initState();
     count = widget.initialCount;
+    price = widget.checkup.krwVal;
   }
 
   @override
@@ -76,7 +79,7 @@ class _PriceInputState extends State<PriceInput> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.h),
-            child: Text(widget.checkup.price!, style: textTheme.bodyLarge),
+            child: Text((price * count).toKRW(), style: textTheme.bodyLarge),
           ),
         ],
       ),

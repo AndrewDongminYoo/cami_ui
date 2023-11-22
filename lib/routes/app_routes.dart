@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 // 🌎 Project imports:
 import '/core/utils/logger.dart';
 import '/ui/app_navigation_screen/app_navigation_screen.dart';
+import '/ui/check_up_list/check_up_list_screen.dart';
 import '/ui/checkup_details/check_up_screen.dart';
 import '/ui/contact_us_register_screen/contact_us_register_screen.dart';
 import '/ui/edit_profile_screen/edit_profile_screen.dart';
@@ -19,7 +20,6 @@ import '/ui/naming_screen/naming_screen.dart';
 import '/ui/new_pet_page/new_cat_screen.dart';
 import '/ui/notice_detail_screen/notice_detail_screen.dart';
 import '/ui/notice_screen/notice_screen.dart';
-import '/ui/owner_page/owner_screen.dart';
 import '/ui/quick_test_screen/quick_test_screen.dart';
 import '/ui/shared/check_up_list.dart';
 import '/ui/sign_up_form_screen/sign_up_form_screen.dart';
@@ -121,7 +121,7 @@ class AppRoutes {
     GoRoute(
       name: ownerScreen,
       path: ownerScreen,
-      builder: (context, state) => const OwnerScreen(),
+      builder: (context, state) => const CheckUpListScreen(),
     ),
     GoRoute(
       name: homeScreen,

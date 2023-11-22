@@ -7,9 +7,9 @@ part of 'detail_image.dart';
 // **************************************************************************
 
 DetailImage _$DetailImageFromJson(Map json) => DetailImage(
-      height: (json['height'] as num?)?.toDouble(),
+      height: json['height'] as int?,
       imagePath: json['image_path'] as String?,
-      width: (json['width'] as num?)?.toDouble(),
+      width: json['width'] as int?,
     );
 
 Map<String, dynamic> _$DetailImageToJson(DetailImage instance) =>

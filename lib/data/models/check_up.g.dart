@@ -7,11 +7,12 @@ part of 'check_up.dart';
 // **************************************************************************
 
 CheckUp _$CheckUpFromJson(Map json) => CheckUp(
+      description: json['description'] as String?,
       detailImages: (json['detail_images'] as List<dynamic>?)
           ?.map(
               (e) => DetailImage.fromJson(Map<String, dynamic>.from(e as Map)))
           .toList(),
-      description: json['description'] as String?,
+      duration: json['duration'] as int?,
       featured: json['featured'] as bool?,
       fullName: json['full_name'] as String?,
       location: json['location'] as String?,
@@ -28,8 +29,9 @@ CheckUp _$CheckUpFromJson(Map json) => CheckUp(
     );
 
 Map<String, dynamic> _$CheckUpToJson(CheckUp instance) => <String, dynamic>{
-      'detail_images': instance.detailImages,
       'description': instance.description,
+      'detail_images': instance.detailImages,
+      'duration': instance.duration,
       'featured': instance.featured,
       'full_name': instance.fullName,
       'location': instance.location,

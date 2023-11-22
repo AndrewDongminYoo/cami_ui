@@ -19,14 +19,15 @@ import '/widgets/custom_image_view.dart';
 class Faq1Screen extends StatelessWidget {
   Faq1Screen({super.key});
 
-  final dropdownItemList0 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList1 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList2 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList3 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList4 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList5 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList6 = ['Item One', 'Item Two', 'Item Three'];
-  final dropdownItemList7 = ['Item One', 'Item Two', 'Item Three'];
+  // TODO: ExpansionPanel 위젯으로 변경해야 함
+  final dropdownItemList0 = <String>[];
+  final dropdownItemList1 = <String>[];
+  final dropdownItemList2 = <String>[];
+  final dropdownItemList3 = <String>[];
+  final dropdownItemList4 = <String>[];
+  final dropdownItemList5 = <String>[];
+  final dropdownItemList6 = <String>[];
+  final dropdownItemList7 = <String>[];
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class Faq1Screen extends StatelessWidget {
       child: Scaffold(
         appBar: const CamiAppBar(),
         body: SizedBox(
-          width: double.maxFinite,
+          width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
             child: Column(

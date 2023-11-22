@@ -6,6 +6,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '../../data/utils/check_up_util.dart';
 import '/core/utils/media_query.dart';
 import '/data/models/check_up.dart';
 import '/gen/assets.gen.dart';
@@ -89,7 +90,10 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 SizedBox(height: 10.h),
                 CheckUpInfo(checkup: checkup),
                 SizedBox(height: 7.h),
-                CheckUpTestSummary(questions: checkup.questions!),
+                CheckUpTestSummary(
+                  questions: checkup.questions,
+                  duration: checkup.durationApprox,
+                ),
                 SizedBox(height: 8.h),
                 PriceInput(checkup: checkup),
                 SizedBox(height: 8.h),

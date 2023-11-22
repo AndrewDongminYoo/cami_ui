@@ -13,11 +13,11 @@ import '/theme/theme_helper.dart';
 class CheckUpTestSummary extends StatelessWidget {
   const CheckUpTestSummary({
     super.key,
-    this.duration = 20,
     required this.questions,
+    required this.duration,
   });
 
-  final int questions;
+  final int? questions;
   final int duration;
 
   @override
@@ -40,7 +40,7 @@ class CheckUpTestSummary extends StatelessWidget {
               Text('문항'.tr(), style: textTheme.bodyMedium),
               SizedBox(width: 42.w),
               Text(
-                '$questions 문항'.tr(),
+                questions != null ? '$questions 문항'.tr() : '',
                 style: textTheme.bodyMedium!.colored(const Color(0xFF404040)),
               ),
             ],

@@ -10,8 +10,9 @@ part 'check_up.g.dart';
 @JsonSerializable()
 class CheckUp extends Equatable {
   const CheckUp({
-    this.detailImages,
     this.description,
+    this.detailImages,
+    this.duration,
     this.featured,
     this.fullName,
     this.location,
@@ -31,9 +32,10 @@ class CheckUp extends Equatable {
     return _$CheckUpFromJson(json);
   }
 
+  final String? description;
   @JsonKey(name: 'detail_images')
   final List<DetailImage>? detailImages;
-  final String? description;
+  final int? duration;
   final bool? featured;
   @JsonKey(name: 'full_name')
   final String? fullName;
@@ -55,8 +57,9 @@ class CheckUp extends Equatable {
   Map<String, dynamic> toJson() => _$CheckUpToJson(this);
 
   CheckUp copyWith({
-    List<DetailImage>? detailImages,
     String? description,
+    List<DetailImage>? detailImages,
+    int? duration,
     bool? featured,
     String? fullName,
     String? location,
@@ -72,8 +75,9 @@ class CheckUp extends Equatable {
     String? type,
   }) {
     return CheckUp(
-      detailImages: detailImages ?? this.detailImages,
       description: description ?? this.description,
+      detailImages: detailImages ?? this.detailImages,
+      duration: duration ?? this.duration,
       featured: featured ?? this.featured,
       fullName: fullName ?? this.fullName,
       location: location ?? this.location,
@@ -96,8 +100,9 @@ class CheckUp extends Equatable {
   @override
   List<Object?> get props {
     return [
-      detailImages,
       description,
+      detailImages,
+      duration,
       featured,
       fullName,
       location,
