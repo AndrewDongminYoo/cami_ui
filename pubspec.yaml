@@ -73,6 +73,7 @@ dependencies:
   # [Dart] JSON 데이터를 모델 클래스로 쉽게 변환해주는 빌드 러너 제너레이터
   json_serializable: ^6.7.1
   # [Dart] 가독성 좋은 로그 작성을 도와주는 로깅 도구
+  kakao_flutter_sdk: ^1.7.0
   logger: ^2.0.2+1
   # 로티.json 애니메이션
   lottie: ^2.7.0
