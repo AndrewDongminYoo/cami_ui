@@ -44,7 +44,7 @@ class AppRoutes {
   static const String editProfileScreen = '/edit_profile_screen';
   static const String verifyScreen = '/verify_screen';
   static const String myPageScreen = '/my_page_screen';
-  static const String ownerScreen = '/owner_screen';
+  static const String checkUpListScreen = '/check_up_list_screen';
   static const String checkupCatScreen = '/checkup/ccsi';
   static const String checkupDogScreen = '/checkup/dcsi-ii';
   static const String checkupOwnerScreen = '/checkup/dds';
@@ -119,8 +119,8 @@ class AppRoutes {
       builder: (context, state) => const MyPageScreen(),
     ),
     GoRoute(
-      name: ownerScreen,
-      path: ownerScreen,
+      name: checkUpListScreen,
+      path: checkUpListScreen,
       builder: (context, state) => const CheckUpListScreen(),
     ),
     GoRoute(

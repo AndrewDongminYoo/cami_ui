@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
               final error = PageException(404, '${state.uri} 페이지가 존재하지 않아요.');
               return ErrorPage(error: error);
             },
-            initialLocation: AppRoutes.appNavigationScreen,
+            initialLocation: AppRoutes.homeScreen,
             navigatorKey: Catcher2.navigatorKey,
 
             /// 경로 빌더와 오류 페이지 빌더를 사용하여 [GoRouter]를 구성하는 기본 생성자입니다.

@@ -92,7 +92,7 @@ class AppNavigationScreen extends StatelessWidget {
                         ),
                         ScreenTitle(
                           screenTitle: '심리검사',
-                          routeName: AppRoutes.ownerScreen,
+                          routeName: AppRoutes.checkUpListScreen,
                         ),
                         ScreenTitle(
                           screenTitle: '카미 홈화면',
