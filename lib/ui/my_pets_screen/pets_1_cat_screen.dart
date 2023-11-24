@@ -28,50 +28,43 @@ class PetsOneCatScreen extends StatelessWidget {
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
-            child: Column(
-              children: [
-                SizedBox(height: 42.h),
-                UserAvatarProfile(
-                  imagePath: Assets.images.imgUserProfile.path,
-                  name: 'Andrew',
-                  mail: 'ydm2790@gmail.com',
+            child: Column(children: [
+              SizedBox(height: 42.h),
+              UserAvatarProfile(
+                imagePath: Assets.images.imgUserProfile.path,
+                name: 'Andrew',
+                mail: 'ydm2790@gmail.com',
+              ),
+              SizedBox(height: 42.h),
+              const PetAvatarProfile(type: '반려견'),
+              SizedBox(height: 16.h),
+              PetAvatarProfile(
+                type: '반려묘',
+                imagePath: Assets.images.imgCatProfile.path,
+                petName: '꼬리',
+                birthDay: '2018-08-12',
+                breeds: '코리안 숏 헤어'.tr(),
+                age: '5살 2개월'.tr(),
+                sex: '남아'.tr(),
+              ),
+              SizedBox(height: 16.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PerOwnerRegister(type: '반려견'),
+                    PerOwnerRegister(type: '반려묘'),
+                  ],
                 ),
-                SizedBox(height: 42.h),
-                const PetAvatarProfile(type: '반려견'),
-                SizedBox(height: 16.h),
-                PetAvatarProfile(
-                  type: '반려묘',
-                  imagePath: Assets.images.imgCatProfile.path,
-                  petName: '꼬리',
-                  birthDay: '2018-08-12',
-                  breeds: '코리안 숏 헤어'.tr(),
-                  age: '5살 2개월'.tr(),
-                  sex: '남아'.tr(),
-                ),
-                SizedBox(height: 16.h),
-                _buildPetRegistration(context),
-                SizedBox(height: 24.h),
-                const MyPetMenu(),
-                SizedBox(height: 120.h),
-                const CamiAppFooter(),
-              ],
-            ),
+              ),
+              SizedBox(height: 24.h),
+              const MyPetMenu(),
+              SizedBox(height: 120.h),
+              const CamiAppFooter(),
+            ]),
           ),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildPetRegistration(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          PerOwnerRegister(type: '반려견'),
-          PerOwnerRegister(type: '반려묘'),
-        ],
       ),
     );
   }

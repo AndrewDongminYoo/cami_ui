@@ -44,152 +44,135 @@ class ContactUsRegisterScreen extends StatelessWidget {
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
-            child: Column(
-              children: [
-                SizedBox(height: 15.h),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: 16.w),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomImageView(
-                        imagePath: Assets.svg.imgArrowLeft.path,
-                        height: 20.r,
-                        width: 20.r,
-                        margin: EdgeInsets.only(bottom: 6.h),
-                        onTap: () {
-                          onTapImgArrowLeft(context);
-                        },
+            child: Column(children: [
+              SizedBox(height: 15.h),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomImageView(
+                      imagePath: Assets.svg.imgArrowLeft.path,
+                      height: 20.r,
+                      width: 20.r,
+                      margin: EdgeInsets.only(bottom: 6.h),
+                      onTap: () {
+                        context.safePop();
+                      },
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 132.w),
+                      child: Text(
+                        '1:1 문의'.tr(),
+                        style: textTheme.bodyLarge!.fSize(18),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 132.w),
-                        child: Text(
-                          '1:1 문의'.tr(),
-                          style: textTheme.bodyLarge!.fSize(18),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 40.h),
+              Divider(color: Colors.black, indent: 16.w, endIndent: 16.w),
+              SizedBox(height: 17.h),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.only(left: 32.w),
+                child: Text('1:1 문의하기'.tr(), style: textTheme.bodyLarge),
+              ),
+              SizedBox(height: 16.h),
+              Divider(
+                color: const Color(0xFFA3A3A3),
+                indent: 16.w,
+                endIndent: 16.w,
+              ),
+              SizedBox(height: 22.h),
+              Padding(
+                padding: EdgeInsets.only(left: 28.w, right: 16.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 14.w),
+                      width: 44.w,
+                      child: Text(
+                        '문의유형'.tr(),
+                        maxLines: 2,
+                        style: textTheme.bodyLarge!.snug,
+                      ),
+                    ),
+                    CustomDropDownFormField(
+                      items: items,
+                      height: 40.h,
+                      width: 291.w,
+                      borderDecoration: OutlineInputBorder(
+                        borderRadius: BorderRadiusStyle.circleBorder8,
+                        borderSide: BorderSide.none,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 15.w, vertical: 10.h),
+                      icon: CustomImageView(
+                        imagePath: Assets.svg.imgArrowDown.path,
+                        height: 8.h,
+                        width: 12.w,
+                      ),
+                      onChanged: (value) {
+                        inquiryType.text = value;
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 23.h),
+              Padding(
+                padding: EdgeInsets.only(left: 28.w, right: 16.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 43.w,
+                      margin: EdgeInsets.only(top: 3.h, bottom: 43.h),
+                      child: Text(
+                        '문의내용'.tr(),
+                        maxLines: 2,
+                        style: textTheme.bodyLarge!.snug,
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15.w),
+                        child: CustomTextFormField(
+                          controller: inquiryContent,
+                          maxLines: 5,
+                          textInputType: TextInputType.multiline,
+                          textInputAction: TextInputAction.done,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 40.h),
-                Divider(color: Colors.black, indent: 16.w, endIndent: 16.w),
-                SizedBox(height: 17.h),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: 32.w),
-                  child: Text('1:1 문의하기'.tr(), style: textTheme.bodyLarge),
-                ),
-                SizedBox(height: 16.h),
-                Divider(
-                  color: const Color(0xFFA3A3A3),
-                  indent: 16.w,
-                  endIndent: 16.w,
-                ),
-                SizedBox(height: 22.h),
-                _buildDropDownForm(context),
-                SizedBox(height: 23.h),
-                _buildTextFormField(context),
-                SizedBox(height: 28.h),
-                CustomElevatedButton(
-                  onPressed: (context) {
-                    // TODO: 문의 내용 서버로 업데이트하기
-                    context.showSnackBar(
-                      backgroundColor: const Color(0xFFF0803D),
-                      content:
-                          Text('[${inquiryType.text}] ${inquiryContent.text}'),
-                    );
-                  },
-                  text: '문의하기'.tr(),
-                  margin: EdgeInsets.symmetric(horizontal: 16.w),
-                  buttonStyle: CustomButtonStyles.fillBlackTL12,
-                ),
-                SizedBox(height: 128.h),
-                const CamiAppFooter(),
-              ],
-            ),
+              ),
+              SizedBox(height: 28.h),
+              CustomElevatedButton(
+                onPressed: (BuildContext context) {
+                  // TODO: 문의 내용 서버로 업데이트하기
+                  context.showSnackBar(
+                    backgroundColor: const Color(0xFFF0803D),
+                    content:
+                        Text('[${inquiryType.text}] ${inquiryContent.text}'),
+                  );
+                },
+                text: '문의하기'.tr(),
+                margin: EdgeInsets.symmetric(horizontal: 16.w),
+                buttonStyle: CustomButtonStyles.fillBlackTL12,
+              ),
+              SizedBox(height: 128.h),
+              const CamiAppFooter(),
+            ]),
           ),
         ),
       ),
     );
-  }
-
-  /// Section Widget
-  Widget _buildDropDownForm(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 28.w, right: 16.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            margin: EdgeInsets.only(right: 14.w),
-            width: 44.w,
-            child: Text(
-              '문의유형'.tr(),
-              maxLines: 2,
-              style: textTheme.bodyLarge!.snug,
-            ),
-          ),
-          CustomDropDownFormField(
-            items: items,
-            height: 40.h,
-            width: 291.w,
-            borderDecoration: OutlineInputBorder(
-              borderRadius: BorderRadiusStyle.circleBorder8,
-              borderSide: BorderSide.none,
-            ),
-            contentPadding:
-                EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-            icon: CustomImageView(
-              imagePath: Assets.svg.imgArrowDown.path,
-              height: 8.h,
-              width: 12.w,
-            ),
-            onChanged: (value) {
-              inquiryType.text = value;
-            },
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildTextFormField(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 28.w, right: 16.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 43.w,
-            margin: EdgeInsets.only(top: 3.h, bottom: 43.h),
-            child: Text(
-              '문의내용'.tr(),
-              maxLines: 2,
-              style: textTheme.bodyLarge!.snug,
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.w),
-              child: CustomTextFormField(
-                controller: inquiryContent,
-                maxLines: 5,
-                textInputType: TextInputType.multiline,
-                textInputAction: TextInputAction.done,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Navigates back to the previous screen.
-  void onTapImgArrowLeft(BuildContext context) {
-    context.safePop();
   }
 }

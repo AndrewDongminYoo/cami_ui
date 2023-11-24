@@ -31,48 +31,61 @@ class Stars extends StatelessWidget {
     final emptyIcon = Assets.svg.starZero;
 
     // Use rounded score for conditional image paths
-    String _buildStar(int target) => score > target
-        ? fullIcon.path
-        : score.round() > target - 0.5
-            ? halfIcon.path
-            : emptyIcon.path;
 
     return SizedBox(
       height: 12.h,
       width: 68.w,
-      child: Row(
-        children: [
-          CustomImageView(
-            imagePath: _buildStar(1),
-            height: 12.h,
-            width: 12.w,
-          ),
-          SizedBox(width: 2.w),
-          CustomImageView(
-            imagePath: _buildStar(2),
-            height: 12.h,
-            width: 12.w,
-          ),
-          SizedBox(width: 2.w),
-          CustomImageView(
-            imagePath: _buildStar(3),
-            height: 12.h,
-            width: 12.w,
-          ),
-          SizedBox(width: 2.w),
-          CustomImageView(
-            imagePath: _buildStar(4),
-            height: 12.h,
-            width: 12.w,
-          ),
-          SizedBox(width: 2.w),
-          CustomImageView(
-            imagePath: _buildStar(5),
-            height: 12.h,
-            width: 12.w,
-          ),
-        ],
-      ),
+      child: Row(children: [
+        CustomImageView(
+          imagePath: score > 1
+              ? fullIcon.path
+              : score.round() > 1 - 0.5
+                  ? halfIcon.path
+                  : emptyIcon.path,
+          height: 12.h,
+          width: 12.w,
+        ),
+        SizedBox(width: 2.w),
+        CustomImageView(
+          imagePath: score > 2
+              ? fullIcon.path
+              : score.round() > 2 - 0.5
+                  ? halfIcon.path
+                  : emptyIcon.path,
+          height: 12.h,
+          width: 12.w,
+        ),
+        SizedBox(width: 2.w),
+        CustomImageView(
+          imagePath: score > 3
+              ? fullIcon.path
+              : score.round() > 3 - 0.5
+                  ? halfIcon.path
+                  : emptyIcon.path,
+          height: 12.h,
+          width: 12.w,
+        ),
+        SizedBox(width: 2.w),
+        CustomImageView(
+          imagePath: score > 4
+              ? fullIcon.path
+              : score.round() > 4 - 0.5
+                  ? halfIcon.path
+                  : emptyIcon.path,
+          height: 12.h,
+          width: 12.w,
+        ),
+        SizedBox(width: 2.w),
+        CustomImageView(
+          imagePath: score > 5
+              ? fullIcon.path
+              : score.round() > 5 - 0.5
+                  ? halfIcon.path
+                  : emptyIcon.path,
+          height: 12.h,
+          width: 12.w,
+        ),
+      ]),
     );
   }
 }

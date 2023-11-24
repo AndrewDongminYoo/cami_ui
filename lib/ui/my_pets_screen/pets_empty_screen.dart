@@ -26,41 +26,34 @@ class PetsEmptyScreen extends StatelessWidget {
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
-            child: Column(
-              children: [
-                SizedBox(height: 42.h),
-                const UserAvatarProfile(
-                  name: 'Andrew',
-                  mail: 'ydm2790@gmail.com',
+            child: Column(children: [
+              SizedBox(height: 42.h),
+              const UserAvatarProfile(
+                name: 'Andrew',
+                mail: 'ydm2790@gmail.com',
+              ),
+              SizedBox(height: 42.h),
+              const PetAvatarProfile(type: '반려견'),
+              SizedBox(height: 16.h),
+              const PetAvatarProfile(type: '반려묘'),
+              SizedBox(height: 16.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PerOwnerRegister(type: '반려견'),
+                    PerOwnerRegister(type: '반려묘'),
+                  ],
                 ),
-                SizedBox(height: 42.h),
-                const PetAvatarProfile(type: '반려견'),
-                SizedBox(height: 16.h),
-                const PetAvatarProfile(type: '반려묘'),
-                SizedBox(height: 16.h),
-                _buildPetRegistration(context),
-                SizedBox(height: 24.h),
-                const MyPetMenu(),
-                SizedBox(height: 120.h),
-                const CamiAppFooter(),
-              ],
-            ),
+              ),
+              SizedBox(height: 24.h),
+              const MyPetMenu(),
+              SizedBox(height: 120.h),
+              const CamiAppFooter(),
+            ]),
           ),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildPetRegistration(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          PerOwnerRegister(type: '반려견'),
-          PerOwnerRegister(type: '반려묘'),
-        ],
       ),
     );
   }

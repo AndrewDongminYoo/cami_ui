@@ -34,435 +34,477 @@ class MyPageScreen extends StatelessWidget {
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
             primary: true,
-            child: Column(
-              children: [
-                SizedBox(height: 42.h),
-                _buildLoginRequires(context),
-                SizedBox(height: 48.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  child: _buildFrame(
-                    context,
-                    userName: '등록된 정보가 없습니다.'.tr(),
-                    userAge: '생년월일'.tr(),
-                    userLocation: '-',
-                    userOccupation: '연령'.tr(),
-                    userLocation1: '-',
-                    userPhoneNumber: '견종'.tr(),
-                    userLocation2: '-',
-                    userEmail: '성별'.tr(),
-                    userLocation3: '-',
-                  ),
+            child: Column(children: [
+              SizedBox(height: 42.h),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 16.w,
+                  right: 22.w,
                 ),
-                SizedBox(height: 18.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  child: _buildFrame(
-                    context,
-                    userName: '등록된 정보가 없습니다.'.tr(),
-                    userAge: '생년월일'.tr(),
-                    userLocation: '-',
-                    userOccupation: '연령'.tr(),
-                    userLocation1: '-',
-                    userPhoneNumber: '묘종'.tr(),
-                    userLocation2: '-',
-                    userEmail: '성별'.tr(),
-                    userLocation3: '-',
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomImageView(
+                      imagePath: Assets.images.avatarOwner.path,
+                      height: 79.r,
+                      width: 79.r,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          left: 24.w,
+                          top: 7.h,
+                          bottom: 7.h,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 2.h,
+                                    bottom: 5.h,
+                                  ),
+                                  child: Text(
+                                    '회원가입/로그인'.tr(),
+                                    style: textTheme.bodyLarge!
+                                        .colored(const Color(0xFF202020)),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 9.w),
+                                  child: CustomIconButton(
+                                    height: 32.r,
+                                    width: 32.r,
+                                    padding: EdgeInsets.all(8.w),
+                                    child: CustomImageView(
+                                      imagePath: Assets.svg.imgArrowLeft.path,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 251.w,
+                              child: Text(
+                                '로그인 하시면 카미의 다양한 서비스를 이용하실 수 있습니다.'.tr(),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: textTheme.bodySmall!
+                                    .colored(const Color(0xFFA3A3A3))
+                                    .tight,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 16.h),
-                _buildRegisterPet(context),
-                SizedBox(height: 36.h),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillPrimary,
-                  child: Text('나의 반려친구'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('심리검사'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('방문교육'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('보유쿠폰'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('1:1 문의'.tr(), style: textTheme.bodyLarge),
-                ),
-                _buildSeparatorBar(context),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('자주묻는질문'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('공지사항'.tr(), style: textTheme.bodyLarge),
-                ),
-                Container(
-                  width: 361.w,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 11.h,
-                  ),
-                  decoration: AppDecoration.fillGray50,
-                  child: Text('이벤트'.tr(), style: textTheme.bodyLarge),
-                ),
-                SizedBox(height: 132.h),
-                const CamiAppFooter(),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// Once you're logged in, you can start using cami's various services.
-  Widget _buildLoginRequires(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: 16.w,
-        right: 22.w,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomImageView(
-            imagePath: Assets.images.avatarOwner.path,
-            height: 79.r,
-            width: 79.r,
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: 24.w,
-                top: 7.h,
-                bottom: 7.h,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+              SizedBox(height: 48.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.w,
+                    vertical: 24.h,
+                  ),
+                  decoration: AppDecoration.outlineOnSecondaryContainer
+                      .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+                  child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      CustomImageView(
+                        imagePath: Assets.images.avatarCat.path,
+                        height: 84.r,
+                        width: 84.r,
+                        radius: BorderRadius.circular(42.w),
+                        margin: EdgeInsets.only(
+                          top: 17.h,
+                          bottom: 33.h,
+                        ),
+                      ),
                       Padding(
                         padding: EdgeInsets.only(
-                          top: 2.h,
-                          bottom: 5.h,
+                          left: 24.w,
+                          bottom: 11.h,
                         ),
-                        child: Text(
-                          '회원가입/로그인'.tr(),
-                          style: textTheme.bodyLarge!
-                              .colored(const Color(0xFF202020)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '등록된 정보가 없습니다.'.tr(),
+                              style: textTheme.bodyLarge!
+                                  .colored(const Color(0xFFA3A3A3)),
+                            ),
+                            SizedBox(height: 7.h),
+                            Row(children: [
+                              Text(
+                                '생년월일'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 2.h),
+                            Row(children: [
+                              Text(
+                                '연령'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 43.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 3.h),
+                            Row(children: [
+                              Text(
+                                '견종'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 42.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 2.h),
+                            Row(children: [
+                              Text(
+                                '성별'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 42.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 18.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.w,
+                    vertical: 24.h,
+                  ),
+                  decoration: AppDecoration.outlineOnSecondaryContainer
+                      .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.images.avatarCat.path,
+                        height: 84.r,
+                        width: 84.r,
+                        radius: BorderRadius.circular(42.w),
+                        margin: EdgeInsets.only(
+                          top: 17.h,
+                          bottom: 33.h,
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 9.w),
-                        child: CustomIconButton(
-                          height: 32.r,
-                          width: 32.r,
-                          padding: EdgeInsets.all(8.w),
-                          child: CustomImageView(
-                            imagePath: Assets.svg.imgArrowLeft.path,
-                          ),
+                        padding: EdgeInsets.only(
+                          left: 24.w,
+                          bottom: 11.h,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '등록된 정보가 없습니다.'.tr(),
+                              style: textTheme.bodyLarge!
+                                  .colored(const Color(0xFFA3A3A3)),
+                            ),
+                            SizedBox(height: 7.h),
+                            Row(children: [
+                              Text(
+                                '생년월일'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 2.h),
+                            Row(children: [
+                              Text(
+                                '연령'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 43.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 3.h),
+                            Row(children: [
+                              Text(
+                                '묘종'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 42.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(height: 2.h),
+                            Row(children: [
+                              Text(
+                                '성별'.tr(),
+                                style: textTheme.bodyMedium!
+                                    .colored(const Color(0xFFA3A3A3)),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 42.w),
+                                child: Text(
+                                  '-',
+                                  style: textTheme.bodyMedium!
+                                      .colored(const Color(0xFFA3A3A3)),
+                                ),
+                              ),
+                            ]),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(
-                    width: 251.w,
-                    child: Text(
-                      '로그인 하시면 카미의 다양한 서비스를 이용하실 수 있습니다.'.tr(),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: textTheme.bodySmall!
-                          .colored(const Color(0xFFA3A3A3))
-                          .tight,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// I'm a doggy butler | I am a cat butler
-  Widget _buildRegisterPet(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.w),
-            decoration: AppDecoration.outlineOnSecondaryContainer
-                .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(height: 16.h),
-                Text('나는 멍집사'.tr(), style: textTheme.bodyLarge),
-                SizedBox(height: 25.h),
-                SizedBox(
-                  height: 112.h,
-                  width: 149.w,
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      CustomImageView(
-                        imagePath: Assets.images.addDog.path,
-                        height: 112.h,
-                        width: 138.w,
-                        alignment: Alignment.center,
-                      ),
-                      CustomElevatedButton(
-                        onPressed: (context) {
-                          // 강아지 등록화면
-                          context.go(AppRoutes.newDogScreen);
-                        },
-                        height: 32.h,
-                        width: 149.w,
-                        text: '강아지 등록하기'.tr(),
-                        margin: EdgeInsets.only(bottom: 24.h),
-                        buttonStyle: CustomButtonStyles.fillBlue,
-                        buttonTextStyle: textTheme.bodyMedium,
-                        alignment: Alignment.bottomCenter,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 12.w),
-            padding: EdgeInsets.symmetric(horizontal: 12.w),
-            decoration: AppDecoration.outlineOnSecondaryContainer
-                .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(height: 16.h),
-                Text('나는 냥집사'.tr(), style: textTheme.bodyLarge),
-                SizedBox(height: 25.h),
-                SizedBox(
-                  height: 112.h,
-                  width: 149.w,
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      CustomImageView(
-                        imagePath: Assets.images.addCat.path,
-                        height: 112.h,
-                        width: 138.w,
-                        alignment: Alignment.center,
-                      ),
-                      CustomElevatedButton(
-                        onPressed: (context) {
-                          // 고양이 등록화면
-                          context.go(AppRoutes.newCatScreen);
-                        },
-                        height: 32.h,
-                        width: 149.w,
-                        text: '고양이 등록하기'.tr(),
-                        margin: EdgeInsets.only(bottom: 24.h),
-                        buttonStyle: CustomButtonStyles.fillBlue,
-                        buttonTextStyle: textTheme.bodyMedium,
-                        alignment: Alignment.bottomCenter,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildSeparatorBar(BuildContext context) {
-    return Container(
-      width: 361.w,
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
-      padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
-        vertical: 12.h,
-      ),
-      decoration: AppDecoration.fillGray50,
-      child: Divider(
-        color: const Color(0xFFEEEEEE),
-        endIndent: 26.w,
-      ),
-    );
-  }
-
-  /// Common widget
-  Widget _buildFrame(
-    BuildContext context, {
-    required String userName,
-    required String userAge,
-    required String userLocation,
-    required String userOccupation,
-    required String userLocation1,
-    required String userPhoneNumber,
-    required String userLocation2,
-    required String userEmail,
-    required String userLocation3,
-  }) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 24.h,
-      ),
-      decoration: AppDecoration.outlineOnSecondaryContainer
-          .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomImageView(
-            imagePath: Assets.images.avatarCat.path,
-            height: 84.r,
-            width: 84.r,
-            radius: BorderRadius.circular(42.w),
-            margin: EdgeInsets.only(
-              top: 17.h,
-              bottom: 33.h,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 24.w,
-              bottom: 11.h,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  userName,
-                  style: textTheme.bodyLarge!.colored(const Color(0xFFA3A3A3)),
-                ),
-                SizedBox(height: 7.h),
-                Row(
+              SizedBox(height: 16.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      userAge,
-                      style: textTheme.bodyMedium!
-                          .colored(const Color(0xFFA3A3A3)),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 12.w),
+                      decoration: AppDecoration.outlineOnSecondaryContainer
+                          .copyWith(
+                              borderRadius: BorderRadiusStyle.circleBorder12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(height: 16.h),
+                          Text('나는 멍집사'.tr(), style: textTheme.bodyLarge),
+                          SizedBox(height: 25.h),
+                          SizedBox(
+                            height: 112.h,
+                            width: 149.w,
+                            child: Stack(
+                              alignment: Alignment.bottomCenter,
+                              children: [
+                                CustomImageView(
+                                  imagePath: Assets.images.addDog.path,
+                                  height: 112.h,
+                                  width: 138.w,
+                                  alignment: Alignment.center,
+                                ),
+                                CustomElevatedButton(
+                                  onPressed: (BuildContext context) {
+                                    // 강아지 등록화면
+                                    context.go(AppRoutes.newDogScreen);
+                                  },
+                                  height: 32.h,
+                                  width: 149.w,
+                                  text: '강아지 등록하기'.tr(),
+                                  margin: EdgeInsets.only(bottom: 24.h),
+                                  buttonStyle: CustomButtonStyles.fillBlue,
+                                  buttonTextStyle: textTheme.bodyMedium,
+                                  alignment: Alignment.bottomCenter,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 16.w),
-                      child: Text(
-                        userLocation,
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFFA3A3A3)),
+                    Container(
+                      margin: EdgeInsets.only(left: 12.w),
+                      padding: EdgeInsets.symmetric(horizontal: 12.w),
+                      decoration: AppDecoration.outlineOnSecondaryContainer
+                          .copyWith(
+                              borderRadius: BorderRadiusStyle.circleBorder12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(height: 16.h),
+                          Text('나는 냥집사'.tr(), style: textTheme.bodyLarge),
+                          SizedBox(height: 25.h),
+                          SizedBox(
+                            height: 112.h,
+                            width: 149.w,
+                            child: Stack(
+                              alignment: Alignment.bottomCenter,
+                              children: [
+                                CustomImageView(
+                                  imagePath: Assets.images.addCat.path,
+                                  height: 112.h,
+                                  width: 138.w,
+                                  alignment: Alignment.center,
+                                ),
+                                CustomElevatedButton(
+                                  onPressed: (BuildContext context) {
+                                    // 고양이 등록화면
+                                    context.go(AppRoutes.newCatScreen);
+                                  },
+                                  height: 32.h,
+                                  width: 149.w,
+                                  text: '고양이 등록하기'.tr(),
+                                  margin: EdgeInsets.only(bottom: 24.h),
+                                  buttonStyle: CustomButtonStyles.fillBlue,
+                                  buttonTextStyle: textTheme.bodyMedium,
+                                  alignment: Alignment.bottomCenter,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 2.h),
-                Row(
-                  children: [
-                    Text(
-                      userOccupation,
-                      style: textTheme.bodyMedium!
-                          .colored(const Color(0xFFA3A3A3)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 43.w),
-                      child: Text(
-                        userLocation1,
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFFA3A3A3)),
-                      ),
-                    ),
-                  ],
+              ),
+              SizedBox(height: 36.h),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
                 ),
-                SizedBox(height: 3.h),
-                Row(
-                  children: [
-                    Text(
-                      userPhoneNumber,
-                      style: textTheme.bodyMedium!
-                          .colored(const Color(0xFFA3A3A3)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 42.w),
-                      child: Text(
-                        userLocation2,
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFFA3A3A3)),
-                      ),
-                    ),
-                  ],
+                decoration: AppDecoration.fillPrimary,
+                child: Text('나의 반려친구'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
                 ),
-                SizedBox(height: 2.h),
-                Row(
-                  children: [
-                    Text(
-                      userEmail,
-                      style: textTheme.bodyMedium!
-                          .colored(const Color(0xFFA3A3A3)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 42.w),
-                      child: Text(
-                        userLocation3,
-                        style: textTheme.bodyMedium!
-                            .colored(const Color(0xFFA3A3A3)),
-                      ),
-                    ),
-                  ],
+                decoration: AppDecoration.fillGray50,
+                child: Text('심리검사'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
                 ),
-              ],
-            ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('방문교육'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('보유쿠폰'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('1:1 문의'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                margin: EdgeInsets.symmetric(horizontal: 16.w),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 12.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Divider(
+                  color: const Color(0xFFEEEEEE),
+                  endIndent: 26.w,
+                ),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('자주묻는질문'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('공지사항'.tr(), style: textTheme.bodyLarge),
+              ),
+              Container(
+                width: 361.w,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.w,
+                  vertical: 11.h,
+                ),
+                decoration: AppDecoration.fillGray50,
+                child: Text('이벤트'.tr(), style: textTheme.bodyLarge),
+              ),
+              SizedBox(height: 132.h),
+              const CamiAppFooter(),
+            ]),
           ),
-        ],
+        ),
       ),
     );
   }

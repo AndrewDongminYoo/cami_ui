@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
-import '/routes/app_routes.dart';
 import '/routes/go_extensions.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_button_style.dart';
@@ -59,7 +57,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               children: [
                 SizedBox(height: 15.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -69,7 +67,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         width: 20.r,
                         margin: EdgeInsets.only(bottom: 6.h),
                         onTap: () {
-                          onTapImgArrowLeft(context);
+                          context.safePop();
                         },
                       ),
                       Padding(
@@ -83,10 +81,73 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                 ),
                 SizedBox(height: 17.h),
-                _buildImageSelectionRow(context),
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: 16.w),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
+                  decoration: AppDecoration.fillGray50.copyWith(
+                      borderRadius: BorderRadiusStyle.circleBorder12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomImageView(
+                        imagePath: Assets.images.imgUserProfile.path,
+                        height: 130.h,
+                        width: 116.w,
+                        margin: EdgeInsets.only(bottom: 42.h),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 11.h, right: 18.w, bottom: 11.h),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('프로필 사진을 등록해주세요'.tr(),
+                                style: textTheme.bodyMedium),
+                            SizedBox(height: 1.h),
+                            SizedBox(
+                              width: 156.w,
+                              child: Text(
+                                '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: textTheme.bodySmall!
+                                    .colored(const Color(0xFFA3A3A3))
+                                    .tight,
+                              ),
+                            ),
+                            SizedBox(height: 1.h),
+                            SizedBox(
+                              width: 145.w,
+                              child: Text(
+                                '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: textTheme.bodySmall!
+                                    .colored(const Color(0xFFA3A3A3))
+                                    .tight,
+                              ),
+                            ),
+                            SizedBox(height: 16.h),
+                            CustomElevatedButton(
+                              onPressed: executeImagePicker,
+                              width: 121.w,
+                              text: '이미지 선택하기'.tr(),
+                              buttonStyle: CustomButtonStyles.fillBlue,
+                              buttonTextStyle: textTheme.bodyMedium!
+                                  .colored(const Color(0xFF171717)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 49.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '이메일 주소'.tr(),
                     style:
@@ -120,7 +181,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '휴대폰 번호'.tr(),
                     style:
@@ -128,7 +189,33 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildOTPFormField(context),
+                Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomTextFormField(
+                        width: 211.w,
+                        hintText: '인증번호',
+                        controller: verification,
+                        autofillHints: const [AutofillHints.oneTimeCode],
+                        textInputType: TextInputType.number,
+                      ),
+                      CustomElevatedButton(
+                        onPressed: (BuildContext context) {
+                          // TODO: OTP 발급 로직 실행
+                        },
+                        width: 142.w,
+                        text: '인증번호 받기'.tr(),
+                        margin: EdgeInsets.only(left: 8.w),
+                        buttonStyle: CustomButtonStyles.fillBlueGray,
+                        buttonTextStyle: textTheme.bodyMedium!
+                            .colored(const Color(0xFF6B7280)),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 8.h),
                 Container(
                   alignment: Alignment.center,
@@ -141,7 +228,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 5.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '※ 휴대폰 번호는 인증을 통하여 변경이 가능합니다.'.tr(),
                     style:
@@ -150,7 +237,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '비밀번호 변경'.tr(),
                     style:
@@ -181,7 +268,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '이름'.tr(),
                     style:
@@ -199,7 +286,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '닉네임'.tr(),
                     style:
@@ -218,7 +305,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '생년월일'.tr(),
                     style:
@@ -233,7 +320,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 25.h),
                 Padding(
-                  padding: EdgeInsets.only(left: 16.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Text(
                     '성별'.tr(),
                     style:
@@ -241,10 +328,47 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                 ),
                 SizedBox(height: 9.h),
-                _buildGenderRadioGroup(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: Row(children: [
+                    CustomRadioButton(
+                      text: '여성'.tr(),
+                      value: radioList[0],
+                      groupValue: radioGroup,
+                      textStyle: textTheme.bodyLarge,
+                      onChange: (value) {
+                        radioGroup = value;
+                      },
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 74.w),
+                      child: CustomRadioButton(
+                        text: '남성'.tr(),
+                        value: radioList[1],
+                        groupValue: radioGroup,
+                        textStyle: textTheme.bodyLarge,
+                        onChange: (value) {
+                          radioGroup = value;
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 74.w),
+                      child: CustomRadioButton(
+                        text: '기타'.tr(),
+                        value: radioList[2],
+                        groupValue: radioGroup,
+                        textStyle: textTheme.bodyLarge,
+                        onChange: (value) {
+                          radioGroup = value;
+                        },
+                      ),
+                    ),
+                  ]),
+                ),
                 SizedBox(height: 23.h),
                 CustomElevatedButton(
-                  onPressed: (context) {
+                  onPressed: (BuildContext context) {
                     // TODO: 수정된 프로필 서버에 저장
                   },
                   text: '저장'.tr(),
@@ -254,7 +378,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
                 SizedBox(height: 8.h),
                 CustomOutlinedButton(
-                  onPressed: (context) {
+                  onPressed: (BuildContext context) {
                     // TODO: 서버에 탈퇴 요청
                   },
                   height: 38.h,
@@ -342,161 +466,5 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     if (file != null) {
       // Uint8List? _bytes = await File(file.path).readAsBytes();
     }
-  }
-
-  /// Section Widget
-  Widget _buildImageSelectionRow(BuildContext context) {
-    return Align(
-      child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 16.w),
-        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
-        decoration: AppDecoration.fillGray50
-            .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomImageView(
-              imagePath: Assets.images.imgUserProfile.path,
-              height: 130.h,
-              width: 116.w,
-              margin: EdgeInsets.only(bottom: 42.h),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 11.h, right: 18.w, bottom: 11.h),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('프로필 사진을 등록해주세요'.tr(), style: textTheme.bodyMedium),
-                  SizedBox(height: 1.h),
-                  SizedBox(
-                    width: 156.w,
-                    child: Text(
-                      '이미지 도용 및 불건전 이미지는 삭제 처리 됩니다.'.tr(),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: textTheme.bodySmall!
-                          .colored(const Color(0xFFA3A3A3))
-                          .tight,
-                    ),
-                  ),
-                  SizedBox(height: 1.h),
-                  SizedBox(
-                    width: 145.w,
-                    child: Text(
-                      '프로필 이미지는 9MB 이하로 선택해 주세요.'.tr(),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: textTheme.bodySmall!
-                          .colored(const Color(0xFFA3A3A3))
-                          .tight,
-                    ),
-                  ),
-                  SizedBox(height: 16.h),
-                  CustomElevatedButton(
-                    onPressed: executeImagePicker,
-                    width: 121.w,
-                    text: '이미지 선택하기'.tr(),
-                    buttonStyle: CustomButtonStyles.fillBlue,
-                    buttonTextStyle:
-                        textTheme.bodyMedium!.colored(const Color(0xFF171717)),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildOTPFormField(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomTextFormField(
-            width: 211.w,
-            hintText: '인증번호',
-            controller: verification,
-            autofillHints: const [AutofillHints.oneTimeCode],
-            textInputType: TextInputType.number,
-          ),
-          CustomElevatedButton(
-            onPressed: (context) {
-              // TODO: OTP 발급 로직 실행
-            },
-            width: 142.w,
-            text: '인증번호 받기'.tr(),
-            margin: EdgeInsets.only(left: 8.w),
-            buttonStyle: CustomButtonStyles.fillBlueGray,
-            buttonTextStyle:
-                textTheme.bodyMedium!.colored(const Color(0xFF6B7280)),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildGenderRadioGroup(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 16.w),
-      child: Row(
-        children: [
-          CustomRadioButton(
-            text: '여성'.tr(),
-            value: radioList[0],
-            groupValue: radioGroup,
-            textStyle: textTheme.bodyLarge,
-            onChange: (value) {
-              radioGroup = value;
-            },
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 74.w),
-            child: CustomRadioButton(
-              text: '남성'.tr(),
-              value: radioList[1],
-              groupValue: radioGroup,
-              textStyle: textTheme.bodyLarge,
-              onChange: (value) {
-                radioGroup = value;
-              },
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 74.w),
-            child: CustomRadioButton(
-              text: '기타'.tr(),
-              value: radioList[2],
-              groupValue: radioGroup,
-              textStyle: textTheme.bodyLarge,
-              onChange: (value) {
-                radioGroup = value;
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Navigates back to the previous screen.
-  void onTapImgArrowLeft(BuildContext context) {
-    context.safePop();
-  }
-
-  /// Navigates to the faqScreen when the action is triggered.
-  void onTapTxtWidget1(BuildContext context) {
-    context.pushNamed(AppRoutes.faqScreen);
-  }
-
-  /// Navigates to the contactUsRegisterScreen when the action is triggered.
-  void onTapTxtWidget2(BuildContext context) {
-    context.pushNamed(AppRoutes.contactUsRegisterScreen);
   }
 }
