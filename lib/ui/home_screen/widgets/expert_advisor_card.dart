@@ -25,7 +25,7 @@ class ExpertAdvisorCard extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       elevation: 0,
-      margin: EdgeInsets.zero,
+      margin: EdgeInsets.symmetric(horizontal: 8.w),
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusStyle.circleBorder8,

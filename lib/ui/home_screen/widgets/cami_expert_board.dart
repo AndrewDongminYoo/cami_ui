@@ -30,7 +30,7 @@ class _CamiExpertBoardState extends ConsumerState<CamiExpertBoard>
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: 28.w,
+        horizontal: 16.w,
         vertical: 99.h,
       ),
       decoration: AppDecoration.fillBlue50,
