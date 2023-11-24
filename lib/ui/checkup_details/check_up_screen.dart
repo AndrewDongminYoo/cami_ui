@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
 import '../../data/utils/check_up_util.dart';
@@ -76,7 +77,7 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 SizedBox(height: 18.h),
                 CheckUpChip(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    context.go(checkup.location!);
                   },
                   checkupName: checkup.short!,
                 ),
@@ -101,7 +102,7 @@ class CheckUpScreenState extends State<CheckUpScreen>
                 SizedBox(height: 8.h),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: 구매하기 페이지 구현 후 이동하기
                   },
                   text: '구매하기'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),

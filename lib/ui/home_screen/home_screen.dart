@@ -6,12 +6,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
-import '/ui/shared/check_up_item_widget.dart';
 import '/core/utils/media_query.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 import '/ui/shared/cami_app_bar.dart';
 import '/ui/shared/cami_app_footer.dart';
+import '/ui/shared/check_up_item_widget.dart';
 import '/ui/shared/check_up_list.dart';
 import '/widgets/custom_outlined_button.dart';
 import 'widgets/cami_expert_board.dart';
@@ -100,7 +100,8 @@ class _HomeScreenState extends State<HomeScreen> with ChangeNotifier {
                 ValueListenableBuilder(
                   valueListenable: checkupFilter,
                   builder: (_, filter, child) {
-                    final items = filter == 'popular' ? popularList : featuredList;
+                    final items =
+                        filter == 'popular' ? popularList : featuredList;
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 28.w),
                       child: ListView.separated(

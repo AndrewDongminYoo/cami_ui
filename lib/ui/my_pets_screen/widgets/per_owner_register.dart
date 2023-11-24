@@ -60,7 +60,8 @@ class PerOwnerRegister extends StatelessWidget {
                 ),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: 강아지/고양이 등록화면 이동
+                    context.go(AppRoutes.newCatScreen);
                   },
                   height: 32.h,
                   width: 149.w,

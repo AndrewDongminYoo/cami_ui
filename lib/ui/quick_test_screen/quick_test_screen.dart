@@ -109,7 +109,8 @@ class QuickTestScreen extends StatelessWidget {
                       SizedBox(height: 15.h),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: implement onPressed
+                          // TODO: 인싸테스트 화면 이동
+                          context.goNamed(AppRoutes.namingScreen);
                         },
                         width: 117.w,
                         text: '진단시작'.tr(),
@@ -257,7 +258,8 @@ class QuickTestScreen extends StatelessWidget {
                       SizedBox(height: 12.h),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: implement onPressed
+                          // TODO: 강아지인간 고양이인간 테스트 이동
+                          context.goNamed(AppRoutes.namingScreen);
                         },
                         height: 36.h,
                         width: 117.w,

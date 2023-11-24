@@ -281,7 +281,7 @@ class SignUpFormScreen extends StatelessWidget {
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: 서버에 가입 정보 전송
                   },
                   text: '회원 가입'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),

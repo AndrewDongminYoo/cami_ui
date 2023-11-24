@@ -66,7 +66,7 @@ class VerifyScreen extends StatelessWidget {
                 SizedBox(height: 32.h),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: OTP 발급 로직 실행
                   },
                   width: 191.w,
                   text: '인증번호 받기'.tr(),

@@ -160,7 +160,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                   SizedBox(height: 64.h),
                   CustomElevatedButton(
                     onPressed: (context) {
-                      // TODO: implement onPressed
+                      // TODO: 고양이 등록하기 (2/2) 화면으로 이동
                     },
                     text: '다음으로'.tr(),
                     margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -251,7 +251,7 @@ class NewCatScreenState extends State<NewCatScreen> {
                       SizedBox(height: 8.h),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: implement onPressed
+                          // TODO: 이미지 피커 실행
                         },
                         width: 121.w,
                         text: '이미지 등록하기'.tr(),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
@@ -25,9 +26,14 @@ import '/widgets/custom_radio_button.dart';
 import '/widgets/custom_text_form_field.dart';
 
 // ignore: must_be_immutable
-class EditProfileScreen extends StatelessWidget {
+class EditProfileScreen extends StatefulWidget {
   EditProfileScreen({super.key});
 
+  @override
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
+}
+
+class _EditProfileScreenState extends State<EditProfileScreen> {
   final usermailField = TextEditingController();
   final verification = TextEditingController();
   final changePassword = TextEditingController();
@@ -239,7 +245,7 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 23.h),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: 수정된 프로필 서버에 저장
                   },
                   text: '저장'.tr(),
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -249,7 +255,7 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(height: 8.h),
                 CustomOutlinedButton(
                   onPressed: (context) {
-                    // TODO: implement onPressed
+                    // TODO: 서버에 탈퇴 요청
                   },
                   height: 38.h,
                   text: '회원탈퇴'.tr(),
@@ -266,17 +272,76 @@ class EditProfileScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
-  Widget _buildImageSelectionButton(BuildContext context) {
-    return CustomElevatedButton(
-      onPressed: (context) {
-        // TODO: implement onPressed
+  Future<void> executeImagePicker(BuildContext context) async {
+    final picker = ImagePicker();
+    var _source = ImageSource.gallery;
+    await picker.pickImage(source: ImageSource.gallery);
+    await showDialog<ImageSource>(
+      context: context,
+      builder: (BuildContext context) {
+        return SimpleDialog(
+          elevation: 10,
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 20,
+          ),
+          title: const Text(
+            '신분증을 촬영해주세요.',
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 18,
+              letterSpacing: 0.32,
+            ),
+          ),
+          children: [
+            SimpleDialogOption(
+              onPressed: () {
+                if (mounted) {
+                  setState(() {
+                    _source = ImageSource.camera;
+                  });
+                }
+                Navigator.pop(context, _source);
+              },
+              child: const Text(
+                '카메라 촬영',
+                style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  fontSize: 16,
+                  letterSpacing: 0.28,
+                ),
+              ),
+            ),
+            SimpleDialogOption(
+              onPressed: () {
+                if (mounted) {
+                  setState(() {
+                    _source = ImageSource.gallery;
+                  });
+                }
+                Navigator.pop(context, _source);
+              },
+              child: const Text(
+                '갤러리 선택',
+                style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  fontSize: 16,
+                  letterSpacing: 0.28,
+                ),
+              ),
+            ),
+          ],
+        );
       },
-      width: 121.w,
-      text: '이미지 선택하기'.tr(),
-      buttonStyle: CustomButtonStyles.fillBlue,
-      buttonTextStyle: textTheme.bodyMedium!.colored(const Color(0xFF171717)),
     );
+
+    final file = await picker.pickImage(
+      maxWidth: 1900,
+      maxHeight: 600,
+      source: _source,
+    );
+    if (file != null) {
+      // Uint8List? _bytes = await File(file.path).readAsBytes();
+    }
   }
 
   /// Section Widget
@@ -328,7 +393,14 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16.h),
-                  _buildImageSelectionButton(context),
+                  CustomElevatedButton(
+                    onPressed: executeImagePicker,
+                    width: 121.w,
+                    text: '이미지 선택하기'.tr(),
+                    buttonStyle: CustomButtonStyles.fillBlue,
+                    buttonTextStyle:
+                        textTheme.bodyMedium!.colored(const Color(0xFF171717)),
+                  ),
                 ],
               ),
             ),
@@ -355,7 +427,7 @@ class EditProfileScreen extends StatelessWidget {
           ),
           CustomElevatedButton(
             onPressed: (context) {
-              // TODO: implement onPressed
+              // TODO: OTP 발급 로직 실행
             },
             width: 142.w,
             text: '인증번호 받기'.tr(),

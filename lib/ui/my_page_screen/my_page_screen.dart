@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
+import '../../routes/app_routes.dart';
 import '/core/utils/media_query.dart';
 import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
@@ -258,7 +260,8 @@ class MyPageScreen extends StatelessWidget {
                       ),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: implement onPressed
+                          // TODO: 강아지 등록화면 이동
+                          context.go(AppRoutes.newCatScreen);
                         },
                         height: 32.h,
                         width: 149.w,
@@ -300,7 +303,8 @@ class MyPageScreen extends StatelessWidget {
                       ),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: implement onPressed
+                          // TODO: 고양이 등록화면 이동
+                          context.go(AppRoutes.newCatScreen);
                         },
                         height: 32.h,
                         width: 149.w,

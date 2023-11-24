@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
+import '../../routes/app_routes.dart';
 import '/core/utils/media_query.dart';
 import '/theme/custom_button_style.dart';
 import '/theme/custom_text_style.dart';
@@ -117,7 +119,7 @@ class _LogInScreenState extends State<LogInScreen> {
               style: textTheme.bodySmall!.colored(const Color(0xFF6B7280)),
             ),
             onPressed: () {
-              // TODO: implement onPressed
+              // TODO: 비밀번호 재설정 화면 이동
             },
           ),
         ],
@@ -129,7 +131,7 @@ class _LogInScreenState extends State<LogInScreen> {
   Widget _buildLoginButton(BuildContext context) {
     return CustomElevatedButton(
       onPressed: (context) {
-        // TODO: implement onPressed
+        // TODO: 서버에 로그인 정보 전송
       },
       text: '로그인'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
@@ -141,7 +143,7 @@ class _LogInScreenState extends State<LogInScreen> {
   Widget _buildEmailSignUpButton(BuildContext context) {
     return CustomOutlinedButton(
       onPressed: (context) {
-        // TODO: implement onPressed
+        context.go(AppRoutes.signUpFormScreen);
       },
       height: 42.h,
       text: '이메일 회원가입'.tr(),
@@ -191,7 +193,7 @@ class _LogInScreenState extends State<LogInScreen> {
   Widget _buildKakaoStartButton(BuildContext context) {
     return CustomElevatedButton(
       onPressed: (context) {
-        // TODO: implement onPressed
+        // TODO: 카카오로 로그인 로직 실행
       },
       text: '카카오로 시작하기'.tr(),
       margin: EdgeInsets.symmetric(horizontal: 16.w),
