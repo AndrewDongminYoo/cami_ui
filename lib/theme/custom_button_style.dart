@@ -64,20 +64,6 @@ class CustomButtonStyles {
           borderRadius: BorderRadius.circular(26.w),
         ),
       );
-  static ButtonStyle get outlineBlueGrayTL17 => OutlinedButton.styleFrom(
-        backgroundColor: const Color(0xFF000000),
-        side: const BorderSide(color: Color(0xFF525252)),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(17.w),
-        ),
-      );
-  static ButtonStyle get outlineBlueGrayTL171 => OutlinedButton.styleFrom(
-        backgroundColor: Colors.transparent,
-        side: const BorderSide(color: Color(0xFF525252)),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(17.w),
-        ),
-      );
   static ButtonStyle get outlineGray => OutlinedButton.styleFrom(
         backgroundColor: const Color(0xFFFAFAFA),
         side: const BorderSide(color: Color(0xFFA3A3A3)),

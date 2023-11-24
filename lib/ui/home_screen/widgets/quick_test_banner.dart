@@ -16,11 +16,13 @@ class QuickTestBanner extends StatelessWidget {
     required this.title1,
     required this.title2,
     required this.imagePath,
+    required this.imageSize,
   });
 
   final String title1;
   final String title2;
   final String imagePath;
+  final Size imageSize;
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +45,10 @@ class QuickTestBanner extends StatelessWidget {
           SizedBox(height: 5.h),
           CustomImageView(
             imagePath: imagePath,
-            height: 59.h,
-            width: 67.w,
+            height: imageSize.height,
+            width: imageSize.width,
             alignment: Alignment.centerRight,
+            fit: BoxFit.cover,
           ),
         ],
       ),

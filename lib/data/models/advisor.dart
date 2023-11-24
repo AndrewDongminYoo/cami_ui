@@ -7,23 +7,23 @@ part 'advisor.g.dart';
 @JsonSerializable()
 class Advisor extends Equatable {
   const Advisor({
-    this.index,
-    this.image,
-    this.jobTitle,
-    this.name,
-    this.description,
+    required this.index,
+    required this.image,
+    required this.jobTitle,
+    required this.name,
+    required this.description,
   });
 
   factory Advisor.fromJson(Map<String, dynamic> json) {
     return _$AdvisorFromJson(json);
   }
 
-  final String? index;
-  final String? image;
+  final String index;
+  final String image;
   @JsonKey(name: 'job_title')
-  final String? jobTitle;
-  final String? name;
-  final String? description;
+  final String jobTitle;
+  final String name;
+  final String description;
 
   Map<String, dynamic> toJson() => _$AdvisorToJson(this);
 
