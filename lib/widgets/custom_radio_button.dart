@@ -66,15 +66,13 @@ class CustomRadioButton extends StatelessWidget {
               : leftSideRadioButton,
         ),
       );
-  Widget get leftSideRadioButton => Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8),
-            child: radioButtonWidget,
-          ),
-          textWidget,
-        ],
-      );
+  Widget get leftSideRadioButton => Row(children: [
+        Padding(
+          padding: const EdgeInsets.only(right: 8),
+          child: radioButtonWidget,
+        ),
+        textWidget,
+      ]);
   Widget get rightSideRadioButton => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

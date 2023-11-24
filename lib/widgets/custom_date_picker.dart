@@ -233,59 +233,57 @@ class _DropdownDatePickerState extends State<DropdownDatePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        if (widget.showYear)
-          Expanded(
-            flex: widget.yearFlex,
-            child: Container(
-              alignment: Alignment.center,
-              height: widget.boxHeight,
-              decoration: widget.boxDecoration,
-              child: ButtonTheme(
-                alignedDropdown: true,
-                child: DropdownButtonHideUnderline(
-                  child: yearDropdown(),
-                ),
+    return Row(children: [
+      if (widget.showYear)
+        Expanded(
+          flex: widget.yearFlex,
+          child: Container(
+            alignment: Alignment.center,
+            height: widget.boxHeight,
+            decoration: widget.boxDecoration,
+            child: ButtonTheme(
+              alignedDropdown: true,
+              child: DropdownButtonHideUnderline(
+                child: yearDropdown(),
               ),
             ),
           ),
-        if (widget.showMonth) SizedBox(width: widget.width),
-        if (widget.showMonth)
-          Expanded(
-            flex: widget.monthFlex,
-            child: Container(
-              alignment: Alignment.center,
-              height: widget.boxHeight,
-              decoration: widget.boxDecoration,
-              child: ButtonTheme(
-                alignedDropdown: true,
-                child: DropdownButtonHideUnderline(
-                  child: monthDropdown(),
-                ),
+        ),
+      if (widget.showMonth) SizedBox(width: widget.width),
+      if (widget.showMonth)
+        Expanded(
+          flex: widget.monthFlex,
+          child: Container(
+            alignment: Alignment.center,
+            height: widget.boxHeight,
+            decoration: widget.boxDecoration,
+            child: ButtonTheme(
+              alignedDropdown: true,
+              child: DropdownButtonHideUnderline(
+                child: monthDropdown(),
               ),
             ),
           ),
-        if (widget.showDay) SizedBox(width: widget.width),
-        if (widget.showDay)
-          Expanded(
-            flex: widget.dayFlex,
-            child: Container(
-              alignment: Alignment.center,
-              height: widget.boxHeight,
-              decoration: widget.boxDecoration,
-              child: ButtonTheme(
-                minWidth: 110.w,
-                height: 36.h,
-                alignedDropdown: true,
-                child: DropdownButtonHideUnderline(
-                  child: dayDropdown(),
-                ),
+        ),
+      if (widget.showDay) SizedBox(width: widget.width),
+      if (widget.showDay)
+        Expanded(
+          flex: widget.dayFlex,
+          child: Container(
+            alignment: Alignment.center,
+            height: widget.boxHeight,
+            decoration: widget.boxDecoration,
+            child: ButtonTheme(
+              minWidth: 110.w,
+              height: 36.h,
+              alignedDropdown: true,
+              child: DropdownButtonHideUnderline(
+                child: dayDropdown(),
               ),
             ),
           ),
-      ],
-    );
+        ),
+    ]);
   }
 
   /// 월 드롭다운
@@ -293,7 +291,7 @@ class _DropdownDatePickerState extends State<DropdownDatePicker> {
     return DropdownButtonFormField<String>(
       decoration: widget.inputDecoration,
       isExpanded: widget.isExpanded,
-      hint: _buildHintText(widget.hintMonth),
+      hint: buildHintText(widget.hintMonth),
       icon: widget.icon,
       value: monthselVal == '' ? null : monthselVal,
       onChanged: monthSelected,
@@ -320,7 +318,7 @@ class _DropdownDatePickerState extends State<DropdownDatePicker> {
   DropdownButtonFormField<String> yearDropdown() {
     return DropdownButtonFormField<String>(
       decoration: widget.inputDecoration,
-      hint: _buildHintText(widget.hintYear),
+      hint: buildHintText(widget.hintYear),
       isExpanded: widget.isExpanded,
       icon: widget.icon,
       value: yearselVal == '' ? null : yearselVal,
@@ -348,7 +346,7 @@ class _DropdownDatePickerState extends State<DropdownDatePicker> {
   DropdownButtonFormField<String> dayDropdown() {
     return DropdownButtonFormField<String>(
       decoration: widget.inputDecoration,
-      hint: _buildHintText(widget.hintDay),
+      hint: buildHintText(widget.hintDay),
       isExpanded: widget.isExpanded,
       icon: widget.icon,
       value: dayselVal == '' ? null : dayselVal,
@@ -372,7 +370,7 @@ class _DropdownDatePickerState extends State<DropdownDatePicker> {
     );
   }
 
-  Widget _buildHintText(String hint) {
+  Text buildHintText(String hint) {
     return Text(hint,
         overflow: TextOverflow.visible,
         textAlign: TextAlign.start,

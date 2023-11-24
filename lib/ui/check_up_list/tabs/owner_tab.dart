@@ -36,45 +36,36 @@ class OwnerTabState extends State<OwnerTab>
         body: SizedBox(
           width: mediaQueryData.size.width,
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 60.h),
-                Column(
-                  children: [
-                    _buildUserProfileFrameList(context),
-                    SizedBox(height: 128.h),
-                    const CamiAppFooter(),
-                  ],
+            child: Column(children: [
+              SizedBox(height: 60.h),
+              Column(children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: ListView.separated(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return SizedBox(height: 16.h);
+                    },
+                    itemCount: ownerTestList.length,
+                    itemBuilder: (context, index) {
+                      final item = ownerTestList[index];
+                      return CheckUpItemWidget(
+                        thumbPath: item.thumbPath!,
+                        short: item.short!,
+                        nickname: item.nickname!,
+                        description: item.description!,
+                        location: item.location!,
+                      );
+                    },
+                  ),
                 ),
-              ],
-            ),
+                SizedBox(height: 128.h),
+                const CamiAppFooter(),
+              ]),
+            ]),
           ),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildUserProfileFrameList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: ListView.separated(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        separatorBuilder: (context, index) {
-          return SizedBox(height: 16.h);
-        },
-        itemCount: ownerTestList.length,
-        itemBuilder: (context, index) {
-          final item = ownerTestList[index];
-          return CheckUpItemWidget(
-            thumbPath: item.thumbPath!,
-            short: item.short!,
-            nickname: item.nickname!,
-            description: item.description!,
-            location: item.location!,
-          );
-        },
       ),
     );
   }

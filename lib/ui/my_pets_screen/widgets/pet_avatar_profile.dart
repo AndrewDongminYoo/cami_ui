@@ -46,7 +46,16 @@ class PetAvatarProfile extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              _buildAvatar(isCat),
+              CustomImageView(
+                imagePath: imagePath ??
+                    (isCat
+                        ? Assets.images.avatarCat.path
+                        : Assets.images.avatarDog.path),
+                height: 84.r,
+                width: 84.r,
+                radius: BorderRadius.circular(42.w),
+                margin: EdgeInsets.symmetric(vertical: 21.h),
+              ),
               if (imagePath != null)
                 SizedBox(
                   height: 20.h,
@@ -79,89 +88,109 @@ class PetAvatarProfile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      petName ??
-                          (isCat ? '등록된 냥냥 없습니다.'.tr() : '등록된 멍멍 없습니다.'.tr()),
-                      style: textTheme.bodyLarge,
-                    ),
-                    if (petName != null)
-                      Container(
-                        height: 20.h,
-                        width: 120.w,
-                        margin: EdgeInsets.only(left: 10.w, top: 2.h),
-                        child: Stack(
-                          alignment: Alignment.topCenter,
-                          children: [
-                            Container(
-                              alignment: Alignment.center,
-                              height: 20.h,
-                              width: 120.w,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFFFFFF50),
-                                borderRadius: BorderRadius.circular(8.w),
-                              ),
+                Row(children: [
+                  Text(
+                    petName ??
+                        (isCat ? '등록된 냥냥 없습니다.'.tr() : '등록된 멍멍 없습니다.'.tr()),
+                    style: textTheme.bodyLarge,
+                  ),
+                  if (petName != null)
+                    Container(
+                      height: 20.h,
+                      width: 120.w,
+                      margin: EdgeInsets.only(left: 10.w, top: 2.h),
+                      child: Stack(
+                        alignment: Alignment.topCenter,
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            height: 20.h,
+                            width: 120.w,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFFFF50),
+                              borderRadius: BorderRadius.circular(8.w),
                             ),
-                            Align(
-                              alignment: Alignment.topCenter,
-                              child: Text(
-                                '성격유형 알아보기 >'.tr(),
-                                style: textTheme.bodySmall,
-                              ),
+                          ),
+                          Align(
+                            alignment: Alignment.topCenter,
+                            child: Text(
+                              '성격유형 알아보기 >'.tr(),
+                              style: textTheme.bodySmall,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                  ],
-                ),
+                    ),
+                ]),
                 SizedBox(height: 7.h),
-                _buildContent(context, query: '생년월일'.tr(), value: birthDay),
+                Row(children: [
+                  SizedBox(
+                    width: 80.w,
+                    child: Text(
+                      '생년월일'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
+                    ),
+                  ),
+                  Text(
+                    birthDay ?? '-',
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+                  ),
+                ]),
                 SizedBox(height: 2.h),
-                _buildContent(context, query: '연령'.tr(), value: age),
+                Row(children: [
+                  SizedBox(
+                    width: 80.w,
+                    child: Text(
+                      '연령'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
+                    ),
+                  ),
+                  Text(
+                    age ?? '-',
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+                  ),
+                ]),
                 SizedBox(height: 2.h),
-                _buildContent(context, query: '견종'.tr(), value: breeds),
+                Row(children: [
+                  SizedBox(
+                    width: 80.w,
+                    child: Text(
+                      '견종'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
+                    ),
+                  ),
+                  Text(
+                    breeds ?? '-',
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+                  ),
+                ]),
                 SizedBox(height: 2.h),
-                _buildContent(context, query: '성별'.tr(), value: sex),
+                Row(children: [
+                  SizedBox(
+                    width: 80.w,
+                    child: Text(
+                      '성별'.tr(),
+                      style: textTheme.bodyMedium!
+                          .colored(const Color(0xFFA3A3A3)),
+                    ),
+                  ),
+                  Text(
+                    sex ?? '-',
+                    style:
+                        textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
+                  ),
+                ]),
               ],
             ),
           ),
         ],
       ),
-    );
-  }
-
-  Widget _buildAvatar(bool isCat) {
-    return CustomImageView(
-      imagePath: imagePath ??
-          (isCat ? Assets.images.avatarCat.path : Assets.images.avatarDog.path),
-      height: 84.r,
-      width: 84.r,
-      radius: BorderRadius.circular(42.w),
-      margin: EdgeInsets.symmetric(vertical: 21.h),
-    );
-  }
-
-  /// Common widget
-  Widget _buildContent(
-    BuildContext context, {
-    required String query,
-    required String? value,
-  }) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 80.w,
-          child: Text(
-            query,
-            style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
-          ),
-        ),
-        Text(
-          value ?? '-',
-          style: textTheme.bodyMedium!.colored(const Color(0xFFA3A3A3)),
-        ),
-      ],
     );
   }
 }

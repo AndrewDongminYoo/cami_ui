@@ -46,12 +46,6 @@ class CustomOutlinedButton extends BaseButton {
   Widget build(BuildContext context) {
     return Container(
       alignment: alignment ?? Alignment.center,
-      child: _buildOutlinedButtonWidget(context),
-    );
-  }
-
-  Widget _buildOutlinedButtonWidget(BuildContext context) {
-    return Container(
       height: height ?? 34.h,
       width: width ?? double.maxFinite,
       margin: margin,

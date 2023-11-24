@@ -46,12 +46,6 @@ class CustomElevatedButton extends BaseButton {
   Widget build(BuildContext context) {
     return Container(
       alignment: alignment,
-      child: _buildElevatedButtonWidget(context),
-    );
-  }
-
-  Widget _buildElevatedButtonWidget(BuildContext context) {
-    return Container(
       height: height ?? 40.h,
       width: width ?? double.maxFinite,
       margin: margin,
