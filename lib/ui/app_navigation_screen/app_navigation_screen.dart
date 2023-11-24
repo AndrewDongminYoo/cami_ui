@@ -52,6 +52,10 @@ class AppNavigationScreen extends StatelessWidget {
                           status: DevStatus.ON_PROGRESS,
                         ),
                         ScreenTitle(
+                          screenTitle: '강아지 등록하기',
+                          routeName: AppRoutes.newDogScreen,
+                        ),
+                        ScreenTitle(
                           screenTitle: '고양이 등록하기',
                           routeName: AppRoutes.newCatScreen,
                         ),

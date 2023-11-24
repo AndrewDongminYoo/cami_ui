@@ -260,8 +260,8 @@ class MyPageScreen extends StatelessWidget {
                       ),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: 강아지 등록화면 이동
-                          context.go(AppRoutes.newCatScreen);
+                          // 강아지 등록화면
+                          context.go(AppRoutes.newDogScreen);
                         },
                         height: 32.h,
                         width: 149.w,
@@ -303,7 +303,7 @@ class MyPageScreen extends StatelessWidget {
                       ),
                       CustomElevatedButton(
                         onPressed: (context) {
-                          // TODO: 고양이 등록화면 이동
+                          // 고양이 등록화면
                           context.go(AppRoutes.newCatScreen);
                         },
                         height: 32.h,

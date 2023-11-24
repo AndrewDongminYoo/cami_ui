@@ -53,15 +53,17 @@ class PerOwnerRegister extends StatelessWidget {
                   height: 112.h,
                   width: 138.w,
                   alignment: Alignment.center,
-                  onTap: () => context.pushNamed(
-                    AppRoutes.newCatScreen,
-                    pathParameters: {'type': type},
-                  ),
+                  onTap: () {
+                    context.go(isCat
+                        ? AppRoutes.newCatScreen
+                        : AppRoutes.newDogScreen);
+                  },
                 ),
                 CustomElevatedButton(
                   onPressed: (context) {
-                    // TODO: 강아지/고양이 등록화면 이동
-                    context.go(AppRoutes.newCatScreen);
+                    context.go(isCat
+                        ? AppRoutes.newCatScreen
+                        : AppRoutes.newDogScreen);
                   },
                   height: 32.h,
                   width: 149.w,

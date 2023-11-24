@@ -25,18 +25,28 @@ import '/widgets/custom_text_form_field.dart';
 import 'data/cat_breeds.dart';
 import 'widgets/chip_view_item_widget.dart';
 
-class NewCatScreen extends StatefulWidget {
-  const NewCatScreen({super.key});
+class NewPetScreen extends StatefulWidget {
+  const NewPetScreen({
+    super.key,
+    required this.type,
+  });
+
+  /// dog or cat
+  final String type;
 
   @override
-  State<NewCatScreen> createState() => NewCatScreenState();
+  State<NewPetScreen> createState() => NewPetScreenState();
 }
 
-class NewCatScreenState extends State<NewCatScreen> {
+class NewPetScreenState extends State<NewPetScreen> {
   bool neutered = true;
   bool isFemale = true;
 
   final yourPetsNameController = TextEditingController();
+  final dogBreeds = petGroupList
+      .where((pet) => pet.animalGroup1Id == 1)
+      .map((dog) => dog.animalGroup2Name)
+      .toList();
   final catBreeds = petGroupList
       .where((pet) => pet.animalGroup1Id == 2)
       .map((cat) => cat.animalGroup2Name)

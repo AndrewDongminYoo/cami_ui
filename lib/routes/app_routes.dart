@@ -17,7 +17,7 @@ import '/ui/my_page_screen/my_page_screen.dart';
 import '/ui/my_pets_screen/pets_1_cat_screen.dart';
 import '/ui/my_pets_screen/pets_empty_screen.dart';
 import '/ui/naming_screen/naming_screen.dart';
-import '/ui/new_pet_page/new_cat_screen.dart';
+import '/ui/new_pet_page/new_pet_screen.dart';
 import '/ui/notice_detail_screen/notice_detail_screen.dart';
 import '/ui/notice_screen/notice_screen.dart';
 import '/ui/quick_test_screen/quick_test_screen.dart';
@@ -35,7 +35,9 @@ class AppRoutes {
   static const String namingScreen = '/naming_screen';
   static const String contactUsRegisterScreen = '/contact_us_register_screen';
   static const String faqScreen = '/faq_screen';
-  static const String newCatScreen = '/new_cat_screen';
+  static const String newPetScreen = '/new_pet/:type';
+  static const String newCatScreen = '/new_pet/cat';
+  static const String newDogScreen = '/new_pet/dog';
   static const String menuBarScreen = '/menu_bar_screen';
   static const String petsEmptyScreen = '/pets_empty_screen';
   static const String petsOneCatScreen = '/pets_one_cat_screen';
@@ -74,9 +76,13 @@ class AppRoutes {
       builder: (context, state) => const FaqScreen(),
     ),
     GoRoute(
-      name: newCatScreen,
-      path: newCatScreen,
-      builder: (context, state) => const NewCatScreen(),
+      name: newPetScreen,
+      path: newPetScreen,
+      builder: (context, state) {
+        logger.d(state.pathParameters);
+        assert(['dog', 'cat'].contains(state.pathParameters['type']));
+        return NewPetScreen(type: state.pathParameters['type']!);
+      },
     ),
     GoRoute(
       name: menuBarScreen,
