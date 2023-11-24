@@ -22,6 +22,8 @@ dependencies:
   collection: ^1.18.0
   # 네트워크 연결 상태 플러그인
   connectivity_plus: ^2.3.9
+  # 이미지 크롭 플러그인
+  croppy: ^1.1.4
   # [Dart] 인터셉터, 요청 취소, 타임아웃, 어댑터, 트랜스포머, 폼데이터, 파일 업로드/다운로드 등을 지원하는 HTTP 패키지
   dio: ^5.3.3
   # 드롭다운 버튼
@@ -65,8 +67,9 @@ dependencies:
   # 하이브 (크로스플랫폼 NoSQL DB)
   hive_flutter: ^1.1.0
   # Riverpod 훅
-  # Riverpod 훅
   hooks_riverpod: ^2.4.6
+  # 이미지 첨부 위젯
+  image_picker: ^1.0.4
   intl: ^0.18.1
   # [Dart] json_serializable에서 사용하는 어노테이션
   json_annotation: ^4.8.1
