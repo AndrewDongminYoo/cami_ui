@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -79,11 +80,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '결제가 되지 않아요'.tr(),
                           items: dropdownItemList0,
@@ -114,11 +111,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '회원 탈퇴는 어떻게 하나요?'.tr(),
                           items: dropdownItemList1,
@@ -150,11 +143,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 18.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr(),
                           items: dropdownItemList2,
@@ -186,11 +175,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 15.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr(),
                           items: dropdownItemList3,
@@ -221,11 +206,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '어린 강아지도 심리검사를 받을 수 있나요?'.tr(),
                           items: dropdownItemList4,
@@ -256,11 +237,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '결과보고서 인쇄 방법'.tr(),
                           items: dropdownItemList5,
@@ -291,11 +268,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '결과보고서 다시보기'.tr(),
                           items: dropdownItemList6,
@@ -326,11 +299,7 @@ class Faq1Screen extends StatelessWidget {
                         child: CustomDropDownFormField(
                           icon: Container(
                             margin: EdgeInsets.only(left: 30.w),
-                            child: CustomImageView(
-                              imagePath: Assets.svg.imgArrowDownGray700.path,
-                              height: 32.h,
-                              width: 30.w,
-                            ),
+                            child: rightChevronIcon(),
                           ),
                           hintText: '구매한 쿠폰이 보이지 않아요.'.tr(),
                           items: dropdownItemList7,
@@ -349,6 +318,15 @@ class Faq1Screen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Icon rightChevronIcon() {
+    return Icon(
+      CupertinoIcons.right_chevron,
+      size: 30.w,
+      weight: 3,
+      color: const Color(0xFF5F6061),
     );
   }
 }

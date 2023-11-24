@@ -86,8 +86,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   margin: EdgeInsets.symmetric(horizontal: 16.w),
                   padding:
                       EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
-                  decoration: AppDecoration.fillGray50.copyWith(
-                      borderRadius: BorderRadiusStyle.circleBorder12),
+                  decoration: AppDecoration.fillGray50
+                      .copyWith(borderRadius: BorderRadiusStyle.circleBorder12),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,

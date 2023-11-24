@@ -7,11 +7,11 @@ part of 'advisor.dart';
 // **************************************************************************
 
 Advisor _$AdvisorFromJson(Map json) => Advisor(
-      index: json['index']! as String,
-      image: json['image']! as String,
-      jobTitle: json['job_title']! as String,
-      name: json['name']! as String,
-      description: json['description']! as String,
+      index: json['index'] as String,
+      image: json['image'] as String,
+      jobTitle: json['job_title'] as String,
+      name: json['name'] as String,
+      description: json['description'] as String,
     );
 
 Map<String, dynamic> _$AdvisorToJson(Advisor instance) => <String, dynamic>{

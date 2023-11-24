@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -90,11 +91,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           child: CustomDropDownFormField(
                             icon: Container(
                               margin: EdgeInsets.only(left: 30.w),
-                              child: CustomImageView(
-                                imagePath: Assets.svg.imgArrowDownGray700.path,
-                                height: 32.h,
-                                width: 30.w,
-                              ),
+                              child: iconArrowRight(),
                             ),
                             hintText: '결제가 되지 않아요'.tr(),
                             hintStyle: textTheme.labelMedium,
@@ -228,12 +225,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -266,12 +258,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -304,12 +291,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -342,12 +324,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -380,12 +357,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -418,12 +390,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -456,12 +423,7 @@ class _FaqScreenState extends State<FaqScreen> {
                                       ),
                                     ),
                                   ),
-                                  CustomImageView(
-                                    imagePath:
-                                        Assets.svg.imgArrowDownGray700.path,
-                                    height: 32.h,
-                                    width: 30.w,
-                                  ),
+                                  iconArrowRight(),
                                 ],
                               ),
                             ),
@@ -479,6 +441,15 @@ class _FaqScreenState extends State<FaqScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget iconArrowRight() {
+    return Icon(
+      CupertinoIcons.right_chevron,
+      size: 30.w,
+      weight: 3,
+      color: const Color(0xFF5F6061),
     );
   }
 }

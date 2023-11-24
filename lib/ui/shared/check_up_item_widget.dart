@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -7,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 // 🌎 Project imports:
-import '/gen/assets.gen.dart';
 import '/theme/app_decoration.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
@@ -33,7 +33,6 @@ class CheckUpItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16.w),
       decoration: AppDecoration.outlineGray
           .copyWith(borderRadius: BorderRadiusStyle.circleBorder20),
       child: Column(
@@ -60,10 +59,10 @@ class CheckUpItemWidget extends StatelessWidget {
           SizedBox(height: 11.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 14.w),
-            child: Text(
-              nickname,
-              style: textTheme.bodyMedium!.colored(const Color(0xFF1F2020)),
-            ),
+            child: Text(nickname,
+                style: textTheme.bodyMedium!
+                    .colored(const Color(0xFF1F2020))
+                    .bold),
           ),
           SizedBox(height: 7.h),
           Padding(
@@ -81,19 +80,14 @@ class CheckUpItemWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 14.w),
               child: Row(
                 children: [
-                  Text(
-                    '자세히 보기'.tr(),
-                    style:
-                        textTheme.bodySmall!.colored(const Color(0xFF5F6061)),
-                  ),
-                  CustomImageView(
-                    imagePath: Assets.svg.imgArrowDownGray700.path,
-                    height: 10.h,
-                    width: 6.w,
-                    margin: EdgeInsets.only(
-                      left: 9.w,
-                      top: 6.h,
-                    ),
+                  Text('자세히 보기'.tr(),
+                      style: textTheme.bodySmall!
+                          .colored(const Color(0xFF5F6061))),
+                  Icon(
+                    CupertinoIcons.right_chevron,
+                    size: 12.r,
+                    weight: 3,
+                    color: const Color(0xFF5F6061),
                   ),
                 ],
               ),

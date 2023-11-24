@@ -36,7 +36,7 @@ class QuickTestBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 3.h),
-          Text(title1, style: textTheme.bodyMedium),
+          Text(title1, style: textTheme.bodyMedium!.thick),
           SizedBox(height: 5.h),
           Text(
             title2,

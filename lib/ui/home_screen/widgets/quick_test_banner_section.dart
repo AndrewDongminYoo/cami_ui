@@ -56,9 +56,9 @@ class QuickTestBannerSection extends StatelessWidget {
           SizedBox(height: 20.h),
           QuickTestBanner(
             title1: '엉뚱 발랄 작명소'.tr(),
-            title2: '원주민식 이름짓기'.tr(),
+            title2: '원주민식 이름 짓기'.tr(),
             imagePath: Assets.images.figure2.path,
-            imageSize: Size(59.r, 59.r),
+            imageSize: Size(63.r, 63.r),
           ),
           SizedBox(height: 40.h),
         ],

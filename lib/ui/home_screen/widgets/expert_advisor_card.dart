@@ -33,6 +33,7 @@ class ExpertAdvisorCard extends StatelessWidget {
       child: Container(
         height: 180.h,
         width: 337.w,
+        padding: EdgeInsets.only(left: 16.w),
         decoration: AppDecoration.outlineBlueGray
             .copyWith(borderRadius: BorderRadiusStyle.circleBorder8),
         child: Stack(
@@ -40,14 +41,11 @@ class ExpertAdvisorCard extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(
-                left: 16.w,
-                top: 13.h,
-              ),
-              child: Text(
-                advisor.jobTitle.tr(),
-                style: textTheme.bodySmall!.colored(const Color(0xFF6FD574)),
-              ),
+              padding: EdgeInsets.only(top: 13.h),
+              child: Text(advisor.jobTitle.tr(),
+                  style: textTheme.bodySmall!
+                      .colored(const Color(0xFF6FD574))
+                      .bold),
             ),
             Container(
               alignment: Alignment.center,
@@ -56,30 +54,30 @@ class ExpertAdvisorCard extends StatelessWidget {
               child: Stack(
                 alignment: Alignment.centerRight,
                 children: [
+                  CustomImageView(
+                    imagePath: advisor.image,
+                    height: 180.h,
+                    fit: BoxFit.cover,
+                    alignment: Alignment.centerRight,
+                  ),
                   Container(
                     alignment: Alignment.bottomLeft,
                     padding: EdgeInsets.only(bottom: 16.h),
                     child: Text(
                       advisor.description.tr(),
                       maxLines: 4,
+                      overflow: TextOverflow.visible,
                       style:
                           textTheme.bodySmall!.colored(const Color(0xFF1F2020)),
                     ),
                   ),
-                  CustomImageView(
-                    imagePath: advisor.image,
-                    height: 180.h,
-                    width: 168.w,
-                    alignment: Alignment.centerRight,
-                  ),
                   Container(
                     alignment: Alignment.topLeft,
                     padding: EdgeInsets.only(top: 39.h),
-                    child: Text(
-                      advisor.name.tr(),
-                      style:
-                          textTheme.bodyLarge!.colored(const Color(0xFF1F2020)),
-                    ),
+                    child: Text(advisor.name.tr(),
+                        style: textTheme.bodyLarge!
+                            .colored(const Color(0xFF1F2020))
+                            .thick),
                   ),
                 ],
               ),

@@ -23,12 +23,20 @@ class CheckUpChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomElevatedButton(
       onPressed: onPressed,
-      height: 24.h,
+      height: 26.h,
       width: (checkupName.length * 5.75 + 16).w,
       text: checkupName.toUpperCase(),
       textAlign: TextAlign.start,
       margin: EdgeInsets.symmetric(horizontal: 14.w),
-      buttonTextStyle: textTheme.bodySmall!.fSize(10),
+      buttonStyle: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF262626),
+        elevation: 0,
+        padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.w),
+        ),
+      ),
+      buttonTextStyle: textTheme.bodySmall!.fSize(10).colored(Colors.white),
     );
   }
 }

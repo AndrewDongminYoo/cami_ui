@@ -274,10 +274,6 @@ class $AssetsSvgGen {
   SvgGenImage get imgArrowDown =>
       const SvgGenImage('assets/svg/img_arrow_down.svg');
 
-  /// File path: assets/svg/img_arrow_down_gray_700.svg
-  SvgGenImage get imgArrowDownGray700 =>
-      const SvgGenImage('assets/svg/img_arrow_down_gray_700.svg');
-
   /// File path: assets/svg/img_arrow_left.svg
   SvgGenImage get imgArrowLeft =>
       const SvgGenImage('assets/svg/img_arrow_left.svg');
@@ -352,7 +348,6 @@ class $AssetsSvgGen {
         icoNaverBlog,
         icoNaverBlogWhite,
         imgArrowDown,
-        imgArrowDownGray700,
         imgArrowLeft,
         imgArrowRightGray600,
         imgCar,
@@ -488,23 +483,23 @@ class $AssetsImagesBannersGen {
 class $AssetsImagesExpertsGen {
   const $AssetsImagesExpertsGen();
 
-  /// File path: assets/images/experts/kji.jpg
-  AssetGenImage get kji => const AssetGenImage('assets/images/experts/kji.jpg');
+  /// File path: assets/images/experts/kji.png
+  AssetGenImage get kji => const AssetGenImage('assets/images/experts/kji.png');
 
-  /// File path: assets/images/experts/kmc.jpg
-  AssetGenImage get kmc => const AssetGenImage('assets/images/experts/kmc.jpg');
+  /// File path: assets/images/experts/kmc.png
+  AssetGenImage get kmc => const AssetGenImage('assets/images/experts/kmc.png');
 
-  /// File path: assets/images/experts/psh.jpg
-  AssetGenImage get psh => const AssetGenImage('assets/images/experts/psh.jpg');
+  /// File path: assets/images/experts/psh.png
+  AssetGenImage get psh => const AssetGenImage('assets/images/experts/psh.png');
 
-  /// File path: assets/images/experts/sch.jpg
-  AssetGenImage get sch => const AssetGenImage('assets/images/experts/sch.jpg');
+  /// File path: assets/images/experts/sch.png
+  AssetGenImage get sch => const AssetGenImage('assets/images/experts/sch.png');
 
-  /// File path: assets/images/experts/sjh.jpg
-  AssetGenImage get sjh => const AssetGenImage('assets/images/experts/sjh.jpg');
+  /// File path: assets/images/experts/sjh.png
+  AssetGenImage get sjh => const AssetGenImage('assets/images/experts/sjh.png');
 
-  /// File path: assets/images/experts/syj.jpg
-  AssetGenImage get syj => const AssetGenImage('assets/images/experts/syj.jpg');
+  /// File path: assets/images/experts/syj.png
+  AssetGenImage get syj => const AssetGenImage('assets/images/experts/syj.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [kji, kmc, psh, sch, sjh, syj];
