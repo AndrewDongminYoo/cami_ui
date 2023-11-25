@@ -55,6 +55,7 @@ class NewPetScreenState extends State<NewPetScreen> {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
+    final isCat = widget.type == 'cat';
     return SafeArea(
       child: Scaffold(
         appBar: const CamiAppBar(),
@@ -73,7 +74,7 @@ class NewPetScreenState extends State<NewPetScreen> {
               },
             ),
             title: Text(
-              '반려묘 등록하기 (1/2)'.tr(),
+              isCat ? '반려묘 등록하기 (1/2)'.tr() : '반려견 등록하기 (1/2)'.tr(),
               style: textTheme.bodyLarge!.fSize(18),
             ),
             centerTitle: true,
@@ -91,7 +92,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
-                      '반려묘 이름'.tr(),
+                      isCat ? '반려묘 이름'.tr() : '반려견 이름'.tr(),
                       style: textTheme.bodyMedium!
                           .colored(const Color(0xFF1F2937)),
                     ),
@@ -108,7 +109,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
-                      '반려묘 생년월일'.tr(),
+                      isCat ? '반려묘 생년월일'.tr() : '반려견 생년월일'.tr(),
                       style: textTheme.bodyMedium!
                           .colored(const Color(0xFF1F2937)),
                     ),
@@ -122,7 +123,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
-                      '반려묘 입양일'.tr(),
+                      isCat ? '반려묘 입양일'.tr() : '반려견 입양일'.tr(),
                       style: textTheme.bodyMedium!
                           .colored(const Color(0xFF1F2937)),
                     ),
@@ -136,7 +137,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
-                      '반려묘 성별'.tr(),
+                      isCat ? '반려묘 성별'.tr() : '반려견 성별'.tr(),
                       style: textTheme.bodyMedium!
                           .colored(const Color(0xFF1F2937)),
                     ),
@@ -171,7 +172,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: Text(
-                      '묘종'.tr(),
+                      isCat ? '묘종'.tr() : '견종'.tr(),
                       style: textTheme.bodyMedium!
                           .colored(const Color(0xFF1F2937)),
                     ),
@@ -194,7 +195,7 @@ class NewPetScreenState extends State<NewPetScreen> {
                           width: 12.w,
                         ),
                       ),
-                      items: catBreeds,
+                      items: isCat ? catBreeds : dogBreeds,
                       onChanged: (value) {
                         logger.i('$value 🐈🐈‍⬛');
                       },

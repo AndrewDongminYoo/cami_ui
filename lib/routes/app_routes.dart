@@ -9,6 +9,7 @@ import '/ui/checkup_details/check_up_screen.dart';
 import '/ui/contact_us_register_screen/contact_us_register_screen.dart';
 import '/ui/edit_profile_screen/edit_profile_screen.dart';
 import '/ui/error_page_screen/error_page.dart';
+import '/ui/faq_screen/faq1_screen.dart';
 import '/ui/faq_screen/faq_screen.dart';
 import '/ui/home_screen/home_screen.dart';
 import '/ui/log_in_screen/log_in_screen.dart';
@@ -34,7 +35,8 @@ class AppRoutes {
   static const String quickTestScreen = '/quick_test_screen';
   static const String namingScreen = '/naming_screen';
   static const String contactUsRegisterScreen = '/contact_us_register_screen';
-  static const String faqScreen = '/faq_screen';
+  static const String faqScreen = '/faq_screen_0';
+  static const String faqScreen1 = '/faq_screen_1';
   static const String newPetScreen = '/new_pet/:type';
   static const String newCatScreen = '/new_pet/cat';
   static const String newDogScreen = '/new_pet/dog';
@@ -74,6 +76,11 @@ class AppRoutes {
       name: faqScreen,
       path: faqScreen,
       builder: (context, state) => const FaqScreen(),
+    ),
+    GoRoute(
+      name: faqScreen1,
+      path: faqScreen1,
+      builder: (context, state) => const Faq1Screen(),
     ),
     GoRoute(
       name: newPetScreen,
