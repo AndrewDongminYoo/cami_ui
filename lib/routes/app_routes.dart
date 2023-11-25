@@ -9,7 +9,6 @@ import '/ui/checkup_details/check_up_screen.dart';
 import '/ui/contact_us_register_screen/contact_us_register_screen.dart';
 import '/ui/edit_profile_screen/edit_profile_screen.dart';
 import '/ui/error_page_screen/error_page.dart';
-import '/ui/faq_screen/faq1_screen.dart';
 import '/ui/faq_screen/faq_screen.dart';
 import '/ui/home_screen/home_screen.dart';
 import '/ui/log_in_screen/log_in_screen.dart';
@@ -76,11 +75,6 @@ class AppRoutes {
       name: faqScreen,
       path: faqScreen,
       builder: (context, state) => const FaqScreen(),
-    ),
-    GoRoute(
-      name: faqScreen1,
-      path: faqScreen1,
-      builder: (context, state) => const Faq1Screen(),
     ),
     GoRoute(
       name: newPetScreen,

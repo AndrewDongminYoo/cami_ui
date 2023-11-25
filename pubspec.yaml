@@ -40,6 +40,8 @@ dependencies:
   flutter_animate: ^4.2.0+1
   # 플러터 환경변수 (.env) 플러그인
   flutter_dotenv: ^5.1.0
+  # 플러터 이모지 플러그인
+  flutter_emoji: ^2.5.1
   flutter_localizations:
     sdk: flutter
   # 플러터 마크다운 위젯

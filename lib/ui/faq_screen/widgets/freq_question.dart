@@ -5,25 +5,32 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
+import '../data/faq_list.dart';
 import '/theme/custom_text_style.dart';
 import '/theme/theme_helper.dart';
 
-class FreqQuestion extends StatelessWidget {
-  const FreqQuestion({
-    super.key,
-    required this.question,
-    this.isFirst = false,
-  });
+class FreqQuestion extends StatefulWidget {
+  const FreqQuestion(this.faq, {super.key});
 
-  final bool isFirst;
-  final String question;
+  final FAQ faq;
+
+  @override
+  State<FreqQuestion> createState() => _FreqQuestionState();
+}
+
+class _FreqQuestionState extends State<FreqQuestion> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8.w),
       decoration:
-          isFirst ? const BoxDecoration(color: Color(0xFFF3F4F6)) : null,
+          widget.faq.isExpanded ? const BoxDecoration(color: Color(0xFFF3F4F6)) : null,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -42,18 +49,12 @@ class FreqQuestion extends StatelessWidget {
                 bottom: 8.h,
               ),
               child: Text(
-                question,
+                widget.faq.question,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 3,
                 style: textTheme.bodyMedium!.nanum,
               ),
             ),
-          ),
-          Icon(
-            CupertinoIcons.chevron_down,
-            size: 16.w,
-            weight: 3,
-            color: const Color(0xFF5F6061),
           ),
         ],
       ),

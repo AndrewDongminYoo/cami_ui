@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '/core/utils/media_query.dart';
 import '/ui/shared/cami_app_bar.dart';
+import 'data/faq_list.dart';
 import 'widgets/faq_title.dart';
 import 'widgets/freq_answer.dart';
 import 'widgets/freq_question.dart';
@@ -20,8 +20,6 @@ class FaqScreen extends StatefulWidget {
 }
 
 class _FaqScreenState extends State<FaqScreen> {
-  bool isExpanded = true;
-
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
@@ -38,24 +36,28 @@ class _FaqScreenState extends State<FaqScreen> {
                 const FAQTitle(),
                 SizedBox(height: 16.h),
                 const Divider(),
-                FreqQuestion(question: '결제가 되지 않아요'.tr(), isFirst: true),
-                const FreqAnswer(),
-                const Divider(),
-                FreqQuestion(
-                    question: '결제 성공 후 검사를 바로 하지 못했는데 어떻게 해야 하나요?'.tr()),
-                const Divider(),
-                FreqQuestion(question: '검사를 다 끝내지 못했는데 이어서 하려면 어떻게 하나요?'.tr()),
-                const Divider(),
-                FreqQuestion(question: '어린 강아지도 심리검사를 받을 수 있나요?'.tr()),
-                const Divider(),
-                FreqQuestion(question: '구매한 쿠폰이 보이지 않아요.'.tr()),
-                const Divider(),
-                FreqQuestion(question: '회원 탈퇴는 어떻게 하나요?'.tr()),
-                const Divider(),
-                FreqQuestion(question: '결과보고서 인쇄 방법'.tr()),
-                const Divider(),
-                FreqQuestion(question: '결과보고서 다시보기'.tr()),
-                const Divider(),
+                ExpansionPanelList(
+                  elevation: 0,
+                  materialGapSize: 0,
+                  expandedHeaderPadding: EdgeInsets.zero,
+                  animationDuration: const Duration(milliseconds: 400),
+                  expansionCallback: (int index, bool isExpanded) {
+                    setState(() {
+                      faqList[index].isExpanded = isExpanded;
+                    });
+                  },
+                  children: faqList.map<ExpansionPanel>((FAQ faq) {
+                    return ExpansionPanel(
+                      canTapOnHeader: true,
+                      backgroundColor: const Color(0xFFFAFAFA),
+                      isExpanded: faq.isExpanded,
+                      headerBuilder: (BuildContext context, bool isExpanded) {
+                        return FreqQuestion(faq);
+                      },
+                      body: FreqAnswer(faq),
+                    );
+                  }).toList(),
+                ),
                 SizedBox(height: 60.h),
               ],
             ),
