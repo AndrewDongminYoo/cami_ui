@@ -1,64 +1,31 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cami.app">
-    <!-- io.flutter.app.FlutterApplication은 android.app.Application으로,
-        onCreate 메서드에서 FlutterMain.startInitialization(this); 을 호출합니다.
-        대부분의 경우 그대로 두어도 되지만, 추가 기능을 제공하려면 FlutterApplication을
-        서브클래싱하거나 재구현하고 여기에 사용자 정의 클래스를 넣는 것이 좋습니다. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="cami_lab"
+        android:label="cami_ui"
+        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-        <!-- 카카오 로그인 커스텀 URL 스킴 설정 -->
-        <activity
-            android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity"
-            android:exported="true">
-            <intent-filter android:label="flutter_web_auth">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <!-- "kakao${KAKAO_NATIVE_APP_KEY}://oauth" 형식의 앱 실행 스킴 설정 -->
-                <!-- 카카오 로그인 Redirect URI -->
-                <data android:scheme="kakao${KAKAO_NATIVE_APP_KEY}" android:host="oauth" />
-            </intent-filter>
-        </activity>
-
-        <!-- 카카오톡 공유, 카카오톡 메시지 커스텀 URL 스킴 설정 -->
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
-            android:exported="true"
             android:windowSoftInputMode="adjustResize">
-            <!-- 안드로이드 프로세스가 시작되자마자 이 액티비티에 적용할 안드로이드 테마를 지정합니다.
-                이 테마는 Flutter UI가 초기화되는 동안 사용자에게 표시됩니다.
-                그 후에도 이 테마는 Flutter UI 뒤에 있는 창 배경을 계속 결정합니다. -->
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
             <meta-data
-                android:name="io.flutter.embedding.android.NormalTheme"
-                android:resource="@style/NormalTheme"
-            />
-            <!-- Flutter가 첫 프레임을 그릴 때까지 시작 화면 드로어블을 계속 표시하는
-                안드로이드 뷰를 표시한 다음 이 스플래시 화면이 페이드아웃됩니다.
-                스플래시 화면은 안드로이드의 시작 화면이 끝날 때와 Flutter의 첫 프레임이
-                그려질 때 사이에 시각적 공백이 생기지 않도록 하는 데 유용합니다. -->
-            <meta-data
-                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-                android:resource="@drawable/launch_background"
-            />
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <!-- "kakao${KAKAO_NATIVE_APP_KEY}://${PRODUCT_NAME}" 형식의 앱 실행 스킴 설정 -->
-                <!-- 카카오톡 공유, 카카오톡 메시지 -->
-                <data android:host="kakaolink"
-                    android:scheme="kakao${KAKAO_NATIVE_APP_KEY}" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!-- 아래 메타데이터를 삭제하지 마세요.
-            이 메타데이터는 Flutter 툴에서 GeneratedPluginRegistrant.java를 생성하는 데 사용됩니다. -->
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
