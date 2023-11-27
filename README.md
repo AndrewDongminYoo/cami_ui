@@ -11,6 +11,12 @@
 - 상담심리학, 수의학, 동물행동학 등 반려동물 전문가들의 믿을 수 있는 어드바이스
 - 향후 건강검진, 맞춤 반려용품 시장으로 확장 예정
 
+## Screens included in this repository
+
+|      ![Notice Detail](<doc/notice detail.png>) 공지사항       | ![FAQ Expanded](<doc/FAQ expanded.png>) 자주 묻는 질문 |   ![Contact Us](<doc/contact us.png>) 문의하기    | ![Home Screen](<doc/home screen.png>) 홈화면  |        ![Solution](<doc/solution.png>) 방문교육         |
+| :-----------------------------------------------------------: | :----------------------------------------------------: | :-----------------------------------------------: | :-------------------------------------------: | :-----------------------------------------------------: |
+| ![Check up List Dog](<doc/check up list dog.png>) 검사 리스트 |   ![Check up Cat](<doc/check up cat.png>) 검사 화면    | ![DCSI Reviews](<doc/dcsi reviews.png>) 검사 후기 | ![Order Info](<doc/order info.png>) 검사 구매 | ![DCSI-II Receipt](<doc/dcsi-ii receipt.png>) 구매 정보 |
+
 ## Getting Started
 
 프로젝트를 클론한 다음, 다음 동작을 실행해 실행하세요.
