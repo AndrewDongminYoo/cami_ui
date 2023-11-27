@@ -1,6 +1,6 @@
 {
-  "name": "cami_lab",
-  "short_name": "cami_lab",
+  "name": "cami_ui",
+  "short_name": "cami_ui",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0175C2",

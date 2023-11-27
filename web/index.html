@@ -23,13 +23,13 @@
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="cami_friends" />
+    <meta name="apple-mobile-web-app-title" content="cami_ui" />
     <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>cami_friends</title>
+    <title>cami_ui</title>
     <link rel="manifest" href="manifest.json" />
 
     <script>
@@ -38,24 +38,7 @@
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer=""></script>
-
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-      name="viewport"
-    />
-
     <style id="splash-screen-style">
-      html {
-        height: 100%;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100%;
-        background-color: #ffff50;
-        background-size: 100% 100%;
-      }
-
       .flutter-loader {
         z-index: 999999;
       }
@@ -80,15 +63,6 @@
         pointer-events: none;
         /* start animation */
         opacity: 0;
-      }
-
-      #splash .title {
-        margin: 0;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
       }
 
       #splash .center {
@@ -122,7 +96,7 @@
 
       #splash .bottom {
         position: absolute;
-        bottom: 5%;
+        bottom: 0;
         left: 50%;
         -ms-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
@@ -150,8 +124,11 @@
         }, 750 /* animation time + wait rendering and others(500ms) */);
       }
     </script>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
   </head>
-
   <body>
     <div id="splash">
       <picture id="splash-branding">
@@ -174,7 +151,7 @@
           media="(prefers-color-scheme: dark)"
         />
         <img
-          class="bottom"
+          class="top"
           aria-hidden="true"
           src="splash/img/branding-1x.png"
           alt=""
@@ -200,41 +177,13 @@
           media="(prefers-color-scheme: dark)"
         />
         <img
-          class="center"
+          class="bottom"
           aria-hidden="true"
           src="splash/img/light-1x.png"
-          alt="camilab splash"
-        />
-      </picture>
-
-      <picture id="splash-title">
-        <source
-          srcset="
-            splash/img/title-cami-1x.png 1x,
-            splash/img/title-cami-2x.png 2x,
-            splash/img/title-cami-3x.png 3x,
-            splash/img/title-cami-4x.png 4x
-          "
-          media="(prefers-color-scheme: light)"
-        />
-        <source
-          srcset="
-            splash/img/title-cami-1x.png 1x,
-            splash/img/title-cami-2x.png 2x,
-            splash/img/title-cami-3x.png 3x,
-            splash/img/title-cami-4x.png 4x
-          "
-          media="(prefers-color-scheme: dark)"
-        />
-        <img
-          class="title"
-          aria-hidden="true"
-          src="splash/img/title-cami-1x.png"
-          alt="camilab title"
+          alt=""
         />
       </picture>
     </div>
-
     <script>
       window.addEventListener("load", function (ev) {
         // Download main.dart.js
